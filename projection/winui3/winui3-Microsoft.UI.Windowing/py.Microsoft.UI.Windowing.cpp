@@ -29,24 +29,11 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"AssociateWithDispatcherQueue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherQueue>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AssociateWithDispatcherQueue(param0);
+                    py::require<winrt::Microsoft::UI::Windowing::IAppWindow3>(self->obj, py::member_kind::method, "Microsoft.UI.Windowing.AppWindow", "AssociateWithDispatcherQueue", "Microsoft.UI.Windowing.IAppWindow3", 1).AssociateWithDispatcherQueue(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -208,19 +195,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"Destroy", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Destroy();
@@ -291,19 +265,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"Hide", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Hide();
@@ -332,19 +293,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"Move", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
 
                 {
@@ -375,19 +323,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"MoveAndResize", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 0);
 
                 {
@@ -407,19 +342,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"MoveAndResize", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Windowing::DisplayArea>(args, 1);
 
@@ -451,22 +373,9 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"MoveInZOrderAtBottom", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.MoveInZOrderAtBottom();
+                    py::require<winrt::Microsoft::UI::Windowing::IAppWindow2>(self->obj, py::member_kind::method, "Microsoft.UI.Windowing.AppWindow", "MoveInZOrderAtBottom", "Microsoft.UI.Windowing.IAppWindow2", 0).MoveInZOrderAtBottom();
                 }
 
                 Py_RETURN_NONE;
@@ -492,22 +401,9 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"MoveInZOrderAtTop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.MoveInZOrderAtTop();
+                    py::require<winrt::Microsoft::UI::Windowing::IAppWindow2>(self->obj, py::member_kind::method, "Microsoft.UI.Windowing.AppWindow", "MoveInZOrderAtTop", "Microsoft.UI.Windowing.IAppWindow2", 0).MoveInZOrderAtTop();
                 }
 
                 Py_RETURN_NONE;
@@ -533,24 +429,11 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"MoveInZOrderBelow", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.MoveInZOrderBelow(param0);
+                    py::require<winrt::Microsoft::UI::Windowing::IAppWindow2>(self->obj, py::member_kind::method, "Microsoft.UI.Windowing.AppWindow", "MoveInZOrderBelow", "Microsoft.UI.Windowing.IAppWindow2", 1).MoveInZOrderBelow(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -576,19 +459,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"Resize", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(args, 0);
 
                 {
@@ -619,24 +489,11 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"ResizeClient", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ResizeClient(param0);
+                    py::require<winrt::Microsoft::UI::Windowing::IAppWindow2>(self->obj, py::member_kind::method, "Microsoft.UI.Windowing.AppWindow", "ResizeClient", "Microsoft.UI.Windowing.IAppWindow2", 1).ResizeClient(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -662,19 +519,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SetIcon", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -705,19 +549,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SetIcon", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::IconId>(args, 0);
 
                 {
@@ -748,19 +579,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SetPresenter", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Windowing::AppWindowPresenter>(args, 0);
 
                 {
@@ -791,19 +609,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SetPresenter", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Windowing::AppWindowPresenterKind>(args, 0);
 
                 {
@@ -834,24 +639,11 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SetTaskbarIcon", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetTaskbarIcon(param0);
+                    py::require<winrt::Microsoft::UI::Windowing::IAppWindow4>(self->obj, py::member_kind::method, "Microsoft.UI.Windowing.AppWindow", "SetTaskbarIcon", "Microsoft.UI.Windowing.IAppWindow4", 1).SetTaskbarIcon(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -877,24 +669,11 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SetTaskbarIcon", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::IconId>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetTaskbarIcon(param0);
+                    py::require<winrt::Microsoft::UI::Windowing::IAppWindow4>(self->obj, py::member_kind::method, "Microsoft.UI.Windowing.AppWindow", "SetTaskbarIcon", "Microsoft.UI.Windowing.IAppWindow4", 1).SetTaskbarIcon(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -920,24 +699,11 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SetTitleBarIcon", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetTitleBarIcon(param0);
+                    py::require<winrt::Microsoft::UI::Windowing::IAppWindow4>(self->obj, py::member_kind::method, "Microsoft.UI.Windowing.AppWindow", "SetTitleBarIcon", "Microsoft.UI.Windowing.IAppWindow4", 1).SetTitleBarIcon(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -963,24 +729,11 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SetTitleBarIcon", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::IconId>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetTitleBarIcon(param0);
+                    py::require<winrt::Microsoft::UI::Windowing::IAppWindow4>(self->obj, py::member_kind::method, "Microsoft.UI.Windowing.AppWindow", "SetTitleBarIcon", "Microsoft.UI.Windowing.IAppWindow4", 1).SetTitleBarIcon(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1006,19 +759,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"Show", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Show();
@@ -1036,19 +776,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"Show", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
@@ -1079,22 +806,9 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"ShowOnceWithRequestedStartupState", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.ShowOnceWithRequestedStartupState();
+                    py::require<winrt::Microsoft::UI::Windowing::IAppWindow2>(self->obj, py::member_kind::method, "Microsoft.UI.Windowing.AppWindow", "ShowOnceWithRequestedStartupState", "Microsoft.UI.Windowing.IAppWindow2", 0).ShowOnceWithRequestedStartupState();
                 }
 
                 Py_RETURN_NONE;
@@ -1116,19 +830,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1152,19 +853,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1185,19 +873,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"IsShownInSwitchers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1221,19 +896,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"IsShownInSwitchers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1254,19 +916,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1284,19 +933,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"IsVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1314,19 +950,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"OwnerWindowId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1344,19 +967,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1374,19 +984,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"Presenter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1404,19 +1001,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1434,19 +1018,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"TitleBar");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1464,23 +1035,10 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"ClientSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ClientSize();
+                return py::require<winrt::Microsoft::UI::Windowing::IAppWindow2>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.AppWindow", "ClientSize", "Microsoft.UI.Windowing.IAppWindow2").ClientSize();
             }());
         }
         catch (...)
@@ -1494,23 +1052,10 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"DispatcherQueue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DispatcherQueue();
+                return py::require<winrt::Microsoft::UI::Windowing::IAppWindow3>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.AppWindow", "DispatcherQueue", "Microsoft.UI.Windowing.IAppWindow3").DispatcherQueue();
             }());
         }
         catch (...)
@@ -1524,19 +1069,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.AppWindow", L"Changed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Windowing::AppWindow, winrt::Microsoft::UI::Windowing::AppWindowChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -1556,19 +1088,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.AppWindow", L"Changed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1589,19 +1108,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.AppWindow", L"Closing");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Windowing::AppWindow, winrt::Microsoft::UI::Windowing::AppWindowClosingEventArgs>>(arg);
 
             return py::convert([&]()
@@ -1621,19 +1127,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.AppWindow", L"Closing");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1654,19 +1147,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.AppWindow", L"Destroying");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Windowing::AppWindow, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -1686,19 +1166,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.AppWindow", L"Destroying");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1842,19 +1309,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowChangedEventArgs", L"DidPositionChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1872,19 +1326,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowChangedEventArgs", L"DidPresenterChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1902,19 +1343,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowChangedEventArgs", L"DidSizeChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1932,19 +1360,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowChangedEventArgs", L"DidVisibilityChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1962,23 +1377,10 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowChangedEventArgs", L"DidZOrderChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DidZOrderChange();
+                return py::require<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs2>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.AppWindowChangedEventArgs", "DidZOrderChange", "Microsoft.UI.Windowing.IAppWindowChangedEventArgs2").DidZOrderChange();
             }());
         }
         catch (...)
@@ -1992,23 +1394,10 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowChangedEventArgs", L"IsZOrderAtBottom");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsZOrderAtBottom();
+                return py::require<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs2>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.AppWindowChangedEventArgs", "IsZOrderAtBottom", "Microsoft.UI.Windowing.IAppWindowChangedEventArgs2").IsZOrderAtBottom();
             }());
         }
         catch (...)
@@ -2022,23 +1411,10 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowChangedEventArgs", L"IsZOrderAtTop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsZOrderAtTop();
+                return py::require<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs2>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.AppWindowChangedEventArgs", "IsZOrderAtTop", "Microsoft.UI.Windowing.IAppWindowChangedEventArgs2").IsZOrderAtTop();
             }());
         }
         catch (...)
@@ -2052,23 +1428,10 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowChangedEventArgs", L"ZOrderBelowWindowId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ZOrderBelowWindowId();
+                return py::require<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs2>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.AppWindowChangedEventArgs", "ZOrderBelowWindowId", "Microsoft.UI.Windowing.IAppWindowChangedEventArgs2").ZOrderBelowWindowId();
             }());
         }
         catch (...)
@@ -2153,19 +1516,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowClosingEventArgs", L"Cancel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2189,19 +1539,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowClosingEventArgs", L"Cancel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2286,23 +1623,10 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowPresenter", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Windowing::AppWindowPresenter>().Kind();
+                return py::require<winrt::Microsoft::UI::Windowing::IAppWindowPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.AppWindowPresenter", "Kind", "Microsoft.UI.Windowing.IAppWindowPresenter").Kind();
             }());
         }
         catch (...)
@@ -2445,19 +1769,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ResetToDefault", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.ResetToDefault();
@@ -2486,19 +1797,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"SetDragRectangles", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Graphics::RectInt32, false>>(args, 0);
 
                 {
@@ -2525,19 +1823,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"InactiveForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2561,19 +1846,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"InactiveForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             {
@@ -2594,19 +1866,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"InactiveBackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2630,19 +1889,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"InactiveBackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             {
@@ -2663,19 +1909,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"IconShowOptions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2699,19 +1932,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"IconShowOptions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Windowing::IconShowOptions>(arg);
 
             {
@@ -2732,19 +1952,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2768,19 +1975,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             {
@@ -2801,19 +1995,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ExtendsContentIntoTitleBar");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2837,19 +2018,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ExtendsContentIntoTitleBar");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2870,19 +2038,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonPressedForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2906,19 +2061,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonPressedForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             {
@@ -2939,19 +2081,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonPressedBackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2975,19 +2104,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonPressedBackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             {
@@ -3008,19 +2124,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonInactiveForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3044,19 +2147,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonInactiveForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             {
@@ -3077,19 +2167,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonInactiveBackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3113,19 +2190,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonInactiveBackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             {
@@ -3146,19 +2210,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonHoverForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3182,19 +2233,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonHoverForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             {
@@ -3215,19 +2253,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonHoverBackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3251,19 +2276,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonHoverBackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             {
@@ -3284,19 +2296,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3320,19 +2319,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             {
@@ -3353,19 +2339,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonBackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3389,19 +2362,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"ButtonBackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             {
@@ -3422,19 +2382,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"BackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3458,19 +2405,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"BackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             {
@@ -3491,19 +2425,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"Height");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3521,19 +2442,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"LeftInset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3551,19 +2459,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"RightInset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3581,23 +2476,10 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"PreferredHeightOption");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PreferredHeightOption();
+                return py::require<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar2>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.AppWindowTitleBar", "PreferredHeightOption", "Microsoft.UI.Windowing.IAppWindowTitleBar2").PreferredHeightOption();
             }());
         }
         catch (...)
@@ -3617,24 +2499,11 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"PreferredHeightOption");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Windowing::TitleBarHeightOption>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PreferredHeightOption(param0);
+                py::require<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar2>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.AppWindowTitleBar", "PreferredHeightOption", "Microsoft.UI.Windowing.IAppWindowTitleBar2").PreferredHeightOption(param0);
             }
 
             return 0;
@@ -3650,23 +2519,10 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"PreferredTheme");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PreferredTheme();
+                return py::require<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.AppWindowTitleBar", "PreferredTheme", "Microsoft.UI.Windowing.IAppWindowTitleBar3").PreferredTheme();
             }());
         }
         catch (...)
@@ -3686,24 +2542,11 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"PreferredTheme");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Windowing::TitleBarTheme>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PreferredTheme(param0);
+                py::require<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.AppWindowTitleBar", "PreferredTheme", "Microsoft.UI.Windowing.IAppWindowTitleBar3").PreferredTheme(param0);
             }
 
             return 0;
@@ -3865,19 +2708,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.CompactOverlayPresenter", L"InitialSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3901,19 +2731,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.CompactOverlayPresenter", L"InitialSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Windowing::CompactOverlaySize>(arg);
 
             {
@@ -4271,19 +3088,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.DisplayArea", L"DisplayId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4301,19 +3105,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.DisplayArea", L"IsPrimary");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4331,19 +3122,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.DisplayArea", L"OuterBounds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4361,19 +3139,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.DisplayArea", L"WorkArea");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4520,19 +3285,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.DisplayAreaWatcher", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Start();
@@ -4561,19 +3313,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.DisplayAreaWatcher", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Stop();
@@ -4598,19 +3337,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.DisplayAreaWatcher", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4628,19 +3354,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.DisplayAreaWatcher", L"Added");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Windowing::DisplayAreaWatcher, winrt::Microsoft::UI::Windowing::DisplayArea>>(arg);
 
             return py::convert([&]()
@@ -4660,19 +3373,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.DisplayAreaWatcher", L"Added");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4693,19 +3393,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.DisplayAreaWatcher", L"EnumerationCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Windowing::DisplayAreaWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -4725,19 +3412,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.DisplayAreaWatcher", L"EnumerationCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4758,19 +3432,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.DisplayAreaWatcher", L"Removed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Windowing::DisplayAreaWatcher, winrt::Microsoft::UI::Windowing::DisplayArea>>(arg);
 
             return py::convert([&]()
@@ -4790,19 +3451,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.DisplayAreaWatcher", L"Removed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4823,19 +3471,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.DisplayAreaWatcher", L"Stopped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Windowing::DisplayAreaWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -4855,19 +3490,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.DisplayAreaWatcher", L"Stopped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4888,19 +3510,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.DisplayAreaWatcher", L"Updated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Windowing::DisplayAreaWatcher, winrt::Microsoft::UI::Windowing::DisplayArea>>(arg);
 
             return py::convert([&]()
@@ -4920,19 +3529,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Windowing.DisplayAreaWatcher", L"Updated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -5318,19 +3914,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"Maximize", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Maximize();
@@ -5359,19 +3942,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"Minimize", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Minimize();
@@ -5389,24 +3959,11 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"Minimize", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Minimize(param0);
+                    py::require<winrt::Microsoft::UI::Windowing::IOverlappedPresenter2>(self->obj, py::member_kind::method, "Microsoft.UI.Windowing.OverlappedPresenter", "Minimize", "Microsoft.UI.Windowing.IOverlappedPresenter2", 1).Minimize(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -5432,19 +3989,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"Restore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Restore();
@@ -5462,24 +4006,11 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"Restore", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Restore(param0);
+                    py::require<winrt::Microsoft::UI::Windowing::IOverlappedPresenter2>(self->obj, py::member_kind::method, "Microsoft.UI.Windowing.OverlappedPresenter", "Restore", "Microsoft.UI.Windowing.IOverlappedPresenter2", 1).Restore(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -5505,19 +4036,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"SetBorderAndTitleBar", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -5545,19 +4063,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"IsResizable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5581,19 +4086,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"IsResizable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5614,19 +4106,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"IsModal");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5650,19 +4129,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"IsModal");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5683,19 +4149,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"IsMinimizable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5719,19 +4172,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"IsMinimizable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5752,19 +4192,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"IsMaximizable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5788,19 +4215,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"IsMaximizable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5821,19 +4235,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"IsAlwaysOnTop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5857,19 +4258,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"IsAlwaysOnTop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5890,19 +4278,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"HasBorder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5920,19 +4295,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"HasTitleBar");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5950,19 +4312,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5980,23 +4329,10 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMinimumWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PreferredMinimumWidth();
+                return py::require<winrt::Microsoft::UI::Windowing::IOverlappedPresenter3>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.OverlappedPresenter", "PreferredMinimumWidth", "Microsoft.UI.Windowing.IOverlappedPresenter3").PreferredMinimumWidth();
             }());
         }
         catch (...)
@@ -6016,24 +4352,11 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMinimumWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PreferredMinimumWidth(param0);
+                py::require<winrt::Microsoft::UI::Windowing::IOverlappedPresenter3>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.OverlappedPresenter", "PreferredMinimumWidth", "Microsoft.UI.Windowing.IOverlappedPresenter3").PreferredMinimumWidth(param0);
             }
 
             return 0;
@@ -6049,23 +4372,10 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMinimumHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PreferredMinimumHeight();
+                return py::require<winrt::Microsoft::UI::Windowing::IOverlappedPresenter3>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.OverlappedPresenter", "PreferredMinimumHeight", "Microsoft.UI.Windowing.IOverlappedPresenter3").PreferredMinimumHeight();
             }());
         }
         catch (...)
@@ -6085,24 +4395,11 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMinimumHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PreferredMinimumHeight(param0);
+                py::require<winrt::Microsoft::UI::Windowing::IOverlappedPresenter3>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.OverlappedPresenter", "PreferredMinimumHeight", "Microsoft.UI.Windowing.IOverlappedPresenter3").PreferredMinimumHeight(param0);
             }
 
             return 0;
@@ -6118,23 +4415,10 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMaximumWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PreferredMaximumWidth();
+                return py::require<winrt::Microsoft::UI::Windowing::IOverlappedPresenter3>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.OverlappedPresenter", "PreferredMaximumWidth", "Microsoft.UI.Windowing.IOverlappedPresenter3").PreferredMaximumWidth();
             }());
         }
         catch (...)
@@ -6154,24 +4438,11 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMaximumWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PreferredMaximumWidth(param0);
+                py::require<winrt::Microsoft::UI::Windowing::IOverlappedPresenter3>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.OverlappedPresenter", "PreferredMaximumWidth", "Microsoft.UI.Windowing.IOverlappedPresenter3").PreferredMaximumWidth(param0);
             }
 
             return 0;
@@ -6187,23 +4458,10 @@ namespace py::cpp::Microsoft::UI::Windowing
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMaximumHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PreferredMaximumHeight();
+                return py::require<winrt::Microsoft::UI::Windowing::IOverlappedPresenter3>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.OverlappedPresenter", "PreferredMaximumHeight", "Microsoft.UI.Windowing.IOverlappedPresenter3").PreferredMaximumHeight();
             }());
         }
         catch (...)
@@ -6223,24 +4481,11 @@ namespace py::cpp::Microsoft::UI::Windowing
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMaximumHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PreferredMaximumHeight(param0);
+                py::require<winrt::Microsoft::UI::Windowing::IOverlappedPresenter3>(self->obj, py::member_kind::property, "Microsoft.UI.Windowing.OverlappedPresenter", "PreferredMaximumHeight", "Microsoft.UI.Windowing.IOverlappedPresenter3").PreferredMaximumHeight(param0);
             }
 
             return 0;

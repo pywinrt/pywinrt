@@ -132,19 +132,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Line", L"Y2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -168,19 +155,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Line", L"Y2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -201,19 +175,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Line", L"Y1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -237,19 +198,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Line", L"Y1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -270,19 +218,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Line", L"X2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -306,19 +241,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Line", L"X2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -339,19 +261,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Line", L"X1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -375,19 +284,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Line", L"X1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -707,23 +603,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Path", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Path>().Data();
+                return py::require<winrt::Microsoft::UI::Xaml::Shapes::IPath>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Path", "Data", "Microsoft.UI.Xaml.Shapes.IPath").Data();
             }());
         }
         catch (...)
@@ -743,24 +626,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Path", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Geometry>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Path>().Data(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Shapes::IPath>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Path", "Data", "Microsoft.UI.Xaml.Shapes.IPath").Data(param0);
             }
 
             return 0;
@@ -914,19 +784,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Polygon", L"Points");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -950,19 +807,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Polygon", L"Points");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PointCollection>(arg);
 
             {
@@ -983,19 +827,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Polygon", L"FillRule");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1019,19 +850,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Polygon", L"FillRule");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::FillRule>(arg);
 
             {
@@ -1222,19 +1040,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Polyline", L"Points");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1258,19 +1063,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Polyline", L"Points");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PointCollection>(arg);
 
             {
@@ -1291,19 +1083,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Polyline", L"FillRule");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1327,19 +1106,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Polyline", L"FillRule");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::FillRule>(arg);
 
             {
@@ -1530,19 +1296,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Rectangle", L"RadiusY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1566,19 +1319,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Rectangle", L"RadiusY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -1599,19 +1339,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Rectangle", L"RadiusX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1635,19 +1362,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Rectangle", L"RadiusX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -1854,23 +1568,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"GetAlphaMask", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().GetAlphaMask();
+                    return py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Shapes.Shape", "GetAlphaMask", "Microsoft.UI.Xaml.Shapes.IShape", 0).GetAlphaMask();
                 }());
             }
             catch (...)
@@ -1890,23 +1591,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeThickness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeThickness();
+                return py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeThickness", "Microsoft.UI.Xaml.Shapes.IShape").StrokeThickness();
             }());
         }
         catch (...)
@@ -1926,24 +1614,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeThickness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeThickness(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeThickness", "Microsoft.UI.Xaml.Shapes.IShape").StrokeThickness(param0);
             }
 
             return 0;
@@ -1959,23 +1634,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeStartLineCap");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeStartLineCap();
+                return py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeStartLineCap", "Microsoft.UI.Xaml.Shapes.IShape").StrokeStartLineCap();
             }());
         }
         catch (...)
@@ -1995,24 +1657,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeStartLineCap");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PenLineCap>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeStartLineCap(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeStartLineCap", "Microsoft.UI.Xaml.Shapes.IShape").StrokeStartLineCap(param0);
             }
 
             return 0;
@@ -2028,23 +1677,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeMiterLimit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeMiterLimit();
+                return py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeMiterLimit", "Microsoft.UI.Xaml.Shapes.IShape").StrokeMiterLimit();
             }());
         }
         catch (...)
@@ -2064,24 +1700,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeMiterLimit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeMiterLimit(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeMiterLimit", "Microsoft.UI.Xaml.Shapes.IShape").StrokeMiterLimit(param0);
             }
 
             return 0;
@@ -2097,23 +1720,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeLineJoin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeLineJoin();
+                return py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeLineJoin", "Microsoft.UI.Xaml.Shapes.IShape").StrokeLineJoin();
             }());
         }
         catch (...)
@@ -2133,24 +1743,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeLineJoin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PenLineJoin>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeLineJoin(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeLineJoin", "Microsoft.UI.Xaml.Shapes.IShape").StrokeLineJoin(param0);
             }
 
             return 0;
@@ -2166,23 +1763,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeEndLineCap");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeEndLineCap();
+                return py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeEndLineCap", "Microsoft.UI.Xaml.Shapes.IShape").StrokeEndLineCap();
             }());
         }
         catch (...)
@@ -2202,24 +1786,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeEndLineCap");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PenLineCap>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeEndLineCap(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeEndLineCap", "Microsoft.UI.Xaml.Shapes.IShape").StrokeEndLineCap(param0);
             }
 
             return 0;
@@ -2235,23 +1806,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeDashOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashOffset();
+                return py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeDashOffset", "Microsoft.UI.Xaml.Shapes.IShape").StrokeDashOffset();
             }());
         }
         catch (...)
@@ -2271,24 +1829,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeDashOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashOffset(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeDashOffset", "Microsoft.UI.Xaml.Shapes.IShape").StrokeDashOffset(param0);
             }
 
             return 0;
@@ -2304,23 +1849,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeDashCap");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashCap();
+                return py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeDashCap", "Microsoft.UI.Xaml.Shapes.IShape").StrokeDashCap();
             }());
         }
         catch (...)
@@ -2340,24 +1872,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeDashCap");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PenLineCap>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashCap(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeDashCap", "Microsoft.UI.Xaml.Shapes.IShape").StrokeDashCap(param0);
             }
 
             return 0;
@@ -2373,23 +1892,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeDashArray");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashArray();
+                return py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeDashArray", "Microsoft.UI.Xaml.Shapes.IShape").StrokeDashArray();
             }());
         }
         catch (...)
@@ -2409,24 +1915,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"StrokeDashArray");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::DoubleCollection>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashArray(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "StrokeDashArray", "Microsoft.UI.Xaml.Shapes.IShape").StrokeDashArray(param0);
             }
 
             return 0;
@@ -2442,23 +1935,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"Stroke");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stroke();
+                return py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "Stroke", "Microsoft.UI.Xaml.Shapes.IShape").Stroke();
             }());
         }
         catch (...)
@@ -2478,24 +1958,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"Stroke");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stroke(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "Stroke", "Microsoft.UI.Xaml.Shapes.IShape").Stroke(param0);
             }
 
             return 0;
@@ -2511,23 +1978,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"Stretch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stretch();
+                return py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "Stretch", "Microsoft.UI.Xaml.Shapes.IShape").Stretch();
             }());
         }
         catch (...)
@@ -2547,24 +2001,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"Stretch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Stretch>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stretch(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "Stretch", "Microsoft.UI.Xaml.Shapes.IShape").Stretch(param0);
             }
 
             return 0;
@@ -2580,23 +2021,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"Fill");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Fill();
+                return py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "Fill", "Microsoft.UI.Xaml.Shapes.IShape").Fill();
             }());
         }
         catch (...)
@@ -2616,24 +2044,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"Fill");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Fill(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "Fill", "Microsoft.UI.Xaml.Shapes.IShape").Fill(param0);
             }
 
             return 0;
@@ -2649,23 +2064,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"GeometryTransform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().GeometryTransform();
+                return py::require<winrt::Microsoft::UI::Xaml::Shapes::IShape>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Shapes.Shape", "GeometryTransform", "Microsoft.UI.Xaml.Shapes.IShape").GeometryTransform();
             }());
         }
         catch (...)

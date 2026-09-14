@@ -729,19 +729,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"CreateKeyPair", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -771,25 +758,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"CreateKeyPairWithCurveName", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateKeyPairWithCurveName(param0);
+                    return py::require<winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider2>(self->obj, py::member_kind::method, "Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", "CreateKeyPairWithCurveName", "Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider2", 1).CreateKeyPairWithCurveName(param0);
                 }());
             }
             catch (...)
@@ -813,25 +787,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"CreateKeyPairWithCurveParameters", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateKeyPairWithCurveParameters(param0);
+                    return py::require<winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider2>(self->obj, py::member_kind::method, "Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", "CreateKeyPairWithCurveParameters", "Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider2", 1).CreateKeyPairWithCurveParameters(param0);
                 }());
             }
             catch (...)
@@ -855,19 +816,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"ImportKeyPair", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -886,19 +834,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"ImportKeyPair", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType>(args, 1);
 
@@ -929,19 +864,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"ImportPublicKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -960,19 +882,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"ImportPublicKey", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType>(args, 1);
 
@@ -1041,19 +950,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"AlgorithmName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1754,19 +1650,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicHash", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 {
@@ -1797,19 +1680,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicHash", L"GetValueAndReset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1902,19 +1772,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"Export", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1931,19 +1788,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"Export", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType>(args, 0);
 
                 return py::convert([&]()
@@ -1973,19 +1817,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"ExportPublicKey", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2002,19 +1833,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"ExportPublicKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType>(args, 0);
 
                 return py::convert([&]()
@@ -2040,19 +1858,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"KeySize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3611,19 +3416,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData", L"AuthenticationTag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3641,19 +3433,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData", L"EncryptedData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3944,19 +3723,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmProvider", L"CreateHash", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3984,19 +3750,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmProvider", L"HashData", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -4064,19 +3817,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmProvider", L"AlgorithmName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4094,19 +3834,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmProvider", L"HashLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4886,19 +4613,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider", L"CreateKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -4966,19 +4680,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider", L"AlgorithmName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5257,19 +4958,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"KdfGenericBinary");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5293,19 +4981,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"KdfGenericBinary");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             {
@@ -5326,19 +5001,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"IterationCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5356,23 +5018,10 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"Capi1KdfTargetAlgorithm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Capi1KdfTargetAlgorithm();
+                return py::require<winrt::Windows::Security::Cryptography::Core::IKeyDerivationParameters2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Core.KeyDerivationParameters", "Capi1KdfTargetAlgorithm", "Windows.Security.Cryptography.Core.IKeyDerivationParameters2").Capi1KdfTargetAlgorithm();
             }());
         }
         catch (...)
@@ -5392,24 +5041,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"Capi1KdfTargetAlgorithm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Capi1KdfTargetAlgorithm(param0);
+                py::require<winrt::Windows::Security::Cryptography::Core::IKeyDerivationParameters2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Core.KeyDerivationParameters", "Capi1KdfTargetAlgorithm", "Windows.Security.Cryptography.Core.IKeyDerivationParameters2").Capi1KdfTargetAlgorithm(param0);
             }
 
             return 0;
@@ -5755,25 +5391,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmProvider", L"CreateHash", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateHash(param0);
+                    return py::require<winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProvider2>(self->obj, py::member_kind::method, "Windows.Security.Cryptography.Core.MacAlgorithmProvider", "CreateHash", "Windows.Security.Cryptography.Core.IMacAlgorithmProvider2", 1).CreateHash(param0);
                 }());
             }
             catch (...)
@@ -5797,19 +5420,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmProvider", L"CreateKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -5877,19 +5487,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmProvider", L"AlgorithmName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5907,19 +5504,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmProvider", L"MacLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6807,19 +6391,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider", L"CreateSymmetricKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -6887,19 +6458,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider", L"AlgorithmName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6917,19 +6475,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider", L"BlockLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

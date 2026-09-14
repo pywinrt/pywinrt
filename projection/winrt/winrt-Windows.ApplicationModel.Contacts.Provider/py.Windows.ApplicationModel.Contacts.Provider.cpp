@@ -29,25 +29,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.Provider.ContactPickerUI", L"AddContact", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.AddContact(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::Provider::IContactPickerUI2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.Provider.ContactPickerUI", "AddContact", "Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2", 1).AddContact(param0);
                 }());
             }
             catch (...)
@@ -60,19 +47,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.Provider.ContactPickerUI", L"AddContact", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 1);
 
@@ -103,19 +77,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.Provider.ContactPickerUI", L"ContainsContact", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -145,19 +106,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.Provider.ContactPickerUI", L"RemoveContact", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -184,19 +132,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Provider.ContactPickerUI", L"DesiredFields");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -214,19 +149,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Provider.ContactPickerUI", L"SelectionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -244,23 +166,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Provider.ContactPickerUI", L"DesiredFieldsWithContactFieldType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DesiredFieldsWithContactFieldType();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::Provider::IContactPickerUI2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Provider.ContactPickerUI", "DesiredFieldsWithContactFieldType", "Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2").DesiredFieldsWithContactFieldType();
             }());
         }
         catch (...)
@@ -274,19 +183,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.Provider.ContactPickerUI", L"ContactRemoved");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI, winrt::Windows::ApplicationModel::Contacts::Provider::ContactRemovedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -306,19 +202,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.Provider.ContactPickerUI", L"ContactRemoved");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -410,19 +293,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

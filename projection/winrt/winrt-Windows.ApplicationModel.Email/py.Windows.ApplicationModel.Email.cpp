@@ -80,19 +80,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"FileName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -116,19 +103,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"FileName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -149,19 +123,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -185,19 +146,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             {
@@ -218,23 +166,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"MimeType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MimeType();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailAttachment", "MimeType", "Windows.ApplicationModel.Email.IEmailAttachment2").MimeType();
             }());
         }
         catch (...)
@@ -254,24 +189,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"MimeType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MimeType(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailAttachment", "MimeType", "Windows.ApplicationModel.Email.IEmailAttachment2").MimeType(param0);
             }
 
             return 0;
@@ -287,23 +209,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"IsInline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsInline();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailAttachment", "IsInline", "Windows.ApplicationModel.Email.IEmailAttachment2").IsInline();
             }());
         }
         catch (...)
@@ -323,24 +232,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"IsInline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsInline(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailAttachment", "IsInline", "Windows.ApplicationModel.Email.IEmailAttachment2").IsInline(param0);
             }
 
             return 0;
@@ -356,23 +252,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"EstimatedDownloadSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EstimatedDownloadSizeInBytes();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailAttachment", "EstimatedDownloadSizeInBytes", "Windows.ApplicationModel.Email.IEmailAttachment2").EstimatedDownloadSizeInBytes();
             }());
         }
         catch (...)
@@ -392,24 +275,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"EstimatedDownloadSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint64_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.EstimatedDownloadSizeInBytes(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailAttachment", "EstimatedDownloadSizeInBytes", "Windows.ApplicationModel.Email.IEmailAttachment2").EstimatedDownloadSizeInBytes(param0);
             }
 
             return 0;
@@ -425,23 +295,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"DownloadState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DownloadState();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailAttachment", "DownloadState", "Windows.ApplicationModel.Email.IEmailAttachment2").DownloadState();
             }());
         }
         catch (...)
@@ -461,24 +318,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"DownloadState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailAttachmentDownloadState>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DownloadState(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailAttachment", "DownloadState", "Windows.ApplicationModel.Email.IEmailAttachment2").DownloadState(param0);
             }
 
             return 0;
@@ -494,23 +338,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"ContentLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentLocation();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailAttachment", "ContentLocation", "Windows.ApplicationModel.Email.IEmailAttachment2").ContentLocation();
             }());
         }
         catch (...)
@@ -530,24 +361,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"ContentLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ContentLocation(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailAttachment", "ContentLocation", "Windows.ApplicationModel.Email.IEmailAttachment2").ContentLocation(param0);
             }
 
             return 0;
@@ -563,23 +381,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"ContentId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentId();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailAttachment", "ContentId", "Windows.ApplicationModel.Email.IEmailAttachment2").ContentId();
             }());
         }
         catch (...)
@@ -599,24 +404,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"ContentId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ContentId(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailAttachment", "ContentId", "Windows.ApplicationModel.Email.IEmailAttachment2").ContentId(param0);
             }
 
             return 0;
@@ -632,23 +424,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Id();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailAttachment", "Id", "Windows.ApplicationModel.Email.IEmailAttachment2").Id();
             }());
         }
         catch (...)
@@ -662,23 +441,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailAttachment", L"IsFromBaseMessage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsFromBaseMessage();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailAttachment", "IsFromBaseMessage", "Windows.ApplicationModel.Email.IEmailAttachment2").IsFromBaseMessage();
             }());
         }
         catch (...)
@@ -769,19 +535,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailConversation", L"FindMessagesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -798,19 +551,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailConversation", L"FindMessagesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -836,19 +576,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailConversation", L"FlagState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -866,19 +593,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailConversation", L"HasAttachment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -896,19 +610,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailConversation", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -926,19 +627,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailConversation", L"Importance");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -956,19 +644,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailConversation", L"LastEmailResponseKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -986,19 +661,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailConversation", L"LatestSender");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1016,19 +678,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailConversation", L"MailboxId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1046,19 +695,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailConversation", L"MessageCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1076,19 +712,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailConversation", L"MostRecentMessageId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1106,19 +729,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailConversation", L"MostRecentMessageTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1136,19 +746,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailConversation", L"Preview");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1166,19 +763,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailConversation", L"Subject");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1196,19 +780,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailConversation", L"UnreadMessageCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1303,19 +874,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailConversationBatch", L"Conversations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1333,19 +891,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailConversationBatch", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1432,19 +977,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailConversationReader", L"ReadBatchAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1536,19 +1068,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"CreateFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1578,19 +1097,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1618,19 +1124,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"FindChildFoldersAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1658,19 +1151,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"GetConversationReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1687,19 +1167,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"GetConversationReader", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailQueryOptions>(args, 0);
 
                 return py::convert([&]()
@@ -1729,19 +1196,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"GetMessageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1771,19 +1225,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"GetMessageCountsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1811,19 +1252,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"GetMessageReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1840,19 +1268,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"GetMessageReader", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailQueryOptions>(args, 0);
 
                 return py::convert([&]()
@@ -1882,19 +1297,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"SaveMessageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessage>(args, 0);
 
                 return py::convert([&]()
@@ -1924,19 +1326,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"TryMoveAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailFolder>(args, 0);
 
                 return py::convert([&]()
@@ -1955,19 +1344,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"TryMoveAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1998,19 +1374,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"TrySaveAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2034,19 +1397,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2070,19 +1420,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2103,19 +1440,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"LastSuccessfulSyncTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2139,19 +1463,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"LastSuccessfulSyncTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
@@ -2172,19 +1483,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"IsSyncEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2208,19 +1506,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"IsSyncEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2241,19 +1526,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2277,19 +1549,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2310,19 +1569,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2340,19 +1586,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2370,19 +1603,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"MailboxId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2400,19 +1620,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailFolder", L"ParentFolderId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2549,19 +1756,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanRemoveIrmOnResponse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2585,19 +1779,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanRemoveIrmOnResponse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2618,19 +1799,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanPrintData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2654,19 +1822,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanPrintData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2687,19 +1842,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanModifyRecipientsOnResponse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2723,19 +1865,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanModifyRecipientsOnResponse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2756,19 +1885,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanForward");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2792,19 +1908,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanForward");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2825,19 +1928,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanExtractData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2861,19 +1951,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanExtractData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2894,19 +1971,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanReply");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2930,19 +1994,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanReply");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2963,19 +2014,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanEdit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2999,19 +2037,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanEdit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -3032,19 +2057,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"Template");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3068,19 +2080,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"Template");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailIrmTemplate>(arg);
 
             {
@@ -3101,19 +2100,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"IsProgramaticAccessAllowed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3137,19 +2123,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"IsProgramaticAccessAllowed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -3170,19 +2143,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"IsIrmOriginator");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3206,19 +2166,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"IsIrmOriginator");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -3239,19 +2186,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"ExpirationDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3275,19 +2209,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"ExpirationDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
@@ -3308,19 +2229,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanReplyAll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3344,19 +2252,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmInfo", L"CanReplyAll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -3491,19 +2386,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmTemplate", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3527,19 +2409,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmTemplate", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3560,19 +2429,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmTemplate", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3596,19 +2452,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmTemplate", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3629,19 +2472,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmTemplate", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3665,19 +2495,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailIrmTemplate", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3764,19 +2581,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailItemCounts", L"Flagged");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3794,19 +2598,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailItemCounts", L"Important");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3824,19 +2615,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailItemCounts", L"Total");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3854,19 +2632,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailItemCounts", L"Unread");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3955,19 +2720,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"ChangeMessageFlagStateAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailFlagState>(args, 1);
 
@@ -3998,19 +2750,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"CreateResponseMessageAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessageResponseKind>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -4044,19 +2783,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4084,19 +2810,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"DeleteMessageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4126,19 +2839,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"DownloadAttachmentAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4168,19 +2868,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"DownloadMessageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4210,25 +2897,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"GetChangeTracker", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetChangeTracker(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailbox5>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Email.EmailMailbox", "GetChangeTracker", "Windows.ApplicationModel.Email.IEmailMailbox5", 1).GetChangeTracker(param0);
                 }());
             }
             catch (...)
@@ -4252,19 +2926,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"GetConversationAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4294,19 +2955,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"GetConversationReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4323,19 +2971,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"GetConversationReader", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailQueryOptions>(args, 0);
 
                 return py::convert([&]()
@@ -4365,19 +3000,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"GetFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4407,19 +3029,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"GetMessageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4449,19 +3058,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"GetMessageReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4478,19 +3074,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"GetMessageReader", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailQueryOptions>(args, 0);
 
                 return py::convert([&]()
@@ -4520,19 +3103,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"GetSpecialFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailSpecialFolderKind>(args, 0);
 
                 return py::convert([&]()
@@ -4562,19 +3132,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"MarkFolderAsSeenAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4604,19 +3161,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"MarkFolderSyncEnabledAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -4647,19 +3191,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"MarkMessageAsSeenAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4689,19 +3220,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"MarkMessageReadAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -4732,23 +3250,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"RegisterSyncManagerAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RegisterSyncManagerAsync();
+                    return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailbox4>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Email.EmailMailbox", "RegisterSyncManagerAsync", "Windows.ApplicationModel.Email.IEmailMailbox4", 0).RegisterSyncManagerAsync();
                 }());
             }
             catch (...)
@@ -4772,25 +3277,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"ResolveRecipientsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ResolveRecipientsAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailbox3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Email.EmailMailbox", "ResolveRecipientsAsync", "Windows.ApplicationModel.Email.IEmailMailbox3", 1).ResolveRecipientsAsync(param0);
                 }());
             }
             catch (...)
@@ -4814,19 +3306,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"SaveAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4854,19 +3333,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"SaveDraftAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessage>(args, 0);
 
                 return py::convert([&]()
@@ -4896,19 +3362,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"SendMessageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessage>(args, 0);
 
                 return py::convert([&]()
@@ -4927,19 +3380,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"SendMessageAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessage>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -4970,26 +3410,13 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"TryCreateFolderAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryCreateFolderAsync(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailbox3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Email.EmailMailbox", "TryCreateFolderAsync", "Windows.ApplicationModel.Email.IEmailMailbox3", 2).TryCreateFolderAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -5013,25 +3440,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"TryDeleteFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryDeleteFolderAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailbox3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Email.EmailMailbox", "TryDeleteFolderAsync", "Windows.ApplicationModel.Email.IEmailMailbox3", 1).TryDeleteFolderAsync(param0);
                 }());
             }
             catch (...)
@@ -5055,25 +3469,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"TryEmptyFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryEmptyFolderAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailbox3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Email.EmailMailbox", "TryEmptyFolderAsync", "Windows.ApplicationModel.Email.IEmailMailbox3", 1).TryEmptyFolderAsync(param0);
                 }());
             }
             catch (...)
@@ -5097,19 +3498,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"TryForwardMeetingAsync", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessage>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Email::EmailRecipient>>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -5144,19 +3532,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"TryGetAutoReplySettingsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplyMessageResponseKind>(args, 0);
 
                 return py::convert([&]()
@@ -5186,19 +3561,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"TryMoveFolderAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -5218,19 +3580,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"TryMoveFolderAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -5262,19 +3611,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"TryMoveMessageAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -5305,19 +3641,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"TryProposeNewTimeForMeetingAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessage>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
@@ -5351,19 +3674,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"TrySetAutoReplySettingsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings>(args, 0);
 
                 return py::convert([&]()
@@ -5393,19 +3703,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"TryUpdateMeetingResponseAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessage>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMeetingResponseType>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -5439,25 +3736,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"ValidateCertificatesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::Certificate>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ValidateCertificatesAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailbox3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Email.EmailMailbox", "ValidateCertificatesAsync", "Windows.ApplicationModel.Email.IEmailMailbox3", 1).ValidateCertificatesAsync(param0);
                 }());
             }
             catch (...)
@@ -5477,19 +3761,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"OtherAppWriteAccess");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5513,19 +3784,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"OtherAppWriteAccess");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxOtherAppWriteAccess>(arg);
 
             {
@@ -5546,19 +3804,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"MailAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5582,19 +3827,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"MailAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -5615,19 +3847,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"OtherAppReadAccess");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5651,19 +3870,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"OtherAppReadAccess");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxOtherAppReadAccess>(arg);
 
             {
@@ -5684,19 +3890,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5720,19 +3913,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -5753,19 +3933,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5783,19 +3950,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"IsDataEncryptedUnderLock");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5813,19 +3967,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"IsOwnedByCurrentApp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5843,19 +3984,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"MailAddressAliases");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5873,19 +4001,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"Capabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5903,19 +4018,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"ChangeTracker");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5933,19 +4035,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"Policies");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5963,19 +4052,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"SourceDisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5993,19 +4069,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"SyncManager");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6023,19 +4086,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"UserDataAccountId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6053,23 +4103,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"LinkedMailboxId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LinkedMailboxId();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailbox2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailbox", "LinkedMailboxId", "Windows.ApplicationModel.Email.IEmailMailbox2").LinkedMailboxId();
             }());
         }
         catch (...)
@@ -6083,23 +4120,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"NetworkAccountId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NetworkAccountId();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailbox2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailbox", "NetworkAccountId", "Windows.ApplicationModel.Email.IEmailMailbox2").NetworkAccountId();
             }());
         }
         catch (...)
@@ -6113,23 +4137,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"NetworkId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NetworkId();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailbox2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailbox", "NetworkId", "Windows.ApplicationModel.Email.IEmailMailbox2").NetworkId();
             }());
         }
         catch (...)
@@ -6143,19 +4154,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"MailboxChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::EmailMailbox, winrt::Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -6175,19 +4173,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.EmailMailbox", L"MailboxChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -6323,19 +4308,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAction", L"ChangeNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6353,19 +4325,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAction", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6448,19 +4407,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAutoReply", L"Response");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6484,19 +4430,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAutoReply", L"Response");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6517,19 +4450,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAutoReply", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6553,19 +4473,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAutoReply", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -6673,19 +4580,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6709,19 +4603,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -6742,19 +4623,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings", L"ResponseKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6778,19 +4646,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings", L"ResponseKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplyMessageResponseKind>(arg);
 
             {
@@ -6811,19 +4666,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6847,19 +4689,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -6880,19 +4709,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings", L"EndTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6916,19 +4732,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings", L"EndTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -6949,19 +4752,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings", L"InternalReply");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6979,19 +4769,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings", L"KnownExternalReply");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7009,19 +4786,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings", L"UnknownExternalReply");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7109,19 +4873,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanSmartSend");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7145,24 +4896,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanSmartSend");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanSmartSend(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanSmartSend", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities3").CanSmartSend(param0);
             }
 
             return 0;
@@ -7178,19 +4916,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanUpdateMeetingResponses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7214,24 +4939,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanUpdateMeetingResponses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanUpdateMeetingResponses(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanUpdateMeetingResponses", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities3").CanUpdateMeetingResponses(param0);
             }
 
             return 0;
@@ -7247,19 +4959,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanServerSearchMailbox");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7283,24 +4982,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanServerSearchMailbox");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanServerSearchMailbox(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanServerSearchMailbox", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities3").CanServerSearchMailbox(param0);
             }
 
             return 0;
@@ -7316,19 +5002,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanServerSearchFolders");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7352,24 +5025,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanServerSearchFolders");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanServerSearchFolders(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanServerSearchFolders", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities3").CanServerSearchFolders(param0);
             }
 
             return 0;
@@ -7385,19 +5045,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanForwardMeetings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7421,24 +5068,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanForwardMeetings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanForwardMeetings(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanForwardMeetings", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities3").CanForwardMeetings(param0);
             }
 
             return 0;
@@ -7454,19 +5088,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanProposeNewTimeForMeetings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7490,24 +5111,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanProposeNewTimeForMeetings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanProposeNewTimeForMeetings(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanProposeNewTimeForMeetings", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities3").CanProposeNewTimeForMeetings(param0);
             }
 
             return 0;
@@ -7523,19 +5131,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanGetAndSetInternalAutoReplies");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7559,24 +5154,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanGetAndSetInternalAutoReplies");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanGetAndSetInternalAutoReplies(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanGetAndSetInternalAutoReplies", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities3").CanGetAndSetInternalAutoReplies(param0);
             }
 
             return 0;
@@ -7592,19 +5174,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanGetAndSetExternalAutoReplies");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7628,24 +5197,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanGetAndSetExternalAutoReplies");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanGetAndSetExternalAutoReplies(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanGetAndSetExternalAutoReplies", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities3").CanGetAndSetExternalAutoReplies(param0);
             }
 
             return 0;
@@ -7661,23 +5217,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanValidateCertificates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanValidateCertificates();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanValidateCertificates", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities2").CanValidateCertificates();
             }());
         }
         catch (...)
@@ -7697,24 +5240,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanValidateCertificates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanValidateCertificates(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanValidateCertificates", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities3").CanValidateCertificates(param0);
             }
 
             return 0;
@@ -7730,23 +5260,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanResolveRecipients");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanResolveRecipients();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanResolveRecipients", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities2").CanResolveRecipients();
             }());
         }
         catch (...)
@@ -7766,24 +5283,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanResolveRecipients");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanResolveRecipients(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanResolveRecipients", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities3").CanResolveRecipients(param0);
             }
 
             return 0;
@@ -7799,23 +5303,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanMoveFolder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanMoveFolder();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanMoveFolder", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities2").CanMoveFolder();
             }());
         }
         catch (...)
@@ -7835,24 +5326,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanMoveFolder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanMoveFolder(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanMoveFolder", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities3").CanMoveFolder(param0);
             }
 
             return 0;
@@ -7868,23 +5346,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanEmptyFolder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanEmptyFolder();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanEmptyFolder", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities2").CanEmptyFolder();
             }());
         }
         catch (...)
@@ -7904,24 +5369,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanEmptyFolder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanEmptyFolder(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanEmptyFolder", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities3").CanEmptyFolder(param0);
             }
 
             return 0;
@@ -7937,23 +5389,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanDeleteFolder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanDeleteFolder();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanDeleteFolder", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities2").CanDeleteFolder();
             }());
         }
         catch (...)
@@ -7973,24 +5412,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanDeleteFolder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanDeleteFolder(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanDeleteFolder", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities3").CanDeleteFolder(param0);
             }
 
             return 0;
@@ -8006,23 +5432,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanCreateFolder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanCreateFolder();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanCreateFolder", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities2").CanCreateFolder();
             }());
         }
         catch (...)
@@ -8042,24 +5455,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCapabilities", L"CanCreateFolder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanCreateFolder(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxCapabilities", "CanCreateFolder", "Windows.ApplicationModel.Email.IEmailMailboxCapabilities3").CanCreateFolder(param0);
             }
 
             return 0;
@@ -8152,19 +5552,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxChange", L"ChangeType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8182,19 +5569,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxChange", L"Folder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8212,19 +5586,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxChange", L"MailboxActions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8242,19 +5603,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxChange", L"Message");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8343,19 +5691,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailboxChangeReader", L"AcceptChanges", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.AcceptChanges();
@@ -8384,19 +5719,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailboxChangeReader", L"AcceptChangesThrough", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxChange>(args, 0);
 
                 {
@@ -8427,19 +5749,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailboxChangeReader", L"ReadBatchAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8533,19 +5842,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailboxChangeTracker", L"Enable", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Enable();
@@ -8574,19 +5870,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailboxChangeTracker", L"GetChangeReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8614,19 +5897,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailboxChangeTracker", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Reset();
@@ -8651,19 +5921,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxChangeTracker", L"IsTracking");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8752,19 +6009,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailboxChangedDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -8857,19 +6101,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailboxChangedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8957,19 +6188,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCreateFolderResult", L"Folder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8987,19 +6205,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxCreateFolderResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9082,19 +6287,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxPolicies", L"RequiredSmimeSigningAlgorithm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9118,24 +6310,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxPolicies", L"RequiredSmimeSigningAlgorithm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::ApplicationModel::Email::EmailMailboxSmimeSigningAlgorithm>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RequiredSmimeSigningAlgorithm(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxPolicies", "RequiredSmimeSigningAlgorithm", "Windows.ApplicationModel.Email.IEmailMailboxPolicies3").RequiredSmimeSigningAlgorithm(param0);
             }
 
             return 0;
@@ -9151,19 +6330,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxPolicies", L"RequiredSmimeEncryptionAlgorithm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9187,24 +6353,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxPolicies", L"RequiredSmimeEncryptionAlgorithm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::ApplicationModel::Email::EmailMailboxSmimeEncryptionAlgorithm>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RequiredSmimeEncryptionAlgorithm(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxPolicies", "RequiredSmimeEncryptionAlgorithm", "Windows.ApplicationModel.Email.IEmailMailboxPolicies3").RequiredSmimeEncryptionAlgorithm(param0);
             }
 
             return 0;
@@ -9220,19 +6373,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxPolicies", L"AllowedSmimeEncryptionAlgorithmNegotiation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9256,24 +6396,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxPolicies", L"AllowedSmimeEncryptionAlgorithmNegotiation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AllowedSmimeEncryptionAlgorithmNegotiation(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxPolicies", "AllowedSmimeEncryptionAlgorithmNegotiation", "Windows.ApplicationModel.Email.IEmailMailboxPolicies3").AllowedSmimeEncryptionAlgorithmNegotiation(param0);
             }
 
             return 0;
@@ -9289,19 +6416,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxPolicies", L"AllowSmimeSoftCertificates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9325,24 +6439,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxPolicies", L"AllowSmimeSoftCertificates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AllowSmimeSoftCertificates(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxPolicies", "AllowSmimeSoftCertificates", "Windows.ApplicationModel.Email.IEmailMailboxPolicies3").AllowSmimeSoftCertificates(param0);
             }
 
             return 0;
@@ -9358,23 +6459,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxPolicies", L"MustSignSmimeMessages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MustSignSmimeMessages();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxPolicies", "MustSignSmimeMessages", "Windows.ApplicationModel.Email.IEmailMailboxPolicies2").MustSignSmimeMessages();
             }());
         }
         catch (...)
@@ -9394,24 +6482,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxPolicies", L"MustSignSmimeMessages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MustSignSmimeMessages(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxPolicies", "MustSignSmimeMessages", "Windows.ApplicationModel.Email.IEmailMailboxPolicies3").MustSignSmimeMessages(param0);
             }
 
             return 0;
@@ -9427,23 +6502,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxPolicies", L"MustEncryptSmimeMessages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MustEncryptSmimeMessages();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxPolicies", "MustEncryptSmimeMessages", "Windows.ApplicationModel.Email.IEmailMailboxPolicies2").MustEncryptSmimeMessages();
             }());
         }
         catch (...)
@@ -9463,24 +6525,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxPolicies", L"MustEncryptSmimeMessages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MustEncryptSmimeMessages(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxPolicies", "MustEncryptSmimeMessages", "Windows.ApplicationModel.Email.IEmailMailboxPolicies3").MustEncryptSmimeMessages(param0);
             }
 
             return 0;
@@ -9569,19 +6618,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMailboxSyncManager", L"SyncAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9605,19 +6641,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxSyncManager", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9641,24 +6664,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxSyncManager", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxSyncStatus>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Status(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxSyncManager2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxSyncManager", "Status", "Windows.ApplicationModel.Email.IEmailMailboxSyncManager2").Status(param0);
             }
 
             return 0;
@@ -9674,19 +6684,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxSyncManager", L"LastSuccessfulSyncTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9710,24 +6707,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxSyncManager", L"LastSuccessfulSyncTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LastSuccessfulSyncTime(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxSyncManager2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxSyncManager", "LastSuccessfulSyncTime", "Windows.ApplicationModel.Email.IEmailMailboxSyncManager2").LastSuccessfulSyncTime(param0);
             }
 
             return 0;
@@ -9743,19 +6727,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxSyncManager", L"LastAttemptedSyncTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9779,24 +6750,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMailboxSyncManager", L"LastAttemptedSyncTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LastAttemptedSyncTime(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMailboxSyncManager2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMailboxSyncManager", "LastAttemptedSyncTime", "Windows.ApplicationModel.Email.IEmailMailboxSyncManager2").LastAttemptedSyncTime(param0);
             }
 
             return 0;
@@ -9812,19 +6770,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.EmailMailboxSyncManager", L"SyncStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::EmailMailboxSyncManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -9844,19 +6789,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.EmailMailboxSyncManager", L"SyncStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -10128,19 +7060,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailManagerForUser", L"RequestStoreAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailStoreAccessType>(args, 0);
 
                 return py::convert([&]()
@@ -10170,19 +7089,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailManagerForUser", L"ShowComposeNewEmailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessage>(args, 0);
 
                 return py::convert([&]()
@@ -10208,19 +7114,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailManagerForUser", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10326,19 +7219,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10362,19 +7242,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -10395,19 +7262,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"IsResponseRequested");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10431,19 +7285,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"IsResponseRequested");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -10464,19 +7305,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"IsAllDay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10500,19 +7328,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"IsAllDay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -10533,19 +7348,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"AllowNewTimeProposal");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10569,19 +7371,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"AllowNewTimeProposal");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -10602,19 +7391,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10638,19 +7414,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -10671,19 +7434,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"AppointmentRoamingId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10707,19 +7457,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"AppointmentRoamingId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -10740,19 +7477,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"AppointmentOriginalStartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10776,19 +7500,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"AppointmentOriginalStartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -10809,19 +7520,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"ProposedDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10845,19 +7543,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"ProposedDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
@@ -10878,19 +7563,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"RemoteChangeNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10914,19 +7586,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"RemoteChangeNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint64_t>(arg);
 
             {
@@ -10947,19 +7606,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10983,19 +7629,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
@@ -11016,19 +7649,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"RecurrenceStartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11052,19 +7672,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"RecurrenceStartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -11085,19 +7692,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"Recurrence");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11121,19 +7715,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"Recurrence");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentRecurrence>(arg);
 
             {
@@ -11154,19 +7735,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"ProposedStartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11190,19 +7758,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"ProposedStartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -11223,23 +7778,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMeetingInfo", L"IsReportedOutOfDateByServer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReportedOutOfDateByServer();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMeetingInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMeetingInfo", "IsReportedOutOfDateByServer", "Windows.ApplicationModel.Email.IEmailMeetingInfo2").IsReportedOutOfDateByServer();
             }());
         }
         catch (...)
@@ -11356,25 +7898,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"GetBodyStream", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessageBodyKind>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetBodyStream(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Email.EmailMessage", "GetBodyStream", "Windows.ApplicationModel.Email.IEmailMessage2", 1).GetBodyStream(param0);
                 }());
             }
             catch (...)
@@ -11398,25 +7927,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"SetBodyStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessageBodyKind>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetBodyStream(param0, param1);
+                    py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Email.EmailMessage", "SetBodyStream", "Windows.ApplicationModel.Email.IEmailMessage2", 2).SetBodyStream(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -11438,19 +7954,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"Subject");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11474,19 +7977,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"Subject");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -11507,19 +7997,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"Body");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11543,19 +8020,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"Body");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -11576,19 +8040,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"Bcc");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11606,19 +8057,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"CC");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11636,19 +8074,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"Attachments");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11666,19 +8091,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"To");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11696,23 +8108,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"AllowInternetImages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AllowInternetImages();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "AllowInternetImages", "Windows.ApplicationModel.Email.IEmailMessage2").AllowInternetImages();
             }());
         }
         catch (...)
@@ -11732,24 +8131,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"AllowInternetImages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AllowInternetImages(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "AllowInternetImages", "Windows.ApplicationModel.Email.IEmailMessage2").AllowInternetImages(param0);
             }
 
             return 0;
@@ -11765,23 +8151,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"FlagState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FlagState();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "FlagState", "Windows.ApplicationModel.Email.IEmailMessage2").FlagState();
             }());
         }
         catch (...)
@@ -11801,24 +8174,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"FlagState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailFlagState>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.FlagState(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "FlagState", "Windows.ApplicationModel.Email.IEmailMessage2").FlagState(param0);
             }
 
             return 0;
@@ -11834,23 +8194,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"EstimatedDownloadSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EstimatedDownloadSizeInBytes();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "EstimatedDownloadSizeInBytes", "Windows.ApplicationModel.Email.IEmailMessage2").EstimatedDownloadSizeInBytes();
             }());
         }
         catch (...)
@@ -11870,24 +8217,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"EstimatedDownloadSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.EstimatedDownloadSizeInBytes(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "EstimatedDownloadSizeInBytes", "Windows.ApplicationModel.Email.IEmailMessage2").EstimatedDownloadSizeInBytes(param0);
             }
 
             return 0;
@@ -11903,23 +8237,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"DownloadState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DownloadState();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "DownloadState", "Windows.ApplicationModel.Email.IEmailMessage2").DownloadState();
             }());
         }
         catch (...)
@@ -11939,24 +8260,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"DownloadState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessageDownloadState>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DownloadState(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "DownloadState", "Windows.ApplicationModel.Email.IEmailMessage2").DownloadState(param0);
             }
 
             return 0;
@@ -11972,23 +8280,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"Importance");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Importance();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "Importance", "Windows.ApplicationModel.Email.IEmailMessage2").Importance();
             }());
         }
         catch (...)
@@ -12008,24 +8303,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"Importance");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailImportance>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Importance(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "Importance", "Windows.ApplicationModel.Email.IEmailMessage2").Importance(param0);
             }
 
             return 0;
@@ -12041,23 +8323,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"IrmInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IrmInfo();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "IrmInfo", "Windows.ApplicationModel.Email.IEmailMessage2").IrmInfo();
             }());
         }
         catch (...)
@@ -12077,24 +8346,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"IrmInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailIrmInfo>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IrmInfo(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "IrmInfo", "Windows.ApplicationModel.Email.IEmailMessage2").IrmInfo(param0);
             }
 
             return 0;
@@ -12110,23 +8366,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"OriginalCodePage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OriginalCodePage();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "OriginalCodePage", "Windows.ApplicationModel.Email.IEmailMessage2").OriginalCodePage();
             }());
         }
         catch (...)
@@ -12146,24 +8389,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"OriginalCodePage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OriginalCodePage(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "OriginalCodePage", "Windows.ApplicationModel.Email.IEmailMessage2").OriginalCodePage(param0);
             }
 
             return 0;
@@ -12179,23 +8409,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"SentTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SentTime();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "SentTime", "Windows.ApplicationModel.Email.IEmailMessage2").SentTime();
             }());
         }
         catch (...)
@@ -12215,24 +8432,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"SentTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SentTime(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "SentTime", "Windows.ApplicationModel.Email.IEmailMessage2").SentTime(param0);
             }
 
             return 0;
@@ -12248,23 +8452,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"Sender");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Sender();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "Sender", "Windows.ApplicationModel.Email.IEmailMessage2").Sender();
             }());
         }
         catch (...)
@@ -12284,24 +8475,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"Sender");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailRecipient>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Sender(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "Sender", "Windows.ApplicationModel.Email.IEmailMessage2").Sender(param0);
             }
 
             return 0;
@@ -12317,23 +8495,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RemoteId();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "RemoteId", "Windows.ApplicationModel.Email.IEmailMessage2").RemoteId();
             }());
         }
         catch (...)
@@ -12353,24 +8518,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RemoteId(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "RemoteId", "Windows.ApplicationModel.Email.IEmailMessage2").RemoteId(param0);
             }
 
             return 0;
@@ -12386,23 +8538,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"Preview");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Preview();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "Preview", "Windows.ApplicationModel.Email.IEmailMessage2").Preview();
             }());
         }
         catch (...)
@@ -12422,24 +8561,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"Preview");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Preview(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "Preview", "Windows.ApplicationModel.Email.IEmailMessage2").Preview(param0);
             }
 
             return 0;
@@ -12455,23 +8581,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"MessageClass");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MessageClass();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "MessageClass", "Windows.ApplicationModel.Email.IEmailMessage2").MessageClass();
             }());
         }
         catch (...)
@@ -12491,24 +8604,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"MessageClass");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MessageClass(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "MessageClass", "Windows.ApplicationModel.Email.IEmailMessage2").MessageClass(param0);
             }
 
             return 0;
@@ -12524,23 +8624,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"MeetingInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MeetingInfo();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "MeetingInfo", "Windows.ApplicationModel.Email.IEmailMessage2").MeetingInfo();
             }());
         }
         catch (...)
@@ -12560,24 +8647,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"MeetingInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMeetingInfo>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MeetingInfo(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "MeetingInfo", "Windows.ApplicationModel.Email.IEmailMessage2").MeetingInfo(param0);
             }
 
             return 0;
@@ -12593,23 +8667,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"LastResponseKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LastResponseKind();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "LastResponseKind", "Windows.ApplicationModel.Email.IEmailMessage2").LastResponseKind();
             }());
         }
         catch (...)
@@ -12629,24 +8690,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"LastResponseKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessageResponseKind>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LastResponseKind(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "LastResponseKind", "Windows.ApplicationModel.Email.IEmailMessage2").LastResponseKind(param0);
             }
 
             return 0;
@@ -12662,23 +8710,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"IsSeen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSeen();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "IsSeen", "Windows.ApplicationModel.Email.IEmailMessage2").IsSeen();
             }());
         }
         catch (...)
@@ -12698,24 +8733,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"IsSeen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsSeen(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "IsSeen", "Windows.ApplicationModel.Email.IEmailMessage2").IsSeen(param0);
             }
 
             return 0;
@@ -12731,23 +8753,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"IsRead");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsRead();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "IsRead", "Windows.ApplicationModel.Email.IEmailMessage2").IsRead();
             }());
         }
         catch (...)
@@ -12767,24 +8776,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"IsRead");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsRead(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "IsRead", "Windows.ApplicationModel.Email.IEmailMessage2").IsRead(param0);
             }
 
             return 0;
@@ -12800,23 +8796,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"IsServerSearchMessage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsServerSearchMessage();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "IsServerSearchMessage", "Windows.ApplicationModel.Email.IEmailMessage2").IsServerSearchMessage();
             }());
         }
         catch (...)
@@ -12830,23 +8813,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"IsSmartSendable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSmartSendable();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "IsSmartSendable", "Windows.ApplicationModel.Email.IEmailMessage2").IsSmartSendable();
             }());
         }
         catch (...)
@@ -12860,23 +8830,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"MailboxId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MailboxId();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "MailboxId", "Windows.ApplicationModel.Email.IEmailMessage2").MailboxId();
             }());
         }
         catch (...)
@@ -12890,23 +8847,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"ChangeNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChangeNumber();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "ChangeNumber", "Windows.ApplicationModel.Email.IEmailMessage2").ChangeNumber();
             }());
         }
         catch (...)
@@ -12920,23 +8864,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"ConversationId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConversationId();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "ConversationId", "Windows.ApplicationModel.Email.IEmailMessage2").ConversationId();
             }());
         }
         catch (...)
@@ -12950,23 +8881,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"NormalizedSubject");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NormalizedSubject();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "NormalizedSubject", "Windows.ApplicationModel.Email.IEmailMessage2").NormalizedSubject();
             }());
         }
         catch (...)
@@ -12980,23 +8898,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"FolderId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FolderId();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "FolderId", "Windows.ApplicationModel.Email.IEmailMessage2").FolderId();
             }());
         }
         catch (...)
@@ -13010,23 +8915,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"HasPartialBodies");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HasPartialBodies();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "HasPartialBodies", "Windows.ApplicationModel.Email.IEmailMessage2").HasPartialBodies();
             }());
         }
         catch (...)
@@ -13040,23 +8932,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Id();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "Id", "Windows.ApplicationModel.Email.IEmailMessage2").Id();
             }());
         }
         catch (...)
@@ -13070,23 +8949,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"InResponseToMessageId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.InResponseToMessageId();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "InResponseToMessageId", "Windows.ApplicationModel.Email.IEmailMessage2").InResponseToMessageId();
             }());
         }
         catch (...)
@@ -13100,23 +8966,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"IsDraftMessage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDraftMessage();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "IsDraftMessage", "Windows.ApplicationModel.Email.IEmailMessage2").IsDraftMessage();
             }());
         }
         catch (...)
@@ -13130,23 +8983,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"SmimeKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SmimeKind();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "SmimeKind", "Windows.ApplicationModel.Email.IEmailMessage3").SmimeKind();
             }());
         }
         catch (...)
@@ -13166,24 +9006,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"SmimeKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessageSmimeKind>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SmimeKind(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "SmimeKind", "Windows.ApplicationModel.Email.IEmailMessage3").SmimeKind(param0);
             }
 
             return 0;
@@ -13199,23 +9026,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"SmimeData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SmimeData();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "SmimeData", "Windows.ApplicationModel.Email.IEmailMessage3").SmimeData();
             }());
         }
         catch (...)
@@ -13235,24 +9049,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"SmimeData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SmimeData(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "SmimeData", "Windows.ApplicationModel.Email.IEmailMessage3").SmimeData(param0);
             }
 
             return 0;
@@ -13268,23 +9069,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"SentRepresenting");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SentRepresenting();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage4>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "SentRepresenting", "Windows.ApplicationModel.Email.IEmailMessage4").SentRepresenting();
             }());
         }
         catch (...)
@@ -13304,24 +9092,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"SentRepresenting");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailRecipient>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SentRepresenting(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage4>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "SentRepresenting", "Windows.ApplicationModel.Email.IEmailMessage4").SentRepresenting(param0);
             }
 
             return 0;
@@ -13337,23 +9112,10 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessage", L"ReplyTo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ReplyTo();
+                return py::require<winrt::Windows::ApplicationModel::Email::IEmailMessage4>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailMessage", "ReplyTo", "Windows.ApplicationModel.Email.IEmailMessage4").ReplyTo();
             }());
         }
         catch (...)
@@ -13469,19 +9231,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessageBatch", L"Messages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13499,19 +9248,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailMessageBatch", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13598,19 +9334,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailMessageReader", L"ReadBatchAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -13751,19 +9474,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailQueryOptions", L"SortProperty");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13787,19 +9497,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailQueryOptions", L"SortProperty");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailQuerySortProperty>(arg);
 
             {
@@ -13820,19 +9517,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailQueryOptions", L"SortDirection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13856,19 +9540,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailQueryOptions", L"SortDirection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailQuerySortDirection>(arg);
 
             {
@@ -13889,19 +9560,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailQueryOptions", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13925,19 +9583,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailQueryOptions", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailQueryKind>(arg);
 
             {
@@ -13958,19 +9603,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailQueryOptions", L"FolderIds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13988,19 +9620,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailQueryOptions", L"TextSearch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14086,19 +9705,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailQueryTextSearch", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14122,19 +9728,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailQueryTextSearch", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -14155,19 +9748,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailQueryTextSearch", L"SearchScope");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14191,19 +9771,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailQueryTextSearch", L"SearchScope");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailQuerySearchScope>(arg);
 
             {
@@ -14224,19 +9791,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailQueryTextSearch", L"Fields");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14260,19 +9814,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailQueryTextSearch", L"Fields");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailQuerySearchFields>(arg);
 
             {
@@ -14412,19 +9953,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailRecipient", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14448,19 +9976,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailRecipient", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -14481,19 +9996,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailRecipient", L"Address");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14517,19 +10019,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailRecipient", L"Address");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -14641,24 +10130,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailRecipientResolutionResult", L"SetPublicKeys", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::Certificate>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetPublicKeys(param0);
+                    py::require<winrt::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Email.EmailRecipientResolutionResult", "SetPublicKeys", "Windows.ApplicationModel.Email.IEmailRecipientResolutionResult2", 1).SetPublicKeys(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -14680,19 +10156,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailRecipientResolutionResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14716,24 +10179,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailRecipientResolutionResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionStatus>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Status(param0);
+                py::require<winrt::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Email.EmailRecipientResolutionResult", "Status", "Windows.ApplicationModel.Email.IEmailRecipientResolutionResult2").Status(param0);
             }
 
             return 0;
@@ -14749,19 +10199,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.EmailRecipientResolutionResult", L"PublicKeys");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14849,19 +10286,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailStore", L"CreateMailboxAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -14881,19 +10305,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailStore", L"CreateMailboxAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -14925,19 +10336,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailStore", L"FindMailboxesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -14965,19 +10363,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailStore", L"GetConversationAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -15007,19 +10392,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailStore", L"GetConversationReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -15036,19 +10408,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailStore", L"GetConversationReader", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailQueryOptions>(args, 0);
 
                 return py::convert([&]()
@@ -15078,19 +10437,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailStore", L"GetFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -15120,19 +10466,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailStore", L"GetMailboxAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -15162,19 +10495,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailStore", L"GetMessageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -15204,19 +10524,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailStore", L"GetMessageReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -15233,19 +10540,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.EmailStore", L"GetMessageReader", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailQueryOptions>(args, 0);
 
                 return py::convert([&]()

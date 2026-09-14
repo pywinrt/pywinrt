@@ -67,19 +67,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.CompositionConditionalValue", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -103,19 +90,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.CompositionConditionalValue", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
             {
@@ -136,19 +110,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.CompositionConditionalValue", L"Condition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -172,19 +133,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.CompositionConditionalValue", L"Condition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
             {
@@ -296,19 +244,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.CompositionInteractionSourceCollection", L"Add", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::ICompositionInteractionSource>(args, 0);
 
                 {
@@ -339,23 +274,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.CompositionInteractionSourceCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::ICompositionInteractionSource>>(self->obj, py::member_kind::method, "Microsoft.UI.Composition.Interactions.CompositionInteractionSourceCollection", "First", "Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.ICompositionInteractionSource>", 0).First();
                 }());
             }
             catch (...)
@@ -379,19 +301,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.CompositionInteractionSourceCollection", L"Remove", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::ICompositionInteractionSource>(args, 0);
 
                 {
@@ -422,19 +331,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.CompositionInteractionSourceCollection", L"RemoveAll", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RemoveAll();
@@ -459,19 +355,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.CompositionInteractionSourceCollection", L"Count");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -516,7 +399,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::ICompositionInteractionSource>>(self->obj, py::member_kind::method, "Microsoft.UI.Composition.Interactions.CompositionInteractionSourceCollection", "First", "Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.ICompositionInteractionSource>", 0).First();
             }());
         }
         catch (...)
@@ -575,19 +458,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionSourceConfiguration", L"ScaleSourceMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -611,19 +481,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionSourceConfiguration", L"ScaleSourceMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceRedirectionMode>(arg);
 
             {
@@ -644,19 +501,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionSourceConfiguration", L"PositionYSourceMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -680,19 +524,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionSourceConfiguration", L"PositionYSourceMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceRedirectionMode>(arg);
 
             {
@@ -713,19 +544,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionSourceConfiguration", L"PositionXSourceMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -749,19 +567,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionSourceConfiguration", L"PositionXSourceMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceRedirectionMode>(arg);
 
             {
@@ -852,19 +657,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"AdjustPositionXIfGreaterThanThreshold", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
@@ -896,19 +688,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"AdjustPositionYIfGreaterThanThreshold", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
@@ -940,24 +719,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"ConfigureCenterPointXInertiaModifiers", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ConfigureCenterPointXInertiaModifiers(param0);
+                    py::require<winrt::Microsoft::UI::Composition::Interactions::IInteractionTracker2>(self->obj, py::member_kind::method, "Microsoft.UI.Composition.Interactions.InteractionTracker", "ConfigureCenterPointXInertiaModifiers", "Microsoft.UI.Composition.Interactions.IInteractionTracker2", 1).ConfigureCenterPointXInertiaModifiers(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -983,24 +749,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"ConfigureCenterPointYInertiaModifiers", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ConfigureCenterPointYInertiaModifiers(param0);
+                    py::require<winrt::Microsoft::UI::Composition::Interactions::IInteractionTracker2>(self->obj, py::member_kind::method, "Microsoft.UI.Composition.Interactions.InteractionTracker", "ConfigureCenterPointYInertiaModifiers", "Microsoft.UI.Composition.Interactions.IInteractionTracker2", 1).ConfigureCenterPointYInertiaModifiers(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1026,19 +779,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"ConfigurePositionXInertiaModifiers", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaModifier>>(args, 0);
 
                 {
@@ -1069,19 +809,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"ConfigurePositionYInertiaModifiers", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaModifier>>(args, 0);
 
                 {
@@ -1112,19 +839,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"ConfigureScaleInertiaModifiers", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaModifier>>(args, 0);
 
                 {
@@ -1155,24 +869,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"ConfigureVector2PositionInertiaModifiers", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ConfigureVector2PositionInertiaModifiers(param0);
+                    py::require<winrt::Microsoft::UI::Composition::Interactions::IInteractionTracker3>(self->obj, py::member_kind::method, "Microsoft.UI.Composition.Interactions.InteractionTracker", "ConfigureVector2PositionInertiaModifiers", "Microsoft.UI.Composition.Interactions.IInteractionTracker3", 1).ConfigureVector2PositionInertiaModifiers(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1371,19 +1072,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"TryUpdatePosition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
 
                 return py::convert([&]()
@@ -1402,26 +1090,13 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"TryUpdatePosition", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerClampingOption>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryUpdatePosition(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Composition::Interactions::IInteractionTracker4>(self->obj, py::member_kind::method, "Microsoft.UI.Composition.Interactions.InteractionTracker", "TryUpdatePosition", "Microsoft.UI.Composition.Interactions.IInteractionTracker4", 2).TryUpdatePosition(param0, param1);
                 }());
             }
             catch (...)
@@ -1434,19 +1109,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"TryUpdatePosition", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerClampingOption>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerPositionUpdateOption>(args, 2);
@@ -1454,7 +1116,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryUpdatePosition(param0, param1, param2);
+                    return py::require<winrt::Microsoft::UI::Composition::Interactions::IInteractionTracker5>(self->obj, py::member_kind::method, "Microsoft.UI.Composition.Interactions.InteractionTracker", "TryUpdatePosition", "Microsoft.UI.Composition.Interactions.IInteractionTracker5", 3).TryUpdatePosition(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -1478,19 +1140,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"TryUpdatePositionBy", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
 
                 return py::convert([&]()
@@ -1509,26 +1158,13 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"TryUpdatePositionBy", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerClampingOption>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryUpdatePositionBy(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Composition::Interactions::IInteractionTracker4>(self->obj, py::member_kind::method, "Microsoft.UI.Composition.Interactions.InteractionTracker", "TryUpdatePositionBy", "Microsoft.UI.Composition.Interactions.IInteractionTracker4", 2).TryUpdatePositionBy(param0, param1);
                 }());
             }
             catch (...)
@@ -1552,19 +1188,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"TryUpdatePositionWithAdditionalVelocity", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
 
                 return py::convert([&]()
@@ -1594,19 +1217,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"TryUpdatePositionWithAnimation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 0);
 
                 return py::convert([&]()
@@ -1636,19 +1246,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"TryUpdateScale", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
@@ -1679,19 +1276,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"TryUpdateScaleWithAdditionalVelocity", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
@@ -1722,19 +1306,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"TryUpdateScaleWithAnimation", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
@@ -1761,19 +1332,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"ScaleInertiaDecayRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1797,19 +1355,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"ScaleInertiaDecayRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<float>>(arg);
 
             {
@@ -1830,19 +1375,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"PositionInertiaDecayRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1866,19 +1398,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"PositionInertiaDecayRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3>>(arg);
 
             {
@@ -1899,19 +1418,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"MinScale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1935,19 +1441,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"MinScale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -1968,19 +1461,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"MinPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2004,19 +1484,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"MinPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             {
@@ -2037,19 +1504,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"MaxScale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2073,19 +1527,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"MaxScale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -2106,19 +1547,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"MaxPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2142,19 +1570,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"MaxPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             {
@@ -2175,19 +1590,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"InteractionSources");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2205,19 +1607,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"IsPositionRoundingSuggested");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2235,19 +1624,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"NaturalRestingPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2265,19 +1641,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"NaturalRestingScale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2295,19 +1658,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"Owner");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2325,19 +1675,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2355,19 +1692,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"PositionVelocityInPixelsPerSecond");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2385,19 +1709,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"Scale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2415,19 +1726,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"ScaleVelocityInPercentPerSecond");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2445,23 +1743,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"IsInertiaFromImpulse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsInertiaFromImpulse();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IInteractionTracker4>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.InteractionTracker", "IsInertiaFromImpulse", "Microsoft.UI.Composition.Interactions.IInteractionTracker4").IsInertiaFromImpulse();
             }());
         }
         catch (...)
@@ -2594,19 +1879,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs", L"RequestId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2624,23 +1896,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs", L"IsFromBinding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsFromBinding();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs2>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs", "IsFromBinding", "Microsoft.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs2").IsFromBinding();
             }());
         }
         catch (...)
@@ -2719,19 +1978,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs", L"RequestId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2749,23 +1995,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs", L"IsFromBinding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsFromBinding();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs2>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs", "IsFromBinding", "Microsoft.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs2").IsFromBinding();
             }());
         }
         catch (...)
@@ -2970,19 +2203,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaMotion", L"Motion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3006,19 +2226,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaMotion", L"Motion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
             {
@@ -3039,19 +2246,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaMotion", L"Condition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3075,19 +2269,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaMotion", L"Condition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
             {
@@ -3237,19 +2418,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion", L"NaturalMotion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3273,19 +2441,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion", L"NaturalMotion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ScalarNaturalMotionAnimation>(arg);
 
             {
@@ -3306,19 +2461,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion", L"Condition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3342,19 +2484,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion", L"Condition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
             {
@@ -3504,19 +2633,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue", L"RestingValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3540,19 +2656,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue", L"RestingValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
             {
@@ -3573,19 +2676,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue", L"Condition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3609,19 +2699,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue", L"Condition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
             {
@@ -3729,19 +2806,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs", L"ModifiedRestingPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3759,19 +2823,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs", L"ModifiedRestingScale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3789,19 +2840,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs", L"NaturalRestingPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3819,19 +2857,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs", L"NaturalRestingScale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3849,19 +2874,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs", L"PositionVelocityInPixelsPerSecond");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3879,19 +2891,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs", L"RequestId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3909,19 +2908,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs", L"ScaleVelocityInPercentPerSecond");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3939,23 +2925,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs", L"IsInertiaFromImpulse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsInertiaFromImpulse();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs2>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs", "IsInertiaFromImpulse", "Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs2").IsInertiaFromImpulse();
             }());
         }
         catch (...)
@@ -3969,23 +2942,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs", L"IsFromBinding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsFromBinding();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs3>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs", "IsFromBinding", "Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs3").IsFromBinding();
             }());
         }
         catch (...)
@@ -4071,19 +3031,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs", L"RequestId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4101,23 +3048,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs", L"IsFromBinding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsFromBinding();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs2>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs", "IsFromBinding", "Microsoft.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs2").IsFromBinding();
             }());
         }
         catch (...)
@@ -4196,19 +3130,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerRequestIgnoredArgs", L"RequestId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4290,19 +3211,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4320,19 +3228,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs", L"RequestId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4350,19 +3245,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs", L"Scale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4572,19 +3454,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion", L"NaturalMotion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4608,19 +3477,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion", L"NaturalMotion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Vector2NaturalMotionAnimation>(arg);
 
             {
@@ -4641,19 +3497,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion", L"Condition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4677,19 +3520,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion", L"Condition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
             {
@@ -4801,24 +3631,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"ConfigureCenterPointXModifiers", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureCenterPointXModifiers(param0);
+                    py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource2>(self->obj, py::member_kind::method, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "ConfigureCenterPointXModifiers", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource2", 1).ConfigureCenterPointXModifiers(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4844,24 +3661,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"ConfigureCenterPointYModifiers", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureCenterPointYModifiers(param0);
+                    py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource2>(self->obj, py::member_kind::method, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "ConfigureCenterPointYModifiers", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource2", 1).ConfigureCenterPointYModifiers(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4887,24 +3691,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"ConfigureDeltaPositionXModifiers", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureDeltaPositionXModifiers(param0);
+                    py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource2>(self->obj, py::member_kind::method, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "ConfigureDeltaPositionXModifiers", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource2", 1).ConfigureDeltaPositionXModifiers(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4930,24 +3721,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"ConfigureDeltaPositionYModifiers", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureDeltaPositionYModifiers(param0);
+                    py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource2>(self->obj, py::member_kind::method, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "ConfigureDeltaPositionYModifiers", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource2", 1).ConfigureDeltaPositionYModifiers(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4973,24 +3751,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"ConfigureDeltaScaleModifiers", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureDeltaScaleModifiers(param0);
+                    py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource2>(self->obj, py::member_kind::method, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "ConfigureDeltaScaleModifiers", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource2", 1).ConfigureDeltaScaleModifiers(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -5100,24 +3865,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"TryRedirectForManipulation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Input::PointerPoint>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().TryRedirectForManipulation(param0);
+                    py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::method, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "TryRedirectForManipulation", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource", 1).TryRedirectForManipulation(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -5139,23 +3891,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"ScaleSourceMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleSourceMode();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "ScaleSourceMode", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").ScaleSourceMode();
             }());
         }
         catch (...)
@@ -5175,24 +3914,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"ScaleSourceMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleSourceMode(param0);
+                py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "ScaleSourceMode", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").ScaleSourceMode(param0);
             }
 
             return 0;
@@ -5208,23 +3934,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"ScaleChainingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleChainingMode();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "ScaleChainingMode", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").ScaleChainingMode();
             }());
         }
         catch (...)
@@ -5244,24 +3957,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"ScaleChainingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionChainingMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleChainingMode(param0);
+                py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "ScaleChainingMode", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").ScaleChainingMode(param0);
             }
 
             return 0;
@@ -5277,23 +3977,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"PositionYSourceMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYSourceMode();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "PositionYSourceMode", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").PositionYSourceMode();
             }());
         }
         catch (...)
@@ -5313,24 +4000,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"PositionYSourceMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYSourceMode(param0);
+                py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "PositionYSourceMode", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").PositionYSourceMode(param0);
             }
 
             return 0;
@@ -5346,23 +4020,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"PositionYChainingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYChainingMode();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "PositionYChainingMode", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").PositionYChainingMode();
             }());
         }
         catch (...)
@@ -5382,24 +4043,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"PositionYChainingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionChainingMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYChainingMode(param0);
+                py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "PositionYChainingMode", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").PositionYChainingMode(param0);
             }
 
             return 0;
@@ -5415,23 +4063,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"PositionXSourceMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXSourceMode();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "PositionXSourceMode", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").PositionXSourceMode();
             }());
         }
         catch (...)
@@ -5451,24 +4086,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"PositionXSourceMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXSourceMode(param0);
+                py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "PositionXSourceMode", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").PositionXSourceMode(param0);
             }
 
             return 0;
@@ -5484,23 +4106,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"PositionXChainingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXChainingMode();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "PositionXChainingMode", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").PositionXChainingMode();
             }());
         }
         catch (...)
@@ -5520,24 +4129,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"PositionXChainingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionChainingMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXChainingMode(param0);
+                py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "PositionXChainingMode", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").PositionXChainingMode(param0);
             }
 
             return 0;
@@ -5553,23 +4149,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"ManipulationRedirectionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ManipulationRedirectionMode();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "ManipulationRedirectionMode", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").ManipulationRedirectionMode();
             }());
         }
         catch (...)
@@ -5589,24 +4172,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"ManipulationRedirectionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSourceRedirectionMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ManipulationRedirectionMode(param0);
+                py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "ManipulationRedirectionMode", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").ManipulationRedirectionMode(param0);
             }
 
             return 0;
@@ -5622,23 +4192,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"IsPositionYRailsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionYRailsEnabled();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "IsPositionYRailsEnabled", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").IsPositionYRailsEnabled();
             }());
         }
         catch (...)
@@ -5658,24 +4215,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"IsPositionYRailsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionYRailsEnabled(param0);
+                py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "IsPositionYRailsEnabled", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").IsPositionYRailsEnabled(param0);
             }
 
             return 0;
@@ -5691,23 +4235,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"IsPositionXRailsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionXRailsEnabled();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "IsPositionXRailsEnabled", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").IsPositionXRailsEnabled();
             }());
         }
         catch (...)
@@ -5727,24 +4258,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"IsPositionXRailsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionXRailsEnabled(param0);
+                py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "IsPositionXRailsEnabled", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").IsPositionXRailsEnabled(param0);
             }
 
             return 0;
@@ -5760,23 +4278,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"Source");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().Source();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "Source", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource").Source();
             }());
         }
         catch (...)
@@ -5790,23 +4295,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"DeltaPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().DeltaPosition();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "DeltaPosition", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource2").DeltaPosition();
             }());
         }
         catch (...)
@@ -5820,23 +4312,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"DeltaScale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().DeltaScale();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "DeltaScale", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource2").DeltaScale();
             }());
         }
         catch (...)
@@ -5850,23 +4329,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().Position();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "Position", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource2").Position();
             }());
         }
         catch (...)
@@ -5880,23 +4346,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"PositionVelocity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionVelocity();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "PositionVelocity", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource2").PositionVelocity();
             }());
         }
         catch (...)
@@ -5910,23 +4363,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"Scale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().Scale();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "Scale", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource2").Scale();
             }());
         }
         catch (...)
@@ -5940,23 +4380,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"ScaleVelocity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleVelocity();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "ScaleVelocity", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource2").ScaleVelocity();
             }());
         }
         catch (...)
@@ -5970,23 +4397,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"PointerWheelConfig");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PointerWheelConfig();
+                return py::require<winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSource3>(self->obj, py::member_kind::property, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "PointerWheelConfig", "Microsoft.UI.Composition.Interactions.IVisualInteractionSource3").PointerWheelConfig();
             }());
         }
         catch (...)
@@ -6250,19 +4664,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner", L"CustomAnimationStateEntered", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs>(args, 1);
 
@@ -6294,19 +4695,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner", L"IdleStateEntered", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs>(args, 1);
 
@@ -6338,19 +4726,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner", L"InertiaStateEntered", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs>(args, 1);
 
@@ -6382,19 +4757,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner", L"InteractingStateEntered", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs>(args, 1);
 
@@ -6426,19 +4788,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner", L"RequestIgnored", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs>(args, 1);
 
@@ -6470,19 +4819,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner", L"ValuesChanged", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs>(args, 1);
 

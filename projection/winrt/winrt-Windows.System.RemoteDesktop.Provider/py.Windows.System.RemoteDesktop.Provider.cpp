@@ -25,19 +25,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs", L"Action");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -166,24 +153,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo", L"PerformLocalActionFromRemote", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopLocalAction>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.PerformLocalActionFromRemote(param0);
+                    py::require<winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo2>(self->obj, py::member_kind::method, "Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo", "PerformLocalActionFromRemote", "Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo2", 1).PerformLocalActionFromRemote(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -209,19 +183,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo", L"SetConnectionStatus", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionStatus>(args, 0);
 
                 {
@@ -252,19 +213,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo", L"SwitchToLocalSession", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.SwitchToLocalSession();
@@ -381,22 +329,9 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -504,19 +439,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo", L"ReportSwitched", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.ReportSwitched();
@@ -541,19 +463,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo", L"PerformLocalActionRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionRemoteInfo, winrt::Windows::System::RemoteDesktop::Provider::PerformLocalActionRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -573,19 +482,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo", L"PerformLocalActionRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -606,19 +502,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo", L"SwitchToLocalSessionRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionRemoteInfo, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -638,19 +521,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo", L"SwitchToLocalSessionRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -702,7 +572,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -813,19 +683,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -843,19 +700,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

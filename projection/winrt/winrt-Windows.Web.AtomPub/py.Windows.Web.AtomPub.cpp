@@ -66,19 +66,6 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"CancelAsyncOperations", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.CancelAsyncOperations();
@@ -107,19 +94,6 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"CreateMediaResourceAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -152,19 +126,6 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"CreateResourceAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationItem>(args, 2);
@@ -196,19 +157,6 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"DeleteResourceAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert([&]()
@@ -238,19 +186,6 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"DeleteResourceItemAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationItem>(args, 0);
 
                 return py::convert([&]()
@@ -280,25 +215,12 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"RetrieveFeedAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RetrieveFeedAsync(param0);
+                    return py::require<winrt::Windows::Web::Syndication::ISyndicationClient>(self->obj, py::member_kind::method, "Windows.Web.AtomPub.AtomPubClient", "RetrieveFeedAsync", "Windows.Web.Syndication.ISyndicationClient", 1).RetrieveFeedAsync(param0);
                 }());
             }
             catch (...)
@@ -322,19 +244,6 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"RetrieveMediaResourceAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert([&]()
@@ -364,19 +273,6 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"RetrieveResourceAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert([&]()
@@ -406,19 +302,6 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"RetrieveServiceDocumentAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert([&]()
@@ -448,25 +331,12 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"SetRequestHeader", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetRequestHeader(param0, param1);
+                    py::require<winrt::Windows::Web::Syndication::ISyndicationClient>(self->obj, py::member_kind::method, "Windows.Web.AtomPub.AtomPubClient", "SetRequestHeader", "Windows.Web.Syndication.ISyndicationClient", 2).SetRequestHeader(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -492,19 +362,6 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"UpdateMediaResourceAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 2);
@@ -536,19 +393,6 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"UpdateResourceAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationItem>(args, 1);
 
@@ -579,19 +423,6 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"UpdateResourceItemAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationItem>(args, 0);
 
                 return py::convert([&]()
@@ -617,23 +448,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"Timeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Timeout();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationClient>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.AtomPubClient", "Timeout", "Windows.Web.Syndication.ISyndicationClient").Timeout();
             }());
         }
         catch (...)
@@ -653,24 +471,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"Timeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Timeout(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationClient>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.AtomPubClient", "Timeout", "Windows.Web.Syndication.ISyndicationClient").Timeout(param0);
             }
 
             return 0;
@@ -686,23 +491,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCredential();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationClient>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.AtomPubClient", "ServerCredential", "Windows.Web.Syndication.ISyndicationClient").ServerCredential();
             }());
         }
         catch (...)
@@ -722,24 +514,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ServerCredential(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationClient>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.AtomPubClient", "ServerCredential", "Windows.Web.Syndication.ISyndicationClient").ServerCredential(param0);
             }
 
             return 0;
@@ -755,23 +534,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProxyCredential();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationClient>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.AtomPubClient", "ProxyCredential", "Windows.Web.Syndication.ISyndicationClient").ProxyCredential();
             }());
         }
         catch (...)
@@ -791,24 +557,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ProxyCredential(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationClient>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.AtomPubClient", "ProxyCredential", "Windows.Web.Syndication.ISyndicationClient").ProxyCredential(param0);
             }
 
             return 0;
@@ -824,23 +577,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"MaxResponseBufferSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxResponseBufferSize();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationClient>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.AtomPubClient", "MaxResponseBufferSize", "Windows.Web.Syndication.ISyndicationClient").MaxResponseBufferSize();
             }());
         }
         catch (...)
@@ -860,24 +600,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"MaxResponseBufferSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MaxResponseBufferSize(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationClient>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.AtomPubClient", "MaxResponseBufferSize", "Windows.Web.Syndication.ISyndicationClient").MaxResponseBufferSize(param0);
             }
 
             return 0;
@@ -893,23 +620,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"BypassCacheOnRetrieve");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BypassCacheOnRetrieve();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationClient>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.AtomPubClient", "BypassCacheOnRetrieve", "Windows.Web.Syndication.ISyndicationClient").BypassCacheOnRetrieve();
             }());
         }
         catch (...)
@@ -929,24 +643,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"BypassCacheOnRetrieve");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BypassCacheOnRetrieve(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationClient>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.AtomPubClient", "BypassCacheOnRetrieve", "Windows.Web.Syndication.ISyndicationClient").BypassCacheOnRetrieve(param0);
             }
 
             return 0;
@@ -1047,25 +748,12 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.ResourceCollection", L"GetXmlDocument", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetXmlDocument(param0);
+                    return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::method, "Windows.Web.AtomPub.ResourceCollection", "GetXmlDocument", "Windows.Web.Syndication.ISyndicationNode", 1).GetXmlDocument(param0);
                 }());
             }
             catch (...)
@@ -1085,19 +773,6 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Accepts");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1115,19 +790,6 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Categories");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1145,19 +807,6 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1175,19 +824,6 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1205,23 +841,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BaseUri();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ResourceCollection", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri();
             }());
         }
         catch (...)
@@ -1241,24 +864,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BaseUri(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ResourceCollection", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri(param0);
             }
 
             return 0;
@@ -1274,23 +884,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeValue();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ResourceCollection", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue();
             }());
         }
         catch (...)
@@ -1310,24 +907,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeValue(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ResourceCollection", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue(param0);
             }
 
             return 0;
@@ -1343,23 +927,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeNamespace();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ResourceCollection", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace();
             }());
         }
         catch (...)
@@ -1379,24 +950,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeNamespace(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ResourceCollection", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace(param0);
             }
 
             return 0;
@@ -1412,23 +970,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeName();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ResourceCollection", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName();
             }());
         }
         catch (...)
@@ -1448,24 +993,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeName(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ResourceCollection", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName(param0);
             }
 
             return 0;
@@ -1481,23 +1013,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ResourceCollection", "Language", "Windows.Web.Syndication.ISyndicationNode").Language();
             }());
         }
         catch (...)
@@ -1517,24 +1036,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Language(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ResourceCollection", "Language", "Windows.Web.Syndication.ISyndicationNode").Language(param0);
             }
 
             return 0;
@@ -1550,23 +1056,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"AttributeExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AttributeExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ResourceCollection", "AttributeExtensions", "Windows.Web.Syndication.ISyndicationNode").AttributeExtensions();
             }());
         }
         catch (...)
@@ -1580,23 +1073,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"ElementExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ElementExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ResourceCollection", "ElementExtensions", "Windows.Web.Syndication.ISyndicationNode").ElementExtensions();
             }());
         }
         catch (...)
@@ -1689,25 +1169,12 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.ServiceDocument", L"GetXmlDocument", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetXmlDocument(param0);
+                    return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::method, "Windows.Web.AtomPub.ServiceDocument", "GetXmlDocument", "Windows.Web.Syndication.ISyndicationNode", 1).GetXmlDocument(param0);
                 }());
             }
             catch (...)
@@ -1727,19 +1194,6 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"Workspaces");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1757,23 +1211,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeValue();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ServiceDocument", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue();
             }());
         }
         catch (...)
@@ -1793,24 +1234,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeValue(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ServiceDocument", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue(param0);
             }
 
             return 0;
@@ -1826,23 +1254,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeNamespace();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ServiceDocument", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace();
             }());
         }
         catch (...)
@@ -1862,24 +1277,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeNamespace(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ServiceDocument", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace(param0);
             }
 
             return 0;
@@ -1895,23 +1297,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeName();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ServiceDocument", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName();
             }());
         }
         catch (...)
@@ -1931,24 +1320,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeName(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ServiceDocument", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName(param0);
             }
 
             return 0;
@@ -1964,23 +1340,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ServiceDocument", "Language", "Windows.Web.Syndication.ISyndicationNode").Language();
             }());
         }
         catch (...)
@@ -2000,24 +1363,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Language(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ServiceDocument", "Language", "Windows.Web.Syndication.ISyndicationNode").Language(param0);
             }
 
             return 0;
@@ -2033,23 +1383,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BaseUri();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ServiceDocument", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri();
             }());
         }
         catch (...)
@@ -2069,24 +1406,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BaseUri(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ServiceDocument", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri(param0);
             }
 
             return 0;
@@ -2102,23 +1426,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"AttributeExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AttributeExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ServiceDocument", "AttributeExtensions", "Windows.Web.Syndication.ISyndicationNode").AttributeExtensions();
             }());
         }
         catch (...)
@@ -2132,23 +1443,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"ElementExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ElementExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.ServiceDocument", "ElementExtensions", "Windows.Web.Syndication.ISyndicationNode").ElementExtensions();
             }());
         }
         catch (...)
@@ -2238,25 +1536,12 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.Workspace", L"GetXmlDocument", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetXmlDocument(param0);
+                    return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::method, "Windows.Web.AtomPub.Workspace", "GetXmlDocument", "Windows.Web.Syndication.ISyndicationNode", 1).GetXmlDocument(param0);
                 }());
             }
             catch (...)
@@ -2276,19 +1561,6 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"Collections");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2306,19 +1578,6 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2336,23 +1595,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeValue();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.Workspace", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue();
             }());
         }
         catch (...)
@@ -2372,24 +1618,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeValue(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.Workspace", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue(param0);
             }
 
             return 0;
@@ -2405,23 +1638,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeNamespace();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.Workspace", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace();
             }());
         }
         catch (...)
@@ -2441,24 +1661,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeNamespace(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.Workspace", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace(param0);
             }
 
             return 0;
@@ -2474,23 +1681,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeName();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.Workspace", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName();
             }());
         }
         catch (...)
@@ -2510,24 +1704,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeName(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.Workspace", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName(param0);
             }
 
             return 0;
@@ -2543,23 +1724,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.Workspace", "Language", "Windows.Web.Syndication.ISyndicationNode").Language();
             }());
         }
         catch (...)
@@ -2579,24 +1747,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Language(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.Workspace", "Language", "Windows.Web.Syndication.ISyndicationNode").Language(param0);
             }
 
             return 0;
@@ -2612,23 +1767,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BaseUri();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.Workspace", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri();
             }());
         }
         catch (...)
@@ -2648,24 +1790,11 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BaseUri(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.Workspace", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri(param0);
             }
 
             return 0;
@@ -2681,23 +1810,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"AttributeExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AttributeExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.Workspace", "AttributeExtensions", "Windows.Web.Syndication.ISyndicationNode").AttributeExtensions();
             }());
         }
         catch (...)
@@ -2711,23 +1827,10 @@ namespace py::cpp::Windows::Web::AtomPub
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"ElementExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ElementExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.AtomPub.Workspace", "ElementExtensions", "Windows.Web.Syndication.ISyndicationNode").ElementExtensions();
             }());
         }
         catch (...)

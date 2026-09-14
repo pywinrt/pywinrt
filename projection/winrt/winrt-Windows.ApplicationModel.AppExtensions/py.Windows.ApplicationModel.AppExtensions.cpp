@@ -29,23 +29,10 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppExtensions.AppExtension", L"GetExtensionProperties", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetExtensionProperties();
+                    return py::require<winrt::Windows::ApplicationModel::AppExtensions::IAppExtension3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.AppExtensions.AppExtension", "GetExtensionProperties", "Windows.ApplicationModel.AppExtensions.IAppExtension3", 0).GetExtensionProperties();
                 }());
             }
             catch (...)
@@ -69,19 +56,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppExtensions.AppExtension", L"GetExtensionPropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -109,23 +83,10 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppExtensions.AppExtension", L"GetPublicFolder", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetPublicFolder();
+                    return py::require<winrt::Windows::ApplicationModel::AppExtensions::IAppExtension3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.AppExtensions.AppExtension", "GetPublicFolder", "Windows.ApplicationModel.AppExtensions.IAppExtension3", 0).GetPublicFolder();
                 }());
             }
             catch (...)
@@ -149,19 +110,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppExtensions.AppExtension", L"GetPublicFolderAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -189,23 +137,10 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppExtensions.AppExtension", L"GetPublicPath", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetPublicPath();
+                    return py::require<winrt::Windows::ApplicationModel::AppExtensions::IAppExtension3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.AppExtensions.AppExtension", "GetPublicPath", "Windows.ApplicationModel.AppExtensions.IAppExtension3", 0).GetPublicPath();
                 }());
             }
             catch (...)
@@ -225,19 +160,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtension", L"AppInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -255,19 +177,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtension", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -285,19 +194,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtension", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -315,19 +211,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtension", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -345,19 +228,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtension", L"Package");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -375,23 +245,10 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtension", L"AppUserModelId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AppUserModelId();
+                return py::require<winrt::Windows::ApplicationModel::AppExtensions::IAppExtension2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppExtensions.AppExtension", "AppUserModelId", "Windows.ApplicationModel.AppExtensions.IAppExtension2").AppUserModelId();
             }());
         }
         catch (...)
@@ -483,23 +340,10 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionCatalog", L"FindAll", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindAll();
+                    return py::require<winrt::Windows::ApplicationModel::AppExtensions::IAppExtensionCatalog2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.AppExtensions.AppExtensionCatalog", "FindAll", "Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog2", 0).FindAll();
                 }());
             }
             catch (...)
@@ -523,19 +367,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionCatalog", L"FindAllAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -605,19 +436,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionCatalog", L"RequestRemovePackageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -643,19 +461,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionCatalog", L"PackageInstalled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog, winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageInstalledEventArgs>>(arg);
 
             return py::convert([&]()
@@ -675,19 +480,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionCatalog", L"PackageInstalled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -708,19 +500,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionCatalog", L"PackageStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog, winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageStatusChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -740,19 +519,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionCatalog", L"PackageStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -773,19 +539,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionCatalog", L"PackageUninstalling");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog, winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUninstallingEventArgs>>(arg);
 
             return py::convert([&]()
@@ -805,19 +558,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionCatalog", L"PackageUninstalling");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -838,19 +578,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionCatalog", L"PackageUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog, winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -870,19 +597,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionCatalog", L"PackageUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -903,19 +617,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionCatalog", L"PackageUpdating");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog, winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatingEventArgs>>(arg);
 
             return py::convert([&]()
@@ -935,19 +636,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionCatalog", L"PackageUpdating");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1066,19 +754,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs", L"AppExtensionName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1096,19 +771,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs", L"Extensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1126,19 +788,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs", L"Package");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1222,19 +871,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs", L"AppExtensionName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1252,19 +888,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs", L"Package");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1347,19 +970,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs", L"AppExtensionName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1377,19 +987,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs", L"Package");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1472,19 +1069,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs", L"AppExtensionName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1502,19 +1086,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs", L"Extensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1532,19 +1103,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs", L"Package");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1628,19 +1186,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs", L"AppExtensionName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1658,19 +1203,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs", L"Package");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

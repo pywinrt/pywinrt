@@ -25,19 +25,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs", L"ViewId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -119,19 +106,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs", L"IsVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -149,19 +123,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs", L"ViewId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -288,19 +249,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"GetNotePlacement", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
@@ -330,19 +278,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"HideNote", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 {
@@ -373,19 +308,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"SetFocusToNextView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.SetFocusToNextView();
@@ -414,22 +336,9 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"SetFocusToPreviousView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.SetFocusToPreviousView();
+                    py::require<winrt::Windows::ApplicationModel::Preview::Notes::INotesWindowManagerPreview2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", "SetFocusToPreviousView", "Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2", 0).SetFocusToPreviousView();
                 }
 
                 Py_RETURN_NONE;
@@ -455,19 +364,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"SetNotesThumbnailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -497,25 +393,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"SetThumbnailImageForTaskSwitcherAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SetThumbnailImageForTaskSwitcherAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Preview::Notes::INotesWindowManagerPreview2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", "SetThumbnailImageForTaskSwitcherAsync", "Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2", 1).SetThumbnailImageForTaskSwitcherAsync(param0);
                 }());
             }
             catch (...)
@@ -539,19 +422,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"ShowNote", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 {
@@ -582,19 +452,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"ShowNoteRelativeTo", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -615,26 +472,13 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"ShowNoteRelativeTo", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreviewShowNoteOptions>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ShowNoteRelativeTo(param0, param1, param2);
+                    py::require<winrt::Windows::ApplicationModel::Preview::Notes::INotesWindowManagerPreview2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", "ShowNoteRelativeTo", "Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2", 3).ShowNoteRelativeTo(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -660,19 +504,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"ShowNoteWithPlacement", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -693,26 +524,13 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"ShowNoteWithPlacement", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreviewShowNoteOptions>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ShowNoteWithPlacement(param0, param1, param2);
+                    py::require<winrt::Windows::ApplicationModel::Preview::Notes::INotesWindowManagerPreview2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", "ShowNoteWithPlacement", "Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2", 3).ShowNoteWithPlacement(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -738,19 +556,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"TrySetNoteSize", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
 
@@ -777,19 +582,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"IsScreenLocked");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -807,19 +599,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"NotePlacementChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview, winrt::Windows::ApplicationModel::Preview::Notes::NotePlacementChangedPreviewEventArgs>>(arg);
 
             return py::convert([&]()
@@ -839,19 +618,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"NotePlacementChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -872,19 +638,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"NoteVisibilityChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview, winrt::Windows::ApplicationModel::Preview::Notes::NoteVisibilityChangedPreviewEventArgs>>(arg);
 
             return py::convert([&]()
@@ -904,19 +657,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"NoteVisibilityChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -937,19 +677,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"SystemLockStateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -969,19 +696,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview", L"SystemLockStateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1126,19 +840,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions", L"ShowWithFocus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1162,19 +863,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions", L"ShowWithFocus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {

@@ -67,19 +67,6 @@ namespace py::cpp::Windows::UI::Input::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Core.RadialControllerIndependentInputSource", L"Controller");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -97,19 +84,6 @@ namespace py::cpp::Windows::UI::Input::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Core.RadialControllerIndependentInputSource", L"Dispatcher");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -127,23 +101,10 @@ namespace py::cpp::Windows::UI::Input::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Core.RadialControllerIndependentInputSource", L"DispatcherQueue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DispatcherQueue();
+                return py::require<winrt::Windows::UI::Input::Core::IRadialControllerIndependentInputSource2>(self->obj, py::member_kind::property, "Windows.UI.Input.Core.RadialControllerIndependentInputSource", "DispatcherQueue", "Windows.UI.Input.Core.IRadialControllerIndependentInputSource2").DispatcherQueue();
             }());
         }
         catch (...)

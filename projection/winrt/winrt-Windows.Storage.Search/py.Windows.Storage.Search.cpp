@@ -29,19 +29,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexer", L"AddAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::IIndexableContent>(args, 0);
 
                 return py::convert([&]()
@@ -71,26 +58,13 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexer", L"CreateQuery", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateQuery(param0, param1);
+                    return py::require<winrt::Windows::Storage::Search::IContentIndexerQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.Search.ContentIndexer", "CreateQuery", "Windows.Storage.Search.IContentIndexerQueryOperations", 2).CreateQuery(param0, param1);
                 }());
             }
             catch (...)
@@ -103,19 +77,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexer", L"CreateQuery", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::Search::SortEntry>>(args, 2);
@@ -123,7 +84,7 @@ namespace py::cpp::Windows::Storage::Search
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateQuery(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::Search::IContentIndexerQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.Search.ContentIndexer", "CreateQuery", "Windows.Storage.Search.IContentIndexerQueryOperations", 3).CreateQuery(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -136,19 +97,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexer", L"CreateQuery", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::Search::SortEntry>>(args, 2);
@@ -157,7 +105,7 @@ namespace py::cpp::Windows::Storage::Search
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateQuery(param0, param1, param2, param3);
+                    return py::require<winrt::Windows::Storage::Search::IContentIndexerQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.Search.ContentIndexer", "CreateQuery", "Windows.Storage.Search.IContentIndexerQueryOperations", 4).CreateQuery(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -181,19 +129,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexer", L"DeleteAllAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -221,19 +156,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexer", L"DeleteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -263,19 +185,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexer", L"DeleteMultipleAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
@@ -376,19 +285,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexer", L"RetrievePropertiesAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
@@ -419,19 +315,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexer", L"UpdateAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::IIndexableContent>(args, 0);
 
                 return py::convert([&]()
@@ -457,19 +340,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.ContentIndexer", L"Revision");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -584,19 +454,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexerQuery", L"GetAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -613,19 +470,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexerQuery", L"GetAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -656,19 +500,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexerQuery", L"GetCountAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -696,19 +527,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexerQuery", L"GetPropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -725,19 +543,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexerQuery", L"GetPropertiesAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -764,19 +569,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.ContentIndexerQuery", L"QueryFolder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -883,19 +675,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.IndexableContent", L"StreamContentType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -919,19 +698,6 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.IndexableContent", L"StreamContentType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -952,19 +718,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.IndexableContent", L"Stream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -988,19 +741,6 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.IndexableContent", L"Stream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(arg);
 
             {
@@ -1021,19 +761,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.IndexableContent", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1057,19 +784,6 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.IndexableContent", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1090,19 +804,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.IndexableContent", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1244,19 +945,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.QueryOptions", L"LoadFromString", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -1287,19 +975,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.QueryOptions", L"SaveToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1327,19 +1002,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.QueryOptions", L"SetPropertyPrefetch", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::PropertyPrefetchOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
@@ -1371,19 +1033,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.QueryOptions", L"SetThumbnailPrefetch", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
@@ -1412,19 +1061,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.QueryOptions", L"UserSearchFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1448,19 +1084,6 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.QueryOptions", L"UserSearchFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1481,19 +1104,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.QueryOptions", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1517,19 +1127,6 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.QueryOptions", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1550,19 +1147,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.QueryOptions", L"IndexerOption");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1586,19 +1170,6 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.QueryOptions", L"IndexerOption");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Search::IndexerOption>(arg);
 
             {
@@ -1619,19 +1190,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.QueryOptions", L"FolderDepth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1655,19 +1213,6 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.QueryOptions", L"FolderDepth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Search::FolderDepth>(arg);
 
             {
@@ -1688,19 +1233,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.QueryOptions", L"ApplicationSearchFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1724,19 +1256,6 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.QueryOptions", L"ApplicationSearchFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1757,19 +1276,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.QueryOptions", L"DateStackOption");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1787,19 +1293,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.QueryOptions", L"FileTypeFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1817,19 +1310,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.QueryOptions", L"GroupPropertyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1847,19 +1327,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.QueryOptions", L"SortOrder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1877,23 +1344,10 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.QueryOptions", L"StorageProviderIdFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StorageProviderIdFilter();
+                return py::require<winrt::Windows::Storage::Search::IQueryOptionsWithProviderFilter>(self->obj, py::member_kind::property, "Windows.Storage.Search.QueryOptions", "StorageProviderIdFilter", "Windows.Storage.Search.IQueryOptionsWithProviderFilter").StorageProviderIdFilter();
             }());
         }
         catch (...)
@@ -1988,19 +1442,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.SortEntryVector", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::SortEntry>(args, 0);
 
                 {
@@ -2031,19 +1472,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.SortEntryVector", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -2072,23 +1500,10 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.SortEntryVector", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::Search::SortEntry>>(self->obj, py::member_kind::method, "Windows.Storage.Search.SortEntryVector", "First", "Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry>", 0).First();
                 }());
             }
             catch (...)
@@ -2112,19 +1527,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.SortEntryVector", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -2154,19 +1556,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.SortEntryVector", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Storage::Search::SortEntry, true>>(args, 1);
 
@@ -2197,19 +1586,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.SortEntryVector", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2237,19 +1613,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.SortEntryVector", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::SortEntry>(args, 0);
                 uint32_t param1{};
 
@@ -2293,19 +1656,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.SortEntryVector", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Search::SortEntry>(args, 1);
 
@@ -2337,19 +1687,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.SortEntryVector", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -2380,19 +1717,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.SortEntryVector", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RemoveAtEnd();
@@ -2421,19 +1745,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.SortEntryVector", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Storage::Search::SortEntry, false>>(args, 0);
 
                 {
@@ -2464,19 +1775,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.SortEntryVector", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Search::SortEntry>(args, 1);
 
@@ -2504,19 +1802,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.SortEntryVector", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2561,7 +1846,7 @@ namespace py::cpp::Windows::Storage::Search
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::Search::SortEntry>>(self->obj, py::member_kind::method, "Windows.Storage.Search.SortEntryVector", "First", "Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry>", 0).First();
             }());
         }
         catch (...)
@@ -2763,24 +2048,11 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFileQueryResult", L"ApplyNewQueryOptions", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ApplyNewQueryOptions(param0);
+                    py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::method, "Windows.Storage.Search.StorageFileQueryResult", "ApplyNewQueryOptions", "Windows.Storage.Search.IStorageQueryResultBase", 1).ApplyNewQueryOptions(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -2806,25 +2078,12 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFileQueryResult", L"FindStartIndexAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindStartIndexAsync(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::method, "Windows.Storage.Search.StorageFileQueryResult", "FindStartIndexAsync", "Windows.Storage.Search.IStorageQueryResultBase", 1).FindStartIndexAsync(param0);
                 }());
             }
             catch (...)
@@ -2848,23 +2107,10 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFileQueryResult", L"GetCurrentQueryOptions", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetCurrentQueryOptions();
+                    return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::method, "Windows.Storage.Search.StorageFileQueryResult", "GetCurrentQueryOptions", "Windows.Storage.Search.IStorageQueryResultBase", 0).GetCurrentQueryOptions();
                 }());
             }
             catch (...)
@@ -2888,19 +2134,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFileQueryResult", L"GetFilesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2917,19 +2150,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFileQueryResult", L"GetFilesAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -2960,23 +2180,10 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFileQueryResult", L"GetItemCountAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetItemCountAsync();
+                    return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::method, "Windows.Storage.Search.StorageFileQueryResult", "GetItemCountAsync", "Windows.Storage.Search.IStorageQueryResultBase", 0).GetItemCountAsync();
                 }());
             }
             catch (...)
@@ -3000,25 +2207,12 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFileQueryResult", L"GetMatchingPropertiesWithRanges", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMatchingPropertiesWithRanges(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFileQueryResult2>(self->obj, py::member_kind::method, "Windows.Storage.Search.StorageFileQueryResult", "GetMatchingPropertiesWithRanges", "Windows.Storage.Search.IStorageFileQueryResult2", 1).GetMatchingPropertiesWithRanges(param0);
                 }());
             }
             catch (...)
@@ -3038,23 +2232,10 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.StorageFileQueryResult", L"Folder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Folder();
+                return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::property, "Windows.Storage.Search.StorageFileQueryResult", "Folder", "Windows.Storage.Search.IStorageQueryResultBase").Folder();
             }());
         }
         catch (...)
@@ -3068,25 +2249,12 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.StorageFileQueryResult", L"ContentsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Search::IStorageQueryResultBase, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentsChanged(param0);
+                return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::event, "Windows.Storage.Search.StorageFileQueryResult", "ContentsChanged", "Windows.Storage.Search.IStorageQueryResultBase").ContentsChanged(param0);
             }());
         }
         catch (...)
@@ -3100,24 +2268,11 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.StorageFileQueryResult", L"ContentsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ContentsChanged(param0);
+                py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::event, "Windows.Storage.Search.StorageFileQueryResult", "ContentsChanged", "Windows.Storage.Search.IStorageQueryResultBase").ContentsChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -3133,25 +2288,12 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.StorageFileQueryResult", L"OptionsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Search::IStorageQueryResultBase, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OptionsChanged(param0);
+                return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::event, "Windows.Storage.Search.StorageFileQueryResult", "OptionsChanged", "Windows.Storage.Search.IStorageQueryResultBase").OptionsChanged(param0);
             }());
         }
         catch (...)
@@ -3165,24 +2307,11 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.StorageFileQueryResult", L"OptionsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OptionsChanged(param0);
+                py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::event, "Windows.Storage.Search.StorageFileQueryResult", "OptionsChanged", "Windows.Storage.Search.IStorageQueryResultBase").OptionsChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -3276,24 +2405,11 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFolderQueryResult", L"ApplyNewQueryOptions", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ApplyNewQueryOptions(param0);
+                    py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::method, "Windows.Storage.Search.StorageFolderQueryResult", "ApplyNewQueryOptions", "Windows.Storage.Search.IStorageQueryResultBase", 1).ApplyNewQueryOptions(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3319,25 +2435,12 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFolderQueryResult", L"FindStartIndexAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindStartIndexAsync(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::method, "Windows.Storage.Search.StorageFolderQueryResult", "FindStartIndexAsync", "Windows.Storage.Search.IStorageQueryResultBase", 1).FindStartIndexAsync(param0);
                 }());
             }
             catch (...)
@@ -3361,23 +2464,10 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFolderQueryResult", L"GetCurrentQueryOptions", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetCurrentQueryOptions();
+                    return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::method, "Windows.Storage.Search.StorageFolderQueryResult", "GetCurrentQueryOptions", "Windows.Storage.Search.IStorageQueryResultBase", 0).GetCurrentQueryOptions();
                 }());
             }
             catch (...)
@@ -3401,19 +2491,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFolderQueryResult", L"GetFoldersAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3430,19 +2507,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFolderQueryResult", L"GetFoldersAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -3473,23 +2537,10 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFolderQueryResult", L"GetItemCountAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetItemCountAsync();
+                    return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::method, "Windows.Storage.Search.StorageFolderQueryResult", "GetItemCountAsync", "Windows.Storage.Search.IStorageQueryResultBase", 0).GetItemCountAsync();
                 }());
             }
             catch (...)
@@ -3509,23 +2560,10 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.StorageFolderQueryResult", L"Folder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Folder();
+                return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::property, "Windows.Storage.Search.StorageFolderQueryResult", "Folder", "Windows.Storage.Search.IStorageQueryResultBase").Folder();
             }());
         }
         catch (...)
@@ -3539,25 +2577,12 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.StorageFolderQueryResult", L"ContentsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Search::IStorageQueryResultBase, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentsChanged(param0);
+                return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::event, "Windows.Storage.Search.StorageFolderQueryResult", "ContentsChanged", "Windows.Storage.Search.IStorageQueryResultBase").ContentsChanged(param0);
             }());
         }
         catch (...)
@@ -3571,24 +2596,11 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.StorageFolderQueryResult", L"ContentsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ContentsChanged(param0);
+                py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::event, "Windows.Storage.Search.StorageFolderQueryResult", "ContentsChanged", "Windows.Storage.Search.IStorageQueryResultBase").ContentsChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -3604,25 +2616,12 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.StorageFolderQueryResult", L"OptionsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Search::IStorageQueryResultBase, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OptionsChanged(param0);
+                return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::event, "Windows.Storage.Search.StorageFolderQueryResult", "OptionsChanged", "Windows.Storage.Search.IStorageQueryResultBase").OptionsChanged(param0);
             }());
         }
         catch (...)
@@ -3636,24 +2635,11 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.StorageFolderQueryResult", L"OptionsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OptionsChanged(param0);
+                py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::event, "Windows.Storage.Search.StorageFolderQueryResult", "OptionsChanged", "Windows.Storage.Search.IStorageQueryResultBase").OptionsChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -3746,24 +2732,11 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageItemQueryResult", L"ApplyNewQueryOptions", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ApplyNewQueryOptions(param0);
+                    py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::method, "Windows.Storage.Search.StorageItemQueryResult", "ApplyNewQueryOptions", "Windows.Storage.Search.IStorageQueryResultBase", 1).ApplyNewQueryOptions(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3789,25 +2762,12 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageItemQueryResult", L"FindStartIndexAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindStartIndexAsync(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::method, "Windows.Storage.Search.StorageItemQueryResult", "FindStartIndexAsync", "Windows.Storage.Search.IStorageQueryResultBase", 1).FindStartIndexAsync(param0);
                 }());
             }
             catch (...)
@@ -3831,23 +2791,10 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageItemQueryResult", L"GetCurrentQueryOptions", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetCurrentQueryOptions();
+                    return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::method, "Windows.Storage.Search.StorageItemQueryResult", "GetCurrentQueryOptions", "Windows.Storage.Search.IStorageQueryResultBase", 0).GetCurrentQueryOptions();
                 }());
             }
             catch (...)
@@ -3871,23 +2818,10 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageItemQueryResult", L"GetItemCountAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetItemCountAsync();
+                    return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::method, "Windows.Storage.Search.StorageItemQueryResult", "GetItemCountAsync", "Windows.Storage.Search.IStorageQueryResultBase", 0).GetItemCountAsync();
                 }());
             }
             catch (...)
@@ -3911,19 +2845,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageItemQueryResult", L"GetItemsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3940,19 +2861,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageItemQueryResult", L"GetItemsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -3979,23 +2887,10 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.StorageItemQueryResult", L"Folder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Folder();
+                return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::property, "Windows.Storage.Search.StorageItemQueryResult", "Folder", "Windows.Storage.Search.IStorageQueryResultBase").Folder();
             }());
         }
         catch (...)
@@ -4009,25 +2904,12 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.StorageItemQueryResult", L"ContentsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Search::IStorageQueryResultBase, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentsChanged(param0);
+                return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::event, "Windows.Storage.Search.StorageItemQueryResult", "ContentsChanged", "Windows.Storage.Search.IStorageQueryResultBase").ContentsChanged(param0);
             }());
         }
         catch (...)
@@ -4041,24 +2923,11 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.StorageItemQueryResult", L"ContentsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ContentsChanged(param0);
+                py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::event, "Windows.Storage.Search.StorageItemQueryResult", "ContentsChanged", "Windows.Storage.Search.IStorageQueryResultBase").ContentsChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -4074,25 +2943,12 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.StorageItemQueryResult", L"OptionsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Search::IStorageQueryResultBase, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OptionsChanged(param0);
+                return py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::event, "Windows.Storage.Search.StorageItemQueryResult", "OptionsChanged", "Windows.Storage.Search.IStorageQueryResultBase").OptionsChanged(param0);
             }());
         }
         catch (...)
@@ -4106,24 +2962,11 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.StorageItemQueryResult", L"OptionsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OptionsChanged(param0);
+                py::require<winrt::Windows::Storage::Search::IStorageQueryResultBase>(self->obj, py::member_kind::event, "Windows.Storage.Search.StorageItemQueryResult", "OptionsChanged", "Windows.Storage.Search.IStorageQueryResultBase").OptionsChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -4212,19 +3055,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.StorageLibraryChangeTrackerTriggerDetails", L"ChangeTracker");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4242,19 +3072,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.StorageLibraryChangeTrackerTriggerDetails", L"Folder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4341,19 +3158,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageLibraryContentChangedTriggerDetails", L"CreateModifiedSinceQuery", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
                 return py::convert([&]()
@@ -4379,19 +3183,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.StorageLibraryContentChangedTriggerDetails", L"Folder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4496,19 +3287,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.ValueAndLanguage", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4532,19 +3310,6 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.ValueAndLanguage", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
@@ -4565,19 +3330,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.ValueAndLanguage", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4601,19 +3353,6 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.ValueAndLanguage", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -4701,19 +3440,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.IIndexableContent", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4737,19 +3463,6 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.IIndexableContent", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -4770,19 +3483,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.IIndexableContent", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4800,19 +3500,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.IIndexableContent", L"Stream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4836,19 +3523,6 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.IIndexableContent", L"Stream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(arg);
 
             {
@@ -4869,19 +3543,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.IIndexableContent", L"StreamContentType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4905,19 +3566,6 @@ namespace py::cpp::Windows::Storage::Search
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.IIndexableContent", L"StreamContentType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -5230,19 +3878,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"AreQueryOptionsSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 return py::convert([&]()
@@ -5272,19 +3907,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"CreateFileQuery", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5301,19 +3923,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"CreateFileQuery", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
 
                 return py::convert([&]()
@@ -5343,19 +3952,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"CreateFileQueryWithOptions", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 return py::convert([&]()
@@ -5385,19 +3981,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"CreateFolderQuery", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5414,19 +3997,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"CreateFolderQuery", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
 
                 return py::convert([&]()
@@ -5456,19 +4026,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"CreateFolderQueryWithOptions", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 return py::convert([&]()
@@ -5498,19 +4055,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"CreateItemQuery", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5538,19 +4082,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"CreateItemQueryWithOptions", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 return py::convert([&]()
@@ -5580,19 +4111,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"GetFilesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
 
                 return py::convert([&]()
@@ -5611,19 +4129,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"GetFilesAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -5655,19 +4160,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"GetFoldersAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
 
                 return py::convert([&]()
@@ -5686,19 +4178,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"GetFoldersAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -5730,19 +4209,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"GetIndexedStateAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5770,19 +4236,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"GetItemsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -5813,19 +4266,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"IsCommonFileQuerySupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
 
                 return py::convert([&]()
@@ -5855,19 +4295,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"IsCommonFolderQuerySupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
 
                 return py::convert([&]()
@@ -6653,19 +5080,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageQueryResultBase", L"ApplyNewQueryOptions", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 {
@@ -6696,19 +5110,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageQueryResultBase", L"FindStartIndexAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert([&]()
@@ -6738,19 +5139,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageQueryResultBase", L"GetCurrentQueryOptions", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6778,19 +5166,6 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageQueryResultBase", L"GetItemCountAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6814,19 +5189,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Search.IStorageQueryResultBase", L"Folder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6844,19 +5206,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.IStorageQueryResultBase", L"ContentsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Search::IStorageQueryResultBase, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -6876,19 +5225,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.IStorageQueryResultBase", L"ContentsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -6909,19 +5245,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.IStorageQueryResultBase", L"OptionsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Search::IStorageQueryResultBase, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -6941,19 +5264,6 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Search.IStorageQueryResultBase", L"OptionsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {

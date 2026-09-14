@@ -31,19 +31,6 @@ namespace py::cpp::Windows::AI::Actions::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Provider.IActionFeedbackHandler", L"ProcessFeedbackAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::AI::Actions::ActionInvocationContext>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::Actions::ActionFeedback>(args, 1);
 
@@ -254,19 +241,6 @@ namespace py::cpp::Windows::AI::Actions::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Provider.IActionProvider", L"InvokeAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::AI::Actions::ActionInvocationContext>(args, 0);
 
                 return py::convert([&]()

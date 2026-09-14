@@ -29,23 +29,10 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.AccessListEntryView", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::AccessCache::AccessListEntry>>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.AccessListEntryView", "First", "Windows.Foundation.Collections.IIterable<Windows.Storage.AccessCache.AccessListEntry>", 0).First();
                 }());
             }
             catch (...)
@@ -69,19 +56,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.AccessListEntryView", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -111,19 +85,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.AccessListEntryView", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Storage::AccessCache::AccessListEntry, true>>(args, 1);
 
@@ -154,19 +115,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.AccessListEntryView", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::AccessCache::AccessListEntry>(args, 0);
                 uint32_t param1{};
 
@@ -206,19 +154,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AccessCache.AccessListEntryView", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -263,7 +198,7 @@ namespace py::cpp::Windows::Storage::AccessCache
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::AccessCache::AccessListEntry>>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.AccessListEntryView", "First", "Windows.Foundation.Collections.IIterable<Windows.Storage.AccessCache.AccessListEntry>", 0).First();
             }());
         }
         catch (...)
@@ -425,19 +360,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AccessCache.ItemRemovedEventArgs", L"RemovedEntry");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -720,19 +642,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"Add", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
                 return py::convert([&]()
@@ -751,19 +660,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"Add", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -794,19 +690,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"AddOrReplace", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
 
@@ -827,19 +710,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"AddOrReplace", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -872,19 +742,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"CheckAccess", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
                 return py::convert([&]()
@@ -914,19 +771,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -955,19 +799,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"ContainsItem", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -997,19 +828,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"GetFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1028,19 +846,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"GetFileAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::AccessCache::AccessCacheOptions>(args, 1);
 
@@ -1071,19 +876,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"GetFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1102,19 +894,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"GetFolderAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::AccessCache::AccessCacheOptions>(args, 1);
 
@@ -1145,19 +924,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"GetItemAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1176,19 +942,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"GetItemAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::AccessCache::AccessCacheOptions>(args, 1);
 
@@ -1219,19 +972,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"Remove", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -1258,19 +998,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"Entries");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1288,19 +1015,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"MaximumItemsAllowed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1396,25 +1110,12 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"Add", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Add(param0);
+                    return py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "Add", "Windows.Storage.AccessCache.IStorageItemAccessList", 1).Add(param0);
                 }());
             }
             catch (...)
@@ -1427,26 +1128,13 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"Add", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Add(param0, param1);
+                    return py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "Add", "Windows.Storage.AccessCache.IStorageItemAccessList", 2).Add(param0, param1);
                 }());
             }
             catch (...)
@@ -1459,19 +1147,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"Add", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::AccessCache::RecentStorageItemVisibility>(args, 2);
@@ -1479,7 +1154,7 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Add(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList2>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "Add", "Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList2", 3).Add(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -1503,25 +1178,12 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"AddOrReplace", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddOrReplace(param0, param1);
+                    py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "AddOrReplace", "Windows.Storage.AccessCache.IStorageItemAccessList", 2).AddOrReplace(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -1536,26 +1198,13 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"AddOrReplace", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddOrReplace(param0, param1, param2);
+                    py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "AddOrReplace", "Windows.Storage.AccessCache.IStorageItemAccessList", 3).AddOrReplace(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -1570,19 +1219,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"AddOrReplace", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1590,7 +1226,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddOrReplace(param0, param1, param2, param3);
+                    py::require<winrt::Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList2>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "AddOrReplace", "Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList2", 4).AddOrReplace(param0, param1, param2, param3);
                 }
 
                 Py_RETURN_NONE;
@@ -1616,25 +1252,12 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"CheckAccess", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CheckAccess(param0);
+                    return py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "CheckAccess", "Windows.Storage.AccessCache.IStorageItemAccessList", 1).CheckAccess(param0);
                 }());
             }
             catch (...)
@@ -1658,22 +1281,9 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "Clear", "Windows.Storage.AccessCache.IStorageItemAccessList", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -1699,25 +1309,12 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"ContainsItem", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ContainsItem(param0);
+                    return py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "ContainsItem", "Windows.Storage.AccessCache.IStorageItemAccessList", 1).ContainsItem(param0);
                 }());
             }
             catch (...)
@@ -1741,25 +1338,12 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"GetFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFileAsync(param0);
+                    return py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "GetFileAsync", "Windows.Storage.AccessCache.IStorageItemAccessList", 1).GetFileAsync(param0);
                 }());
             }
             catch (...)
@@ -1772,26 +1356,13 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"GetFileAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::AccessCache::AccessCacheOptions>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFileAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "GetFileAsync", "Windows.Storage.AccessCache.IStorageItemAccessList", 2).GetFileAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -1815,25 +1386,12 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"GetFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFolderAsync(param0);
+                    return py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "GetFolderAsync", "Windows.Storage.AccessCache.IStorageItemAccessList", 1).GetFolderAsync(param0);
                 }());
             }
             catch (...)
@@ -1846,26 +1404,13 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"GetFolderAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::AccessCache::AccessCacheOptions>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFolderAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "GetFolderAsync", "Windows.Storage.AccessCache.IStorageItemAccessList", 2).GetFolderAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -1889,25 +1434,12 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"GetItemAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetItemAsync(param0);
+                    return py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "GetItemAsync", "Windows.Storage.AccessCache.IStorageItemAccessList", 1).GetItemAsync(param0);
                 }());
             }
             catch (...)
@@ -1920,26 +1452,13 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"GetItemAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::AccessCache::AccessCacheOptions>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetItemAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "GetItemAsync", "Windows.Storage.AccessCache.IStorageItemAccessList", 2).GetItemAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -1963,24 +1482,11 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"Remove", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Remove(param0);
+                    py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::method, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "Remove", "Windows.Storage.AccessCache.IStorageItemAccessList", 1).Remove(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -2002,23 +1508,10 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"Entries");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Entries();
+                return py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::property, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "Entries", "Windows.Storage.AccessCache.IStorageItemAccessList").Entries();
             }());
         }
         catch (...)
@@ -2032,23 +1525,10 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"MaximumItemsAllowed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaximumItemsAllowed();
+                return py::require<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(self->obj, py::member_kind::property, "Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", "MaximumItemsAllowed", "Windows.Storage.AccessCache.IStorageItemAccessList").MaximumItemsAllowed();
             }());
         }
         catch (...)
@@ -2062,19 +1542,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"ItemRemoved");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList, winrt::Windows::Storage::AccessCache::ItemRemovedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -2094,19 +1561,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"ItemRemoved");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -2209,19 +1663,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"Add", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
                 return py::convert([&]()
@@ -2240,19 +1681,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"Add", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2283,19 +1711,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"AddOrReplace", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
 
@@ -2316,19 +1731,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"AddOrReplace", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -2361,19 +1763,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"CheckAccess", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
                 return py::convert([&]()
@@ -2403,19 +1792,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -2444,19 +1820,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"ContainsItem", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -2486,19 +1849,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"GetFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -2517,19 +1867,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"GetFileAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::AccessCache::AccessCacheOptions>(args, 1);
 
@@ -2560,19 +1897,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"GetFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -2591,19 +1915,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"GetFolderAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::AccessCache::AccessCacheOptions>(args, 1);
 
@@ -2634,19 +1945,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"GetItemAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -2665,19 +1963,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"GetItemAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::AccessCache::AccessCacheOptions>(args, 1);
 
@@ -2708,19 +1993,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"Remove", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -2747,19 +2019,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"Entries");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2777,19 +2036,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"MaximumItemsAllowed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

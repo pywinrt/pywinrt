@@ -29,19 +29,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppDisplayInfo", L"GetLogo", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
 
                 return py::convert([&]()
@@ -67,19 +54,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppDisplayInfo", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -97,19 +71,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppDisplayInfo", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -278,19 +239,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInfo", L"AppUserModelId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -308,19 +256,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInfo", L"DisplayInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -338,19 +273,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInfo", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -368,19 +290,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInfo", L"PackageFamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -398,23 +307,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInfo", L"Package");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Package();
+                return py::require<winrt::Windows::ApplicationModel::IAppInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInfo", "Package", "Windows.ApplicationModel.IAppInfo2").Package();
             }());
         }
         catch (...)
@@ -428,23 +324,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInfo", L"ExecutionContext");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExecutionContext();
+                return py::require<winrt::Windows::ApplicationModel::IAppInfo3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInfo", "ExecutionContext", "Windows.ApplicationModel.IAppInfo3").ExecutionContext();
             }());
         }
         catch (...)
@@ -458,23 +341,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInfo", L"SupportedFileExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedFileExtensions();
+                return py::require<winrt::Windows::ApplicationModel::IAppInfo4>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInfo", "SupportedFileExtensions", "Windows.ApplicationModel.IAppInfo4").SupportedFileExtensions();
             }());
         }
         catch (...)
@@ -612,19 +482,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -642,23 +499,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"AutomaticBackgroundTask");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AutomaticBackgroundTask();
+                return py::require<winrt::Windows::ApplicationModel::IAppInstallerInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInstallerInfo", "AutomaticBackgroundTask", "Windows.ApplicationModel.IAppInstallerInfo2").AutomaticBackgroundTask();
             }());
         }
         catch (...)
@@ -672,23 +516,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"DependencyPackageUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DependencyPackageUris();
+                return py::require<winrt::Windows::ApplicationModel::IAppInstallerInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInstallerInfo", "DependencyPackageUris", "Windows.ApplicationModel.IAppInstallerInfo2").DependencyPackageUris();
             }());
         }
         catch (...)
@@ -702,23 +533,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"ForceUpdateFromAnyVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ForceUpdateFromAnyVersion();
+                return py::require<winrt::Windows::ApplicationModel::IAppInstallerInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInstallerInfo", "ForceUpdateFromAnyVersion", "Windows.ApplicationModel.IAppInstallerInfo2").ForceUpdateFromAnyVersion();
             }());
         }
         catch (...)
@@ -732,23 +550,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"HoursBetweenUpdateChecks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HoursBetweenUpdateChecks();
+                return py::require<winrt::Windows::ApplicationModel::IAppInstallerInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInstallerInfo", "HoursBetweenUpdateChecks", "Windows.ApplicationModel.IAppInstallerInfo2").HoursBetweenUpdateChecks();
             }());
         }
         catch (...)
@@ -762,23 +567,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"IsAutoRepairEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsAutoRepairEnabled();
+                return py::require<winrt::Windows::ApplicationModel::IAppInstallerInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInstallerInfo", "IsAutoRepairEnabled", "Windows.ApplicationModel.IAppInstallerInfo2").IsAutoRepairEnabled();
             }());
         }
         catch (...)
@@ -792,23 +584,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"LastChecked");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LastChecked();
+                return py::require<winrt::Windows::ApplicationModel::IAppInstallerInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInstallerInfo", "LastChecked", "Windows.ApplicationModel.IAppInstallerInfo2").LastChecked();
             }());
         }
         catch (...)
@@ -822,23 +601,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"OnLaunch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OnLaunch();
+                return py::require<winrt::Windows::ApplicationModel::IAppInstallerInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInstallerInfo", "OnLaunch", "Windows.ApplicationModel.IAppInstallerInfo2").OnLaunch();
             }());
         }
         catch (...)
@@ -852,23 +618,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"OptionalPackageUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OptionalPackageUris();
+                return py::require<winrt::Windows::ApplicationModel::IAppInstallerInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInstallerInfo", "OptionalPackageUris", "Windows.ApplicationModel.IAppInstallerInfo2").OptionalPackageUris();
             }());
         }
         catch (...)
@@ -882,23 +635,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"PausedUntil");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PausedUntil();
+                return py::require<winrt::Windows::ApplicationModel::IAppInstallerInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInstallerInfo", "PausedUntil", "Windows.ApplicationModel.IAppInstallerInfo2").PausedUntil();
             }());
         }
         catch (...)
@@ -912,23 +652,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"PolicySource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PolicySource();
+                return py::require<winrt::Windows::ApplicationModel::IAppInstallerInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInstallerInfo", "PolicySource", "Windows.ApplicationModel.IAppInstallerInfo2").PolicySource();
             }());
         }
         catch (...)
@@ -942,23 +669,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"RepairUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RepairUris();
+                return py::require<winrt::Windows::ApplicationModel::IAppInstallerInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInstallerInfo", "RepairUris", "Windows.ApplicationModel.IAppInstallerInfo2").RepairUris();
             }());
         }
         catch (...)
@@ -972,23 +686,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"ShowPrompt");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ShowPrompt();
+                return py::require<winrt::Windows::ApplicationModel::IAppInstallerInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInstallerInfo", "ShowPrompt", "Windows.ApplicationModel.IAppInstallerInfo2").ShowPrompt();
             }());
         }
         catch (...)
@@ -1002,23 +703,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"UpdateBlocksActivation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UpdateBlocksActivation();
+                return py::require<winrt::Windows::ApplicationModel::IAppInstallerInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInstallerInfo", "UpdateBlocksActivation", "Windows.ApplicationModel.IAppInstallerInfo2").UpdateBlocksActivation();
             }());
         }
         catch (...)
@@ -1032,23 +720,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"UpdateUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UpdateUris();
+                return py::require<winrt::Windows::ApplicationModel::IAppInstallerInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInstallerInfo", "UpdateUris", "Windows.ApplicationModel.IAppInstallerInfo2").UpdateUris();
             }());
         }
         catch (...)
@@ -1062,23 +737,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstallerInfo", L"Version");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Version();
+                return py::require<winrt::Windows::ApplicationModel::IAppInstallerInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.AppInstallerInfo", "Version", "Windows.ApplicationModel.IAppInstallerInfo2").Version();
             }());
         }
         catch (...)
@@ -1297,19 +959,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppInstance", L"RedirectActivationTo", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RedirectActivationTo();
@@ -1375,19 +1024,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstance", L"IsCurrentInstance");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1405,19 +1041,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstance", L"Key");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1672,19 +1295,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.EnteredBackgroundEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1796,19 +1406,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.FindRelatedPackagesOptions", L"Relationship");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1832,19 +1429,6 @@ namespace py::cpp::Windows::ApplicationModel
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.FindRelatedPackagesOptions", L"Relationship");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::PackageRelationship>(arg);
 
             {
@@ -1865,19 +1449,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.FindRelatedPackagesOptions", L"IncludeResources");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1901,19 +1472,6 @@ namespace py::cpp::Windows::ApplicationModel
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.FindRelatedPackagesOptions", L"IncludeResources");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1934,19 +1492,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.FindRelatedPackagesOptions", L"IncludeOptionals");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1970,19 +1515,6 @@ namespace py::cpp::Windows::ApplicationModel
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.FindRelatedPackagesOptions", L"IncludeOptionals");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2003,19 +1535,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.FindRelatedPackagesOptions", L"IncludeHostRuntimes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2039,19 +1558,6 @@ namespace py::cpp::Windows::ApplicationModel
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.FindRelatedPackagesOptions", L"IncludeHostRuntimes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2072,19 +1578,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.FindRelatedPackagesOptions", L"IncludeFrameworks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2108,19 +1601,6 @@ namespace py::cpp::Windows::ApplicationModel
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.FindRelatedPackagesOptions", L"IncludeFrameworks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2209,19 +1689,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.FullTrustProcessLaunchResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2239,19 +1706,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.FullTrustProcessLaunchResult", L"LaunchResult");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2621,19 +2075,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.LeavingBackgroundEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2721,19 +2162,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LimitedAccessFeatureRequestResult", L"EstimatedRemovalDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2751,19 +2179,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LimitedAccessFeatureRequestResult", L"FeatureId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2781,19 +2196,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LimitedAccessFeatureRequestResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2975,23 +2377,10 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Package", L"CheckUpdateAvailabilityAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CheckUpdateAvailabilityAsync();
+                    return py::require<winrt::Windows::ApplicationModel::IPackage6>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Package", "CheckUpdateAvailabilityAsync", "Windows.ApplicationModel.IPackage6", 0).CheckUpdateAvailabilityAsync();
                 }());
             }
             catch (...)
@@ -3015,25 +2404,12 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Package", L"FindRelatedPackages", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::FindRelatedPackagesOptions>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindRelatedPackages(param0);
+                    return py::require<winrt::Windows::ApplicationModel::IPackage9>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Package", "FindRelatedPackages", "Windows.ApplicationModel.IPackage9", 1).FindRelatedPackages(param0);
                 }());
             }
             catch (...)
@@ -3057,23 +2433,10 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Package", L"GetAppInstallerInfo", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAppInstallerInfo();
+                    return py::require<winrt::Windows::ApplicationModel::IPackage6>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Package", "GetAppInstallerInfo", "Windows.ApplicationModel.IPackage6", 0).GetAppInstallerInfo();
                 }());
             }
             catch (...)
@@ -3097,23 +2460,10 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Package", L"GetAppListEntries", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAppListEntries();
+                    return py::require<winrt::Windows::ApplicationModel::IPackage8>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Package", "GetAppListEntries", "Windows.ApplicationModel.IPackage8", 0).GetAppListEntries();
                 }());
             }
             catch (...)
@@ -3137,23 +2487,10 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Package", L"GetAppListEntriesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAppListEntriesAsync();
+                    return py::require<winrt::Windows::ApplicationModel::IPackage3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Package", "GetAppListEntriesAsync", "Windows.ApplicationModel.IPackage3", 0).GetAppListEntriesAsync();
                 }());
             }
             catch (...)
@@ -3177,25 +2514,12 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Package", L"GetContentGroupAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetContentGroupAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::IPackage5>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Package", "GetContentGroupAsync", "Windows.ApplicationModel.IPackage5", 1).GetContentGroupAsync(param0);
                 }());
             }
             catch (...)
@@ -3219,23 +2543,10 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Package", L"GetContentGroupsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetContentGroupsAsync();
+                    return py::require<winrt::Windows::ApplicationModel::IPackage5>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Package", "GetContentGroupsAsync", "Windows.ApplicationModel.IPackage5", 0).GetContentGroupsAsync();
                 }());
             }
             catch (...)
@@ -3259,25 +2570,12 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Package", L"GetLogoAsRandomAccessStreamReference", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetLogoAsRandomAccessStreamReference(param0);
+                    return py::require<winrt::Windows::ApplicationModel::IPackage8>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Package", "GetLogoAsRandomAccessStreamReference", "Windows.ApplicationModel.IPackage8", 1).GetLogoAsRandomAccessStreamReference(param0);
                 }());
             }
             catch (...)
@@ -3301,23 +2599,10 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Package", L"GetThumbnailToken", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailToken();
+                    return py::require<winrt::Windows::ApplicationModel::IPackageWithMetadata>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Package", "GetThumbnailToken", "Windows.ApplicationModel.IPackageWithMetadata", 0).GetThumbnailToken();
                 }());
             }
             catch (...)
@@ -3341,24 +2626,11 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Package", L"Launch", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Launch(param0);
+                    py::require<winrt::Windows::ApplicationModel::IPackageWithMetadata>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Package", "Launch", "Windows.ApplicationModel.IPackageWithMetadata", 1).Launch(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3384,25 +2656,12 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Package", L"SetInUseAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SetInUseAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::IPackage5>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Package", "SetInUseAsync", "Windows.ApplicationModel.IPackage5", 1).SetInUseAsync(param0);
                 }());
             }
             catch (...)
@@ -3426,25 +2685,12 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Package", L"StageContentGroupsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StageContentGroupsAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::IPackage5>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Package", "StageContentGroupsAsync", "Windows.ApplicationModel.IPackage5", 1).StageContentGroupsAsync(param0);
                 }());
             }
             catch (...)
@@ -3457,26 +2703,13 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Package", L"StageContentGroupsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StageContentGroupsAsync(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::IPackage5>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Package", "StageContentGroupsAsync", "Windows.ApplicationModel.IPackage5", 2).StageContentGroupsAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -3500,23 +2733,10 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Package", L"VerifyContentIntegrityAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.VerifyContentIntegrityAsync();
+                    return py::require<winrt::Windows::ApplicationModel::IPackage4>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Package", "VerifyContentIntegrityAsync", "Windows.ApplicationModel.IPackage4", 0).VerifyContentIntegrityAsync();
                 }());
             }
             catch (...)
@@ -3536,19 +2756,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"Dependencies");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3566,19 +2773,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3596,19 +2790,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"InstalledLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3626,19 +2807,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"IsFramework");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3656,23 +2824,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Description();
+                return py::require<winrt::Windows::ApplicationModel::IPackage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "Description", "Windows.ApplicationModel.IPackage2").Description();
             }());
         }
         catch (...)
@@ -3686,23 +2841,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayName();
+                return py::require<winrt::Windows::ApplicationModel::IPackage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "DisplayName", "Windows.ApplicationModel.IPackage2").DisplayName();
             }());
         }
         catch (...)
@@ -3716,23 +2858,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"IsBundle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsBundle();
+                return py::require<winrt::Windows::ApplicationModel::IPackage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "IsBundle", "Windows.ApplicationModel.IPackage2").IsBundle();
             }());
         }
         catch (...)
@@ -3746,23 +2875,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"IsDevelopmentMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDevelopmentMode();
+                return py::require<winrt::Windows::ApplicationModel::IPackage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "IsDevelopmentMode", "Windows.ApplicationModel.IPackage2").IsDevelopmentMode();
             }());
         }
         catch (...)
@@ -3776,23 +2892,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"IsResourcePackage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsResourcePackage();
+                return py::require<winrt::Windows::ApplicationModel::IPackage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "IsResourcePackage", "Windows.ApplicationModel.IPackage2").IsResourcePackage();
             }());
         }
         catch (...)
@@ -3806,23 +2909,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"Logo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Logo();
+                return py::require<winrt::Windows::ApplicationModel::IPackage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "Logo", "Windows.ApplicationModel.IPackage2").Logo();
             }());
         }
         catch (...)
@@ -3836,23 +2926,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"PublisherDisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PublisherDisplayName();
+                return py::require<winrt::Windows::ApplicationModel::IPackage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "PublisherDisplayName", "Windows.ApplicationModel.IPackage2").PublisherDisplayName();
             }());
         }
         catch (...)
@@ -3866,23 +2943,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"InstalledDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.InstalledDate();
+                return py::require<winrt::Windows::ApplicationModel::IPackage3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "InstalledDate", "Windows.ApplicationModel.IPackage3").InstalledDate();
             }());
         }
         catch (...)
@@ -3896,23 +2960,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Status();
+                return py::require<winrt::Windows::ApplicationModel::IPackage3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "Status", "Windows.ApplicationModel.IPackage3").Status();
             }());
         }
         catch (...)
@@ -3926,23 +2977,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"IsOptional");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsOptional();
+                return py::require<winrt::Windows::ApplicationModel::IPackage4>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "IsOptional", "Windows.ApplicationModel.IPackage4").IsOptional();
             }());
         }
         catch (...)
@@ -3956,23 +2994,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"SignatureKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SignatureKind();
+                return py::require<winrt::Windows::ApplicationModel::IPackage4>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "SignatureKind", "Windows.ApplicationModel.IPackage4").SignatureKind();
             }());
         }
         catch (...)
@@ -3986,23 +3011,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"EffectiveLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectiveLocation();
+                return py::require<winrt::Windows::ApplicationModel::IPackage7>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "EffectiveLocation", "Windows.ApplicationModel.IPackage7").EffectiveLocation();
             }());
         }
         catch (...)
@@ -4016,23 +3028,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"MutableLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MutableLocation();
+                return py::require<winrt::Windows::ApplicationModel::IPackage7>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "MutableLocation", "Windows.ApplicationModel.IPackage7").MutableLocation();
             }());
         }
         catch (...)
@@ -4046,23 +3045,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"EffectiveExternalLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectiveExternalLocation();
+                return py::require<winrt::Windows::ApplicationModel::IPackage8>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "EffectiveExternalLocation", "Windows.ApplicationModel.IPackage8").EffectiveExternalLocation();
             }());
         }
         catch (...)
@@ -4076,23 +3062,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"EffectiveExternalPath");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectiveExternalPath();
+                return py::require<winrt::Windows::ApplicationModel::IPackage8>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "EffectiveExternalPath", "Windows.ApplicationModel.IPackage8").EffectiveExternalPath();
             }());
         }
         catch (...)
@@ -4106,23 +3079,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"EffectivePath");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectivePath();
+                return py::require<winrt::Windows::ApplicationModel::IPackage8>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "EffectivePath", "Windows.ApplicationModel.IPackage8").EffectivePath();
             }());
         }
         catch (...)
@@ -4136,23 +3096,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"InstalledPath");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.InstalledPath();
+                return py::require<winrt::Windows::ApplicationModel::IPackage8>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "InstalledPath", "Windows.ApplicationModel.IPackage8").InstalledPath();
             }());
         }
         catch (...)
@@ -4166,23 +3113,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"IsStub");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsStub();
+                return py::require<winrt::Windows::ApplicationModel::IPackage8>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "IsStub", "Windows.ApplicationModel.IPackage8").IsStub();
             }());
         }
         catch (...)
@@ -4196,23 +3130,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"MachineExternalLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MachineExternalLocation();
+                return py::require<winrt::Windows::ApplicationModel::IPackage8>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "MachineExternalLocation", "Windows.ApplicationModel.IPackage8").MachineExternalLocation();
             }());
         }
         catch (...)
@@ -4226,23 +3147,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"MachineExternalPath");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MachineExternalPath();
+                return py::require<winrt::Windows::ApplicationModel::IPackage8>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "MachineExternalPath", "Windows.ApplicationModel.IPackage8").MachineExternalPath();
             }());
         }
         catch (...)
@@ -4256,23 +3164,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"MutablePath");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MutablePath();
+                return py::require<winrt::Windows::ApplicationModel::IPackage8>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "MutablePath", "Windows.ApplicationModel.IPackage8").MutablePath();
             }());
         }
         catch (...)
@@ -4286,23 +3181,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"UserExternalLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UserExternalLocation();
+                return py::require<winrt::Windows::ApplicationModel::IPackage8>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "UserExternalLocation", "Windows.ApplicationModel.IPackage8").UserExternalLocation();
             }());
         }
         catch (...)
@@ -4316,23 +3198,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"UserExternalPath");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UserExternalPath();
+                return py::require<winrt::Windows::ApplicationModel::IPackage8>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "UserExternalPath", "Windows.ApplicationModel.IPackage8").UserExternalPath();
             }());
         }
         catch (...)
@@ -4346,23 +3215,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"SourceUriSchemeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SourceUriSchemeName();
+                return py::require<winrt::Windows::ApplicationModel::IPackage9>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "SourceUriSchemeName", "Windows.ApplicationModel.IPackage9").SourceUriSchemeName();
             }());
         }
         catch (...)
@@ -4376,23 +3232,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"InstallDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.InstallDate();
+                return py::require<winrt::Windows::ApplicationModel::IPackageWithMetadata>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Package", "InstallDate", "Windows.ApplicationModel.IPackageWithMetadata").InstallDate();
             }());
         }
         catch (...)
@@ -4567,25 +3410,12 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.PackageCatalog", L"AddOptionalPackageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.AddOptionalPackageAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::IPackageCatalog2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.PackageCatalog", "AddOptionalPackageAsync", "Windows.ApplicationModel.IPackageCatalog2", 1).AddOptionalPackageAsync(param0);
                 }());
             }
             catch (...)
@@ -4609,19 +3439,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.PackageCatalog", L"AddResourcePackageAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::AddResourcePackageOptions>(args, 2);
@@ -4629,7 +3446,7 @@ namespace py::cpp::Windows::ApplicationModel
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.AddResourcePackageAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::ApplicationModel::IPackageCatalog4>(self->obj, py::member_kind::method, "Windows.ApplicationModel.PackageCatalog", "AddResourcePackageAsync", "Windows.ApplicationModel.IPackageCatalog4", 3).AddResourcePackageAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -4775,25 +3592,12 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.PackageCatalog", L"RemoveOptionalPackagesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RemoveOptionalPackagesAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::IPackageCatalog3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.PackageCatalog", "RemoveOptionalPackagesAsync", "Windows.ApplicationModel.IPackageCatalog3", 1).RemoveOptionalPackagesAsync(param0);
                 }());
             }
             catch (...)
@@ -4817,25 +3621,12 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.PackageCatalog", L"RemoveResourcePackagesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Package>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RemoveResourcePackagesAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::IPackageCatalog4>(self->obj, py::member_kind::method, "Windows.ApplicationModel.PackageCatalog", "RemoveResourcePackagesAsync", "Windows.ApplicationModel.IPackageCatalog4", 1).RemoveResourcePackagesAsync(param0);
                 }());
             }
             catch (...)
@@ -4855,19 +3646,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.PackageCatalog", L"PackageInstalling");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::PackageCatalog, winrt::Windows::ApplicationModel::PackageInstallingEventArgs>>(arg);
 
             return py::convert([&]()
@@ -4887,19 +3665,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.PackageCatalog", L"PackageInstalling");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4920,19 +3685,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.PackageCatalog", L"PackageStaging");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::PackageCatalog, winrt::Windows::ApplicationModel::PackageStagingEventArgs>>(arg);
 
             return py::convert([&]()
@@ -4952,19 +3704,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.PackageCatalog", L"PackageStaging");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4985,19 +3724,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.PackageCatalog", L"PackageStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::PackageCatalog, winrt::Windows::ApplicationModel::PackageStatusChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -5017,19 +3743,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.PackageCatalog", L"PackageStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -5050,19 +3763,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.PackageCatalog", L"PackageUninstalling");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::PackageCatalog, winrt::Windows::ApplicationModel::PackageUninstallingEventArgs>>(arg);
 
             return py::convert([&]()
@@ -5082,19 +3782,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.PackageCatalog", L"PackageUninstalling");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -5115,19 +3802,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.PackageCatalog", L"PackageUpdating");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::PackageCatalog, winrt::Windows::ApplicationModel::PackageUpdatingEventArgs>>(arg);
 
             return py::convert([&]()
@@ -5147,19 +3821,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.PackageCatalog", L"PackageUpdating");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -5180,25 +3841,12 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.PackageCatalog", L"PackageContentGroupStaging");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::PackageCatalog, winrt::Windows::ApplicationModel::PackageContentGroupStagingEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PackageContentGroupStaging(param0);
+                return py::require<winrt::Windows::ApplicationModel::IPackageCatalog2>(self->obj, py::member_kind::event, "Windows.ApplicationModel.PackageCatalog", "PackageContentGroupStaging", "Windows.ApplicationModel.IPackageCatalog2").PackageContentGroupStaging(param0);
             }());
         }
         catch (...)
@@ -5212,24 +3860,11 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.PackageCatalog", L"PackageContentGroupStaging");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PackageContentGroupStaging(param0);
+                py::require<winrt::Windows::ApplicationModel::IPackageCatalog2>(self->obj, py::member_kind::event, "Windows.ApplicationModel.PackageCatalog", "PackageContentGroupStaging", "Windows.ApplicationModel.IPackageCatalog2").PackageContentGroupStaging(param0);
             }
 
             Py_RETURN_NONE;
@@ -5348,19 +3983,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5378,19 +4000,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult", L"Package");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5473,19 +4082,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageCatalogAddResourcePackageResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5503,19 +4099,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageCatalogAddResourcePackageResult", L"IsComplete");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5533,19 +4116,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageCatalogAddResourcePackageResult", L"Package");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5629,19 +4199,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5659,19 +4216,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult", L"PackagesRemoved");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5754,19 +4298,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5784,19 +4315,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult", L"PackagesRemoved");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5879,19 +4397,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageContentGroup", L"IsRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5909,19 +4414,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageContentGroup", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5939,19 +4431,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageContentGroup", L"Package");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5969,19 +4448,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageContentGroup", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6118,19 +4584,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageContentGroupStagingEventArgs", L"ActivityId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6148,19 +4601,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageContentGroupStagingEventArgs", L"ContentGroupName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6178,19 +4618,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageContentGroupStagingEventArgs", L"ErrorCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6208,19 +4635,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageContentGroupStagingEventArgs", L"IsComplete");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6238,19 +4652,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageContentGroupStagingEventArgs", L"IsContentGroupRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6268,19 +4669,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageContentGroupStagingEventArgs", L"Package");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6298,19 +4686,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageContentGroupStagingEventArgs", L"Progress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6398,19 +4773,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageId", L"Architecture");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6428,19 +4790,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageId", L"FamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6458,19 +4807,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageId", L"FullName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6488,19 +4824,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageId", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6518,19 +4841,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageId", L"Publisher");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6548,19 +4858,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageId", L"PublisherId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6578,19 +4875,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageId", L"ResourceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6608,19 +4892,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageId", L"Version");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6638,23 +4909,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageId", L"Author");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Author();
+                return py::require<winrt::Windows::ApplicationModel::IPackageIdWithMetadata>(self->obj, py::member_kind::property, "Windows.ApplicationModel.PackageId", "Author", "Windows.ApplicationModel.IPackageIdWithMetadata").Author();
             }());
         }
         catch (...)
@@ -6668,23 +4926,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageId", L"ProductId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProductId();
+                return py::require<winrt::Windows::ApplicationModel::IPackageIdWithMetadata>(self->obj, py::member_kind::property, "Windows.ApplicationModel.PackageId", "ProductId", "Windows.ApplicationModel.IPackageIdWithMetadata").ProductId();
             }());
         }
         catch (...)
@@ -6771,19 +5016,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageInstallingEventArgs", L"ActivityId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6801,19 +5033,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageInstallingEventArgs", L"ErrorCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6831,19 +5050,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageInstallingEventArgs", L"IsComplete");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6861,19 +5067,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageInstallingEventArgs", L"Package");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6891,19 +5084,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageInstallingEventArgs", L"Progress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6989,19 +5169,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStagingEventArgs", L"ActivityId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7019,19 +5186,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStagingEventArgs", L"ErrorCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7049,19 +5203,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStagingEventArgs", L"IsComplete");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7079,19 +5220,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStagingEventArgs", L"Package");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7109,19 +5237,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStagingEventArgs", L"Progress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7211,19 +5326,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.PackageStatus", L"VerifyIsOK", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7247,19 +5349,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStatus", L"DataOffline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7277,19 +5366,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStatus", L"DependencyIssue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7307,19 +5383,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStatus", L"DeploymentInProgress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7337,19 +5400,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStatus", L"Disabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7367,19 +5417,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStatus", L"LicenseIssue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7397,19 +5434,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStatus", L"Modified");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7427,19 +5451,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStatus", L"NeedsRemediation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7457,19 +5468,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStatus", L"NotAvailable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7487,19 +5485,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStatus", L"PackageOffline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7517,19 +5502,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStatus", L"Servicing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7547,19 +5519,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStatus", L"Tampered");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7577,23 +5536,10 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStatus", L"IsPartiallyStaged");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPartiallyStaged();
+                return py::require<winrt::Windows::ApplicationModel::IPackageStatus2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.PackageStatus", "IsPartiallyStaged", "Windows.ApplicationModel.IPackageStatus2").IsPartiallyStaged();
             }());
         }
         catch (...)
@@ -7683,19 +5629,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageStatusChangedEventArgs", L"Package");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7777,19 +5710,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageUninstallingEventArgs", L"ActivityId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7807,19 +5727,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageUninstallingEventArgs", L"ErrorCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7837,19 +5744,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageUninstallingEventArgs", L"IsComplete");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7867,19 +5761,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageUninstallingEventArgs", L"Package");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7897,19 +5778,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageUninstallingEventArgs", L"Progress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7995,19 +5863,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageUpdateAvailabilityResult", L"Availability");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8025,19 +5880,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageUpdateAvailabilityResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8120,19 +5962,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageUpdatingEventArgs", L"ActivityId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8150,19 +5979,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageUpdatingEventArgs", L"ErrorCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8180,19 +5996,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageUpdatingEventArgs", L"IsComplete");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8210,19 +6013,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageUpdatingEventArgs", L"Progress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8240,19 +6030,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageUpdatingEventArgs", L"SourcePackage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8270,19 +6047,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageUpdatingEventArgs", L"TargetPackage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8373,19 +6137,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.StartupTask", L"Disable", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Disable();
@@ -8496,19 +6247,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.StartupTask", L"RequestEnableAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8532,19 +6270,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.StartupTask", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8562,19 +6287,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.StartupTask", L"TaskId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8686,19 +6398,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SuspendingDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -8787,19 +6486,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SuspendingEventArgs", L"SuspendingOperation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8885,19 +6571,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SuspendingOperation", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8921,19 +6594,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SuspendingOperation", L"Deadline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9022,19 +6682,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.IEnteredBackgroundEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9224,19 +6871,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ILeavingBackgroundEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9426,19 +7060,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.IPackageCatalogStatics2", L"OpenForPackage", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Package>(args, 0);
 
                 return py::convert([&]()
@@ -9636,19 +7257,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ISuspendingDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -9833,19 +7441,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ISuspendingEventArgs", L"SuspendingOperation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10023,19 +7618,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ISuspendingOperation", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -10059,19 +7641,6 @@ namespace py::cpp::Windows::ApplicationModel
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ISuspendingOperation", L"Deadline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

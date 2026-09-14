@@ -29,22 +29,9 @@ namespace py::cpp::Windows::Graphics::Capture
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFrame", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Graphics.Capture.Direct3D11CaptureFrame", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -66,19 +53,6 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFrame", L"ContentSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -96,19 +70,6 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFrame", L"Surface");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -126,19 +87,6 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFrame", L"SystemRelativeTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -156,23 +104,10 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFrame", L"DirtyRegionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DirtyRegionMode();
+                return py::require<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame2>(self->obj, py::member_kind::property, "Windows.Graphics.Capture.Direct3D11CaptureFrame", "DirtyRegionMode", "Windows.Graphics.Capture.IDirect3D11CaptureFrame2").DirtyRegionMode();
             }());
         }
         catch (...)
@@ -186,23 +121,10 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFrame", L"DirtyRegions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DirtyRegions();
+                return py::require<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame2>(self->obj, py::member_kind::property, "Windows.Graphics.Capture.Direct3D11CaptureFrame", "DirtyRegions", "Windows.Graphics.Capture.IDirect3D11CaptureFrame2").DirtyRegions();
             }());
         }
         catch (...)
@@ -247,7 +169,7 @@ namespace py::cpp::Windows::Graphics::Capture
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Graphics.Capture.Direct3D11CaptureFrame", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -314,22 +236,9 @@ namespace py::cpp::Windows::Graphics::Capture
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFramePool", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Graphics.Capture.Direct3D11CaptureFramePool", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -400,19 +309,6 @@ namespace py::cpp::Windows::Graphics::Capture
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFramePool", L"CreateCaptureSession", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Capture::GraphicsCaptureItem>(args, 0);
 
                 return py::convert([&]()
@@ -487,19 +383,6 @@ namespace py::cpp::Windows::Graphics::Capture
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFramePool", L"Recreate", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -533,19 +416,6 @@ namespace py::cpp::Windows::Graphics::Capture
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFramePool", L"TryGetNextFrame", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -569,19 +439,6 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFramePool", L"DispatcherQueue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -599,19 +456,6 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFramePool", L"FrameArrived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -631,19 +475,6 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFramePool", L"FrameArrived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -695,7 +526,7 @@ namespace py::cpp::Windows::Graphics::Capture
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Graphics.Capture.Direct3D11CaptureFramePool", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -1000,19 +831,6 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureItem", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1030,19 +848,6 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureItem", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1060,19 +865,6 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Capture.GraphicsCaptureItem", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Capture::GraphicsCaptureItem, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -1092,19 +884,6 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Capture.GraphicsCaptureItem", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1242,19 +1021,6 @@ namespace py::cpp::Windows::Graphics::Capture
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Capture.GraphicsCapturePicker", L"PickSingleItemAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1346,22 +1112,9 @@ namespace py::cpp::Windows::Graphics::Capture
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Graphics.Capture.GraphicsCaptureSession", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -1427,19 +1180,6 @@ namespace py::cpp::Windows::Graphics::Capture
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"StartCapture", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.StartCapture();
@@ -1464,23 +1204,10 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"IsCursorCaptureEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsCursorCaptureEnabled();
+                return py::require<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession2>(self->obj, py::member_kind::property, "Windows.Graphics.Capture.GraphicsCaptureSession", "IsCursorCaptureEnabled", "Windows.Graphics.Capture.IGraphicsCaptureSession2").IsCursorCaptureEnabled();
             }());
         }
         catch (...)
@@ -1500,24 +1227,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"IsCursorCaptureEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsCursorCaptureEnabled(param0);
+                py::require<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession2>(self->obj, py::member_kind::property, "Windows.Graphics.Capture.GraphicsCaptureSession", "IsCursorCaptureEnabled", "Windows.Graphics.Capture.IGraphicsCaptureSession2").IsCursorCaptureEnabled(param0);
             }
 
             return 0;
@@ -1533,23 +1247,10 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"IsBorderRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsBorderRequired();
+                return py::require<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession3>(self->obj, py::member_kind::property, "Windows.Graphics.Capture.GraphicsCaptureSession", "IsBorderRequired", "Windows.Graphics.Capture.IGraphicsCaptureSession3").IsBorderRequired();
             }());
         }
         catch (...)
@@ -1569,24 +1270,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"IsBorderRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsBorderRequired(param0);
+                py::require<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession3>(self->obj, py::member_kind::property, "Windows.Graphics.Capture.GraphicsCaptureSession", "IsBorderRequired", "Windows.Graphics.Capture.IGraphicsCaptureSession3").IsBorderRequired(param0);
             }
 
             return 0;
@@ -1602,23 +1290,10 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"DirtyRegionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DirtyRegionMode();
+                return py::require<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession4>(self->obj, py::member_kind::property, "Windows.Graphics.Capture.GraphicsCaptureSession", "DirtyRegionMode", "Windows.Graphics.Capture.IGraphicsCaptureSession4").DirtyRegionMode();
             }());
         }
         catch (...)
@@ -1638,24 +1313,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"DirtyRegionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Graphics::Capture::GraphicsCaptureDirtyRegionMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DirtyRegionMode(param0);
+                py::require<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession4>(self->obj, py::member_kind::property, "Windows.Graphics.Capture.GraphicsCaptureSession", "DirtyRegionMode", "Windows.Graphics.Capture.IGraphicsCaptureSession4").DirtyRegionMode(param0);
             }
 
             return 0;
@@ -1671,23 +1333,10 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"MinUpdateInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MinUpdateInterval();
+                return py::require<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession5>(self->obj, py::member_kind::property, "Windows.Graphics.Capture.GraphicsCaptureSession", "MinUpdateInterval", "Windows.Graphics.Capture.IGraphicsCaptureSession5").MinUpdateInterval();
             }());
         }
         catch (...)
@@ -1707,24 +1356,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"MinUpdateInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MinUpdateInterval(param0);
+                py::require<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession5>(self->obj, py::member_kind::property, "Windows.Graphics.Capture.GraphicsCaptureSession", "MinUpdateInterval", "Windows.Graphics.Capture.IGraphicsCaptureSession5").MinUpdateInterval(param0);
             }
 
             return 0;
@@ -1740,23 +1376,10 @@ namespace py::cpp::Windows::Graphics::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"IncludeSecondaryWindows");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IncludeSecondaryWindows();
+                return py::require<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession6>(self->obj, py::member_kind::property, "Windows.Graphics.Capture.GraphicsCaptureSession", "IncludeSecondaryWindows", "Windows.Graphics.Capture.IGraphicsCaptureSession6").IncludeSecondaryWindows();
             }());
         }
         catch (...)
@@ -1776,24 +1399,11 @@ namespace py::cpp::Windows::Graphics::Capture
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"IncludeSecondaryWindows");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IncludeSecondaryWindows(param0);
+                py::require<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession6>(self->obj, py::member_kind::property, "Windows.Graphics.Capture.GraphicsCaptureSession", "IncludeSecondaryWindows", "Windows.Graphics.Capture.IGraphicsCaptureSession6").IncludeSecondaryWindows(param0);
             }
 
             return 0;
@@ -1840,7 +1450,7 @@ namespace py::cpp::Windows::Graphics::Capture
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Graphics.Capture.GraphicsCaptureSession", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;

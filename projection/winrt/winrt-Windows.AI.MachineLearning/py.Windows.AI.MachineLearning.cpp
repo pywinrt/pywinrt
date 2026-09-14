@@ -25,19 +25,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"BitmapAlphaMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -55,19 +42,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"BitmapPixelFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -85,19 +59,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"Height");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -115,19 +76,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"Width");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -145,23 +93,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"PixelRange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PixelRange();
+                return py::require<winrt::Windows::AI::MachineLearning::IImageFeatureDescriptor2>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.ImageFeatureDescriptor", "PixelRange", "Windows.AI.MachineLearning.IImageFeatureDescriptor2").PixelRange();
             }());
         }
         catch (...)
@@ -175,23 +110,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Description();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.ImageFeatureDescriptor", "Description", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").Description();
             }());
         }
         catch (...)
@@ -205,23 +127,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"IsRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsRequired();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.ImageFeatureDescriptor", "IsRequired", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").IsRequired();
             }());
         }
         catch (...)
@@ -235,23 +144,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.ImageFeatureDescriptor", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").Kind();
             }());
         }
         catch (...)
@@ -265,23 +161,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.ImageFeatureDescriptor", "Name", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").Name();
             }());
         }
         catch (...)
@@ -409,19 +292,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureValue", L"VideoFrame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -439,23 +309,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureValue", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.ImageFeatureValue", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureValue").Kind();
             }());
         }
         catch (...)
@@ -560,22 +417,9 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.LearningModel", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -893,19 +737,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Author");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -923,19 +754,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -953,19 +771,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Domain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -983,19 +788,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"InputFeatures");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1013,19 +805,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Metadata");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1043,19 +822,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1073,19 +839,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"OutputFeatures");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1103,19 +856,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Version");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1164,7 +904,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.LearningModel", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -1283,19 +1023,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Bind", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -1316,19 +1043,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Bind", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
@@ -1361,19 +1075,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -1402,23 +1103,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.LearningModelBinding", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Object>>", 0).First();
                 }());
             }
             catch (...)
@@ -1442,25 +1130,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.HasKey(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.LearningModelBinding", "HasKey", "Windows.Foundation.Collections.IMapView<String, Object>", 1).HasKey(param0);
                 }());
             }
             catch (...)
@@ -1484,25 +1159,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Lookup(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.LearningModelBinding", "Lookup", "Windows.Foundation.Collections.IMapView<String, Object>", 1).Lookup(param0);
                 }());
             }
             catch (...)
@@ -1526,25 +1188,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Split", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param0{nullptr};
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param1{nullptr};
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Split(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.LearningModelBinding", "Split", "Windows.Foundation.Collections.IMapView<String, Object>", 0).Split(param0, param1);
                 }
 
                 py::pyobj_handle out0{ py::convert(param0) };
@@ -1577,23 +1226,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.LearningModelBinding", "Size", "Windows.Foundation.Collections.IMapView<String, Object>").Size();
             }());
         }
         catch (...)
@@ -1634,7 +1270,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.LearningModelBinding", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Object>>", 0).First();
             }())};
 
             if (!iter)
@@ -1658,7 +1294,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             auto _key = py::convert_to<winrt::hstring>(key);
             {
                 auto _gil = py::release_gil();
-                return static_cast<int>(self->obj.HasKey(_key));
+                return static_cast<int>(py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.LearningModelBinding", "HasKey", "Windows.Foundation.Collections.IMapView<String, Object>", 1).HasKey(_key));
             }
         }
         catch (...)
@@ -1673,7 +1309,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.LearningModelBinding", "Size", "Windows.Foundation.Collections.IMapView<String, Object>").Size());
         }
         catch (...)
         {
@@ -1690,7 +1326,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             auto value = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.TryLookup(_key);
+                return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.LearningModelBinding", "Lookup", "Windows.Foundation.Collections.IMapView<String, Object>", 1).TryLookup(_key);
             }();
 
             if (!value)
@@ -1700,7 +1336,7 @@ namespace py::cpp::Windows::AI::MachineLearning
                     auto has_key = [&]()
                     {
                         auto _gil = py::release_gil();
-                        return self->obj.HasKey(_key);
+                        return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.LearningModelBinding", "Lookup", "Windows.Foundation.Collections.IMapView<String, Object>", 1).HasKey(_key);
                     }();
 
                     if (has_key)
@@ -1842,19 +1478,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelDevice", L"AdapterId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1872,19 +1495,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelDevice", L"Direct3D11Device");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1989,19 +1599,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelEvaluationResult", L"CorrelationId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2019,19 +1616,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelEvaluationResult", L"ErrorStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2049,19 +1633,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelEvaluationResult", L"Outputs");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2079,19 +1650,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelEvaluationResult", L"Succeeded");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2237,22 +1795,9 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.LearningModelSession", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -2278,19 +1823,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"Evaluate", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::LearningModelBinding>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2321,19 +1853,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"EvaluateAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::LearningModelBinding>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2364,19 +1883,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"EvaluateFeatures", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2407,19 +1913,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"EvaluateFeaturesAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2446,19 +1939,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"Device");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2476,19 +1956,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"EvaluationProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2506,19 +1973,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"Model");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2567,7 +2021,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.LearningModelSession", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -2658,25 +2112,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSessionOptions", L"OverrideNamedDimension", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.OverrideNamedDimension(param0, param1);
+                    py::require<winrt::Windows::AI::MachineLearning::ILearningModelSessionOptions3>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.LearningModelSessionOptions", "OverrideNamedDimension", "Windows.AI.MachineLearning.ILearningModelSessionOptions3", 2).OverrideNamedDimension(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -2698,19 +2139,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSessionOptions", L"BatchSizeOverride");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2734,19 +2162,6 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSessionOptions", L"BatchSizeOverride");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -2767,23 +2182,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSessionOptions", L"CloseModelOnSessionCreation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CloseModelOnSessionCreation();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelSessionOptions2>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.LearningModelSessionOptions", "CloseModelOnSessionCreation", "Windows.AI.MachineLearning.ILearningModelSessionOptions2").CloseModelOnSessionCreation();
             }());
         }
         catch (...)
@@ -2803,24 +2205,11 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSessionOptions", L"CloseModelOnSessionCreation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CloseModelOnSessionCreation(param0);
+                py::require<winrt::Windows::AI::MachineLearning::ILearningModelSessionOptions2>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.LearningModelSessionOptions", "CloseModelOnSessionCreation", "Windows.AI.MachineLearning.ILearningModelSessionOptions2").CloseModelOnSessionCreation(param0);
             }
 
             return 0;
@@ -2902,23 +2291,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Description();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.MapFeatureDescriptor", "Description", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").Description();
             }());
         }
         catch (...)
@@ -2932,23 +2308,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"IsRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsRequired();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.MapFeatureDescriptor", "IsRequired", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").IsRequired();
             }());
         }
         catch (...)
@@ -2962,23 +2325,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.MapFeatureDescriptor", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").Kind();
             }());
         }
         catch (...)
@@ -2992,23 +2342,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.MapFeatureDescriptor", "Name", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").Name();
             }());
         }
         catch (...)
@@ -3022,19 +2359,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"KeyKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3052,19 +2376,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"ValueDescriptor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3151,23 +2462,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.SequenceFeatureDescriptor", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Description();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.SequenceFeatureDescriptor", "Description", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").Description();
             }());
         }
         catch (...)
@@ -3181,23 +2479,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.SequenceFeatureDescriptor", L"IsRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsRequired();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.SequenceFeatureDescriptor", "IsRequired", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").IsRequired();
             }());
         }
         catch (...)
@@ -3211,23 +2496,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.SequenceFeatureDescriptor", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.SequenceFeatureDescriptor", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").Kind();
             }());
         }
         catch (...)
@@ -3241,23 +2513,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.SequenceFeatureDescriptor", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.SequenceFeatureDescriptor", "Name", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").Name();
             }());
         }
         catch (...)
@@ -3271,19 +2530,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.SequenceFeatureDescriptor", L"ElementDescriptor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3373,22 +2619,9 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorBoolean", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -3657,23 +2890,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"CreateReference", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateReference();
+                    return py::require<winrt::Windows::Foundation::IMemoryBuffer>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorBoolean", "CreateReference", "Windows.Foundation.IMemoryBuffer", 0).CreateReference();
                 }());
             }
             catch (...)
@@ -3697,19 +2917,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"GetAsVectorView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3733,23 +2940,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorBoolean", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureValue").Kind();
             }());
         }
         catch (...)
@@ -3763,23 +2957,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Shape();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorBoolean", "Shape", "Windows.AI.MachineLearning.ITensor").Shape();
             }());
         }
         catch (...)
@@ -3793,23 +2974,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"TensorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TensorKind();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorBoolean", "TensorKind", "Windows.AI.MachineLearning.ITensor").TensorKind();
             }());
         }
         catch (...)
@@ -3854,7 +3022,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorBoolean", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -3947,22 +3115,9 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorDouble", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -4231,23 +3386,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"CreateReference", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateReference();
+                    return py::require<winrt::Windows::Foundation::IMemoryBuffer>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorDouble", "CreateReference", "Windows.Foundation.IMemoryBuffer", 0).CreateReference();
                 }());
             }
             catch (...)
@@ -4271,19 +3413,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"GetAsVectorView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4307,23 +3436,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorDouble", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorDouble", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureValue").Kind();
             }());
         }
         catch (...)
@@ -4337,23 +3453,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorDouble", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Shape();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorDouble", "Shape", "Windows.AI.MachineLearning.ITensor").Shape();
             }());
         }
         catch (...)
@@ -4367,23 +3470,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorDouble", L"TensorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TensorKind();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorDouble", "TensorKind", "Windows.AI.MachineLearning.ITensor").TensorKind();
             }());
         }
         catch (...)
@@ -4428,7 +3518,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorDouble", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -4517,23 +3607,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Description();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorFeatureDescriptor", "Description", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").Description();
             }());
         }
         catch (...)
@@ -4547,23 +3624,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"IsRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsRequired();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorFeatureDescriptor", "IsRequired", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").IsRequired();
             }());
         }
         catch (...)
@@ -4577,23 +3641,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorFeatureDescriptor", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").Kind();
             }());
         }
         catch (...)
@@ -4607,23 +3658,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorFeatureDescriptor", "Name", "Windows.AI.MachineLearning.ILearningModelFeatureDescriptor").Name();
             }());
         }
         catch (...)
@@ -4637,19 +3675,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4667,19 +3692,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"TensorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4770,22 +3782,9 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorFloat", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -5054,23 +4053,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"CreateReference", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateReference();
+                    return py::require<winrt::Windows::Foundation::IMemoryBuffer>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorFloat", "CreateReference", "Windows.Foundation.IMemoryBuffer", 0).CreateReference();
                 }());
             }
             catch (...)
@@ -5094,19 +4080,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"GetAsVectorView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5130,23 +4103,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorFloat", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureValue").Kind();
             }());
         }
         catch (...)
@@ -5160,23 +4120,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Shape();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorFloat", "Shape", "Windows.AI.MachineLearning.ITensor").Shape();
             }());
         }
         catch (...)
@@ -5190,23 +4137,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat", L"TensorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TensorKind();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorFloat", "TensorKind", "Windows.AI.MachineLearning.ITensor").TensorKind();
             }());
         }
         catch (...)
@@ -5251,7 +4185,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorFloat", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -5344,22 +4278,9 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorFloat16Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -5628,23 +4549,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"CreateReference", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateReference();
+                    return py::require<winrt::Windows::Foundation::IMemoryBuffer>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorFloat16Bit", "CreateReference", "Windows.Foundation.IMemoryBuffer", 0).CreateReference();
                 }());
             }
             catch (...)
@@ -5668,19 +4576,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"GetAsVectorView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5704,23 +4599,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorFloat16Bit", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureValue").Kind();
             }());
         }
         catch (...)
@@ -5734,23 +4616,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Shape();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorFloat16Bit", "Shape", "Windows.AI.MachineLearning.ITensor").Shape();
             }());
         }
         catch (...)
@@ -5764,23 +4633,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"TensorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TensorKind();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorFloat16Bit", "TensorKind", "Windows.AI.MachineLearning.ITensor").TensorKind();
             }());
         }
         catch (...)
@@ -5825,7 +4681,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorFloat16Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -5918,22 +4774,9 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorInt16Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -6202,23 +5045,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"CreateReference", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateReference();
+                    return py::require<winrt::Windows::Foundation::IMemoryBuffer>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorInt16Bit", "CreateReference", "Windows.Foundation.IMemoryBuffer", 0).CreateReference();
                 }());
             }
             catch (...)
@@ -6242,19 +5072,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"GetAsVectorView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6278,23 +5095,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorInt16Bit", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureValue").Kind();
             }());
         }
         catch (...)
@@ -6308,23 +5112,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Shape();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorInt16Bit", "Shape", "Windows.AI.MachineLearning.ITensor").Shape();
             }());
         }
         catch (...)
@@ -6338,23 +5129,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"TensorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TensorKind();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorInt16Bit", "TensorKind", "Windows.AI.MachineLearning.ITensor").TensorKind();
             }());
         }
         catch (...)
@@ -6399,7 +5177,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorInt16Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -6492,22 +5270,9 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorInt32Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -6776,23 +5541,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"CreateReference", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateReference();
+                    return py::require<winrt::Windows::Foundation::IMemoryBuffer>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorInt32Bit", "CreateReference", "Windows.Foundation.IMemoryBuffer", 0).CreateReference();
                 }());
             }
             catch (...)
@@ -6816,19 +5568,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"GetAsVectorView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6852,23 +5591,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorInt32Bit", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureValue").Kind();
             }());
         }
         catch (...)
@@ -6882,23 +5608,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Shape();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorInt32Bit", "Shape", "Windows.AI.MachineLearning.ITensor").Shape();
             }());
         }
         catch (...)
@@ -6912,23 +5625,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"TensorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TensorKind();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorInt32Bit", "TensorKind", "Windows.AI.MachineLearning.ITensor").TensorKind();
             }());
         }
         catch (...)
@@ -6973,7 +5673,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorInt32Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -7066,22 +5766,9 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorInt64Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -7350,23 +6037,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"CreateReference", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateReference();
+                    return py::require<winrt::Windows::Foundation::IMemoryBuffer>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorInt64Bit", "CreateReference", "Windows.Foundation.IMemoryBuffer", 0).CreateReference();
                 }());
             }
             catch (...)
@@ -7390,19 +6064,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"GetAsVectorView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7426,23 +6087,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorInt64Bit", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureValue").Kind();
             }());
         }
         catch (...)
@@ -7456,23 +6104,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Shape();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorInt64Bit", "Shape", "Windows.AI.MachineLearning.ITensor").Shape();
             }());
         }
         catch (...)
@@ -7486,23 +6121,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"TensorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TensorKind();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorInt64Bit", "TensorKind", "Windows.AI.MachineLearning.ITensor").TensorKind();
             }());
         }
         catch (...)
@@ -7547,7 +6169,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorInt64Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -7640,22 +6262,9 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorInt8Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -7924,23 +6533,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"CreateReference", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateReference();
+                    return py::require<winrt::Windows::Foundation::IMemoryBuffer>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorInt8Bit", "CreateReference", "Windows.Foundation.IMemoryBuffer", 0).CreateReference();
                 }());
             }
             catch (...)
@@ -7964,19 +6560,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"GetAsVectorView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8000,23 +6583,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorInt8Bit", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureValue").Kind();
             }());
         }
         catch (...)
@@ -8030,23 +6600,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Shape();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorInt8Bit", "Shape", "Windows.AI.MachineLearning.ITensor").Shape();
             }());
         }
         catch (...)
@@ -8060,23 +6617,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"TensorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TensorKind();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorInt8Bit", "TensorKind", "Windows.AI.MachineLearning.ITensor").TensorKind();
             }());
         }
         catch (...)
@@ -8121,7 +6665,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorInt8Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -8214,22 +6758,9 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorString", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -8455,23 +6986,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"CreateReference", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateReference();
+                    return py::require<winrt::Windows::Foundation::IMemoryBuffer>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorString", "CreateReference", "Windows.Foundation.IMemoryBuffer", 0).CreateReference();
                 }());
             }
             catch (...)
@@ -8495,19 +7013,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"GetAsVectorView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8531,23 +7036,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorString", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorString", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureValue").Kind();
             }());
         }
         catch (...)
@@ -8561,23 +7053,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorString", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Shape();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorString", "Shape", "Windows.AI.MachineLearning.ITensor").Shape();
             }());
         }
         catch (...)
@@ -8591,23 +7070,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorString", L"TensorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TensorKind();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorString", "TensorKind", "Windows.AI.MachineLearning.ITensor").TensorKind();
             }());
         }
         catch (...)
@@ -8652,7 +7118,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorString", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -8744,22 +7210,9 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorUInt16Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -9028,23 +7481,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"CreateReference", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateReference();
+                    return py::require<winrt::Windows::Foundation::IMemoryBuffer>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorUInt16Bit", "CreateReference", "Windows.Foundation.IMemoryBuffer", 0).CreateReference();
                 }());
             }
             catch (...)
@@ -9068,19 +7508,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"GetAsVectorView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9104,23 +7531,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorUInt16Bit", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureValue").Kind();
             }());
         }
         catch (...)
@@ -9134,23 +7548,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Shape();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorUInt16Bit", "Shape", "Windows.AI.MachineLearning.ITensor").Shape();
             }());
         }
         catch (...)
@@ -9164,23 +7565,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"TensorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TensorKind();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorUInt16Bit", "TensorKind", "Windows.AI.MachineLearning.ITensor").TensorKind();
             }());
         }
         catch (...)
@@ -9225,7 +7613,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorUInt16Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -9318,22 +7706,9 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorUInt32Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -9602,23 +7977,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"CreateReference", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateReference();
+                    return py::require<winrt::Windows::Foundation::IMemoryBuffer>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorUInt32Bit", "CreateReference", "Windows.Foundation.IMemoryBuffer", 0).CreateReference();
                 }());
             }
             catch (...)
@@ -9642,19 +8004,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"GetAsVectorView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9678,23 +8027,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorUInt32Bit", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureValue").Kind();
             }());
         }
         catch (...)
@@ -9708,23 +8044,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Shape();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorUInt32Bit", "Shape", "Windows.AI.MachineLearning.ITensor").Shape();
             }());
         }
         catch (...)
@@ -9738,23 +8061,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"TensorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TensorKind();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorUInt32Bit", "TensorKind", "Windows.AI.MachineLearning.ITensor").TensorKind();
             }());
         }
         catch (...)
@@ -9799,7 +8109,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorUInt32Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -9892,22 +8202,9 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorUInt64Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -10176,23 +8473,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"CreateReference", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateReference();
+                    return py::require<winrt::Windows::Foundation::IMemoryBuffer>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorUInt64Bit", "CreateReference", "Windows.Foundation.IMemoryBuffer", 0).CreateReference();
                 }());
             }
             catch (...)
@@ -10216,19 +8500,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"GetAsVectorView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -10252,23 +8523,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorUInt64Bit", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureValue").Kind();
             }());
         }
         catch (...)
@@ -10282,23 +8540,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Shape();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorUInt64Bit", "Shape", "Windows.AI.MachineLearning.ITensor").Shape();
             }());
         }
         catch (...)
@@ -10312,23 +8557,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"TensorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TensorKind();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorUInt64Bit", "TensorKind", "Windows.AI.MachineLearning.ITensor").TensorKind();
             }());
         }
         catch (...)
@@ -10373,7 +8605,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorUInt64Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -10466,22 +8698,9 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorUInt8Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -10750,23 +8969,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"CreateReference", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateReference();
+                    return py::require<winrt::Windows::Foundation::IMemoryBuffer>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorUInt8Bit", "CreateReference", "Windows.Foundation.IMemoryBuffer", 0).CreateReference();
                 }());
             }
             catch (...)
@@ -10790,19 +8996,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"GetAsVectorView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -10826,23 +9019,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorUInt8Bit", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureValue").Kind();
             }());
         }
         catch (...)
@@ -10856,23 +9036,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Shape();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorUInt8Bit", "Shape", "Windows.AI.MachineLearning.ITensor").Shape();
             }());
         }
         catch (...)
@@ -10886,23 +9053,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"TensorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TensorKind();
+                return py::require<winrt::Windows::AI::MachineLearning::ITensor>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.TensorUInt8Bit", "TensorKind", "Windows.AI.MachineLearning.ITensor").TensorKind();
             }());
         }
         catch (...)
@@ -10947,7 +9101,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.MachineLearning.TensorUInt8Bit", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -11038,19 +9192,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureDescriptor", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11068,19 +9209,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureDescriptor", L"IsRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11098,19 +9226,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureDescriptor", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11128,19 +9243,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureDescriptor", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11377,19 +9479,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureValue", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11698,19 +9787,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ITensor", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11728,19 +9804,6 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ITensor", L"TensorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11758,23 +9821,10 @@ namespace py::cpp::Windows::AI::MachineLearning
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureValue", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>(self->obj, py::member_kind::property, "Windows.AI.MachineLearning.ILearningModelFeatureValue", "Kind", "Windows.AI.MachineLearning.ILearningModelFeatureValue").Kind();
             }());
         }
         catch (...)

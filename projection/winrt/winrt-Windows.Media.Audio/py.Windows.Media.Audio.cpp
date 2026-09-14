@@ -29,24 +29,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"AddOutgoingConnection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddOutgoingConnection(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceInputNode", "AddOutgoingConnection", "Windows.Media.Audio.IAudioInputNode", 1).AddOutgoingConnection(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -61,25 +48,12 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"AddOutgoingConnection", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddOutgoingConnection(param0, param1);
+                    py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceInputNode", "AddOutgoingConnection", "Windows.Media.Audio.IAudioInputNode", 2).AddOutgoingConnection(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -105,22 +79,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceInputNode", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -146,24 +107,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"DisableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.DisableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceInputNode", "DisableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).DisableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -189,24 +137,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"EnableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceInputNode", "EnableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).EnableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -232,24 +167,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"RemoveOutgoingConnection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveOutgoingConnection(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceInputNode", "RemoveOutgoingConnection", "Windows.Media.Audio.IAudioInputNode", 1).RemoveOutgoingConnection(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -275,22 +197,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Reset();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceInputNode", "Reset", "Windows.Media.Audio.IAudioNode", 0).Reset();
                 }
 
                 Py_RETURN_NONE;
@@ -316,22 +225,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Start();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceInputNode", "Start", "Windows.Media.Audio.IAudioNode", 0).Start();
                 }
 
                 Py_RETURN_NONE;
@@ -357,22 +253,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Stop();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceInputNode", "Stop", "Windows.Media.Audio.IAudioNode", 0).Stop();
                 }
 
                 Py_RETURN_NONE;
@@ -394,19 +277,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Device");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -424,23 +294,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"OutgoingConnections");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingConnections();
+                return py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceInputNode", "OutgoingConnections", "Windows.Media.Audio.IAudioInputNode").OutgoingConnections();
             }());
         }
         catch (...)
@@ -454,23 +311,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Emitter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Emitter();
+                return py::require<winrt::Windows::Media::Audio::IAudioInputNode2>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceInputNode", "Emitter", "Windows.Media.Audio.IAudioInputNode2").Emitter();
             }());
         }
         catch (...)
@@ -484,23 +328,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingGain();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceInputNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain();
             }());
         }
         catch (...)
@@ -520,24 +351,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutgoingGain(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceInputNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain(param0);
             }
 
             return 0;
@@ -553,23 +371,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConsumeInput();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceInputNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput();
             }());
         }
         catch (...)
@@ -589,24 +394,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ConsumeInput(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceInputNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput(param0);
             }
 
             return 0;
@@ -622,23 +414,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"EffectDefinitions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectDefinitions();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceInputNode", "EffectDefinitions", "Windows.Media.Audio.IAudioNode").EffectDefinitions();
             }());
         }
         catch (...)
@@ -652,23 +431,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EncodingProperties();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceInputNode", "EncodingProperties", "Windows.Media.Audio.IAudioNode").EncodingProperties();
             }());
         }
         catch (...)
@@ -713,7 +479,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceInputNode", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -789,22 +555,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceOutputNode", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -830,24 +583,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"DisableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.DisableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceOutputNode", "DisableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).DisableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -873,24 +613,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"EnableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceOutputNode", "EnableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).EnableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -916,22 +643,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Reset();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceOutputNode", "Reset", "Windows.Media.Audio.IAudioNode", 0).Reset();
                 }
 
                 Py_RETURN_NONE;
@@ -957,22 +671,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Start();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceOutputNode", "Start", "Windows.Media.Audio.IAudioNode", 0).Start();
                 }
 
                 Py_RETURN_NONE;
@@ -998,22 +699,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Stop();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceOutputNode", "Stop", "Windows.Media.Audio.IAudioNode", 0).Stop();
                 }
 
                 Py_RETURN_NONE;
@@ -1035,19 +723,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Device");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1065,23 +740,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingGain();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceOutputNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain();
             }());
         }
         catch (...)
@@ -1101,24 +763,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutgoingGain(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceOutputNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain(param0);
             }
 
             return 0;
@@ -1134,23 +783,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConsumeInput();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceOutputNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput();
             }());
         }
         catch (...)
@@ -1170,24 +806,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ConsumeInput(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceOutputNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput(param0);
             }
 
             return 0;
@@ -1203,23 +826,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"EffectDefinitions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectDefinitions();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceOutputNode", "EffectDefinitions", "Windows.Media.Audio.IAudioNode").EffectDefinitions();
             }());
         }
         catch (...)
@@ -1233,23 +843,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EncodingProperties();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceOutputNode", "EncodingProperties", "Windows.Media.Audio.IAudioNode").EncodingProperties();
             }());
         }
         catch (...)
@@ -1263,23 +860,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Listener");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Listener();
+                return py::require<winrt::Windows::Media::Audio::IAudioNodeWithListener>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceOutputNode", "Listener", "Windows.Media.Audio.IAudioNodeWithListener").Listener();
             }());
         }
         catch (...)
@@ -1299,24 +883,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Listener");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeListener>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Listener(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNodeWithListener>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioDeviceOutputNode", "Listener", "Windows.Media.Audio.IAudioNodeWithListener").Listener(param0);
             }
 
             return 0;
@@ -1363,7 +934,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioDeviceOutputNode", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -1518,19 +1089,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioEffectsPackConfiguration", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1548,19 +1106,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioEffectsPackConfiguration", L"EffectsPackId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1578,19 +1123,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioEffectsPackConfiguration", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1608,19 +1140,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioEffectsPackConfiguration", L"StatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -1640,19 +1159,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioEffectsPackConfiguration", L"StatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1768,24 +1274,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"AddOutgoingConnection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddOutgoingConnection(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileInputNode", "AddOutgoingConnection", "Windows.Media.Audio.IAudioInputNode", 1).AddOutgoingConnection(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1800,25 +1293,12 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"AddOutgoingConnection", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddOutgoingConnection(param0, param1);
+                    py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileInputNode", "AddOutgoingConnection", "Windows.Media.Audio.IAudioInputNode", 2).AddOutgoingConnection(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -1844,22 +1324,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileInputNode", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -1885,24 +1352,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"DisableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.DisableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileInputNode", "DisableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).DisableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1928,24 +1382,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"EnableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileInputNode", "EnableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).EnableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1971,24 +1412,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"RemoveOutgoingConnection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveOutgoingConnection(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileInputNode", "RemoveOutgoingConnection", "Windows.Media.Audio.IAudioInputNode", 1).RemoveOutgoingConnection(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -2014,22 +1442,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Reset();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileInputNode", "Reset", "Windows.Media.Audio.IAudioNode", 0).Reset();
                 }
 
                 Py_RETURN_NONE;
@@ -2055,19 +1470,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Seek", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 {
@@ -2098,22 +1500,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Start();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileInputNode", "Start", "Windows.Media.Audio.IAudioNode", 0).Start();
                 }
 
                 Py_RETURN_NONE;
@@ -2139,22 +1528,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Stop();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileInputNode", "Stop", "Windows.Media.Audio.IAudioNode", 0).Stop();
                 }
 
                 Py_RETURN_NONE;
@@ -2176,19 +1552,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"PlaybackSpeedFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2212,19 +1575,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"PlaybackSpeedFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -2245,19 +1595,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"LoopCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2281,19 +1618,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"LoopCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -2314,19 +1638,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"EndTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2350,19 +1661,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"EndTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
@@ -2383,19 +1681,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2419,19 +1704,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
@@ -2452,19 +1724,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2482,19 +1741,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"SourceFile");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2512,19 +1758,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2542,23 +1775,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"OutgoingConnections");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingConnections();
+                return py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFileInputNode", "OutgoingConnections", "Windows.Media.Audio.IAudioInputNode").OutgoingConnections();
             }());
         }
         catch (...)
@@ -2572,23 +1792,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Emitter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Emitter();
+                return py::require<winrt::Windows::Media::Audio::IAudioInputNode2>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFileInputNode", "Emitter", "Windows.Media.Audio.IAudioInputNode2").Emitter();
             }());
         }
         catch (...)
@@ -2602,23 +1809,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingGain();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFileInputNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain();
             }());
         }
         catch (...)
@@ -2638,24 +1832,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutgoingGain(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFileInputNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain(param0);
             }
 
             return 0;
@@ -2671,23 +1852,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConsumeInput();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFileInputNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput();
             }());
         }
         catch (...)
@@ -2707,24 +1875,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ConsumeInput(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFileInputNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput(param0);
             }
 
             return 0;
@@ -2740,23 +1895,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"EffectDefinitions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectDefinitions();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFileInputNode", "EffectDefinitions", "Windows.Media.Audio.IAudioNode").EffectDefinitions();
             }());
         }
         catch (...)
@@ -2770,23 +1912,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EncodingProperties();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFileInputNode", "EncodingProperties", "Windows.Media.Audio.IAudioNode").EncodingProperties();
             }());
         }
         catch (...)
@@ -2800,19 +1929,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFileInputNode", L"FileCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioFileInputNode, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -2832,19 +1948,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFileInputNode", L"FileCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -2896,7 +1999,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileInputNode", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -2981,22 +2084,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileOutputNode", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -3022,24 +2112,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"DisableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.DisableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileOutputNode", "DisableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).DisableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3065,24 +2142,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"EnableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileOutputNode", "EnableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).EnableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3108,19 +2172,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"FinalizeAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3148,22 +2199,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Reset();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileOutputNode", "Reset", "Windows.Media.Audio.IAudioNode", 0).Reset();
                 }
 
                 Py_RETURN_NONE;
@@ -3189,22 +2227,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Start();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileOutputNode", "Start", "Windows.Media.Audio.IAudioNode", 0).Start();
                 }
 
                 Py_RETURN_NONE;
@@ -3230,22 +2255,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Stop();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileOutputNode", "Stop", "Windows.Media.Audio.IAudioNode", 0).Stop();
                 }
 
                 Py_RETURN_NONE;
@@ -3267,19 +2279,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"File");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3297,19 +2296,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"FileEncodingProfile");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3327,23 +2313,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingGain();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFileOutputNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain();
             }());
         }
         catch (...)
@@ -3363,24 +2336,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutgoingGain(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFileOutputNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain(param0);
             }
 
             return 0;
@@ -3396,23 +2356,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConsumeInput();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFileOutputNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput();
             }());
         }
         catch (...)
@@ -3432,24 +2379,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ConsumeInput(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFileOutputNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput(param0);
             }
 
             return 0;
@@ -3465,23 +2399,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"EffectDefinitions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectDefinitions();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFileOutputNode", "EffectDefinitions", "Windows.Media.Audio.IAudioNode").EffectDefinitions();
             }());
         }
         catch (...)
@@ -3495,23 +2416,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EncodingProperties();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFileOutputNode", "EncodingProperties", "Windows.Media.Audio.IAudioNode").EncodingProperties();
             }());
         }
         catch (...)
@@ -3556,7 +2464,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFileOutputNode", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -3626,19 +2534,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameCompletedEventArgs", L"Frame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3724,19 +2619,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"AddFrame", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::AudioFrame>(args, 0);
 
                 {
@@ -3767,24 +2649,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"AddOutgoingConnection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddOutgoingConnection(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameInputNode", "AddOutgoingConnection", "Windows.Media.Audio.IAudioInputNode", 1).AddOutgoingConnection(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3799,25 +2668,12 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"AddOutgoingConnection", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddOutgoingConnection(param0, param1);
+                    py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameInputNode", "AddOutgoingConnection", "Windows.Media.Audio.IAudioInputNode", 2).AddOutgoingConnection(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -3843,22 +2699,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameInputNode", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -3884,24 +2727,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"DisableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.DisableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameInputNode", "DisableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).DisableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3927,19 +2757,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"DiscardQueuedFrames", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.DiscardQueuedFrames();
@@ -3968,24 +2785,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"EnableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameInputNode", "EnableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).EnableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4011,24 +2815,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"RemoveOutgoingConnection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveOutgoingConnection(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameInputNode", "RemoveOutgoingConnection", "Windows.Media.Audio.IAudioInputNode", 1).RemoveOutgoingConnection(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4054,22 +2845,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Reset();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameInputNode", "Reset", "Windows.Media.Audio.IAudioNode", 0).Reset();
                 }
 
                 Py_RETURN_NONE;
@@ -4095,22 +2873,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Start();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameInputNode", "Start", "Windows.Media.Audio.IAudioNode", 0).Start();
                 }
 
                 Py_RETURN_NONE;
@@ -4136,22 +2901,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Stop();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameInputNode", "Stop", "Windows.Media.Audio.IAudioNode", 0).Stop();
                 }
 
                 Py_RETURN_NONE;
@@ -4173,19 +2925,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"PlaybackSpeedFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4209,19 +2948,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"PlaybackSpeedFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -4242,19 +2968,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"QueuedSampleCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4272,23 +2985,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"OutgoingConnections");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingConnections();
+                return py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFrameInputNode", "OutgoingConnections", "Windows.Media.Audio.IAudioInputNode").OutgoingConnections();
             }());
         }
         catch (...)
@@ -4302,23 +3002,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"Emitter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Emitter();
+                return py::require<winrt::Windows::Media::Audio::IAudioInputNode2>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFrameInputNode", "Emitter", "Windows.Media.Audio.IAudioInputNode2").Emitter();
             }());
         }
         catch (...)
@@ -4332,23 +3019,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingGain();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFrameInputNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain();
             }());
         }
         catch (...)
@@ -4368,24 +3042,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutgoingGain(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFrameInputNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain(param0);
             }
 
             return 0;
@@ -4401,23 +3062,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConsumeInput();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFrameInputNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput();
             }());
         }
         catch (...)
@@ -4437,24 +3085,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ConsumeInput(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFrameInputNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput(param0);
             }
 
             return 0;
@@ -4470,23 +3105,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"EffectDefinitions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectDefinitions();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFrameInputNode", "EffectDefinitions", "Windows.Media.Audio.IAudioNode").EffectDefinitions();
             }());
         }
         catch (...)
@@ -4500,23 +3122,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EncodingProperties();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFrameInputNode", "EncodingProperties", "Windows.Media.Audio.IAudioNode").EncodingProperties();
             }());
         }
         catch (...)
@@ -4530,19 +3139,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"AudioFrameCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioFrameInputNode, winrt::Windows::Media::Audio::AudioFrameCompletedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -4562,19 +3158,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"AudioFrameCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4595,19 +3178,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"QuantumStarted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioFrameInputNode, winrt::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -4627,19 +3197,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"QuantumStarted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4691,7 +3248,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameInputNode", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -4774,22 +3331,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameOutputNode", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -4815,24 +3359,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"DisableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.DisableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameOutputNode", "DisableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).DisableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4858,24 +3389,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"EnableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameOutputNode", "EnableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).EnableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4901,19 +3419,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"GetFrame", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4941,22 +3446,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Reset();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameOutputNode", "Reset", "Windows.Media.Audio.IAudioNode", 0).Reset();
                 }
 
                 Py_RETURN_NONE;
@@ -4982,22 +3474,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Start();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameOutputNode", "Start", "Windows.Media.Audio.IAudioNode", 0).Start();
                 }
 
                 Py_RETURN_NONE;
@@ -5023,22 +3502,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Stop();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameOutputNode", "Stop", "Windows.Media.Audio.IAudioNode", 0).Stop();
                 }
 
                 Py_RETURN_NONE;
@@ -5060,23 +3526,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingGain();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFrameOutputNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain();
             }());
         }
         catch (...)
@@ -5096,24 +3549,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutgoingGain(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFrameOutputNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain(param0);
             }
 
             return 0;
@@ -5129,23 +3569,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConsumeInput();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFrameOutputNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput();
             }());
         }
         catch (...)
@@ -5165,24 +3592,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ConsumeInput(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFrameOutputNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput(param0);
             }
 
             return 0;
@@ -5198,23 +3612,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"EffectDefinitions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectDefinitions();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFrameOutputNode", "EffectDefinitions", "Windows.Media.Audio.IAudioNode").EffectDefinitions();
             }());
         }
         catch (...)
@@ -5228,23 +3629,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EncodingProperties();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioFrameOutputNode", "EncodingProperties", "Windows.Media.Audio.IAudioNode").EncodingProperties();
             }());
         }
         catch (...)
@@ -5289,7 +3677,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioFrameOutputNode", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -5361,22 +3749,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioGraph", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -5444,23 +3819,10 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateBatchUpdater", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateBatchUpdater();
+                    return py::require<winrt::Windows::Media::Audio::IAudioGraph2>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioGraph", "CreateBatchUpdater", "Windows.Media.Audio.IAudioGraph2", 0).CreateBatchUpdater();
                 }());
             }
             catch (...)
@@ -5484,19 +3846,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceInputNodeAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
 
                 return py::convert([&]()
@@ -5515,19 +3864,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceInputNodeAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 1);
 
@@ -5547,19 +3883,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceInputNodeAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 2);
@@ -5580,19 +3903,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceInputNodeAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 2);
@@ -5601,7 +3911,7 @@ namespace py::cpp::Windows::Media::Audio
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateDeviceInputNodeAsync(param0, param1, param2, param3);
+                    return py::require<winrt::Windows::Media::Audio::IAudioGraph2>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioGraph", "CreateDeviceInputNodeAsync", "Windows.Media.Audio.IAudioGraph2", 4).CreateDeviceInputNodeAsync(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -5625,19 +3935,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceOutputNodeAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5665,19 +3962,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFileInputNodeAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert([&]()
@@ -5696,26 +3980,13 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFileInputNodeAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitter>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFileInputNodeAsync(param0, param1);
+                    return py::require<winrt::Windows::Media::Audio::IAudioGraph2>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioGraph", "CreateFileInputNodeAsync", "Windows.Media.Audio.IAudioGraph2", 2).CreateFileInputNodeAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -5739,19 +4010,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFileOutputNodeAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert([&]()
@@ -5770,19 +4028,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFileOutputNodeAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 1);
 
@@ -5813,19 +4058,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFrameInputNode", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5842,19 +4074,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFrameInputNode", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
 
                 return py::convert([&]()
@@ -5873,26 +4092,13 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFrameInputNode", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitter>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFrameInputNode(param0, param1);
+                    return py::require<winrt::Windows::Media::Audio::IAudioGraph2>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioGraph", "CreateFrameInputNode", "Windows.Media.Audio.IAudioGraph2", 2).CreateFrameInputNode(param0, param1);
                 }());
             }
             catch (...)
@@ -5916,19 +4122,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFrameOutputNode", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5945,19 +4138,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFrameOutputNode", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
 
                 return py::convert([&]()
@@ -5987,25 +4167,12 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateMediaSourceAudioInputNodeAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::MediaSource>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateMediaSourceAudioInputNodeAsync(param0);
+                    return py::require<winrt::Windows::Media::Audio::IAudioGraph3>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioGraph", "CreateMediaSourceAudioInputNodeAsync", "Windows.Media.Audio.IAudioGraph3", 1).CreateMediaSourceAudioInputNodeAsync(param0);
                 }());
             }
             catch (...)
@@ -6018,26 +4185,13 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateMediaSourceAudioInputNodeAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::MediaSource>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitter>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateMediaSourceAudioInputNodeAsync(param0, param1);
+                    return py::require<winrt::Windows::Media::Audio::IAudioGraph3>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioGraph", "CreateMediaSourceAudioInputNodeAsync", "Windows.Media.Audio.IAudioGraph3", 2).CreateMediaSourceAudioInputNodeAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -6061,19 +4215,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateSubmixNode", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6090,19 +4231,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateSubmixNode", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
 
                 return py::convert([&]()
@@ -6121,26 +4249,13 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateSubmixNode", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitter>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateSubmixNode(param0, param1);
+                    return py::require<winrt::Windows::Media::Audio::IAudioGraph2>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioGraph", "CreateSubmixNode", "Windows.Media.Audio.IAudioGraph2", 2).CreateSubmixNode(param0, param1);
                 }());
             }
             catch (...)
@@ -6164,19 +4279,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"ResetAllNodes", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.ResetAllNodes();
@@ -6205,19 +4307,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Start();
@@ -6246,19 +4335,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Stop();
@@ -6283,19 +4359,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"CompletedQuantumCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6313,19 +4376,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6343,19 +4393,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"LatencyInSamples");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6373,19 +4410,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"PrimaryRenderDevice");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6403,19 +4427,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"RenderDeviceAudioProcessing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6433,19 +4444,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"SamplesPerQuantum");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6463,19 +4461,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"QuantumProcessed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioGraph, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -6495,19 +4480,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"QuantumProcessed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -6528,19 +4500,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"QuantumStarted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioGraph, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -6560,19 +4519,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"QuantumStarted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -6593,19 +4539,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"UnrecoverableErrorOccurred");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioGraph, winrt::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs>>(arg);
 
             return py::convert([&]()
@@ -6625,19 +4558,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"UnrecoverableErrorOccurred");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -6689,7 +4609,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioGraph", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -6797,19 +4717,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraphBatchUpdater", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Close();
@@ -6923,19 +4830,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphConnection", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6959,19 +4853,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphConnection", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -6992,19 +4873,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphConnection", L"Destination");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7111,19 +4979,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"QuantumSizeSelectionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7147,19 +5002,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"QuantumSizeSelectionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Audio::QuantumSizeSelectionMode>(arg);
 
             {
@@ -7180,19 +5022,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"PrimaryRenderDevice");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7216,19 +5045,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"PrimaryRenderDevice");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(arg);
 
             {
@@ -7249,19 +5065,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7285,19 +5088,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(arg);
 
             {
@@ -7318,19 +5108,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"DesiredSamplesPerQuantum");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7354,19 +5131,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"DesiredSamplesPerQuantum");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -7387,19 +5151,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"DesiredRenderDeviceAudioProcessing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7423,19 +5174,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"DesiredRenderDeviceAudioProcessing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::AudioProcessing>(arg);
 
             {
@@ -7456,19 +5194,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"AudioRenderCategory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7492,19 +5217,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"AudioRenderCategory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(arg);
 
             {
@@ -7525,23 +5237,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"MaxPlaybackSpeedFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxPlaybackSpeedFactor();
+                return py::require<winrt::Windows::Media::Audio::IAudioGraphSettings2>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioGraphSettings", "MaxPlaybackSpeedFactor", "Windows.Media.Audio.IAudioGraphSettings2").MaxPlaybackSpeedFactor();
             }());
         }
         catch (...)
@@ -7561,24 +5260,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"MaxPlaybackSpeedFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MaxPlaybackSpeedFactor(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioGraphSettings2>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioGraphSettings", "MaxPlaybackSpeedFactor", "Windows.Media.Audio.IAudioGraphSettings2").MaxPlaybackSpeedFactor(param0);
             }
 
             return 0;
@@ -7664,19 +5350,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs", L"Error");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7797,19 +5470,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7833,19 +5493,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             {
@@ -7866,19 +5513,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7902,19 +5536,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -7935,19 +5556,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DopplerVelocity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7971,19 +5579,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DopplerVelocity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             {
@@ -8004,19 +5599,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DopplerScale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8040,19 +5622,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DopplerScale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -8073,19 +5642,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DistanceScale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8109,19 +5665,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DistanceScale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -8142,19 +5685,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Direction");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8178,19 +5708,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Direction");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             {
@@ -8211,19 +5728,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DecayModel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8241,19 +5745,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"IsDopplerDisabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8271,19 +5762,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8301,23 +5779,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"SpatialAudioModel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SpatialAudioModel();
+                return py::require<winrt::Windows::Media::Audio::IAudioNodeEmitter2>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioNodeEmitter", "SpatialAudioModel", "Windows.Media.Audio.IAudioNodeEmitter2").SpatialAudioModel();
             }());
         }
         catch (...)
@@ -8337,24 +5802,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"SpatialAudioModel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Audio::SpatialAudioModel>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SpatialAudioModel(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNodeEmitter2>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioNodeEmitter", "SpatialAudioModel", "Windows.Media.Audio.IAudioNodeEmitter2").SpatialAudioModel(param0);
             }
 
             return 0;
@@ -8443,19 +5895,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterConeProperties", L"InnerAngle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8473,19 +5912,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterConeProperties", L"OuterAngle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8503,19 +5929,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterConeProperties", L"OuterAngleGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8687,19 +6100,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8717,19 +6117,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"MaxGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8747,19 +6134,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"MinGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8777,19 +6151,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"NaturalProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8897,19 +6258,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties", L"CutoffDistance");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8927,19 +6275,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties", L"UnityGainDistance");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9106,19 +6441,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterShape", L"ConeProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9136,19 +6458,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterShape", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9276,19 +6585,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"SpeedOfSound");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9312,19 +6608,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"SpeedOfSound");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -9345,19 +6628,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9381,19 +6651,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             {
@@ -9414,19 +6671,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"Orientation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9450,19 +6694,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"Orientation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
 
             {
@@ -9483,19 +6714,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"DopplerVelocity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9519,19 +6737,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"DopplerVelocity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             {
@@ -9623,22 +6828,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioPlaybackConnection", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -9704,19 +6896,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"Open", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9744,19 +6923,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"OpenAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9784,19 +6950,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Start();
@@ -9825,19 +6978,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"StartAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9903,19 +7043,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9933,19 +7060,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9963,19 +7077,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"StateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioPlaybackConnection, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -9995,19 +7096,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"StateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -10059,7 +7147,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioPlaybackConnection", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -10148,19 +7236,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioPlaybackConnectionOpenResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10178,19 +7253,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioPlaybackConnectionOpenResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10565,19 +7627,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioStateMonitor", L"SoundLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10595,19 +7644,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioStateMonitor", L"SoundLevelChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioStateMonitor, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -10627,19 +7663,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioStateMonitor", L"SoundLevelChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -10755,19 +7778,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"AddOutgoingConnection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 {
@@ -10787,19 +7797,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"AddOutgoingConnection", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -10831,22 +7828,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioSubmixNode", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -10872,24 +7856,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"DisableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.DisableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioSubmixNode", "DisableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).DisableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -10915,24 +7886,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"EnableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioSubmixNode", "EnableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).EnableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -10958,19 +7916,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"RemoveOutgoingConnection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 {
@@ -11001,22 +7946,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Reset();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioSubmixNode", "Reset", "Windows.Media.Audio.IAudioNode", 0).Reset();
                 }
 
                 Py_RETURN_NONE;
@@ -11042,22 +7974,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Start();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioSubmixNode", "Start", "Windows.Media.Audio.IAudioNode", 0).Start();
                 }
 
                 Py_RETURN_NONE;
@@ -11083,22 +8002,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Stop();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioSubmixNode", "Stop", "Windows.Media.Audio.IAudioNode", 0).Stop();
                 }
 
                 Py_RETURN_NONE;
@@ -11120,19 +8026,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"OutgoingConnections");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11150,23 +8043,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"Emitter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Emitter();
+                return py::require<winrt::Windows::Media::Audio::IAudioInputNode2>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioSubmixNode", "Emitter", "Windows.Media.Audio.IAudioInputNode2").Emitter();
             }());
         }
         catch (...)
@@ -11180,23 +8060,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingGain();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioSubmixNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain();
             }());
         }
         catch (...)
@@ -11216,24 +8083,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutgoingGain(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioSubmixNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain(param0);
             }
 
             return 0;
@@ -11249,23 +8103,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConsumeInput();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioSubmixNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput();
             }());
         }
         catch (...)
@@ -11285,24 +8126,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ConsumeInput(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioSubmixNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput(param0);
             }
 
             return 0;
@@ -11318,23 +8146,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"EffectDefinitions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectDefinitions();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioSubmixNode", "EffectDefinitions", "Windows.Media.Audio.IAudioNode").EffectDefinitions();
             }());
         }
         catch (...)
@@ -11348,23 +8163,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EncodingProperties();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.AudioSubmixNode", "EncodingProperties", "Windows.Media.Audio.IAudioNode").EncodingProperties();
             }());
         }
         catch (...)
@@ -11409,7 +8211,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.AudioSubmixNode", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -11480,19 +8282,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceInputNodeResult", L"DeviceInputNode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11510,19 +8299,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceInputNodeResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11540,23 +8316,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceInputNodeResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExtendedError();
+                return py::require<winrt::Windows::Media::Audio::ICreateAudioDeviceInputNodeResult2>(self->obj, py::member_kind::property, "Windows.Media.Audio.CreateAudioDeviceInputNodeResult", "ExtendedError", "Windows.Media.Audio.ICreateAudioDeviceInputNodeResult2").ExtendedError();
             }());
         }
         catch (...)
@@ -11636,19 +8399,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceOutputNodeResult", L"DeviceOutputNode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11666,19 +8416,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceOutputNodeResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11696,23 +8433,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceOutputNodeResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExtendedError();
+                return py::require<winrt::Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult2>(self->obj, py::member_kind::property, "Windows.Media.Audio.CreateAudioDeviceOutputNodeResult", "ExtendedError", "Windows.Media.Audio.ICreateAudioDeviceOutputNodeResult2").ExtendedError();
             }());
         }
         catch (...)
@@ -11792,19 +8516,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileInputNodeResult", L"FileInputNode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11822,19 +8533,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileInputNodeResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11852,23 +8550,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileInputNodeResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExtendedError();
+                return py::require<winrt::Windows::Media::Audio::ICreateAudioFileInputNodeResult2>(self->obj, py::member_kind::property, "Windows.Media.Audio.CreateAudioFileInputNodeResult", "ExtendedError", "Windows.Media.Audio.ICreateAudioFileInputNodeResult2").ExtendedError();
             }());
         }
         catch (...)
@@ -11948,19 +8633,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileOutputNodeResult", L"FileOutputNode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11978,19 +8650,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileOutputNodeResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12008,23 +8667,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileOutputNodeResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExtendedError();
+                return py::require<winrt::Windows::Media::Audio::ICreateAudioFileOutputNodeResult2>(self->obj, py::member_kind::property, "Windows.Media.Audio.CreateAudioFileOutputNodeResult", "ExtendedError", "Windows.Media.Audio.ICreateAudioFileOutputNodeResult2").ExtendedError();
             }());
         }
         catch (...)
@@ -12104,19 +8750,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioGraphResult", L"Graph");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12134,19 +8767,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioGraphResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12164,23 +8784,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioGraphResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExtendedError();
+                return py::require<winrt::Windows::Media::Audio::ICreateAudioGraphResult2>(self->obj, py::member_kind::property, "Windows.Media.Audio.CreateAudioGraphResult", "ExtendedError", "Windows.Media.Audio.ICreateAudioGraphResult2").ExtendedError();
             }());
         }
         catch (...)
@@ -12260,19 +8867,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult", L"Node");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12290,19 +8884,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12320,23 +8901,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExtendedError();
+                return py::require<winrt::Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult2>(self->obj, py::member_kind::property, "Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult", "ExtendedError", "Windows.Media.Audio.ICreateMediaSourceAudioInputNodeResult2").ExtendedError();
             }());
         }
         catch (...)
@@ -12440,19 +9008,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"WetDryMix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12476,19 +9031,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"WetDryMix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -12509,19 +9051,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"Feedback");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12545,19 +9074,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"Feedback");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -12578,19 +9094,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"Delay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12614,19 +9117,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"Delay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -12647,23 +9137,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"ActivatableClassId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ActivatableClassId();
+                return py::require<winrt::Windows::Media::Effects::IAudioEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Audio.EchoEffectDefinition", "ActivatableClassId", "Windows.Media.Effects.IAudioEffectDefinition").ActivatableClassId();
             }());
         }
         catch (...)
@@ -12677,23 +9154,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Properties();
+                return py::require<winrt::Windows::Media::Effects::IAudioEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Audio.EchoEffectDefinition", "Properties", "Windows.Media.Effects.IAudioEffectDefinition").Properties();
             }());
         }
         catch (...)
@@ -12775,19 +9239,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12811,19 +9262,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -12844,19 +9282,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"FrequencyCenter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12880,19 +9305,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"FrequencyCenter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -12913,19 +9325,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"Bandwidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12949,19 +9348,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"Bandwidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -13072,19 +9458,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerEffectDefinition", L"Bands");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13102,23 +9475,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerEffectDefinition", L"ActivatableClassId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ActivatableClassId();
+                return py::require<winrt::Windows::Media::Effects::IAudioEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Audio.EqualizerEffectDefinition", "ActivatableClassId", "Windows.Media.Effects.IAudioEffectDefinition").ActivatableClassId();
             }());
         }
         catch (...)
@@ -13132,23 +9492,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerEffectDefinition", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Properties();
+                return py::require<winrt::Windows::Media::Effects::IAudioEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Audio.EqualizerEffectDefinition", "Properties", "Windows.Media.Effects.IAudioEffectDefinition").Properties();
             }());
         }
         catch (...)
@@ -13228,19 +9575,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs", L"RequiredSamples");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13346,19 +9680,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"Release");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13382,19 +9703,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"Release");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -13415,19 +9723,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"Loudness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13451,19 +9746,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"Loudness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -13484,23 +9766,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"ActivatableClassId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ActivatableClassId();
+                return py::require<winrt::Windows::Media::Effects::IAudioEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Audio.LimiterEffectDefinition", "ActivatableClassId", "Windows.Media.Effects.IAudioEffectDefinition").ActivatableClassId();
             }());
         }
         catch (...)
@@ -13514,23 +9783,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Properties();
+                return py::require<winrt::Windows::Media::Effects::IAudioEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Audio.LimiterEffectDefinition", "Properties", "Windows.Media.Effects.IAudioEffectDefinition").Properties();
             }());
         }
         catch (...)
@@ -13615,24 +9871,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"AddOutgoingConnection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddOutgoingConnection(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.MediaSourceAudioInputNode", "AddOutgoingConnection", "Windows.Media.Audio.IAudioInputNode", 1).AddOutgoingConnection(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -13647,25 +9890,12 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"AddOutgoingConnection", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddOutgoingConnection(param0, param1);
+                    py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.MediaSourceAudioInputNode", "AddOutgoingConnection", "Windows.Media.Audio.IAudioInputNode", 2).AddOutgoingConnection(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -13691,22 +9921,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.MediaSourceAudioInputNode", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -13732,24 +9949,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"DisableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.DisableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.MediaSourceAudioInputNode", "DisableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).DisableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -13775,24 +9979,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"EnableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.MediaSourceAudioInputNode", "EnableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).EnableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -13818,24 +10009,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"RemoveOutgoingConnection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveOutgoingConnection(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.MediaSourceAudioInputNode", "RemoveOutgoingConnection", "Windows.Media.Audio.IAudioInputNode", 1).RemoveOutgoingConnection(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -13861,22 +10039,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Reset();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.MediaSourceAudioInputNode", "Reset", "Windows.Media.Audio.IAudioNode", 0).Reset();
                 }
 
                 Py_RETURN_NONE;
@@ -13902,19 +10067,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Seek", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 {
@@ -13945,22 +10097,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Start();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.MediaSourceAudioInputNode", "Start", "Windows.Media.Audio.IAudioNode", 0).Start();
                 }
 
                 Py_RETURN_NONE;
@@ -13986,22 +10125,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Stop();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.MediaSourceAudioInputNode", "Stop", "Windows.Media.Audio.IAudioNode", 0).Stop();
                 }
 
                 Py_RETURN_NONE;
@@ -14023,23 +10149,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"OutgoingConnections");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingConnections();
+                return py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.MediaSourceAudioInputNode", "OutgoingConnections", "Windows.Media.Audio.IAudioInputNode").OutgoingConnections();
             }());
         }
         catch (...)
@@ -14053,23 +10166,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Emitter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Emitter();
+                return py::require<winrt::Windows::Media::Audio::IAudioInputNode2>(self->obj, py::member_kind::property, "Windows.Media.Audio.MediaSourceAudioInputNode", "Emitter", "Windows.Media.Audio.IAudioInputNode2").Emitter();
             }());
         }
         catch (...)
@@ -14083,23 +10183,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingGain();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.MediaSourceAudioInputNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain();
             }());
         }
         catch (...)
@@ -14119,24 +10206,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutgoingGain(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.MediaSourceAudioInputNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain(param0);
             }
 
             return 0;
@@ -14152,23 +10226,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConsumeInput();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.MediaSourceAudioInputNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput();
             }());
         }
         catch (...)
@@ -14188,24 +10249,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ConsumeInput(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.MediaSourceAudioInputNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput(param0);
             }
 
             return 0;
@@ -14221,23 +10269,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"EffectDefinitions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectDefinitions();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.MediaSourceAudioInputNode", "EffectDefinitions", "Windows.Media.Audio.IAudioNode").EffectDefinitions();
             }());
         }
         catch (...)
@@ -14251,23 +10286,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EncodingProperties();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.MediaSourceAudioInputNode", "EncodingProperties", "Windows.Media.Audio.IAudioNode").EncodingProperties();
             }());
         }
         catch (...)
@@ -14281,19 +10303,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14317,19 +10326,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
@@ -14350,19 +10346,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"PlaybackSpeedFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14386,19 +10369,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"PlaybackSpeedFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -14419,19 +10389,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"LoopCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14455,19 +10412,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"LoopCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -14488,19 +10432,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"EndTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14524,19 +10455,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"EndTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
@@ -14557,19 +10475,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14587,19 +10492,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"MediaSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14617,19 +10509,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14647,19 +10526,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"MediaSourceCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::MediaSourceAudioInputNode, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -14679,19 +10545,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"MediaSourceCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14743,7 +10596,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Audio.MediaSourceAudioInputNode", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -14848,19 +10701,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"HighEQGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14884,19 +10724,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"HighEQGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -14917,19 +10744,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"HighEQCutoff");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14953,19 +10767,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"HighEQCutoff");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -14986,19 +10787,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"DisableLateField");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15022,19 +10810,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"DisableLateField");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -15055,19 +10830,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"Density");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15091,19 +10853,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"Density");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15124,19 +10873,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionRight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15160,19 +10896,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionRight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -15193,19 +10916,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"DecayTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15229,19 +10939,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"DecayTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15262,19 +10959,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LateDiffusion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15298,19 +10982,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LateDiffusion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -15331,19 +11002,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionMatrixRight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15367,19 +11025,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionMatrixRight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -15400,19 +11045,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionMatrixLeft");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15436,19 +11068,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionMatrixLeft");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -15469,19 +11088,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionLeft");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15505,19 +11111,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionLeft");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -15538,19 +11131,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LowEQGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15574,19 +11154,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LowEQGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -15607,19 +11174,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LowEQCutoff");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15643,19 +11197,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LowEQCutoff");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -15676,19 +11217,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterFreq");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15712,19 +11240,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterFreq");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15745,19 +11260,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReverbGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15781,19 +11283,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReverbGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15814,19 +11303,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReverbDelay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15850,19 +11326,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReverbDelay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -15883,19 +11346,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReflectionsGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15919,19 +11369,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReflectionsGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15952,19 +11389,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReflectionsDelay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15988,19 +11412,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReflectionsDelay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -16021,19 +11432,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RearDelay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16057,19 +11455,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RearDelay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -16090,19 +11475,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"WetDryMix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16126,19 +11498,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"WetDryMix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -16159,19 +11518,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"EarlyDiffusion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16195,19 +11541,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"EarlyDiffusion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -16228,19 +11561,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16264,19 +11584,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -16297,19 +11604,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterMain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16333,19 +11627,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterMain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -16366,19 +11647,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterHF");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16402,19 +11670,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterHF");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -16435,23 +11690,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ActivatableClassId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ActivatableClassId();
+                return py::require<winrt::Windows::Media::Effects::IAudioEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Audio.ReverbEffectDefinition", "ActivatableClassId", "Windows.Media.Effects.IAudioEffectDefinition").ActivatableClassId();
             }());
         }
         catch (...)
@@ -16465,23 +11707,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Properties();
+                return py::require<winrt::Windows::Media::Effects::IAudioEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Audio.ReverbEffectDefinition", "Properties", "Windows.Media.Effects.IAudioEffectDefinition").Properties();
             }());
         }
         catch (...)
@@ -16583,19 +11812,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SetDefaultSpatialAudioFormatResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16723,19 +11939,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"IsSpatialAudioFormatSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -16765,19 +11968,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"SetDefaultSpatialAudioFormatAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -16803,19 +11993,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"ActiveSpatialAudioFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16833,19 +12010,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"DefaultSpatialAudioFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16863,19 +12027,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16893,19 +12044,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"IsSpatialAudioSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16923,19 +12061,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"ConfigurationChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -16955,19 +12080,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"ConfigurationChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -17125,19 +12237,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioFormatConfiguration", L"ReportConfigurationChangedAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -17167,19 +12266,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioFormatConfiguration", L"ReportLicenseChangedAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -17205,19 +12291,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatConfiguration", L"MixedRealityExclusiveModePolicy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17241,19 +12314,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatConfiguration", L"MixedRealityExclusiveModePolicy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Audio::MixedRealitySpatialAudioFormatPolicy>(arg);
 
             {
@@ -17634,19 +12694,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"AddOutgoingConnection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 {
@@ -17666,19 +12713,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"AddOutgoingConnection", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -17710,22 +12744,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -17751,24 +12772,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"DisableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.DisableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioNode", "DisableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).DisableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -17794,24 +12802,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"EnableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioNode", "EnableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).EnableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -17837,19 +12832,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"RemoveOutgoingConnection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 {
@@ -17880,22 +12862,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Reset();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioNode", "Reset", "Windows.Media.Audio.IAudioNode", 0).Reset();
                 }
 
                 Py_RETURN_NONE;
@@ -17921,22 +12890,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Start();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioNode", "Start", "Windows.Media.Audio.IAudioNode", 0).Start();
                 }
 
                 Py_RETURN_NONE;
@@ -17962,22 +12918,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Stop();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioNode", "Stop", "Windows.Media.Audio.IAudioNode", 0).Stop();
                 }
 
                 Py_RETURN_NONE;
@@ -17999,19 +12942,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioInputNode", L"OutgoingConnections");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18029,23 +12959,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConsumeInput();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput();
             }());
         }
         catch (...)
@@ -18065,24 +12982,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ConsumeInput(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput(param0);
             }
 
             return 0;
@@ -18098,23 +13002,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EffectDefinitions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectDefinitions();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "EffectDefinitions", "Windows.Media.Audio.IAudioNode").EffectDefinitions();
             }());
         }
         catch (...)
@@ -18128,23 +13019,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EncodingProperties();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "EncodingProperties", "Windows.Media.Audio.IAudioNode").EncodingProperties();
             }());
         }
         catch (...)
@@ -18158,23 +13036,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingGain();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain();
             }());
         }
         catch (...)
@@ -18194,24 +13059,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutgoingGain(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain(param0);
             }
 
             return 0;
@@ -18234,7 +13086,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -18818,24 +13670,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"AddOutgoingConnection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddOutgoingConnection(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioInputNode", "AddOutgoingConnection", "Windows.Media.Audio.IAudioInputNode", 1).AddOutgoingConnection(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -18850,25 +13689,12 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"AddOutgoingConnection", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddOutgoingConnection(param0, param1);
+                    py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioInputNode", "AddOutgoingConnection", "Windows.Media.Audio.IAudioInputNode", 2).AddOutgoingConnection(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -18894,22 +13720,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -18935,24 +13748,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"DisableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.DisableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioNode", "DisableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).DisableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -18978,24 +13778,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"EnableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioNode", "EnableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).EnableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -19021,24 +13808,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"RemoveOutgoingConnection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveOutgoingConnection(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioInputNode", "RemoveOutgoingConnection", "Windows.Media.Audio.IAudioInputNode", 1).RemoveOutgoingConnection(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -19064,22 +13838,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Reset();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioNode", "Reset", "Windows.Media.Audio.IAudioNode", 0).Reset();
                 }
 
                 Py_RETURN_NONE;
@@ -19105,22 +13866,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Start();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioNode", "Start", "Windows.Media.Audio.IAudioNode", 0).Start();
                 }
 
                 Py_RETURN_NONE;
@@ -19146,22 +13894,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Stop();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioNode", "Stop", "Windows.Media.Audio.IAudioNode", 0).Stop();
                 }
 
                 Py_RETURN_NONE;
@@ -19183,19 +13918,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioInputNode2", L"Emitter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19213,23 +13935,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConsumeInput();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput();
             }());
         }
         catch (...)
@@ -19249,24 +13958,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ConsumeInput(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput(param0);
             }
 
             return 0;
@@ -19282,23 +13978,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EffectDefinitions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectDefinitions();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "EffectDefinitions", "Windows.Media.Audio.IAudioNode").EffectDefinitions();
             }());
         }
         catch (...)
@@ -19312,23 +13995,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EncodingProperties();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "EncodingProperties", "Windows.Media.Audio.IAudioNode").EncodingProperties();
             }());
         }
         catch (...)
@@ -19342,23 +14012,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingGain();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain();
             }());
         }
         catch (...)
@@ -19378,24 +14035,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutgoingGain(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain(param0);
             }
 
             return 0;
@@ -19411,23 +14055,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioInputNode", L"OutgoingConnections");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingConnections();
+                return py::require<winrt::Windows::Media::Audio::IAudioInputNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioInputNode", "OutgoingConnections", "Windows.Media.Audio.IAudioInputNode").OutgoingConnections();
             }());
         }
         catch (...)
@@ -19448,7 +14079,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -20053,22 +14684,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -20094,19 +14712,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"DisableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
@@ -20137,19 +14742,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"EnableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
@@ -20180,19 +14772,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Reset();
@@ -20221,19 +14800,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Start();
@@ -20262,19 +14828,6 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Stop();
@@ -20299,19 +14852,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20335,19 +14875,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -20368,19 +14895,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EffectDefinitions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20398,19 +14912,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20428,19 +14929,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20464,19 +14952,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -20504,7 +14979,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -20953,22 +15428,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -20994,24 +15456,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"DisableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.DisableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioNode", "DisableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).DisableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -21037,24 +15486,11 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"EnableEffectsByDefinition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableEffectsByDefinition(param0);
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioNode", "EnableEffectsByDefinition", "Windows.Media.Audio.IAudioNode", 1).EnableEffectsByDefinition(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -21080,22 +15516,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Reset();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioNode", "Reset", "Windows.Media.Audio.IAudioNode", 0).Reset();
                 }
 
                 Py_RETURN_NONE;
@@ -21121,22 +15544,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Start();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioNode", "Start", "Windows.Media.Audio.IAudioNode", 0).Start();
                 }
 
                 Py_RETURN_NONE;
@@ -21162,22 +15572,9 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Stop();
+                    py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::method, "Windows.Media.Audio.IAudioNode", "Stop", "Windows.Media.Audio.IAudioNode", 0).Stop();
                 }
 
                 Py_RETURN_NONE;
@@ -21199,19 +15596,6 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNodeWithListener", L"Listener");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21235,19 +15619,6 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNodeWithListener", L"Listener");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeListener>(arg);
 
             {
@@ -21268,23 +15639,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConsumeInput();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput();
             }());
         }
         catch (...)
@@ -21304,24 +15662,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ConsumeInput(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "ConsumeInput", "Windows.Media.Audio.IAudioNode").ConsumeInput(param0);
             }
 
             return 0;
@@ -21337,23 +15682,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EffectDefinitions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectDefinitions();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "EffectDefinitions", "Windows.Media.Audio.IAudioNode").EffectDefinitions();
             }());
         }
         catch (...)
@@ -21367,23 +15699,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EncodingProperties();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "EncodingProperties", "Windows.Media.Audio.IAudioNode").EncodingProperties();
             }());
         }
         catch (...)
@@ -21397,23 +15716,10 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingGain();
+                return py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain();
             }());
         }
         catch (...)
@@ -21433,24 +15739,11 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutgoingGain(param0);
+                py::require<winrt::Windows::Media::Audio::IAudioNode>(self->obj, py::member_kind::property, "Windows.Media.Audio.IAudioNode", "OutgoingGain", "Windows.Media.Audio.IAudioNode").OutgoingGain(param0);
             }
 
             return 0;
@@ -21473,7 +15766,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;

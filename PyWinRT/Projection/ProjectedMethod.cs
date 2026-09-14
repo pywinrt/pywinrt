@@ -174,6 +174,20 @@ class ProjectedMethod
     public string CppName => info.CppName;
 
     /// <summary>
+    /// Gets the kind of member the method is projected as, as the name of a
+    /// <c>py::member_kind</c> enumerator.
+    /// </summary>
+    public string MemberKind =>
+        IsSpecialName switch
+        {
+            true when BaseName.StartsWith("get_", StringComparison.Ordinal) => "property",
+            true when BaseName.StartsWith("put_", StringComparison.Ordinal) => "property",
+            true when BaseName.StartsWith("add_", StringComparison.Ordinal) => "event",
+            true when BaseName.StartsWith("remove_", StringComparison.Ordinal) => "event",
+            _ => "method",
+        };
+
+    /// <summary>
     /// Gets the Python name of the method.
     /// </summary>
     public string PyName { get; }

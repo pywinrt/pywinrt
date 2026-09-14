@@ -71,19 +71,6 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Custom.CustomSensor", L"GetCurrentReading", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -149,19 +136,6 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Custom.CustomSensor", L"ReportInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -185,19 +159,6 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Custom.CustomSensor", L"ReportInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -218,19 +179,6 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Custom.CustomSensor", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -248,19 +196,6 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Custom.CustomSensor", L"MinimumReportInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -278,23 +213,10 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Custom.CustomSensor", L"ReportLatency");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ReportLatency();
+                return py::require<winrt::Windows::Devices::Sensors::Custom::ICustomSensor2>(self->obj, py::member_kind::property, "Windows.Devices.Sensors.Custom.CustomSensor", "ReportLatency", "Windows.Devices.Sensors.Custom.ICustomSensor2").ReportLatency();
             }());
         }
         catch (...)
@@ -314,24 +236,11 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Custom.CustomSensor", L"ReportLatency");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ReportLatency(param0);
+                py::require<winrt::Windows::Devices::Sensors::Custom::ICustomSensor2>(self->obj, py::member_kind::property, "Windows.Devices.Sensors.Custom.CustomSensor", "ReportLatency", "Windows.Devices.Sensors.Custom.ICustomSensor2").ReportLatency(param0);
             }
 
             return 0;
@@ -347,23 +256,10 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Custom.CustomSensor", L"MaxBatchSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxBatchSize();
+                return py::require<winrt::Windows::Devices::Sensors::Custom::ICustomSensor2>(self->obj, py::member_kind::property, "Windows.Devices.Sensors.Custom.CustomSensor", "MaxBatchSize", "Windows.Devices.Sensors.Custom.ICustomSensor2").MaxBatchSize();
             }());
         }
         catch (...)
@@ -377,19 +273,6 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Custom.CustomSensor", L"ReadingChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Custom::CustomSensor, winrt::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -409,19 +292,6 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Custom.CustomSensor", L"ReadingChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -536,19 +406,6 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Custom.CustomSensorReading", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -566,19 +423,6 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Custom.CustomSensorReading", L"Timestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -596,23 +440,10 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Custom.CustomSensorReading", L"PerformanceCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PerformanceCount();
+                return py::require<winrt::Windows::Devices::Sensors::Custom::ICustomSensorReading2>(self->obj, py::member_kind::property, "Windows.Devices.Sensors.Custom.CustomSensorReading", "PerformanceCount", "Windows.Devices.Sensors.Custom.ICustomSensorReading2").PerformanceCount();
             }());
         }
         catch (...)
@@ -692,19 +523,6 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs", L"Reading");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

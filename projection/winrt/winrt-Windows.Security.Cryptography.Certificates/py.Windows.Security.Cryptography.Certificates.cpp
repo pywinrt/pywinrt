@@ -53,19 +53,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"BuildChainAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::Certificate>>(args, 0);
 
                 return py::convert([&]()
@@ -84,19 +71,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"BuildChainAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::Certificate>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ChainBuildingParameters>(args, 1);
 
@@ -127,19 +101,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"GetCertificateBlob", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -167,19 +128,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"GetHashValue", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -196,19 +144,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"GetHashValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -234,19 +169,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"FriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -270,19 +192,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"FriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -303,19 +212,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"EnhancedKeyUsages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -333,19 +229,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"HasPrivateKey");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -363,19 +246,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"IsStronglyProtected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -393,19 +263,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"Issuer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -423,19 +280,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"SerialNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -453,19 +297,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"Subject");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -483,19 +314,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"ValidFrom");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -513,19 +331,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"ValidTo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -543,23 +348,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"IsSecurityDeviceBound");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSecurityDeviceBound();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificate2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.Certificate", "IsSecurityDeviceBound", "Windows.Security.Cryptography.Certificates.ICertificate2").IsSecurityDeviceBound();
             }());
         }
         catch (...)
@@ -573,23 +365,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"KeyAlgorithmName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.KeyAlgorithmName();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificate2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.Certificate", "KeyAlgorithmName", "Windows.Security.Cryptography.Certificates.ICertificate2").KeyAlgorithmName();
             }());
         }
         catch (...)
@@ -603,23 +382,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"KeyUsages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.KeyUsages();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificate2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.Certificate", "KeyUsages", "Windows.Security.Cryptography.Certificates.ICertificate2").KeyUsages();
             }());
         }
         catch (...)
@@ -633,23 +399,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"SignatureAlgorithmName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SignatureAlgorithmName();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificate2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.Certificate", "SignatureAlgorithmName", "Windows.Security.Cryptography.Certificates.ICertificate2").SignatureAlgorithmName();
             }());
         }
         catch (...)
@@ -663,23 +416,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"SignatureHashAlgorithmName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SignatureHashAlgorithmName();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificate2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.Certificate", "SignatureHashAlgorithmName", "Windows.Security.Cryptography.Certificates.ICertificate2").SignatureHashAlgorithmName();
             }());
         }
         catch (...)
@@ -693,23 +433,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"SubjectAlternativeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SubjectAlternativeName();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificate2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.Certificate", "SubjectAlternativeName", "Windows.Security.Cryptography.Certificates.ICertificate2").SubjectAlternativeName();
             }());
         }
         catch (...)
@@ -723,23 +450,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"IsPerUser");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPerUser();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificate3>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.Certificate", "IsPerUser", "Windows.Security.Cryptography.Certificates.ICertificate3").IsPerUser();
             }());
         }
         catch (...)
@@ -753,23 +467,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"KeyStorageProviderName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.KeyStorageProviderName();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificate3>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.Certificate", "KeyStorageProviderName", "Windows.Security.Cryptography.Certificates.ICertificate3").KeyStorageProviderName();
             }());
         }
         catch (...)
@@ -783,23 +484,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"StoreName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StoreName();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificate3>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.Certificate", "StoreName", "Windows.Security.Cryptography.Certificates.ICertificate3").StoreName();
             }());
         }
         catch (...)
@@ -901,19 +589,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateChain", L"GetCertificates", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert([&]()
@@ -943,19 +618,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateChain", L"Validate", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -972,19 +634,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateChain", L"Validate", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ChainValidationParameters>(args, 0);
 
                 return py::convert([&]()
@@ -1386,19 +1035,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"EncodeValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -1425,19 +1061,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1461,19 +1084,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(arg);
 
             {
@@ -1494,19 +1104,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"ObjectId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1530,19 +1127,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"ObjectId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1563,19 +1147,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"IsCritical");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1599,19 +1170,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"IsCritical");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1721,19 +1279,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"NonRepudiation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1757,19 +1302,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"NonRepudiation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1790,19 +1322,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyEncipherment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1826,19 +1345,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyEncipherment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1859,19 +1365,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyCertificateSign");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1895,19 +1388,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyCertificateSign");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1928,19 +1408,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyAgreement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1964,19 +1431,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyAgreement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1997,19 +1451,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"EncipherOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2033,19 +1474,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"EncipherOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2066,19 +1494,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"DigitalSignature");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2102,19 +1517,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"DigitalSignature");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2135,19 +1537,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"DataEncipherment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2171,19 +1560,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"DataEncipherment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2204,19 +1580,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"CrlSign");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2240,19 +1603,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"CrlSign");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2366,19 +1716,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"Thumbprint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2402,19 +1739,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"Thumbprint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(arg);
 
             {
@@ -2435,19 +1759,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IssuerName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2471,19 +1782,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IssuerName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2504,19 +1802,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"HardwareOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2540,19 +1825,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"HardwareOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2573,19 +1845,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"FriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2609,19 +1868,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"FriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2642,19 +1888,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"EnhancedKeyUsages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2672,23 +1905,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"StoreName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StoreName();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateQuery2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateQuery", "StoreName", "Windows.Security.Cryptography.Certificates.ICertificateQuery2").StoreName();
             }());
         }
         catch (...)
@@ -2708,24 +1928,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"StoreName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StoreName(param0);
+                py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateQuery2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateQuery", "StoreName", "Windows.Security.Cryptography.Certificates.ICertificateQuery2").StoreName(param0);
             }
 
             return 0;
@@ -2741,23 +1948,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IncludeExpiredCertificates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IncludeExpiredCertificates();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateQuery2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateQuery", "IncludeExpiredCertificates", "Windows.Security.Cryptography.Certificates.ICertificateQuery2").IncludeExpiredCertificates();
             }());
         }
         catch (...)
@@ -2777,24 +1971,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IncludeExpiredCertificates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IncludeExpiredCertificates(param0);
+                py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateQuery2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateQuery", "IncludeExpiredCertificates", "Windows.Security.Cryptography.Certificates.ICertificateQuery2").IncludeExpiredCertificates(param0);
             }
 
             return 0;
@@ -2810,23 +1991,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IncludeDuplicates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IncludeDuplicates();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateQuery2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateQuery", "IncludeDuplicates", "Windows.Security.Cryptography.Certificates.ICertificateQuery2").IncludeDuplicates();
             }());
         }
         catch (...)
@@ -2846,24 +2014,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IncludeDuplicates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IncludeDuplicates(param0);
+                py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateQuery2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateQuery", "IncludeDuplicates", "Windows.Security.Cryptography.Certificates.ICertificateQuery2").IncludeDuplicates(param0);
             }
 
             return 0;
@@ -2972,19 +2127,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"Subject");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3008,19 +2150,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"Subject");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3041,19 +2170,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyUsages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3077,19 +2193,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyUsages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::EnrollKeyUsages>(arg);
 
             {
@@ -3110,19 +2213,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyStorageProviderName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3146,19 +2236,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyStorageProviderName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3179,19 +2256,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeySize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3215,19 +2279,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeySize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -3248,19 +2299,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"Exportable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3284,19 +2322,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"Exportable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ExportOption>(arg);
 
             {
@@ -3317,19 +2342,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3353,19 +2365,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::KeyProtectionLevel>(arg);
 
             {
@@ -3386,19 +2385,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyAlgorithmName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3422,19 +2408,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyAlgorithmName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3455,19 +2428,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"HashAlgorithmName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3491,19 +2451,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"HashAlgorithmName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3524,19 +2471,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"FriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3560,19 +2494,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"FriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3593,23 +2514,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"AttestationCredentialCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AttestationCredentialCertificate();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "AttestationCredentialCertificate", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2").AttestationCredentialCertificate();
             }());
         }
         catch (...)
@@ -3629,24 +2537,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"AttestationCredentialCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AttestationCredentialCertificate(param0);
+                py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "AttestationCredentialCertificate", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2").AttestationCredentialCertificate(param0);
             }
 
             return 0;
@@ -3662,23 +2557,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SigningCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SigningCertificate();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "SigningCertificate", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2").SigningCertificate();
             }());
         }
         catch (...)
@@ -3698,24 +2580,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SigningCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SigningCertificate(param0);
+                py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "SigningCertificate", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2").SigningCertificate(param0);
             }
 
             return 0;
@@ -3731,23 +2600,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SmartcardReaderName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SmartcardReaderName();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "SmartcardReaderName", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2").SmartcardReaderName();
             }());
         }
         catch (...)
@@ -3767,24 +2623,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SmartcardReaderName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SmartcardReaderName(param0);
+                py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "SmartcardReaderName", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2").SmartcardReaderName(param0);
             }
 
             return 0;
@@ -3800,23 +2643,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"UseExistingKey");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UseExistingKey();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties3>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "UseExistingKey", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3").UseExistingKey();
             }());
         }
         catch (...)
@@ -3836,24 +2666,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"UseExistingKey");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UseExistingKey(param0);
+                py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties3>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "UseExistingKey", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3").UseExistingKey(param0);
             }
 
             return 0;
@@ -3869,23 +2686,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"CurveParameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CurveParameters();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties3>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "CurveParameters", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3").CurveParameters();
             }());
         }
         catch (...)
@@ -3905,24 +2709,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"CurveParameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CurveParameters(param0);
+                py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties3>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "CurveParameters", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3").CurveParameters(param0);
             }
 
             return 0;
@@ -3938,23 +2729,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"CurveName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CurveName();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties3>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "CurveName", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3").CurveName();
             }());
         }
         catch (...)
@@ -3974,24 +2752,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"CurveName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CurveName(param0);
+                py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties3>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "CurveName", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3").CurveName(param0);
             }
 
             return 0;
@@ -4007,23 +2772,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"ContainerNamePrefix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContainerNamePrefix();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties3>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "ContainerNamePrefix", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3").ContainerNamePrefix();
             }());
         }
         catch (...)
@@ -4043,24 +2795,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"ContainerNamePrefix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ContainerNamePrefix(param0);
+                py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties3>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "ContainerNamePrefix", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3").ContainerNamePrefix(param0);
             }
 
             return 0;
@@ -4076,23 +2815,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"ContainerName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContainerName();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties3>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "ContainerName", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3").ContainerName();
             }());
         }
         catch (...)
@@ -4112,24 +2838,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"ContainerName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ContainerName(param0);
+                py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties3>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "ContainerName", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3").ContainerName(param0);
             }
 
             return 0;
@@ -4145,23 +2858,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"Extensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Extensions();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties4>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "Extensions", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties4").Extensions();
             }());
         }
         catch (...)
@@ -4175,23 +2875,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SubjectAlternativeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SubjectAlternativeName();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties4>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "SubjectAlternativeName", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties4").SubjectAlternativeName();
             }());
         }
         catch (...)
@@ -4205,23 +2892,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SuppressedDefaults");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SuppressedDefaults();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateRequestProperties4>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateRequestProperties", "SuppressedDefaults", "Windows.Security.Cryptography.Certificates.ICertificateRequestProperties4").SuppressedDefaults();
             }());
         }
         catch (...)
@@ -4322,19 +2996,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateStore", L"Add", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 0);
 
                 {
@@ -4365,19 +3026,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateStore", L"Delete", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 0);
 
                 {
@@ -4404,23 +3052,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateStore", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ICertificateStore2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.CertificateStore", "Name", "Windows.Security.Cryptography.Certificates.ICertificateStore2").Name();
             }());
         }
         catch (...)
@@ -4791,19 +3426,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"ValidationTimestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4827,19 +3449,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"ValidationTimestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
@@ -4860,19 +3469,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"RevocationCheckEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4896,19 +3492,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"RevocationCheckEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4929,19 +3512,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"NetworkRetrievalEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4965,19 +3535,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"NetworkRetrievalEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4998,19 +3555,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"CurrentTimeValidationEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5034,19 +3578,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"CurrentTimeValidationEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5067,19 +3598,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"AuthorityInformationAccessEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5103,19 +3621,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"AuthorityInformationAccessEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5136,19 +3641,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"EnhancedKeyUsages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5166,19 +3658,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"ExclusiveTrustRoots");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5288,19 +3767,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainValidationParameters", L"ServerDnsName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5324,19 +3790,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainValidationParameters", L"ServerDnsName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
             {
@@ -5357,19 +3810,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainValidationParameters", L"CertificateChainPolicy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5393,19 +3833,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainValidationParameters", L"CertificateChainPolicy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::CertificateChainPolicy>(arg);
 
             {
@@ -5563,19 +3990,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CmsAttachedSignature", L"VerifySignature", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5599,19 +4013,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsAttachedSignature", L"Certificates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5629,19 +4030,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsAttachedSignature", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5659,19 +4047,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsAttachedSignature", L"Signers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5850,19 +4225,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CmsDetachedSignature", L"VerifySignatureAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert([&]()
@@ -5888,19 +4250,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsDetachedSignature", L"Certificates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5918,19 +4267,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsDetachedSignature", L"Signers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6058,19 +4394,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsSignerInfo", L"HashAlgorithmName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6094,19 +4417,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsSignerInfo", L"HashAlgorithmName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6127,19 +4437,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsSignerInfo", L"Certificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6163,19 +4460,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsSignerInfo", L"Certificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
             {
@@ -6196,19 +4480,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsSignerInfo", L"TimestampInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6292,19 +4563,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsTimestampInfo", L"Certificates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6322,19 +4580,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsTimestampInfo", L"SigningCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6352,19 +4597,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsTimestampInfo", L"Timestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7169,19 +5401,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"ReaderName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7205,19 +5424,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"ReaderName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -7238,19 +5444,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"KeyStorageProviderName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7274,19 +5467,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"KeyStorageProviderName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -7307,19 +5487,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"KeyProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7343,19 +5510,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"KeyProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::KeyProtectionLevel>(arg);
 
             {
@@ -7376,19 +5530,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"InstallOptions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7412,19 +5553,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"InstallOptions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::InstallOptions>(arg);
 
             {
@@ -7445,19 +5573,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"FriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7481,19 +5596,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"FriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -7514,19 +5616,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"Exportable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7550,19 +5639,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"Exportable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ExportOption>(arg);
 
             {
@@ -7583,19 +5659,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"ContainerNamePrefix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7619,19 +5682,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"ContainerNamePrefix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -7886,19 +5936,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"DistinguishedName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7916,19 +5953,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"DnsName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7946,19 +5970,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"EmailName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7976,19 +5987,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"IPAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8006,19 +6004,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"PrincipalName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8036,19 +6021,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"Url");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8066,23 +6038,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"DistinguishedNames");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DistinguishedNames();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ISubjectAlternativeNameInfo2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", "DistinguishedNames", "Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2").DistinguishedNames();
             }());
         }
         catch (...)
@@ -8096,23 +6055,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"DnsNames");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DnsNames();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ISubjectAlternativeNameInfo2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", "DnsNames", "Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2").DnsNames();
             }());
         }
         catch (...)
@@ -8126,23 +6072,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"EmailNames");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EmailNames();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ISubjectAlternativeNameInfo2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", "EmailNames", "Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2").EmailNames();
             }());
         }
         catch (...)
@@ -8156,23 +6089,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"Extension");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Extension();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ISubjectAlternativeNameInfo2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", "Extension", "Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2").Extension();
             }());
         }
         catch (...)
@@ -8186,23 +6106,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"IPAddresses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IPAddresses();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ISubjectAlternativeNameInfo2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", "IPAddresses", "Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2").IPAddresses();
             }());
         }
         catch (...)
@@ -8216,23 +6123,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"PrincipalNames");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PrincipalNames();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ISubjectAlternativeNameInfo2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", "PrincipalNames", "Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2").PrincipalNames();
             }());
         }
         catch (...)
@@ -8246,23 +6140,10 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"Urls");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Urls();
+                return py::require<winrt::Windows::Security::Cryptography::Certificates::ISubjectAlternativeNameInfo2>(self->obj, py::member_kind::property, "Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", "Urls", "Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2").Urls();
             }());
         }
         catch (...)
@@ -8356,19 +6237,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"CreateRequestAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::CertificateRequestProperties>(args, 0);
 
                 return py::convert([&]()
@@ -8398,19 +6266,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"ImportPfxDataAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters>(args, 2);
@@ -8418,7 +6273,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ImportPfxDataAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Security::Cryptography::Certificates::IUserCertificateEnrollmentManager2>(self->obj, py::member_kind::method, "Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", "ImportPfxDataAsync", "Windows.Security.Cryptography.Certificates.IUserCertificateEnrollmentManager2", 3).ImportPfxDataAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -8431,19 +6286,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"ImportPfxDataAsync", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ExportOption>(args, 2);
@@ -8467,19 +6309,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"ImportPfxDataAsync", 7);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(7);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ExportOption>(args, 2);
@@ -8515,19 +6344,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"InstallCertificateAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::InstallOptions>(args, 1);
 
@@ -8624,19 +6440,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateStore", L"RequestAddAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 0);
 
                 return py::convert([&]()
@@ -8666,19 +6469,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateStore", L"RequestDeleteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 0);
 
                 return py::convert([&]()
@@ -8704,19 +6494,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateStore", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

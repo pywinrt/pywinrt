@@ -111,19 +111,6 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.ImageScanner", L"IsPreviewSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerScanSource>(args, 0);
 
                 return py::convert([&]()
@@ -153,19 +140,6 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.ImageScanner", L"IsScanSourceSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerScanSource>(args, 0);
 
                 return py::convert([&]()
@@ -195,19 +169,6 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.ImageScanner", L"ScanFilesToFolderAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerScanSource>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::StorageFolder>(args, 1);
 
@@ -238,19 +199,6 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.ImageScanner", L"ScanPreviewToStreamAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerScanSource>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -277,19 +225,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScanner", L"AutoConfiguration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -307,19 +242,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScanner", L"DefaultScanSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -337,19 +259,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScanner", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -367,19 +276,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScanner", L"FeederConfiguration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -397,19 +293,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScanner", L"FlatbedConfiguration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -526,19 +409,6 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.ImageScannerAutoConfiguration", L"IsFormatSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(args, 0);
 
                 return py::convert([&]()
@@ -564,19 +434,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerAutoConfiguration", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -600,19 +457,6 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerAutoConfiguration", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(arg);
 
             {
@@ -633,19 +477,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerAutoConfiguration", L"DefaultFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -733,25 +564,12 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"IsAutoCroppingModeSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsAutoCroppingModeSupported(param0);
+                    return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::method, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "IsAutoCroppingModeSupported", "Windows.Devices.Scanners.IImageScannerSourceConfiguration", 1).IsAutoCroppingModeSupported(param0);
                 }());
             }
             catch (...)
@@ -775,25 +593,12 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"IsColorModeSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerColorMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsColorModeSupported(param0);
+                    return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::method, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "IsColorModeSupported", "Windows.Devices.Scanners.IImageScannerSourceConfiguration", 1).IsColorModeSupported(param0);
                 }());
             }
             catch (...)
@@ -817,19 +622,6 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"IsFormatSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(args, 0);
 
                 return py::convert([&]()
@@ -859,26 +651,13 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"IsPageSizeSupported", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintMediaSize>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Printing::PrintOrientation>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsPageSizeSupported(param0, param1);
+                    return py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::method, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "IsPageSizeSupported", "Windows.Devices.Scanners.IImageScannerFeederConfiguration", 2).IsPageSizeSupported(param0, param1);
                 }());
             }
             catch (...)
@@ -898,23 +677,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"ScanAhead");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ScanAhead();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "ScanAhead", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").ScanAhead();
             }());
         }
         catch (...)
@@ -934,24 +700,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"ScanAhead");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ScanAhead(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "ScanAhead", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").ScanAhead(param0);
             }
 
             return 0;
@@ -967,23 +720,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"AutoDetectPageSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AutoDetectPageSize();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "AutoDetectPageSize", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").AutoDetectPageSize();
             }());
         }
         catch (...)
@@ -1003,24 +743,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"AutoDetectPageSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AutoDetectPageSize(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "AutoDetectPageSize", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").AutoDetectPageSize(param0);
             }
 
             return 0;
@@ -1036,23 +763,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"Duplex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Duplex();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "Duplex", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").Duplex();
             }());
         }
         catch (...)
@@ -1072,24 +786,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"Duplex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Duplex(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "Duplex", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").Duplex(param0);
             }
 
             return 0;
@@ -1105,23 +806,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"MaxNumberOfPages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxNumberOfPages();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "MaxNumberOfPages", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").MaxNumberOfPages();
             }());
         }
         catch (...)
@@ -1141,24 +829,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"MaxNumberOfPages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MaxNumberOfPages(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "MaxNumberOfPages", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").MaxNumberOfPages(param0);
             }
 
             return 0;
@@ -1174,23 +849,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"PageOrientation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PageOrientation();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "PageOrientation", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").PageOrientation();
             }());
         }
         catch (...)
@@ -1210,24 +872,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"PageOrientation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintOrientation>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PageOrientation(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "PageOrientation", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").PageOrientation(param0);
             }
 
             return 0;
@@ -1243,23 +892,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"PageSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PageSize();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "PageSize", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").PageSize();
             }());
         }
         catch (...)
@@ -1279,24 +915,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"PageSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintMediaSize>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PageSize(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "PageSize", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").PageSize(param0);
             }
 
             return 0;
@@ -1312,23 +935,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"PageSizeDimensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PageSizeDimensions();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "PageSizeDimensions", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").PageSizeDimensions();
             }());
         }
         catch (...)
@@ -1342,23 +952,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"CanScanDuplex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanScanDuplex();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "CanScanDuplex", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").CanScanDuplex();
             }());
         }
         catch (...)
@@ -1372,23 +969,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"CanScanAhead");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanScanAhead();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "CanScanAhead", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").CanScanAhead();
             }());
         }
         catch (...)
@@ -1402,23 +986,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"CanAutoDetectPageSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanAutoDetectPageSize();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "CanAutoDetectPageSize", "Windows.Devices.Scanners.IImageScannerFeederConfiguration").CanAutoDetectPageSize();
             }());
         }
         catch (...)
@@ -1432,19 +1003,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1468,19 +1026,6 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(arg);
 
             {
@@ -1501,19 +1046,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"DefaultFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1531,23 +1063,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"DesiredResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DesiredResolution();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "DesiredResolution", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").DesiredResolution();
             }());
         }
         catch (...)
@@ -1567,24 +1086,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"DesiredResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerResolution>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DesiredResolution(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "DesiredResolution", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").DesiredResolution(param0);
             }
 
             return 0;
@@ -1600,23 +1106,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"Contrast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Contrast();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "Contrast", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").Contrast();
             }());
         }
         catch (...)
@@ -1636,24 +1129,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"Contrast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Contrast(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "Contrast", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").Contrast(param0);
             }
 
             return 0;
@@ -1669,23 +1149,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"ColorMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ColorMode();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "ColorMode", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").ColorMode();
             }());
         }
         catch (...)
@@ -1705,24 +1172,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"ColorMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerColorMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ColorMode(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "ColorMode", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").ColorMode(param0);
             }
 
             return 0;
@@ -1738,23 +1192,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"AutoCroppingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AutoCroppingMode();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "AutoCroppingMode", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").AutoCroppingMode();
             }());
         }
         catch (...)
@@ -1774,24 +1215,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"AutoCroppingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AutoCroppingMode(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "AutoCroppingMode", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").AutoCroppingMode(param0);
             }
 
             return 0;
@@ -1807,23 +1235,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"Brightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Brightness();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "Brightness", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").Brightness();
             }());
         }
         catch (...)
@@ -1843,24 +1258,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"Brightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Brightness(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "Brightness", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").Brightness(param0);
             }
 
             return 0;
@@ -1876,23 +1278,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"SelectedScanRegion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SelectedScanRegion();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "SelectedScanRegion", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").SelectedScanRegion();
             }());
         }
         catch (...)
@@ -1912,24 +1301,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"SelectedScanRegion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SelectedScanRegion(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "SelectedScanRegion", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").SelectedScanRegion(param0);
             }
 
             return 0;
@@ -1945,23 +1321,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"MinBrightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MinBrightness();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "MinBrightness", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MinBrightness();
             }());
         }
         catch (...)
@@ -1975,23 +1338,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"MinContrast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MinContrast();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "MinContrast", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MinContrast();
             }());
         }
         catch (...)
@@ -2005,23 +1355,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"MinResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MinResolution();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "MinResolution", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MinResolution();
             }());
         }
         catch (...)
@@ -2035,23 +1372,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"MinScanArea");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MinScanArea();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "MinScanArea", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MinScanArea();
             }());
         }
         catch (...)
@@ -2065,23 +1389,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"OpticalResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OpticalResolution();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "OpticalResolution", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").OpticalResolution();
             }());
         }
         catch (...)
@@ -2095,23 +1406,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"MaxScanArea");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxScanArea();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "MaxScanArea", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MaxScanArea();
             }());
         }
         catch (...)
@@ -2125,23 +1423,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"MaxResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxResolution();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "MaxResolution", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MaxResolution();
             }());
         }
         catch (...)
@@ -2155,23 +1440,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"MaxContrast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxContrast();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "MaxContrast", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MaxContrast();
             }());
         }
         catch (...)
@@ -2185,23 +1457,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"MaxBrightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxBrightness();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "MaxBrightness", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MaxBrightness();
             }());
         }
         catch (...)
@@ -2215,23 +1474,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"DefaultContrast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DefaultContrast();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "DefaultContrast", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").DefaultContrast();
             }());
         }
         catch (...)
@@ -2245,23 +1491,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"DefaultColorMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DefaultColorMode();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "DefaultColorMode", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").DefaultColorMode();
             }());
         }
         catch (...)
@@ -2275,23 +1508,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"DefaultBrightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DefaultBrightness();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "DefaultBrightness", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").DefaultBrightness();
             }());
         }
         catch (...)
@@ -2305,23 +1525,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"ContrastStep");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContrastStep();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "ContrastStep", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").ContrastStep();
             }());
         }
         catch (...)
@@ -2335,23 +1542,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"BrightnessStep");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BrightnessStep();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "BrightnessStep", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").BrightnessStep();
             }());
         }
         catch (...)
@@ -2365,23 +1559,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFeederConfiguration", L"ActualResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ActualResolution();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFeederConfiguration", "ActualResolution", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").ActualResolution();
             }());
         }
         catch (...)
@@ -2499,25 +1680,12 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"IsAutoCroppingModeSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsAutoCroppingModeSupported(param0);
+                    return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::method, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "IsAutoCroppingModeSupported", "Windows.Devices.Scanners.IImageScannerSourceConfiguration", 1).IsAutoCroppingModeSupported(param0);
                 }());
             }
             catch (...)
@@ -2541,25 +1709,12 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"IsColorModeSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerColorMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsColorModeSupported(param0);
+                    return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::method, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "IsColorModeSupported", "Windows.Devices.Scanners.IImageScannerSourceConfiguration", 1).IsColorModeSupported(param0);
                 }());
             }
             catch (...)
@@ -2583,19 +1738,6 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"IsFormatSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(args, 0);
 
                 return py::convert([&]()
@@ -2621,19 +1763,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2657,19 +1786,6 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(arg);
 
             {
@@ -2690,19 +1806,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"DefaultFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2720,23 +1823,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"SelectedScanRegion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SelectedScanRegion();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "SelectedScanRegion", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").SelectedScanRegion();
             }());
         }
         catch (...)
@@ -2756,24 +1846,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"SelectedScanRegion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SelectedScanRegion(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "SelectedScanRegion", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").SelectedScanRegion(param0);
             }
 
             return 0;
@@ -2789,23 +1866,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"DesiredResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DesiredResolution();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "DesiredResolution", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").DesiredResolution();
             }());
         }
         catch (...)
@@ -2825,24 +1889,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"DesiredResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerResolution>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DesiredResolution(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "DesiredResolution", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").DesiredResolution(param0);
             }
 
             return 0;
@@ -2858,23 +1909,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"Contrast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Contrast();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "Contrast", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").Contrast();
             }());
         }
         catch (...)
@@ -2894,24 +1932,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"Contrast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Contrast(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "Contrast", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").Contrast(param0);
             }
 
             return 0;
@@ -2927,23 +1952,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"Brightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Brightness();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "Brightness", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").Brightness();
             }());
         }
         catch (...)
@@ -2963,24 +1975,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"Brightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Brightness(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "Brightness", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").Brightness(param0);
             }
 
             return 0;
@@ -2996,23 +1995,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"AutoCroppingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AutoCroppingMode();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "AutoCroppingMode", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").AutoCroppingMode();
             }());
         }
         catch (...)
@@ -3032,24 +2018,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"AutoCroppingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AutoCroppingMode(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "AutoCroppingMode", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").AutoCroppingMode(param0);
             }
 
             return 0;
@@ -3065,23 +2038,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"ColorMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ColorMode();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "ColorMode", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").ColorMode();
             }());
         }
         catch (...)
@@ -3101,24 +2061,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"ColorMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerColorMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ColorMode(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "ColorMode", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").ColorMode(param0);
             }
 
             return 0;
@@ -3134,23 +2081,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"ContrastStep");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContrastStep();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "ContrastStep", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").ContrastStep();
             }());
         }
         catch (...)
@@ -3164,23 +2098,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"DefaultBrightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DefaultBrightness();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "DefaultBrightness", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").DefaultBrightness();
             }());
         }
         catch (...)
@@ -3194,23 +2115,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"DefaultColorMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DefaultColorMode();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "DefaultColorMode", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").DefaultColorMode();
             }());
         }
         catch (...)
@@ -3224,23 +2132,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"DefaultContrast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DefaultContrast();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "DefaultContrast", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").DefaultContrast();
             }());
         }
         catch (...)
@@ -3254,23 +2149,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"ActualResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ActualResolution();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "ActualResolution", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").ActualResolution();
             }());
         }
         catch (...)
@@ -3284,23 +2166,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"MaxBrightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxBrightness();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "MaxBrightness", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MaxBrightness();
             }());
         }
         catch (...)
@@ -3314,23 +2183,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"MaxContrast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxContrast();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "MaxContrast", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MaxContrast();
             }());
         }
         catch (...)
@@ -3344,23 +2200,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"MaxResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxResolution();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "MaxResolution", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MaxResolution();
             }());
         }
         catch (...)
@@ -3374,23 +2217,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"MaxScanArea");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxScanArea();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "MaxScanArea", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MaxScanArea();
             }());
         }
         catch (...)
@@ -3404,23 +2234,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"MinBrightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MinBrightness();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "MinBrightness", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MinBrightness();
             }());
         }
         catch (...)
@@ -3434,23 +2251,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"BrightnessStep");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BrightnessStep();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "BrightnessStep", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").BrightnessStep();
             }());
         }
         catch (...)
@@ -3464,23 +2268,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"MinContrast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MinContrast();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "MinContrast", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MinContrast();
             }());
         }
         catch (...)
@@ -3494,23 +2285,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"MinResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MinResolution();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "MinResolution", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MinResolution();
             }());
         }
         catch (...)
@@ -3524,23 +2302,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"OpticalResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OpticalResolution();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "OpticalResolution", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").OpticalResolution();
             }());
         }
         catch (...)
@@ -3554,23 +2319,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", L"MinScanArea");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MinScanArea();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.ImageScannerFlatbedConfiguration", "MinScanArea", "Windows.Devices.Scanners.IImageScannerSourceConfiguration").MinScanArea();
             }());
         }
         catch (...)
@@ -3673,19 +2425,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerPreviewResult", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3703,19 +2442,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerPreviewResult", L"Succeeded");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3798,19 +2524,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.ImageScannerScanResult", L"ScannedFiles");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3898,19 +2611,6 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.IImageScannerFormatConfiguration", L"IsFormatSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(args, 0);
 
                 return py::convert([&]()
@@ -3936,19 +2636,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerFormatConfiguration", L"DefaultFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3966,19 +2653,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerFormatConfiguration", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4002,19 +2676,6 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerFormatConfiguration", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(arg);
 
             {
@@ -4272,19 +2933,6 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"IsAutoCroppingModeSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>(args, 0);
 
                 return py::convert([&]()
@@ -4314,19 +2962,6 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"IsColorModeSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerColorMode>(args, 0);
 
                 return py::convert([&]()
@@ -4356,25 +2991,12 @@ namespace py::cpp::Windows::Devices::Scanners
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Scanners.IImageScannerFormatConfiguration", L"IsFormatSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsFormatSupported(param0);
+                    return py::require<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>(self->obj, py::member_kind::method, "Windows.Devices.Scanners.IImageScannerFormatConfiguration", "IsFormatSupported", "Windows.Devices.Scanners.IImageScannerFormatConfiguration", 1).IsFormatSupported(param0);
                 }());
             }
             catch (...)
@@ -4394,19 +3016,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"ActualResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4424,19 +3033,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"AutoCroppingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4460,19 +3056,6 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"AutoCroppingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>(arg);
 
             {
@@ -4493,19 +3076,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"Brightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4529,19 +3099,6 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"Brightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -4562,19 +3119,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"BrightnessStep");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4592,19 +3136,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"ColorMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4628,19 +3159,6 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"ColorMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerColorMode>(arg);
 
             {
@@ -4661,19 +3179,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"Contrast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4697,19 +3202,6 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"Contrast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -4730,19 +3222,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"ContrastStep");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4760,19 +3239,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"DefaultBrightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4790,19 +3256,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"DefaultColorMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4820,19 +3273,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"DefaultContrast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4850,19 +3290,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"DesiredResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4886,19 +3313,6 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"DesiredResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerResolution>(arg);
 
             {
@@ -4919,19 +3333,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"MaxBrightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4949,19 +3350,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"MaxContrast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4979,19 +3367,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"MaxResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5009,19 +3384,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"MaxScanArea");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5039,19 +3401,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"MinBrightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5069,19 +3418,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"MinContrast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5099,19 +3435,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"MinResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5129,19 +3452,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"MinScanArea");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5159,19 +3469,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"OpticalResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5189,19 +3486,6 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"SelectedScanRegion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5225,19 +3509,6 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerSourceConfiguration", L"SelectedScanRegion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             {
@@ -5258,23 +3529,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerFormatConfiguration", L"DefaultFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DefaultFormat();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.IImageScannerFormatConfiguration", "DefaultFormat", "Windows.Devices.Scanners.IImageScannerFormatConfiguration").DefaultFormat();
             }());
         }
         catch (...)
@@ -5288,23 +3546,10 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerFormatConfiguration", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Format();
+                return py::require<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.IImageScannerFormatConfiguration", "Format", "Windows.Devices.Scanners.IImageScannerFormatConfiguration").Format();
             }());
         }
         catch (...)
@@ -5324,24 +3569,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Scanners.IImageScannerFormatConfiguration", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Format(param0);
+                py::require<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>(self->obj, py::member_kind::property, "Windows.Devices.Scanners.IImageScannerFormatConfiguration", "Format", "Windows.Devices.Scanners.IImageScannerFormatConfiguration").Format(param0);
             }
 
             return 0;

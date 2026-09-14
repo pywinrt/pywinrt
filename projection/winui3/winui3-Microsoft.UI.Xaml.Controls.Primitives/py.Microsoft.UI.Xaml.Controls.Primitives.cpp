@@ -25,19 +25,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.AppBarButtonTemplateSettings", L"KeyboardAcceleratorTextMinWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -119,19 +106,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"ClipRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -149,19 +123,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"CompactRootMargin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -179,19 +140,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"CompactVerticalDelta");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -209,19 +157,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"HiddenRootMargin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -239,19 +174,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"HiddenVerticalDelta");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -269,19 +191,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"MinimalRootMargin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -299,19 +208,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"MinimalVerticalDelta");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -329,19 +225,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"NegativeCompactVerticalDelta");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -359,19 +242,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"NegativeHiddenVerticalDelta");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -389,19 +259,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"NegativeMinimalVerticalDelta");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -492,19 +349,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.AppBarToggleButtonTemplateSettings", L"KeyboardAcceleratorTextMinWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -823,23 +667,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", L"CommandParameter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase>().CommandParameter();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IButtonBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", "CommandParameter", "Microsoft.UI.Xaml.Controls.Primitives.IButtonBase").CommandParameter();
             }());
         }
         catch (...)
@@ -859,24 +690,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", L"CommandParameter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase>().CommandParameter(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IButtonBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", "CommandParameter", "Microsoft.UI.Xaml.Controls.Primitives.IButtonBase").CommandParameter(param0);
             }
 
             return 0;
@@ -892,23 +710,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", L"Command");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase>().Command();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IButtonBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", "Command", "Microsoft.UI.Xaml.Controls.Primitives.IButtonBase").Command();
             }());
         }
         catch (...)
@@ -928,24 +733,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", L"Command");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ICommand>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase>().Command(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IButtonBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", "Command", "Microsoft.UI.Xaml.Controls.Primitives.IButtonBase").Command(param0);
             }
 
             return 0;
@@ -961,23 +753,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", L"ClickMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase>().ClickMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IButtonBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", "ClickMode", "Microsoft.UI.Xaml.Controls.Primitives.IButtonBase").ClickMode();
             }());
         }
         catch (...)
@@ -997,24 +776,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", L"ClickMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ClickMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase>().ClickMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IButtonBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", "ClickMode", "Microsoft.UI.Xaml.Controls.Primitives.IButtonBase").ClickMode(param0);
             }
 
             return 0;
@@ -1030,23 +796,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", L"IsPointerOver");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase>().IsPointerOver();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IButtonBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", "IsPointerOver", "Microsoft.UI.Xaml.Controls.Primitives.IButtonBase").IsPointerOver();
             }());
         }
         catch (...)
@@ -1060,23 +813,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", L"IsPressed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase>().IsPressed();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IButtonBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", "IsPressed", "Microsoft.UI.Xaml.Controls.Primitives.IButtonBase").IsPressed();
             }());
         }
         catch (...)
@@ -1240,25 +980,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", L"Click");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEventHandler>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase>().Click(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IButtonBase>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", "Click", "Microsoft.UI.Xaml.Controls.Primitives.IButtonBase").Click(param0);
             }());
         }
         catch (...)
@@ -1272,24 +999,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", L"Click");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase>().Click(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IButtonBase>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase", "Click", "Microsoft.UI.Xaml.Controls.Primitives.IButtonBase").Click(param0);
             }
 
             Py_RETURN_NONE;
@@ -1486,19 +1200,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"CenterX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1516,19 +1217,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"CenterY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1546,19 +1234,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"ClipRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1576,19 +1251,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"HasMoreContentAfter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1606,19 +1268,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"HasMoreContentBefore");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1636,19 +1285,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"HasMoreViews");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1666,19 +1302,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"HeaderText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1696,19 +1319,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"MinViewWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1726,19 +1336,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1756,19 +1353,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1786,19 +1370,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay3");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1816,19 +1387,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay4");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1846,19 +1404,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay5");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1876,19 +1421,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay6");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1906,19 +1438,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay7");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2105,26 +1624,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"GetIrregularSnapPoints", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().GetIrregularSnapPoints(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "GetIrregularSnapPoints", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", 2).GetIrregularSnapPoints(param0, param1);
                 }());
             }
             catch (...)
@@ -2148,19 +1654,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"GetRegularSnapPoints", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
                 float param2{};
@@ -2168,7 +1661,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().GetRegularSnapPoints(param0, param1, param2);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "GetRegularSnapPoints", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", 2).GetRegularSnapPoints(param0, param1, param2);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -2205,22 +1698,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"LineDown", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().LineDown();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "LineDown", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel", 0).LineDown();
                 }
 
                 Py_RETURN_NONE;
@@ -2246,22 +1726,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"LineLeft", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().LineLeft();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "LineLeft", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel", 0).LineLeft();
                 }
 
                 Py_RETURN_NONE;
@@ -2287,22 +1754,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"LineRight", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().LineRight();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "LineRight", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel", 0).LineRight();
                 }
 
                 Py_RETURN_NONE;
@@ -2328,22 +1782,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"LineUp", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().LineUp();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "LineUp", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel", 0).LineUp();
                 }
 
                 Py_RETURN_NONE;
@@ -2369,26 +1810,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"MakeVisible", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().MakeVisible(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "MakeVisible", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel", 2).MakeVisible(param0, param1);
                 }());
             }
             catch (...)
@@ -2412,22 +1840,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"MouseWheelDown", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().MouseWheelDown();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "MouseWheelDown", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel", 0).MouseWheelDown();
                 }
 
                 Py_RETURN_NONE;
@@ -2453,22 +1868,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"MouseWheelLeft", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().MouseWheelLeft();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "MouseWheelLeft", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel", 0).MouseWheelLeft();
                 }
 
                 Py_RETURN_NONE;
@@ -2494,22 +1896,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"MouseWheelRight", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().MouseWheelRight();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "MouseWheelRight", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel", 0).MouseWheelRight();
                 }
 
                 Py_RETURN_NONE;
@@ -2535,22 +1924,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"MouseWheelUp", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().MouseWheelUp();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "MouseWheelUp", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel", 0).MouseWheelUp();
                 }
 
                 Py_RETURN_NONE;
@@ -2576,22 +1952,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"PageDown", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().PageDown();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "PageDown", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel", 0).PageDown();
                 }
 
                 Py_RETURN_NONE;
@@ -2617,22 +1980,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"PageLeft", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().PageLeft();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "PageLeft", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel", 0).PageLeft();
                 }
 
                 Py_RETURN_NONE;
@@ -2658,22 +2008,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"PageRight", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().PageRight();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "PageRight", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel", 0).PageRight();
                 }
 
                 Py_RETURN_NONE;
@@ -2699,22 +2036,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"PageUp", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().PageUp();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "PageUp", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel", 0).PageUp();
                 }
 
                 Py_RETURN_NONE;
@@ -2740,24 +2064,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"SetHorizontalOffset", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().SetHorizontalOffset(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "SetHorizontalOffset", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel", 1).SetHorizontalOffset(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -2783,24 +2094,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"SetVerticalOffset", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().SetVerticalOffset(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "SetVerticalOffset", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel", 1).SetVerticalOffset(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -2822,23 +2120,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"ScrollOwner");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().ScrollOwner();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "ScrollOwner", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel").ScrollOwner();
             }());
         }
         catch (...)
@@ -2858,24 +2143,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"ScrollOwner");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().ScrollOwner(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "ScrollOwner", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel").ScrollOwner(param0);
             }
 
             return 0;
@@ -2891,23 +2163,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"CanVerticallyScroll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().CanVerticallyScroll();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "CanVerticallyScroll", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel").CanVerticallyScroll();
             }());
         }
         catch (...)
@@ -2927,24 +2186,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"CanVerticallyScroll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().CanVerticallyScroll(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "CanVerticallyScroll", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel").CanVerticallyScroll(param0);
             }
 
             return 0;
@@ -2960,23 +2206,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"CanHorizontallyScroll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().CanHorizontallyScroll();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "CanHorizontallyScroll", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel").CanHorizontallyScroll();
             }());
         }
         catch (...)
@@ -2996,24 +2229,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"CanHorizontallyScroll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().CanHorizontallyScroll(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "CanHorizontallyScroll", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel").CanHorizontallyScroll(param0);
             }
 
             return 0;
@@ -3029,23 +2249,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"ExtentHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().ExtentHeight();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "ExtentHeight", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel").ExtentHeight();
             }());
         }
         catch (...)
@@ -3059,23 +2266,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"ExtentWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().ExtentWidth();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "ExtentWidth", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel").ExtentWidth();
             }());
         }
         catch (...)
@@ -3089,23 +2283,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"HorizontalOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().HorizontalOffset();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "HorizontalOffset", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel").HorizontalOffset();
             }());
         }
         catch (...)
@@ -3119,23 +2300,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"VerticalOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().VerticalOffset();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "VerticalOffset", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel").VerticalOffset();
             }());
         }
         catch (...)
@@ -3149,23 +2317,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"ViewportHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().ViewportHeight();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "ViewportHeight", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel").ViewportHeight();
             }());
         }
         catch (...)
@@ -3179,23 +2334,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"ViewportWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().ViewportWidth();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICarouselPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "ViewportWidth", "Microsoft.UI.Xaml.Controls.Primitives.ICarouselPanel").ViewportWidth();
             }());
         }
         catch (...)
@@ -3209,23 +2351,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"AreHorizontalSnapPointsRegular");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().AreHorizontalSnapPointsRegular();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "AreHorizontalSnapPointsRegular", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").AreHorizontalSnapPointsRegular();
             }());
         }
         catch (...)
@@ -3239,23 +2368,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"AreVerticalSnapPointsRegular");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().AreVerticalSnapPointsRegular();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "AreVerticalSnapPointsRegular", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").AreVerticalSnapPointsRegular();
             }());
         }
         catch (...)
@@ -3269,25 +2385,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"HorizontalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().HorizontalSnapPointsChanged(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "HorizontalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").HorizontalSnapPointsChanged(param0);
             }());
         }
         catch (...)
@@ -3301,24 +2404,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"HorizontalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().HorizontalSnapPointsChanged(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "HorizontalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").HorizontalSnapPointsChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -3334,25 +2424,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"VerticalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().VerticalSnapPointsChanged(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "VerticalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").VerticalSnapPointsChanged(param0);
             }());
         }
         catch (...)
@@ -3366,24 +2443,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", L"VerticalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>().VerticalSnapPointsChanged(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.CarouselPanel", "VerticalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").VerticalSnapPointsChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -3602,23 +2666,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().Shape();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "Shape", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").Shape();
             }());
         }
         catch (...)
@@ -3638,24 +2689,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ColorSpectrumShape>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().Shape(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "Shape", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").Shape(param0);
             }
 
             return 0;
@@ -3671,23 +2709,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().MinValue();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "MinValue", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").MinValue();
             }());
         }
         catch (...)
@@ -3707,24 +2732,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().MinValue(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "MinValue", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").MinValue(param0);
             }
 
             return 0;
@@ -3740,23 +2752,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinSaturation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().MinSaturation();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "MinSaturation", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").MinSaturation();
             }());
         }
         catch (...)
@@ -3776,24 +2775,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinSaturation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().MinSaturation(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "MinSaturation", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").MinSaturation(param0);
             }
 
             return 0;
@@ -3809,23 +2795,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinHue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().MinHue();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "MinHue", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").MinHue();
             }());
         }
         catch (...)
@@ -3845,24 +2818,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinHue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().MinHue(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "MinHue", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").MinHue(param0);
             }
 
             return 0;
@@ -3878,23 +2838,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().MaxValue();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "MaxValue", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").MaxValue();
             }());
         }
         catch (...)
@@ -3914,24 +2861,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().MaxValue(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "MaxValue", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").MaxValue(param0);
             }
 
             return 0;
@@ -3947,23 +2881,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxSaturation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().MaxSaturation();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "MaxSaturation", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").MaxSaturation();
             }());
         }
         catch (...)
@@ -3983,24 +2904,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxSaturation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().MaxSaturation(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "MaxSaturation", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").MaxSaturation(param0);
             }
 
             return 0;
@@ -4016,23 +2924,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxHue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().MaxHue();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "MaxHue", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").MaxHue();
             }());
         }
         catch (...)
@@ -4052,24 +2947,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxHue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().MaxHue(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "MaxHue", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").MaxHue(param0);
             }
 
             return 0;
@@ -4085,23 +2967,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"HsvColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().HsvColor();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "HsvColor", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").HsvColor();
             }());
         }
         catch (...)
@@ -4121,24 +2990,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"HsvColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().HsvColor(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "HsvColor", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").HsvColor(param0);
             }
 
             return 0;
@@ -4154,23 +3010,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Components");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().Components();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "Components", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").Components();
             }());
         }
         catch (...)
@@ -4190,24 +3033,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Components");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ColorSpectrumComponents>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().Components(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "Components", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").Components(param0);
             }
 
             return 0;
@@ -4223,23 +3053,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Color");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().Color();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "Color", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").Color();
             }());
         }
         catch (...)
@@ -4259,24 +3076,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Color");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().Color(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "Color", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").Color(param0);
             }
 
             return 0;
@@ -4592,25 +3396,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"ColorChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum, winrt::Microsoft::UI::Xaml::Controls::ColorChangedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().ColorChanged(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "ColorChanged", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").ColorChanged(param0);
             }());
         }
         catch (...)
@@ -4624,24 +3415,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", L"ColorChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>().ColorChanged(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorSpectrum>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum", "ColorChanged", "Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum").ColorChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -4850,23 +3628,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayout", L"RowSpacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout>().RowSpacing();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColumnMajorUniformToLargestGridLayout>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayout", "RowSpacing", "Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout").RowSpacing();
             }());
         }
         catch (...)
@@ -4886,24 +3651,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayout", L"RowSpacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout>().RowSpacing(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColumnMajorUniformToLargestGridLayout>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayout", "RowSpacing", "Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout").RowSpacing(param0);
             }
 
             return 0;
@@ -4919,23 +3671,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayout", L"MaxColumns");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout>().MaxColumns();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColumnMajorUniformToLargestGridLayout>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayout", "MaxColumns", "Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout").MaxColumns();
             }());
         }
         catch (...)
@@ -4955,24 +3694,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayout", L"MaxColumns");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout>().MaxColumns(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColumnMajorUniformToLargestGridLayout>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayout", "MaxColumns", "Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout").MaxColumns(param0);
             }
 
             return 0;
@@ -4988,23 +3714,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayout", L"ColumnSpacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout>().ColumnSpacing();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColumnMajorUniformToLargestGridLayout>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayout", "ColumnSpacing", "Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout").ColumnSpacing();
             }());
         }
         catch (...)
@@ -5024,24 +3737,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayout", L"ColumnSpacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout>().ColumnSpacing(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColumnMajorUniformToLargestGridLayout>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayout", "ColumnSpacing", "Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout").ColumnSpacing(param0);
             }
 
             return 0;
@@ -5440,19 +4140,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings", L"DropDownClosedHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5470,19 +4157,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings", L"DropDownContentMinWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5500,19 +4174,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings", L"DropDownOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5530,19 +4191,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings", L"DropDownOpenedHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5560,19 +4208,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings", L"SelectedItemDirection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5745,23 +4380,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBar", L"FlyoutTemplateSettings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar>().FlyoutTemplateSettings();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICommandBarFlyoutCommandBar>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBar", "FlyoutTemplateSettings", "Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBar").FlyoutTemplateSettings();
             }());
         }
         catch (...)
@@ -5775,23 +4397,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBar", L"SystemBackdrop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar>().SystemBackdrop();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICommandBarFlyoutCommandBar2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBar", "SystemBackdrop", "Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBar2").SystemBackdrop();
             }());
         }
         catch (...)
@@ -5811,24 +4420,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBar", L"SystemBackdrop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::SystemBackdrop>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar>().SystemBackdrop(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ICommandBarFlyoutCommandBar2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBar", "SystemBackdrop", "Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBar2").SystemBackdrop(param0);
             }
 
             return 0;
@@ -6129,19 +4725,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"CloseAnimationEndPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6159,19 +4742,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ContentClipRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6189,19 +4759,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"CurrentWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6219,19 +4776,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandDownAnimationEndPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6249,19 +4793,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandDownAnimationHoldPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6279,19 +4810,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandDownAnimationStartPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6309,19 +4827,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandDownOverflowVerticalPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6339,19 +4844,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandUpAnimationEndPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6369,19 +4861,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandUpAnimationHoldPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6399,19 +4878,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandUpAnimationStartPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6429,19 +4895,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandUpOverflowVerticalPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6459,19 +4912,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandedWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6489,19 +4929,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"OpenAnimationEndPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6519,19 +4946,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"OpenAnimationStartPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6549,19 +4963,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"OverflowContentClipRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6579,19 +4980,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"WidthExpansionAnimationEndPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6609,19 +4997,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"WidthExpansionAnimationStartPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6639,19 +5014,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"WidthExpansionDelta");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6669,19 +5031,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"WidthExpansionMoreButtonAnimationEndPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6699,19 +5048,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"WidthExpansionMoreButtonAnimationStartPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6812,19 +5148,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"ContentHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6842,19 +5165,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"EffectiveOverflowButtonVisibility");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6872,19 +5182,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"NegativeOverflowContentHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6902,19 +5199,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentClipRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6932,19 +5216,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentCompactYTranslation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6962,19 +5233,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6992,19 +5250,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentHiddenYTranslation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7022,19 +5267,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentHorizontalOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7052,19 +5284,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentMaxHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7082,19 +5301,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentMaxWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7112,19 +5318,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentMinWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7142,19 +5335,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentMinimalYTranslation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7273,19 +5453,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusFilterConverter", L"Convert", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -7294,7 +5461,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Convert(param0, param1, param2, param3);
+                    return py::require<winrt::Microsoft::UI::Xaml::Data::IValueConverter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusFilterConverter", "Convert", "Microsoft.UI.Xaml.Data.IValueConverter", 4).Convert(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -7318,19 +5485,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusFilterConverter", L"ConvertBack", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -7339,7 +5493,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ConvertBack(param0, param1, param2, param3);
+                    return py::require<winrt::Microsoft::UI::Xaml::Data::IValueConverter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusFilterConverter", "ConvertBack", "Microsoft.UI.Xaml.Data.IValueConverter", 4).ConvertBack(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -7359,19 +5513,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusFilterConverter", L"Scale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7395,19 +5536,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusFilterConverter", L"Scale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -7428,19 +5556,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusFilterConverter", L"Filter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7464,19 +5579,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusFilterConverter", L"Filter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusFilterKind>(arg);
 
             {
@@ -7673,19 +5775,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusToThicknessConverter", L"Convert", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -7694,7 +5783,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Convert(param0, param1, param2, param3);
+                    return py::require<winrt::Microsoft::UI::Xaml::Data::IValueConverter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusToThicknessConverter", "Convert", "Microsoft.UI.Xaml.Data.IValueConverter", 4).Convert(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -7718,19 +5807,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusToThicknessConverter", L"ConvertBack", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -7739,7 +5815,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ConvertBack(param0, param1, param2, param3);
+                    return py::require<winrt::Microsoft::UI::Xaml::Data::IValueConverter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusToThicknessConverter", "ConvertBack", "Microsoft.UI.Xaml.Data.IValueConverter", 4).ConvertBack(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -7759,19 +5835,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusToThicknessConverter", L"Multiplier");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7795,19 +5858,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusToThicknessConverter", L"Multiplier");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -7828,19 +5878,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusToThicknessConverter", L"ConversionKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7864,19 +5901,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusToThicknessConverter", L"ConversionKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusToThicknessConverterKind>(arg);
 
             {
@@ -8138,23 +6162,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.DragCompletedEventArgs", L"Canceled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgs>().Canceled();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IDragCompletedEventArgs>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.DragCompletedEventArgs", "Canceled", "Microsoft.UI.Xaml.Controls.Primitives.IDragCompletedEventArgs").Canceled();
             }());
         }
         catch (...)
@@ -8168,23 +6179,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.DragCompletedEventArgs", L"HorizontalChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgs>().HorizontalChange();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IDragCompletedEventArgs>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.DragCompletedEventArgs", "HorizontalChange", "Microsoft.UI.Xaml.Controls.Primitives.IDragCompletedEventArgs").HorizontalChange();
             }());
         }
         catch (...)
@@ -8198,23 +6196,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.DragCompletedEventArgs", L"VerticalChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgs>().VerticalChange();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IDragCompletedEventArgs>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.DragCompletedEventArgs", "VerticalChange", "Microsoft.UI.Xaml.Controls.Primitives.IDragCompletedEventArgs").VerticalChange();
             }());
         }
         catch (...)
@@ -8405,23 +6390,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.DragDeltaEventArgs", L"HorizontalChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventArgs>().HorizontalChange();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IDragDeltaEventArgs>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.DragDeltaEventArgs", "HorizontalChange", "Microsoft.UI.Xaml.Controls.Primitives.IDragDeltaEventArgs").HorizontalChange();
             }());
         }
         catch (...)
@@ -8435,23 +6407,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.DragDeltaEventArgs", L"VerticalChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventArgs>().VerticalChange();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IDragDeltaEventArgs>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.DragDeltaEventArgs", "VerticalChange", "Microsoft.UI.Xaml.Controls.Primitives.IDragDeltaEventArgs").VerticalChange();
             }());
         }
         catch (...)
@@ -8641,23 +6600,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.DragStartedEventArgs", L"HorizontalOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventArgs>().HorizontalOffset();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IDragStartedEventArgs>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.DragStartedEventArgs", "HorizontalOffset", "Microsoft.UI.Xaml.Controls.Primitives.IDragStartedEventArgs").HorizontalOffset();
             }());
         }
         catch (...)
@@ -8671,23 +6617,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.DragStartedEventArgs", L"VerticalOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventArgs>().VerticalOffset();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IDragStartedEventArgs>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.DragStartedEventArgs", "VerticalOffset", "Microsoft.UI.Xaml.Controls.Primitives.IDragStartedEventArgs").VerticalOffset();
             }());
         }
         catch (...)
@@ -8885,23 +6818,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"CreatePresenter", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides>().CreatePresenter();
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "CreatePresenter", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides", 0).CreatePresenter();
                 }());
             }
             catch (...)
@@ -8967,22 +6887,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"Hide", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().Hide();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "Hide", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase", 0).Hide();
                 }
 
                 Py_RETURN_NONE;
@@ -9008,24 +6915,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"OnProcessKeyboardAccelerators", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides>().OnProcessKeyboardAccelerators(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "OnProcessKeyboardAccelerators", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides", 1).OnProcessKeyboardAccelerators(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -9095,24 +6989,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FrameworkElement>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().ShowAt(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "ShowAt", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase", 1).ShowAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -9127,25 +7008,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().ShowAt(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "ShowAt", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase", 2).ShowAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -9214,24 +7082,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"TryInvokeKeyboardAccelerator", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().TryInvokeKeyboardAccelerator(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "TryInvokeKeyboardAccelerator", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase", 1).TryInvokeKeyboardAccelerator(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -9253,23 +7108,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"XamlRoot");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().XamlRoot();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "XamlRoot", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").XamlRoot();
             }());
         }
         catch (...)
@@ -9289,24 +7131,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"XamlRoot");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::XamlRoot>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().XamlRoot(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "XamlRoot", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").XamlRoot(param0);
             }
 
             return 0;
@@ -9322,23 +7151,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().ShowMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "ShowMode", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").ShowMode();
             }());
         }
         catch (...)
@@ -9358,24 +7174,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().ShowMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "ShowMode", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").ShowMode(param0);
             }
 
             return 0;
@@ -9391,23 +7194,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShouldConstrainToRootBounds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().ShouldConstrainToRootBounds();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "ShouldConstrainToRootBounds", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").ShouldConstrainToRootBounds();
             }());
         }
         catch (...)
@@ -9427,24 +7217,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShouldConstrainToRootBounds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().ShouldConstrainToRootBounds(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "ShouldConstrainToRootBounds", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").ShouldConstrainToRootBounds(param0);
             }
 
             return 0;
@@ -9460,23 +7237,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"Placement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().Placement();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "Placement", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").Placement();
             }());
         }
         catch (...)
@@ -9496,24 +7260,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"Placement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutPlacementMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().Placement(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "Placement", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").Placement(param0);
             }
 
             return 0;
@@ -9529,23 +7280,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"OverlayInputPassThroughElement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().OverlayInputPassThroughElement();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "OverlayInputPassThroughElement", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").OverlayInputPassThroughElement();
             }());
         }
         catch (...)
@@ -9565,24 +7303,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"OverlayInputPassThroughElement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().OverlayInputPassThroughElement(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "OverlayInputPassThroughElement", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").OverlayInputPassThroughElement(param0);
             }
 
             return 0;
@@ -9598,23 +7323,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"LightDismissOverlayMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().LightDismissOverlayMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "LightDismissOverlayMode", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").LightDismissOverlayMode();
             }());
         }
         catch (...)
@@ -9634,24 +7346,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"LightDismissOverlayMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::LightDismissOverlayMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().LightDismissOverlayMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "LightDismissOverlayMode", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").LightDismissOverlayMode(param0);
             }
 
             return 0;
@@ -9667,23 +7366,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"ElementSoundMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().ElementSoundMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "ElementSoundMode", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").ElementSoundMode();
             }());
         }
         catch (...)
@@ -9703,24 +7389,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"ElementSoundMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ElementSoundMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().ElementSoundMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "ElementSoundMode", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").ElementSoundMode(param0);
             }
 
             return 0;
@@ -9736,23 +7409,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"AreOpenCloseAnimationsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().AreOpenCloseAnimationsEnabled();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "AreOpenCloseAnimationsEnabled", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").AreOpenCloseAnimationsEnabled();
             }());
         }
         catch (...)
@@ -9772,24 +7432,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"AreOpenCloseAnimationsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().AreOpenCloseAnimationsEnabled(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "AreOpenCloseAnimationsEnabled", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").AreOpenCloseAnimationsEnabled(param0);
             }
 
             return 0;
@@ -9805,23 +7452,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusWhenDisabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().AllowFocusWhenDisabled();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "AllowFocusWhenDisabled", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").AllowFocusWhenDisabled();
             }());
         }
         catch (...)
@@ -9841,24 +7475,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusWhenDisabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().AllowFocusWhenDisabled(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "AllowFocusWhenDisabled", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").AllowFocusWhenDisabled(param0);
             }
 
             return 0;
@@ -9874,23 +7495,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusOnInteraction");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().AllowFocusOnInteraction();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "AllowFocusOnInteraction", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").AllowFocusOnInteraction();
             }());
         }
         catch (...)
@@ -9910,24 +7518,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusOnInteraction");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().AllowFocusOnInteraction(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "AllowFocusOnInteraction", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").AllowFocusOnInteraction(param0);
             }
 
             return 0;
@@ -9943,23 +7538,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"InputDevicePrefersPrimaryCommands");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().InputDevicePrefersPrimaryCommands();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "InputDevicePrefersPrimaryCommands", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").InputDevicePrefersPrimaryCommands();
             }());
         }
         catch (...)
@@ -9973,23 +7555,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"IsConstrainedToRootBounds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().IsConstrainedToRootBounds();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "IsConstrainedToRootBounds", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").IsConstrainedToRootBounds();
             }());
         }
         catch (...)
@@ -10003,23 +7572,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"IsOpen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().IsOpen();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "IsOpen", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").IsOpen();
             }());
         }
         catch (...)
@@ -10033,23 +7589,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"Target");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().Target();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "Target", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").Target();
             }());
         }
         catch (...)
@@ -10063,23 +7606,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"SystemBackdrop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().SystemBackdrop();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "SystemBackdrop", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase2").SystemBackdrop();
             }());
         }
         catch (...)
@@ -10099,24 +7629,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"SystemBackdrop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::SystemBackdrop>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().SystemBackdrop(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "SystemBackdrop", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase2").SystemBackdrop(param0);
             }
 
             return 0;
@@ -10552,25 +8069,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().Closed(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "Closed", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").Closed(param0);
             }());
         }
         catch (...)
@@ -10584,24 +8088,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().Closed(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "Closed", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").Closed(param0);
             }
 
             Py_RETURN_NONE;
@@ -10617,25 +8108,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"Closing");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase, winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().Closing(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "Closing", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").Closing(param0);
             }());
         }
         catch (...)
@@ -10649,24 +8127,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"Closing");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().Closing(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "Closing", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").Closing(param0);
             }
 
             Py_RETURN_NONE;
@@ -10682,25 +8147,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"Opened");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().Opened(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "Opened", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").Opened(param0);
             }());
         }
         catch (...)
@@ -10714,24 +8166,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"Opened");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().Opened(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "Opened", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").Opened(param0);
             }
 
             Py_RETURN_NONE;
@@ -10747,25 +8186,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"Opening");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().Opening(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "Opening", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").Opening(param0);
             }());
         }
         catch (...)
@@ -10779,24 +8205,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"Opening");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>().Opening(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutBase>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", "Opening", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase").Opening(param0);
             }
 
             Py_RETURN_NONE;
@@ -10941,19 +8354,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs", L"Cancel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10977,19 +8377,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs", L"Cancel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -11161,23 +8548,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"ShowMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().ShowMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutShowOptions>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", "ShowMode", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutShowOptions").ShowMode();
             }());
         }
         catch (...)
@@ -11197,24 +8571,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"ShowMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().ShowMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutShowOptions>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", "ShowMode", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutShowOptions").ShowMode(param0);
             }
 
             return 0;
@@ -11230,23 +8591,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().Position();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutShowOptions>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", "Position", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutShowOptions").Position();
             }());
         }
         catch (...)
@@ -11266,24 +8614,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Point>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().Position(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutShowOptions>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", "Position", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutShowOptions").Position(param0);
             }
 
             return 0;
@@ -11299,23 +8634,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"Placement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().Placement();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutShowOptions>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", "Placement", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutShowOptions").Placement();
             }());
         }
         catch (...)
@@ -11335,24 +8657,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"Placement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutPlacementMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().Placement(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutShowOptions>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", "Placement", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutShowOptions").Placement(param0);
             }
 
             return 0;
@@ -11368,23 +8677,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"ExclusionRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().ExclusionRect();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutShowOptions>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", "ExclusionRect", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutShowOptions").ExclusionRect();
             }());
         }
         catch (...)
@@ -11404,24 +8700,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"ExclusionRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Rect>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().ExclusionRect(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IFlyoutShowOptions>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions", "ExclusionRect", "Microsoft.UI.Xaml.Controls.Primitives.IFlyoutShowOptions").ExclusionRect(param0);
             }
 
             return 0;
@@ -11740,23 +9023,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectionCheckMarkVisualEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectionCheckMarkVisualEnabled();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "SelectionCheckMarkVisualEnabled", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").SelectionCheckMarkVisualEnabled();
             }());
         }
         catch (...)
@@ -11776,24 +9046,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectionCheckMarkVisualEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectionCheckMarkVisualEnabled(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "SelectionCheckMarkVisualEnabled", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").SelectionCheckMarkVisualEnabled(param0);
             }
 
             return 0;
@@ -11809,23 +9066,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedPointerOverBorderBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "SelectedPointerOverBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").SelectedPointerOverBorderBrush();
             }());
         }
         catch (...)
@@ -11845,24 +9089,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedPointerOverBorderBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "SelectedPointerOverBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").SelectedPointerOverBorderBrush(param0);
             }
 
             return 0;
@@ -11878,23 +9109,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedPointerOverBackground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "SelectedPointerOverBackground", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").SelectedPointerOverBackground();
             }());
         }
         catch (...)
@@ -11914,24 +9132,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedPointerOverBackground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "SelectedPointerOverBackground", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").SelectedPointerOverBackground(param0);
             }
 
             return 0;
@@ -11947,23 +9152,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedForeground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedForeground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "SelectedForeground", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").SelectedForeground();
             }());
         }
         catch (...)
@@ -11983,24 +9175,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedForeground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedForeground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "SelectedForeground", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").SelectedForeground(param0);
             }
 
             return 0;
@@ -12016,23 +9195,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBorderThickness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedBorderThickness();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "SelectedBorderThickness", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").SelectedBorderThickness();
             }());
         }
         catch (...)
@@ -12052,24 +9218,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBorderThickness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedBorderThickness(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "SelectedBorderThickness", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").SelectedBorderThickness(param0);
             }
 
             return 0;
@@ -12085,23 +9238,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedBackground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "SelectedBackground", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").SelectedBackground();
             }());
         }
         catch (...)
@@ -12121,24 +9261,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedBackground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "SelectedBackground", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").SelectedBackground(param0);
             }
 
             return 0;
@@ -12154,23 +9281,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ReorderHintOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().ReorderHintOffset();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "ReorderHintOffset", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").ReorderHintOffset();
             }());
         }
         catch (...)
@@ -12190,24 +9304,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ReorderHintOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().ReorderHintOffset(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "ReorderHintOffset", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").ReorderHintOffset(param0);
             }
 
             return 0;
@@ -12223,23 +9324,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackgroundMargin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().PointerOverBackgroundMargin();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "PointerOverBackgroundMargin", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").PointerOverBackgroundMargin();
             }());
         }
         catch (...)
@@ -12259,24 +9347,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackgroundMargin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().PointerOverBackgroundMargin(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "PointerOverBackgroundMargin", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").PointerOverBackgroundMargin(param0);
             }
 
             return 0;
@@ -12292,23 +9367,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().PointerOverBackground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "PointerOverBackground", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").PointerOverBackground();
             }());
         }
         catch (...)
@@ -12328,24 +9390,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().PointerOverBackground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "PointerOverBackground", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").PointerOverBackground(param0);
             }
 
             return 0;
@@ -12361,23 +9410,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PlaceholderBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().PlaceholderBackground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "PlaceholderBackground", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").PlaceholderBackground();
             }());
         }
         catch (...)
@@ -12397,24 +9433,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PlaceholderBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().PlaceholderBackground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "PlaceholderBackground", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").PlaceholderBackground(param0);
             }
 
             return 0;
@@ -12430,23 +9453,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterVerticalContentAlignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().GridViewItemPresenterVerticalContentAlignment();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "GridViewItemPresenterVerticalContentAlignment", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").GridViewItemPresenterVerticalContentAlignment();
             }());
         }
         catch (...)
@@ -12466,24 +9476,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterVerticalContentAlignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::VerticalAlignment>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().GridViewItemPresenterVerticalContentAlignment(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "GridViewItemPresenterVerticalContentAlignment", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").GridViewItemPresenterVerticalContentAlignment(param0);
             }
 
             return 0;
@@ -12499,23 +9496,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterPadding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().GridViewItemPresenterPadding();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "GridViewItemPresenterPadding", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").GridViewItemPresenterPadding();
             }());
         }
         catch (...)
@@ -12535,24 +9519,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterPadding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().GridViewItemPresenterPadding(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "GridViewItemPresenterPadding", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").GridViewItemPresenterPadding(param0);
             }
 
             return 0;
@@ -12568,23 +9539,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterHorizontalContentAlignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().GridViewItemPresenterHorizontalContentAlignment();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "GridViewItemPresenterHorizontalContentAlignment", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").GridViewItemPresenterHorizontalContentAlignment();
             }());
         }
         catch (...)
@@ -12604,24 +9562,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterHorizontalContentAlignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::HorizontalAlignment>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().GridViewItemPresenterHorizontalContentAlignment(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "GridViewItemPresenterHorizontalContentAlignment", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").GridViewItemPresenterHorizontalContentAlignment(param0);
             }
 
             return 0;
@@ -12637,23 +9582,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"FocusBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().FocusBorderBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "FocusBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").FocusBorderBrush();
             }());
         }
         catch (...)
@@ -12673,24 +9605,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"FocusBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().FocusBorderBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "FocusBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").FocusBorderBrush(param0);
             }
 
             return 0;
@@ -12706,23 +9625,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DragOpacity();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "DragOpacity", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").DragOpacity();
             }());
         }
         catch (...)
@@ -12742,24 +9648,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DragOpacity(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "DragOpacity", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").DragOpacity(param0);
             }
 
             return 0;
@@ -12775,23 +9668,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragForeground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DragForeground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "DragForeground", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").DragForeground();
             }());
         }
         catch (...)
@@ -12811,24 +9691,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragForeground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DragForeground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "DragForeground", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").DragForeground(param0);
             }
 
             return 0;
@@ -12844,23 +9711,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DragBackground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "DragBackground", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").DragBackground();
             }());
         }
         catch (...)
@@ -12880,24 +9734,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DragBackground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "DragBackground", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").DragBackground(param0);
             }
 
             return 0;
@@ -12913,23 +9754,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DisabledOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DisabledOpacity();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "DisabledOpacity", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").DisabledOpacity();
             }());
         }
         catch (...)
@@ -12949,24 +9777,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DisabledOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DisabledOpacity(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "DisabledOpacity", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").DisabledOpacity(param0);
             }
 
             return 0;
@@ -12982,23 +9797,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ContentMargin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().ContentMargin();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "ContentMargin", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").ContentMargin();
             }());
         }
         catch (...)
@@ -13018,24 +9820,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ContentMargin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().ContentMargin(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "ContentMargin", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").ContentMargin(param0);
             }
 
             return 0;
@@ -13051,23 +9840,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckSelectingBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().CheckSelectingBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "CheckSelectingBrush", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").CheckSelectingBrush();
             }());
         }
         catch (...)
@@ -13087,24 +9863,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckSelectingBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().CheckSelectingBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "CheckSelectingBrush", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").CheckSelectingBrush(param0);
             }
 
             return 0;
@@ -13120,23 +9883,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckHintBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().CheckHintBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "CheckHintBrush", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").CheckHintBrush();
             }());
         }
         catch (...)
@@ -13156,24 +9906,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckHintBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().CheckHintBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "CheckHintBrush", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").CheckHintBrush(param0);
             }
 
             return 0;
@@ -13189,23 +9926,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().CheckBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "CheckBrush", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").CheckBrush();
             }());
         }
         catch (...)
@@ -13225,24 +9949,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().CheckBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter", "CheckBrush", "Microsoft.UI.Xaml.Controls.Primitives.IGridViewItemPresenter").CheckBrush(param0);
             }
 
             return 0;
@@ -14046,19 +10757,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.GridViewItemTemplateSettings", L"DragItemsCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14399,23 +11097,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.InfoBarPanel", L"VerticalOrientationPadding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel>().VerticalOrientationPadding();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IInfoBarPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.InfoBarPanel", "VerticalOrientationPadding", "Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanel").VerticalOrientationPadding();
             }());
         }
         catch (...)
@@ -14435,24 +11120,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.InfoBarPanel", L"VerticalOrientationPadding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel>().VerticalOrientationPadding(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IInfoBarPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.InfoBarPanel", "VerticalOrientationPadding", "Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanel").VerticalOrientationPadding(param0);
             }
 
             return 0;
@@ -14468,23 +11140,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.InfoBarPanel", L"HorizontalOrientationPadding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel>().HorizontalOrientationPadding();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IInfoBarPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.InfoBarPanel", "HorizontalOrientationPadding", "Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanel").HorizontalOrientationPadding();
             }());
         }
         catch (...)
@@ -14504,24 +11163,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.InfoBarPanel", L"HorizontalOrientationPadding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel>().HorizontalOrientationPadding(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IInfoBarPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.InfoBarPanel", "HorizontalOrientationPadding", "Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanel").HorizontalOrientationPadding(param0);
             }
 
             return 0;
@@ -14751,19 +11397,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs", L"Action");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14781,19 +11414,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs", L"ItemCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14811,19 +11431,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs", L"ItemUICount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14841,19 +11448,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs", L"OldPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14871,19 +11465,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14995,19 +11576,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"Convert", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -15016,7 +11584,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Convert(param0, param1, param2, param3);
+                    return py::require<winrt::Microsoft::UI::Xaml::Data::IValueConverter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", "Convert", "Microsoft.UI.Xaml.Data.IValueConverter", 4).Convert(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -15040,19 +11608,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"ConvertBack", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -15061,7 +11616,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ConvertBack(param0, param1, param2, param3);
+                    return py::require<winrt::Microsoft::UI::Xaml::Data::IValueConverter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", "ConvertBack", "Microsoft.UI.Xaml.Data.IValueConverter", 4).ConvertBack(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -15081,19 +11636,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"Enabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15117,19 +11659,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"Enabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
@@ -15150,19 +11679,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"Disabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15186,19 +11702,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"Disabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
@@ -15395,19 +11898,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"Convert", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -15416,7 +11906,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Convert(param0, param1, param2, param3);
+                    return py::require<winrt::Microsoft::UI::Xaml::Data::IValueConverter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", "Convert", "Microsoft.UI.Xaml.Data.IValueConverter", 4).Convert(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -15440,19 +11930,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"ConvertBack", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -15461,7 +11938,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ConvertBack(param0, param1, param2, param3);
+                    return py::require<winrt::Microsoft::UI::Xaml::Data::IValueConverter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", "ConvertBack", "Microsoft.UI.Xaml.Data.IValueConverter", 4).ConvertBack(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -15481,19 +11958,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"Enabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15517,19 +11981,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"Enabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
@@ -15550,19 +12001,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"Disabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15586,19 +12024,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"Disabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
@@ -16069,23 +12494,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterVerticalContentAlignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ListViewItemPresenterVerticalContentAlignment();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "ListViewItemPresenterVerticalContentAlignment", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").ListViewItemPresenterVerticalContentAlignment();
             }());
         }
         catch (...)
@@ -16105,24 +12517,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterVerticalContentAlignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::VerticalAlignment>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ListViewItemPresenterVerticalContentAlignment(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "ListViewItemPresenterVerticalContentAlignment", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").ListViewItemPresenterVerticalContentAlignment(param0);
             }
 
             return 0;
@@ -16138,23 +12537,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterPadding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ListViewItemPresenterPadding();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "ListViewItemPresenterPadding", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").ListViewItemPresenterPadding();
             }());
         }
         catch (...)
@@ -16174,24 +12560,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterPadding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ListViewItemPresenterPadding(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "ListViewItemPresenterPadding", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").ListViewItemPresenterPadding(param0);
             }
 
             return 0;
@@ -16207,23 +12580,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterHorizontalContentAlignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ListViewItemPresenterHorizontalContentAlignment();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "ListViewItemPresenterHorizontalContentAlignment", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").ListViewItemPresenterHorizontalContentAlignment();
             }());
         }
         catch (...)
@@ -16243,24 +12603,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterHorizontalContentAlignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::HorizontalAlignment>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ListViewItemPresenterHorizontalContentAlignment(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "ListViewItemPresenterHorizontalContentAlignment", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").ListViewItemPresenterHorizontalContentAlignment(param0);
             }
 
             return 0;
@@ -16276,23 +12623,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusSecondaryBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().FocusSecondaryBorderBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "FocusSecondaryBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").FocusSecondaryBorderBrush();
             }());
         }
         catch (...)
@@ -16312,24 +12646,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusSecondaryBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().FocusSecondaryBorderBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "FocusSecondaryBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").FocusSecondaryBorderBrush(param0);
             }
 
             return 0;
@@ -16345,23 +12666,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().FocusBorderBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "FocusBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").FocusBorderBrush();
             }());
         }
         catch (...)
@@ -16381,24 +12689,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().FocusBorderBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "FocusBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").FocusBorderBrush(param0);
             }
 
             return 0;
@@ -16414,23 +12709,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DragOpacity();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "DragOpacity", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").DragOpacity();
             }());
         }
         catch (...)
@@ -16450,24 +12732,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DragOpacity(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "DragOpacity", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").DragOpacity(param0);
             }
 
             return 0;
@@ -16483,23 +12752,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBackground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "RevealBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").RevealBackground();
             }());
         }
         catch (...)
@@ -16519,24 +12775,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBackground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "RevealBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").RevealBackground(param0);
             }
 
             return 0;
@@ -16552,23 +12795,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DragBackground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "DragBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").DragBackground();
             }());
         }
         catch (...)
@@ -16588,24 +12818,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DragBackground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "DragBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").DragBackground(param0);
             }
 
             return 0;
@@ -16621,23 +12838,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DisabledOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DisabledOpacity();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "DisabledOpacity", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").DisabledOpacity();
             }());
         }
         catch (...)
@@ -16657,24 +12861,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DisabledOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DisabledOpacity(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "DisabledOpacity", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").DisabledOpacity(param0);
             }
 
             return 0;
@@ -16690,23 +12881,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ContentMargin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ContentMargin();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "ContentMargin", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").ContentMargin();
             }());
         }
         catch (...)
@@ -16726,24 +12904,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ContentMargin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ContentMargin(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "ContentMargin", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").ContentMargin(param0);
             }
 
             return 0;
@@ -16759,23 +12924,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckSelectingBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckSelectingBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckSelectingBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckSelectingBrush();
             }());
         }
         catch (...)
@@ -16795,24 +12947,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckSelectingBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckSelectingBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckSelectingBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckSelectingBrush(param0);
             }
 
             return 0;
@@ -16828,23 +12967,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckPressedBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckPressedBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckPressedBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckPressedBrush();
             }());
         }
         catch (...)
@@ -16864,24 +12990,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckPressedBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckPressedBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckPressedBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckPressedBrush(param0);
             }
 
             return 0;
@@ -16897,23 +13010,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckMode", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckMode();
             }());
         }
         catch (...)
@@ -16933,24 +13033,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenterCheckMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckMode", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckMode(param0);
             }
 
             return 0;
@@ -16966,23 +13053,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckHintBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckHintBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckHintBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckHintBrush();
             }());
         }
         catch (...)
@@ -17002,24 +13076,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckHintBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckHintBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckHintBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckHintBrush(param0);
             }
 
             return 0;
@@ -17035,23 +13096,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxBorderBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxBorderBrush();
             }());
         }
         catch (...)
@@ -17071,24 +13119,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxBorderBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxBorderBrush(param0);
             }
 
             return 0;
@@ -17104,23 +13139,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBrush();
             }());
         }
         catch (...)
@@ -17140,24 +13162,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBrush(param0);
             }
 
             return 0;
@@ -17173,23 +13182,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPressedBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedPressedBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxSelectedPressedBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxSelectedPressedBrush();
             }());
         }
         catch (...)
@@ -17209,24 +13205,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPressedBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedPressedBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxSelectedPressedBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxSelectedPressedBrush(param0);
             }
 
             return 0;
@@ -17242,23 +13225,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPointerOverBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedPointerOverBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxSelectedPointerOverBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxSelectedPointerOverBrush();
             }());
         }
         catch (...)
@@ -17278,24 +13248,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPointerOverBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedPointerOverBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxSelectedPointerOverBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxSelectedPointerOverBrush(param0);
             }
 
             return 0;
@@ -17311,23 +13268,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedDisabledBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedDisabledBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxSelectedDisabledBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxSelectedDisabledBrush();
             }());
         }
         catch (...)
@@ -17347,24 +13291,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedDisabledBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedDisabledBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxSelectedDisabledBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxSelectedDisabledBrush(param0);
             }
 
             return 0;
@@ -17380,23 +13311,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxSelectedBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxSelectedBrush();
             }());
         }
         catch (...)
@@ -17416,24 +13334,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxSelectedBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxSelectedBrush(param0);
             }
 
             return 0;
@@ -17449,23 +13354,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPressedBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxPressedBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxPressedBrush();
             }());
         }
         catch (...)
@@ -17485,24 +13377,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPressedBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxPressedBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxPressedBrush(param0);
             }
 
             return 0;
@@ -17518,23 +13397,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionCheckMarkVisualEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionCheckMarkVisualEnabled();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionCheckMarkVisualEnabled", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionCheckMarkVisualEnabled();
             }());
         }
         catch (...)
@@ -17554,24 +13420,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionCheckMarkVisualEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionCheckMarkVisualEnabled(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionCheckMarkVisualEnabled", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionCheckMarkVisualEnabled(param0);
             }
 
             return 0;
@@ -17587,23 +13440,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPointerOverBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxPointerOverBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxPointerOverBrush();
             }());
         }
         catch (...)
@@ -17623,24 +13463,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPointerOverBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxPointerOverBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxPointerOverBrush(param0);
             }
 
             return 0;
@@ -17656,23 +13483,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPointerOverBorderBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxPointerOverBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxPointerOverBorderBrush();
             }());
         }
         catch (...)
@@ -17692,24 +13506,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPointerOverBorderBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxPointerOverBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxPointerOverBorderBrush(param0);
             }
 
             return 0;
@@ -17725,23 +13526,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxDisabledBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxDisabledBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxDisabledBrush();
             }());
         }
         catch (...)
@@ -17761,24 +13549,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxDisabledBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxDisabledBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxDisabledBrush(param0);
             }
 
             return 0;
@@ -17794,23 +13569,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxDisabledBorderBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxDisabledBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxDisabledBorderBrush();
             }());
         }
         catch (...)
@@ -17830,24 +13592,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxDisabledBorderBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxDisabledBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxDisabledBorderBrush(param0);
             }
 
             return 0;
@@ -17863,23 +13612,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxCornerRadius");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxCornerRadius();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxCornerRadius", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxCornerRadius();
             }());
         }
         catch (...)
@@ -17899,24 +13635,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxCornerRadius");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::CornerRadius>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxCornerRadius(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxCornerRadius", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxCornerRadius(param0);
             }
 
             return 0;
@@ -17932,23 +13655,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxBrush();
             }());
         }
         catch (...)
@@ -17968,24 +13678,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxBrush(param0);
             }
 
             return 0;
@@ -18001,23 +13698,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckDisabledBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckDisabledBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckDisabledBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckDisabledBrush();
             }());
         }
         catch (...)
@@ -18037,24 +13721,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckDisabledBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckDisabledBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckDisabledBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckDisabledBrush(param0);
             }
 
             return 0;
@@ -18070,23 +13741,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PlaceholderBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PlaceholderBackground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "PlaceholderBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").PlaceholderBackground();
             }());
         }
         catch (...)
@@ -18106,24 +13764,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PlaceholderBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PlaceholderBackground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "PlaceholderBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").PlaceholderBackground(param0);
             }
 
             return 0;
@@ -18139,23 +13784,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedDisabledBorderBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedDisabledBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedDisabledBorderBrush();
             }());
         }
         catch (...)
@@ -18175,24 +13807,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedDisabledBorderBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedDisabledBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedDisabledBorderBrush(param0);
             }
 
             return 0;
@@ -18208,23 +13827,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPressedBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorPressedBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionIndicatorPressedBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionIndicatorPressedBrush();
             }());
         }
         catch (...)
@@ -18244,24 +13850,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPressedBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorPressedBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionIndicatorPressedBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionIndicatorPressedBrush(param0);
             }
 
             return 0;
@@ -18277,23 +13870,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPointerOverBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorPointerOverBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionIndicatorPointerOverBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionIndicatorPointerOverBrush();
             }());
         }
         catch (...)
@@ -18313,24 +13893,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPointerOverBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorPointerOverBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionIndicatorPointerOverBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionIndicatorPointerOverBrush(param0);
             }
 
             return 0;
@@ -18346,23 +13913,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionIndicatorMode", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionIndicatorMode();
             }());
         }
         catch (...)
@@ -18382,24 +13936,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionIndicatorMode", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionIndicatorMode(param0);
             }
 
             return 0;
@@ -18415,23 +13956,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorDisabledBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorDisabledBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionIndicatorDisabledBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionIndicatorDisabledBrush();
             }());
         }
         catch (...)
@@ -18451,24 +13979,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorDisabledBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorDisabledBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionIndicatorDisabledBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionIndicatorDisabledBrush(param0);
             }
 
             return 0;
@@ -18484,23 +13999,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorCornerRadius");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorCornerRadius();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionIndicatorCornerRadius", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionIndicatorCornerRadius();
             }());
         }
         catch (...)
@@ -18520,24 +14022,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorCornerRadius");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::CornerRadius>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorCornerRadius(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionIndicatorCornerRadius", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionIndicatorCornerRadius(param0);
             }
 
             return 0;
@@ -18553,23 +14042,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionIndicatorBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionIndicatorBrush();
             }());
         }
         catch (...)
@@ -18589,24 +14065,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionIndicatorBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionIndicatorBrush(param0);
             }
 
             return 0;
@@ -18622,23 +14085,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPressedBorderBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxPressedBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxPressedBorderBrush();
             }());
         }
         catch (...)
@@ -18658,24 +14108,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPressedBorderBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "CheckBoxPressedBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").CheckBoxPressedBorderBrush(param0);
             }
 
             return 0;
@@ -18691,23 +14128,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPressedBorderBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedPressedBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedPressedBorderBrush();
             }());
         }
         catch (...)
@@ -18727,24 +14151,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPressedBorderBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedPressedBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedPressedBorderBrush(param0);
             }
 
             return 0;
@@ -18760,23 +14171,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPressedBackground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedPressedBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedPressedBackground();
             }());
         }
         catch (...)
@@ -18796,24 +14194,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPressedBackground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedPressedBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedPressedBackground(param0);
             }
 
             return 0;
@@ -18829,23 +14214,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPointerOverBorderBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedPointerOverBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedPointerOverBorderBrush();
             }());
         }
         catch (...)
@@ -18865,24 +14237,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPointerOverBorderBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedPointerOverBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedPointerOverBorderBrush(param0);
             }
 
             return 0;
@@ -18898,23 +14257,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPointerOverBackground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedPointerOverBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedPointerOverBackground();
             }());
         }
         catch (...)
@@ -18934,24 +14280,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPointerOverBackground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedPointerOverBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedPointerOverBackground(param0);
             }
 
             return 0;
@@ -18967,23 +14300,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedInnerBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedInnerBorderBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedInnerBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedInnerBorderBrush();
             }());
         }
         catch (...)
@@ -19003,24 +14323,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedInnerBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedInnerBorderBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedInnerBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedInnerBorderBrush(param0);
             }
 
             return 0;
@@ -19036,23 +14343,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedForeground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedForeground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedForeground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedForeground();
             }());
         }
         catch (...)
@@ -19072,24 +14366,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedForeground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedForeground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedForeground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedForeground(param0);
             }
 
             return 0;
@@ -19105,23 +14386,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorVisualEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorVisualEnabled();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionIndicatorVisualEnabled", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionIndicatorVisualEnabled();
             }());
         }
         catch (...)
@@ -19141,24 +14409,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorVisualEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorVisualEnabled(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectionIndicatorVisualEnabled", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectionIndicatorVisualEnabled(param0);
             }
 
             return 0;
@@ -19174,23 +14429,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedDisabledBackground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedDisabledBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedDisabledBackground();
             }());
         }
         catch (...)
@@ -19210,24 +14452,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedDisabledBackground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedDisabledBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedDisabledBackground(param0);
             }
 
             return 0;
@@ -19243,23 +14472,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderThickness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedBorderThickness();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedBorderThickness", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedBorderThickness();
             }());
         }
         catch (...)
@@ -19279,24 +14495,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderThickness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedBorderThickness(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedBorderThickness", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedBorderThickness(param0);
             }
 
             return 0;
@@ -19312,23 +14515,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedBorderBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedBorderBrush();
             }());
         }
         catch (...)
@@ -19348,24 +14538,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedBorderBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedBorderBrush(param0);
             }
 
             return 0;
@@ -19381,23 +14558,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedBackground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedBackground();
             }());
         }
         catch (...)
@@ -19417,24 +14581,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedBackground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "SelectedBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").SelectedBackground(param0);
             }
 
             return 0;
@@ -19450,23 +14601,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderThickness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBorderThickness();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "RevealBorderThickness", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").RevealBorderThickness();
             }());
         }
         catch (...)
@@ -19486,24 +14624,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderThickness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBorderThickness(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "RevealBorderThickness", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").RevealBorderThickness(param0);
             }
 
             return 0;
@@ -19519,23 +14644,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBorderBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "RevealBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").RevealBorderBrush();
             }());
         }
         catch (...)
@@ -19555,24 +14667,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBorderBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "RevealBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").RevealBorderBrush(param0);
             }
 
             return 0;
@@ -19588,23 +14687,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackgroundShowsAboveContent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBackgroundShowsAboveContent();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "RevealBackgroundShowsAboveContent", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").RevealBackgroundShowsAboveContent();
             }());
         }
         catch (...)
@@ -19624,24 +14710,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackgroundShowsAboveContent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBackgroundShowsAboveContent(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "RevealBackgroundShowsAboveContent", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").RevealBackgroundShowsAboveContent(param0);
             }
 
             return 0;
@@ -19657,23 +14730,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragForeground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DragForeground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "DragForeground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").DragForeground();
             }());
         }
         catch (...)
@@ -19693,24 +14753,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragForeground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DragForeground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "DragForeground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").DragForeground(param0);
             }
 
             return 0;
@@ -19726,23 +14773,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ReorderHintOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ReorderHintOffset();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "ReorderHintOffset", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").ReorderHintOffset();
             }());
         }
         catch (...)
@@ -19762,24 +14796,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ReorderHintOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ReorderHintOffset(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "ReorderHintOffset", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").ReorderHintOffset(param0);
             }
 
             return 0;
@@ -19795,23 +14816,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PressedBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PressedBackground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "PressedBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").PressedBackground();
             }());
         }
         catch (...)
@@ -19831,24 +14839,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PressedBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PressedBackground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "PressedBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").PressedBackground(param0);
             }
 
             return 0;
@@ -19864,23 +14859,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverForeground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverForeground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "PointerOverForeground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").PointerOverForeground();
             }());
         }
         catch (...)
@@ -19900,24 +14882,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverForeground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverForeground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "PointerOverForeground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").PointerOverForeground(param0);
             }
 
             return 0;
@@ -19933,23 +14902,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverBorderBrush();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "PointerOverBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").PointerOverBorderBrush();
             }());
         }
         catch (...)
@@ -19969,24 +14925,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBorderBrush");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverBorderBrush(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "PointerOverBorderBrush", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").PointerOverBorderBrush(param0);
             }
 
             return 0;
@@ -20002,23 +14945,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackgroundMargin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverBackgroundMargin();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "PointerOverBackgroundMargin", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").PointerOverBackgroundMargin();
             }());
         }
         catch (...)
@@ -20038,24 +14968,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackgroundMargin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverBackgroundMargin(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "PointerOverBackgroundMargin", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").PointerOverBackgroundMargin(param0);
             }
 
             return 0;
@@ -20071,23 +14988,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverBackground();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "PointerOverBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").PointerOverBackground();
             }());
         }
         catch (...)
@@ -20107,24 +15011,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverBackground(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter", "PointerOverBackground", "Microsoft.UI.Xaml.Controls.Primitives.IListViewItemPresenter").PointerOverBackground(param0);
             }
 
             return 0;
@@ -22112,19 +17003,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ListViewItemTemplateSettings", L"DragItemsCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22206,19 +17084,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"ShouldLoop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22242,19 +17107,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"ShouldLoop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -22275,19 +17127,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22311,19 +17150,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
@@ -22344,19 +17170,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22380,19 +17193,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -22413,19 +17213,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"Items");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22449,19 +17236,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"Items");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(arg);
 
             {
@@ -22482,19 +17256,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22518,19 +17279,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -22551,19 +17299,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemTemplate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22587,19 +17322,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemTemplate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DataTemplate>(arg);
 
             {
@@ -22620,19 +17342,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22656,19 +17365,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -22899,19 +17595,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectionChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::SelectionChangedEventHandler>(arg);
 
             return py::convert([&]()
@@ -22931,19 +17614,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectionChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -23131,26 +17801,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"GetIrregularSnapPoints", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetIrregularSnapPoints(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", "GetIrregularSnapPoints", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", 2).GetIrregularSnapPoints(param0, param1);
                 }());
             }
             catch (...)
@@ -23174,19 +17831,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"GetRegularSnapPoints", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
                 float param2{};
@@ -23194,7 +17838,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetRegularSnapPoints(param0, param1, param2);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", "GetRegularSnapPoints", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", 2).GetRegularSnapPoints(param0, param1, param2);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -23227,23 +17871,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"AreHorizontalSnapPointsRegular");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AreHorizontalSnapPointsRegular();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", "AreHorizontalSnapPointsRegular", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").AreHorizontalSnapPointsRegular();
             }());
         }
         catch (...)
@@ -23257,23 +17888,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"AreVerticalSnapPointsRegular");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AreVerticalSnapPointsRegular();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", "AreVerticalSnapPointsRegular", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").AreVerticalSnapPointsRegular();
             }());
         }
         catch (...)
@@ -23287,25 +17905,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"HorizontalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HorizontalSnapPointsChanged(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", "HorizontalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").HorizontalSnapPointsChanged(param0);
             }());
         }
         catch (...)
@@ -23319,24 +17924,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"HorizontalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HorizontalSnapPointsChanged(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", "HorizontalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").HorizontalSnapPointsChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -23352,25 +17944,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"VerticalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.VerticalSnapPointsChanged(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", "VerticalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").VerticalSnapPointsChanged(param0);
             }());
         }
         catch (...)
@@ -23384,24 +17963,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"VerticalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.VerticalSnapPointsChanged(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", "VerticalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").VerticalSnapPointsChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -23488,19 +18054,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.MenuFlyoutItemTemplateSettings", L"KeyboardAcceleratorTextMinWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23582,19 +18135,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.MenuFlyoutPresenterTemplateSettings", L"FlyoutContentMinWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23763,23 +18303,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.MonochromaticOverlayPresenter", L"SourceElement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter>().SourceElement();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IMonochromaticOverlayPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.MonochromaticOverlayPresenter", "SourceElement", "Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenter").SourceElement();
             }());
         }
         catch (...)
@@ -23799,24 +18326,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.MonochromaticOverlayPresenter", L"SourceElement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter>().SourceElement(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IMonochromaticOverlayPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.MonochromaticOverlayPresenter", "SourceElement", "Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenter").SourceElement(param0);
             }
 
             return 0;
@@ -23832,23 +18346,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.MonochromaticOverlayPresenter", L"ReplacementColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter>().ReplacementColor();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IMonochromaticOverlayPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.MonochromaticOverlayPresenter", "ReplacementColor", "Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenter").ReplacementColor();
             }());
         }
         catch (...)
@@ -23868,24 +18369,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.MonochromaticOverlayPresenter", L"ReplacementColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter>().ReplacementColor(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IMonochromaticOverlayPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.MonochromaticOverlayPresenter", "ReplacementColor", "Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenter").ReplacementColor(param0);
             }
 
             return 0;
@@ -24136,23 +18624,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", L"Icon");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter>().Icon();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::INavigationViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", "Icon", "Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter").Icon();
             }());
         }
         catch (...)
@@ -24172,24 +18647,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", L"Icon");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::IconElement>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter>().Icon(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::INavigationViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", "Icon", "Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter").Icon(param0);
             }
 
             return 0;
@@ -24205,23 +18667,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", L"TemplateSettings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter>().TemplateSettings();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::INavigationViewItemPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", "TemplateSettings", "Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter").TemplateSettings();
             }());
         }
         catch (...)
@@ -24235,23 +18684,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", L"InfoBadge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter>().InfoBadge();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::INavigationViewItemPresenter2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", "InfoBadge", "Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter2").InfoBadge();
             }());
         }
         catch (...)
@@ -24271,24 +18707,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", L"InfoBadge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::InfoBadge>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter>().InfoBadge(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::INavigationViewItemPresenter2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", "InfoBadge", "Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter2").InfoBadge(param0);
             }
 
             return 0;
@@ -24571,23 +18994,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenterTemplateSettings", L"IconWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettings>().IconWidth();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::INavigationViewItemPresenterTemplateSettings>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenterTemplateSettings", "IconWidth", "Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterTemplateSettings").IconWidth();
             }());
         }
         catch (...)
@@ -24601,23 +19011,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenterTemplateSettings", L"SmallerIconWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettings>().SmallerIconWidth();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::INavigationViewItemPresenterTemplateSettings>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenterTemplateSettings", "SmallerIconWidth", "Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterTemplateSettings").SmallerIconWidth();
             }());
         }
         catch (...)
@@ -24783,26 +19180,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"GetInsertionIndexes", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 int32_t param1{};
                 int32_t param2{};
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().GetInsertionIndexes(param0, param1, param2);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::IInsertionPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "GetInsertionIndexes", "Microsoft.UI.Xaml.Controls.IInsertionPanel", 1).GetInsertionIndexes(param0, param1, param2);
                 }
 
                 py::pyobj_handle out1{ py::convert(param1) };
@@ -24839,26 +19223,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"GetIrregularSnapPoints", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().GetIrregularSnapPoints(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "GetIrregularSnapPoints", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", 2).GetIrregularSnapPoints(param0, param1);
                 }());
             }
             catch (...)
@@ -24882,19 +19253,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"GetRegularSnapPoints", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
                 float param2{};
@@ -24902,7 +19260,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().GetRegularSnapPoints(param0, param1, param2);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "GetRegularSnapPoints", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", 2).GetRegularSnapPoints(param0, param1, param2);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -24939,22 +19297,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"LineDown", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().LineDown();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "LineDown", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel", 0).LineDown();
                 }
 
                 Py_RETURN_NONE;
@@ -24980,22 +19325,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"LineLeft", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().LineLeft();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "LineLeft", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel", 0).LineLeft();
                 }
 
                 Py_RETURN_NONE;
@@ -25021,22 +19353,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"LineRight", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().LineRight();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "LineRight", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel", 0).LineRight();
                 }
 
                 Py_RETURN_NONE;
@@ -25062,22 +19381,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"LineUp", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().LineUp();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "LineUp", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel", 0).LineUp();
                 }
 
                 Py_RETURN_NONE;
@@ -25103,26 +19409,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"MakeVisible", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().MakeVisible(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "MakeVisible", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel", 2).MakeVisible(param0, param1);
                 }());
             }
             catch (...)
@@ -25146,22 +19439,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"MouseWheelDown", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().MouseWheelDown();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "MouseWheelDown", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel", 0).MouseWheelDown();
                 }
 
                 Py_RETURN_NONE;
@@ -25187,22 +19467,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"MouseWheelLeft", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().MouseWheelLeft();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "MouseWheelLeft", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel", 0).MouseWheelLeft();
                 }
 
                 Py_RETURN_NONE;
@@ -25228,22 +19495,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"MouseWheelRight", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().MouseWheelRight();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "MouseWheelRight", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel", 0).MouseWheelRight();
                 }
 
                 Py_RETURN_NONE;
@@ -25269,22 +19523,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"MouseWheelUp", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().MouseWheelUp();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "MouseWheelUp", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel", 0).MouseWheelUp();
                 }
 
                 Py_RETURN_NONE;
@@ -25310,22 +19551,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"PageDown", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().PageDown();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "PageDown", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel", 0).PageDown();
                 }
 
                 Py_RETURN_NONE;
@@ -25351,22 +19579,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"PageLeft", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().PageLeft();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "PageLeft", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel", 0).PageLeft();
                 }
 
                 Py_RETURN_NONE;
@@ -25392,22 +19607,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"PageRight", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().PageRight();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "PageRight", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel", 0).PageRight();
                 }
 
                 Py_RETURN_NONE;
@@ -25433,22 +19635,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"PageUp", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().PageUp();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "PageUp", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel", 0).PageUp();
                 }
 
                 Py_RETURN_NONE;
@@ -25474,24 +19663,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"SetHorizontalOffset", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().SetHorizontalOffset(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "SetHorizontalOffset", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel", 1).SetHorizontalOffset(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -25517,24 +19693,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"SetVerticalOffset", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().SetVerticalOffset(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "SetVerticalOffset", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel", 1).SetVerticalOffset(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -25556,23 +19719,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ScrollOwner");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().ScrollOwner();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "ScrollOwner", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel").ScrollOwner();
             }());
         }
         catch (...)
@@ -25592,24 +19742,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ScrollOwner");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().ScrollOwner(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "ScrollOwner", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel").ScrollOwner(param0);
             }
 
             return 0;
@@ -25625,23 +19762,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"CanVerticallyScroll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().CanVerticallyScroll();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "CanVerticallyScroll", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel").CanVerticallyScroll();
             }());
         }
         catch (...)
@@ -25661,24 +19785,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"CanVerticallyScroll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().CanVerticallyScroll(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "CanVerticallyScroll", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel").CanVerticallyScroll(param0);
             }
 
             return 0;
@@ -25694,23 +19805,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"CanHorizontallyScroll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().CanHorizontallyScroll();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "CanHorizontallyScroll", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel").CanHorizontallyScroll();
             }());
         }
         catch (...)
@@ -25730,24 +19828,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"CanHorizontallyScroll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().CanHorizontallyScroll(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "CanHorizontallyScroll", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel").CanHorizontallyScroll(param0);
             }
 
             return 0;
@@ -25763,23 +19848,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ExtentHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().ExtentHeight();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "ExtentHeight", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel").ExtentHeight();
             }());
         }
         catch (...)
@@ -25793,23 +19865,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ExtentWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().ExtentWidth();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "ExtentWidth", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel").ExtentWidth();
             }());
         }
         catch (...)
@@ -25823,23 +19882,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"HorizontalOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().HorizontalOffset();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "HorizontalOffset", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel").HorizontalOffset();
             }());
         }
         catch (...)
@@ -25853,23 +19899,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"VerticalOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().VerticalOffset();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "VerticalOffset", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel").VerticalOffset();
             }());
         }
         catch (...)
@@ -25883,23 +19916,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ViewportHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().ViewportHeight();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "ViewportHeight", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel").ViewportHeight();
             }());
         }
         catch (...)
@@ -25913,23 +19933,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ViewportWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().ViewportWidth();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "ViewportWidth", "Microsoft.UI.Xaml.Controls.Primitives.IOrientedVirtualizingPanel").ViewportWidth();
             }());
         }
         catch (...)
@@ -25943,23 +19950,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"AreHorizontalSnapPointsRegular");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().AreHorizontalSnapPointsRegular();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "AreHorizontalSnapPointsRegular", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").AreHorizontalSnapPointsRegular();
             }());
         }
         catch (...)
@@ -25973,23 +19967,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"AreVerticalSnapPointsRegular");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().AreVerticalSnapPointsRegular();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "AreVerticalSnapPointsRegular", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").AreVerticalSnapPointsRegular();
             }());
         }
         catch (...)
@@ -26003,25 +19984,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"HorizontalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().HorizontalSnapPointsChanged(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "HorizontalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").HorizontalSnapPointsChanged(param0);
             }());
         }
         catch (...)
@@ -26035,24 +20003,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"HorizontalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().HorizontalSnapPointsChanged(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "HorizontalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").HorizontalSnapPointsChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -26068,25 +20023,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"VerticalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().VerticalSnapPointsChanged(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "VerticalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").VerticalSnapPointsChanged(param0);
             }());
         }
         catch (...)
@@ -26100,24 +20042,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"VerticalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().VerticalSnapPointsChanged(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", "VerticalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").VerticalSnapPointsChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -26384,22 +20313,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.PickerFlyoutBase", L"OnConfirmed", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseOverrides>().OnConfirmed();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.PickerFlyoutBase", "OnConfirmed", "Microsoft.UI.Xaml.Controls.Primitives.IPickerFlyoutBaseOverrides", 0).OnConfirmed();
                 }
 
                 Py_RETURN_NONE;
@@ -26469,23 +20385,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.PickerFlyoutBase", L"ShouldShowConfirmationButtons", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseOverrides>().ShouldShowConfirmationButtons();
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.PickerFlyoutBase", "ShouldShowConfirmationButtons", "Microsoft.UI.Xaml.Controls.Primitives.IPickerFlyoutBaseOverrides", 0).ShouldShowConfirmationButtons();
                 }());
             }
             catch (...)
@@ -26906,26 +20809,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", L"GetIrregularSnapPoints", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetIrregularSnapPoints(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", "GetIrregularSnapPoints", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", 2).GetIrregularSnapPoints(param0, param1);
                 }());
             }
             catch (...)
@@ -26949,19 +20839,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", L"GetRegularSnapPoints", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
                 float param2{};
@@ -26969,7 +20846,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetRegularSnapPoints(param0, param1, param2);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", "GetRegularSnapPoints", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", 2).GetRegularSnapPoints(param0, param1, param2);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -27002,23 +20879,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", L"AreHorizontalSnapPointsRegular");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AreHorizontalSnapPointsRegular();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", "AreHorizontalSnapPointsRegular", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").AreHorizontalSnapPointsRegular();
             }());
         }
         catch (...)
@@ -27032,23 +20896,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", L"AreVerticalSnapPointsRegular");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AreVerticalSnapPointsRegular();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", "AreVerticalSnapPointsRegular", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").AreVerticalSnapPointsRegular();
             }());
         }
         catch (...)
@@ -27062,25 +20913,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", L"HorizontalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HorizontalSnapPointsChanged(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", "HorizontalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").HorizontalSnapPointsChanged(param0);
             }());
         }
         catch (...)
@@ -27094,24 +20932,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", L"HorizontalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HorizontalSnapPointsChanged(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", "HorizontalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").HorizontalSnapPointsChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -27127,25 +20952,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", L"VerticalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.VerticalSnapPointsChanged(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", "VerticalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").VerticalSnapPointsChanged(param0);
             }());
         }
         catch (...)
@@ -27159,24 +20971,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", L"VerticalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.VerticalSnapPointsChanged(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.PivotPanel", "VerticalSnapPointsChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo").VerticalSnapPointsChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -27285,19 +21084,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"VerticalOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -27321,19 +21107,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"VerticalOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -27354,19 +21127,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"ShouldConstrainToRootBounds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -27390,19 +21150,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"ShouldConstrainToRootBounds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -27423,19 +21170,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"LightDismissOverlayMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -27459,19 +21193,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"LightDismissOverlayMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::LightDismissOverlayMode>(arg);
 
             {
@@ -27492,19 +21213,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"IsOpen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -27528,19 +21236,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"IsOpen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -27561,19 +21256,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"IsLightDismissEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -27597,19 +21279,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"IsLightDismissEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -27630,19 +21299,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"HorizontalOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -27666,19 +21322,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"HorizontalOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -27699,19 +21342,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"ChildTransitions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -27735,19 +21365,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"ChildTransitions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Animation::TransitionCollection>(arg);
 
             {
@@ -27768,19 +21385,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"Child");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -27804,19 +21408,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"Child");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
 
             {
@@ -27837,19 +21428,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"IsConstrainedToRootBounds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -27867,23 +21445,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"PlacementTarget");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PlacementTarget();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IPopup2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Popup", "PlacementTarget", "Microsoft.UI.Xaml.Controls.Primitives.IPopup2").PlacementTarget();
             }());
         }
         catch (...)
@@ -27903,24 +21468,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"PlacementTarget");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FrameworkElement>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PlacementTarget(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IPopup2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Popup", "PlacementTarget", "Microsoft.UI.Xaml.Controls.Primitives.IPopup2").PlacementTarget(param0);
             }
 
             return 0;
@@ -27936,23 +21488,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"DesiredPlacement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DesiredPlacement();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IPopup2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Popup", "DesiredPlacement", "Microsoft.UI.Xaml.Controls.Primitives.IPopup2").DesiredPlacement();
             }());
         }
         catch (...)
@@ -27972,24 +21511,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"DesiredPlacement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::PopupPlacementMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DesiredPlacement(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IPopup2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Popup", "DesiredPlacement", "Microsoft.UI.Xaml.Controls.Primitives.IPopup2").DesiredPlacement(param0);
             }
 
             return 0;
@@ -28005,23 +21531,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"ActualPlacement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ActualPlacement();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IPopup2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Popup", "ActualPlacement", "Microsoft.UI.Xaml.Controls.Primitives.IPopup2").ActualPlacement();
             }());
         }
         catch (...)
@@ -28035,23 +21548,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"SystemBackdrop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SystemBackdrop();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IPopup3>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Popup", "SystemBackdrop", "Microsoft.UI.Xaml.Controls.Primitives.IPopup3").SystemBackdrop();
             }());
         }
         catch (...)
@@ -28071,24 +21571,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"SystemBackdrop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::SystemBackdrop>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SystemBackdrop(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IPopup3>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Popup", "SystemBackdrop", "Microsoft.UI.Xaml.Controls.Primitives.IPopup3").SystemBackdrop(param0);
             }
 
             return 0;
@@ -28434,19 +21921,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -28466,19 +21940,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -28499,19 +21960,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"Opened");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -28531,19 +21979,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"Opened");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -28564,25 +21999,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"ActualPlacementChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ActualPlacementChanged(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IPopup2>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.Popup", "ActualPlacementChanged", "Microsoft.UI.Xaml.Controls.Primitives.IPopup2").ActualPlacementChanged(param0);
             }());
         }
         catch (...)
@@ -28596,24 +22018,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Popup", L"ActualPlacementChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ActualPlacementChanged(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IPopup2>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.Popup", "ActualPlacementChanged", "Microsoft.UI.Xaml.Controls.Primitives.IPopup2").ActualPlacementChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -28913,25 +22322,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"OnMaximumChanged", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBaseOverrides>().OnMaximumChanged(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBaseOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.RangeBase", "OnMaximumChanged", "Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseOverrides", 2).OnMaximumChanged(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -28957,25 +22353,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"OnMinimumChanged", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBaseOverrides>().OnMinimumChanged(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBaseOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.RangeBase", "OnMinimumChanged", "Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseOverrides", 2).OnMinimumChanged(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -29001,25 +22384,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"OnValueChanged", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBaseOverrides>().OnValueChanged(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBaseOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.RangeBase", "OnValueChanged", "Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseOverrides", 2).OnValueChanged(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -29041,23 +22411,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase>().Value();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RangeBase", "Value", "Microsoft.UI.Xaml.Controls.Primitives.IRangeBase").Value();
             }());
         }
         catch (...)
@@ -29077,24 +22434,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase>().Value(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RangeBase", "Value", "Microsoft.UI.Xaml.Controls.Primitives.IRangeBase").Value(param0);
             }
 
             return 0;
@@ -29110,23 +22454,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"SmallChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase>().SmallChange();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RangeBase", "SmallChange", "Microsoft.UI.Xaml.Controls.Primitives.IRangeBase").SmallChange();
             }());
         }
         catch (...)
@@ -29146,24 +22477,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"SmallChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase>().SmallChange(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RangeBase", "SmallChange", "Microsoft.UI.Xaml.Controls.Primitives.IRangeBase").SmallChange(param0);
             }
 
             return 0;
@@ -29179,23 +22497,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"Minimum");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase>().Minimum();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RangeBase", "Minimum", "Microsoft.UI.Xaml.Controls.Primitives.IRangeBase").Minimum();
             }());
         }
         catch (...)
@@ -29215,24 +22520,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"Minimum");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase>().Minimum(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RangeBase", "Minimum", "Microsoft.UI.Xaml.Controls.Primitives.IRangeBase").Minimum(param0);
             }
 
             return 0;
@@ -29248,23 +22540,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"Maximum");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase>().Maximum();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RangeBase", "Maximum", "Microsoft.UI.Xaml.Controls.Primitives.IRangeBase").Maximum();
             }());
         }
         catch (...)
@@ -29284,24 +22563,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"Maximum");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase>().Maximum(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RangeBase", "Maximum", "Microsoft.UI.Xaml.Controls.Primitives.IRangeBase").Maximum(param0);
             }
 
             return 0;
@@ -29317,23 +22583,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"LargeChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase>().LargeChange();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RangeBase", "LargeChange", "Microsoft.UI.Xaml.Controls.Primitives.IRangeBase").LargeChange();
             }());
         }
         catch (...)
@@ -29353,24 +22606,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"LargeChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase>().LargeChange(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RangeBase", "LargeChange", "Microsoft.UI.Xaml.Controls.Primitives.IRangeBase").LargeChange(param0);
             }
 
             return 0;
@@ -29536,25 +22776,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"ValueChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventHandler>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase>().ValueChanged(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBase>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.RangeBase", "ValueChanged", "Microsoft.UI.Xaml.Controls.Primitives.IRangeBase").ValueChanged(param0);
             }());
         }
         catch (...)
@@ -29568,24 +22795,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"ValueChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase>().ValueChanged(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRangeBase>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.RangeBase", "ValueChanged", "Microsoft.UI.Xaml.Controls.Primitives.IRangeBase").ValueChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -29700,19 +22914,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs", L"NewValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -29730,19 +22931,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs", L"OldValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -29847,19 +23035,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RepeatButton", L"Interval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -29883,19 +23058,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RepeatButton", L"Interval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -29916,19 +23078,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RepeatButton", L"Delay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -29952,19 +23101,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RepeatButton", L"Delay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -30226,23 +23362,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RepeatedScrollSnapPoint", L"End");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint>().End();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRepeatedScrollSnapPoint>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RepeatedScrollSnapPoint", "End", "Microsoft.UI.Xaml.Controls.Primitives.IRepeatedScrollSnapPoint").End();
             }());
         }
         catch (...)
@@ -30256,23 +23379,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RepeatedScrollSnapPoint", L"Interval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint>().Interval();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRepeatedScrollSnapPoint>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RepeatedScrollSnapPoint", "Interval", "Microsoft.UI.Xaml.Controls.Primitives.IRepeatedScrollSnapPoint").Interval();
             }());
         }
         catch (...)
@@ -30286,23 +23396,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RepeatedScrollSnapPoint", L"Offset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint>().Offset();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRepeatedScrollSnapPoint>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RepeatedScrollSnapPoint", "Offset", "Microsoft.UI.Xaml.Controls.Primitives.IRepeatedScrollSnapPoint").Offset();
             }());
         }
         catch (...)
@@ -30316,23 +23413,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RepeatedScrollSnapPoint", L"Start");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint>().Start();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRepeatedScrollSnapPoint>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RepeatedScrollSnapPoint", "Start", "Microsoft.UI.Xaml.Controls.Primitives.IRepeatedScrollSnapPoint").Start();
             }());
         }
         catch (...)
@@ -30526,23 +23610,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RepeatedZoomSnapPoint", L"End");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint>().End();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRepeatedZoomSnapPoint>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RepeatedZoomSnapPoint", "End", "Microsoft.UI.Xaml.Controls.Primitives.IRepeatedZoomSnapPoint").End();
             }());
         }
         catch (...)
@@ -30556,23 +23627,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RepeatedZoomSnapPoint", L"Interval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint>().Interval();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRepeatedZoomSnapPoint>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RepeatedZoomSnapPoint", "Interval", "Microsoft.UI.Xaml.Controls.Primitives.IRepeatedZoomSnapPoint").Interval();
             }());
         }
         catch (...)
@@ -30586,23 +23644,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RepeatedZoomSnapPoint", L"Offset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint>().Offset();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRepeatedZoomSnapPoint>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RepeatedZoomSnapPoint", "Offset", "Microsoft.UI.Xaml.Controls.Primitives.IRepeatedZoomSnapPoint").Offset();
             }());
         }
         catch (...)
@@ -30616,23 +23661,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RepeatedZoomSnapPoint", L"Start");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint>().Start();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IRepeatedZoomSnapPoint>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.RepeatedZoomSnapPoint", "Start", "Microsoft.UI.Xaml.Controls.Primitives.IRepeatedZoomSnapPoint").Start();
             }());
         }
         catch (...)
@@ -30756,19 +23788,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollBar", L"ViewportSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -30792,19 +23811,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollBar", L"ViewportSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -30825,19 +23831,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollBar", L"Orientation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -30861,19 +23854,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollBar", L"Orientation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(arg);
 
             {
@@ -30894,19 +23874,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollBar", L"IndicatorMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -30930,19 +23897,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollBar", L"IndicatorMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollingIndicatorMode>(arg);
 
             {
@@ -31053,19 +24007,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollBar", L"Scroll");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollEventHandler>(arg);
 
             return py::convert([&]()
@@ -31085,19 +24026,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollBar", L"Scroll");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -31235,19 +24163,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerAddScrollVelocityRequestedEventArgs", L"CorrelationId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31271,19 +24186,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerAddScrollVelocityRequestedEventArgs", L"CorrelationId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -31304,19 +24206,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerAddScrollVelocityRequestedEventArgs", L"InertiaDecayRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31334,19 +24223,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerAddScrollVelocityRequestedEventArgs", L"OffsetVelocity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31454,19 +24330,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerPanRequestedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31490,19 +24353,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerPanRequestedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -31523,19 +24373,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerPanRequestedEventArgs", L"PointerPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31643,19 +24480,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollByRequestedEventArgs", L"CorrelationId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31679,19 +24503,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollByRequestedEventArgs", L"CorrelationId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -31712,19 +24523,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollByRequestedEventArgs", L"OffsetDelta");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31742,19 +24540,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollByRequestedEventArgs", L"Options");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31863,19 +24648,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollToRequestedEventArgs", L"CorrelationId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31899,19 +24671,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollToRequestedEventArgs", L"CorrelationId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -31932,19 +24691,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollToRequestedEventArgs", L"Offset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31962,19 +24708,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollToRequestedEventArgs", L"Options");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -32080,19 +24813,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollEventArgs", L"NewValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -32110,19 +24830,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollEventArgs", L"ScrollEventType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -32296,26 +25003,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"AddScrollVelocity", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().AddScrollVelocity(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "AddScrollVelocity", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter", 2).AddScrollVelocity(param0, param1);
                 }());
             }
             catch (...)
@@ -32339,19 +25033,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"AddZoomVelocity", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IReference<float>>(args, 2);
@@ -32359,7 +25040,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().AddZoomVelocity(param0, param1, param2);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "AddZoomVelocity", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter", 3).AddZoomVelocity(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -32383,24 +25064,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"RegisterAnchorCandidate", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().RegisterAnchorCandidate(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::IScrollAnchorProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "RegisterAnchorCandidate", "Microsoft.UI.Xaml.Controls.IScrollAnchorProvider", 1).RegisterAnchorCandidate(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -32426,26 +25094,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ScrollBy", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ScrollBy(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ScrollBy", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter", 2).ScrollBy(param0, param1);
                 }());
             }
             catch (...)
@@ -32458,19 +25113,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ScrollBy", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollOptions>(args, 2);
@@ -32478,7 +25120,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ScrollBy(param0, param1, param2);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ScrollBy", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter", 3).ScrollBy(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -32502,26 +25144,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ScrollTo", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ScrollTo(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ScrollTo", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter", 2).ScrollTo(param0, param1);
                 }());
             }
             catch (...)
@@ -32534,19 +25163,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ScrollTo", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollOptions>(args, 2);
@@ -32554,7 +25170,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ScrollTo(param0, param1, param2);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ScrollTo", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter", 3).ScrollTo(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -32578,24 +25194,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"UnregisterAnchorCandidate", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().UnregisterAnchorCandidate(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::IScrollAnchorProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "UnregisterAnchorCandidate", "Microsoft.UI.Xaml.Controls.IScrollAnchorProvider", 1).UnregisterAnchorCandidate(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -32621,26 +25224,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomBy", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomBy(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ZoomBy", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter", 2).ZoomBy(param0, param1);
                 }());
             }
             catch (...)
@@ -32653,19 +25243,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomBy", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2>>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomOptions>(args, 2);
@@ -32673,7 +25250,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomBy(param0, param1, param2);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ZoomBy", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter", 3).ZoomBy(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -32697,26 +25274,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomTo", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomTo(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ZoomTo", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter", 2).ZoomTo(param0, param1);
                 }());
             }
             catch (...)
@@ -32729,19 +25293,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomTo", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2>>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomOptions>(args, 2);
@@ -32749,7 +25300,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomTo(param0, param1, param2);
+                    return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ZoomTo", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter", 3).ZoomTo(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -32769,23 +25320,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"CurrentAnchor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().CurrentAnchor();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::IScrollAnchorProvider>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "CurrentAnchor", "Microsoft.UI.Xaml.Controls.IScrollAnchorProvider").CurrentAnchor();
             }());
         }
         catch (...)
@@ -32799,23 +25337,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"IgnoredInputKinds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().IgnoredInputKinds();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "IgnoredInputKinds", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").IgnoredInputKinds();
             }());
         }
         catch (...)
@@ -32835,24 +25360,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"IgnoredInputKinds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ScrollingInputKinds>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().IgnoredInputKinds(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "IgnoredInputKinds", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").IgnoredInputKinds(param0);
             }
 
             return 0;
@@ -32868,23 +25380,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"HorizontalAnchorRatio");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().HorizontalAnchorRatio();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "HorizontalAnchorRatio", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").HorizontalAnchorRatio();
             }());
         }
         catch (...)
@@ -32904,24 +25403,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"HorizontalAnchorRatio");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().HorizontalAnchorRatio(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "HorizontalAnchorRatio", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").HorizontalAnchorRatio(param0);
             }
 
             return 0;
@@ -32937,23 +25423,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"MaxZoomFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().MaxZoomFactor();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "MaxZoomFactor", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").MaxZoomFactor();
             }());
         }
         catch (...)
@@ -32973,24 +25446,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"MaxZoomFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().MaxZoomFactor(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "MaxZoomFactor", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").MaxZoomFactor(param0);
             }
 
             return 0;
@@ -33006,23 +25466,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"HorizontalScrollRailMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().HorizontalScrollRailMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "HorizontalScrollRailMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").HorizontalScrollRailMode();
             }());
         }
         catch (...)
@@ -33042,24 +25489,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"HorizontalScrollRailMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ScrollingRailMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().HorizontalScrollRailMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "HorizontalScrollRailMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").HorizontalScrollRailMode(param0);
             }
 
             return 0;
@@ -33075,23 +25509,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"HorizontalScrollMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().HorizontalScrollMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "HorizontalScrollMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").HorizontalScrollMode();
             }());
         }
         catch (...)
@@ -33111,24 +25532,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"HorizontalScrollMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().HorizontalScrollMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "HorizontalScrollMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").HorizontalScrollMode(param0);
             }
 
             return 0;
@@ -33144,23 +25552,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ContentOrientation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ContentOrientation();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ContentOrientation", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ContentOrientation();
             }());
         }
         catch (...)
@@ -33180,24 +25575,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ContentOrientation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ScrollingContentOrientation>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ContentOrientation(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ContentOrientation", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ContentOrientation(param0);
             }
 
             return 0;
@@ -33213,23 +25595,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().Content();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "Content", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").Content();
             }());
         }
         catch (...)
@@ -33249,24 +25618,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().Content(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "Content", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").Content(param0);
             }
 
             return 0;
@@ -33282,23 +25638,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"HorizontalScrollController");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().HorizontalScrollController();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "HorizontalScrollController", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").HorizontalScrollController();
             }());
         }
         catch (...)
@@ -33318,24 +25661,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"HorizontalScrollController");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollController>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().HorizontalScrollController(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "HorizontalScrollController", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").HorizontalScrollController(param0);
             }
 
             return 0;
@@ -33351,23 +25681,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"HorizontalScrollChainMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().HorizontalScrollChainMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "HorizontalScrollChainMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").HorizontalScrollChainMode();
             }());
         }
         catch (...)
@@ -33387,24 +25704,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"HorizontalScrollChainMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ScrollingChainMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().HorizontalScrollChainMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "HorizontalScrollChainMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").HorizontalScrollChainMode(param0);
             }
 
             return 0;
@@ -33420,23 +25724,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"MinZoomFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().MinZoomFactor();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "MinZoomFactor", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").MinZoomFactor();
             }());
         }
         catch (...)
@@ -33456,24 +25747,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"MinZoomFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().MinZoomFactor(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "MinZoomFactor", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").MinZoomFactor(param0);
             }
 
             return 0;
@@ -33489,23 +25767,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"Background");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().Background();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "Background", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").Background();
             }());
         }
         catch (...)
@@ -33525,24 +25790,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"Background");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().Background(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "Background", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").Background(param0);
             }
 
             return 0;
@@ -33558,23 +25810,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ZoomMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ZoomMode();
             }());
         }
         catch (...)
@@ -33594,24 +25833,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ZoomMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ZoomMode(param0);
             }
 
             return 0;
@@ -33627,23 +25853,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomChainMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomChainMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ZoomChainMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ZoomChainMode();
             }());
         }
         catch (...)
@@ -33663,24 +25876,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomChainMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ScrollingChainMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomChainMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ZoomChainMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ZoomChainMode(param0);
             }
 
             return 0;
@@ -33696,23 +25896,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"VerticalScrollRailMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().VerticalScrollRailMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "VerticalScrollRailMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").VerticalScrollRailMode();
             }());
         }
         catch (...)
@@ -33732,24 +25919,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"VerticalScrollRailMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ScrollingRailMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().VerticalScrollRailMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "VerticalScrollRailMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").VerticalScrollRailMode(param0);
             }
 
             return 0;
@@ -33765,23 +25939,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"VerticalScrollMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().VerticalScrollMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "VerticalScrollMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").VerticalScrollMode();
             }());
         }
         catch (...)
@@ -33801,24 +25962,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"VerticalScrollMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().VerticalScrollMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "VerticalScrollMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").VerticalScrollMode(param0);
             }
 
             return 0;
@@ -33834,23 +25982,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"VerticalScrollController");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().VerticalScrollController();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "VerticalScrollController", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").VerticalScrollController();
             }());
         }
         catch (...)
@@ -33870,24 +26005,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"VerticalScrollController");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollController>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().VerticalScrollController(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "VerticalScrollController", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").VerticalScrollController(param0);
             }
 
             return 0;
@@ -33903,23 +26025,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"VerticalScrollChainMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().VerticalScrollChainMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "VerticalScrollChainMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").VerticalScrollChainMode();
             }());
         }
         catch (...)
@@ -33939,24 +26048,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"VerticalScrollChainMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ScrollingChainMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().VerticalScrollChainMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "VerticalScrollChainMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").VerticalScrollChainMode(param0);
             }
 
             return 0;
@@ -33972,23 +26068,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"VerticalAnchorRatio");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().VerticalAnchorRatio();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "VerticalAnchorRatio", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").VerticalAnchorRatio();
             }());
         }
         catch (...)
@@ -34008,24 +26091,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"VerticalAnchorRatio");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().VerticalAnchorRatio(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "VerticalAnchorRatio", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").VerticalAnchorRatio(param0);
             }
 
             return 0;
@@ -34041,23 +26111,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ComputedHorizontalScrollMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ComputedHorizontalScrollMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ComputedHorizontalScrollMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ComputedHorizontalScrollMode();
             }());
         }
         catch (...)
@@ -34071,23 +26128,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ComputedVerticalScrollMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ComputedVerticalScrollMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ComputedVerticalScrollMode", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ComputedVerticalScrollMode();
             }());
         }
         catch (...)
@@ -34101,23 +26145,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ExpressionAnimationSources");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ExpressionAnimationSources();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ExpressionAnimationSources", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ExpressionAnimationSources();
             }());
         }
         catch (...)
@@ -34131,23 +26162,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ExtentHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ExtentHeight();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ExtentHeight", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ExtentHeight();
             }());
         }
         catch (...)
@@ -34161,23 +26179,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ExtentWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ExtentWidth();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ExtentWidth", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ExtentWidth();
             }());
         }
         catch (...)
@@ -34191,23 +26196,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"HorizontalOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().HorizontalOffset();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "HorizontalOffset", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").HorizontalOffset();
             }());
         }
         catch (...)
@@ -34221,23 +26213,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"HorizontalSnapPoints");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().HorizontalSnapPoints();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "HorizontalSnapPoints", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").HorizontalSnapPoints();
             }());
         }
         catch (...)
@@ -34251,23 +26230,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ScrollableHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ScrollableHeight();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ScrollableHeight", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ScrollableHeight();
             }());
         }
         catch (...)
@@ -34281,23 +26247,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ScrollableWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ScrollableWidth();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ScrollableWidth", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ScrollableWidth();
             }());
         }
         catch (...)
@@ -34311,23 +26264,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().State();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "State", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").State();
             }());
         }
         catch (...)
@@ -34341,23 +26281,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"VerticalOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().VerticalOffset();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "VerticalOffset", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").VerticalOffset();
             }());
         }
         catch (...)
@@ -34371,23 +26298,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"VerticalSnapPoints");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().VerticalSnapPoints();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "VerticalSnapPoints", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").VerticalSnapPoints();
             }());
         }
         catch (...)
@@ -34401,23 +26315,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ViewportHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ViewportHeight();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ViewportHeight", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ViewportHeight();
             }());
         }
         catch (...)
@@ -34431,23 +26332,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ViewportWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ViewportWidth();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ViewportWidth", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ViewportWidth();
             }());
         }
         catch (...)
@@ -34461,23 +26349,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomFactor();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ZoomFactor", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ZoomFactor();
             }());
         }
         catch (...)
@@ -34491,23 +26366,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomSnapPoints");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomSnapPoints();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ZoomSnapPoints", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ZoomSnapPoints();
             }());
         }
         catch (...)
@@ -35061,25 +26923,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"AnchorRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingAnchorRequestedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().AnchorRequested(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "AnchorRequested", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").AnchorRequested(param0);
             }());
         }
         catch (...)
@@ -35093,24 +26942,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"AnchorRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().AnchorRequested(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "AnchorRequested", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").AnchorRequested(param0);
             }
 
             Py_RETURN_NONE;
@@ -35126,25 +26962,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"BringingIntoView");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingBringingIntoViewEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().BringingIntoView(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "BringingIntoView", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").BringingIntoView(param0);
             }());
         }
         catch (...)
@@ -35158,24 +26981,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"BringingIntoView");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().BringingIntoView(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "BringingIntoView", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").BringingIntoView(param0);
             }
 
             Py_RETURN_NONE;
@@ -35191,25 +27001,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ExtentChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ExtentChanged(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ExtentChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ExtentChanged(param0);
             }());
         }
         catch (...)
@@ -35223,24 +27020,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ExtentChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ExtentChanged(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ExtentChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ExtentChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -35256,25 +27040,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ScrollAnimationStarting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollAnimationStartingEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ScrollAnimationStarting(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ScrollAnimationStarting", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ScrollAnimationStarting(param0);
             }());
         }
         catch (...)
@@ -35288,24 +27059,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ScrollAnimationStarting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ScrollAnimationStarting(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ScrollAnimationStarting", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ScrollAnimationStarting(param0);
             }
 
             Py_RETURN_NONE;
@@ -35321,25 +27079,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ScrollCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollCompletedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ScrollCompleted(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ScrollCompleted", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ScrollCompleted(param0);
             }());
         }
         catch (...)
@@ -35353,24 +27098,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ScrollCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ScrollCompleted(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ScrollCompleted", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ScrollCompleted(param0);
             }
 
             Py_RETURN_NONE;
@@ -35386,25 +27118,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"StateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().StateChanged(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "StateChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").StateChanged(param0);
             }());
         }
         catch (...)
@@ -35418,24 +27137,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"StateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().StateChanged(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "StateChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").StateChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -35451,25 +27157,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ViewChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ViewChanged(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ViewChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ViewChanged(param0);
             }());
         }
         catch (...)
@@ -35483,24 +27176,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ViewChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ViewChanged(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ViewChanged", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ViewChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -35516,25 +27196,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomAnimationStarting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomAnimationStartingEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomAnimationStarting(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ZoomAnimationStarting", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ZoomAnimationStarting(param0);
             }());
         }
         catch (...)
@@ -35548,24 +27215,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomAnimationStarting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomAnimationStarting(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ZoomAnimationStarting", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ZoomAnimationStarting(param0);
             }
 
             Py_RETURN_NONE;
@@ -35581,25 +27235,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomCompletedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomCompleted(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ZoomCompleted", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ZoomCompleted(param0);
             }());
         }
         catch (...)
@@ -35613,24 +27254,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomCompleted(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", "ZoomCompleted", "Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter").ZoomCompleted(param0);
             }
 
             Py_RETURN_NONE;
@@ -35899,23 +27527,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPoint", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPoint>().Value();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPoint>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPoint", "Value", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPoint").Value();
             }());
         }
         catch (...)
@@ -36014,23 +27629,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase", L"Alignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPointBase>().Alignment();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase", "Alignment", "Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointBase").Alignment();
             }());
         }
         catch (...)
@@ -36171,23 +27773,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Selector", L"SelectedValuePath");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector>().SelectedValuePath();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ISelector>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Selector", "SelectedValuePath", "Microsoft.UI.Xaml.Controls.Primitives.ISelector").SelectedValuePath();
             }());
         }
         catch (...)
@@ -36207,24 +27796,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Selector", L"SelectedValuePath");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector>().SelectedValuePath(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ISelector>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Selector", "SelectedValuePath", "Microsoft.UI.Xaml.Controls.Primitives.ISelector").SelectedValuePath(param0);
             }
 
             return 0;
@@ -36240,23 +27816,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Selector", L"SelectedValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector>().SelectedValue();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ISelector>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Selector", "SelectedValue", "Microsoft.UI.Xaml.Controls.Primitives.ISelector").SelectedValue();
             }());
         }
         catch (...)
@@ -36276,24 +27839,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Selector", L"SelectedValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector>().SelectedValue(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ISelector>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Selector", "SelectedValue", "Microsoft.UI.Xaml.Controls.Primitives.ISelector").SelectedValue(param0);
             }
 
             return 0;
@@ -36309,23 +27859,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Selector", L"SelectedItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector>().SelectedItem();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ISelector>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Selector", "SelectedItem", "Microsoft.UI.Xaml.Controls.Primitives.ISelector").SelectedItem();
             }());
         }
         catch (...)
@@ -36345,24 +27882,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Selector", L"SelectedItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector>().SelectedItem(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ISelector>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Selector", "SelectedItem", "Microsoft.UI.Xaml.Controls.Primitives.ISelector").SelectedItem(param0);
             }
 
             return 0;
@@ -36378,23 +27902,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Selector", L"SelectedIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector>().SelectedIndex();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ISelector>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Selector", "SelectedIndex", "Microsoft.UI.Xaml.Controls.Primitives.ISelector").SelectedIndex();
             }());
         }
         catch (...)
@@ -36414,24 +27925,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Selector", L"SelectedIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector>().SelectedIndex(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ISelector>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Selector", "SelectedIndex", "Microsoft.UI.Xaml.Controls.Primitives.ISelector").SelectedIndex(param0);
             }
 
             return 0;
@@ -36447,23 +27945,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Selector", L"IsSynchronizedWithCurrentItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector>().IsSynchronizedWithCurrentItem();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ISelector>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Selector", "IsSynchronizedWithCurrentItem", "Microsoft.UI.Xaml.Controls.Primitives.ISelector").IsSynchronizedWithCurrentItem();
             }());
         }
         catch (...)
@@ -36483,24 +27968,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Selector", L"IsSynchronizedWithCurrentItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector>().IsSynchronizedWithCurrentItem(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ISelector>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.Selector", "IsSynchronizedWithCurrentItem", "Microsoft.UI.Xaml.Controls.Primitives.ISelector").IsSynchronizedWithCurrentItem(param0);
             }
 
             return 0;
@@ -36666,25 +28138,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Selector", L"SelectionChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::SelectionChangedEventHandler>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector>().SelectionChanged(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ISelector>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.Selector", "SelectionChanged", "Microsoft.UI.Xaml.Controls.Primitives.ISelector").SelectionChanged(param0);
             }());
         }
         catch (...)
@@ -36698,24 +28157,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Selector", L"SelectionChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector>().SelectionChanged(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ISelector>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.Selector", "SelectionChanged", "Microsoft.UI.Xaml.Controls.Primitives.ISelector").SelectionChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -36862,23 +28308,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.SelectorItem", L"IsSelected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::SelectorItem>().IsSelected();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ISelectorItem>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.SelectorItem", "IsSelected", "Microsoft.UI.Xaml.Controls.Primitives.ISelectorItem").IsSelected();
             }());
         }
         catch (...)
@@ -36898,24 +28331,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.SelectorItem", L"IsSelected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::SelectorItem>().IsSelected(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::ISelectorItem>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.SelectorItem", "IsSelected", "Microsoft.UI.Xaml.Controls.Primitives.ISelectorItem").IsSelected(param0);
             }
 
             return 0;
@@ -37131,19 +28551,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"CompactPaneGridLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -37161,19 +28568,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"NegativeOpenPaneLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -37191,19 +28585,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"NegativeOpenPaneLengthMinusCompactLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -37221,19 +28602,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"OpenPaneGridLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -37251,19 +28619,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"OpenPaneLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -37281,19 +28636,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"OpenPaneLengthMinusCompactLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -37406,19 +28748,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Thumb", L"CancelDrag", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.CancelDrag();
@@ -37443,19 +28772,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Thumb", L"IsDragging");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -37503,19 +28819,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Thumb", L"DragCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventHandler>(arg);
 
             return py::convert([&]()
@@ -37535,19 +28838,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Thumb", L"DragCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -37568,19 +28858,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Thumb", L"DragDelta");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventHandler>(arg);
 
             return py::convert([&]()
@@ -37600,19 +28877,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Thumb", L"DragDelta");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -37633,19 +28897,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Thumb", L"DragStarted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventHandler>(arg);
 
             return py::convert([&]()
@@ -37665,19 +28916,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.Thumb", L"DragStarted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -37813,19 +29051,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.TickBar", L"Fill");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -37849,19 +29074,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.TickBar", L"Fill");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             {
@@ -38115,22 +29327,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", L"OnToggle", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::IToggleButtonOverrides>().OnToggle();
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IToggleButtonOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", "OnToggle", "Microsoft.UI.Xaml.Controls.Primitives.IToggleButtonOverrides", 0).OnToggle();
                 }
 
                 Py_RETURN_NONE;
@@ -38152,23 +29351,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", L"IsThreeState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton>().IsThreeState();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IToggleButton>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", "IsThreeState", "Microsoft.UI.Xaml.Controls.Primitives.IToggleButton").IsThreeState();
             }());
         }
         catch (...)
@@ -38188,24 +29374,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", L"IsThreeState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton>().IsThreeState(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IToggleButton>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", "IsThreeState", "Microsoft.UI.Xaml.Controls.Primitives.IToggleButton").IsThreeState(param0);
             }
 
             return 0;
@@ -38221,23 +29394,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", L"IsChecked");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton>().IsChecked();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IToggleButton>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", "IsChecked", "Microsoft.UI.Xaml.Controls.Primitives.IToggleButton").IsChecked();
             }());
         }
         catch (...)
@@ -38257,24 +29417,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", L"IsChecked");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton>().IsChecked(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IToggleButton>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", "IsChecked", "Microsoft.UI.Xaml.Controls.Primitives.IToggleButton").IsChecked(param0);
             }
 
             return 0;
@@ -38350,25 +29497,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", L"Checked");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEventHandler>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton>().Checked(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IToggleButton>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", "Checked", "Microsoft.UI.Xaml.Controls.Primitives.IToggleButton").Checked(param0);
             }());
         }
         catch (...)
@@ -38382,24 +29516,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", L"Checked");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton>().Checked(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IToggleButton>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", "Checked", "Microsoft.UI.Xaml.Controls.Primitives.IToggleButton").Checked(param0);
             }
 
             Py_RETURN_NONE;
@@ -38415,25 +29536,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", L"Indeterminate");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEventHandler>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton>().Indeterminate(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IToggleButton>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", "Indeterminate", "Microsoft.UI.Xaml.Controls.Primitives.IToggleButton").Indeterminate(param0);
             }());
         }
         catch (...)
@@ -38447,24 +29555,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", L"Indeterminate");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton>().Indeterminate(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IToggleButton>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", "Indeterminate", "Microsoft.UI.Xaml.Controls.Primitives.IToggleButton").Indeterminate(param0);
             }
 
             Py_RETURN_NONE;
@@ -38480,25 +29575,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", L"Unchecked");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEventHandler>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton>().Unchecked(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IToggleButton>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", "Unchecked", "Microsoft.UI.Xaml.Controls.Primitives.IToggleButton").Unchecked(param0);
             }());
         }
         catch (...)
@@ -38512,24 +29594,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", L"Unchecked");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton>().Unchecked(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IToggleButton>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", "Unchecked", "Microsoft.UI.Xaml.Controls.Primitives.IToggleButton").Unchecked(param0);
             }
 
             Py_RETURN_NONE;
@@ -38640,19 +29709,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"CurtainCurrentToOffOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -38670,19 +29726,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"CurtainCurrentToOnOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -38700,19 +29743,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"CurtainOffToOnOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -38730,19 +29760,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"CurtainOnToOffOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -38760,19 +29777,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"KnobCurrentToOffOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -38790,19 +29794,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"KnobCurrentToOnOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -38820,19 +29811,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"KnobOffToOnOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -38850,19 +29828,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"KnobOnToOffOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -38951,19 +29916,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToolTipTemplateSettings", L"FromHorizontalOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -38981,19 +29933,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToolTipTemplateSettings", L"FromVerticalOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -39165,23 +30104,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPoint", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPoint>().Value();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IZoomSnapPoint>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPoint", "Value", "Microsoft.UI.Xaml.Controls.Primitives.IZoomSnapPoint").Value();
             }());
         }
         catch (...)
@@ -39370,19 +30296,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"GetScrollAnimation", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 2);
@@ -39415,19 +30328,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"NotifyRequestedScrollCompleted", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 {
@@ -39458,19 +30358,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"SetIsScrollable", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
@@ -39501,19 +30388,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"SetValues", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
@@ -39543,19 +30417,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"CanScroll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -39573,19 +30434,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"IsScrollingWithMouse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -39603,19 +30451,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"PanningInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -39633,19 +30468,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"AddScrollVelocityRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollController, winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollControllerAddScrollVelocityRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -39665,19 +30487,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"AddScrollVelocityRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -39698,19 +30507,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"CanScrollChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollController, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -39730,19 +30526,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"CanScrollChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -39763,19 +30546,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"IsScrollingWithMouseChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollController, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -39795,19 +30565,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"IsScrollingWithMouseChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -39828,19 +30585,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"ScrollByRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollController, winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollControllerScrollByRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -39860,19 +30604,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"ScrollByRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -39893,19 +30624,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"ScrollToRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollController, winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollControllerScrollToRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -39925,19 +30643,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollController", L"ScrollToRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -40654,19 +31359,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo", L"SetPanningElementExpressionAnimationSources", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionPropertySet>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -40697,19 +31389,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo", L"IsRailEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -40727,19 +31406,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo", L"PanOrientation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -40757,19 +31423,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo", L"PanningElementAncestor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -40787,19 +31440,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo", L"Changed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerPanningInfo, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -40819,19 +31459,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo", L"Changed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -40852,19 +31479,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo", L"PanRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerPanningInfo, winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollControllerPanRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -40884,19 +31498,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo", L"PanRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -41308,19 +31909,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"GetIrregularSnapPoints", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
 
@@ -41351,19 +31939,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"GetRegularSnapPoints", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
                 float param2{};
@@ -41404,19 +31979,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"AreHorizontalSnapPointsRegular");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -41434,19 +31996,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"AreVerticalSnapPointsRegular");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -41464,19 +32013,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"HorizontalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -41496,19 +32032,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"HorizontalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -41529,19 +32052,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"VerticalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -41561,19 +32071,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"VerticalSnapPointsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {

@@ -25,19 +25,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.CardAddedEventArgs", L"SmartCard");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -119,19 +106,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.CardRemovedEventArgs", L"SmartCard");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -328,23 +302,10 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCard", L"ConnectAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ConnectAsync();
+                    return py::require<winrt::Windows::Devices::SmartCards::ISmartCardConnect>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCard", "ConnectAsync", "Windows.Devices.SmartCards.ISmartCardConnect", 0).ConnectAsync();
                 }());
             }
             catch (...)
@@ -368,19 +329,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCard", L"GetAnswerToResetAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -408,19 +356,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCard", L"GetStatusAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -444,19 +379,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCard", L"Reader");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -581,19 +503,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"SmartCardEmulationType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -617,19 +526,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"SmartCardEmulationType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardEmulationType>(arg);
 
             {
@@ -650,19 +546,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"SmartCardEmulationCategory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -686,19 +569,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"SmartCardEmulationCategory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardEmulationCategory>(arg);
 
             {
@@ -719,19 +589,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -755,19 +612,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -788,19 +632,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"AutomaticEnablement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -824,19 +655,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"AutomaticEnablement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -857,19 +675,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"AppletIds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -887,23 +692,10 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"SecureUserAuthenticationRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SecureUserAuthenticationRequired();
+                return py::require<winrt::Windows::Devices::SmartCards::ISmartCardAppletIdGroup2>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardAppletIdGroup", "SecureUserAuthenticationRequired", "Windows.Devices.SmartCards.ISmartCardAppletIdGroup2").SecureUserAuthenticationRequired();
             }());
         }
         catch (...)
@@ -923,24 +715,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"SecureUserAuthenticationRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SecureUserAuthenticationRequired(param0);
+                py::require<winrt::Windows::Devices::SmartCards::ISmartCardAppletIdGroup2>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardAppletIdGroup", "SecureUserAuthenticationRequired", "Windows.Devices.SmartCards.ISmartCardAppletIdGroup2").SecureUserAuthenticationRequired(param0);
             }
 
             return 0;
@@ -956,23 +735,10 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"Logo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Logo();
+                return py::require<winrt::Windows::Devices::SmartCards::ISmartCardAppletIdGroup2>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardAppletIdGroup", "Logo", "Windows.Devices.SmartCards.ISmartCardAppletIdGroup2").Logo();
             }());
         }
         catch (...)
@@ -992,24 +758,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"Logo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Logo(param0);
+                py::require<winrt::Windows::Devices::SmartCards::ISmartCardAppletIdGroup2>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardAppletIdGroup", "Logo", "Windows.Devices.SmartCards.ISmartCardAppletIdGroup2").Logo(param0);
             }
 
             return 0;
@@ -1025,23 +778,10 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Description();
+                return py::require<winrt::Windows::Devices::SmartCards::ISmartCardAppletIdGroup2>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardAppletIdGroup", "Description", "Windows.Devices.SmartCards.ISmartCardAppletIdGroup2").Description();
             }());
         }
         catch (...)
@@ -1061,24 +801,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Description(param0);
+                py::require<winrt::Windows::Devices::SmartCards::ISmartCardAppletIdGroup2>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardAppletIdGroup", "Description", "Windows.Devices.SmartCards.ISmartCardAppletIdGroup2").Description(param0);
             }
 
             return 0;
@@ -1094,23 +821,10 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroup", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Properties();
+                return py::require<winrt::Windows::Devices::SmartCards::ISmartCardAppletIdGroup2>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardAppletIdGroup", "Properties", "Windows.Devices.SmartCards.ISmartCardAppletIdGroup2").Properties();
             }());
         }
         catch (...)
@@ -1252,19 +966,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration", L"RequestActivationPolicyChangeAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroupActivationPolicy>(args, 0);
 
                 return py::convert([&]()
@@ -1294,19 +995,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration", L"SetAutomaticResponseApdusAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu>>(args, 0);
 
                 return py::convert([&]()
@@ -1336,25 +1024,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration", L"SetPropertiesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SetPropertiesAsync(param0);
+                    return py::require<winrt::Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration2>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration", "SetPropertiesAsync", "Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration2", 1).SetPropertiesAsync(param0);
                 }());
             }
             catch (...)
@@ -1374,19 +1049,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration", L"ActivationPolicy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1404,19 +1066,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration", L"AppletIdGroup");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1434,19 +1083,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1464,23 +1100,10 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration", L"SmartCardReaderId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SmartCardReaderId();
+                return py::require<winrt::Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration2>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration", "SmartCardReaderId", "Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration2").SmartCardReaderId();
             }());
         }
         catch (...)
@@ -1589,19 +1212,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"ShouldMatchLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1625,19 +1235,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"ShouldMatchLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1658,19 +1255,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"ResponseApdu");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1694,19 +1278,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"ResponseApdu");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             {
@@ -1727,19 +1298,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"CommandApduBitMask");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1763,19 +1321,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"CommandApduBitMask");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             {
@@ -1796,19 +1341,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"CommandApdu");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1832,19 +1364,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"CommandApdu");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             {
@@ -1865,19 +1384,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"AppletId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1901,19 +1407,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"AppletId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             {
@@ -1934,23 +1427,10 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"OutputState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutputState();
+                return py::require<winrt::Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu2>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", "OutputState", "Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2").OutputState();
             }());
         }
         catch (...)
@@ -1970,24 +1450,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"OutputState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutputState(param0);
+                py::require<winrt::Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu2>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", "OutputState", "Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2").OutputState(param0);
             }
 
             return 0;
@@ -2003,23 +1470,10 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"InputState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.InputState();
+                return py::require<winrt::Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu2>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", "InputState", "Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2").InputState();
             }());
         }
         catch (...)
@@ -2039,24 +1493,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"InputState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.InputState(param0);
+                py::require<winrt::Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu2>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", "InputState", "Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2").InputState(param0);
             }
 
             return 0;
@@ -2072,23 +1513,10 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"AllowWhenCryptogramGeneratorNotPrepared");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AllowWhenCryptogramGeneratorNotPrepared();
+                return py::require<winrt::Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu3>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", "AllowWhenCryptogramGeneratorNotPrepared", "Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu3").AllowWhenCryptogramGeneratorNotPrepared();
             }());
         }
         catch (...)
@@ -2108,24 +1536,11 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", L"AllowWhenCryptogramGeneratorNotPrepared");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AllowWhenCryptogramGeneratorNotPrepared(param0);
+                py::require<winrt::Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu3>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu", "AllowWhenCryptogramGeneratorNotPrepared", "Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu3").AllowWhenCryptogramGeneratorNotPrepared(param0);
             }
 
             return 0;
@@ -2216,19 +1631,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardChallengeContext", L"ChangeAdministrativeKeyAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -2259,22 +1661,9 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardChallengeContext", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardChallengeContext", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -2300,19 +1689,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardChallengeContext", L"ProvisionAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -2332,19 +1708,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardChallengeContext", L"ProvisionAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::guid>(args, 2);
@@ -2376,19 +1739,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardChallengeContext", L"VerifyResponseAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -2414,19 +1764,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardChallengeContext", L"Challenge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2475,7 +1812,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardChallengeContext", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -2541,22 +1878,9 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardConnection", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardConnection", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -2582,19 +1906,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardConnection", L"TransmitAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -2651,7 +1962,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardConnection", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -2714,19 +2025,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"CreateCryptogramMaterialStorageKeyAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyAlgorithm>(args, 2);
@@ -2759,19 +2057,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"DeleteCryptogramMaterialPackageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -2801,19 +2086,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"DeleteCryptogramMaterialStorageKeyAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -2843,26 +2115,13 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"GetAllCryptogramMaterialCharacteristicsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAllCryptogramMaterialCharacteristicsAsync(param0, param1);
+                    return py::require<winrt::Windows::Devices::SmartCards::ISmartCardCryptogramGenerator2>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardCryptogramGenerator", "GetAllCryptogramMaterialCharacteristicsAsync", "Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2", 2).GetAllCryptogramMaterialCharacteristicsAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -2886,23 +2145,10 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"GetAllCryptogramMaterialPackageCharacteristicsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAllCryptogramMaterialPackageCharacteristicsAsync();
+                    return py::require<winrt::Windows::Devices::SmartCards::ISmartCardCryptogramGenerator2>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardCryptogramGenerator", "GetAllCryptogramMaterialPackageCharacteristicsAsync", "Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2", 0).GetAllCryptogramMaterialPackageCharacteristicsAsync();
                 }());
             }
             catch (...)
@@ -2915,25 +2161,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"GetAllCryptogramMaterialPackageCharacteristicsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAllCryptogramMaterialPackageCharacteristicsAsync(param0);
+                    return py::require<winrt::Windows::Devices::SmartCards::ISmartCardCryptogramGenerator2>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardCryptogramGenerator", "GetAllCryptogramMaterialPackageCharacteristicsAsync", "Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2", 1).GetAllCryptogramMaterialPackageCharacteristicsAsync(param0);
                 }());
             }
             catch (...)
@@ -2957,23 +2190,10 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"GetAllCryptogramStorageKeyCharacteristicsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAllCryptogramStorageKeyCharacteristicsAsync();
+                    return py::require<winrt::Windows::Devices::SmartCards::ISmartCardCryptogramGenerator2>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardCryptogramGenerator", "GetAllCryptogramStorageKeyCharacteristicsAsync", "Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2", 0).GetAllCryptogramStorageKeyCharacteristicsAsync();
                 }());
             }
             catch (...)
@@ -3037,19 +2257,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"ImportCryptogramMaterialPackageAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -3122,19 +2329,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"RequestCryptogramMaterialStorageKeyInfoAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType>(args, 2);
@@ -3166,19 +2360,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"RequestUnlockCryptogramMaterialForUseAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior>(args, 0);
 
                 return py::convert([&]()
@@ -3208,19 +2389,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"TryProvePossessionOfCryptogramMaterialPackageAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -3254,19 +2422,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"ValidateRequestApduAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>>(args, 2);
@@ -3274,7 +2429,7 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ValidateRequestApduAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Devices::SmartCards::ISmartCardCryptogramGenerator2>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardCryptogramGenerator", "ValidateRequestApduAsync", "Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2", 3).ValidateRequestApduAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -3294,19 +2449,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"SupportedCryptogramAlgorithms");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3324,19 +2466,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"SupportedCryptogramMaterialPackageConfirmationResponseFormats");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3354,19 +2483,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"SupportedCryptogramMaterialPackageFormats");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3384,19 +2500,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"SupportedCryptogramMaterialTypes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3414,19 +2517,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator", L"SupportedSmartCardCryptogramStorageKeyCapabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3568,19 +2658,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult", L"Characteristics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3598,19 +2675,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult", L"OperationStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3715,19 +2779,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult", L"Characteristics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3745,19 +2796,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult", L"OperationStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3862,19 +2900,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult", L"Characteristics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3892,19 +2917,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult", L"OperationStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4009,19 +3021,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics", L"AllowedAlgorithms");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4039,19 +3038,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics", L"AllowedProofOfPossessionAlgorithms");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4069,19 +3055,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics", L"AllowedValidations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4099,19 +3072,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics", L"MaterialLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4129,19 +3089,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics", L"MaterialName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4159,19 +3106,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics", L"MaterialType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4189,19 +3123,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics", L"ProtectionMethod");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4219,19 +3140,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics", L"ProtectionVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4342,19 +3250,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics", L"DateImported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4372,19 +3267,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics", L"PackageFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4402,19 +3284,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics", L"PackageName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4432,19 +3301,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics", L"StorageKeyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4529,19 +3385,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof", L"OperationStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4559,19 +3402,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof", L"Proof");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4676,19 +3506,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"TemplateOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4712,19 +3529,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"TemplateOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -4745,19 +3549,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"SourceData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4781,19 +3572,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"SourceData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             {
@@ -4814,19 +3592,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"CryptogramPlacementOptions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4850,19 +3615,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"CryptogramPlacementOptions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementOptions>(arg);
 
             {
@@ -4883,19 +3635,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"CryptogramOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4919,19 +3658,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"CryptogramOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -4952,19 +3678,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"CryptogramMaterialPackageName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4988,19 +3701,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"CryptogramMaterialPackageName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -5021,19 +3721,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"CryptogramMaterialName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5057,19 +3744,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"CryptogramMaterialName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -5090,19 +3764,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"CryptogramLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5126,19 +3787,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"CryptogramLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -5159,19 +3807,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"ChainedOutputStep");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5195,19 +3830,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"ChainedOutputStep");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>(arg);
 
             {
@@ -5228,19 +3850,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"Algorithm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5264,19 +3873,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep", L"Algorithm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm>(arg);
 
             {
@@ -5391,19 +3987,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics", L"Algorithm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5421,19 +4004,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics", L"Capabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5451,19 +4021,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics", L"DateCreated");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5481,19 +4038,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics", L"StorageKeyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5578,19 +4122,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo", L"Attestation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5608,19 +4139,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo", L"AttestationCertificateChain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5638,19 +4156,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo", L"AttestationStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5668,19 +4173,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo", L"Capabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5698,19 +4190,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo", L"OperationStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5728,19 +4207,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo", L"PublicKey");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5758,19 +4224,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo", L"PublicKeyBlobType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5788,23 +4241,10 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo", L"OperationalRequirements");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OperationalRequirements();
+                return py::require<winrt::Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo2>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo", "OperationalRequirements", "Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo2").OperationalRequirements();
             }());
         }
         catch (...)
@@ -5973,23 +4413,10 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardEmulator", L"IsHostCardEmulationSupported", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsHostCardEmulationSupported();
+                    return py::require<winrt::Windows::Devices::SmartCards::ISmartCardEmulator2>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardEmulator", "IsHostCardEmulationSupported", "Windows.Devices.SmartCards.ISmartCardEmulator2", 0).IsHostCardEmulationSupported();
                 }());
             }
             catch (...)
@@ -6095,22 +4522,9 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardEmulator", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Start();
+                    py::require<winrt::Windows::Devices::SmartCards::ISmartCardEmulator2>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardEmulator", "Start", "Windows.Devices.SmartCards.ISmartCardEmulator2", 0).Start();
                 }
 
                 Py_RETURN_NONE;
@@ -6174,19 +4588,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardEmulator", L"EnablementPolicy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6234,25 +4635,12 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SmartCards.SmartCardEmulator", L"ApduReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::SmartCards::SmartCardEmulator, winrt::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ApduReceived(param0);
+                return py::require<winrt::Windows::Devices::SmartCards::ISmartCardEmulator2>(self->obj, py::member_kind::event, "Windows.Devices.SmartCards.SmartCardEmulator", "ApduReceived", "Windows.Devices.SmartCards.ISmartCardEmulator2").ApduReceived(param0);
             }());
         }
         catch (...)
@@ -6266,24 +4654,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SmartCards.SmartCardEmulator", L"ApduReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ApduReceived(param0);
+                py::require<winrt::Windows::Devices::SmartCards::ISmartCardEmulator2>(self->obj, py::member_kind::event, "Windows.Devices.SmartCards.SmartCardEmulator", "ApduReceived", "Windows.Devices.SmartCards.ISmartCardEmulator2").ApduReceived(param0);
             }
 
             Py_RETURN_NONE;
@@ -6299,25 +4674,12 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SmartCards.SmartCardEmulator", L"ConnectionDeactivated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::SmartCards::SmartCardEmulator, winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConnectionDeactivated(param0);
+                return py::require<winrt::Windows::Devices::SmartCards::ISmartCardEmulator2>(self->obj, py::member_kind::event, "Windows.Devices.SmartCards.SmartCardEmulator", "ConnectionDeactivated", "Windows.Devices.SmartCards.ISmartCardEmulator2").ConnectionDeactivated(param0);
             }());
         }
         catch (...)
@@ -6331,24 +4693,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SmartCards.SmartCardEmulator", L"ConnectionDeactivated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ConnectionDeactivated(param0);
+                py::require<winrt::Windows::Devices::SmartCards::ISmartCardEmulator2>(self->obj, py::member_kind::event, "Windows.Devices.SmartCards.SmartCardEmulator", "ConnectionDeactivated", "Windows.Devices.SmartCards.ISmartCardEmulator2").ConnectionDeactivated(param0);
             }
 
             Py_RETURN_NONE;
@@ -6465,19 +4814,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", L"TryRespondAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -6496,26 +4832,13 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", L"TryRespondAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryRespondAsync(param0, param1);
+                    return py::require<winrt::Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs2>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", "TryRespondAsync", "Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs2", 2).TryRespondAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -6539,26 +4862,13 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", L"TryRespondWithCryptogramsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryRespondWithCryptogramsAsync(param0, param1);
+                    return py::require<winrt::Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgsWithCryptograms>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", "TryRespondWithCryptogramsAsync", "Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgsWithCryptograms", 2).TryRespondWithCryptogramsAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -6571,19 +4881,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", L"TryRespondWithCryptogramsAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(args, 2);
@@ -6591,7 +4888,7 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryRespondWithCryptogramsAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgsWithCryptograms>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", "TryRespondWithCryptogramsAsync", "Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgsWithCryptograms", 3).TryRespondWithCryptogramsAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -6611,19 +4908,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", L"AutomaticResponseStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6641,19 +4925,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", L"CommandApdu");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6671,19 +4942,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", L"ConnectionProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6701,23 +4959,10 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.State();
+                return py::require<winrt::Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs2>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", "State", "Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs2").State();
             }());
         }
         catch (...)
@@ -6800,19 +5045,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs", L"ConnectionProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6830,19 +5062,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs", L"Reason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6925,19 +5144,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6955,19 +5161,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties", L"Source");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7072,19 +5265,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardPinPolicy", L"UppercaseLetters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7108,19 +5288,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardPinPolicy", L"UppercaseLetters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption>(arg);
 
             {
@@ -7141,19 +5308,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardPinPolicy", L"SpecialCharacters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7177,19 +5331,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardPinPolicy", L"SpecialCharacters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption>(arg);
 
             {
@@ -7210,19 +5351,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardPinPolicy", L"MinLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7246,19 +5374,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardPinPolicy", L"MinLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -7279,19 +5394,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardPinPolicy", L"MaxLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7315,19 +5417,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardPinPolicy", L"MaxLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -7348,19 +5437,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardPinPolicy", L"LowercaseLetters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7384,19 +5460,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardPinPolicy", L"LowercaseLetters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption>(arg);
 
             {
@@ -7417,19 +5480,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardPinPolicy", L"Digits");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7453,19 +5503,6 @@ namespace py::cpp::Windows::Devices::SmartCards
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardPinPolicy", L"Digits");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption>(arg);
 
             {
@@ -7559,19 +5596,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardPinResetDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -7664,19 +5688,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardPinResetRequest", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7704,19 +5715,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardPinResetRequest", L"SetResponse", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 {
@@ -7743,19 +5741,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardPinResetRequest", L"Challenge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7773,19 +5758,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardPinResetRequest", L"Deadline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7916,23 +5888,10 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardProvisioning", L"GetAuthorityKeyContainerNameAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAuthorityKeyContainerNameAsync();
+                    return py::require<winrt::Windows::Devices::SmartCards::ISmartCardProvisioning2>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardProvisioning", "GetAuthorityKeyContainerNameAsync", "Windows.Devices.SmartCards.ISmartCardProvisioning2", 0).GetAuthorityKeyContainerNameAsync();
                 }());
             }
             catch (...)
@@ -7956,19 +5915,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardProvisioning", L"GetChallengeContextAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7996,19 +5942,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardProvisioning", L"GetIdAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8036,19 +5969,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardProvisioning", L"GetNameAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8154,19 +6074,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardProvisioning", L"RequestPinChangeAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8194,19 +6101,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardProvisioning", L"RequestPinResetAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardPinResetHandler>(args, 0);
 
                 return py::convert([&]()
@@ -8352,19 +6246,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardProvisioning", L"SmartCard");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8481,19 +6362,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardReader", L"FindAllCardsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8634,19 +6502,6 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardReader", L"GetStatusAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8670,19 +6525,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardReader", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8700,19 +6542,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardReader", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8730,19 +6559,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardReader", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8760,19 +6576,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SmartCards.SmartCardReader", L"CardAdded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::SmartCards::SmartCardReader, winrt::Windows::Devices::SmartCards::CardAddedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8792,19 +6595,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SmartCards.SmartCardReader", L"CardAdded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8825,19 +6615,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SmartCards.SmartCardReader", L"CardRemoved");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::SmartCards::SmartCardReader, winrt::Windows::Devices::SmartCards::CardRemovedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8857,19 +6634,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SmartCards.SmartCardReader", L"CardRemoved");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8989,25 +6753,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardTriggerDetails", L"TryLaunchCurrentAppAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryLaunchCurrentAppAsync(param0);
+                    return py::require<winrt::Windows::Devices::SmartCards::ISmartCardTriggerDetails2>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardTriggerDetails", "TryLaunchCurrentAppAsync", "Windows.Devices.SmartCards.ISmartCardTriggerDetails2", 1).TryLaunchCurrentAppAsync(param0);
                 }());
             }
             catch (...)
@@ -9020,26 +6771,13 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardTriggerDetails", L"TryLaunchCurrentAppAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardLaunchBehavior>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryLaunchCurrentAppAsync(param0, param1);
+                    return py::require<winrt::Windows::Devices::SmartCards::ISmartCardTriggerDetails2>(self->obj, py::member_kind::method, "Windows.Devices.SmartCards.SmartCardTriggerDetails", "TryLaunchCurrentAppAsync", "Windows.Devices.SmartCards.ISmartCardTriggerDetails2", 2).TryLaunchCurrentAppAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -9059,19 +6797,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardTriggerDetails", L"SourceAppletId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9089,19 +6814,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardTriggerDetails", L"TriggerData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9119,19 +6831,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardTriggerDetails", L"TriggerType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9149,23 +6848,10 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardTriggerDetails", L"Emulator");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Emulator();
+                return py::require<winrt::Windows::Devices::SmartCards::ISmartCardTriggerDetails2>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardTriggerDetails", "Emulator", "Windows.Devices.SmartCards.ISmartCardTriggerDetails2").Emulator();
             }());
         }
         catch (...)
@@ -9179,23 +6865,10 @@ namespace py::cpp::Windows::Devices::SmartCards
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SmartCards.SmartCardTriggerDetails", L"SmartCard");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SmartCard();
+                return py::require<winrt::Windows::Devices::SmartCards::ISmartCardTriggerDetails3>(self->obj, py::member_kind::property, "Windows.Devices.SmartCards.SmartCardTriggerDetails", "SmartCard", "Windows.Devices.SmartCards.ISmartCardTriggerDetails3").SmartCard();
             }());
         }
         catch (...)

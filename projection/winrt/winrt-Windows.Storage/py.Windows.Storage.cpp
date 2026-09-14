@@ -107,19 +107,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AppDataPaths", L"Cookies");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -137,19 +124,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AppDataPaths", L"Desktop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -167,19 +141,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AppDataPaths", L"Documents");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -197,19 +158,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AppDataPaths", L"Favorites");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -227,19 +175,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AppDataPaths", L"History");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -257,19 +192,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AppDataPaths", L"InternetCache");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -287,19 +209,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AppDataPaths", L"LocalAppData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -317,19 +226,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AppDataPaths", L"ProgramData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -347,19 +243,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.AppDataPaths", L"RoamingAppData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -476,19 +359,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationData", L"ClearAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -505,19 +375,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationData", L"ClearAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::ApplicationDataLocality>(args, 0);
 
                 return py::convert([&]()
@@ -547,25 +404,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationData", L"ClearPublisherCacheFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ClearPublisherCacheFolderAsync(param0);
+                    return py::require<winrt::Windows::Storage::IApplicationData3>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationData", "ClearPublisherCacheFolderAsync", "Windows.Storage.IApplicationData3", 1).ClearPublisherCacheFolderAsync(param0);
                 }());
             }
             catch (...)
@@ -589,22 +433,9 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationData", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationData", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -672,25 +503,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationData", L"GetPublisherCacheFolder", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetPublisherCacheFolder(param0);
+                    return py::require<winrt::Windows::Storage::IApplicationData3>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationData", "GetPublisherCacheFolder", "Windows.Storage.IApplicationData3", 1).GetPublisherCacheFolder(param0);
                 }());
             }
             catch (...)
@@ -714,19 +532,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationData", L"SetVersionAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::ApplicationDataSetVersionHandler>(args, 1);
 
@@ -757,19 +562,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationData", L"SignalDataChanged", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.SignalDataChanged();
@@ -794,19 +586,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.ApplicationData", L"LocalFolder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -824,19 +603,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.ApplicationData", L"LocalSettings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -854,19 +620,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.ApplicationData", L"RoamingFolder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -884,19 +637,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.ApplicationData", L"RoamingSettings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -914,19 +654,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.ApplicationData", L"RoamingStorageQuota");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -944,19 +671,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.ApplicationData", L"TemporaryFolder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -974,19 +688,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.ApplicationData", L"Version");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1004,23 +705,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.ApplicationData", L"LocalCacheFolder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LocalCacheFolder();
+                return py::require<winrt::Windows::Storage::IApplicationData2>(self->obj, py::member_kind::property, "Windows.Storage.ApplicationData", "LocalCacheFolder", "Windows.Storage.IApplicationData2").LocalCacheFolder();
             }());
         }
         catch (...)
@@ -1034,23 +722,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.ApplicationData", L"SharedLocalFolder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SharedLocalFolder();
+                return py::require<winrt::Windows::Storage::IApplicationData3>(self->obj, py::member_kind::property, "Windows.Storage.ApplicationData", "SharedLocalFolder", "Windows.Storage.IApplicationData3").SharedLocalFolder();
             }());
         }
         catch (...)
@@ -1094,19 +769,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.ApplicationData", L"DataChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::ApplicationData, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -1126,19 +788,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.ApplicationData", L"DataChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1190,7 +839,7 @@ namespace py::cpp::Windows::Storage
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationData", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -1313,22 +962,9 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataCompositeValue", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataCompositeValue", "Clear", "Windows.Foundation.Collections.IMap<String, Object>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -1354,23 +990,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataCompositeValue", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataCompositeValue", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Object>>", 0).First();
                 }());
             }
             catch (...)
@@ -1394,23 +1017,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataCompositeValue", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataCompositeValue", "GetView", "Windows.Foundation.Collections.IMap<String, Object>", 0).GetView();
                 }());
             }
             catch (...)
@@ -1434,25 +1044,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataCompositeValue", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.HasKey(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataCompositeValue", "HasKey", "Windows.Foundation.Collections.IMap<String, Object>", 1).HasKey(param0);
                 }());
             }
             catch (...)
@@ -1476,26 +1073,13 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataCompositeValue", L"Insert", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Insert(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataCompositeValue", "Insert", "Windows.Foundation.Collections.IMap<String, Object>", 2).Insert(param0, param1);
                 }());
             }
             catch (...)
@@ -1519,25 +1103,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataCompositeValue", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Lookup(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataCompositeValue", "Lookup", "Windows.Foundation.Collections.IMap<String, Object>", 1).Lookup(param0);
                 }());
             }
             catch (...)
@@ -1561,24 +1132,11 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataCompositeValue", L"Remove", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Remove(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataCompositeValue", "Remove", "Windows.Foundation.Collections.IMap<String, Object>", 1).Remove(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1600,23 +1158,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.ApplicationDataCompositeValue", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::property, "Windows.Storage.ApplicationDataCompositeValue", "Size", "Windows.Foundation.Collections.IMap<String, Object>").Size();
             }());
         }
         catch (...)
@@ -1630,25 +1175,12 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.ApplicationDataCompositeValue", L"MapChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::MapChangedEventHandler<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MapChanged(param0);
+                return py::require<winrt::Windows::Foundation::Collections::IObservableMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::event, "Windows.Storage.ApplicationDataCompositeValue", "MapChanged", "Windows.Foundation.Collections.IObservableMap<String, Object>").MapChanged(param0);
             }());
         }
         catch (...)
@@ -1662,24 +1194,11 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.ApplicationDataCompositeValue", L"MapChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MapChanged(param0);
+                py::require<winrt::Windows::Foundation::Collections::IObservableMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::event, "Windows.Storage.ApplicationDataCompositeValue", "MapChanged", "Windows.Foundation.Collections.IObservableMap<String, Object>").MapChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -1722,7 +1241,7 @@ namespace py::cpp::Windows::Storage
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataCompositeValue", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Object>>", 0).First();
             }())};
 
             if (!iter)
@@ -1746,7 +1265,7 @@ namespace py::cpp::Windows::Storage
             auto _key = py::convert_to<winrt::hstring>(key);
             {
                 auto _gil = py::release_gil();
-                return static_cast<int>(self->obj.HasKey(_key));
+                return static_cast<int>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataCompositeValue", "HasKey", "Windows.Foundation.Collections.IMap<String, Object>", 1).HasKey(_key));
             }
         }
         catch (...)
@@ -1761,7 +1280,7 @@ namespace py::cpp::Windows::Storage
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::property, "Windows.Storage.ApplicationDataCompositeValue", "Size", "Windows.Foundation.Collections.IMap<String, Object>").Size());
         }
         catch (...)
         {
@@ -1778,7 +1297,7 @@ namespace py::cpp::Windows::Storage
             auto value = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.TryLookup(_key);
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataCompositeValue", "Lookup", "Windows.Foundation.Collections.IMap<String, Object>", 1).TryLookup(_key);
             }();
 
             if (!value)
@@ -1788,7 +1307,7 @@ namespace py::cpp::Windows::Storage
                     auto has_key = [&]()
                     {
                         auto _gil = py::release_gil();
-                        return self->obj.HasKey(_key);
+                        return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataCompositeValue", "Lookup", "Windows.Foundation.Collections.IMap<String, Object>", 1).HasKey(_key);
                     }();
 
                     if (has_key)
@@ -1821,7 +1340,7 @@ namespace py::cpp::Windows::Storage
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
-                    did_remove = self->obj.TryRemove(_key);
+                    did_remove = py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataCompositeValue", "Lookup", "Windows.Foundation.Collections.IMap<String, Object>", 1).TryRemove(_key);
                 }
                 if (!did_remove)
                 {
@@ -1835,7 +1354,7 @@ namespace py::cpp::Windows::Storage
             auto _value = py::convert_to<winrt::Windows::Foundation::IInspectable>(value);
             {
                 auto _gil = py::release_gil();
-                self->obj.Insert(_key, _value);
+                py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataCompositeValue", "Lookup", "Windows.Foundation.Collections.IMap<String, Object>", 1).Insert(_key, _value);
             }
 
             return 0;
@@ -1909,22 +1428,9 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataContainer", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataContainer", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -1950,19 +1456,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataContainer", L"CreateContainer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::ApplicationDataCreateDisposition>(args, 1);
 
@@ -1993,19 +1486,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataContainer", L"DeleteContainer", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -2032,19 +1512,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.ApplicationDataContainer", L"Containers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2062,19 +1529,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.ApplicationDataContainer", L"Locality");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2092,19 +1546,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.ApplicationDataContainer", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2122,19 +1563,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.ApplicationDataContainer", L"Values");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2183,7 +1611,7 @@ namespace py::cpp::Windows::Storage
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataContainer", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -2251,22 +1679,9 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataContainerSettings", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataContainerSettings", "Clear", "Windows.Foundation.Collections.IMap<String, Object>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -2292,23 +1707,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataContainerSettings", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataContainerSettings", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Object>>", 0).First();
                 }());
             }
             catch (...)
@@ -2332,23 +1734,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataContainerSettings", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataContainerSettings", "GetView", "Windows.Foundation.Collections.IMap<String, Object>", 0).GetView();
                 }());
             }
             catch (...)
@@ -2372,25 +1761,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataContainerSettings", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.HasKey(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataContainerSettings", "HasKey", "Windows.Foundation.Collections.IMap<String, Object>", 1).HasKey(param0);
                 }());
             }
             catch (...)
@@ -2414,26 +1790,13 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataContainerSettings", L"Insert", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Insert(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataContainerSettings", "Insert", "Windows.Foundation.Collections.IMap<String, Object>", 2).Insert(param0, param1);
                 }());
             }
             catch (...)
@@ -2457,25 +1820,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataContainerSettings", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Lookup(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataContainerSettings", "Lookup", "Windows.Foundation.Collections.IMap<String, Object>", 1).Lookup(param0);
                 }());
             }
             catch (...)
@@ -2499,24 +1849,11 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.ApplicationDataContainerSettings", L"Remove", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Remove(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataContainerSettings", "Remove", "Windows.Foundation.Collections.IMap<String, Object>", 1).Remove(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -2538,23 +1875,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.ApplicationDataContainerSettings", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::property, "Windows.Storage.ApplicationDataContainerSettings", "Size", "Windows.Foundation.Collections.IMap<String, Object>").Size();
             }());
         }
         catch (...)
@@ -2568,25 +1892,12 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.ApplicationDataContainerSettings", L"MapChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::MapChangedEventHandler<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MapChanged(param0);
+                return py::require<winrt::Windows::Foundation::Collections::IObservableMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::event, "Windows.Storage.ApplicationDataContainerSettings", "MapChanged", "Windows.Foundation.Collections.IObservableMap<String, Object>").MapChanged(param0);
             }());
         }
         catch (...)
@@ -2600,24 +1911,11 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.ApplicationDataContainerSettings", L"MapChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MapChanged(param0);
+                py::require<winrt::Windows::Foundation::Collections::IObservableMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::event, "Windows.Storage.ApplicationDataContainerSettings", "MapChanged", "Windows.Foundation.Collections.IObservableMap<String, Object>").MapChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -2660,7 +1958,7 @@ namespace py::cpp::Windows::Storage
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataContainerSettings", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Object>>", 0).First();
             }())};
 
             if (!iter)
@@ -2684,7 +1982,7 @@ namespace py::cpp::Windows::Storage
             auto _key = py::convert_to<winrt::hstring>(key);
             {
                 auto _gil = py::release_gil();
-                return static_cast<int>(self->obj.HasKey(_key));
+                return static_cast<int>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataContainerSettings", "HasKey", "Windows.Foundation.Collections.IMap<String, Object>", 1).HasKey(_key));
             }
         }
         catch (...)
@@ -2699,7 +1997,7 @@ namespace py::cpp::Windows::Storage
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::property, "Windows.Storage.ApplicationDataContainerSettings", "Size", "Windows.Foundation.Collections.IMap<String, Object>").Size());
         }
         catch (...)
         {
@@ -2716,7 +2014,7 @@ namespace py::cpp::Windows::Storage
             auto value = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.TryLookup(_key);
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataContainerSettings", "Lookup", "Windows.Foundation.Collections.IMap<String, Object>", 1).TryLookup(_key);
             }();
 
             if (!value)
@@ -2726,7 +2024,7 @@ namespace py::cpp::Windows::Storage
                     auto has_key = [&]()
                     {
                         auto _gil = py::release_gil();
-                        return self->obj.HasKey(_key);
+                        return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataContainerSettings", "Lookup", "Windows.Foundation.Collections.IMap<String, Object>", 1).HasKey(_key);
                     }();
 
                     if (has_key)
@@ -2759,7 +2057,7 @@ namespace py::cpp::Windows::Storage
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
-                    did_remove = self->obj.TryRemove(_key);
+                    did_remove = py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataContainerSettings", "Lookup", "Windows.Foundation.Collections.IMap<String, Object>", 1).TryRemove(_key);
                 }
                 if (!did_remove)
                 {
@@ -2773,7 +2071,7 @@ namespace py::cpp::Windows::Storage
             auto _value = py::convert_to<winrt::Windows::Foundation::IInspectable>(value);
             {
                 auto _gil = py::release_gil();
-                self->obj.Insert(_key, _value);
+                py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.Storage.ApplicationDataContainerSettings", "Lookup", "Windows.Foundation.Collections.IMap<String, Object>", 1).Insert(_key, _value);
             }
 
             return 0;
@@ -5238,19 +4536,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.SetVersionDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -5343,19 +4628,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.SetVersionRequest", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5379,19 +4651,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SetVersionRequest", L"CurrentVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5409,19 +4668,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SetVersionRequest", L"DesiredVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5509,19 +4755,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"CopyAndReplaceAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert([&]()
@@ -5551,19 +4784,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"CopyAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
 
                 return py::convert([&]()
@@ -5582,19 +4802,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"CopyAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -5614,19 +4821,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"CopyAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
@@ -5746,23 +4940,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeleteAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "DeleteAsync", "Windows.Storage.IStorageItem", 0).DeleteAsync();
                 }());
             }
             catch (...)
@@ -5775,25 +4956,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"DeleteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeleteAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "DeleteAsync", "Windows.Storage.IStorageItem", 1).DeleteAsync(param0);
                 }());
             }
             catch (...)
@@ -5817,23 +4985,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetBasicPropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetBasicPropertiesAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "GetBasicPropertiesAsync", "Windows.Storage.IStorageItem", 0).GetBasicPropertiesAsync();
                 }());
             }
             catch (...)
@@ -5984,23 +5139,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetParentAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetParentAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem2>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "GetParentAsync", "Windows.Storage.IStorageItem2", 0).GetParentAsync();
                 }());
             }
             catch (...)
@@ -6024,25 +5166,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetScaledImageAsThumbnailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetScaledImageAsThumbnailAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties2>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "GetScaledImageAsThumbnailAsync", "Windows.Storage.IStorageItemProperties2", 1).GetScaledImageAsThumbnailAsync(param0);
                 }());
             }
             catch (...)
@@ -6055,26 +5184,13 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetScaledImageAsThumbnailAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetScaledImageAsThumbnailAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties2>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "GetScaledImageAsThumbnailAsync", "Windows.Storage.IStorageItemProperties2", 2).GetScaledImageAsThumbnailAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -6087,19 +5203,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetScaledImageAsThumbnailAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
@@ -6107,7 +5210,7 @@ namespace py::cpp::Windows::Storage
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetScaledImageAsThumbnailAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties2>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "GetScaledImageAsThumbnailAsync", "Windows.Storage.IStorageItemProperties2", 3).GetScaledImageAsThumbnailAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -6131,25 +5234,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetThumbnailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 1).GetThumbnailAsync(param0);
                 }());
             }
             catch (...)
@@ -6162,26 +5252,13 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetThumbnailAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 2).GetThumbnailAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -6194,19 +5271,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetThumbnailAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
@@ -6214,7 +5278,7 @@ namespace py::cpp::Windows::Storage
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 3).GetThumbnailAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -6238,25 +5302,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"IsEqual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsEqual(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem2>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "IsEqual", "Windows.Storage.IStorageItem2", 1).IsEqual(param0);
                 }());
             }
             catch (...)
@@ -6280,25 +5331,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"IsOfType", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageItemTypes>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsOfType(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "IsOfType", "Windows.Storage.IStorageItem", 1).IsOfType(param0);
                 }());
             }
             catch (...)
@@ -6322,19 +5360,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"MoveAndReplaceAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert([&]()
@@ -6364,19 +5389,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"MoveAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
 
                 return py::convert([&]()
@@ -6395,19 +5407,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"MoveAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -6427,19 +5426,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"MoveAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
@@ -6471,19 +5457,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"OpenAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileAccessMode>(args, 0);
 
                 return py::convert([&]()
@@ -6502,26 +5475,13 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"OpenAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileAccessMode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::StorageOpenOptions>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.OpenAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageFile2>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "OpenAsync", "Windows.Storage.IStorageFile2", 2).OpenAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -6545,23 +5505,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"OpenReadAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.OpenReadAsync();
+                    return py::require<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "OpenReadAsync", "Windows.Storage.Streams.IRandomAccessStreamReference", 0).OpenReadAsync();
                 }());
             }
             catch (...)
@@ -6585,23 +5532,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"OpenSequentialReadAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.OpenSequentialReadAsync();
+                    return py::require<winrt::Windows::Storage::Streams::IInputStreamReference>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "OpenSequentialReadAsync", "Windows.Storage.Streams.IInputStreamReference", 0).OpenSequentialReadAsync();
                 }());
             }
             catch (...)
@@ -6625,19 +5559,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"OpenTransactedWriteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6654,25 +5575,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"OpenTransactedWriteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageOpenOptions>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.OpenTransactedWriteAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageFile2>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "OpenTransactedWriteAsync", "Windows.Storage.IStorageFile2", 1).OpenTransactedWriteAsync(param0);
                 }());
             }
             catch (...)
@@ -6696,25 +5604,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"RenameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenameAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "RenameAsync", "Windows.Storage.IStorageItem", 1).RenameAsync(param0);
                 }());
             }
             catch (...)
@@ -6727,26 +5622,13 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"RenameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenameAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.StorageFile", "RenameAsync", "Windows.Storage.IStorageItem", 2).RenameAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -6854,19 +5736,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFile", L"ContentType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6884,19 +5753,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFile", L"FileType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6914,23 +5770,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFile", L"IsAvailable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsAvailable();
+                return py::require<winrt::Windows::Storage::IStorageFilePropertiesWithAvailability>(self->obj, py::member_kind::property, "Windows.Storage.StorageFile", "IsAvailable", "Windows.Storage.IStorageFilePropertiesWithAvailability").IsAvailable();
             }());
         }
         catch (...)
@@ -6944,23 +5787,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFile", L"Attributes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Attributes();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.StorageFile", "Attributes", "Windows.Storage.IStorageItem").Attributes();
             }());
         }
         catch (...)
@@ -6974,23 +5804,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFile", L"DateCreated");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DateCreated();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.StorageFile", "DateCreated", "Windows.Storage.IStorageItem").DateCreated();
             }());
         }
         catch (...)
@@ -7004,23 +5821,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFile", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.StorageFile", "Name", "Windows.Storage.IStorageItem").Name();
             }());
         }
         catch (...)
@@ -7034,23 +5838,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFile", L"Path");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Path();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.StorageFile", "Path", "Windows.Storage.IStorageItem").Path();
             }());
         }
         catch (...)
@@ -7064,23 +5855,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFile", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayName();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.StorageFile", "DisplayName", "Windows.Storage.IStorageItemProperties").DisplayName();
             }());
         }
         catch (...)
@@ -7094,23 +5872,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFile", L"DisplayType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayType();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.StorageFile", "DisplayType", "Windows.Storage.IStorageItemProperties").DisplayType();
             }());
         }
         catch (...)
@@ -7124,23 +5889,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFile", L"FolderRelativeId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FolderRelativeId();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.StorageFile", "FolderRelativeId", "Windows.Storage.IStorageItemProperties").FolderRelativeId();
             }());
         }
         catch (...)
@@ -7154,23 +5906,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFile", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Properties();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.StorageFile", "Properties", "Windows.Storage.IStorageItemProperties").Properties();
             }());
         }
         catch (...)
@@ -7184,23 +5923,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFile", L"Provider");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Provider();
+                return py::require<winrt::Windows::Storage::IStorageItemPropertiesWithProvider>(self->obj, py::member_kind::property, "Windows.Storage.StorageFile", "Provider", "Windows.Storage.IStorageItemPropertiesWithProvider").Provider();
             }());
         }
         catch (...)
@@ -7337,25 +6063,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"AreQueryOptionsSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.AreQueryOptionsSupported(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "AreQueryOptionsSupported", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).AreQueryOptionsSupported(param0);
                 }());
             }
             catch (...)
@@ -7379,19 +6092,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -7410,19 +6110,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFileAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::CreationCollisionOption>(args, 1);
 
@@ -7453,23 +6140,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFileQuery", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFileQuery();
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "CreateFileQuery", "Windows.Storage.Search.IStorageFolderQueryOperations", 0).CreateFileQuery();
                 }());
             }
             catch (...)
@@ -7482,25 +6156,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFileQuery", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFileQuery(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "CreateFileQuery", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).CreateFileQuery(param0);
                 }());
             }
             catch (...)
@@ -7524,25 +6185,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFileQueryWithOptions", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFileQueryWithOptions(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "CreateFileQueryWithOptions", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).CreateFileQueryWithOptions(param0);
                 }());
             }
             catch (...)
@@ -7566,19 +6214,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -7597,19 +6232,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFolderAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::CreationCollisionOption>(args, 1);
 
@@ -7640,23 +6262,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFolderQuery", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFolderQuery();
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "CreateFolderQuery", "Windows.Storage.Search.IStorageFolderQueryOperations", 0).CreateFolderQuery();
                 }());
             }
             catch (...)
@@ -7669,25 +6278,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFolderQuery", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFolderQuery(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "CreateFolderQuery", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).CreateFolderQuery(param0);
                 }());
             }
             catch (...)
@@ -7711,25 +6307,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFolderQueryWithOptions", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFolderQueryWithOptions(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "CreateFolderQueryWithOptions", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).CreateFolderQueryWithOptions(param0);
                 }());
             }
             catch (...)
@@ -7753,23 +6336,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateItemQuery", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateItemQuery();
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "CreateItemQuery", "Windows.Storage.Search.IStorageFolderQueryOperations", 0).CreateItemQuery();
                 }());
             }
             catch (...)
@@ -7793,25 +6363,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateItemQueryWithOptions", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateItemQueryWithOptions(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "CreateItemQueryWithOptions", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).CreateItemQueryWithOptions(param0);
                 }());
             }
             catch (...)
@@ -7835,23 +6392,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeleteAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "DeleteAsync", "Windows.Storage.IStorageItem", 0).DeleteAsync();
                 }());
             }
             catch (...)
@@ -7864,25 +6408,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"DeleteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeleteAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "DeleteAsync", "Windows.Storage.IStorageItem", 1).DeleteAsync(param0);
                 }());
             }
             catch (...)
@@ -7906,23 +6437,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetBasicPropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetBasicPropertiesAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "GetBasicPropertiesAsync", "Windows.Storage.IStorageItem", 0).GetBasicPropertiesAsync();
                 }());
             }
             catch (...)
@@ -7946,19 +6464,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -7988,19 +6493,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetFilesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8017,25 +6509,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetFilesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFilesAsync(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "GetFilesAsync", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).GetFilesAsync(param0);
                 }());
             }
             catch (...)
@@ -8048,19 +6527,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetFilesAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -8068,7 +6534,7 @@ namespace py::cpp::Windows::Storage
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFilesAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "GetFilesAsync", "Windows.Storage.Search.IStorageFolderQueryOperations", 3).GetFilesAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -8092,19 +6558,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -8219,19 +6672,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetFoldersAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8248,25 +6688,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetFoldersAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFoldersAsync(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "GetFoldersAsync", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).GetFoldersAsync(param0);
                 }());
             }
             catch (...)
@@ -8279,19 +6706,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetFoldersAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -8299,7 +6713,7 @@ namespace py::cpp::Windows::Storage
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFoldersAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "GetFoldersAsync", "Windows.Storage.Search.IStorageFolderQueryOperations", 3).GetFoldersAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -8323,23 +6737,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetIndexedStateAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetIndexedStateAsync();
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "GetIndexedStateAsync", "Windows.Storage.Search.IStorageFolderQueryOperations", 0).GetIndexedStateAsync();
                 }());
             }
             catch (...)
@@ -8363,19 +6764,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetItemAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -8405,19 +6793,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetItemsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8434,26 +6809,13 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetItemsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetItemsAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "GetItemsAsync", "Windows.Storage.Search.IStorageFolderQueryOperations", 2).GetItemsAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -8477,23 +6839,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetParentAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetParentAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem2>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "GetParentAsync", "Windows.Storage.IStorageItem2", 0).GetParentAsync();
                 }());
             }
             catch (...)
@@ -8517,25 +6866,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetScaledImageAsThumbnailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetScaledImageAsThumbnailAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties2>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "GetScaledImageAsThumbnailAsync", "Windows.Storage.IStorageItemProperties2", 1).GetScaledImageAsThumbnailAsync(param0);
                 }());
             }
             catch (...)
@@ -8548,26 +6884,13 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetScaledImageAsThumbnailAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetScaledImageAsThumbnailAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties2>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "GetScaledImageAsThumbnailAsync", "Windows.Storage.IStorageItemProperties2", 2).GetScaledImageAsThumbnailAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -8580,19 +6903,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetScaledImageAsThumbnailAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
@@ -8600,7 +6910,7 @@ namespace py::cpp::Windows::Storage
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetScaledImageAsThumbnailAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties2>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "GetScaledImageAsThumbnailAsync", "Windows.Storage.IStorageItemProperties2", 3).GetScaledImageAsThumbnailAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -8624,25 +6934,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetThumbnailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 1).GetThumbnailAsync(param0);
                 }());
             }
             catch (...)
@@ -8655,26 +6952,13 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetThumbnailAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 2).GetThumbnailAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -8687,19 +6971,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetThumbnailAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
@@ -8707,7 +6978,7 @@ namespace py::cpp::Windows::Storage
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 3).GetThumbnailAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -8731,25 +7002,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"IsCommonFileQuerySupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsCommonFileQuerySupported(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "IsCommonFileQuerySupported", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).IsCommonFileQuerySupported(param0);
                 }());
             }
             catch (...)
@@ -8773,25 +7031,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"IsCommonFolderQuerySupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsCommonFolderQuerySupported(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "IsCommonFolderQuerySupported", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).IsCommonFolderQuerySupported(param0);
                 }());
             }
             catch (...)
@@ -8815,25 +7060,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"IsEqual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsEqual(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem2>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "IsEqual", "Windows.Storage.IStorageItem2", 1).IsEqual(param0);
                 }());
             }
             catch (...)
@@ -8857,25 +7089,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"IsOfType", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageItemTypes>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsOfType(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "IsOfType", "Windows.Storage.IStorageItem", 1).IsOfType(param0);
                 }());
             }
             catch (...)
@@ -8899,25 +7118,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"RenameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenameAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "RenameAsync", "Windows.Storage.IStorageItem", 1).RenameAsync(param0);
                 }());
             }
             catch (...)
@@ -8930,26 +7136,13 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"RenameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenameAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "RenameAsync", "Windows.Storage.IStorageItem", 2).RenameAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -8973,23 +7166,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"TryGetChangeTracker", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryGetChangeTracker();
+                    return py::require<winrt::Windows::Storage::IStorageFolder3>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "TryGetChangeTracker", "Windows.Storage.IStorageFolder3", 0).TryGetChangeTracker();
                 }());
             }
             catch (...)
@@ -9013,25 +7193,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"TryGetItemAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryGetItemAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageFolder2>(self->obj, py::member_kind::method, "Windows.Storage.StorageFolder", "TryGetItemAsync", "Windows.Storage.IStorageFolder2", 1).TryGetItemAsync(param0);
                 }());
             }
             catch (...)
@@ -9051,23 +7218,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFolder", L"Attributes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Attributes();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.StorageFolder", "Attributes", "Windows.Storage.IStorageItem").Attributes();
             }());
         }
         catch (...)
@@ -9081,23 +7235,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFolder", L"DateCreated");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DateCreated();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.StorageFolder", "DateCreated", "Windows.Storage.IStorageItem").DateCreated();
             }());
         }
         catch (...)
@@ -9111,23 +7252,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFolder", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.StorageFolder", "Name", "Windows.Storage.IStorageItem").Name();
             }());
         }
         catch (...)
@@ -9141,23 +7269,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFolder", L"Path");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Path();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.StorageFolder", "Path", "Windows.Storage.IStorageItem").Path();
             }());
         }
         catch (...)
@@ -9171,23 +7286,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFolder", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayName();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.StorageFolder", "DisplayName", "Windows.Storage.IStorageItemProperties").DisplayName();
             }());
         }
         catch (...)
@@ -9201,23 +7303,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFolder", L"DisplayType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayType();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.StorageFolder", "DisplayType", "Windows.Storage.IStorageItemProperties").DisplayType();
             }());
         }
         catch (...)
@@ -9231,23 +7320,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFolder", L"FolderRelativeId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FolderRelativeId();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.StorageFolder", "FolderRelativeId", "Windows.Storage.IStorageItemProperties").FolderRelativeId();
             }());
         }
         catch (...)
@@ -9261,23 +7337,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFolder", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Properties();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.StorageFolder", "Properties", "Windows.Storage.IStorageItemProperties").Properties();
             }());
         }
         catch (...)
@@ -9291,23 +7354,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageFolder", L"Provider");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Provider();
+                return py::require<winrt::Windows::Storage::IStorageItemPropertiesWithProvider>(self->obj, py::member_kind::property, "Windows.Storage.StorageFolder", "Provider", "Windows.Storage.IStorageItemPropertiesWithProvider").Provider();
             }());
         }
         catch (...)
@@ -9448,23 +7498,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageLibrary", L"AreFolderSuggestionsAvailableAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.AreFolderSuggestionsAvailableAsync();
+                    return py::require<winrt::Windows::Storage::IStorageLibrary3>(self->obj, py::member_kind::method, "Windows.Storage.StorageLibrary", "AreFolderSuggestionsAvailableAsync", "Windows.Storage.IStorageLibrary3", 0).AreFolderSuggestionsAvailableAsync();
                 }());
             }
             catch (...)
@@ -9573,19 +7610,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageLibrary", L"RequestAddFolderAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9613,19 +7637,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageLibrary", L"RequestRemoveFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFolder>(args, 0);
 
                 return py::convert([&]()
@@ -9651,19 +7662,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageLibrary", L"Folders");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9681,19 +7679,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageLibrary", L"SaveFolder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9711,23 +7696,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageLibrary", L"ChangeTracker");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChangeTracker();
+                return py::require<winrt::Windows::Storage::IStorageLibrary2>(self->obj, py::member_kind::property, "Windows.Storage.StorageLibrary", "ChangeTracker", "Windows.Storage.IStorageLibrary2").ChangeTracker();
             }());
         }
         catch (...)
@@ -9741,19 +7713,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.StorageLibrary", L"DefinitionChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::StorageLibrary, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -9773,19 +7732,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.StorageLibrary", L"DefinitionChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9904,19 +7850,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageLibraryChange", L"GetStorageItemAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9944,19 +7877,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageLibraryChange", L"IsOfType", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageItemTypes>(args, 0);
 
                 return py::convert([&]()
@@ -9982,19 +7902,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageLibraryChange", L"ChangeType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10012,19 +7919,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageLibraryChange", L"Path");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10042,19 +7936,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageLibraryChange", L"PreviousPath");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10144,19 +8025,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageLibraryChangeReader", L"AcceptChangesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -10184,23 +8052,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageLibraryChangeReader", L"GetLastChangeId", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetLastChangeId();
+                    return py::require<winrt::Windows::Storage::IStorageLibraryChangeReader2>(self->obj, py::member_kind::method, "Windows.Storage.StorageLibraryChangeReader", "GetLastChangeId", "Windows.Storage.IStorageLibraryChangeReader2", 0).GetLastChangeId();
                 }());
             }
             catch (...)
@@ -10224,19 +8079,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageLibraryChangeReader", L"ReadBatchAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -10330,22 +8172,9 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageLibraryChangeTracker", L"Disable", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Disable();
+                    py::require<winrt::Windows::Storage::IStorageLibraryChangeTracker2>(self->obj, py::member_kind::method, "Windows.Storage.StorageLibraryChangeTracker", "Disable", "Windows.Storage.IStorageLibraryChangeTracker2", 0).Disable();
                 }
 
                 Py_RETURN_NONE;
@@ -10371,19 +8200,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageLibraryChangeTracker", L"Enable", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Enable();
@@ -10401,24 +8217,11 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageLibraryChangeTracker", L"Enable", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageLibraryChangeTrackerOptions>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Enable(param0);
+                    py::require<winrt::Windows::Storage::IStorageLibraryChangeTracker2>(self->obj, py::member_kind::method, "Windows.Storage.StorageLibraryChangeTracker", "Enable", "Windows.Storage.IStorageLibraryChangeTracker2", 1).Enable(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -10444,19 +8247,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageLibraryChangeTracker", L"GetChangeReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -10484,19 +8274,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageLibraryChangeTracker", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Reset();
@@ -10610,19 +8387,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageLibraryChangeTrackerOptions", L"TrackChangeDetails");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10646,19 +8410,6 @@ namespace py::cpp::Windows::Storage
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageLibraryChangeTrackerOptions", L"TrackChangeDetails");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -10862,25 +8613,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageProvider", L"IsPropertySupportedForPartialFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsPropertySupportedForPartialFileAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageProvider2>(self->obj, py::member_kind::method, "Windows.Storage.StorageProvider", "IsPropertySupportedForPartialFileAsync", "Windows.Storage.IStorageProvider2", 1).IsPropertySupportedForPartialFileAsync(param0);
                 }());
             }
             catch (...)
@@ -10900,19 +8638,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageProvider", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10930,19 +8655,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageProvider", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11030,22 +8742,9 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageStreamTransaction", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Storage.StorageStreamTransaction", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -11071,19 +8770,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageStreamTransaction", L"CommitAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -11107,19 +8793,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.StorageStreamTransaction", L"Stream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11168,7 +8841,7 @@ namespace py::cpp::Windows::Storage
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Storage.StorageStreamTransaction", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -11232,22 +8905,9 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StreamedFileDataRequest", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Storage.StreamedFileDataRequest", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -11273,24 +8933,11 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StreamedFileDataRequest", L"FailAndClose", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StreamedFileFailureMode>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.FailAndClose(param0);
+                    py::require<winrt::Windows::Storage::IStreamedFileDataRequest>(self->obj, py::member_kind::method, "Windows.Storage.StreamedFileDataRequest", "FailAndClose", "Windows.Storage.IStreamedFileDataRequest", 1).FailAndClose(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -11316,19 +8963,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StreamedFileDataRequest", L"FlushAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -11356,19 +8990,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StreamedFileDataRequest", L"WriteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -11425,7 +9046,7 @@ namespace py::cpp::Windows::Storage
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Storage.StreamedFileDataRequest", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -11486,19 +9107,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemAudioProperties", L"EncodingBitrate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11620,19 +9228,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"Fonts");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11650,19 +9245,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"ProgramData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11680,19 +9262,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"Public");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11710,19 +9279,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"PublicDesktop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11740,19 +9296,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"PublicDocuments");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11770,19 +9313,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"PublicDownloads");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11800,19 +9330,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"PublicMusic");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11830,19 +9347,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"PublicPictures");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11860,19 +9364,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"PublicVideos");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11890,19 +9381,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"System");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11920,19 +9398,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"SystemArm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11950,19 +9415,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"SystemHost");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11980,19 +9432,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"SystemX64");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12010,19 +9449,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"SystemX86");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12040,19 +9466,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"UserProfiles");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12070,19 +9483,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemDataPaths", L"Windows");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12201,19 +9601,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemGPSProperties", L"LatitudeDecimal");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12231,19 +9618,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemGPSProperties", L"LongitudeDecimal");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12326,19 +9700,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemImageProperties", L"HorizontalSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12356,19 +9717,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemImageProperties", L"VerticalSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12451,19 +9799,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemMediaProperties", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12481,19 +9816,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemMediaProperties", L"Producer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12511,19 +9833,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemMediaProperties", L"Publisher");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12541,19 +9850,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemMediaProperties", L"SubTitle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12571,19 +9867,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemMediaProperties", L"Writer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12601,19 +9884,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemMediaProperties", L"Year");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12700,19 +9970,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemMusicProperties", L"AlbumArtist");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12730,19 +9987,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemMusicProperties", L"AlbumTitle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12760,19 +10004,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemMusicProperties", L"Artist");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12790,19 +10021,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemMusicProperties", L"Composer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12820,19 +10038,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemMusicProperties", L"Conductor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12850,19 +10055,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemMusicProperties", L"DisplayArtist");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12880,19 +10072,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemMusicProperties", L"Genre");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12910,19 +10089,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemMusicProperties", L"TrackNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13011,19 +10177,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemPhotoProperties", L"CameraManufacturer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13041,19 +10194,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemPhotoProperties", L"CameraModel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13071,19 +10211,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemPhotoProperties", L"DateTaken");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13101,19 +10228,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemPhotoProperties", L"Orientation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13131,19 +10245,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemPhotoProperties", L"PeopleNames");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13681,19 +10782,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemVideoProperties", L"Director");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13711,19 +10799,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemVideoProperties", L"FrameHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13741,19 +10816,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemVideoProperties", L"FrameWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13771,19 +10833,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemVideoProperties", L"Orientation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13801,19 +10850,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.SystemVideoProperties", L"TotalBitrate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13981,19 +11017,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"CameraRoll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14011,19 +11034,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"Cookies");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14041,19 +11051,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"Desktop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14071,19 +11068,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"Documents");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14101,19 +11085,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"Downloads");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14131,19 +11102,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"Favorites");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14161,19 +11119,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"History");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14191,19 +11136,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"InternetCache");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14221,19 +11153,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"LocalAppData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14251,19 +11170,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"LocalAppDataLow");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14281,19 +11187,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"Music");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14311,19 +11204,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"Pictures");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14341,19 +11221,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"Profile");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14371,19 +11238,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"Recent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14401,19 +11255,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"RoamingAppData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14431,19 +11272,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"SavedPictures");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14461,19 +11289,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"Screenshots");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14491,19 +11306,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"Templates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14521,19 +11323,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.UserDataPaths", L"Videos");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14662,19 +11451,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"CopyAndReplaceAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert([&]()
@@ -14704,19 +11480,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"CopyAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
 
                 return py::convert([&]()
@@ -14735,19 +11498,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"CopyAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -14767,19 +11517,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"CopyAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
@@ -14811,23 +11548,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeleteAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "DeleteAsync", "Windows.Storage.IStorageItem", 0).DeleteAsync();
                 }());
             }
             catch (...)
@@ -14840,25 +11564,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeleteAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "DeleteAsync", "Windows.Storage.IStorageItem", 1).DeleteAsync(param0);
                 }());
             }
             catch (...)
@@ -14882,23 +11593,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"GetBasicPropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetBasicPropertiesAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "GetBasicPropertiesAsync", "Windows.Storage.IStorageItem", 0).GetBasicPropertiesAsync();
                 }());
             }
             catch (...)
@@ -14922,25 +11620,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"IsOfType", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageItemTypes>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsOfType(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "IsOfType", "Windows.Storage.IStorageItem", 1).IsOfType(param0);
                 }());
             }
             catch (...)
@@ -14964,19 +11649,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"MoveAndReplaceAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert([&]()
@@ -15006,19 +11678,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"MoveAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
 
                 return py::convert([&]()
@@ -15037,19 +11696,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"MoveAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -15069,19 +11715,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"MoveAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
@@ -15113,19 +11746,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"OpenAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileAccessMode>(args, 0);
 
                 return py::convert([&]()
@@ -15155,23 +11775,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Streams.IRandomAccessStreamReference", L"OpenReadAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.OpenReadAsync();
+                    return py::require<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(self->obj, py::member_kind::method, "Windows.Storage.Streams.IRandomAccessStreamReference", "OpenReadAsync", "Windows.Storage.Streams.IRandomAccessStreamReference", 0).OpenReadAsync();
                 }());
             }
             catch (...)
@@ -15195,23 +11802,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Streams.IInputStreamReference", L"OpenSequentialReadAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.OpenSequentialReadAsync();
+                    return py::require<winrt::Windows::Storage::Streams::IInputStreamReference>(self->obj, py::member_kind::method, "Windows.Storage.Streams.IInputStreamReference", "OpenSequentialReadAsync", "Windows.Storage.Streams.IInputStreamReference", 0).OpenSequentialReadAsync();
                 }());
             }
             catch (...)
@@ -15235,19 +11829,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"OpenTransactedWriteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -15275,25 +11856,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenameAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "RenameAsync", "Windows.Storage.IStorageItem", 1).RenameAsync(param0);
                 }());
             }
             catch (...)
@@ -15306,26 +11874,13 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenameAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "RenameAsync", "Windows.Storage.IStorageItem", 2).RenameAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -15345,19 +11900,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageFile", L"ContentType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15375,19 +11917,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageFile", L"FileType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15405,23 +11934,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"Attributes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Attributes();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItem", "Attributes", "Windows.Storage.IStorageItem").Attributes();
             }());
         }
         catch (...)
@@ -15435,23 +11951,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"DateCreated");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DateCreated();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItem", "DateCreated", "Windows.Storage.IStorageItem").DateCreated();
             }());
         }
         catch (...)
@@ -15465,23 +11968,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItem", "Name", "Windows.Storage.IStorageItem").Name();
             }());
         }
         catch (...)
@@ -15495,23 +11985,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"Path");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Path();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItem", "Path", "Windows.Storage.IStorageItem").Path();
             }());
         }
         catch (...)
@@ -16500,19 +12977,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile2", L"OpenAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileAccessMode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::StorageOpenOptions>(args, 1);
 
@@ -16543,19 +13007,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile2", L"OpenTransactedWriteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageOpenOptions>(args, 0);
 
                 return py::convert([&]()
@@ -16814,19 +13265,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageFilePropertiesWithAvailability", L"IsAvailable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17004,19 +13442,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFolder", L"CreateFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -17035,19 +13460,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFolder", L"CreateFileAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::CreationCollisionOption>(args, 1);
 
@@ -17078,19 +13490,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFolder", L"CreateFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -17109,19 +13508,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFolder", L"CreateFolderAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::CreationCollisionOption>(args, 1);
 
@@ -17152,23 +13538,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeleteAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "DeleteAsync", "Windows.Storage.IStorageItem", 0).DeleteAsync();
                 }());
             }
             catch (...)
@@ -17181,25 +13554,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeleteAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "DeleteAsync", "Windows.Storage.IStorageItem", 1).DeleteAsync(param0);
                 }());
             }
             catch (...)
@@ -17223,23 +13583,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"GetBasicPropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetBasicPropertiesAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "GetBasicPropertiesAsync", "Windows.Storage.IStorageItem", 0).GetBasicPropertiesAsync();
                 }());
             }
             catch (...)
@@ -17263,19 +13610,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFolder", L"GetFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -17305,19 +13639,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFolder", L"GetFilesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -17345,19 +13666,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFolder", L"GetFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -17387,19 +13695,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFolder", L"GetFoldersAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -17427,19 +13722,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFolder", L"GetItemAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -17469,19 +13751,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFolder", L"GetItemsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -17509,25 +13778,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"IsOfType", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageItemTypes>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsOfType(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "IsOfType", "Windows.Storage.IStorageItem", 1).IsOfType(param0);
                 }());
             }
             catch (...)
@@ -17551,25 +13807,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenameAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "RenameAsync", "Windows.Storage.IStorageItem", 1).RenameAsync(param0);
                 }());
             }
             catch (...)
@@ -17582,26 +13825,13 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenameAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "RenameAsync", "Windows.Storage.IStorageItem", 2).RenameAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -17621,23 +13851,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"Attributes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Attributes();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItem", "Attributes", "Windows.Storage.IStorageItem").Attributes();
             }());
         }
         catch (...)
@@ -17651,23 +13868,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"DateCreated");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DateCreated();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItem", "DateCreated", "Windows.Storage.IStorageItem").DateCreated();
             }());
         }
         catch (...)
@@ -17681,23 +13885,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItem", "Name", "Windows.Storage.IStorageItem").Name();
             }());
         }
         catch (...)
@@ -17711,23 +13902,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"Path");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Path();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItem", "Path", "Windows.Storage.IStorageItem").Path();
             }());
         }
         catch (...)
@@ -18564,19 +14742,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFolder2", L"TryGetItemAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -18774,19 +14939,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -18803,19 +14955,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
 
                 return py::convert([&]()
@@ -18845,19 +14984,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"GetBasicPropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -18885,19 +15011,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"IsOfType", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageItemTypes>(args, 0);
 
                 return py::convert([&]()
@@ -18927,19 +15040,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -18958,19 +15058,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 1);
 
@@ -18997,19 +15084,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"Attributes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19027,19 +15101,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"DateCreated");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19057,19 +15118,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19087,19 +15135,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"Path");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19556,23 +15591,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeleteAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "DeleteAsync", "Windows.Storage.IStorageItem", 0).DeleteAsync();
                 }());
             }
             catch (...)
@@ -19585,25 +15607,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeleteAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "DeleteAsync", "Windows.Storage.IStorageItem", 1).DeleteAsync(param0);
                 }());
             }
             catch (...)
@@ -19627,23 +15636,10 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"GetBasicPropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetBasicPropertiesAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "GetBasicPropertiesAsync", "Windows.Storage.IStorageItem", 0).GetBasicPropertiesAsync();
                 }());
             }
             catch (...)
@@ -19667,19 +15663,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem2", L"GetParentAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -19707,19 +15690,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem2", L"IsEqual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
                 return py::convert([&]()
@@ -19749,25 +15719,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"IsOfType", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageItemTypes>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsOfType(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "IsOfType", "Windows.Storage.IStorageItem", 1).IsOfType(param0);
                 }());
             }
             catch (...)
@@ -19791,25 +15748,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenameAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "RenameAsync", "Windows.Storage.IStorageItem", 1).RenameAsync(param0);
                 }());
             }
             catch (...)
@@ -19822,26 +15766,13 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenameAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItem", "RenameAsync", "Windows.Storage.IStorageItem", 2).RenameAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -19861,23 +15792,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"Attributes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Attributes();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItem", "Attributes", "Windows.Storage.IStorageItem").Attributes();
             }());
         }
         catch (...)
@@ -19891,23 +15809,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"DateCreated");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DateCreated();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItem", "DateCreated", "Windows.Storage.IStorageItem").DateCreated();
             }());
         }
         catch (...)
@@ -19921,23 +15826,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItem", "Name", "Windows.Storage.IStorageItem").Name();
             }());
         }
         catch (...)
@@ -19951,23 +15843,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItem", L"Path");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Path();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItem", "Path", "Windows.Storage.IStorageItem").Path();
             }());
         }
         catch (...)
@@ -20480,19 +16359,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
 
                 return py::convert([&]()
@@ -20511,19 +16377,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -20543,19 +16396,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
@@ -20583,19 +16423,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItemProperties", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20613,19 +16440,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItemProperties", L"DisplayType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20643,19 +16457,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItemProperties", L"FolderRelativeId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20673,19 +16474,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItemProperties", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21073,19 +16861,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties2", L"GetScaledImageAsThumbnailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
 
                 return py::convert([&]()
@@ -21104,19 +16879,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties2", L"GetScaledImageAsThumbnailAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -21136,19 +16898,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties2", L"GetScaledImageAsThumbnailAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
@@ -21180,25 +16929,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItemProperties", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 1).GetThumbnailAsync(param0);
                 }());
             }
             catch (...)
@@ -21211,26 +16947,13 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItemProperties", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 2).GetThumbnailAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -21243,19 +16966,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
@@ -21263,7 +16973,7 @@ namespace py::cpp::Windows::Storage
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItemProperties", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 3).GetThumbnailAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -21283,23 +16993,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItemProperties", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayName();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItemProperties", "DisplayName", "Windows.Storage.IStorageItemProperties").DisplayName();
             }());
         }
         catch (...)
@@ -21313,23 +17010,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItemProperties", L"DisplayType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayType();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItemProperties", "DisplayType", "Windows.Storage.IStorageItemProperties").DisplayType();
             }());
         }
         catch (...)
@@ -21343,23 +17027,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItemProperties", L"FolderRelativeId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FolderRelativeId();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItemProperties", "FolderRelativeId", "Windows.Storage.IStorageItemProperties").FolderRelativeId();
             }());
         }
         catch (...)
@@ -21373,23 +17044,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItemProperties", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Properties();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItemProperties", "Properties", "Windows.Storage.IStorageItemProperties").Properties();
             }());
         }
         catch (...)
@@ -21920,25 +17578,12 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItemProperties", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 1).GetThumbnailAsync(param0);
                 }());
             }
             catch (...)
@@ -21951,26 +17596,13 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItemProperties", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 2).GetThumbnailAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -21983,19 +17615,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
@@ -22003,7 +17622,7 @@ namespace py::cpp::Windows::Storage
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.IStorageItemProperties", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 3).GetThumbnailAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -22023,19 +17642,6 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItemPropertiesWithProvider", L"Provider");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22053,23 +17659,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItemProperties", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayName();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItemProperties", "DisplayName", "Windows.Storage.IStorageItemProperties").DisplayName();
             }());
         }
         catch (...)
@@ -22083,23 +17676,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItemProperties", L"DisplayType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayType();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItemProperties", "DisplayType", "Windows.Storage.IStorageItemProperties").DisplayType();
             }());
         }
         catch (...)
@@ -22113,23 +17693,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItemProperties", L"FolderRelativeId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FolderRelativeId();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItemProperties", "FolderRelativeId", "Windows.Storage.IStorageItemProperties").FolderRelativeId();
             }());
         }
         catch (...)
@@ -22143,23 +17710,10 @@ namespace py::cpp::Windows::Storage
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.IStorageItemProperties", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Properties();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.IStorageItemProperties", "Properties", "Windows.Storage.IStorageItemProperties").Properties();
             }());
         }
         catch (...)
@@ -22564,19 +18118,6 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStreamedFileDataRequest", L"FailAndClose", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StreamedFileFailureMode>(args, 0);
 
                 {

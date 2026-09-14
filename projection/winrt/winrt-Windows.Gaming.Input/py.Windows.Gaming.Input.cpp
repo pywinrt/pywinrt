@@ -71,19 +71,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ArcadeStick", L"GetButtonLabel", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::ArcadeStickButtons>(args, 0);
 
                 return py::convert([&]()
@@ -113,19 +100,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ArcadeStick", L"GetCurrentReading", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -153,23 +127,10 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ArcadeStick", L"TryGetBatteryReport", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryGetBatteryReport();
+                    return py::require<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>(self->obj, py::member_kind::method, "Windows.Gaming.Input.ArcadeStick", "TryGetBatteryReport", "Windows.Gaming.Input.IGameControllerBatteryInfo", 0).TryGetBatteryReport();
                 }());
             }
             catch (...)
@@ -189,23 +150,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ArcadeStick", L"Headset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Headset();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.ArcadeStick", "Headset", "Windows.Gaming.Input.IGameController").Headset();
             }());
         }
         catch (...)
@@ -219,23 +167,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ArcadeStick", L"IsWireless");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsWireless();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.ArcadeStick", "IsWireless", "Windows.Gaming.Input.IGameController").IsWireless();
             }());
         }
         catch (...)
@@ -249,23 +184,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ArcadeStick", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.User();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.ArcadeStick", "User", "Windows.Gaming.Input.IGameController").User();
             }());
         }
         catch (...)
@@ -309,25 +231,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.ArcadeStick", L"HeadsetConnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HeadsetConnected(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.ArcadeStick", "HeadsetConnected", "Windows.Gaming.Input.IGameController").HeadsetConnected(param0);
             }());
         }
         catch (...)
@@ -341,24 +250,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.ArcadeStick", L"HeadsetConnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HeadsetConnected(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.ArcadeStick", "HeadsetConnected", "Windows.Gaming.Input.IGameController").HeadsetConnected(param0);
             }
 
             Py_RETURN_NONE;
@@ -374,25 +270,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.ArcadeStick", L"HeadsetDisconnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HeadsetDisconnected(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.ArcadeStick", "HeadsetDisconnected", "Windows.Gaming.Input.IGameController").HeadsetDisconnected(param0);
             }());
         }
         catch (...)
@@ -406,24 +289,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.ArcadeStick", L"HeadsetDisconnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HeadsetDisconnected(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.ArcadeStick", "HeadsetDisconnected", "Windows.Gaming.Input.IGameController").HeadsetDisconnected(param0);
             }
 
             Py_RETURN_NONE;
@@ -439,25 +309,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.ArcadeStick", L"UserChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::System::UserChangedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UserChanged(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.ArcadeStick", "UserChanged", "Windows.Gaming.Input.IGameController").UserChanged(param0);
             }());
         }
         catch (...)
@@ -471,24 +328,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.ArcadeStick", L"UserChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UserChanged(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.ArcadeStick", "UserChanged", "Windows.Gaming.Input.IGameController").UserChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -782,19 +626,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.FlightStick", L"GetButtonLabel", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::FlightStickButtons>(args, 0);
 
                 return py::convert([&]()
@@ -824,19 +655,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.FlightStick", L"GetCurrentReading", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -864,23 +682,10 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.FlightStick", L"TryGetBatteryReport", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryGetBatteryReport();
+                    return py::require<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>(self->obj, py::member_kind::method, "Windows.Gaming.Input.FlightStick", "TryGetBatteryReport", "Windows.Gaming.Input.IGameControllerBatteryInfo", 0).TryGetBatteryReport();
                 }());
             }
             catch (...)
@@ -900,19 +705,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.FlightStick", L"HatSwitchKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -930,23 +722,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.FlightStick", L"Headset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Headset();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.FlightStick", "Headset", "Windows.Gaming.Input.IGameController").Headset();
             }());
         }
         catch (...)
@@ -960,23 +739,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.FlightStick", L"IsWireless");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsWireless();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.FlightStick", "IsWireless", "Windows.Gaming.Input.IGameController").IsWireless();
             }());
         }
         catch (...)
@@ -990,23 +756,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.FlightStick", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.User();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.FlightStick", "User", "Windows.Gaming.Input.IGameController").User();
             }());
         }
         catch (...)
@@ -1050,25 +803,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.FlightStick", L"HeadsetConnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HeadsetConnected(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.FlightStick", "HeadsetConnected", "Windows.Gaming.Input.IGameController").HeadsetConnected(param0);
             }());
         }
         catch (...)
@@ -1082,24 +822,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.FlightStick", L"HeadsetConnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HeadsetConnected(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.FlightStick", "HeadsetConnected", "Windows.Gaming.Input.IGameController").HeadsetConnected(param0);
             }
 
             Py_RETURN_NONE;
@@ -1115,25 +842,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.FlightStick", L"HeadsetDisconnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HeadsetDisconnected(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.FlightStick", "HeadsetDisconnected", "Windows.Gaming.Input.IGameController").HeadsetDisconnected(param0);
             }());
         }
         catch (...)
@@ -1147,24 +861,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.FlightStick", L"HeadsetDisconnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HeadsetDisconnected(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.FlightStick", "HeadsetDisconnected", "Windows.Gaming.Input.IGameController").HeadsetDisconnected(param0);
             }
 
             Py_RETURN_NONE;
@@ -1180,25 +881,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.FlightStick", L"UserChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::System::UserChangedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UserChanged(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.FlightStick", "UserChanged", "Windows.Gaming.Input.IGameController").UserChanged(param0);
             }());
         }
         catch (...)
@@ -1212,24 +900,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.FlightStick", L"UserChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UserChanged(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.FlightStick", "UserChanged", "Windows.Gaming.Input.IGameController").UserChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -1524,25 +1199,12 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Gamepad", L"GetButtonLabel", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::GamepadButtons>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetButtonLabel(param0);
+                    return py::require<winrt::Windows::Gaming::Input::IGamepad2>(self->obj, py::member_kind::method, "Windows.Gaming.Input.Gamepad", "GetButtonLabel", "Windows.Gaming.Input.IGamepad2", 1).GetButtonLabel(param0);
                 }());
             }
             catch (...)
@@ -1566,19 +1228,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Gamepad", L"GetCurrentReading", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1606,23 +1255,10 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Gamepad", L"TryGetBatteryReport", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryGetBatteryReport();
+                    return py::require<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>(self->obj, py::member_kind::method, "Windows.Gaming.Input.Gamepad", "TryGetBatteryReport", "Windows.Gaming.Input.IGameControllerBatteryInfo", 0).TryGetBatteryReport();
                 }());
             }
             catch (...)
@@ -1642,23 +1278,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Gamepad", L"Headset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Headset();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.Gamepad", "Headset", "Windows.Gaming.Input.IGameController").Headset();
             }());
         }
         catch (...)
@@ -1672,23 +1295,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Gamepad", L"IsWireless");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsWireless();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.Gamepad", "IsWireless", "Windows.Gaming.Input.IGameController").IsWireless();
             }());
         }
         catch (...)
@@ -1702,23 +1312,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Gamepad", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.User();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.Gamepad", "User", "Windows.Gaming.Input.IGameController").User();
             }());
         }
         catch (...)
@@ -1732,19 +1329,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Gamepad", L"Vibration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1768,19 +1352,6 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Gamepad", L"Vibration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Gaming::Input::GamepadVibration>(arg);
 
             {
@@ -1831,25 +1402,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.Gamepad", L"HeadsetConnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HeadsetConnected(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.Gamepad", "HeadsetConnected", "Windows.Gaming.Input.IGameController").HeadsetConnected(param0);
             }());
         }
         catch (...)
@@ -1863,24 +1421,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.Gamepad", L"HeadsetConnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HeadsetConnected(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.Gamepad", "HeadsetConnected", "Windows.Gaming.Input.IGameController").HeadsetConnected(param0);
             }
 
             Py_RETURN_NONE;
@@ -1896,25 +1441,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.Gamepad", L"HeadsetDisconnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HeadsetDisconnected(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.Gamepad", "HeadsetDisconnected", "Windows.Gaming.Input.IGameController").HeadsetDisconnected(param0);
             }());
         }
         catch (...)
@@ -1928,24 +1460,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.Gamepad", L"HeadsetDisconnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HeadsetDisconnected(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.Gamepad", "HeadsetDisconnected", "Windows.Gaming.Input.IGameController").HeadsetDisconnected(param0);
             }
 
             Py_RETURN_NONE;
@@ -1961,25 +1480,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.Gamepad", L"UserChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::System::UserChangedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UserChanged(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.Gamepad", "UserChanged", "Windows.Gaming.Input.IGameController").UserChanged(param0);
             }());
         }
         catch (...)
@@ -1993,24 +1499,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.Gamepad", L"UserChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UserChanged(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.Gamepad", "UserChanged", "Windows.Gaming.Input.IGameController").UserChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -2263,23 +1756,10 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Headset", L"TryGetBatteryReport", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryGetBatteryReport();
+                    return py::require<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>(self->obj, py::member_kind::method, "Windows.Gaming.Input.Headset", "TryGetBatteryReport", "Windows.Gaming.Input.IGameControllerBatteryInfo", 0).TryGetBatteryReport();
                 }());
             }
             catch (...)
@@ -2299,19 +1779,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Headset", L"CaptureDeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2329,19 +1796,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Headset", L"RenderDeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2471,19 +1925,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.RacingWheel", L"GetButtonLabel", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::RacingWheelButtons>(args, 0);
 
                 return py::convert([&]()
@@ -2513,19 +1954,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.RacingWheel", L"GetCurrentReading", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2553,23 +1981,10 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.RacingWheel", L"TryGetBatteryReport", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryGetBatteryReport();
+                    return py::require<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>(self->obj, py::member_kind::method, "Windows.Gaming.Input.RacingWheel", "TryGetBatteryReport", "Windows.Gaming.Input.IGameControllerBatteryInfo", 0).TryGetBatteryReport();
                 }());
             }
             catch (...)
@@ -2589,23 +2004,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RacingWheel", L"Headset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Headset();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.RacingWheel", "Headset", "Windows.Gaming.Input.IGameController").Headset();
             }());
         }
         catch (...)
@@ -2619,23 +2021,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RacingWheel", L"IsWireless");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsWireless();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.RacingWheel", "IsWireless", "Windows.Gaming.Input.IGameController").IsWireless();
             }());
         }
         catch (...)
@@ -2649,23 +2038,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RacingWheel", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.User();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.RacingWheel", "User", "Windows.Gaming.Input.IGameController").User();
             }());
         }
         catch (...)
@@ -2679,19 +2055,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RacingWheel", L"HasClutch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2709,19 +2072,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RacingWheel", L"HasHandbrake");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2739,19 +2089,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RacingWheel", L"HasPatternShifter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2769,19 +2106,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RacingWheel", L"MaxPatternShifterGear");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2799,19 +2123,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RacingWheel", L"MaxWheelAngle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2829,19 +2140,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RacingWheel", L"WheelMotor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2889,25 +2187,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.RacingWheel", L"HeadsetConnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HeadsetConnected(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.RacingWheel", "HeadsetConnected", "Windows.Gaming.Input.IGameController").HeadsetConnected(param0);
             }());
         }
         catch (...)
@@ -2921,24 +2206,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.RacingWheel", L"HeadsetConnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HeadsetConnected(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.RacingWheel", "HeadsetConnected", "Windows.Gaming.Input.IGameController").HeadsetConnected(param0);
             }
 
             Py_RETURN_NONE;
@@ -2954,25 +2226,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.RacingWheel", L"HeadsetDisconnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HeadsetDisconnected(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.RacingWheel", "HeadsetDisconnected", "Windows.Gaming.Input.IGameController").HeadsetDisconnected(param0);
             }());
         }
         catch (...)
@@ -2986,24 +2245,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.RacingWheel", L"HeadsetDisconnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HeadsetDisconnected(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.RacingWheel", "HeadsetDisconnected", "Windows.Gaming.Input.IGameController").HeadsetDisconnected(param0);
             }
 
             Py_RETURN_NONE;
@@ -3019,25 +2265,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.RacingWheel", L"UserChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::System::UserChangedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UserChanged(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.RacingWheel", "UserChanged", "Windows.Gaming.Input.IGameController").UserChanged(param0);
             }());
         }
         catch (...)
@@ -3051,24 +2284,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.RacingWheel", L"UserChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UserChanged(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.RacingWheel", "UserChanged", "Windows.Gaming.Input.IGameController").UserChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -3368,19 +2588,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.RawGameController", L"GetButtonLabel", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
@@ -3410,19 +2617,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.RawGameController", L"GetCurrentReading", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<bool, true>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Gaming::Input::GameControllerSwitchPosition, true>>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<double, true>>(args, 2);
@@ -3454,19 +2648,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.RawGameController", L"GetSwitchKind", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
@@ -3496,23 +2677,10 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.RawGameController", L"TryGetBatteryReport", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryGetBatteryReport();
+                    return py::require<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>(self->obj, py::member_kind::method, "Windows.Gaming.Input.RawGameController", "TryGetBatteryReport", "Windows.Gaming.Input.IGameControllerBatteryInfo", 0).TryGetBatteryReport();
                 }());
             }
             catch (...)
@@ -3532,23 +2700,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RawGameController", L"Headset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Headset();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.RawGameController", "Headset", "Windows.Gaming.Input.IGameController").Headset();
             }());
         }
         catch (...)
@@ -3562,23 +2717,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RawGameController", L"IsWireless");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsWireless();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.RawGameController", "IsWireless", "Windows.Gaming.Input.IGameController").IsWireless();
             }());
         }
         catch (...)
@@ -3592,23 +2734,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RawGameController", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.User();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.RawGameController", "User", "Windows.Gaming.Input.IGameController").User();
             }());
         }
         catch (...)
@@ -3622,19 +2751,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RawGameController", L"AxisCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3652,19 +2768,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RawGameController", L"ButtonCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3682,19 +2785,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RawGameController", L"ForceFeedbackMotors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3712,19 +2802,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RawGameController", L"HardwareProductId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3742,19 +2819,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RawGameController", L"HardwareVendorId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3772,19 +2836,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RawGameController", L"SwitchCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3802,23 +2853,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RawGameController", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayName();
+                return py::require<winrt::Windows::Gaming::Input::IRawGameController2>(self->obj, py::member_kind::property, "Windows.Gaming.Input.RawGameController", "DisplayName", "Windows.Gaming.Input.IRawGameController2").DisplayName();
             }());
         }
         catch (...)
@@ -3832,23 +2870,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RawGameController", L"NonRoamableId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NonRoamableId();
+                return py::require<winrt::Windows::Gaming::Input::IRawGameController2>(self->obj, py::member_kind::property, "Windows.Gaming.Input.RawGameController", "NonRoamableId", "Windows.Gaming.Input.IRawGameController2").NonRoamableId();
             }());
         }
         catch (...)
@@ -3862,23 +2887,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.RawGameController", L"SimpleHapticsControllers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SimpleHapticsControllers();
+                return py::require<winrt::Windows::Gaming::Input::IRawGameController2>(self->obj, py::member_kind::property, "Windows.Gaming.Input.RawGameController", "SimpleHapticsControllers", "Windows.Gaming.Input.IRawGameController2").SimpleHapticsControllers();
             }());
         }
         catch (...)
@@ -3922,25 +2934,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.RawGameController", L"HeadsetConnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HeadsetConnected(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.RawGameController", "HeadsetConnected", "Windows.Gaming.Input.IGameController").HeadsetConnected(param0);
             }());
         }
         catch (...)
@@ -3954,24 +2953,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.RawGameController", L"HeadsetConnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HeadsetConnected(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.RawGameController", "HeadsetConnected", "Windows.Gaming.Input.IGameController").HeadsetConnected(param0);
             }
 
             Py_RETURN_NONE;
@@ -3987,25 +2973,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.RawGameController", L"HeadsetDisconnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HeadsetDisconnected(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.RawGameController", "HeadsetDisconnected", "Windows.Gaming.Input.IGameController").HeadsetDisconnected(param0);
             }());
         }
         catch (...)
@@ -4019,24 +2992,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.RawGameController", L"HeadsetDisconnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HeadsetDisconnected(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.RawGameController", "HeadsetDisconnected", "Windows.Gaming.Input.IGameController").HeadsetDisconnected(param0);
             }
 
             Py_RETURN_NONE;
@@ -4052,25 +3012,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.RawGameController", L"UserChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::System::UserChangedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UserChanged(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.RawGameController", "UserChanged", "Windows.Gaming.Input.IGameController").UserChanged(param0);
             }());
         }
         catch (...)
@@ -4084,24 +3031,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.RawGameController", L"UserChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UserChanged(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.RawGameController", "UserChanged", "Windows.Gaming.Input.IGameController").UserChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -4405,19 +3339,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.UINavigationController", L"GetCurrentReading", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4445,19 +3366,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.UINavigationController", L"GetOptionalButtonLabel", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::OptionalUINavigationButtons>(args, 0);
 
                 return py::convert([&]()
@@ -4487,19 +3395,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.UINavigationController", L"GetRequiredButtonLabel", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::RequiredUINavigationButtons>(args, 0);
 
                 return py::convert([&]()
@@ -4529,23 +3424,10 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.UINavigationController", L"TryGetBatteryReport", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryGetBatteryReport();
+                    return py::require<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>(self->obj, py::member_kind::method, "Windows.Gaming.Input.UINavigationController", "TryGetBatteryReport", "Windows.Gaming.Input.IGameControllerBatteryInfo", 0).TryGetBatteryReport();
                 }());
             }
             catch (...)
@@ -4565,23 +3447,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.UINavigationController", L"Headset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Headset();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.UINavigationController", "Headset", "Windows.Gaming.Input.IGameController").Headset();
             }());
         }
         catch (...)
@@ -4595,23 +3464,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.UINavigationController", L"IsWireless");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsWireless();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.UINavigationController", "IsWireless", "Windows.Gaming.Input.IGameController").IsWireless();
             }());
         }
         catch (...)
@@ -4625,23 +3481,10 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.UINavigationController", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.User();
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::property, "Windows.Gaming.Input.UINavigationController", "User", "Windows.Gaming.Input.IGameController").User();
             }());
         }
         catch (...)
@@ -4685,25 +3528,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.UINavigationController", L"HeadsetConnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HeadsetConnected(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.UINavigationController", "HeadsetConnected", "Windows.Gaming.Input.IGameController").HeadsetConnected(param0);
             }());
         }
         catch (...)
@@ -4717,24 +3547,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.UINavigationController", L"HeadsetConnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HeadsetConnected(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.UINavigationController", "HeadsetConnected", "Windows.Gaming.Input.IGameController").HeadsetConnected(param0);
             }
 
             Py_RETURN_NONE;
@@ -4750,25 +3567,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.UINavigationController", L"HeadsetDisconnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HeadsetDisconnected(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.UINavigationController", "HeadsetDisconnected", "Windows.Gaming.Input.IGameController").HeadsetDisconnected(param0);
             }());
         }
         catch (...)
@@ -4782,24 +3586,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.UINavigationController", L"HeadsetDisconnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HeadsetDisconnected(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.UINavigationController", "HeadsetDisconnected", "Windows.Gaming.Input.IGameController").HeadsetDisconnected(param0);
             }
 
             Py_RETURN_NONE;
@@ -4815,25 +3606,12 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.UINavigationController", L"UserChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::System::UserChangedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UserChanged(param0);
+                return py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.UINavigationController", "UserChanged", "Windows.Gaming.Input.IGameController").UserChanged(param0);
             }());
         }
         catch (...)
@@ -4847,24 +3625,11 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.UINavigationController", L"UserChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UserChanged(param0);
+                py::require<winrt::Windows::Gaming::Input::IGameController>(self->obj, py::member_kind::event, "Windows.Gaming.Input.UINavigationController", "UserChanged", "Windows.Gaming.Input.IGameController").UserChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -5115,19 +3880,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.IGameController", L"Headset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5145,19 +3897,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.IGameController", L"IsWireless");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5175,19 +3914,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.IGameController", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5205,19 +3931,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.IGameController", L"HeadsetConnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
             return py::convert([&]()
@@ -5237,19 +3950,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.IGameController", L"HeadsetConnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -5270,19 +3970,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.IGameController", L"HeadsetDisconnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset>>(arg);
 
             return py::convert([&]()
@@ -5302,19 +3989,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.IGameController", L"HeadsetDisconnected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -5335,19 +4009,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.IGameController", L"UserChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::System::UserChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -5367,19 +4028,6 @@ namespace py::cpp::Windows::Gaming::Input
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Input.IGameController", L"UserChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -5794,19 +4442,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.IGameControllerBatteryInfo", L"TryGetBatteryReport", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();

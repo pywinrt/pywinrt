@@ -29,19 +29,6 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps", L"Hide", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
                 {
@@ -72,19 +59,6 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps", L"ShowMemoryUsage", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
                 {
@@ -115,19 +89,6 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps", L"ShowOverdraw", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugOverdrawContentKinds>(args, 1);
 
@@ -159,19 +120,6 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps", L"ShowRedraw", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
                 {
@@ -307,19 +255,6 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugSettings", L"HeatMaps");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

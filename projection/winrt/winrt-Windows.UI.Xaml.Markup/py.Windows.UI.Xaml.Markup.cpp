@@ -144,23 +144,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.MarkupExtension", L"ProvideValue", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Markup::IMarkupExtensionOverrides>().ProvideValue();
+                    return py::require<winrt::Windows::UI::Xaml::Markup::IMarkupExtensionOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Markup.MarkupExtension", "ProvideValue", "Windows.UI.Xaml.Markup.IMarkupExtensionOverrides", 0).ProvideValue();
                 }());
             }
             catch (...)
@@ -1815,19 +1802,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IComponentConnector", L"Connect", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -2037,19 +2011,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IComponentConnector2", L"GetBindingConnector", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -2260,19 +2221,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IDataTemplateComponent", L"ProcessBindings", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -2312,19 +2260,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IDataTemplateComponent", L"Recycle", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Recycle();
@@ -2564,19 +2499,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics", L"Disable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -2786,19 +2708,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlMember", L"GetValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert([&]()
@@ -2828,19 +2737,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlMember", L"SetValue", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -2868,19 +2764,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlMember", L"IsAttachable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2898,19 +2781,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlMember", L"IsDependencyProperty");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2928,19 +2798,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlMember", L"IsReadOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2958,19 +2815,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlMember", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2988,19 +2832,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlMember", L"TargetType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3018,19 +2849,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlMember", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3389,19 +3207,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlMetadataProvider", L"GetXamlType", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 0);
 
                 return py::convert([&]()
@@ -3431,19 +3236,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlMetadataProvider", L"GetXamlType", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -3473,19 +3265,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlMetadataProvider", L"GetXmlnsDefinitions", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3742,19 +3521,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"ActivateInstance", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3782,19 +3548,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"AddToMap", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -3827,19 +3580,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"AddToVector", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -3871,19 +3611,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"CreateFromString", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -3913,19 +3640,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"GetMember", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -3955,19 +3669,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"RunInitializer", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RunInitializer();
@@ -3992,19 +3693,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"BaseType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4022,19 +3710,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"ContentProperty");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4052,19 +3727,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"FullName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4082,19 +3744,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"IsArray");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4112,19 +3761,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"IsBindable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4142,19 +3778,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"IsCollection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4172,19 +3795,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"IsConstructible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4202,19 +3812,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"IsDictionary");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4232,19 +3829,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"IsMarkupExtension");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4262,19 +3846,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"ItemType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4292,19 +3863,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"KeyType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4322,19 +3880,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"UnderlyingType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4953,23 +4498,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"ActivateInstance", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ActivateInstance();
+                    return py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Markup.IXamlType", "ActivateInstance", "Windows.UI.Xaml.Markup.IXamlType", 0).ActivateInstance();
                 }());
             }
             catch (...)
@@ -4993,26 +4525,13 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"AddToMap", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddToMap(param0, param1, param2);
+                    py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Markup.IXamlType", "AddToMap", "Windows.UI.Xaml.Markup.IXamlType", 3).AddToMap(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -5038,25 +4557,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"AddToVector", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddToVector(param0, param1);
+                    py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Markup.IXamlType", "AddToVector", "Windows.UI.Xaml.Markup.IXamlType", 2).AddToVector(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -5082,25 +4588,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"CreateFromString", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFromString(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Markup.IXamlType", "CreateFromString", "Windows.UI.Xaml.Markup.IXamlType", 1).CreateFromString(param0);
                 }());
             }
             catch (...)
@@ -5124,25 +4617,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"GetMember", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMember(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Markup.IXamlType", "GetMember", "Windows.UI.Xaml.Markup.IXamlType", 1).GetMember(param0);
                 }());
             }
             catch (...)
@@ -5166,22 +4646,9 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"RunInitializer", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RunInitializer();
+                    py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Markup.IXamlType", "RunInitializer", "Windows.UI.Xaml.Markup.IXamlType", 0).RunInitializer();
                 }
 
                 Py_RETURN_NONE;
@@ -5203,19 +4670,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType2", L"BoxedType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5233,23 +4687,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"BaseType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BaseType();
+                return py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Markup.IXamlType", "BaseType", "Windows.UI.Xaml.Markup.IXamlType").BaseType();
             }());
         }
         catch (...)
@@ -5263,23 +4704,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"ContentProperty");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentProperty();
+                return py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Markup.IXamlType", "ContentProperty", "Windows.UI.Xaml.Markup.IXamlType").ContentProperty();
             }());
         }
         catch (...)
@@ -5293,23 +4721,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"FullName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FullName();
+                return py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Markup.IXamlType", "FullName", "Windows.UI.Xaml.Markup.IXamlType").FullName();
             }());
         }
         catch (...)
@@ -5323,23 +4738,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"IsArray");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsArray();
+                return py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Markup.IXamlType", "IsArray", "Windows.UI.Xaml.Markup.IXamlType").IsArray();
             }());
         }
         catch (...)
@@ -5353,23 +4755,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"IsBindable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsBindable();
+                return py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Markup.IXamlType", "IsBindable", "Windows.UI.Xaml.Markup.IXamlType").IsBindable();
             }());
         }
         catch (...)
@@ -5383,23 +4772,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"IsCollection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsCollection();
+                return py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Markup.IXamlType", "IsCollection", "Windows.UI.Xaml.Markup.IXamlType").IsCollection();
             }());
         }
         catch (...)
@@ -5413,23 +4789,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"IsConstructible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsConstructible();
+                return py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Markup.IXamlType", "IsConstructible", "Windows.UI.Xaml.Markup.IXamlType").IsConstructible();
             }());
         }
         catch (...)
@@ -5443,23 +4806,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"IsDictionary");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDictionary();
+                return py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Markup.IXamlType", "IsDictionary", "Windows.UI.Xaml.Markup.IXamlType").IsDictionary();
             }());
         }
         catch (...)
@@ -5473,23 +4823,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"IsMarkupExtension");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsMarkupExtension();
+                return py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Markup.IXamlType", "IsMarkupExtension", "Windows.UI.Xaml.Markup.IXamlType").IsMarkupExtension();
             }());
         }
         catch (...)
@@ -5503,23 +4840,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"ItemType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ItemType();
+                return py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Markup.IXamlType", "ItemType", "Windows.UI.Xaml.Markup.IXamlType").ItemType();
             }());
         }
         catch (...)
@@ -5533,23 +4857,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"KeyType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.KeyType();
+                return py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Markup.IXamlType", "KeyType", "Windows.UI.Xaml.Markup.IXamlType").KeyType();
             }());
         }
         catch (...)
@@ -5563,23 +4874,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.IXamlType", L"UnderlyingType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UnderlyingType();
+                return py::require<winrt::Windows::UI::Xaml::Markup::IXamlType>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Markup.IXamlType", "UnderlyingType", "Windows.UI.Xaml.Markup.IXamlType").UnderlyingType();
             }());
         }
         catch (...)

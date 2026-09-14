@@ -438,19 +438,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"LaunchAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -478,19 +465,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"SetCategoryAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory>(args, 0);
 
                 return py::convert([&]()
@@ -520,25 +494,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"SetLauncherExecutableFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SetLauncherExecutableFileAsync(param0);
+                    return py::require<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2>(self->obj, py::member_kind::method, "Windows.Gaming.Preview.GamesEnumeration.GameListEntry", "SetLauncherExecutableFileAsync", "Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2", 1).SetLauncherExecutableFileAsync(param0);
                 }());
             }
             catch (...)
@@ -551,26 +512,13 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"SetLauncherExecutableFileAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SetLauncherExecutableFileAsync(param0, param1);
+                    return py::require<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2>(self->obj, py::member_kind::method, "Windows.Gaming.Preview.GamesEnumeration.GameListEntry", "SetLauncherExecutableFileAsync", "Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2", 2).SetLauncherExecutableFileAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -594,25 +542,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"SetTitleIdAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SetTitleIdAsync(param0);
+                    return py::require<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2>(self->obj, py::member_kind::method, "Windows.Gaming.Preview.GamesEnumeration.GameListEntry", "SetTitleIdAsync", "Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2", 1).SetTitleIdAsync(param0);
                 }());
             }
             catch (...)
@@ -632,19 +567,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"Category");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -662,19 +584,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"DisplayInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -692,19 +601,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -722,23 +618,10 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"GameModeConfiguration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.GameModeConfiguration();
+                return py::require<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2>(self->obj, py::member_kind::property, "Windows.Gaming.Preview.GamesEnumeration.GameListEntry", "GameModeConfiguration", "Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2").GameModeConfiguration();
             }());
         }
         catch (...)
@@ -752,23 +635,10 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"LaunchParameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LaunchParameters();
+                return py::require<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2>(self->obj, py::member_kind::property, "Windows.Gaming.Preview.GamesEnumeration.GameListEntry", "LaunchParameters", "Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2").LaunchParameters();
             }());
         }
         catch (...)
@@ -782,23 +652,10 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"LaunchableState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LaunchableState();
+                return py::require<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2>(self->obj, py::member_kind::property, "Windows.Gaming.Preview.GamesEnumeration.GameListEntry", "LaunchableState", "Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2").LaunchableState();
             }());
         }
         catch (...)
@@ -812,23 +669,10 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"LauncherExecutable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LauncherExecutable();
+                return py::require<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2>(self->obj, py::member_kind::property, "Windows.Gaming.Preview.GamesEnumeration.GameListEntry", "LauncherExecutable", "Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2").LauncherExecutable();
             }());
         }
         catch (...)
@@ -842,23 +686,10 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"TitleId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TitleId();
+                return py::require<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2>(self->obj, py::member_kind::property, "Windows.Gaming.Preview.GamesEnumeration.GameListEntry", "TitleId", "Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2").TitleId();
             }());
         }
         catch (...)
@@ -951,19 +782,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"SaveAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -987,19 +805,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuTimeAllocatedToGame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1023,19 +828,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuTimeAllocatedToGame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -1056,19 +848,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuMemoryAllocatedToSystemCompositor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1092,19 +871,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuMemoryAllocatedToSystemCompositor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -1125,19 +891,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuMemoryAllocatedToGame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1161,19 +914,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuMemoryAllocatedToGame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -1194,19 +934,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"MaxCpuCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1230,19 +957,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"MaxCpuCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -1263,19 +977,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1299,19 +1000,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1332,19 +1020,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"CpuExclusivityMaskLow");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1368,19 +1043,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"CpuExclusivityMaskLow");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -1401,19 +1063,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"CpuExclusivityMaskHigh");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1437,19 +1086,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"CpuExclusivityMaskHigh");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -1470,19 +1106,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"AffinitizeToExclusiveCpus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1506,19 +1129,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"AffinitizeToExclusiveCpus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1539,19 +1149,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"RelatedProcessNames");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1686,19 +1283,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration", L"SaveAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1722,19 +1306,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration", L"GamingRelatedProcessNames");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1845,19 +1416,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.IGameListEntry", L"LaunchAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1885,19 +1443,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.IGameListEntry", L"SetCategoryAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory>(args, 0);
 
                 return py::convert([&]()
@@ -1923,19 +1468,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.IGameListEntry", L"Category");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1953,19 +1485,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.IGameListEntry", L"DisplayInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1983,19 +1502,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.IGameListEntry", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

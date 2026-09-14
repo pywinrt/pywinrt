@@ -29,19 +29,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"ApplyTrainingData", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
 
@@ -72,19 +59,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"ApplyTrainingDataAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
 
@@ -115,19 +89,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"ClearModelData", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.ClearModelData();
@@ -156,19 +117,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"ClearModelDataAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -196,19 +144,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"ClearTrainingData", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.ClearTrainingData();
@@ -237,19 +172,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"ClearTrainingDataAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -277,22 +199,9 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -318,19 +227,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"GetModelData", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -358,19 +254,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"GetModelDataAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -398,19 +281,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"GetModelDataType", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -438,19 +308,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"GetModelDataTypeAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -478,19 +335,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"SetEnabled", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
@@ -521,19 +365,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"SetEnabledAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert([&]()
@@ -563,25 +394,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"SetEnabledWithResult", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SetEnabledWithResult(param0);
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", "SetEnabledWithResult", "Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2", 1).SetEnabledWithResult(param0);
                 }());
             }
             catch (...)
@@ -605,25 +423,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"SetEnabledWithResultAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SetEnabledWithResultAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", "SetEnabledWithResultAsync", "Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2", 1).SetEnabledWithResultAsync(param0);
                 }());
             }
             catch (...)
@@ -647,19 +452,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"SetModelData", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
 
@@ -691,19 +483,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"SetModelDataAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
 
@@ -734,26 +513,13 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"SetModelDataWithResult", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SetModelDataWithResult(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", "SetModelDataWithResult", "Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2", 2).SetModelDataWithResult(param0, param1);
                 }());
             }
             catch (...)
@@ -777,26 +543,13 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"SetModelDataWithResultAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SetModelDataWithResultAsync(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", "SetModelDataWithResultAsync", "Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2", 2).SetModelDataWithResultAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -816,19 +569,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"AvailabilityInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -846,19 +586,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -876,19 +603,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"IsActive");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -906,19 +620,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"ModelId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -936,19 +637,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"SignalId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -966,19 +654,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"TrainingDataFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -996,19 +671,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"TrainingStepsCompleted");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1026,19 +688,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"TrainingStepsRemaining");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1056,23 +705,10 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"TrainingStepCompletionMaxAllowedTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TrainingStepCompletionMaxAllowedTime();
+                return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", "TrainingStepCompletionMaxAllowedTime", "Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2").TrainingStepCompletionMaxAllowedTime();
             }());
         }
         catch (...)
@@ -1086,19 +722,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"AvailabilityChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration, winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -1118,19 +741,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", L"AvailabilityChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1182,7 +792,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -1269,19 +879,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult", L"Configuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1299,19 +896,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1398,19 +982,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"CreateConfiguration", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1443,19 +1014,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"CreateConfigurationAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1487,19 +1045,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"CreateConfigurationWithResult", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1507,7 +1052,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateConfigurationWithResult(param0, param1, param2);
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", "CreateConfigurationWithResult", "Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2", 3).CreateConfigurationWithResult(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -1531,19 +1076,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"CreateConfigurationWithResultAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1551,7 +1083,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateConfigurationWithResultAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", "CreateConfigurationWithResultAsync", "Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2", 3).CreateConfigurationWithResultAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -1575,25 +1107,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"GetAvailableModelIdsForSignalId", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAvailableModelIdsForSignalId(param0);
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", "GetAvailableModelIdsForSignalId", "Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2", 1).GetAvailableModelIdsForSignalId(param0);
                 }());
             }
             catch (...)
@@ -1617,25 +1136,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"GetAvailableModelIdsForSignalIdAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAvailableModelIdsForSignalIdAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", "GetAvailableModelIdsForSignalIdAsync", "Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2", 1).GetAvailableModelIdsForSignalIdAsync(param0);
                 }());
             }
             catch (...)
@@ -1659,19 +1165,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"GetConfiguration", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1702,19 +1195,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"GetConfigurationAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1745,19 +1225,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"GetConfigurations", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1785,19 +1252,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"GetConfigurationsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1825,19 +1279,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"GetSupportedModelIdsForSignalId", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1867,19 +1308,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"GetSupportedModelIdsForSignalIdAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1909,19 +1337,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"RemoveConfiguration", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1953,19 +1368,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"RemoveConfigurationAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1996,26 +1398,13 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"RemoveConfigurationWithResult", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RemoveConfigurationWithResult(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", "RemoveConfigurationWithResult", "Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2", 2).RemoveConfigurationWithResult(param0, param1);
                 }());
             }
             catch (...)
@@ -2039,26 +1428,13 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"RemoveConfigurationWithResultAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RemoveConfigurationWithResultAsync(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", "RemoveConfigurationWithResultAsync", "Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2", 2).RemoveConfigurationWithResultAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -2078,19 +1454,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"CanCreateConfigurations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2108,19 +1471,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2138,19 +1488,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"ProviderId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2168,19 +1505,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"SupportedModelDataTypes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2198,19 +1522,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"SupportedPowerStates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2228,19 +1539,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"SupportedTrainingDataFormats");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2258,23 +1556,10 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", L"DetectorId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DetectorId();
+                return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector", "DetectorId", "Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2").DetectorId();
             }());
         }
         catch (...)
@@ -2378,25 +1663,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager", L"GetActivationSignalDetectorFromId", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetActivationSignalDetectorFromId(param0);
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager", "GetActivationSignalDetectorFromId", "Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager2", 1).GetActivationSignalDetectorFromId(param0);
                 }());
             }
             catch (...)
@@ -2420,25 +1692,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager", L"GetActivationSignalDetectorFromIdAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetActivationSignalDetectorFromIdAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager", "GetActivationSignalDetectorFromIdAsync", "Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager2", 1).GetActivationSignalDetectorFromIdAsync(param0);
                 }());
             }
             catch (...)
@@ -2462,19 +1721,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager", L"GetActivationSignalDetectors", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind>(args, 0);
 
                 return py::convert([&]()
@@ -2504,19 +1750,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager", L"GetActivationSignalDetectorsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind>(args, 0);
 
                 return py::convert([&]()
@@ -2546,19 +1779,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager", L"GetAllActivationSignalDetectors", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2586,19 +1806,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager", L"GetAllActivationSignalDetectorsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2747,22 +1954,9 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -2788,19 +1982,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"CreateAudioDeviceInputNode", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioGraph>(args, 0);
 
                 return py::convert([&]()
@@ -2830,19 +2011,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"CreateAudioDeviceInputNodeAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioGraph>(args, 0);
 
                 return py::convert([&]()
@@ -2872,19 +2040,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"GetAudioCaptureDeviceId", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2912,19 +2067,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"GetAudioCaptureDeviceIdAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2952,19 +2094,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"GetAudioClient", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2992,19 +2121,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"GetAudioClientAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3032,19 +2148,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"GetAudioRenderDeviceId", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3072,19 +2175,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"GetAudioRenderDeviceIdAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3192,23 +2282,10 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"GetMissingPrerequisites", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMissingPrerequisites();
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", "GetMissingPrerequisites", "Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2", 0).GetMissingPrerequisites();
                 }());
             }
             catch (...)
@@ -3232,23 +2309,10 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"GetMissingPrerequisitesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMissingPrerequisitesAsync();
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", "GetMissingPrerequisitesAsync", "Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2", 0).GetMissingPrerequisitesAsync();
                 }());
             }
             catch (...)
@@ -3272,19 +2336,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"GetSignalModelId", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3312,19 +2363,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"GetSignalModelIdAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3352,19 +2390,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"GetSupportedSignalModelIds", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3392,19 +2417,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"GetSupportedSignalModelIdsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3432,25 +2444,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"RequestActivation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationKind>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RequestActivation(param0);
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", "RequestActivation", "Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2", 1).RequestActivation(param0);
                 }());
             }
             catch (...)
@@ -3474,25 +2473,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"RequestActivationAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationKind>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RequestActivationAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", "RequestActivationAsync", "Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2", 1).RequestActivationAsync(param0);
                 }());
             }
             catch (...)
@@ -3516,19 +2502,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"RequestAgentStateChange", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentState>(args, 0);
 
                 return py::convert([&]()
@@ -3558,19 +2531,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"RequestAgentStateChangeAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentState>(args, 0);
 
                 return py::convert([&]()
@@ -3600,19 +2560,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"RequestForegroundActivation", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3640,19 +2587,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"RequestForegroundActivationAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3680,19 +2614,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"RequestInterruptible", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert([&]()
@@ -3722,19 +2643,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"RequestInterruptibleAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert([&]()
@@ -3764,19 +2672,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"SetSignalModelId", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -3806,19 +2701,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"SetSignalModelIdAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -3848,24 +2730,11 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"SetSupportLockScreenActivation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetSupportLockScreenActivation(param0);
+                    py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", "SetSupportLockScreenActivation", "Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2", 1).SetSupportLockScreenActivation(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3891,25 +2760,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"SetSupportLockScreenActivationAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SetSupportLockScreenActivationAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", "SetSupportLockScreenActivationAsync", "Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2", 1).SetSupportLockScreenActivationAsync(param0);
                 }());
             }
             catch (...)
@@ -3929,19 +2785,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"AgentState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3959,19 +2802,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"IsIndicatorLightAvailable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3989,19 +2819,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"IsInterrupted");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4019,19 +2836,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"IsInterruptible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4049,19 +2853,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"IsScreenAvailable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4079,19 +2870,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"IsUserAuthenticated");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4109,19 +2887,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"IsVoiceActivationAvailable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4139,19 +2904,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"Signal");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4169,19 +2921,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"SessionInterrupted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -4201,19 +2940,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"SessionInterrupted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4234,19 +2960,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"SignalDetected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -4266,19 +2979,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"SignalDetected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4299,19 +2999,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"SystemStateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -4331,19 +3018,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", L"SystemStateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4395,7 +3069,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -4579,19 +3253,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", L"SignalStart");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4615,19 +3276,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", L"SignalStart");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -4648,19 +3296,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", L"SignalName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4684,19 +3319,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", L"SignalName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -4717,19 +3339,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", L"SignalId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4753,19 +3362,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", L"SignalId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -4786,19 +3382,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", L"SignalEnd");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4822,19 +3405,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", L"SignalEnd");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -4855,19 +3425,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", L"SignalContext");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4891,19 +3448,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", L"SignalContext");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
@@ -4924,19 +3468,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", L"IsSignalVerificationRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4960,19 +3491,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", L"IsSignalVerificationRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4993,23 +3511,10 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", L"DetectorId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DetectorId();
+                return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", "DetectorId", "Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal2").DetectorId();
             }());
         }
         catch (...)
@@ -5023,23 +3528,10 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", L"DetectorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DetectorKind();
+                return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal", "DetectorKind", "Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal2").DetectorKind();
             }());
         }
         catch (...)
@@ -5187,19 +3679,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs", L"SystemStateChangeType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5281,19 +3760,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5375,19 +3841,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo", L"HasLockScreenPermission");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5405,19 +3858,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo", L"HasPermission");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5435,19 +3875,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo", L"HasSystemResourceAccess");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5465,19 +3892,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5495,23 +3909,10 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo", L"UnavailableSystemResources");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UnavailableSystemResources();
+                return py::require<winrt::Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo", "UnavailableSystemResources", "Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo2").UnavailableSystemResources();
             }());
         }
         catch (...)

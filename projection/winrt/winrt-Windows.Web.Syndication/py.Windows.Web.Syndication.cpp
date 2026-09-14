@@ -64,19 +64,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -100,19 +87,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -133,19 +107,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Namespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -169,19 +130,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Namespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -202,19 +150,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -238,19 +173,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -395,25 +317,12 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationCategory", L"GetXmlDocument", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetXmlDocument(param0);
+                    return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::method, "Windows.Web.Syndication.SyndicationCategory", "GetXmlDocument", "Windows.Web.Syndication.ISyndicationNode", 1).GetXmlDocument(param0);
                 }());
             }
             catch (...)
@@ -433,19 +342,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Term");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -469,19 +365,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Term");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -502,19 +385,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Scheme");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -538,19 +408,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Scheme");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -571,19 +428,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -607,19 +451,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -640,23 +471,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeValue();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationCategory", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue();
             }());
         }
         catch (...)
@@ -676,24 +494,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeValue(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationCategory", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue(param0);
             }
 
             return 0;
@@ -709,23 +514,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeNamespace();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationCategory", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace();
             }());
         }
         catch (...)
@@ -745,24 +537,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeNamespace(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationCategory", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace(param0);
             }
 
             return 0;
@@ -778,23 +557,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeName();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationCategory", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName();
             }());
         }
         catch (...)
@@ -814,24 +580,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeName(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationCategory", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName(param0);
             }
 
             return 0;
@@ -847,23 +600,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationCategory", "Language", "Windows.Web.Syndication.ISyndicationNode").Language();
             }());
         }
         catch (...)
@@ -883,24 +623,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Language(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationCategory", "Language", "Windows.Web.Syndication.ISyndicationNode").Language(param0);
             }
 
             return 0;
@@ -916,23 +643,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BaseUri();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationCategory", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri();
             }());
         }
         catch (...)
@@ -952,24 +666,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BaseUri(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationCategory", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri(param0);
             }
 
             return 0;
@@ -985,23 +686,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"AttributeExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AttributeExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationCategory", "AttributeExtensions", "Windows.Web.Syndication.ISyndicationNode").AttributeExtensions();
             }());
         }
         catch (...)
@@ -1015,23 +703,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"ElementExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ElementExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationCategory", "ElementExtensions", "Windows.Web.Syndication.ISyndicationNode").ElementExtensions();
             }());
         }
         catch (...)
@@ -1160,19 +835,6 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationClient", L"RetrieveFeedAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert([&]()
@@ -1202,19 +864,6 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationClient", L"SetRequestHeader", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1242,19 +891,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"Timeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1278,19 +914,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"Timeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -1311,19 +934,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1347,19 +957,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
@@ -1380,19 +977,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1416,19 +1000,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
@@ -1449,19 +1020,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"MaxResponseBufferSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1485,19 +1043,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"MaxResponseBufferSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -1518,19 +1063,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"BypassCacheOnRetrieve");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1554,19 +1086,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"BypassCacheOnRetrieve");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1714,25 +1233,12 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationContent", L"GetXmlDocument", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetXmlDocument(param0);
+                    return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::method, "Windows.Web.Syndication.SyndicationContent", "GetXmlDocument", "Windows.Web.Syndication.ISyndicationNode", 1).GetXmlDocument(param0);
                 }());
             }
             catch (...)
@@ -1752,19 +1258,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"SourceUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1788,19 +1281,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"SourceUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -1821,23 +1301,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeValue();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue();
             }());
         }
         catch (...)
@@ -1857,24 +1324,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeValue(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue(param0);
             }
 
             return 0;
@@ -1890,23 +1344,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BaseUri();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri();
             }());
         }
         catch (...)
@@ -1926,24 +1367,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BaseUri(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri(param0);
             }
 
             return 0;
@@ -1959,23 +1387,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "Language", "Windows.Web.Syndication.ISyndicationNode").Language();
             }());
         }
         catch (...)
@@ -1995,24 +1410,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Language(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "Language", "Windows.Web.Syndication.ISyndicationNode").Language(param0);
             }
 
             return 0;
@@ -2028,23 +1430,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeName();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName();
             }());
         }
         catch (...)
@@ -2064,24 +1453,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeName(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName(param0);
             }
 
             return 0;
@@ -2097,23 +1473,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeNamespace();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace();
             }());
         }
         catch (...)
@@ -2133,24 +1496,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeNamespace(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace(param0);
             }
 
             return 0;
@@ -2166,23 +1516,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"AttributeExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AttributeExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "AttributeExtensions", "Windows.Web.Syndication.ISyndicationNode").AttributeExtensions();
             }());
         }
         catch (...)
@@ -2196,23 +1533,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"ElementExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ElementExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "ElementExtensions", "Windows.Web.Syndication.ISyndicationNode").ElementExtensions();
             }());
         }
         catch (...)
@@ -2226,23 +1550,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Text();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationText>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "Text", "Windows.Web.Syndication.ISyndicationText").Text();
             }());
         }
         catch (...)
@@ -2262,24 +1573,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Text(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationText>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "Text", "Windows.Web.Syndication.ISyndicationText").Text(param0);
             }
 
             return 0;
@@ -2295,23 +1593,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationText>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "Type", "Windows.Web.Syndication.ISyndicationText").Type();
             }());
         }
         catch (...)
@@ -2331,24 +1616,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Type(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationText>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "Type", "Windows.Web.Syndication.ISyndicationText").Type(param0);
             }
 
             return 0;
@@ -2364,23 +1636,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Xml");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Xml();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationText>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "Xml", "Windows.Web.Syndication.ISyndicationText").Xml();
             }());
         }
         catch (...)
@@ -2400,24 +1659,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Xml");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Xml(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationText>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationContent", "Xml", "Windows.Web.Syndication.ISyndicationText").Xml(param0);
             }
 
             return 0;
@@ -2643,25 +1889,12 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationFeed", L"GetXmlDocument", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetXmlDocument(param0);
+                    return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::method, "Windows.Web.Syndication.SyndicationFeed", "GetXmlDocument", "Windows.Web.Syndication.ISyndicationNode", 1).GetXmlDocument(param0);
                 }());
             }
             catch (...)
@@ -2685,19 +1918,6 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Load", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -2728,19 +1948,6 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationFeed", L"LoadFromXml", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
 
                 {
@@ -2767,19 +1974,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2803,19 +1997,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
             {
@@ -2836,19 +2017,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Subtitle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2872,19 +2040,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Subtitle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
             {
@@ -2905,19 +2060,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Rights");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2941,19 +2083,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Rights");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
             {
@@ -2974,19 +2103,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Generator");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3010,19 +2126,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Generator");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationGenerator>(arg);
 
             {
@@ -3043,19 +2146,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"LastUpdatedTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3079,19 +2169,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"LastUpdatedTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
@@ -3112,19 +2189,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"ImageUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3148,19 +2212,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"ImageUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -3181,19 +2232,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"IconUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3217,19 +2255,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"IconUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -3250,19 +2275,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3286,19 +2298,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3319,19 +2318,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"FirstUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3349,19 +2335,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Items");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3379,19 +2352,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"LastUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3409,19 +2369,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Links");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3439,19 +2386,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NextUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3469,19 +2403,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"PreviousUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3499,19 +2420,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Categories");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3529,19 +2437,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"SourceFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3559,19 +2454,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Contributors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3589,19 +2471,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Authors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3619,23 +2488,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeValue();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationFeed", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue();
             }());
         }
         catch (...)
@@ -3655,24 +2511,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeValue(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationFeed", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue(param0);
             }
 
             return 0;
@@ -3688,23 +2531,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeNamespace();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationFeed", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace();
             }());
         }
         catch (...)
@@ -3724,24 +2554,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeNamespace(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationFeed", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace(param0);
             }
 
             return 0;
@@ -3757,23 +2574,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeName();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationFeed", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName();
             }());
         }
         catch (...)
@@ -3793,24 +2597,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeName(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationFeed", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName(param0);
             }
 
             return 0;
@@ -3826,23 +2617,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationFeed", "Language", "Windows.Web.Syndication.ISyndicationNode").Language();
             }());
         }
         catch (...)
@@ -3862,24 +2640,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Language(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationFeed", "Language", "Windows.Web.Syndication.ISyndicationNode").Language(param0);
             }
 
             return 0;
@@ -3895,23 +2660,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BaseUri();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationFeed", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri();
             }());
         }
         catch (...)
@@ -3931,24 +2683,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BaseUri(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationFeed", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri(param0);
             }
 
             return 0;
@@ -3964,23 +2703,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"AttributeExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AttributeExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationFeed", "AttributeExtensions", "Windows.Web.Syndication.ISyndicationNode").AttributeExtensions();
             }());
         }
         catch (...)
@@ -3994,23 +2720,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"ElementExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ElementExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationFeed", "ElementExtensions", "Windows.Web.Syndication.ISyndicationNode").ElementExtensions();
             }());
         }
         catch (...)
@@ -4156,25 +2869,12 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"GetXmlDocument", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetXmlDocument(param0);
+                    return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::method, "Windows.Web.Syndication.SyndicationGenerator", "GetXmlDocument", "Windows.Web.Syndication.ISyndicationNode", 1).GetXmlDocument(param0);
                 }());
             }
             catch (...)
@@ -4194,19 +2894,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Version");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4230,19 +2917,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Version");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -4263,19 +2937,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4299,19 +2960,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -4332,19 +2980,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4368,19 +3003,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -4401,23 +3023,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeValue();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationGenerator", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue();
             }());
         }
         catch (...)
@@ -4437,24 +3046,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeValue(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationGenerator", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue(param0);
             }
 
             return 0;
@@ -4470,23 +3066,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeNamespace();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationGenerator", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace();
             }());
         }
         catch (...)
@@ -4506,24 +3089,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeNamespace(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationGenerator", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace(param0);
             }
 
             return 0;
@@ -4539,23 +3109,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeName();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationGenerator", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName();
             }());
         }
         catch (...)
@@ -4575,24 +3132,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeName(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationGenerator", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName(param0);
             }
 
             return 0;
@@ -4608,23 +3152,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationGenerator", "Language", "Windows.Web.Syndication.ISyndicationNode").Language();
             }());
         }
         catch (...)
@@ -4644,24 +3175,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Language(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationGenerator", "Language", "Windows.Web.Syndication.ISyndicationNode").Language(param0);
             }
 
             return 0;
@@ -4677,23 +3195,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BaseUri();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationGenerator", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri();
             }());
         }
         catch (...)
@@ -4713,24 +3218,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BaseUri(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationGenerator", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri(param0);
             }
 
             return 0;
@@ -4746,23 +3238,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"AttributeExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AttributeExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationGenerator", "AttributeExtensions", "Windows.Web.Syndication.ISyndicationNode").AttributeExtensions();
             }());
         }
         catch (...)
@@ -4776,23 +3255,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"ElementExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ElementExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationGenerator", "ElementExtensions", "Windows.Web.Syndication.ISyndicationNode").ElementExtensions();
             }());
         }
         catch (...)
@@ -4923,25 +3389,12 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationItem", L"GetXmlDocument", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetXmlDocument(param0);
+                    return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::method, "Windows.Web.Syndication.SyndicationItem", "GetXmlDocument", "Windows.Web.Syndication.ISyndicationNode", 1).GetXmlDocument(param0);
                 }());
             }
             catch (...)
@@ -4965,19 +3418,6 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationItem", L"Load", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -5008,19 +3448,6 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationItem", L"LoadFromXml", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
 
                 {
@@ -5047,19 +3474,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5083,19 +3497,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
             {
@@ -5116,19 +3517,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Source");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5152,19 +3540,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Source");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFeed>(arg);
 
             {
@@ -5185,19 +3560,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Rights");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5221,19 +3583,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Rights");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
             {
@@ -5254,19 +3603,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Summary");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5290,19 +3626,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Summary");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
             {
@@ -5323,19 +3646,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"PublishedDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5359,19 +3669,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"PublishedDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
@@ -5392,19 +3689,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"CommentsUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5428,19 +3712,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"CommentsUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -5461,19 +3732,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5497,19 +3755,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -5530,19 +3775,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"LastUpdatedTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5566,19 +3798,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"LastUpdatedTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
@@ -5599,19 +3818,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5635,19 +3841,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationContent>(arg);
 
             {
@@ -5668,19 +3861,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"EditUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5698,19 +3878,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Links");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5728,19 +3895,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Authors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5758,19 +3912,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Categories");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5788,19 +3929,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Contributors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5818,19 +3946,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"ItemUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5848,19 +3963,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"ETag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5878,19 +3980,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"EditMediaUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5908,23 +3997,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeValue();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationItem", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue();
             }());
         }
         catch (...)
@@ -5944,24 +4020,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeValue(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationItem", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue(param0);
             }
 
             return 0;
@@ -5977,23 +4040,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeNamespace();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationItem", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace();
             }());
         }
         catch (...)
@@ -6013,24 +4063,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeNamespace(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationItem", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace(param0);
             }
 
             return 0;
@@ -6046,23 +4083,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeName();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationItem", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName();
             }());
         }
         catch (...)
@@ -6082,24 +4106,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeName(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationItem", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName(param0);
             }
 
             return 0;
@@ -6115,23 +4126,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationItem", "Language", "Windows.Web.Syndication.ISyndicationNode").Language();
             }());
         }
         catch (...)
@@ -6151,24 +4149,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Language(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationItem", "Language", "Windows.Web.Syndication.ISyndicationNode").Language(param0);
             }
 
             return 0;
@@ -6184,23 +4169,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BaseUri();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationItem", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri();
             }());
         }
         catch (...)
@@ -6220,24 +4192,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BaseUri(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationItem", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri(param0);
             }
 
             return 0;
@@ -6253,23 +4212,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"AttributeExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AttributeExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationItem", "AttributeExtensions", "Windows.Web.Syndication.ISyndicationNode").AttributeExtensions();
             }());
         }
         catch (...)
@@ -6283,23 +4229,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"ElementExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ElementExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationItem", "ElementExtensions", "Windows.Web.Syndication.ISyndicationNode").ElementExtensions();
             }());
         }
         catch (...)
@@ -6463,25 +4396,12 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationLink", L"GetXmlDocument", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetXmlDocument(param0);
+                    return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::method, "Windows.Web.Syndication.SyndicationLink", "GetXmlDocument", "Windows.Web.Syndication.ISyndicationNode", 1).GetXmlDocument(param0);
                 }());
             }
             catch (...)
@@ -6501,19 +4421,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6537,19 +4444,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -6570,19 +4464,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6606,19 +4487,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6639,19 +4507,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"ResourceLanguage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6675,19 +4530,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"ResourceLanguage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6708,19 +4550,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Relationship");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6744,19 +4573,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Relationship");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6777,19 +4593,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"MediaType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6813,19 +4616,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"MediaType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6846,19 +4636,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Length");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6882,19 +4659,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Length");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -6915,23 +4679,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeValue();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationLink", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue();
             }());
         }
         catch (...)
@@ -6951,24 +4702,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeValue(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationLink", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue(param0);
             }
 
             return 0;
@@ -6984,23 +4722,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeNamespace();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationLink", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace();
             }());
         }
         catch (...)
@@ -7020,24 +4745,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeNamespace(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationLink", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace(param0);
             }
 
             return 0;
@@ -7053,23 +4765,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeName();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationLink", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName();
             }());
         }
         catch (...)
@@ -7089,24 +4788,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeName(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationLink", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName(param0);
             }
 
             return 0;
@@ -7122,23 +4808,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationLink", "Language", "Windows.Web.Syndication.ISyndicationNode").Language();
             }());
         }
         catch (...)
@@ -7158,24 +4831,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Language(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationLink", "Language", "Windows.Web.Syndication.ISyndicationNode").Language(param0);
             }
 
             return 0;
@@ -7191,23 +4851,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BaseUri();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationLink", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri();
             }());
         }
         catch (...)
@@ -7227,24 +4874,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BaseUri(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationLink", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri(param0);
             }
 
             return 0;
@@ -7260,23 +4894,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"AttributeExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AttributeExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationLink", "AttributeExtensions", "Windows.Web.Syndication.ISyndicationNode").AttributeExtensions();
             }());
         }
         catch (...)
@@ -7290,23 +4911,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"ElementExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ElementExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationLink", "ElementExtensions", "Windows.Web.Syndication.ISyndicationNode").ElementExtensions();
             }());
         }
         catch (...)
@@ -7440,19 +5048,6 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationNode", L"GetXmlDocument", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert([&]()
@@ -7478,19 +5073,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7514,19 +5096,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -7547,19 +5116,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7583,19 +5139,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -7616,19 +5159,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7652,19 +5182,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -7685,19 +5202,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7721,19 +5225,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -7754,19 +5245,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7790,19 +5268,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -7823,19 +5288,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"AttributeExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7853,19 +5305,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"ElementExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8012,25 +5451,12 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationPerson", L"GetXmlDocument", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetXmlDocument(param0);
+                    return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::method, "Windows.Web.Syndication.SyndicationPerson", "GetXmlDocument", "Windows.Web.Syndication.ISyndicationNode", 1).GetXmlDocument(param0);
                 }());
             }
             catch (...)
@@ -8050,23 +5476,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeValue();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationPerson", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue();
             }());
         }
         catch (...)
@@ -8086,24 +5499,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeValue(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationPerson", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue(param0);
             }
 
             return 0;
@@ -8119,23 +5519,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeNamespace();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationPerson", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace();
             }());
         }
         catch (...)
@@ -8155,24 +5542,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeNamespace(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationPerson", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace(param0);
             }
 
             return 0;
@@ -8188,23 +5562,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeName();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationPerson", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName();
             }());
         }
         catch (...)
@@ -8224,24 +5585,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeName(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationPerson", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName(param0);
             }
 
             return 0;
@@ -8257,23 +5605,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationPerson", "Language", "Windows.Web.Syndication.ISyndicationNode").Language();
             }());
         }
         catch (...)
@@ -8293,24 +5628,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Language(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationPerson", "Language", "Windows.Web.Syndication.ISyndicationNode").Language(param0);
             }
 
             return 0;
@@ -8326,23 +5648,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BaseUri();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationPerson", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri();
             }());
         }
         catch (...)
@@ -8362,24 +5671,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BaseUri(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationPerson", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri(param0);
             }
 
             return 0;
@@ -8395,23 +5691,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"AttributeExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AttributeExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationPerson", "AttributeExtensions", "Windows.Web.Syndication.ISyndicationNode").AttributeExtensions();
             }());
         }
         catch (...)
@@ -8425,23 +5708,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"ElementExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ElementExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationPerson", "ElementExtensions", "Windows.Web.Syndication.ISyndicationNode").ElementExtensions();
             }());
         }
         catch (...)
@@ -8455,19 +5725,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8491,19 +5748,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -8524,19 +5768,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8560,19 +5791,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -8593,19 +5811,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Email");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8629,19 +5834,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Email");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -8793,25 +5985,12 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationText", L"GetXmlDocument", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetXmlDocument(param0);
+                    return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::method, "Windows.Web.Syndication.SyndicationText", "GetXmlDocument", "Windows.Web.Syndication.ISyndicationNode", 1).GetXmlDocument(param0);
                 }());
             }
             catch (...)
@@ -8831,23 +6010,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeValue();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationText", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue();
             }());
         }
         catch (...)
@@ -8867,24 +6033,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeValue(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationText", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue(param0);
             }
 
             return 0;
@@ -8900,23 +6053,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeNamespace();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationText", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace();
             }());
         }
         catch (...)
@@ -8936,24 +6076,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeNamespace(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationText", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace(param0);
             }
 
             return 0;
@@ -8969,23 +6096,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeName();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationText", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName();
             }());
         }
         catch (...)
@@ -9005,24 +6119,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeName(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationText", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName(param0);
             }
 
             return 0;
@@ -9038,23 +6139,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationText", "Language", "Windows.Web.Syndication.ISyndicationNode").Language();
             }());
         }
         catch (...)
@@ -9074,24 +6162,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Language(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationText", "Language", "Windows.Web.Syndication.ISyndicationNode").Language(param0);
             }
 
             return 0;
@@ -9107,23 +6182,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BaseUri();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationText", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri();
             }());
         }
         catch (...)
@@ -9143,24 +6205,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BaseUri(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationText", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri(param0);
             }
 
             return 0;
@@ -9176,23 +6225,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"AttributeExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AttributeExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationText", "AttributeExtensions", "Windows.Web.Syndication.ISyndicationNode").AttributeExtensions();
             }());
         }
         catch (...)
@@ -9206,23 +6242,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"ElementExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ElementExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.SyndicationText", "ElementExtensions", "Windows.Web.Syndication.ISyndicationNode").ElementExtensions();
             }());
         }
         catch (...)
@@ -9236,19 +6259,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Xml");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9272,19 +6282,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Xml");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(arg);
 
             {
@@ -9305,19 +6302,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9341,19 +6325,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -9374,19 +6345,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9410,19 +6368,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -9523,19 +6468,6 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.ISyndicationClient", L"RetrieveFeedAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert([&]()
@@ -9565,19 +6497,6 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.ISyndicationClient", L"SetRequestHeader", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -9605,19 +6524,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"BypassCacheOnRetrieve");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9641,19 +6547,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"BypassCacheOnRetrieve");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -9674,19 +6567,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"MaxResponseBufferSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9710,19 +6590,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"MaxResponseBufferSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -9743,19 +6610,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9779,19 +6633,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
@@ -9812,19 +6653,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9848,19 +6676,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
@@ -9881,19 +6696,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"Timeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9917,19 +6719,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"Timeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -10385,19 +7174,6 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.ISyndicationNode", L"GetXmlDocument", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert([&]()
@@ -10423,19 +7199,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"AttributeExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10453,19 +7216,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10489,19 +7239,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -10522,19 +7259,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"ElementExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10552,19 +7276,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10588,19 +7299,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -10621,19 +7319,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10657,19 +7342,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -10690,19 +7362,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10726,19 +7385,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -10759,19 +7405,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10795,19 +7428,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -11262,25 +7882,12 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.ISyndicationNode", L"GetXmlDocument", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetXmlDocument(param0);
+                    return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::method, "Windows.Web.Syndication.ISyndicationNode", "GetXmlDocument", "Windows.Web.Syndication.ISyndicationNode", 1).GetXmlDocument(param0);
                 }());
             }
             catch (...)
@@ -11300,19 +7907,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11336,19 +7930,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -11369,19 +7950,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11405,19 +7973,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -11438,19 +7993,6 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Xml");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11474,19 +8016,6 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Xml");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(arg);
 
             {
@@ -11507,23 +8036,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"AttributeExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AttributeExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.ISyndicationNode", "AttributeExtensions", "Windows.Web.Syndication.ISyndicationNode").AttributeExtensions();
             }());
         }
         catch (...)
@@ -11537,23 +8053,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BaseUri();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.ISyndicationNode", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri();
             }());
         }
         catch (...)
@@ -11573,24 +8076,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"BaseUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BaseUri(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.ISyndicationNode", "BaseUri", "Windows.Web.Syndication.ISyndicationNode").BaseUri(param0);
             }
 
             return 0;
@@ -11606,23 +8096,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"ElementExtensions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ElementExtensions();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.ISyndicationNode", "ElementExtensions", "Windows.Web.Syndication.ISyndicationNode").ElementExtensions();
             }());
         }
         catch (...)
@@ -11636,23 +8113,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.ISyndicationNode", "Language", "Windows.Web.Syndication.ISyndicationNode").Language();
             }());
         }
         catch (...)
@@ -11672,24 +8136,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Language(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.ISyndicationNode", "Language", "Windows.Web.Syndication.ISyndicationNode").Language(param0);
             }
 
             return 0;
@@ -11705,23 +8156,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeName();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.ISyndicationNode", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName();
             }());
         }
         catch (...)
@@ -11741,24 +8179,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeName(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.ISyndicationNode", "NodeName", "Windows.Web.Syndication.ISyndicationNode").NodeName(param0);
             }
 
             return 0;
@@ -11774,23 +8199,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeNamespace();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.ISyndicationNode", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace();
             }());
         }
         catch (...)
@@ -11810,24 +8222,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeNamespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeNamespace(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.ISyndicationNode", "NodeNamespace", "Windows.Web.Syndication.ISyndicationNode").NodeNamespace(param0);
             }
 
             return 0;
@@ -11843,23 +8242,10 @@ namespace py::cpp::Windows::Web::Syndication
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NodeValue();
+                return py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.ISyndicationNode", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue();
             }());
         }
         catch (...)
@@ -11879,24 +8265,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NodeValue(param0);
+                py::require<winrt::Windows::Web::Syndication::ISyndicationNode>(self->obj, py::member_kind::property, "Windows.Web.Syndication.ISyndicationNode", "NodeValue", "Windows.Web.Syndication.ISyndicationNode").NodeValue(param0);
             }
 
             return 0;

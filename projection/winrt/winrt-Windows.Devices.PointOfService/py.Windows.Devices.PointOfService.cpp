@@ -29,19 +29,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.BarcodeScanner", L"CheckHealthAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel>(args, 0);
 
                 return py::convert([&]()
@@ -71,19 +58,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.BarcodeScanner", L"ClaimScannerAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -111,22 +85,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.BarcodeScanner", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.BarcodeScanner", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -305,19 +266,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.BarcodeScanner", L"GetSupportedProfiles", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -345,19 +293,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.BarcodeScanner", L"GetSupportedSymbologiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -385,19 +320,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.BarcodeScanner", L"IsProfileSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -427,19 +349,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.BarcodeScanner", L"IsSymbologySupportedAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -469,19 +378,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.BarcodeScanner", L"RetrieveStatisticsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
@@ -507,19 +403,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScanner", L"Capabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -537,19 +420,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScanner", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -567,23 +437,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScanner", L"VideoDeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.VideoDeviceId();
+                return py::require<winrt::Windows::Devices::PointOfService::IBarcodeScanner2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.BarcodeScanner", "VideoDeviceId", "Windows.Devices.PointOfService.IBarcodeScanner2").VideoDeviceId();
             }());
         }
         catch (...)
@@ -597,19 +454,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.BarcodeScanner", L"StatusUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::BarcodeScanner, winrt::Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -629,19 +473,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.BarcodeScanner", L"StatusUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -693,7 +524,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.BarcodeScanner", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -787,19 +618,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerCapabilities", L"IsImagePreviewSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -817,19 +635,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerCapabilities", L"IsStatisticsReportingSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -847,19 +652,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerCapabilities", L"IsStatisticsUpdatingSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -877,19 +669,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerCapabilities", L"PowerReportingType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -907,23 +686,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerCapabilities", L"IsSoftwareTriggerSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSoftwareTriggerSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::IBarcodeScannerCapabilities1>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.BarcodeScannerCapabilities", "IsSoftwareTriggerSupported", "Windows.Devices.PointOfService.IBarcodeScannerCapabilities1").IsSoftwareTriggerSupported();
             }());
         }
         catch (...)
@@ -937,23 +703,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerCapabilities", L"IsVideoPreviewSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsVideoPreviewSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::IBarcodeScannerCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.BarcodeScannerCapabilities", "IsVideoPreviewSupported", "Windows.Devices.PointOfService.IBarcodeScannerCapabilities2").IsVideoPreviewSupported();
             }());
         }
         catch (...)
@@ -1036,19 +789,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerDataReceivedEventArgs", L"Report");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1130,19 +870,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs", L"ErrorData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1160,19 +887,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs", L"IsRetriable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1190,19 +904,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs", L"PartialInputData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1286,19 +987,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerImagePreviewReceivedEventArgs", L"Preview");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1406,19 +1094,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerReport", L"ScanData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1436,19 +1111,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerReport", L"ScanDataLabel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1466,19 +1128,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerReport", L"ScanDataType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1562,19 +1211,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerStatusUpdatedEventArgs", L"ExtendedStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1592,19 +1228,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeScannerStatusUpdatedEventArgs", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4693,19 +4316,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeSymbologyAttributes", L"IsCheckDigitValidationEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4729,19 +4339,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeSymbologyAttributes", L"IsCheckDigitValidationEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4762,19 +4359,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeSymbologyAttributes", L"IsCheckDigitTransmissionEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4798,19 +4382,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeSymbologyAttributes", L"IsCheckDigitTransmissionEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4831,19 +4402,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeSymbologyAttributes", L"DecodeLengthKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4867,19 +4425,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeSymbologyAttributes", L"DecodeLengthKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::BarcodeSymbologyDecodeLengthKind>(arg);
 
             {
@@ -4900,19 +4445,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeSymbologyAttributes", L"DecodeLength2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4936,19 +4468,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeSymbologyAttributes", L"DecodeLength2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -4969,19 +4488,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeSymbologyAttributes", L"DecodeLength1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5005,19 +4511,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeSymbologyAttributes", L"DecodeLength1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -5038,19 +4531,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeSymbologyAttributes", L"IsCheckDigitTransmissionSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5068,19 +4548,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeSymbologyAttributes", L"IsCheckDigitValidationSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5098,19 +4565,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.BarcodeSymbologyAttributes", L"IsDecodeLengthSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5203,19 +4657,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.CashDrawer", L"CheckHealthAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel>(args, 0);
 
                 return py::convert([&]()
@@ -5245,19 +4686,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.CashDrawer", L"ClaimDrawerAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5285,22 +4713,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.CashDrawer", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.CashDrawer", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -5479,19 +4894,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.CashDrawer", L"GetStatisticsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
@@ -5517,19 +4919,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawer", L"Capabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5547,19 +4936,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawer", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5577,19 +4953,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawer", L"DrawerEventSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5607,19 +4970,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawer", L"IsDrawerOpen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5637,19 +4987,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawer", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5667,19 +5004,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.CashDrawer", L"StatusUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::CashDrawer, winrt::Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -5699,19 +5023,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.CashDrawer", L"StatusUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -5763,7 +5074,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.CashDrawer", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -5855,19 +5166,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerCapabilities", L"IsDrawerOpenSensorAvailable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5885,19 +5183,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerCapabilities", L"IsStatisticsReportingSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5915,19 +5200,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerCapabilities", L"IsStatisticsUpdatingSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5945,19 +5217,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerCapabilities", L"IsStatusMultiDrawerDetectSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5975,19 +5234,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerCapabilities", L"IsStatusReportingSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6005,19 +5251,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerCapabilities", L"PowerReportingType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6108,19 +5341,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.CashDrawerCloseAlarm", L"StartAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6144,19 +5364,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerCloseAlarm", L"BeepFrequency");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6180,19 +5387,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerCloseAlarm", L"BeepFrequency");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -6213,19 +5407,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerCloseAlarm", L"BeepDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6249,19 +5430,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerCloseAlarm", L"BeepDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -6282,19 +5450,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerCloseAlarm", L"BeepDelay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6318,19 +5473,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerCloseAlarm", L"BeepDelay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -6351,19 +5493,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerCloseAlarm", L"AlarmTimeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6387,19 +5516,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerCloseAlarm", L"AlarmTimeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -6420,19 +5536,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.CashDrawerCloseAlarm", L"AlarmTimeoutExpired");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::CashDrawerCloseAlarm, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -6452,19 +5555,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.CashDrawerCloseAlarm", L"AlarmTimeoutExpired");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -6555,19 +5645,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerClosedEventArgs", L"CashDrawer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6649,19 +5726,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.CashDrawerEventSource", L"DrawerClosed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::CashDrawerEventSource, winrt::Windows::Devices::PointOfService::CashDrawerClosedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -6681,19 +5745,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.CashDrawerEventSource", L"DrawerClosed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -6714,19 +5765,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.CashDrawerEventSource", L"DrawerOpened");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::CashDrawerEventSource, winrt::Windows::Devices::PointOfService::CashDrawerOpenedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -6746,19 +5784,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.CashDrawerEventSource", L"DrawerOpened");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -6846,19 +5871,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerOpenedEventArgs", L"CashDrawer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6940,19 +5952,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerStatus", L"ExtendedStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6970,19 +5969,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerStatus", L"StatusKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7065,19 +6051,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.CashDrawerStatusUpdatedEventArgs", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7163,22 +6136,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedBarcodeScanner", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -7204,19 +6164,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"DisableAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7244,19 +6191,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"EnableAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7284,25 +6218,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"GetSymbologyAttributesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetSymbologyAttributesAsync(param0);
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedBarcodeScanner", "GetSymbologyAttributesAsync", "Windows.Devices.PointOfService.IClaimedBarcodeScanner2", 1).GetSymbologyAttributesAsync(param0);
                 }());
             }
             catch (...)
@@ -7326,22 +6247,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"HideVideoPreview", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.HideVideoPreview();
+                    py::require<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner3>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedBarcodeScanner", "HideVideoPreview", "Windows.Devices.PointOfService.IClaimedBarcodeScanner3", 0).HideVideoPreview();
                 }
 
                 Py_RETURN_NONE;
@@ -7367,19 +6275,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"ResetStatisticsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
@@ -7409,19 +6304,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"RetainDevice", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RetainDevice();
@@ -7450,19 +6332,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"SetActiveProfileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -7492,19 +6361,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"SetActiveSymbologiesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint32_t>>(args, 0);
 
                 return py::convert([&]()
@@ -7534,26 +6390,13 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"SetSymbologyAttributesAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::BarcodeSymbologyAttributes>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SetSymbologyAttributesAsync(param0, param1);
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedBarcodeScanner", "SetSymbologyAttributesAsync", "Windows.Devices.PointOfService.IClaimedBarcodeScanner2", 2).SetSymbologyAttributesAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -7577,23 +6420,10 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"ShowVideoPreviewAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ShowVideoPreviewAsync();
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner3>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedBarcodeScanner", "ShowVideoPreviewAsync", "Windows.Devices.PointOfService.IClaimedBarcodeScanner3", 0).ShowVideoPreviewAsync();
                 }());
             }
             catch (...)
@@ -7617,23 +6447,10 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"StartSoftwareTriggerAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StartSoftwareTriggerAsync();
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner1>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedBarcodeScanner", "StartSoftwareTriggerAsync", "Windows.Devices.PointOfService.IClaimedBarcodeScanner1", 0).StartSoftwareTriggerAsync();
                 }());
             }
             catch (...)
@@ -7657,23 +6474,10 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"StopSoftwareTriggerAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StopSoftwareTriggerAsync();
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner1>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedBarcodeScanner", "StopSoftwareTriggerAsync", "Windows.Devices.PointOfService.IClaimedBarcodeScanner1", 0).StopSoftwareTriggerAsync();
                 }());
             }
             catch (...)
@@ -7697,19 +6501,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"UpdateStatisticsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(args, 0);
 
                 return py::convert([&]()
@@ -7735,19 +6526,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"IsDisabledOnDataReceived");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7771,19 +6549,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"IsDisabledOnDataReceived");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -7804,19 +6569,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"IsDecodeDataEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7840,19 +6592,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"IsDecodeDataEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -7873,19 +6612,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7903,19 +6629,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7933,23 +6646,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"IsVideoPreviewShownOnEnable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsVideoPreviewShownOnEnable();
+                return py::require<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner3>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedBarcodeScanner", "IsVideoPreviewShownOnEnable", "Windows.Devices.PointOfService.IClaimedBarcodeScanner3").IsVideoPreviewShownOnEnable();
             }());
         }
         catch (...)
@@ -7969,24 +6669,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"IsVideoPreviewShownOnEnable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsVideoPreviewShownOnEnable(param0);
+                py::require<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner3>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedBarcodeScanner", "IsVideoPreviewShownOnEnable", "Windows.Devices.PointOfService.IClaimedBarcodeScanner3").IsVideoPreviewShownOnEnable(param0);
             }
 
             return 0;
@@ -8002,19 +6689,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"DataReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner, winrt::Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8034,19 +6708,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"DataReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8067,19 +6728,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"ErrorOccurred");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner, winrt::Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8099,19 +6747,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"ErrorOccurred");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8132,19 +6767,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"ImagePreviewReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner, winrt::Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8164,19 +6786,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"ImagePreviewReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8197,19 +6806,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"ReleaseDeviceRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner>>(arg);
 
             return py::convert([&]()
@@ -8229,19 +6825,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"ReleaseDeviceRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8262,19 +6845,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"TriggerPressed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner>>(arg);
 
             return py::convert([&]()
@@ -8294,19 +6864,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"TriggerPressed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8327,19 +6884,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"TriggerReleased");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner>>(arg);
 
             return py::convert([&]()
@@ -8359,19 +6903,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"TriggerReleased");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8392,25 +6923,12 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner, winrt::Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Closed(param0);
+                return py::require<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner4>(self->obj, py::member_kind::event, "Windows.Devices.PointOfService.ClaimedBarcodeScanner", "Closed", "Windows.Devices.PointOfService.IClaimedBarcodeScanner4").Closed(param0);
             }());
         }
         catch (...)
@@ -8424,24 +6942,11 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedBarcodeScanner", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Closed(param0);
+                py::require<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner4>(self->obj, py::member_kind::event, "Windows.Devices.PointOfService.ClaimedBarcodeScanner", "Closed", "Windows.Devices.PointOfService.IClaimedBarcodeScanner4").Closed(param0);
             }
 
             Py_RETURN_NONE;
@@ -8488,7 +6993,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedBarcodeScanner", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -8645,22 +7150,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedCashDrawer", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedCashDrawer", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -8686,19 +7178,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedCashDrawer", L"DisableAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8726,19 +7205,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedCashDrawer", L"EnableAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8766,19 +7232,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedCashDrawer", L"OpenDrawerAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8806,19 +7259,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedCashDrawer", L"ResetStatisticsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
@@ -8848,19 +7288,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedCashDrawer", L"RetainDeviceAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8888,19 +7315,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedCashDrawer", L"UpdateStatisticsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(args, 0);
 
                 return py::convert([&]()
@@ -8926,19 +7340,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedCashDrawer", L"CloseAlarm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8956,19 +7357,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedCashDrawer", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8986,19 +7374,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedCashDrawer", L"IsDrawerOpen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9016,19 +7391,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedCashDrawer", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9046,19 +7408,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedCashDrawer", L"ReleaseDeviceRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedCashDrawer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -9078,19 +7427,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedCashDrawer", L"ReleaseDeviceRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9111,25 +7447,12 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedCashDrawer", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedCashDrawer, winrt::Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Closed(param0);
+                return py::require<winrt::Windows::Devices::PointOfService::IClaimedCashDrawer2>(self->obj, py::member_kind::event, "Windows.Devices.PointOfService.ClaimedCashDrawer", "Closed", "Windows.Devices.PointOfService.IClaimedCashDrawer2").Closed(param0);
             }());
         }
         catch (...)
@@ -9143,24 +7466,11 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedCashDrawer", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Closed(param0);
+                py::require<winrt::Windows::Devices::PointOfService::IClaimedCashDrawer2>(self->obj, py::member_kind::event, "Windows.Devices.PointOfService.ClaimedCashDrawer", "Closed", "Windows.Devices.PointOfService.IClaimedCashDrawer2").Closed(param0);
             }
 
             Py_RETURN_NONE;
@@ -9207,7 +7517,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedCashDrawer", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -9346,19 +7656,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"CreateJob", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9386,25 +7683,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"ValidateData", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ValidateData(param0);
+                    return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "ValidateData", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", 1).ValidateData(param0);
                 }());
             }
             catch (...)
@@ -9424,23 +7708,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"LineSpacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LineSpacing();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "LineSpacing", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").LineSpacing();
             }());
         }
         catch (...)
@@ -9460,24 +7731,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"LineSpacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LineSpacing(param0);
+                py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "LineSpacing", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").LineSpacing(param0);
             }
 
             return 0;
@@ -9493,23 +7751,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"LineHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LineHeight();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "LineHeight", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").LineHeight();
             }());
         }
         catch (...)
@@ -9529,24 +7774,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"LineHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LineHeight(param0);
+                py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "LineHeight", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").LineHeight(param0);
             }
 
             return 0;
@@ -9562,23 +7794,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"IsLetterQuality");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsLetterQuality();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "IsLetterQuality", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsLetterQuality();
             }());
         }
         catch (...)
@@ -9598,24 +7817,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"IsLetterQuality");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsLetterQuality(param0);
+                py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "IsLetterQuality", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsLetterQuality(param0);
             }
 
             return 0;
@@ -9631,23 +7837,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"ColorCartridge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ColorCartridge();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "ColorCartridge", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").ColorCartridge();
             }());
         }
         catch (...)
@@ -9667,24 +7860,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"ColorCartridge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterColorCartridge>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ColorCartridge(param0);
+                py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "ColorCartridge", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").ColorCartridge(param0);
             }
 
             return 0;
@@ -9700,23 +7880,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"CharactersPerLine");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CharactersPerLine();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "CharactersPerLine", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").CharactersPerLine();
             }());
         }
         catch (...)
@@ -9736,24 +7903,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"CharactersPerLine");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CharactersPerLine(param0);
+                py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "CharactersPerLine", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").CharactersPerLine(param0);
             }
 
             return 0;
@@ -9769,23 +7923,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"IsCartridgeEmpty");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsCartridgeEmpty();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "IsCartridgeEmpty", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsCartridgeEmpty();
             }());
         }
         catch (...)
@@ -9799,23 +7940,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"IsCartridgeRemoved");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsCartridgeRemoved();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "IsCartridgeRemoved", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsCartridgeRemoved();
             }());
         }
         catch (...)
@@ -9829,23 +7957,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"IsCoverOpen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsCoverOpen();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "IsCoverOpen", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsCoverOpen();
             }());
         }
         catch (...)
@@ -9859,23 +7974,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"IsHeadCleaning");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsHeadCleaning();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "IsHeadCleaning", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsHeadCleaning();
             }());
         }
         catch (...)
@@ -9889,23 +7991,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"IsPaperEmpty");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPaperEmpty();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "IsPaperEmpty", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsPaperEmpty();
             }());
         }
         catch (...)
@@ -9919,23 +8008,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"IsPaperNearEnd");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPaperNearEnd();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "IsPaperNearEnd", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsPaperNearEnd();
             }());
         }
         catch (...)
@@ -9949,23 +8025,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"IsReadyToPrint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReadyToPrint();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "IsReadyToPrint", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsReadyToPrint();
             }());
         }
         catch (...)
@@ -9979,23 +8042,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedJournalPrinter", L"LineWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LineWidth();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedJournalPrinter", "LineWidth", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").LineWidth();
             }());
         }
         catch (...)
@@ -10091,25 +8141,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"CheckHealthAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CheckHealthAsync(param0);
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedLineDisplay", "CheckHealthAsync", "Windows.Devices.PointOfService.IClaimedLineDisplay2", 1).CheckHealthAsync(param0);
                 }());
             }
             catch (...)
@@ -10133,23 +8170,10 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"CheckPowerStatusAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CheckPowerStatusAsync();
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedLineDisplay", "CheckPowerStatusAsync", "Windows.Devices.PointOfService.IClaimedLineDisplay2", 0).CheckPowerStatusAsync();
                 }());
             }
             catch (...)
@@ -10173,22 +8197,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedLineDisplay", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -10256,23 +8267,10 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"GetAttributes", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAttributes();
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedLineDisplay", "GetAttributes", "Windows.Devices.PointOfService.IClaimedLineDisplay2", 0).GetAttributes();
                 }());
             }
             catch (...)
@@ -10367,25 +8365,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"GetStatisticsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetStatisticsAsync(param0);
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedLineDisplay", "GetStatisticsAsync", "Windows.Devices.PointOfService.IClaimedLineDisplay2", 1).GetStatisticsAsync(param0);
                 }());
             }
             catch (...)
@@ -10409,19 +8394,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"RetainDevice", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RetainDevice();
@@ -10450,23 +8422,10 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"TryClearDescriptorsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryClearDescriptorsAsync();
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedLineDisplay", "TryClearDescriptorsAsync", "Windows.Devices.PointOfService.IClaimedLineDisplay2", 0).TryClearDescriptorsAsync();
                 }());
             }
             catch (...)
@@ -10490,26 +8449,13 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"TryCreateWindowAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryCreateWindowAsync(param0, param1);
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedLineDisplay", "TryCreateWindowAsync", "Windows.Devices.PointOfService.IClaimedLineDisplay2", 2).TryCreateWindowAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -10533,26 +8479,13 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"TrySetDescriptorAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayDescriptorState>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TrySetDescriptorAsync(param0, param1);
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedLineDisplay", "TrySetDescriptorAsync", "Windows.Devices.PointOfService.IClaimedLineDisplay2", 2).TrySetDescriptorAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -10576,25 +8509,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"TryStoreStorageFileBitmapAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryStoreStorageFileBitmapAsync(param0);
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedLineDisplay", "TryStoreStorageFileBitmapAsync", "Windows.Devices.PointOfService.IClaimedLineDisplay2", 1).TryStoreStorageFileBitmapAsync(param0);
                 }());
             }
             catch (...)
@@ -10607,19 +8527,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"TryStoreStorageFileBitmapAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayHorizontalAlignment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayVerticalAlignment>(args, 2);
@@ -10627,7 +8534,7 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryStoreStorageFileBitmapAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedLineDisplay", "TryStoreStorageFileBitmapAsync", "Windows.Devices.PointOfService.IClaimedLineDisplay2", 3).TryStoreStorageFileBitmapAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -10640,19 +8547,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"TryStoreStorageFileBitmapAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayHorizontalAlignment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayVerticalAlignment>(args, 2);
@@ -10661,7 +8555,7 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryStoreStorageFileBitmapAsync(param0, param1, param2, param3);
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedLineDisplay", "TryStoreStorageFileBitmapAsync", "Windows.Devices.PointOfService.IClaimedLineDisplay2", 4).TryStoreStorageFileBitmapAsync(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -10685,25 +8579,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"TryUpdateAttributesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayAttributes>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryUpdateAttributesAsync(param0);
+                    return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedLineDisplay", "TryUpdateAttributesAsync", "Windows.Devices.PointOfService.IClaimedLineDisplay2", 1).TryUpdateAttributesAsync(param0);
                 }());
             }
             catch (...)
@@ -10723,19 +8604,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"Capabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10753,19 +8621,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"DefaultWindow");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10783,19 +8638,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"DeviceControlDescription");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10813,19 +8655,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"DeviceControlVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10843,19 +8672,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10873,19 +8689,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"DeviceServiceVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10903,19 +8706,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"PhysicalDeviceDescription");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10933,19 +8723,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"PhysicalDeviceName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10963,23 +8740,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"CustomGlyphs");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CustomGlyphs();
+                return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedLineDisplay", "CustomGlyphs", "Windows.Devices.PointOfService.IClaimedLineDisplay2").CustomGlyphs();
             }());
         }
         catch (...)
@@ -10993,23 +8757,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"MaxBitmapSizeInPixels");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxBitmapSizeInPixels();
+                return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedLineDisplay", "MaxBitmapSizeInPixels", "Windows.Devices.PointOfService.IClaimedLineDisplay2").MaxBitmapSizeInPixels();
             }());
         }
         catch (...)
@@ -11023,23 +8774,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"SupportedCharacterSets");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedCharacterSets();
+                return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedLineDisplay", "SupportedCharacterSets", "Windows.Devices.PointOfService.IClaimedLineDisplay2").SupportedCharacterSets();
             }());
         }
         catch (...)
@@ -11053,23 +8791,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"SupportedScreenSizesInCharacters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedScreenSizesInCharacters();
+                return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedLineDisplay", "SupportedScreenSizesInCharacters", "Windows.Devices.PointOfService.IClaimedLineDisplay2").SupportedScreenSizesInCharacters();
             }());
         }
         catch (...)
@@ -11083,19 +8808,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"ReleaseDeviceRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedLineDisplay, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -11115,19 +8827,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"ReleaseDeviceRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -11148,25 +8847,12 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"StatusUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedLineDisplay, winrt::Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StatusUpdated(param0);
+                return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::event, "Windows.Devices.PointOfService.ClaimedLineDisplay", "StatusUpdated", "Windows.Devices.PointOfService.IClaimedLineDisplay2").StatusUpdated(param0);
             }());
         }
         catch (...)
@@ -11180,24 +8866,11 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"StatusUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StatusUpdated(param0);
+                py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2>(self->obj, py::member_kind::event, "Windows.Devices.PointOfService.ClaimedLineDisplay", "StatusUpdated", "Windows.Devices.PointOfService.IClaimedLineDisplay2").StatusUpdated(param0);
             }
 
             Py_RETURN_NONE;
@@ -11213,25 +8886,12 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedLineDisplay, winrt::Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Closed(param0);
+                return py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay3>(self->obj, py::member_kind::event, "Windows.Devices.PointOfService.ClaimedLineDisplay", "Closed", "Windows.Devices.PointOfService.IClaimedLineDisplay3").Closed(param0);
             }());
         }
         catch (...)
@@ -11245,24 +8905,11 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Closed(param0);
+                py::require<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay3>(self->obj, py::member_kind::event, "Windows.Devices.PointOfService.ClaimedLineDisplay", "Closed", "Windows.Devices.PointOfService.IClaimedLineDisplay3").Closed(param0);
             }
 
             Py_RETURN_NONE;
@@ -11309,7 +8956,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedLineDisplay", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -11485,19 +9132,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"AuthenticateDeviceAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert([&]()
@@ -11527,22 +9161,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedMagneticStripeReader", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -11568,19 +9189,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"DeAuthenticateDeviceAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert([&]()
@@ -11610,19 +9218,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"DisableAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -11650,19 +9245,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"EnableAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -11690,19 +9272,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"ResetStatisticsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
@@ -11732,19 +9301,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"RetainDevice", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RetainDevice();
@@ -11773,19 +9329,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"RetrieveDeviceAuthenticationDataAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -11813,19 +9356,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"SetErrorReportingType", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::MagneticStripeReaderErrorReportingType>(args, 0);
 
                 {
@@ -11856,19 +9386,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"UpdateKeyAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -11899,19 +9416,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"UpdateStatisticsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(args, 0);
 
                 return py::convert([&]()
@@ -11937,19 +9441,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"TracksToRead");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11973,19 +9464,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"TracksToRead");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackIds>(arg);
 
             {
@@ -12006,19 +9484,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"IsTransmitSentinelsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12042,19 +9507,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"IsTransmitSentinelsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -12075,19 +9527,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"IsDisabledOnDataReceived");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12111,19 +9550,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"IsDisabledOnDataReceived");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -12144,19 +9570,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"IsDecodeDataEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12180,19 +9593,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"IsDecodeDataEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -12213,19 +9613,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"DataEncryptionAlgorithm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12249,19 +9636,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"DataEncryptionAlgorithm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -12282,19 +9656,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12312,19 +9673,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"IsDeviceAuthenticated");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12342,19 +9690,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12372,19 +9707,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"AamvaCardDataReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader, winrt::Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -12404,19 +9726,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"AamvaCardDataReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -12437,19 +9746,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"BankCardDataReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader, winrt::Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -12469,19 +9765,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"BankCardDataReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -12502,19 +9785,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"ErrorOccurred");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader, winrt::Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs>>(arg);
 
             return py::convert([&]()
@@ -12534,19 +9804,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"ErrorOccurred");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -12567,19 +9824,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"ReleaseDeviceRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader>>(arg);
 
             return py::convert([&]()
@@ -12599,19 +9843,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"ReleaseDeviceRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -12632,19 +9863,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"VendorSpecificDataReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader, winrt::Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -12664,19 +9882,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"VendorSpecificDataReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -12697,25 +9902,12 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader, winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Closed(param0);
+                return py::require<winrt::Windows::Devices::PointOfService::IClaimedMagneticStripeReader2>(self->obj, py::member_kind::event, "Windows.Devices.PointOfService.ClaimedMagneticStripeReader", "Closed", "Windows.Devices.PointOfService.IClaimedMagneticStripeReader2").Closed(param0);
             }());
         }
         catch (...)
@@ -12729,24 +9921,11 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedMagneticStripeReader", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Closed(param0);
+                py::require<winrt::Windows::Devices::PointOfService::IClaimedMagneticStripeReader2>(self->obj, py::member_kind::event, "Windows.Devices.PointOfService.ClaimedMagneticStripeReader", "Closed", "Windows.Devices.PointOfService.IClaimedMagneticStripeReader2").Closed(param0);
             }
 
             Py_RETURN_NONE;
@@ -12793,7 +9972,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedMagneticStripeReader", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -12948,22 +10127,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedPosPrinter", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -12989,19 +10155,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"DisableAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -13029,19 +10182,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"EnableAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -13069,19 +10209,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"ResetStatisticsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
@@ -13111,19 +10238,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"RetainDeviceAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -13151,19 +10265,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"UpdateStatisticsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(args, 0);
 
                 return py::convert([&]()
@@ -13189,19 +10290,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"MapMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13225,19 +10313,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"MapMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterMapMode>(arg);
 
             {
@@ -13258,19 +10333,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"IsCharacterSetMappingEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13294,19 +10356,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"IsCharacterSetMappingEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -13327,19 +10376,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"CharacterSet");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13363,19 +10399,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"CharacterSet");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -13396,19 +10419,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13426,19 +10436,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"IsCoverOpen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13456,19 +10453,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13486,19 +10470,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"Journal");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13516,19 +10487,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"Receipt");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13546,19 +10504,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"Slip");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13576,19 +10521,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"ReleaseDeviceRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedPosPrinter, winrt::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -13608,19 +10540,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"ReleaseDeviceRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -13641,25 +10560,12 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::ClaimedPosPrinter, winrt::Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Closed(param0);
+                return py::require<winrt::Windows::Devices::PointOfService::IClaimedPosPrinter2>(self->obj, py::member_kind::event, "Windows.Devices.PointOfService.ClaimedPosPrinter", "Closed", "Windows.Devices.PointOfService.IClaimedPosPrinter2").Closed(param0);
             }());
         }
         catch (...)
@@ -13673,24 +10579,11 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.ClaimedPosPrinter", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Closed(param0);
+                py::require<winrt::Windows::Devices::PointOfService::IClaimedPosPrinter2>(self->obj, py::member_kind::event, "Windows.Devices.PointOfService.ClaimedPosPrinter", "Closed", "Windows.Devices.PointOfService.IClaimedPosPrinter2").Closed(param0);
             }
 
             Py_RETURN_NONE;
@@ -13737,7 +10630,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedPosPrinter", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -13880,19 +10773,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"CreateJob", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -13920,25 +10800,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"ValidateData", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ValidateData(param0);
+                    return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "ValidateData", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", 1).ValidateData(param0);
                 }());
             }
             catch (...)
@@ -13958,19 +10825,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"LinesToPaperCut");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13988,19 +10842,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"PageSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14018,19 +10859,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"PrintArea");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14048,19 +10876,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"SidewaysMaxChars");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14078,19 +10893,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"SidewaysMaxLines");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14108,23 +10910,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"LineSpacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LineSpacing();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "LineSpacing", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").LineSpacing();
             }());
         }
         catch (...)
@@ -14144,24 +10933,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"LineSpacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LineSpacing(param0);
+                py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "LineSpacing", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").LineSpacing(param0);
             }
 
             return 0;
@@ -14177,23 +10953,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"LineHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LineHeight();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "LineHeight", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").LineHeight();
             }());
         }
         catch (...)
@@ -14213,24 +10976,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"LineHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LineHeight(param0);
+                py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "LineHeight", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").LineHeight(param0);
             }
 
             return 0;
@@ -14246,23 +10996,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"IsLetterQuality");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsLetterQuality();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "IsLetterQuality", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsLetterQuality();
             }());
         }
         catch (...)
@@ -14282,24 +11019,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"IsLetterQuality");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsLetterQuality(param0);
+                py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "IsLetterQuality", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsLetterQuality(param0);
             }
 
             return 0;
@@ -14315,23 +11039,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"ColorCartridge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ColorCartridge();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "ColorCartridge", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").ColorCartridge();
             }());
         }
         catch (...)
@@ -14351,24 +11062,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"ColorCartridge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterColorCartridge>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ColorCartridge(param0);
+                py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "ColorCartridge", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").ColorCartridge(param0);
             }
 
             return 0;
@@ -14384,23 +11082,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"CharactersPerLine");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CharactersPerLine();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "CharactersPerLine", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").CharactersPerLine();
             }());
         }
         catch (...)
@@ -14420,24 +11105,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"CharactersPerLine");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CharactersPerLine(param0);
+                py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "CharactersPerLine", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").CharactersPerLine(param0);
             }
 
             return 0;
@@ -14453,23 +11125,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"IsCartridgeEmpty");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsCartridgeEmpty();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "IsCartridgeEmpty", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsCartridgeEmpty();
             }());
         }
         catch (...)
@@ -14483,23 +11142,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"IsCartridgeRemoved");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsCartridgeRemoved();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "IsCartridgeRemoved", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsCartridgeRemoved();
             }());
         }
         catch (...)
@@ -14513,23 +11159,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"IsCoverOpen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsCoverOpen();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "IsCoverOpen", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsCoverOpen();
             }());
         }
         catch (...)
@@ -14543,23 +11176,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"IsHeadCleaning");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsHeadCleaning();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "IsHeadCleaning", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsHeadCleaning();
             }());
         }
         catch (...)
@@ -14573,23 +11193,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"IsPaperEmpty");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPaperEmpty();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "IsPaperEmpty", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsPaperEmpty();
             }());
         }
         catch (...)
@@ -14603,23 +11210,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"IsPaperNearEnd");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPaperNearEnd();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "IsPaperNearEnd", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsPaperNearEnd();
             }());
         }
         catch (...)
@@ -14633,23 +11227,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"IsReadyToPrint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReadyToPrint();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "IsReadyToPrint", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsReadyToPrint();
             }());
         }
         catch (...)
@@ -14663,23 +11244,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedReceiptPrinter", L"LineWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LineWidth();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedReceiptPrinter", "LineWidth", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").LineWidth();
             }());
         }
         catch (...)
@@ -14780,19 +11348,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"ChangePrintSide", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterPrintSide>(args, 0);
 
                 {
@@ -14823,19 +11378,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"CloseJaws", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.CloseJaws();
@@ -14864,19 +11406,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"CreateJob", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -14904,19 +11433,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"InsertSlipAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 return py::convert([&]()
@@ -14946,19 +11462,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"OpenJaws", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.OpenJaws();
@@ -14987,19 +11490,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"RemoveSlipAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 return py::convert([&]()
@@ -15029,25 +11519,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"ValidateData", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ValidateData(param0);
+                    return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "ValidateData", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", 1).ValidateData(param0);
                 }());
             }
             catch (...)
@@ -15067,19 +11544,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"LinesNearEndToEnd");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15097,19 +11561,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"MaxLines");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15127,19 +11578,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"PageSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15157,19 +11595,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"PrintArea");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15187,19 +11612,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"PrintSide");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15217,19 +11629,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"SidewaysMaxChars");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15247,19 +11646,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"SidewaysMaxLines");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15277,23 +11663,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"LineSpacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LineSpacing();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "LineSpacing", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").LineSpacing();
             }());
         }
         catch (...)
@@ -15313,24 +11686,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"LineSpacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LineSpacing(param0);
+                py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "LineSpacing", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").LineSpacing(param0);
             }
 
             return 0;
@@ -15346,23 +11706,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"LineHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LineHeight();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "LineHeight", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").LineHeight();
             }());
         }
         catch (...)
@@ -15382,24 +11729,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"LineHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LineHeight(param0);
+                py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "LineHeight", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").LineHeight(param0);
             }
 
             return 0;
@@ -15415,23 +11749,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"IsLetterQuality");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsLetterQuality();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "IsLetterQuality", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsLetterQuality();
             }());
         }
         catch (...)
@@ -15451,24 +11772,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"IsLetterQuality");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsLetterQuality(param0);
+                py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "IsLetterQuality", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsLetterQuality(param0);
             }
 
             return 0;
@@ -15484,23 +11792,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"ColorCartridge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ColorCartridge();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "ColorCartridge", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").ColorCartridge();
             }());
         }
         catch (...)
@@ -15520,24 +11815,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"ColorCartridge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterColorCartridge>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ColorCartridge(param0);
+                py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "ColorCartridge", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").ColorCartridge(param0);
             }
 
             return 0;
@@ -15553,23 +11835,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"CharactersPerLine");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CharactersPerLine();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "CharactersPerLine", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").CharactersPerLine();
             }());
         }
         catch (...)
@@ -15589,24 +11858,11 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"CharactersPerLine");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CharactersPerLine(param0);
+                py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "CharactersPerLine", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").CharactersPerLine(param0);
             }
 
             return 0;
@@ -15622,23 +11878,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"IsCartridgeEmpty");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsCartridgeEmpty();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "IsCartridgeEmpty", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsCartridgeEmpty();
             }());
         }
         catch (...)
@@ -15652,23 +11895,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"IsCartridgeRemoved");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsCartridgeRemoved();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "IsCartridgeRemoved", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsCartridgeRemoved();
             }());
         }
         catch (...)
@@ -15682,23 +11912,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"IsCoverOpen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsCoverOpen();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "IsCoverOpen", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsCoverOpen();
             }());
         }
         catch (...)
@@ -15712,23 +11929,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"IsHeadCleaning");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsHeadCleaning();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "IsHeadCleaning", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsHeadCleaning();
             }());
         }
         catch (...)
@@ -15742,23 +11946,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"IsPaperEmpty");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPaperEmpty();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "IsPaperEmpty", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsPaperEmpty();
             }());
         }
         catch (...)
@@ -15772,23 +11963,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"IsPaperNearEnd");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPaperNearEnd();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "IsPaperNearEnd", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsPaperNearEnd();
             }());
         }
         catch (...)
@@ -15802,23 +11980,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"IsReadyToPrint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReadyToPrint();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "IsReadyToPrint", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").IsReadyToPrint();
             }());
         }
         catch (...)
@@ -15832,23 +11997,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ClaimedSlipPrinter", L"LineWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LineWidth();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ClaimedSlipPrinter", "LineWidth", "Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation").LineWidth();
             }());
         }
         catch (...)
@@ -15956,19 +12108,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.JournalPrintJob", L"ExecuteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -15996,24 +12135,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.JournalPrintJob", L"FeedPaperByLine", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.FeedPaperByLine(param0);
+                    py::require<winrt::Windows::Devices::PointOfService::IJournalPrintJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.JournalPrintJob", "FeedPaperByLine", "Windows.Devices.PointOfService.IJournalPrintJob", 1).FeedPaperByLine(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -16039,24 +12165,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.JournalPrintJob", L"FeedPaperByMapModeUnit", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.FeedPaperByMapModeUnit(param0);
+                    py::require<winrt::Windows::Devices::PointOfService::IJournalPrintJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.JournalPrintJob", "FeedPaperByMapModeUnit", "Windows.Devices.PointOfService.IJournalPrintJob", 1).FeedPaperByMapModeUnit(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -16082,19 +12195,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.JournalPrintJob", L"Print", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -16114,25 +12214,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.JournalPrintJob", L"Print", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Print(param0, param1);
+                    py::require<winrt::Windows::Devices::PointOfService::IJournalPrintJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.JournalPrintJob", "Print", "Windows.Devices.PointOfService.IJournalPrintJob", 2).Print(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -16158,19 +12245,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.JournalPrintJob", L"PrintLine", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.PrintLine();
@@ -16188,19 +12262,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.JournalPrintJob", L"PrintLine", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -16295,23 +12356,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"CartridgeSensors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CartridgeSensors();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "CartridgeSensors", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").CartridgeSensors();
             }());
         }
         catch (...)
@@ -16325,23 +12373,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"ColorCartridgeCapabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ColorCartridgeCapabilities();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "ColorCartridgeCapabilities", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").ColorCartridgeCapabilities();
             }());
         }
         catch (...)
@@ -16355,23 +12390,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsBoldSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsBoldSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsBoldSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsBoldSupported();
             }());
         }
         catch (...)
@@ -16385,23 +12407,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsDoubleHighDoubleWidePrintSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDoubleHighDoubleWidePrintSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsDoubleHighDoubleWidePrintSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDoubleHighDoubleWidePrintSupported();
             }());
         }
         catch (...)
@@ -16415,23 +12424,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsDoubleHighPrintSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDoubleHighPrintSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsDoubleHighPrintSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDoubleHighPrintSupported();
             }());
         }
         catch (...)
@@ -16445,23 +12441,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsDoubleWidePrintSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDoubleWidePrintSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsDoubleWidePrintSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDoubleWidePrintSupported();
             }());
         }
         catch (...)
@@ -16475,23 +12458,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsDualColorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDualColorSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsDualColorSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDualColorSupported();
             }());
         }
         catch (...)
@@ -16505,23 +12475,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsItalicSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsItalicSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsItalicSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsItalicSupported();
             }());
         }
         catch (...)
@@ -16535,23 +12492,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsPaperEmptySensorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPaperEmptySensorSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsPaperEmptySensorSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsPaperEmptySensorSupported();
             }());
         }
         catch (...)
@@ -16565,23 +12509,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsPaperNearEndSensorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPaperNearEndSensorSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsPaperNearEndSensorSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsPaperNearEndSensorSupported();
             }());
         }
         catch (...)
@@ -16595,23 +12526,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsPrinterPresent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPrinterPresent();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsPrinterPresent", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsPrinterPresent();
             }());
         }
         catch (...)
@@ -16625,23 +12543,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsUnderlineSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsUnderlineSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsUnderlineSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsUnderlineSupported();
             }());
         }
         catch (...)
@@ -16655,23 +12560,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"SupportedCharactersPerLine");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedCharactersPerLine();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "SupportedCharactersPerLine", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").SupportedCharactersPerLine();
             }());
         }
         catch (...)
@@ -16685,23 +12577,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsReversePaperFeedByLineSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReversePaperFeedByLineSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsReversePaperFeedByLineSupported", "Windows.Devices.PointOfService.IJournalPrinterCapabilities2").IsReversePaperFeedByLineSupported();
             }());
         }
         catch (...)
@@ -16715,23 +12594,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsReversePaperFeedByMapModeUnitSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReversePaperFeedByMapModeUnitSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsReversePaperFeedByMapModeUnitSupported", "Windows.Devices.PointOfService.IJournalPrinterCapabilities2").IsReversePaperFeedByMapModeUnitSupported();
             }());
         }
         catch (...)
@@ -16745,23 +12611,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsReverseVideoSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReverseVideoSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsReverseVideoSupported", "Windows.Devices.PointOfService.IJournalPrinterCapabilities2").IsReverseVideoSupported();
             }());
         }
         catch (...)
@@ -16775,23 +12628,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsStrikethroughSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsStrikethroughSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsStrikethroughSupported", "Windows.Devices.PointOfService.IJournalPrinterCapabilities2").IsStrikethroughSupported();
             }());
         }
         catch (...)
@@ -16805,23 +12645,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsSubscriptSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSubscriptSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsSubscriptSupported", "Windows.Devices.PointOfService.IJournalPrinterCapabilities2").IsSubscriptSupported();
             }());
         }
         catch (...)
@@ -16835,23 +12662,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.JournalPrinterCapabilities", L"IsSuperscriptSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSuperscriptSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.JournalPrinterCapabilities", "IsSuperscriptSupported", "Windows.Devices.PointOfService.IJournalPrinterCapabilities2").IsSuperscriptSupported();
             }());
         }
         catch (...)
@@ -16951,23 +12765,10 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplay", L"CheckPowerStatusAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CheckPowerStatusAsync();
+                    return py::require<winrt::Windows::Devices::PointOfService::ILineDisplay2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.LineDisplay", "CheckPowerStatusAsync", "Windows.Devices.PointOfService.ILineDisplay2", 0).CheckPowerStatusAsync();
                 }());
             }
             catch (...)
@@ -16991,19 +12792,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplay", L"ClaimAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -17031,22 +12819,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplay", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.LineDisplay", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -17221,19 +12996,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplay", L"Capabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17251,19 +13013,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplay", L"DeviceControlDescription");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17281,19 +13030,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplay", L"DeviceControlVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17311,19 +13047,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplay", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17341,19 +13064,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplay", L"DeviceServiceVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17371,19 +13081,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplay", L"PhysicalDeviceDescription");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17401,19 +13098,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplay", L"PhysicalDeviceName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17492,7 +13176,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.LineDisplay", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -17584,19 +13268,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayAttributes", L"ScreenSizeInCharacters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17620,19 +13291,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayAttributes", L"ScreenSizeInCharacters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(arg);
 
             {
@@ -17653,19 +13311,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayAttributes", L"IsPowerNotifyEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17689,19 +13334,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayAttributes", L"IsPowerNotifyEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -17722,19 +13354,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayAttributes", L"IsCharacterSetMappingEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17758,19 +13377,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayAttributes", L"IsCharacterSetMappingEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -17791,19 +13397,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayAttributes", L"CurrentWindow");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17827,19 +13420,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayAttributes", L"CurrentWindow");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayWindow>(arg);
 
             {
@@ -17860,19 +13440,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayAttributes", L"CharacterSet");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17896,19 +13463,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayAttributes", L"CharacterSet");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -17929,19 +13483,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayAttributes", L"Brightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17965,19 +13506,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayAttributes", L"Brightness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -17998,19 +13526,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayAttributes", L"BlinkRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18034,19 +13549,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayAttributes", L"BlinkRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -18137,19 +13639,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"CanBlink");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18167,19 +13656,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"CanChangeBlinkRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18197,19 +13673,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"CanChangeScreenSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18227,19 +13690,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"CanDisplayBitmaps");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18257,19 +13707,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"CanDisplayCustomGlyphs");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18287,19 +13724,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"CanMapCharacterSets");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18317,19 +13741,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"CanReadCharacterAtCursor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18347,19 +13758,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"CanReverse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18377,19 +13775,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"IsBrightnessSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18407,19 +13792,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"IsCursorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18437,19 +13809,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"IsHorizontalMarqueeSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18467,19 +13826,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"IsInterCharacterWaitSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18497,19 +13843,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"IsStatisticsReportingSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18527,19 +13860,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"IsStatisticsUpdatingSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18557,19 +13877,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"IsVerticalMarqueeSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18587,19 +13894,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"PowerReportingType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18617,19 +13911,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"SupportedDescriptors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18647,19 +13928,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCapabilities", L"SupportedWindows");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18762,19 +14030,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayCursor", L"GetAttributes", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -18802,19 +14057,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayCursor", L"TryUpdateAttributesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayCursorAttributes>(args, 0);
 
                 return py::convert([&]()
@@ -18840,19 +14082,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCursor", L"CanCustomize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18870,19 +14099,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCursor", L"IsBlinkSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18900,19 +14116,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCursor", L"IsBlockSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18930,19 +14133,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCursor", L"IsHalfBlockSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18960,19 +14150,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCursor", L"IsOtherSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18990,19 +14167,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCursor", L"IsReverseSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19020,19 +14184,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCursor", L"IsUnderlineSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19122,19 +14273,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCursorAttributes", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19158,19 +14296,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCursorAttributes", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -19191,19 +14316,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCursorAttributes", L"IsBlinkEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19227,19 +14339,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCursorAttributes", L"IsBlinkEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -19260,19 +14359,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCursorAttributes", L"IsAutoAdvanceEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19296,19 +14382,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCursorAttributes", L"IsAutoAdvanceEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -19329,19 +14402,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCursorAttributes", L"CursorType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19365,19 +14425,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCursorAttributes", L"CursorType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayCursorType>(arg);
 
             {
@@ -19469,19 +14516,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayCustomGlyphs", L"TryRedefineAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -19508,19 +14542,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCustomGlyphs", L"SizeInPixels");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19538,19 +14559,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayCustomGlyphs", L"SupportedGlyphCodes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19638,19 +14646,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayMarquee", L"TryStartScrollingAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayScrollDirection>(args, 0);
 
                 return py::convert([&]()
@@ -19680,19 +14675,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayMarquee", L"TryStopScrollingAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -19716,19 +14698,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayMarquee", L"ScrollWaitInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19752,19 +14721,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayMarquee", L"ScrollWaitInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -19785,19 +14741,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayMarquee", L"RepeatWaitInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19821,19 +14764,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayMarquee", L"RepeatWaitInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -19854,19 +14784,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayMarquee", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19890,19 +14807,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayMarquee", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayMarqueeFormat>(arg);
 
             {
@@ -19991,19 +14895,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayStatisticsCategorySelector", L"AllStatistics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20021,19 +14912,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayStatisticsCategorySelector", L"ManufacturerStatistics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20051,19 +14929,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayStatisticsCategorySelector", L"UnifiedPosStatistics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20147,19 +15012,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayStatusUpdatedEventArgs", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20245,19 +15097,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayStoredBitmap", L"TryDeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -20281,19 +15120,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayStoredBitmap", L"EscapeSequence");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20380,22 +15206,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.LineDisplayWindow", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -20421,23 +15234,10 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"ReadCharacterAtCursorAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ReadCharacterAtCursorAsync();
+                    return py::require<winrt::Windows::Devices::PointOfService::ILineDisplayWindow2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.LineDisplayWindow", "ReadCharacterAtCursorAsync", "Windows.Devices.PointOfService.ILineDisplayWindow2", 0).ReadCharacterAtCursorAsync();
                 }());
             }
             catch (...)
@@ -20461,19 +15261,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryClearTextAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -20501,25 +15288,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryDisplayStorageFileBitmapAtCursorAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryDisplayStorageFileBitmapAtCursorAsync(param0);
+                    return py::require<winrt::Windows::Devices::PointOfService::ILineDisplayWindow2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.LineDisplayWindow", "TryDisplayStorageFileBitmapAtCursorAsync", "Windows.Devices.PointOfService.ILineDisplayWindow2", 1).TryDisplayStorageFileBitmapAtCursorAsync(param0);
                 }());
             }
             catch (...)
@@ -20532,19 +15306,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryDisplayStorageFileBitmapAtCursorAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayHorizontalAlignment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayVerticalAlignment>(args, 2);
@@ -20552,7 +15313,7 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryDisplayStorageFileBitmapAtCursorAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Devices::PointOfService::ILineDisplayWindow2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.LineDisplayWindow", "TryDisplayStorageFileBitmapAtCursorAsync", "Windows.Devices.PointOfService.ILineDisplayWindow2", 3).TryDisplayStorageFileBitmapAtCursorAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -20565,19 +15326,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryDisplayStorageFileBitmapAtCursorAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayHorizontalAlignment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayVerticalAlignment>(args, 2);
@@ -20586,7 +15334,7 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryDisplayStorageFileBitmapAtCursorAsync(param0, param1, param2, param3);
+                    return py::require<winrt::Windows::Devices::PointOfService::ILineDisplayWindow2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.LineDisplayWindow", "TryDisplayStorageFileBitmapAtCursorAsync", "Windows.Devices.PointOfService.ILineDisplayWindow2", 4).TryDisplayStorageFileBitmapAtCursorAsync(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -20610,26 +15358,13 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryDisplayStorageFileBitmapAtPointAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryDisplayStorageFileBitmapAtPointAsync(param0, param1);
+                    return py::require<winrt::Windows::Devices::PointOfService::ILineDisplayWindow2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.LineDisplayWindow", "TryDisplayStorageFileBitmapAtPointAsync", "Windows.Devices.PointOfService.ILineDisplayWindow2", 2).TryDisplayStorageFileBitmapAtPointAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -20642,19 +15377,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryDisplayStorageFileBitmapAtPointAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -20662,7 +15384,7 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryDisplayStorageFileBitmapAtPointAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Devices::PointOfService::ILineDisplayWindow2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.LineDisplayWindow", "TryDisplayStorageFileBitmapAtPointAsync", "Windows.Devices.PointOfService.ILineDisplayWindow2", 3).TryDisplayStorageFileBitmapAtPointAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -20686,25 +15408,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryDisplayStoredBitmapAtCursorAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayStoredBitmap>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryDisplayStoredBitmapAtCursorAsync(param0);
+                    return py::require<winrt::Windows::Devices::PointOfService::ILineDisplayWindow2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.LineDisplayWindow", "TryDisplayStoredBitmapAtCursorAsync", "Windows.Devices.PointOfService.ILineDisplayWindow2", 1).TryDisplayStoredBitmapAtCursorAsync(param0);
                 }());
             }
             catch (...)
@@ -20728,19 +15437,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryDisplayTextAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -20759,19 +15455,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryDisplayTextAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayTextAttribute>(args, 1);
 
@@ -20791,19 +15474,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryDisplayTextAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayTextAttribute>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Point>(args, 2);
@@ -20835,19 +15505,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryRefreshAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -20875,19 +15532,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryScrollTextAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayScrollDirection>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -20914,19 +15558,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"InterCharacterWaitInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20950,19 +15581,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"InterCharacterWaitInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -20983,19 +15601,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"SizeInCharacters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21013,23 +15618,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"Cursor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Cursor();
+                return py::require<winrt::Windows::Devices::PointOfService::ILineDisplayWindow2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.LineDisplayWindow", "Cursor", "Windows.Devices.PointOfService.ILineDisplayWindow2").Cursor();
             }());
         }
         catch (...)
@@ -21043,23 +15635,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"Marquee");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Marquee();
+                return py::require<winrt::Windows::Devices::PointOfService::ILineDisplayWindow2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.LineDisplayWindow", "Marquee", "Windows.Devices.PointOfService.ILineDisplayWindow2").Marquee();
             }());
         }
         catch (...)
@@ -21104,7 +15683,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.LineDisplayWindow", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -21178,19 +15757,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.MagneticStripeReader", L"CheckHealthAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel>(args, 0);
 
                 return py::convert([&]()
@@ -21220,19 +15786,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.MagneticStripeReader", L"ClaimReaderAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -21260,22 +15813,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.MagneticStripeReader", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.MagneticStripeReader", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -21454,19 +15994,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.MagneticStripeReader", L"GetErrorReportingType", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -21494,19 +16021,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.MagneticStripeReader", L"RetrieveStatisticsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
@@ -21532,19 +16046,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReader", L"Capabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21562,19 +16063,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReader", L"DeviceAuthenticationProtocol");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21592,19 +16080,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReader", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21622,19 +16097,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReader", L"SupportedCardTypes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21652,19 +16114,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.MagneticStripeReader", L"StatusUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::MagneticStripeReader, winrt::Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -21684,19 +16133,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.MagneticStripeReader", L"StatusUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -21748,7 +16184,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.MagneticStripeReader", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -21840,19 +16276,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"Address");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21870,19 +16293,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"BirthDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21900,19 +16310,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"City");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21930,19 +16327,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"Class");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21960,19 +16344,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"Endorsements");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21990,19 +16361,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"ExpirationDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22020,19 +16378,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"EyeColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22050,19 +16395,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"FirstName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22080,19 +16412,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"Gender");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22110,19 +16429,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"HairColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22140,19 +16446,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"Height");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22170,19 +16463,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"LicenseNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22200,19 +16480,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"PostalCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22230,19 +16497,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"Report");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22260,19 +16514,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"Restrictions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22290,19 +16531,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22320,19 +16548,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"Suffix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22350,19 +16565,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"Surname");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22380,19 +16582,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs", L"Weight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22492,19 +16681,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs", L"AccountNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22522,19 +16698,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs", L"ExpirationDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22552,19 +16715,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs", L"FirstName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22582,19 +16732,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs", L"MiddleInitial");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22612,19 +16749,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs", L"Report");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22642,19 +16766,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs", L"ServiceCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22672,19 +16783,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs", L"Suffix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22702,19 +16800,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs", L"Surname");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22732,19 +16817,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22834,19 +16906,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderCapabilities", L"AuthenticationLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22864,19 +16923,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderCapabilities", L"CardAuthentication");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22894,19 +16940,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderCapabilities", L"IsIsoSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22924,19 +16957,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderCapabilities", L"IsJisOneSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22954,19 +16974,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderCapabilities", L"IsJisTwoSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22984,19 +16991,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderCapabilities", L"IsStatisticsReportingSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23014,19 +17008,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderCapabilities", L"IsStatisticsUpdatingSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23044,19 +17025,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderCapabilities", L"IsTrackDataMaskingSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23074,19 +17042,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderCapabilities", L"IsTransmitSentinelsSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23104,19 +17059,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderCapabilities", L"PowerReportingType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23134,19 +17076,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderCapabilities", L"SupportedEncryptionAlgorithms");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23553,19 +17482,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs", L"ErrorData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23583,19 +17499,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs", L"PartialInputData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23613,19 +17516,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs", L"Track1Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23643,19 +17533,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs", L"Track2Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23673,19 +17550,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs", L"Track3Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23703,19 +17567,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs", L"Track4Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23802,19 +17653,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderReport", L"AdditionalSecurityInformation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23832,19 +17670,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderReport", L"CardAuthenticationData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23862,19 +17687,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderReport", L"CardAuthenticationDataLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23892,19 +17704,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderReport", L"CardType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23922,19 +17721,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderReport", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23952,19 +17738,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderReport", L"Track1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23982,19 +17755,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderReport", L"Track2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24012,19 +17772,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderReport", L"Track3");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24042,19 +17789,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderReport", L"Track4");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24144,19 +17878,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs", L"ExtendedStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24174,19 +17895,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24269,19 +17977,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderTrackData", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24299,19 +17994,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderTrackData", L"DiscretionaryData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24329,19 +18011,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderTrackData", L"EncryptedData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24425,19 +18094,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs", L"Report");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24523,19 +18179,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.PosPrinter", L"CheckHealthAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel>(args, 0);
 
                 return py::convert([&]()
@@ -24565,19 +18208,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.PosPrinter", L"ClaimPrinterAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -24605,22 +18235,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.PosPrinter", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.PosPrinter", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -24799,25 +18416,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.PosPrinter", L"GetFontProperty", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFontProperty(param0);
+                    return py::require<winrt::Windows::Devices::PointOfService::IPosPrinter2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.PosPrinter", "GetFontProperty", "Windows.Devices.PointOfService.IPosPrinter2", 1).GetFontProperty(param0);
                 }());
             }
             catch (...)
@@ -24841,19 +18445,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.PosPrinter", L"GetStatisticsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
@@ -24879,19 +18470,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinter", L"Capabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24909,19 +18487,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinter", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24939,19 +18504,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinter", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24969,19 +18521,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinter", L"SupportedCharacterSets");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24999,19 +18538,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinter", L"SupportedTypeFaces");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25029,23 +18555,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinter", L"SupportedBarcodeSymbologies");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedBarcodeSymbologies();
+                return py::require<winrt::Windows::Devices::PointOfService::IPosPrinter2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.PosPrinter", "SupportedBarcodeSymbologies", "Windows.Devices.PointOfService.IPosPrinter2").SupportedBarcodeSymbologies();
             }());
         }
         catch (...)
@@ -25059,19 +18572,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.PosPrinter", L"StatusUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::PosPrinter, winrt::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -25091,19 +18591,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.PosPrinter", L"StatusUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -25155,7 +18642,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.PosPrinter", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -25249,19 +18736,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterCapabilities", L"CanMapCharacterSet");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25279,19 +18753,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterCapabilities", L"DefaultCharacterSet");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25309,19 +18770,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterCapabilities", L"HasCoverSensor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25339,19 +18787,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterCapabilities", L"IsStatisticsReportingSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25369,19 +18804,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterCapabilities", L"IsStatisticsUpdatingSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25399,19 +18821,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterCapabilities", L"IsTransactionSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25429,19 +18838,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterCapabilities", L"Journal");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25459,19 +18855,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterCapabilities", L"PowerReportingType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25489,19 +18872,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterCapabilities", L"Receipt");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25519,19 +18889,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterCapabilities", L"Slip");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25764,19 +19121,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterFontProperty", L"CharacterSizes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25794,19 +19138,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterFontProperty", L"IsScalableToAnySize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25824,19 +19155,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterFontProperty", L"TypeFace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25942,19 +19260,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"Underline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25978,19 +19283,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"Underline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -26011,19 +19303,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"TypeFace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -26047,19 +19326,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"TypeFace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -26080,19 +19346,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"Superscript");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -26116,19 +19369,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"Superscript");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -26149,19 +19389,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"Subscript");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -26185,19 +19412,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"Subscript");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -26218,19 +19432,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"Strikethrough");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -26254,19 +19455,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"Strikethrough");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -26287,19 +19475,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"ReverseVideo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -26323,19 +19498,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"ReverseVideo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -26356,19 +19518,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"Italic");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -26392,19 +19541,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"Italic");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -26425,19 +19561,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"DoubleWide");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -26461,19 +19584,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"DoubleWide");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -26494,19 +19604,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"DoubleHigh");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -26530,19 +19627,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"DoubleHigh");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -26563,19 +19647,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"CharacterSet");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -26599,19 +19670,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"CharacterSet");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -26632,19 +19690,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"CharacterHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -26668,19 +19713,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"CharacterHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -26701,19 +19733,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"Bold");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -26737,19 +19756,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"Bold");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -26770,19 +19776,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"Alignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -26806,19 +19799,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterPrintOptions", L"Alignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterAlignment>(arg);
 
             {
@@ -26978,19 +19958,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterStatus", L"ExtendedStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -27008,19 +19975,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterStatus", L"StatusKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -27103,19 +20057,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -27201,19 +20142,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"CutPaper", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.CutPaper();
@@ -27231,19 +20159,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"CutPaper", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
@@ -27274,19 +20189,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"DrawRuledLine", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterLineDirection>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -27295,7 +20197,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
                 {
                     auto _gil = release_gil();
-                    self->obj.DrawRuledLine(param0, param1, param2, param3, param4);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "DrawRuledLine", "Windows.Devices.PointOfService.IReceiptOrSlipJob", 5).DrawRuledLine(param0, param1, param2, param3, param4);
                 }
 
                 Py_RETURN_NONE;
@@ -27321,23 +20223,10 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"ExecuteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ExecuteAsync();
+                    return py::require<winrt::Windows::Devices::PointOfService::IPosPrinterJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "ExecuteAsync", "Windows.Devices.PointOfService.IPosPrinterJob", 0).ExecuteAsync();
                 }());
             }
             catch (...)
@@ -27361,24 +20250,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"FeedPaperByLine", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.FeedPaperByLine(param0);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptPrintJob2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "FeedPaperByLine", "Windows.Devices.PointOfService.IReceiptPrintJob2", 1).FeedPaperByLine(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -27404,24 +20280,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"FeedPaperByMapModeUnit", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.FeedPaperByMapModeUnit(param0);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptPrintJob2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "FeedPaperByMapModeUnit", "Windows.Devices.PointOfService.IReceiptPrintJob2", 1).FeedPaperByMapModeUnit(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -27447,19 +20310,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"MarkFeed", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterMarkFeedKind>(args, 0);
 
                 {
@@ -27490,24 +20340,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"Print", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Print(param0);
+                    py::require<winrt::Windows::Devices::PointOfService::IPosPrinterJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "Print", "Windows.Devices.PointOfService.IPosPrinterJob", 1).Print(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -27522,25 +20359,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"Print", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Print(param0, param1);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptPrintJob2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "Print", "Windows.Devices.PointOfService.IReceiptPrintJob2", 2).Print(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -27566,19 +20390,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"PrintBarcode", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -27588,7 +20399,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
                 {
                     auto _gil = release_gil();
-                    self->obj.PrintBarcode(param0, param1, param2, param3, param4, param5);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "PrintBarcode", "Windows.Devices.PointOfService.IReceiptOrSlipJob", 6).PrintBarcode(param0, param1, param2, param3, param4, param5);
                 }
 
                 Py_RETURN_NONE;
@@ -27614,19 +20425,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"PrintBarcodeCustomAlign", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -27636,7 +20434,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
                 {
                     auto _gil = release_gil();
-                    self->obj.PrintBarcodeCustomAlign(param0, param1, param2, param3, param4, param5);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "PrintBarcodeCustomAlign", "Windows.Devices.PointOfService.IReceiptOrSlipJob", 6).PrintBarcodeCustomAlign(param0, param1, param2, param3, param4, param5);
                 }
 
                 Py_RETURN_NONE;
@@ -27662,25 +20460,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"PrintBitmap", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterAlignment>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.PrintBitmap(param0, param1);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "PrintBitmap", "Windows.Devices.PointOfService.IReceiptOrSlipJob", 2).PrintBitmap(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -27695,26 +20480,13 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"PrintBitmap", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterAlignment>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.PrintBitmap(param0, param1, param2);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "PrintBitmap", "Windows.Devices.PointOfService.IReceiptOrSlipJob", 3).PrintBitmap(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -27740,25 +20512,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"PrintCustomAlignedBitmap", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.PrintCustomAlignedBitmap(param0, param1);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "PrintCustomAlignedBitmap", "Windows.Devices.PointOfService.IReceiptOrSlipJob", 2).PrintCustomAlignedBitmap(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -27773,26 +20532,13 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"PrintCustomAlignedBitmap", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.PrintCustomAlignedBitmap(param0, param1, param2);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "PrintCustomAlignedBitmap", "Windows.Devices.PointOfService.IReceiptOrSlipJob", 3).PrintCustomAlignedBitmap(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -27818,22 +20564,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"PrintLine", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.PrintLine();
+                    py::require<winrt::Windows::Devices::PointOfService::IPosPrinterJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "PrintLine", "Windows.Devices.PointOfService.IPosPrinterJob", 0).PrintLine();
                 }
 
                 Py_RETURN_NONE;
@@ -27848,24 +20581,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"PrintLine", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.PrintLine(param0);
+                    py::require<winrt::Windows::Devices::PointOfService::IPosPrinterJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "PrintLine", "Windows.Devices.PointOfService.IPosPrinterJob", 1).PrintLine(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -27891,24 +20611,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"PrintSavedBitmap", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.PrintSavedBitmap(param0);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "PrintSavedBitmap", "Windows.Devices.PointOfService.IReceiptOrSlipJob", 1).PrintSavedBitmap(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -27934,24 +20641,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"SetBarcodeRotation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterRotation>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetBarcodeRotation(param0);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "SetBarcodeRotation", "Windows.Devices.PointOfService.IReceiptOrSlipJob", 1).SetBarcodeRotation(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -27977,26 +20671,13 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"SetBitmap", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterAlignment>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetBitmap(param0, param1, param2);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "SetBitmap", "Windows.Devices.PointOfService.IReceiptOrSlipJob", 3).SetBitmap(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -28011,19 +20692,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"SetBitmap", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterAlignment>(args, 2);
@@ -28031,7 +20699,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetBitmap(param0, param1, param2, param3);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "SetBitmap", "Windows.Devices.PointOfService.IReceiptOrSlipJob", 4).SetBitmap(param0, param1, param2, param3);
                 }
 
                 Py_RETURN_NONE;
@@ -28057,26 +20725,13 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"SetCustomAlignedBitmap", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetCustomAlignedBitmap(param0, param1, param2);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "SetCustomAlignedBitmap", "Windows.Devices.PointOfService.IReceiptOrSlipJob", 3).SetCustomAlignedBitmap(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -28091,19 +20746,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"SetCustomAlignedBitmap", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -28111,7 +20753,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetCustomAlignedBitmap(param0, param1, param2, param3);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "SetCustomAlignedBitmap", "Windows.Devices.PointOfService.IReceiptOrSlipJob", 4).SetCustomAlignedBitmap(param0, param1, param2, param3);
                 }
 
                 Py_RETURN_NONE;
@@ -28137,24 +20779,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"SetPrintArea", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetPrintArea(param0);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "SetPrintArea", "Windows.Devices.PointOfService.IReceiptOrSlipJob", 1).SetPrintArea(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -28180,25 +20809,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"SetPrintRotation", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterRotation>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetPrintRotation(param0, param1);
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "SetPrintRotation", "Windows.Devices.PointOfService.IReceiptOrSlipJob", 2).SetPrintRotation(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -28224,22 +20840,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"StampPaper", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.StampPaper();
+                    py::require<winrt::Windows::Devices::PointOfService::IReceiptPrintJob2>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.ReceiptPrintJob", "StampPaper", "Windows.Devices.PointOfService.IReceiptPrintJob2", 0).StampPaper();
                 }
 
                 Py_RETURN_NONE;
@@ -28343,23 +20946,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"CartridgeSensors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CartridgeSensors();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "CartridgeSensors", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").CartridgeSensors();
             }());
         }
         catch (...)
@@ -28373,23 +20963,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"ColorCartridgeCapabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ColorCartridgeCapabilities();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "ColorCartridgeCapabilities", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").ColorCartridgeCapabilities();
             }());
         }
         catch (...)
@@ -28403,23 +20980,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsBoldSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsBoldSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsBoldSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsBoldSupported();
             }());
         }
         catch (...)
@@ -28433,23 +20997,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsDoubleHighDoubleWidePrintSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDoubleHighDoubleWidePrintSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsDoubleHighDoubleWidePrintSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDoubleHighDoubleWidePrintSupported();
             }());
         }
         catch (...)
@@ -28463,23 +21014,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsDoubleHighPrintSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDoubleHighPrintSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsDoubleHighPrintSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDoubleHighPrintSupported();
             }());
         }
         catch (...)
@@ -28493,23 +21031,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsDoubleWidePrintSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDoubleWidePrintSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsDoubleWidePrintSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDoubleWidePrintSupported();
             }());
         }
         catch (...)
@@ -28523,23 +21048,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsDualColorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDualColorSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsDualColorSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDualColorSupported();
             }());
         }
         catch (...)
@@ -28553,23 +21065,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsItalicSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsItalicSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsItalicSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsItalicSupported();
             }());
         }
         catch (...)
@@ -28583,23 +21082,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsPaperEmptySensorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPaperEmptySensorSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsPaperEmptySensorSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsPaperEmptySensorSupported();
             }());
         }
         catch (...)
@@ -28613,23 +21099,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsPaperNearEndSensorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPaperNearEndSensorSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsPaperNearEndSensorSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsPaperNearEndSensorSupported();
             }());
         }
         catch (...)
@@ -28643,23 +21116,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsPrinterPresent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPrinterPresent();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsPrinterPresent", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsPrinterPresent();
             }());
         }
         catch (...)
@@ -28673,23 +21133,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsUnderlineSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsUnderlineSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsUnderlineSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsUnderlineSupported();
             }());
         }
         catch (...)
@@ -28703,23 +21150,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"SupportedCharactersPerLine");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedCharactersPerLine();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "SupportedCharactersPerLine", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").SupportedCharactersPerLine();
             }());
         }
         catch (...)
@@ -28733,23 +21167,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"Is180RotationSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Is180RotationSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "Is180RotationSupported", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").Is180RotationSupported();
             }());
         }
         catch (...)
@@ -28763,23 +21184,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsBarcodeSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsBarcodeSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsBarcodeSupported", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").IsBarcodeSupported();
             }());
         }
         catch (...)
@@ -28793,23 +21201,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsBitmapSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsBitmapSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsBitmapSupported", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").IsBitmapSupported();
             }());
         }
         catch (...)
@@ -28823,23 +21218,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsLeft90RotationSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsLeft90RotationSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsLeft90RotationSupported", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").IsLeft90RotationSupported();
             }());
         }
         catch (...)
@@ -28853,23 +21235,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsPrintAreaSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPrintAreaSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsPrintAreaSupported", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").IsPrintAreaSupported();
             }());
         }
         catch (...)
@@ -28883,23 +21252,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsRight90RotationSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsRight90RotationSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsRight90RotationSupported", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").IsRight90RotationSupported();
             }());
         }
         catch (...)
@@ -28913,23 +21269,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"RuledLineCapabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RuledLineCapabilities();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "RuledLineCapabilities", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").RuledLineCapabilities();
             }());
         }
         catch (...)
@@ -28943,23 +21286,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"SupportedBarcodeRotations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedBarcodeRotations();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "SupportedBarcodeRotations", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").SupportedBarcodeRotations();
             }());
         }
         catch (...)
@@ -28973,23 +21303,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"SupportedBitmapRotations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedBitmapRotations();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "SupportedBitmapRotations", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").SupportedBitmapRotations();
             }());
         }
         catch (...)
@@ -29003,19 +21320,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"CanCutPaper");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -29033,19 +21337,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsStampSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -29063,19 +21354,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"MarkFeedCapabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -29093,23 +21371,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsReversePaperFeedByLineSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReversePaperFeedByLineSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsReversePaperFeedByLineSupported", "Windows.Devices.PointOfService.IReceiptPrinterCapabilities2").IsReversePaperFeedByLineSupported();
             }());
         }
         catch (...)
@@ -29123,23 +21388,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsReversePaperFeedByMapModeUnitSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReversePaperFeedByMapModeUnitSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsReversePaperFeedByMapModeUnitSupported", "Windows.Devices.PointOfService.IReceiptPrinterCapabilities2").IsReversePaperFeedByMapModeUnitSupported();
             }());
         }
         catch (...)
@@ -29153,23 +21405,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsReverseVideoSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReverseVideoSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsReverseVideoSupported", "Windows.Devices.PointOfService.IReceiptPrinterCapabilities2").IsReverseVideoSupported();
             }());
         }
         catch (...)
@@ -29183,23 +21422,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsStrikethroughSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsStrikethroughSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsStrikethroughSupported", "Windows.Devices.PointOfService.IReceiptPrinterCapabilities2").IsStrikethroughSupported();
             }());
         }
         catch (...)
@@ -29213,23 +21439,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsSubscriptSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSubscriptSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsSubscriptSupported", "Windows.Devices.PointOfService.IReceiptPrinterCapabilities2").IsSubscriptSupported();
             }());
         }
         catch (...)
@@ -29243,23 +21456,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ReceiptPrinterCapabilities", L"IsSuperscriptSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSuperscriptSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ReceiptPrinterCapabilities", "IsSuperscriptSupported", "Windows.Devices.PointOfService.IReceiptPrinterCapabilities2").IsSuperscriptSupported();
             }());
         }
         catch (...)
@@ -29371,19 +21571,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"DrawRuledLine", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterLineDirection>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -29418,23 +21605,10 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"ExecuteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ExecuteAsync();
+                    return py::require<winrt::Windows::Devices::PointOfService::IPosPrinterJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.SlipPrintJob", "ExecuteAsync", "Windows.Devices.PointOfService.IPosPrinterJob", 0).ExecuteAsync();
                 }());
             }
             catch (...)
@@ -29458,24 +21632,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"FeedPaperByLine", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.FeedPaperByLine(param0);
+                    py::require<winrt::Windows::Devices::PointOfService::ISlipPrintJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.SlipPrintJob", "FeedPaperByLine", "Windows.Devices.PointOfService.ISlipPrintJob", 1).FeedPaperByLine(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -29501,24 +21662,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"FeedPaperByMapModeUnit", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.FeedPaperByMapModeUnit(param0);
+                    py::require<winrt::Windows::Devices::PointOfService::ISlipPrintJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.SlipPrintJob", "FeedPaperByMapModeUnit", "Windows.Devices.PointOfService.ISlipPrintJob", 1).FeedPaperByMapModeUnit(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -29544,24 +21692,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"Print", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Print(param0);
+                    py::require<winrt::Windows::Devices::PointOfService::IPosPrinterJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.SlipPrintJob", "Print", "Windows.Devices.PointOfService.IPosPrinterJob", 1).Print(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -29576,25 +21711,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"Print", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Print(param0, param1);
+                    py::require<winrt::Windows::Devices::PointOfService::ISlipPrintJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.SlipPrintJob", "Print", "Windows.Devices.PointOfService.ISlipPrintJob", 2).Print(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -29620,19 +21742,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"PrintBarcode", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -29668,19 +21777,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"PrintBarcodeCustomAlign", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -29716,19 +21812,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"PrintBitmap", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterAlignment>(args, 1);
 
@@ -29749,19 +21832,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"PrintBitmap", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterAlignment>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -29794,19 +21864,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"PrintCustomAlignedBitmap", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -29827,19 +21884,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"PrintCustomAlignedBitmap", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -29872,22 +21916,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"PrintLine", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.PrintLine();
+                    py::require<winrt::Windows::Devices::PointOfService::IPosPrinterJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.SlipPrintJob", "PrintLine", "Windows.Devices.PointOfService.IPosPrinterJob", 0).PrintLine();
                 }
 
                 Py_RETURN_NONE;
@@ -29902,24 +21933,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"PrintLine", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.PrintLine(param0);
+                    py::require<winrt::Windows::Devices::PointOfService::IPosPrinterJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.SlipPrintJob", "PrintLine", "Windows.Devices.PointOfService.IPosPrinterJob", 1).PrintLine(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -29945,19 +21963,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"PrintSavedBitmap", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -29988,19 +21993,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"SetBarcodeRotation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterRotation>(args, 0);
 
                 {
@@ -30031,19 +22023,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"SetBitmap", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterAlignment>(args, 2);
@@ -30065,19 +22044,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"SetBitmap", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterAlignment>(args, 2);
@@ -30111,19 +22077,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"SetCustomAlignedBitmap", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -30145,19 +22098,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"SetCustomAlignedBitmap", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -30191,19 +22131,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"SetPrintArea", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 {
@@ -30234,19 +22161,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"SetPrintRotation", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterRotation>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -30353,23 +22267,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"CartridgeSensors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CartridgeSensors();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "CartridgeSensors", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").CartridgeSensors();
             }());
         }
         catch (...)
@@ -30383,23 +22284,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"ColorCartridgeCapabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ColorCartridgeCapabilities();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "ColorCartridgeCapabilities", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").ColorCartridgeCapabilities();
             }());
         }
         catch (...)
@@ -30413,23 +22301,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsBoldSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsBoldSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsBoldSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsBoldSupported();
             }());
         }
         catch (...)
@@ -30443,23 +22318,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsDoubleHighDoubleWidePrintSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDoubleHighDoubleWidePrintSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsDoubleHighDoubleWidePrintSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDoubleHighDoubleWidePrintSupported();
             }());
         }
         catch (...)
@@ -30473,23 +22335,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsDoubleHighPrintSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDoubleHighPrintSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsDoubleHighPrintSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDoubleHighPrintSupported();
             }());
         }
         catch (...)
@@ -30503,23 +22352,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsDoubleWidePrintSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDoubleWidePrintSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsDoubleWidePrintSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDoubleWidePrintSupported();
             }());
         }
         catch (...)
@@ -30533,23 +22369,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsDualColorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDualColorSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsDualColorSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDualColorSupported();
             }());
         }
         catch (...)
@@ -30563,23 +22386,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsItalicSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsItalicSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsItalicSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsItalicSupported();
             }());
         }
         catch (...)
@@ -30593,23 +22403,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsPaperEmptySensorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPaperEmptySensorSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsPaperEmptySensorSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsPaperEmptySensorSupported();
             }());
         }
         catch (...)
@@ -30623,23 +22420,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsPaperNearEndSensorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPaperNearEndSensorSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsPaperNearEndSensorSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsPaperNearEndSensorSupported();
             }());
         }
         catch (...)
@@ -30653,23 +22437,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsPrinterPresent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPrinterPresent();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsPrinterPresent", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsPrinterPresent();
             }());
         }
         catch (...)
@@ -30683,23 +22454,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsUnderlineSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsUnderlineSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsUnderlineSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsUnderlineSupported();
             }());
         }
         catch (...)
@@ -30713,23 +22471,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"SupportedCharactersPerLine");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedCharactersPerLine();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "SupportedCharactersPerLine", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").SupportedCharactersPerLine();
             }());
         }
         catch (...)
@@ -30743,23 +22488,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"Is180RotationSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Is180RotationSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "Is180RotationSupported", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").Is180RotationSupported();
             }());
         }
         catch (...)
@@ -30773,23 +22505,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsBarcodeSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsBarcodeSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsBarcodeSupported", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").IsBarcodeSupported();
             }());
         }
         catch (...)
@@ -30803,23 +22522,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsBitmapSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsBitmapSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsBitmapSupported", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").IsBitmapSupported();
             }());
         }
         catch (...)
@@ -30833,23 +22539,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsLeft90RotationSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsLeft90RotationSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsLeft90RotationSupported", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").IsLeft90RotationSupported();
             }());
         }
         catch (...)
@@ -30863,23 +22556,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsPrintAreaSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPrintAreaSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsPrintAreaSupported", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").IsPrintAreaSupported();
             }());
         }
         catch (...)
@@ -30893,23 +22573,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsRight90RotationSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsRight90RotationSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsRight90RotationSupported", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").IsRight90RotationSupported();
             }());
         }
         catch (...)
@@ -30923,23 +22590,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"RuledLineCapabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RuledLineCapabilities();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "RuledLineCapabilities", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").RuledLineCapabilities();
             }());
         }
         catch (...)
@@ -30953,23 +22607,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"SupportedBarcodeRotations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedBarcodeRotations();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "SupportedBarcodeRotations", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").SupportedBarcodeRotations();
             }());
         }
         catch (...)
@@ -30983,23 +22624,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"SupportedBitmapRotations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedBitmapRotations();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "SupportedBitmapRotations", "Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities").SupportedBitmapRotations();
             }());
         }
         catch (...)
@@ -31013,19 +22641,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsBothSidesPrintingSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31043,19 +22658,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsFullLengthSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31073,23 +22675,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsReversePaperFeedByLineSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReversePaperFeedByLineSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsReversePaperFeedByLineSupported", "Windows.Devices.PointOfService.ISlipPrinterCapabilities2").IsReversePaperFeedByLineSupported();
             }());
         }
         catch (...)
@@ -31103,23 +22692,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsReversePaperFeedByMapModeUnitSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReversePaperFeedByMapModeUnitSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsReversePaperFeedByMapModeUnitSupported", "Windows.Devices.PointOfService.ISlipPrinterCapabilities2").IsReversePaperFeedByMapModeUnitSupported();
             }());
         }
         catch (...)
@@ -31133,23 +22709,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsReverseVideoSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReverseVideoSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsReverseVideoSupported", "Windows.Devices.PointOfService.ISlipPrinterCapabilities2").IsReverseVideoSupported();
             }());
         }
         catch (...)
@@ -31163,23 +22726,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsStrikethroughSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsStrikethroughSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsStrikethroughSupported", "Windows.Devices.PointOfService.ISlipPrinterCapabilities2").IsStrikethroughSupported();
             }());
         }
         catch (...)
@@ -31193,23 +22743,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsSubscriptSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSubscriptSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsSubscriptSupported", "Windows.Devices.PointOfService.ISlipPrinterCapabilities2").IsSubscriptSupported();
             }());
         }
         catch (...)
@@ -31223,23 +22760,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.SlipPrinterCapabilities", L"IsSuperscriptSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSuperscriptSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities2>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.SlipPrinterCapabilities", "IsSuperscriptSupported", "Windows.Devices.PointOfService.ISlipPrinterCapabilities2").IsSuperscriptSupported();
             }());
         }
         catch (...)
@@ -31373,19 +22897,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.UnifiedPosErrorData", L"ExtendedReason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31403,19 +22914,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.UnifiedPosErrorData", L"Message");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31433,19 +22931,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.UnifiedPosErrorData", L"Reason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31463,19 +22948,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.UnifiedPosErrorData", L"Severity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31562,19 +23034,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICashDrawerEventSourceEventArgs", L"CashDrawer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31752,19 +23211,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"ValidateData", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -31790,19 +23236,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"CharactersPerLine");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31826,19 +23259,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"CharactersPerLine");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -31859,19 +23279,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"ColorCartridge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31895,19 +23302,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"ColorCartridge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterColorCartridge>(arg);
 
             {
@@ -31928,19 +23322,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"IsCartridgeEmpty");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31958,19 +23339,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"IsCartridgeRemoved");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -31988,19 +23356,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"IsCoverOpen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -32018,19 +23373,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"IsHeadCleaning");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -32048,19 +23390,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"IsLetterQuality");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -32084,19 +23413,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"IsLetterQuality");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -32117,19 +23433,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"IsPaperEmpty");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -32147,19 +23450,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"IsPaperNearEnd");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -32177,19 +23467,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"IsReadyToPrint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -32207,19 +23484,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"LineHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -32243,19 +23507,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"LineHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -32276,19 +23527,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"LineSpacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -32312,19 +23550,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"LineSpacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -32345,19 +23570,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation", L"LineWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -32931,19 +24143,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"CartridgeSensors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -32961,19 +24160,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"ColorCartridgeCapabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -32991,19 +24177,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsBoldSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33021,19 +24194,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsDoubleHighDoubleWidePrintSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33051,19 +24211,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsDoubleHighPrintSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33081,19 +24228,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsDoubleWidePrintSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33111,19 +24245,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsDualColorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33141,19 +24262,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsItalicSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33171,19 +24279,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsPaperEmptySensorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33201,19 +24296,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsPaperNearEndSensorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33231,19 +24313,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsPrinterPresent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33261,19 +24330,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsUnderlineSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33291,19 +24347,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"SupportedCharactersPerLine");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33729,19 +24772,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities", L"Is180RotationSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33759,19 +24789,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities", L"IsBarcodeSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33789,19 +24806,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities", L"IsBitmapSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33819,19 +24823,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities", L"IsLeft90RotationSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33849,19 +24840,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities", L"IsPrintAreaSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33879,19 +24857,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities", L"IsRight90RotationSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33909,19 +24874,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities", L"RuledLineCapabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33939,19 +24891,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities", L"SupportedBarcodeRotations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33969,19 +24908,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities", L"SupportedBitmapRotations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -33999,23 +24925,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"CartridgeSensors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CartridgeSensors();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", "CartridgeSensors", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").CartridgeSensors();
             }());
         }
         catch (...)
@@ -34029,23 +24942,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"ColorCartridgeCapabilities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ColorCartridgeCapabilities();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", "ColorCartridgeCapabilities", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").ColorCartridgeCapabilities();
             }());
         }
         catch (...)
@@ -34059,23 +24959,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsBoldSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsBoldSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", "IsBoldSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsBoldSupported();
             }());
         }
         catch (...)
@@ -34089,23 +24976,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsDoubleHighDoubleWidePrintSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDoubleHighDoubleWidePrintSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", "IsDoubleHighDoubleWidePrintSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDoubleHighDoubleWidePrintSupported();
             }());
         }
         catch (...)
@@ -34119,23 +24993,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsDoubleHighPrintSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDoubleHighPrintSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", "IsDoubleHighPrintSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDoubleHighPrintSupported();
             }());
         }
         catch (...)
@@ -34149,23 +25010,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsDoubleWidePrintSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDoubleWidePrintSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", "IsDoubleWidePrintSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDoubleWidePrintSupported();
             }());
         }
         catch (...)
@@ -34179,23 +25027,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsDualColorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDualColorSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", "IsDualColorSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsDualColorSupported();
             }());
         }
         catch (...)
@@ -34209,23 +25044,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsItalicSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsItalicSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", "IsItalicSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsItalicSupported();
             }());
         }
         catch (...)
@@ -34239,23 +25061,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsPaperEmptySensorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPaperEmptySensorSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", "IsPaperEmptySensorSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsPaperEmptySensorSupported();
             }());
         }
         catch (...)
@@ -34269,23 +25078,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsPaperNearEndSensorSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPaperNearEndSensorSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", "IsPaperNearEndSensorSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsPaperNearEndSensorSupported();
             }());
         }
         catch (...)
@@ -34299,23 +25095,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsPrinterPresent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPrinterPresent();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", "IsPrinterPresent", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsPrinterPresent();
             }());
         }
         catch (...)
@@ -34329,23 +25112,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"IsUnderlineSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsUnderlineSupported();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", "IsUnderlineSupported", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").IsUnderlineSupported();
             }());
         }
         catch (...)
@@ -34359,23 +25129,10 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", L"SupportedCharactersPerLine");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedCharactersPerLine();
+                return py::require<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>(self->obj, py::member_kind::property, "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities", "SupportedCharactersPerLine", "Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities").SupportedCharactersPerLine();
             }());
         }
         catch (...)
@@ -34990,19 +25747,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IPosPrinterJob", L"ExecuteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -35030,19 +25774,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IPosPrinterJob", L"Print", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -35073,19 +25804,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IPosPrinterJob", L"PrintLine", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.PrintLine();
@@ -35103,19 +25821,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IPosPrinterJob", L"PrintLine", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -35404,19 +26109,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"DrawRuledLine", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterLineDirection>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -35451,23 +26143,10 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IPosPrinterJob", L"ExecuteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ExecuteAsync();
+                    return py::require<winrt::Windows::Devices::PointOfService::IPosPrinterJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.IPosPrinterJob", "ExecuteAsync", "Windows.Devices.PointOfService.IPosPrinterJob", 0).ExecuteAsync();
                 }());
             }
             catch (...)
@@ -35491,24 +26170,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IPosPrinterJob", L"Print", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Print(param0);
+                    py::require<winrt::Windows::Devices::PointOfService::IPosPrinterJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.IPosPrinterJob", "Print", "Windows.Devices.PointOfService.IPosPrinterJob", 1).Print(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -35534,19 +26200,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"PrintBarcode", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -35582,19 +26235,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"PrintBarcodeCustomAlign", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -35630,19 +26270,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"PrintBitmap", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterAlignment>(args, 1);
 
@@ -35663,19 +26290,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"PrintBitmap", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterAlignment>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -35708,19 +26322,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"PrintCustomAlignedBitmap", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -35741,19 +26342,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"PrintCustomAlignedBitmap", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -35786,22 +26374,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IPosPrinterJob", L"PrintLine", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.PrintLine();
+                    py::require<winrt::Windows::Devices::PointOfService::IPosPrinterJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.IPosPrinterJob", "PrintLine", "Windows.Devices.PointOfService.IPosPrinterJob", 0).PrintLine();
                 }
 
                 Py_RETURN_NONE;
@@ -35816,24 +26391,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IPosPrinterJob", L"PrintLine", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.PrintLine(param0);
+                    py::require<winrt::Windows::Devices::PointOfService::IPosPrinterJob>(self->obj, py::member_kind::method, "Windows.Devices.PointOfService.IPosPrinterJob", "PrintLine", "Windows.Devices.PointOfService.IPosPrinterJob", 1).PrintLine(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -35859,19 +26421,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"PrintSavedBitmap", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -35902,19 +26451,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"SetBarcodeRotation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterRotation>(args, 0);
 
                 {
@@ -35945,19 +26481,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"SetBitmap", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterAlignment>(args, 2);
@@ -35979,19 +26502,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"SetBitmap", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterAlignment>(args, 2);
@@ -36025,19 +26535,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"SetCustomAlignedBitmap", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -36059,19 +26556,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"SetCustomAlignedBitmap", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -36105,19 +26589,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"SetPrintArea", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 {
@@ -36148,19 +26619,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"SetPrintRotation", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::PosPrinterRotation>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 

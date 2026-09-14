@@ -29,25 +29,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"CopyAndReplaceAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CopyAndReplaceAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageFile>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "CopyAndReplaceAsync", "Windows.Storage.IStorageFile", 1).CopyAndReplaceAsync(param0);
                 }());
             }
             catch (...)
@@ -71,25 +58,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"CopyAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CopyAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageFile>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "CopyAsync", "Windows.Storage.IStorageFile", 1).CopyAsync(param0);
                 }());
             }
             catch (...)
@@ -102,26 +76,13 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"CopyAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CopyAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageFile>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "CopyAsync", "Windows.Storage.IStorageFile", 2).CopyAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -134,19 +95,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"CopyAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
@@ -154,7 +102,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CopyAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::IStorageFile>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "CopyAsync", "Windows.Storage.IStorageFile", 3).CopyAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -178,23 +126,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeleteAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "DeleteAsync", "Windows.Storage.IStorageItem", 0).DeleteAsync();
                 }());
             }
             catch (...)
@@ -207,25 +142,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"DeleteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeleteAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "DeleteAsync", "Windows.Storage.IStorageItem", 1).DeleteAsync(param0);
                 }());
             }
             catch (...)
@@ -249,23 +171,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"GetBasicPropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetBasicPropertiesAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "GetBasicPropertiesAsync", "Windows.Storage.IStorageItem", 0).GetBasicPropertiesAsync();
                 }());
             }
             catch (...)
@@ -289,23 +198,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"GetParentAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetParentAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem2>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "GetParentAsync", "Windows.Storage.IStorageItem2", 0).GetParentAsync();
                 }());
             }
             catch (...)
@@ -329,25 +225,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"GetThumbnailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 1).GetThumbnailAsync(param0);
                 }());
             }
             catch (...)
@@ -360,26 +243,13 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"GetThumbnailAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 2).GetThumbnailAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -392,19 +262,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"GetThumbnailAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
@@ -412,7 +269,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 3).GetThumbnailAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -436,25 +293,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"IsEqual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsEqual(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem2>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "IsEqual", "Windows.Storage.IStorageItem2", 1).IsEqual(param0);
                 }());
             }
             catch (...)
@@ -478,25 +322,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"IsOfType", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageItemTypes>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsOfType(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "IsOfType", "Windows.Storage.IStorageItem", 1).IsOfType(param0);
                 }());
             }
             catch (...)
@@ -520,25 +351,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"MoveAndReplaceAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.MoveAndReplaceAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageFile>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "MoveAndReplaceAsync", "Windows.Storage.IStorageFile", 1).MoveAndReplaceAsync(param0);
                 }());
             }
             catch (...)
@@ -562,25 +380,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"MoveAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.MoveAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageFile>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "MoveAsync", "Windows.Storage.IStorageFile", 1).MoveAsync(param0);
                 }());
             }
             catch (...)
@@ -593,26 +398,13 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"MoveAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.MoveAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageFile>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "MoveAsync", "Windows.Storage.IStorageFile", 2).MoveAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -625,19 +417,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"MoveAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
@@ -645,7 +424,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.MoveAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::IStorageFile>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "MoveAsync", "Windows.Storage.IStorageFile", 3).MoveAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -669,25 +448,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"OpenAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileAccessMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.OpenAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageFile>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "OpenAsync", "Windows.Storage.IStorageFile", 1).OpenAsync(param0);
                 }());
             }
             catch (...)
@@ -700,26 +466,13 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"OpenAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileAccessMode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::StorageOpenOptions>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.OpenAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageFile2>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "OpenAsync", "Windows.Storage.IStorageFile2", 2).OpenAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -743,23 +496,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"OpenReadAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.OpenReadAsync();
+                    return py::require<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "OpenReadAsync", "Windows.Storage.Streams.IRandomAccessStreamReference", 0).OpenReadAsync();
                 }());
             }
             catch (...)
@@ -783,23 +523,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"OpenSequentialReadAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.OpenSequentialReadAsync();
+                    return py::require<winrt::Windows::Storage::Streams::IInputStreamReference>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "OpenSequentialReadAsync", "Windows.Storage.Streams.IInputStreamReference", 0).OpenSequentialReadAsync();
                 }());
             }
             catch (...)
@@ -823,23 +550,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"OpenTransactedWriteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.OpenTransactedWriteAsync();
+                    return py::require<winrt::Windows::Storage::IStorageFile>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "OpenTransactedWriteAsync", "Windows.Storage.IStorageFile", 0).OpenTransactedWriteAsync();
                 }());
             }
             catch (...)
@@ -852,25 +566,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"OpenTransactedWriteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageOpenOptions>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.OpenTransactedWriteAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageFile2>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "OpenTransactedWriteAsync", "Windows.Storage.IStorageFile2", 1).OpenTransactedWriteAsync(param0);
                 }());
             }
             catch (...)
@@ -894,25 +595,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"RenameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenameAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "RenameAsync", "Windows.Storage.IStorageItem", 1).RenameAsync(param0);
                 }());
             }
             catch (...)
@@ -925,26 +613,13 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformation", L"RenameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenameAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FileInformation", "RenameAsync", "Windows.Storage.IStorageItem", 2).RenameAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -964,19 +639,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"BasicProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -994,19 +656,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"DocumentProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1024,19 +673,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"ImageProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1054,19 +690,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"MusicProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1084,19 +707,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"Thumbnail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1114,19 +724,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"VideoProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1144,23 +741,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"ContentType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentType();
+                return py::require<winrt::Windows::Storage::IStorageFile>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FileInformation", "ContentType", "Windows.Storage.IStorageFile").ContentType();
             }());
         }
         catch (...)
@@ -1174,23 +758,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"FileType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FileType();
+                return py::require<winrt::Windows::Storage::IStorageFile>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FileInformation", "FileType", "Windows.Storage.IStorageFile").FileType();
             }());
         }
         catch (...)
@@ -1204,23 +775,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"IsAvailable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsAvailable();
+                return py::require<winrt::Windows::Storage::IStorageFilePropertiesWithAvailability>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FileInformation", "IsAvailable", "Windows.Storage.IStorageFilePropertiesWithAvailability").IsAvailable();
             }());
         }
         catch (...)
@@ -1234,23 +792,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"Attributes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Attributes();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FileInformation", "Attributes", "Windows.Storage.IStorageItem").Attributes();
             }());
         }
         catch (...)
@@ -1264,23 +809,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"DateCreated");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DateCreated();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FileInformation", "DateCreated", "Windows.Storage.IStorageItem").DateCreated();
             }());
         }
         catch (...)
@@ -1294,23 +826,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FileInformation", "Name", "Windows.Storage.IStorageItem").Name();
             }());
         }
         catch (...)
@@ -1324,23 +843,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"Path");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Path();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FileInformation", "Path", "Windows.Storage.IStorageItem").Path();
             }());
         }
         catch (...)
@@ -1354,23 +860,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayName();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FileInformation", "DisplayName", "Windows.Storage.IStorageItemProperties").DisplayName();
             }());
         }
         catch (...)
@@ -1384,23 +877,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"DisplayType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayType();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FileInformation", "DisplayType", "Windows.Storage.IStorageItemProperties").DisplayType();
             }());
         }
         catch (...)
@@ -1414,23 +894,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"FolderRelativeId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FolderRelativeId();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FileInformation", "FolderRelativeId", "Windows.Storage.IStorageItemProperties").FolderRelativeId();
             }());
         }
         catch (...)
@@ -1444,23 +911,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Properties();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FileInformation", "Properties", "Windows.Storage.IStorageItemProperties").Properties();
             }());
         }
         catch (...)
@@ -1474,23 +928,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FileInformation", L"Provider");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Provider();
+                return py::require<winrt::Windows::Storage::IStorageItemPropertiesWithProvider>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FileInformation", "Provider", "Windows.Storage.IStorageItemPropertiesWithProvider").Provider();
             }());
         }
         catch (...)
@@ -1504,19 +945,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.BulkAccess.FileInformation", L"PropertiesUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::BulkAccess::IStorageItemInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -1536,19 +964,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.BulkAccess.FileInformation", L"PropertiesUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1569,19 +984,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.BulkAccess.FileInformation", L"ThumbnailUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::BulkAccess::IStorageItemInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -1601,19 +1003,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.BulkAccess.FileInformation", L"ThumbnailUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1817,19 +1206,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformationFactory", L"GetFilesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1846,19 +1222,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformationFactory", L"GetFilesAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -1889,19 +1252,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformationFactory", L"GetFoldersAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1918,19 +1268,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformationFactory", L"GetFoldersAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -1961,19 +1298,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformationFactory", L"GetItemsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1990,19 +1314,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformationFactory", L"GetItemsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -2033,19 +1344,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformationFactory", L"GetVirtualizedFilesVector", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2073,19 +1371,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformationFactory", L"GetVirtualizedFoldersVector", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2113,19 +1398,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FileInformationFactory", L"GetVirtualizedItemsVector", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2222,25 +1494,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"AreQueryOptionsSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.AreQueryOptionsSupported(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "AreQueryOptionsSupported", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).AreQueryOptionsSupported(param0);
                 }());
             }
             catch (...)
@@ -2264,25 +1523,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"CreateFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFileAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageFolder>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "CreateFileAsync", "Windows.Storage.IStorageFolder", 1).CreateFileAsync(param0);
                 }());
             }
             catch (...)
@@ -2295,26 +1541,13 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"CreateFileAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::CreationCollisionOption>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFileAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageFolder>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "CreateFileAsync", "Windows.Storage.IStorageFolder", 2).CreateFileAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -2338,23 +1571,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"CreateFileQuery", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFileQuery();
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "CreateFileQuery", "Windows.Storage.Search.IStorageFolderQueryOperations", 0).CreateFileQuery();
                 }());
             }
             catch (...)
@@ -2367,25 +1587,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"CreateFileQuery", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFileQuery(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "CreateFileQuery", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).CreateFileQuery(param0);
                 }());
             }
             catch (...)
@@ -2409,25 +1616,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"CreateFileQueryWithOptions", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFileQueryWithOptions(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "CreateFileQueryWithOptions", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).CreateFileQueryWithOptions(param0);
                 }());
             }
             catch (...)
@@ -2451,25 +1645,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"CreateFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFolderAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageFolder>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "CreateFolderAsync", "Windows.Storage.IStorageFolder", 1).CreateFolderAsync(param0);
                 }());
             }
             catch (...)
@@ -2482,26 +1663,13 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"CreateFolderAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::CreationCollisionOption>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFolderAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageFolder>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "CreateFolderAsync", "Windows.Storage.IStorageFolder", 2).CreateFolderAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -2525,23 +1693,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"CreateFolderQuery", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFolderQuery();
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "CreateFolderQuery", "Windows.Storage.Search.IStorageFolderQueryOperations", 0).CreateFolderQuery();
                 }());
             }
             catch (...)
@@ -2554,25 +1709,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"CreateFolderQuery", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFolderQuery(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "CreateFolderQuery", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).CreateFolderQuery(param0);
                 }());
             }
             catch (...)
@@ -2596,25 +1738,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"CreateFolderQueryWithOptions", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFolderQueryWithOptions(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "CreateFolderQueryWithOptions", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).CreateFolderQueryWithOptions(param0);
                 }());
             }
             catch (...)
@@ -2638,23 +1767,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"CreateItemQuery", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateItemQuery();
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "CreateItemQuery", "Windows.Storage.Search.IStorageFolderQueryOperations", 0).CreateItemQuery();
                 }());
             }
             catch (...)
@@ -2678,25 +1794,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"CreateItemQueryWithOptions", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::QueryOptions>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateItemQueryWithOptions(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "CreateItemQueryWithOptions", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).CreateItemQueryWithOptions(param0);
                 }());
             }
             catch (...)
@@ -2720,23 +1823,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeleteAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "DeleteAsync", "Windows.Storage.IStorageItem", 0).DeleteAsync();
                 }());
             }
             catch (...)
@@ -2749,25 +1839,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"DeleteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeleteAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "DeleteAsync", "Windows.Storage.IStorageItem", 1).DeleteAsync(param0);
                 }());
             }
             catch (...)
@@ -2791,23 +1868,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetBasicPropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetBasicPropertiesAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetBasicPropertiesAsync", "Windows.Storage.IStorageItem", 0).GetBasicPropertiesAsync();
                 }());
             }
             catch (...)
@@ -2831,25 +1895,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFileAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageFolder>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetFileAsync", "Windows.Storage.IStorageFolder", 1).GetFileAsync(param0);
                 }());
             }
             catch (...)
@@ -2873,23 +1924,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetFilesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFilesAsync();
+                    return py::require<winrt::Windows::Storage::IStorageFolder>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetFilesAsync", "Windows.Storage.IStorageFolder", 0).GetFilesAsync();
                 }());
             }
             catch (...)
@@ -2902,25 +1940,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetFilesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFilesAsync(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetFilesAsync", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).GetFilesAsync(param0);
                 }());
             }
             catch (...)
@@ -2933,19 +1958,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetFilesAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -2953,7 +1965,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFilesAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetFilesAsync", "Windows.Storage.Search.IStorageFolderQueryOperations", 3).GetFilesAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -2977,25 +1989,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFolderAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageFolder>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetFolderAsync", "Windows.Storage.IStorageFolder", 1).GetFolderAsync(param0);
                 }());
             }
             catch (...)
@@ -3019,23 +2018,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetFoldersAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFoldersAsync();
+                    return py::require<winrt::Windows::Storage::IStorageFolder>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetFoldersAsync", "Windows.Storage.IStorageFolder", 0).GetFoldersAsync();
                 }());
             }
             catch (...)
@@ -3048,25 +2034,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetFoldersAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFoldersAsync(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetFoldersAsync", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).GetFoldersAsync(param0);
                 }());
             }
             catch (...)
@@ -3079,19 +2052,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetFoldersAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -3099,7 +2059,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetFoldersAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetFoldersAsync", "Windows.Storage.Search.IStorageFolderQueryOperations", 3).GetFoldersAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -3123,23 +2083,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetIndexedStateAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetIndexedStateAsync();
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetIndexedStateAsync", "Windows.Storage.Search.IStorageFolderQueryOperations", 0).GetIndexedStateAsync();
                 }());
             }
             catch (...)
@@ -3163,25 +2110,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetItemAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetItemAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageFolder>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetItemAsync", "Windows.Storage.IStorageFolder", 1).GetItemAsync(param0);
                 }());
             }
             catch (...)
@@ -3205,23 +2139,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetItemsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetItemsAsync();
+                    return py::require<winrt::Windows::Storage::IStorageFolder>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetItemsAsync", "Windows.Storage.IStorageFolder", 0).GetItemsAsync();
                 }());
             }
             catch (...)
@@ -3234,26 +2155,13 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetItemsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetItemsAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetItemsAsync", "Windows.Storage.Search.IStorageFolderQueryOperations", 2).GetItemsAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -3277,23 +2185,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetParentAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetParentAsync();
+                    return py::require<winrt::Windows::Storage::IStorageItem2>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetParentAsync", "Windows.Storage.IStorageItem2", 0).GetParentAsync();
                 }());
             }
             catch (...)
@@ -3317,25 +2212,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetThumbnailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 1).GetThumbnailAsync(param0);
                 }());
             }
             catch (...)
@@ -3348,26 +2230,13 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetThumbnailAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 2).GetThumbnailAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -3380,19 +2249,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"GetThumbnailAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
@@ -3400,7 +2256,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetThumbnailAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "GetThumbnailAsync", "Windows.Storage.IStorageItemProperties", 3).GetThumbnailAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -3424,25 +2280,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"IsCommonFileQuerySupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsCommonFileQuerySupported(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "IsCommonFileQuerySupported", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).IsCommonFileQuerySupported(param0);
                 }());
             }
             catch (...)
@@ -3466,25 +2309,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"IsCommonFolderQuerySupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsCommonFolderQuerySupported(param0);
+                    return py::require<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "IsCommonFolderQuerySupported", "Windows.Storage.Search.IStorageFolderQueryOperations", 1).IsCommonFolderQuerySupported(param0);
                 }());
             }
             catch (...)
@@ -3508,25 +2338,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"IsEqual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsEqual(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem2>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "IsEqual", "Windows.Storage.IStorageItem2", 1).IsEqual(param0);
                 }());
             }
             catch (...)
@@ -3550,25 +2367,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"IsOfType", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageItemTypes>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsOfType(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "IsOfType", "Windows.Storage.IStorageItem", 1).IsOfType(param0);
                 }());
             }
             catch (...)
@@ -3592,25 +2396,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"RenameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenameAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "RenameAsync", "Windows.Storage.IStorageItem", 1).RenameAsync(param0);
                 }());
             }
             catch (...)
@@ -3623,26 +2414,13 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"RenameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenameAsync(param0, param1);
+                    return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "RenameAsync", "Windows.Storage.IStorageItem", 2).RenameAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -3666,25 +2444,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"TryGetItemAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryGetItemAsync(param0);
+                    return py::require<winrt::Windows::Storage::IStorageFolder2>(self->obj, py::member_kind::method, "Windows.Storage.BulkAccess.FolderInformation", "TryGetItemAsync", "Windows.Storage.IStorageFolder2", 1).TryGetItemAsync(param0);
                 }());
             }
             catch (...)
@@ -3704,19 +2469,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"BasicProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3734,19 +2486,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"DocumentProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3764,19 +2503,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"ImageProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3794,19 +2520,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"MusicProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3824,19 +2537,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"Thumbnail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3854,19 +2554,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"VideoProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3884,23 +2571,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"Attributes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Attributes();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FolderInformation", "Attributes", "Windows.Storage.IStorageItem").Attributes();
             }());
         }
         catch (...)
@@ -3914,23 +2588,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"DateCreated");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DateCreated();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FolderInformation", "DateCreated", "Windows.Storage.IStorageItem").DateCreated();
             }());
         }
         catch (...)
@@ -3944,23 +2605,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FolderInformation", "Name", "Windows.Storage.IStorageItem").Name();
             }());
         }
         catch (...)
@@ -3974,23 +2622,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"Path");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Path();
+                return py::require<winrt::Windows::Storage::IStorageItem>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FolderInformation", "Path", "Windows.Storage.IStorageItem").Path();
             }());
         }
         catch (...)
@@ -4004,23 +2639,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayName();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FolderInformation", "DisplayName", "Windows.Storage.IStorageItemProperties").DisplayName();
             }());
         }
         catch (...)
@@ -4034,23 +2656,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"DisplayType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayType();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FolderInformation", "DisplayType", "Windows.Storage.IStorageItemProperties").DisplayType();
             }());
         }
         catch (...)
@@ -4064,23 +2673,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"FolderRelativeId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FolderRelativeId();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FolderInformation", "FolderRelativeId", "Windows.Storage.IStorageItemProperties").FolderRelativeId();
             }());
         }
         catch (...)
@@ -4094,23 +2690,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Properties();
+                return py::require<winrt::Windows::Storage::IStorageItemProperties>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FolderInformation", "Properties", "Windows.Storage.IStorageItemProperties").Properties();
             }());
         }
         catch (...)
@@ -4124,23 +2707,10 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"Provider");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Provider();
+                return py::require<winrt::Windows::Storage::IStorageItemPropertiesWithProvider>(self->obj, py::member_kind::property, "Windows.Storage.BulkAccess.FolderInformation", "Provider", "Windows.Storage.IStorageItemPropertiesWithProvider").Provider();
             }());
         }
         catch (...)
@@ -4154,19 +2724,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"PropertiesUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::BulkAccess::IStorageItemInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -4186,19 +2743,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"PropertiesUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4219,19 +2763,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"ThumbnailUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::BulkAccess::IStorageItemInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -4251,19 +2782,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.BulkAccess.FolderInformation", L"ThumbnailUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4394,19 +2912,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.IStorageItemInformation", L"BasicProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4424,19 +2929,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.IStorageItemInformation", L"DocumentProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4454,19 +2946,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.IStorageItemInformation", L"ImageProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4484,19 +2963,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.IStorageItemInformation", L"MusicProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4514,19 +2980,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.IStorageItemInformation", L"Thumbnail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4544,19 +2997,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.BulkAccess.IStorageItemInformation", L"VideoProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4574,19 +3014,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.BulkAccess.IStorageItemInformation", L"PropertiesUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::BulkAccess::IStorageItemInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -4606,19 +3033,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.BulkAccess.IStorageItemInformation", L"PropertiesUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4639,19 +3053,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.BulkAccess.IStorageItemInformation", L"ThumbnailUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::BulkAccess::IStorageItemInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -4671,19 +3072,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.BulkAccess.IStorageItemInformation", L"ThumbnailUpdated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {

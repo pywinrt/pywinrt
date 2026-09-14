@@ -53,25 +53,12 @@ namespace py::cpp::Windows::Data::Xml::Xsl
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Xsl.XsltProcessor", L"TransformToDocument", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TransformToDocument(param0);
+                    return py::require<winrt::Windows::Data::Xml::Xsl::IXsltProcessor2>(self->obj, py::member_kind::method, "Windows.Data.Xml.Xsl.XsltProcessor", "TransformToDocument", "Windows.Data.Xml.Xsl.IXsltProcessor2", 1).TransformToDocument(param0);
                 }());
             }
             catch (...)
@@ -95,19 +82,6 @@ namespace py::cpp::Windows::Data::Xml::Xsl
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Xsl.XsltProcessor", L"TransformToString", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert([&]()

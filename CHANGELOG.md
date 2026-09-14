@@ -40,6 +40,22 @@
   precompiled header of their own. Groups too small to pay for one fall back to
   the common precompiled header, so this does not slow down
   `PYWINRT_FULL_PROJECTION=OFF` builds.
+- Members of a runtime class or interface that are declared by another interface
+  are now reached by querying that interface instead of by first asking
+  `ApiInformation` whether this version of Windows has the member. C++/WinRT
+  performs the same query on every such call anyway, so this costs nothing and
+  answers the question the call actually depends on. Members declared by the
+  default interface of a class are no longer checked at all, since an object
+  cannot exist without implementing it. Static members and constructors, which
+  have no object to query, keep the `ApiInformation` check. This removes 43,320
+  of the 52,777 checks and makes the projection 13.5 % smaller: 151.95 MB to
+  131.49 MB over all 424 modules, with the largest packages gaining the most
+  (`winrt-Microsoft.UI.Xaml.Controls` 12.1 MB to 11.0 MB).
+- The `winrt-runtime` C API now also exports the function that formats the error
+  for a member an object does not implement, so that the metadata machinery it
+  needs is linked into one module instead of all of them. This raises the minor
+  ABI version, so this version of the projection packages needs at least this
+  version of `winrt-runtime`.
 
 ### Deprecated
 - The method names that v3.x generated from the
@@ -48,6 +64,11 @@
   in a future release.
 
 ### Fixed
+- Fixed calling a member that an object does not implement crashing the process
+  instead of raising `AttributeError`. This happened whenever the metadata of
+  the member was present but the object was not, for example an object from an
+  older version of a component, an object implemented in Python, or any object
+  at all in a `--component-dlls` build, where the check was omitted entirely.
 - Fixed `@typing.overload` missing from the type hints of overloaded methods.
 - Fixed methods being silently dropped when two overloads could not be told
   apart.

@@ -118,22 +118,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().Close();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", "Close", "Windows.UI.Xaml.Automation.Provider.IWindowProvider", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -159,22 +146,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", L"Collapse", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().Collapse();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", "Collapse", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider", 0).Collapse();
                 }
 
                 Py_RETURN_NONE;
@@ -200,22 +174,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", L"Expand", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().Expand();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", "Expand", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider", 0).Expand();
                 }
 
                 Py_RETURN_NONE;
@@ -241,24 +202,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", L"SetVisualState", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::WindowVisualState>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().SetVisualState(param0);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", "SetVisualState", "Windows.UI.Xaml.Automation.Provider.IWindowProvider", 1).SetVisualState(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -284,22 +232,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", L"Toggle", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().Toggle();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", "Toggle", "Windows.UI.Xaml.Automation.Provider.IToggleProvider", 0).Toggle();
                 }
 
                 Py_RETURN_NONE;
@@ -325,25 +260,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", L"WaitForInputIdle", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().WaitForInputIdle(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", "WaitForInputIdle", "Windows.UI.Xaml.Automation.Provider.IWindowProvider", 1).WaitForInputIdle(param0);
                 }());
             }
             catch (...)
@@ -363,23 +285,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", L"ExpandCollapseState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().ExpandCollapseState();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", "ExpandCollapseState", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider").ExpandCollapseState();
             }());
         }
         catch (...)
@@ -393,23 +302,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", L"ToggleState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().ToggleState();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", "ToggleState", "Windows.UI.Xaml.Automation.Provider.IToggleProvider").ToggleState();
             }());
         }
         catch (...)
@@ -423,23 +319,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", L"InteractionState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().InteractionState();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", "InteractionState", "Windows.UI.Xaml.Automation.Provider.IWindowProvider").InteractionState();
             }());
         }
         catch (...)
@@ -453,23 +336,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", L"IsModal");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().IsModal();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", "IsModal", "Windows.UI.Xaml.Automation.Provider.IWindowProvider").IsModal();
             }());
         }
         catch (...)
@@ -483,23 +353,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", L"IsTopmost");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().IsTopmost();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", "IsTopmost", "Windows.UI.Xaml.Automation.Provider.IWindowProvider").IsTopmost();
             }());
         }
         catch (...)
@@ -513,23 +370,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", L"Maximizable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().Maximizable();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", "Maximizable", "Windows.UI.Xaml.Automation.Provider.IWindowProvider").Maximizable();
             }());
         }
         catch (...)
@@ -543,23 +387,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", L"Minimizable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().Minimizable();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", "Minimizable", "Windows.UI.Xaml.Automation.Provider.IWindowProvider").Minimizable();
             }());
         }
         catch (...)
@@ -573,23 +404,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", L"VisualState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().VisualState();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer", "VisualState", "Windows.UI.Xaml.Automation.Provider.IWindowProvider").VisualState();
             }());
         }
         catch (...)
@@ -794,22 +612,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarButtonAutomationPeer", L"Collapse", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer>().Collapse();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AppBarButtonAutomationPeer", "Collapse", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider", 0).Collapse();
                 }
 
                 Py_RETURN_NONE;
@@ -835,22 +640,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarButtonAutomationPeer", L"Expand", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer>().Expand();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AppBarButtonAutomationPeer", "Expand", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider", 0).Expand();
                 }
 
                 Py_RETURN_NONE;
@@ -872,23 +664,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.AppBarButtonAutomationPeer", L"ExpandCollapseState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer>().ExpandCollapseState();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.AppBarButtonAutomationPeer", "ExpandCollapseState", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider").ExpandCollapseState();
             }());
         }
         catch (...)
@@ -1190,22 +969,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutoSuggestBoxAutomationPeer", L"Invoke", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Invoke();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutoSuggestBoxAutomationPeer", "Invoke", "Windows.UI.Xaml.Automation.Provider.IInvokeProvider", 0).Invoke();
                 }
 
                 Py_RETURN_NONE;
@@ -2705,23 +2471,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetAcceleratorKey", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetAcceleratorKey();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetAcceleratorKey", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetAcceleratorKey();
                 }());
             }
             catch (...)
@@ -2745,23 +2498,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetAcceleratorKeyCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetAcceleratorKeyCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetAcceleratorKeyCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetAcceleratorKeyCore();
                 }());
             }
             catch (...)
@@ -2785,23 +2525,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetAccessKey", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetAccessKey();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetAccessKey", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetAccessKey();
                 }());
             }
             catch (...)
@@ -2825,23 +2552,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetAccessKeyCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetAccessKeyCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetAccessKeyCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetAccessKeyCore();
                 }());
             }
             catch (...)
@@ -2865,23 +2579,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetAnnotations", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetAnnotations();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer3>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetAnnotations", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer3", 0).GetAnnotations();
                 }());
             }
             catch (...)
@@ -2905,23 +2606,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetAnnotationsCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3>().GetAnnotationsCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetAnnotationsCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3", 0).GetAnnotationsCore();
                 }());
             }
             catch (...)
@@ -2945,23 +2633,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetAutomationControlType", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetAutomationControlType();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetAutomationControlType", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetAutomationControlType();
                 }());
             }
             catch (...)
@@ -2985,23 +2660,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetAutomationControlTypeCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetAutomationControlTypeCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetAutomationControlTypeCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetAutomationControlTypeCore();
                 }());
             }
             catch (...)
@@ -3025,23 +2687,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetAutomationId", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetAutomationId();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetAutomationId", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetAutomationId();
                 }());
             }
             catch (...)
@@ -3065,23 +2714,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetAutomationIdCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetAutomationIdCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetAutomationIdCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetAutomationIdCore();
                 }());
             }
             catch (...)
@@ -3105,23 +2741,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetBoundingRectangle", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetBoundingRectangle();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetBoundingRectangle", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetBoundingRectangle();
                 }());
             }
             catch (...)
@@ -3145,23 +2768,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetBoundingRectangleCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetBoundingRectangleCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetBoundingRectangleCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetBoundingRectangleCore();
                 }());
             }
             catch (...)
@@ -3185,23 +2795,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetChildren", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetChildren();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetChildren", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetChildren();
                 }());
             }
             catch (...)
@@ -3225,23 +2822,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetChildrenCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetChildrenCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetChildrenCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetChildrenCore();
                 }());
             }
             catch (...)
@@ -3265,23 +2849,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetClassName", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetClassName();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetClassName", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetClassName();
                 }());
             }
             catch (...)
@@ -3305,23 +2876,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetClassNameCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetClassNameCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetClassNameCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetClassNameCore();
                 }());
             }
             catch (...)
@@ -3345,23 +2903,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetClickablePoint", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetClickablePoint();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetClickablePoint", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetClickablePoint();
                 }());
             }
             catch (...)
@@ -3385,23 +2930,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetClickablePointCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetClickablePointCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetClickablePointCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetClickablePointCore();
                 }());
             }
             catch (...)
@@ -3425,23 +2957,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetControlledPeers", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetControlledPeers();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer3>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetControlledPeers", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer3", 0).GetControlledPeers();
                 }());
             }
             catch (...)
@@ -3465,23 +2984,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetControlledPeersCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides2>().GetControlledPeersCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides2>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetControlledPeersCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides2", 0).GetControlledPeersCore();
                 }());
             }
             catch (...)
@@ -3505,23 +3011,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetCulture", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetCulture();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer6>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetCulture", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer6", 0).GetCulture();
                 }());
             }
             catch (...)
@@ -3545,23 +3038,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetCultureCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides6>().GetCultureCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides6>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetCultureCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides6", 0).GetCultureCore();
                 }());
             }
             catch (...)
@@ -3585,23 +3065,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetDescribedByCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides5>().GetDescribedByCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides5>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetDescribedByCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5", 0).GetDescribedByCore();
                 }());
             }
             catch (...)
@@ -3625,25 +3092,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetElementFromPoint", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetElementFromPoint(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer3>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetElementFromPoint", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer3", 1).GetElementFromPoint(param0);
                 }());
             }
             catch (...)
@@ -3667,25 +3121,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetElementFromPointCore", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3>().GetElementFromPointCore(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetElementFromPointCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3", 1).GetElementFromPointCore(param0);
                 }());
             }
             catch (...)
@@ -3709,23 +3150,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetFlowsFromCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides5>().GetFlowsFromCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides5>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetFlowsFromCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5", 0).GetFlowsFromCore();
                 }());
             }
             catch (...)
@@ -3749,23 +3177,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetFlowsToCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides5>().GetFlowsToCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides5>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetFlowsToCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5", 0).GetFlowsToCore();
                 }());
             }
             catch (...)
@@ -3789,23 +3204,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetFocusedElement", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetFocusedElement();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer3>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetFocusedElement", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer3", 0).GetFocusedElement();
                 }());
             }
             catch (...)
@@ -3829,23 +3231,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetFocusedElementCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3>().GetFocusedElementCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetFocusedElementCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3", 0).GetFocusedElementCore();
                 }());
             }
             catch (...)
@@ -3869,23 +3258,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetFullDescription", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetFullDescription();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer5>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetFullDescription", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer5", 0).GetFullDescription();
                 }());
             }
             catch (...)
@@ -3909,23 +3285,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetFullDescriptionCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides5>().GetFullDescriptionCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides5>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetFullDescriptionCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5", 0).GetFullDescriptionCore();
                 }());
             }
             catch (...)
@@ -3949,23 +3312,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetHeadingLevel", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetHeadingLevel();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer8>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetHeadingLevel", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer8", 0).GetHeadingLevel();
                 }());
             }
             catch (...)
@@ -3989,23 +3339,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetHeadingLevelCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides8>().GetHeadingLevelCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides8>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetHeadingLevelCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides8", 0).GetHeadingLevelCore();
                 }());
             }
             catch (...)
@@ -4029,23 +3366,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetHelpText", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetHelpText();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetHelpText", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetHelpText();
                 }());
             }
             catch (...)
@@ -4069,23 +3393,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetHelpTextCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetHelpTextCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetHelpTextCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetHelpTextCore();
                 }());
             }
             catch (...)
@@ -4109,23 +3420,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetItemStatus", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetItemStatus();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetItemStatus", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetItemStatus();
                 }());
             }
             catch (...)
@@ -4149,23 +3447,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetItemStatusCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetItemStatusCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetItemStatusCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetItemStatusCore();
                 }());
             }
             catch (...)
@@ -4189,23 +3474,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetItemType", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetItemType();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetItemType", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetItemType();
                 }());
             }
             catch (...)
@@ -4229,23 +3501,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetItemTypeCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetItemTypeCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetItemTypeCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetItemTypeCore();
                 }());
             }
             catch (...)
@@ -4269,23 +3528,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetLabeledBy", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetLabeledBy();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetLabeledBy", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetLabeledBy();
                 }());
             }
             catch (...)
@@ -4309,23 +3555,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetLabeledByCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetLabeledByCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetLabeledByCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetLabeledByCore();
                 }());
             }
             catch (...)
@@ -4349,23 +3582,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetLandmarkType", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetLandmarkType();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer4>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetLandmarkType", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer4", 0).GetLandmarkType();
                 }());
             }
             catch (...)
@@ -4389,23 +3609,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetLandmarkTypeCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides4>().GetLandmarkTypeCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides4>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetLandmarkTypeCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides4", 0).GetLandmarkTypeCore();
                 }());
             }
             catch (...)
@@ -4429,23 +3636,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetLevel", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetLevel();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer3>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetLevel", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer3", 0).GetLevel();
                 }());
             }
             catch (...)
@@ -4469,23 +3663,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetLevelCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3>().GetLevelCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetLevelCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3", 0).GetLevelCore();
                 }());
             }
             catch (...)
@@ -4509,23 +3690,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetLiveSetting", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetLiveSetting();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetLiveSetting", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetLiveSetting();
                 }());
             }
             catch (...)
@@ -4549,23 +3717,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetLiveSettingCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetLiveSettingCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetLiveSettingCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetLiveSettingCore();
                 }());
             }
             catch (...)
@@ -4589,23 +3744,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetLocalizedControlType", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetLocalizedControlType();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetLocalizedControlType", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetLocalizedControlType();
                 }());
             }
             catch (...)
@@ -4629,23 +3771,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetLocalizedControlTypeCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetLocalizedControlTypeCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetLocalizedControlTypeCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetLocalizedControlTypeCore();
                 }());
             }
             catch (...)
@@ -4669,23 +3798,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetLocalizedLandmarkType", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetLocalizedLandmarkType();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer4>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetLocalizedLandmarkType", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer4", 0).GetLocalizedLandmarkType();
                 }());
             }
             catch (...)
@@ -4709,23 +3825,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetLocalizedLandmarkTypeCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides4>().GetLocalizedLandmarkTypeCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides4>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetLocalizedLandmarkTypeCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides4", 0).GetLocalizedLandmarkTypeCore();
                 }());
             }
             catch (...)
@@ -4749,23 +3852,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetName", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetName();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetName", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetName();
                 }());
             }
             catch (...)
@@ -4789,23 +3879,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetNameCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetNameCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetNameCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetNameCore();
                 }());
             }
             catch (...)
@@ -4829,23 +3906,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetOrientation", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetOrientation();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetOrientation", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetOrientation();
                 }());
             }
             catch (...)
@@ -4869,23 +3933,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetOrientationCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetOrientationCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetOrientationCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).GetOrientationCore();
                 }());
             }
             catch (...)
@@ -4909,23 +3960,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetParent", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetParent();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetParent", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).GetParent();
                 }());
             }
             catch (...)
@@ -4949,25 +3987,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetPattern", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::PatternInterface>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetPattern(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetPattern", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 1).GetPattern(param0);
                 }());
             }
             catch (...)
@@ -4991,25 +4016,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetPatternCore", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::PatternInterface>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetPatternCore(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetPatternCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 1).GetPatternCore(param0);
                 }());
             }
             catch (...)
@@ -5033,25 +4045,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetPeerFromPoint", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetPeerFromPoint(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetPeerFromPoint", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 1).GetPeerFromPoint(param0);
                 }());
             }
             catch (...)
@@ -5075,25 +4074,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetPeerFromPointCore", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().GetPeerFromPointCore(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetPeerFromPointCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 1).GetPeerFromPointCore(param0);
                 }());
             }
             catch (...)
@@ -5117,23 +4103,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetPositionInSet", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetPositionInSet();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer3>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetPositionInSet", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer3", 0).GetPositionInSet();
                 }());
             }
             catch (...)
@@ -5157,23 +4130,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetPositionInSetCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3>().GetPositionInSetCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetPositionInSetCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3", 0).GetPositionInSetCore();
                 }());
             }
             catch (...)
@@ -5197,23 +4157,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetSizeOfSet", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetSizeOfSet();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer3>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetSizeOfSet", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer3", 0).GetSizeOfSet();
                 }());
             }
             catch (...)
@@ -5237,23 +4184,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"GetSizeOfSetCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3>().GetSizeOfSetCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "GetSizeOfSetCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3", 0).GetSizeOfSetCore();
                 }());
             }
             catch (...)
@@ -5277,23 +4211,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"HasKeyboardFocus", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().HasKeyboardFocus();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "HasKeyboardFocus", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).HasKeyboardFocus();
                 }());
             }
             catch (...)
@@ -5317,23 +4238,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"HasKeyboardFocusCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().HasKeyboardFocusCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "HasKeyboardFocusCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).HasKeyboardFocusCore();
                 }());
             }
             catch (...)
@@ -5357,22 +4265,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"InvalidatePeer", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().InvalidatePeer();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "InvalidatePeer", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).InvalidatePeer();
                 }
 
                 Py_RETURN_NONE;
@@ -5398,23 +4293,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsContentElement", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsContentElement();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsContentElement", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).IsContentElement();
                 }());
             }
             catch (...)
@@ -5438,23 +4320,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsContentElementCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().IsContentElementCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsContentElementCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).IsContentElementCore();
                 }());
             }
             catch (...)
@@ -5478,23 +4347,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsControlElement", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsControlElement();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsControlElement", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).IsControlElement();
                 }());
             }
             catch (...)
@@ -5518,23 +4374,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsControlElementCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().IsControlElementCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsControlElementCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).IsControlElementCore();
                 }());
             }
             catch (...)
@@ -5558,23 +4401,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsDataValidForForm", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsDataValidForForm();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer5>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsDataValidForForm", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer5", 0).IsDataValidForForm();
                 }());
             }
             catch (...)
@@ -5598,23 +4428,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsDataValidForFormCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides5>().IsDataValidForFormCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides5>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsDataValidForFormCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5", 0).IsDataValidForFormCore();
                 }());
             }
             catch (...)
@@ -5638,23 +4455,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsDialog", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsDialog();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer9>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsDialog", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer9", 0).IsDialog();
                 }());
             }
             catch (...)
@@ -5678,23 +4482,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsDialogCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides9>().IsDialogCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides9>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsDialogCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides9", 0).IsDialogCore();
                 }());
             }
             catch (...)
@@ -5718,23 +4509,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsEnabled", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsEnabled();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsEnabled", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).IsEnabled();
                 }());
             }
             catch (...)
@@ -5758,23 +4536,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsEnabledCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().IsEnabledCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsEnabledCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).IsEnabledCore();
                 }());
             }
             catch (...)
@@ -5798,23 +4563,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsKeyboardFocusable", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsKeyboardFocusable();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsKeyboardFocusable", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).IsKeyboardFocusable();
                 }());
             }
             catch (...)
@@ -5838,23 +4590,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsKeyboardFocusableCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().IsKeyboardFocusableCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsKeyboardFocusableCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).IsKeyboardFocusableCore();
                 }());
             }
             catch (...)
@@ -5878,23 +4617,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsOffscreen", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsOffscreen();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsOffscreen", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).IsOffscreen();
                 }());
             }
             catch (...)
@@ -5918,23 +4644,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsOffscreenCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().IsOffscreenCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsOffscreenCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).IsOffscreenCore();
                 }());
             }
             catch (...)
@@ -5958,23 +4671,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsPassword", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsPassword();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsPassword", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).IsPassword();
                 }());
             }
             catch (...)
@@ -5998,23 +4698,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsPasswordCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().IsPasswordCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsPasswordCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).IsPasswordCore();
                 }());
             }
             catch (...)
@@ -6038,23 +4725,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsPeripheral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsPeripheral();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer5>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsPeripheral", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer5", 0).IsPeripheral();
                 }());
             }
             catch (...)
@@ -6078,23 +4752,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsPeripheralCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides5>().IsPeripheralCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides5>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsPeripheralCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5", 0).IsPeripheralCore();
                 }());
             }
             catch (...)
@@ -6118,23 +4779,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsRequiredForForm", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsRequiredForForm();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsRequiredForForm", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).IsRequiredForForm();
                 }());
             }
             catch (...)
@@ -6158,23 +4806,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"IsRequiredForFormCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().IsRequiredForFormCore();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "IsRequiredForFormCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).IsRequiredForFormCore();
                 }());
             }
             catch (...)
@@ -6240,25 +4875,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"Navigate", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationNavigationDirection>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().Navigate(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer3>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "Navigate", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer3", 1).Navigate(param0);
                 }());
             }
             catch (...)
@@ -6282,25 +4904,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"NavigateCore", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationNavigationDirection>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3>().NavigateCore(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "NavigateCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3", 1).NavigateCore(param0);
                 }());
             }
             catch (...)
@@ -6324,25 +4933,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"PeerFromProvider", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerProtected>().PeerFromProvider(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerProtected>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "PeerFromProvider", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerProtected", 1).PeerFromProvider(param0);
                 }());
             }
             catch (...)
@@ -6366,25 +4962,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"ProviderFromPeer", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerProtected>().ProviderFromPeer(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerProtected>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "ProviderFromPeer", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerProtected", 1).ProviderFromPeer(param0);
                 }());
             }
             catch (...)
@@ -6408,24 +4991,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"RaiseAutomationEvent", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationEvents>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().RaiseAutomationEvent(param0);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "RaiseAutomationEvent", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 1).RaiseAutomationEvent(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -6451,19 +5021,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"RaiseNotificationEvent", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationNotificationKind>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationNotificationProcessing>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -6471,7 +5028,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().RaiseNotificationEvent(param0, param1, param2, param3);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer7>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "RaiseNotificationEvent", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer7", 4).RaiseNotificationEvent(param0, param1, param2, param3);
                 }
 
                 Py_RETURN_NONE;
@@ -6497,26 +5054,13 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"RaisePropertyChangedEvent", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::AutomationProperty>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().RaisePropertyChangedEvent(param0, param1, param2);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "RaisePropertyChangedEvent", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 3).RaisePropertyChangedEvent(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -6542,25 +5086,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"RaiseStructureChangedEvent", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationStructureChangeType>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().RaiseStructureChangedEvent(param0, param1);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer3>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "RaiseStructureChangedEvent", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer3", 2).RaiseStructureChangedEvent(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -6586,25 +5117,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"RaiseTextEditTextChangedEvent", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::AutomationTextEditChangeType>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().RaiseTextEditTextChangedEvent(param0, param1);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer3>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "RaiseTextEditTextChangedEvent", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer3", 2).RaiseTextEditTextChangedEvent(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -6630,22 +5148,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"SetFocus", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().SetFocus();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "SetFocus", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer", 0).SetFocus();
                 }
 
                 Py_RETURN_NONE;
@@ -6671,22 +5176,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"SetFocusCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>().SetFocusCore();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "SetFocusCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides", 0).SetFocusCore();
                 }
 
                 Py_RETURN_NONE;
@@ -6712,24 +5204,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"SetParent", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().SetParent(param0);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer3>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "SetParent", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer3", 1).SetParent(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -6755,22 +5234,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"ShowContextMenu", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().ShowContextMenu();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer3>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "ShowContextMenu", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer3", 0).ShowContextMenu();
                 }
 
                 Py_RETURN_NONE;
@@ -6796,22 +5262,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"ShowContextMenuCore", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides2>().ShowContextMenuCore();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides2>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "ShowContextMenuCore", "Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides2", 0).ShowContextMenuCore();
                 }
 
                 Py_RETURN_NONE;
@@ -6833,23 +5286,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"EventsSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().EventsSource();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "EventsSource", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer").EventsSource();
             }());
         }
         catch (...)
@@ -6869,24 +5309,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeer", L"EventsSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().EventsSource(param0);
+                py::require<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.AutomationPeer", "EventsSource", "Windows.UI.Xaml.Automation.Peers.IAutomationPeer").EventsSource(param0);
             }
 
             return 0;
@@ -7143,19 +5570,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7179,19 +5593,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::AnnotationType>(arg);
 
             {
@@ -7212,19 +5613,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation", L"Peer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7248,19 +5636,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation", L"Peer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>(arg);
 
             {
@@ -7522,22 +5897,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ButtonAutomationPeer", L"Invoke", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ButtonAutomationPeer>().Invoke();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ButtonAutomationPeer", "Invoke", "Windows.UI.Xaml.Automation.Provider.IInvokeProvider", 0).Invoke();
                 }
 
                 Py_RETURN_NONE;
@@ -7855,22 +6217,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer", L"Invoke", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>().Invoke();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer", "Invoke", "Windows.UI.Xaml.Automation.Provider.IInvokeProvider", 0).Invoke();
                 }
 
                 Py_RETURN_NONE;
@@ -7896,24 +6245,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer", L"SetValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>().SetValue(param0);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer", "SetValue", "Windows.UI.Xaml.Automation.Provider.IValueProvider", 1).SetValue(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -7935,23 +6271,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer", L"IsReadOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>().IsReadOnly();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer", "IsReadOnly", "Windows.UI.Xaml.Automation.Provider.IValueProvider").IsReadOnly();
             }());
         }
         catch (...)
@@ -7965,23 +6288,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>().Value();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer", "Value", "Windows.UI.Xaml.Automation.Provider.IValueProvider").Value();
             }());
         }
         catch (...)
@@ -8868,22 +7178,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().Close();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", "Close", "Windows.UI.Xaml.Automation.Provider.IWindowProvider", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -8909,22 +7206,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", L"Collapse", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().Collapse();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", "Collapse", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider", 0).Collapse();
                 }
 
                 Py_RETURN_NONE;
@@ -8950,22 +7234,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", L"Expand", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().Expand();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", "Expand", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider", 0).Expand();
                 }
 
                 Py_RETURN_NONE;
@@ -8991,24 +7262,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", L"SetValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().SetValue(param0);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", "SetValue", "Windows.UI.Xaml.Automation.Provider.IValueProvider", 1).SetValue(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -9034,24 +7292,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", L"SetVisualState", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::WindowVisualState>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().SetVisualState(param0);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", "SetVisualState", "Windows.UI.Xaml.Automation.Provider.IWindowProvider", 1).SetVisualState(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -9077,25 +7322,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", L"WaitForInputIdle", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().WaitForInputIdle(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", "WaitForInputIdle", "Windows.UI.Xaml.Automation.Provider.IWindowProvider", 1).WaitForInputIdle(param0);
                 }());
             }
             catch (...)
@@ -9115,23 +7347,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", L"ExpandCollapseState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().ExpandCollapseState();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", "ExpandCollapseState", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider").ExpandCollapseState();
             }());
         }
         catch (...)
@@ -9145,23 +7364,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", L"IsReadOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().IsReadOnly();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", "IsReadOnly", "Windows.UI.Xaml.Automation.Provider.IValueProvider").IsReadOnly();
             }());
         }
         catch (...)
@@ -9175,23 +7381,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().Value();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", "Value", "Windows.UI.Xaml.Automation.Provider.IValueProvider").Value();
             }());
         }
         catch (...)
@@ -9205,23 +7398,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", L"InteractionState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().InteractionState();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", "InteractionState", "Windows.UI.Xaml.Automation.Provider.IWindowProvider").InteractionState();
             }());
         }
         catch (...)
@@ -9235,23 +7415,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", L"IsModal");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().IsModal();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", "IsModal", "Windows.UI.Xaml.Automation.Provider.IWindowProvider").IsModal();
             }());
         }
         catch (...)
@@ -9265,23 +7432,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", L"IsTopmost");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().IsTopmost();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", "IsTopmost", "Windows.UI.Xaml.Automation.Provider.IWindowProvider").IsTopmost();
             }());
         }
         catch (...)
@@ -9295,23 +7449,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", L"Maximizable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().Maximizable();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", "Maximizable", "Windows.UI.Xaml.Automation.Provider.IWindowProvider").Maximizable();
             }());
         }
         catch (...)
@@ -9325,23 +7466,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", L"Minimizable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().Minimizable();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", "Minimizable", "Windows.UI.Xaml.Automation.Provider.IWindowProvider").Minimizable();
             }());
         }
         catch (...)
@@ -9355,23 +7483,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", L"VisualState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().VisualState();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer", "VisualState", "Windows.UI.Xaml.Automation.Provider.IWindowProvider").VisualState();
             }());
         }
         catch (...)
@@ -9751,22 +7866,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ComboBoxItemDataAutomationPeer", L"ScrollIntoView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer>().ScrollIntoView();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ComboBoxItemDataAutomationPeer", "ScrollIntoView", "Windows.UI.Xaml.Automation.Provider.IScrollItemProvider", 0).ScrollIntoView();
                 }
 
                 Py_RETURN_NONE;
@@ -10549,22 +8651,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.FlipViewItemDataAutomationPeer", L"ScrollIntoView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer>().ScrollIntoView();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.FlipViewItemDataAutomationPeer", "ScrollIntoView", "Windows.UI.Xaml.Automation.Provider.IScrollItemProvider", 0).ScrollIntoView();
                 }
 
                 Py_RETURN_NONE;
@@ -11017,23 +9106,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer", L"Owner");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer>().Owner();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeer>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer", "Owner", "Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeer").Owner();
             }());
         }
         catch (...)
@@ -11747,22 +9823,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.GridViewItemDataAutomationPeer", L"ScrollIntoView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer>().ScrollIntoView();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.GridViewItemDataAutomationPeer", "ScrollIntoView", "Windows.UI.Xaml.Automation.Provider.IScrollItemProvider", 0).ScrollIntoView();
                 }
 
                 Py_RETURN_NONE;
@@ -12308,22 +10371,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.HubSectionAutomationPeer", L"ScrollIntoView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::HubSectionAutomationPeer>().ScrollIntoView();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.HubSectionAutomationPeer", "ScrollIntoView", "Windows.UI.Xaml.Automation.Provider.IScrollItemProvider", 0).ScrollIntoView();
                 }
 
                 Py_RETURN_NONE;
@@ -12523,22 +10573,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.HyperlinkButtonAutomationPeer", L"Invoke", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer>().Invoke();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.HyperlinkButtonAutomationPeer", "Invoke", "Windows.UI.Xaml.Automation.Provider.IInvokeProvider", 0).Invoke();
                 }
 
                 Py_RETURN_NONE;
@@ -12975,22 +11012,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer", L"Realize", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer>().Realize();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer", "Realize", "Windows.UI.Xaml.Automation.Provider.IVirtualizedItemProvider", 0).Realize();
                 }
 
                 Py_RETURN_NONE;
@@ -13012,23 +11036,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer", L"Item");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer>().Item();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IItemAutomationPeer>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer", "Item", "Windows.UI.Xaml.Automation.Peers.IItemAutomationPeer").Item();
             }());
         }
         catch (...)
@@ -13042,23 +11053,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer", L"ItemsControlAutomationPeer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer>().ItemsControlAutomationPeer();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IItemAutomationPeer>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer", "ItemsControlAutomationPeer", "Windows.UI.Xaml.Automation.Peers.IItemAutomationPeer").ItemsControlAutomationPeer();
             }());
         }
         catch (...)
@@ -13286,25 +11284,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer", L"CreateItemAutomationPeer", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>().CreateItemAutomationPeer(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IItemsControlAutomationPeer2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer", "CreateItemAutomationPeer", "Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeer2", 1).CreateItemAutomationPeer(param0);
                 }());
             }
             catch (...)
@@ -13328,19 +11313,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer", L"FindItemByProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Automation::AutomationProperty>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -13348,7 +11320,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>().FindItemByProperty(param0, param1, param2);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer", "FindItemByProperty", "Windows.UI.Xaml.Automation.Provider.IItemContainerProvider", 3).FindItemByProperty(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -13372,25 +11344,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer", L"OnCreateItemAutomationPeer", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Windows::UI::Xaml::Automation::Peers::IItemsControlAutomationPeerOverrides2>().OnCreateItemAutomationPeer(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Peers::IItemsControlAutomationPeerOverrides2>(py::get_inner_or_self(self->obj), py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer", "OnCreateItemAutomationPeer", "Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeerOverrides2", 1).OnCreateItemAutomationPeer(param0);
                 }());
             }
             catch (...)
@@ -13937,22 +11896,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ListBoxItemDataAutomationPeer", L"ScrollIntoView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer>().ScrollIntoView();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ListBoxItemDataAutomationPeer", "ScrollIntoView", "Windows.UI.Xaml.Automation.Provider.IScrollItemProvider", 0).ScrollIntoView();
                 }
 
                 Py_RETURN_NONE;
@@ -14384,23 +12330,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ListViewBaseAutomationPeer", L"DropEffect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer>().DropEffect();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ListViewBaseAutomationPeer", "DropEffect", "Windows.UI.Xaml.Automation.Provider.IDropTargetProvider").DropEffect();
             }());
         }
         catch (...)
@@ -14414,23 +12347,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ListViewBaseAutomationPeer", L"DropEffects");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer>().DropEffects();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ListViewBaseAutomationPeer", "DropEffects", "Windows.UI.Xaml.Automation.Provider.IDropTargetProvider").DropEffects();
             }());
         }
         catch (...)
@@ -15088,22 +13008,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ListViewItemDataAutomationPeer", L"ScrollIntoView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer>().ScrollIntoView();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ListViewItemDataAutomationPeer", "ScrollIntoView", "Windows.UI.Xaml.Automation.Provider.IScrollItemProvider", 0).ScrollIntoView();
                 }
 
                 Py_RETURN_NONE;
@@ -15214,22 +13121,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", L"Collapse", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Collapse();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", "Collapse", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider", 0).Collapse();
                 }
 
                 Py_RETURN_NONE;
@@ -15255,22 +13149,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", L"Expand", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Expand();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", "Expand", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider", 0).Expand();
                 }
 
                 Py_RETURN_NONE;
@@ -15296,19 +13177,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", L"FindItemByProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Automation::AutomationProperty>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -15316,7 +13184,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindItemByProperty(param0, param1, param2);
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", "FindItemByProperty", "Windows.UI.Xaml.Automation.Provider.IItemContainerProvider", 3).FindItemByProperty(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -15340,23 +13208,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", L"GetSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetSelection();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", "GetSelection", "Windows.UI.Xaml.Automation.Provider.ISelectionProvider", 0).GetSelection();
                 }());
             }
             catch (...)
@@ -15380,25 +13235,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", L"Scroll", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::ScrollAmount>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Automation::ScrollAmount>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Scroll(param0, param1);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", "Scroll", "Windows.UI.Xaml.Automation.Provider.IScrollProvider", 2).Scroll(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -15424,25 +13266,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", L"SetScrollPercent", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetScrollPercent(param0, param1);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", "SetScrollPercent", "Windows.UI.Xaml.Automation.Provider.IScrollProvider", 2).SetScrollPercent(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -15464,23 +13293,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", L"ExpandCollapseState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExpandCollapseState();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", "ExpandCollapseState", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider").ExpandCollapseState();
             }());
         }
         catch (...)
@@ -15494,23 +13310,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", L"HorizontalScrollPercent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HorizontalScrollPercent();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", "HorizontalScrollPercent", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").HorizontalScrollPercent();
             }());
         }
         catch (...)
@@ -15524,23 +13327,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", L"HorizontalViewSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HorizontalViewSize();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", "HorizontalViewSize", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").HorizontalViewSize();
             }());
         }
         catch (...)
@@ -15554,23 +13344,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", L"HorizontallyScrollable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HorizontallyScrollable();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", "HorizontallyScrollable", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").HorizontallyScrollable();
             }());
         }
         catch (...)
@@ -15584,23 +13361,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", L"VerticalScrollPercent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.VerticalScrollPercent();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", "VerticalScrollPercent", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").VerticalScrollPercent();
             }());
         }
         catch (...)
@@ -15614,23 +13378,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", L"VerticalViewSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.VerticalViewSize();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", "VerticalViewSize", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").VerticalViewSize();
             }());
         }
         catch (...)
@@ -15644,23 +13395,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", L"VerticallyScrollable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.VerticallyScrollable();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", "VerticallyScrollable", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").VerticallyScrollable();
             }());
         }
         catch (...)
@@ -15674,23 +13412,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", L"CanSelectMultiple");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanSelectMultiple();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", "CanSelectMultiple", "Windows.UI.Xaml.Automation.Provider.ISelectionProvider").CanSelectMultiple();
             }());
         }
         catch (...)
@@ -15704,23 +13429,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", L"IsSelectionRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSelectionRequired();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer", "IsSelectionRequired", "Windows.UI.Xaml.Automation.Provider.ISelectionProvider").IsSelectionRequired();
             }());
         }
         catch (...)
@@ -15816,22 +13528,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer", L"AddToSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.AddToSelection();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer", "AddToSelection", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider", 0).AddToSelection();
                 }
 
                 Py_RETURN_NONE;
@@ -15857,22 +13556,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer", L"RemoveFromSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveFromSelection();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer", "RemoveFromSelection", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider", 0).RemoveFromSelection();
                 }
 
                 Py_RETURN_NONE;
@@ -15898,22 +13584,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer", L"ScrollIntoView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.ScrollIntoView();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer", "ScrollIntoView", "Windows.UI.Xaml.Automation.Provider.IScrollItemProvider", 0).ScrollIntoView();
                 }
 
                 Py_RETURN_NONE;
@@ -15939,22 +13612,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer", L"Select", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Select();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer", "Select", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider", 0).Select();
                 }
 
                 Py_RETURN_NONE;
@@ -15976,23 +13636,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer", L"IsSelected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSelected();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer", "IsSelected", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider").IsSelected();
             }());
         }
         catch (...)
@@ -16006,23 +13653,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer", L"SelectionContainer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SelectionContainer();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer", "SelectionContainer", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider").SelectionContainer();
             }());
         }
         catch (...)
@@ -16109,22 +13743,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemDataAutomationPeer", L"Realize", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Realize();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemDataAutomationPeer", "Realize", "Windows.UI.Xaml.Automation.Provider.IVirtualizedItemProvider", 0).Realize();
                 }
 
                 Py_RETURN_NONE;
@@ -16214,25 +13835,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"Move", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Move(param0, param1);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "Move", "Windows.UI.Xaml.Automation.Provider.ITransformProvider", 2).Move(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -16258,25 +13866,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"Resize", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Resize(param0, param1);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "Resize", "Windows.UI.Xaml.Automation.Provider.ITransformProvider", 2).Resize(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -16302,24 +13897,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"Rotate", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Rotate(param0);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "Rotate", "Windows.UI.Xaml.Automation.Provider.ITransformProvider", 1).Rotate(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -16345,25 +13927,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"Scroll", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::ScrollAmount>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Automation::ScrollAmount>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Scroll(param0, param1);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "Scroll", "Windows.UI.Xaml.Automation.Provider.IScrollProvider", 2).Scroll(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -16389,25 +13958,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"SetScrollPercent", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetScrollPercent(param0, param1);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "SetScrollPercent", "Windows.UI.Xaml.Automation.Provider.IScrollProvider", 2).SetScrollPercent(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -16433,24 +13989,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"Zoom", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Zoom(param0);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "Zoom", "Windows.UI.Xaml.Automation.Provider.ITransformProvider2", 1).Zoom(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -16476,24 +14019,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"ZoomByUnit", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::ZoomUnit>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ZoomByUnit(param0);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "ZoomByUnit", "Windows.UI.Xaml.Automation.Provider.ITransformProvider2", 1).ZoomByUnit(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -16515,23 +14045,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"HorizontalScrollPercent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HorizontalScrollPercent();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "HorizontalScrollPercent", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").HorizontalScrollPercent();
             }());
         }
         catch (...)
@@ -16545,23 +14062,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"HorizontalViewSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HorizontalViewSize();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "HorizontalViewSize", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").HorizontalViewSize();
             }());
         }
         catch (...)
@@ -16575,23 +14079,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"HorizontallyScrollable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HorizontallyScrollable();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "HorizontallyScrollable", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").HorizontallyScrollable();
             }());
         }
         catch (...)
@@ -16605,23 +14096,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"VerticalScrollPercent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.VerticalScrollPercent();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "VerticalScrollPercent", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").VerticalScrollPercent();
             }());
         }
         catch (...)
@@ -16635,23 +14113,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"VerticalViewSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.VerticalViewSize();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "VerticalViewSize", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").VerticalViewSize();
             }());
         }
         catch (...)
@@ -16665,23 +14130,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"VerticallyScrollable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.VerticallyScrollable();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "VerticallyScrollable", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").VerticallyScrollable();
             }());
         }
         catch (...)
@@ -16695,23 +14147,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"CanMove");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanMove();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "CanMove", "Windows.UI.Xaml.Automation.Provider.ITransformProvider").CanMove();
             }());
         }
         catch (...)
@@ -16725,23 +14164,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"CanResize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanResize();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "CanResize", "Windows.UI.Xaml.Automation.Provider.ITransformProvider").CanResize();
             }());
         }
         catch (...)
@@ -16755,23 +14181,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"CanRotate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanRotate();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "CanRotate", "Windows.UI.Xaml.Automation.Provider.ITransformProvider").CanRotate();
             }());
         }
         catch (...)
@@ -16785,23 +14198,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"CanZoom");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanZoom();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "CanZoom", "Windows.UI.Xaml.Automation.Provider.ITransformProvider2").CanZoom();
             }());
         }
         catch (...)
@@ -16815,23 +14215,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"MaxZoom");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxZoom();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "MaxZoom", "Windows.UI.Xaml.Automation.Provider.ITransformProvider2").MaxZoom();
             }());
         }
         catch (...)
@@ -16845,23 +14232,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"MinZoom");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MinZoom();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "MinZoom", "Windows.UI.Xaml.Automation.Provider.ITransformProvider2").MinZoom();
             }());
         }
         catch (...)
@@ -16875,23 +14249,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", L"ZoomLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ZoomLevel();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer", "ZoomLevel", "Windows.UI.Xaml.Automation.Provider.ITransformProvider2").ZoomLevel();
             }());
         }
         catch (...)
@@ -17773,22 +15134,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer", L"Collapse", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>().Collapse();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer", "Collapse", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider", 0).Collapse();
                 }
 
                 Py_RETURN_NONE;
@@ -17814,22 +15162,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer", L"Expand", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>().Expand();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer", "Expand", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider", 0).Expand();
                 }
 
                 Py_RETURN_NONE;
@@ -17855,22 +15190,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer", L"Invoke", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>().Invoke();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer", "Invoke", "Windows.UI.Xaml.Automation.Provider.IInvokeProvider", 0).Invoke();
                 }
 
                 Py_RETURN_NONE;
@@ -17892,23 +15214,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer", L"ExpandCollapseState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>().ExpandCollapseState();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer", "ExpandCollapseState", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider").ExpandCollapseState();
             }());
         }
         catch (...)
@@ -18103,22 +15412,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.MenuFlyoutItemAutomationPeer", L"Invoke", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer>().Invoke();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.MenuFlyoutItemAutomationPeer", "Invoke", "Windows.UI.Xaml.Automation.Provider.IInvokeProvider", 0).Invoke();
                 }
 
                 Py_RETURN_NONE;
@@ -19008,23 +16304,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", L"GetSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetSelection();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", "GetSelection", "Windows.UI.Xaml.Automation.Provider.ISelectionProvider", 0).GetSelection();
                 }());
             }
             catch (...)
@@ -19048,25 +16331,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", L"Scroll", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::ScrollAmount>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Automation::ScrollAmount>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Scroll(param0, param1);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", "Scroll", "Windows.UI.Xaml.Automation.Provider.IScrollProvider", 2).Scroll(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -19092,25 +16362,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", L"SetScrollPercent", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetScrollPercent(param0, param1);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", "SetScrollPercent", "Windows.UI.Xaml.Automation.Provider.IScrollProvider", 2).SetScrollPercent(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -19132,23 +16389,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", L"HorizontalScrollPercent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HorizontalScrollPercent();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", "HorizontalScrollPercent", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").HorizontalScrollPercent();
             }());
         }
         catch (...)
@@ -19162,23 +16406,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", L"HorizontalViewSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HorizontalViewSize();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", "HorizontalViewSize", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").HorizontalViewSize();
             }());
         }
         catch (...)
@@ -19192,23 +16423,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", L"HorizontallyScrollable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HorizontallyScrollable();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", "HorizontallyScrollable", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").HorizontallyScrollable();
             }());
         }
         catch (...)
@@ -19222,23 +16440,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", L"VerticalScrollPercent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.VerticalScrollPercent();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", "VerticalScrollPercent", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").VerticalScrollPercent();
             }());
         }
         catch (...)
@@ -19252,23 +16457,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", L"VerticalViewSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.VerticalViewSize();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", "VerticalViewSize", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").VerticalViewSize();
             }());
         }
         catch (...)
@@ -19282,23 +16474,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", L"VerticallyScrollable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.VerticallyScrollable();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", "VerticallyScrollable", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").VerticallyScrollable();
             }());
         }
         catch (...)
@@ -19312,23 +16491,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", L"CanSelectMultiple");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanSelectMultiple();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", "CanSelectMultiple", "Windows.UI.Xaml.Automation.Provider.ISelectionProvider").CanSelectMultiple();
             }());
         }
         catch (...)
@@ -19342,23 +16508,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", L"IsSelectionRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSelectionRequired();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer", "IsSelectionRequired", "Windows.UI.Xaml.Automation.Provider.ISelectionProvider").IsSelectionRequired();
             }());
         }
         catch (...)
@@ -19562,22 +16715,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer", L"AddToSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.AddToSelection();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer", "AddToSelection", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider", 0).AddToSelection();
                 }
 
                 Py_RETURN_NONE;
@@ -19603,22 +16743,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer", L"Realize", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Realize();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer", "Realize", "Windows.UI.Xaml.Automation.Provider.IVirtualizedItemProvider", 0).Realize();
                 }
 
                 Py_RETURN_NONE;
@@ -19644,22 +16771,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer", L"RemoveFromSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveFromSelection();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer", "RemoveFromSelection", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider", 0).RemoveFromSelection();
                 }
 
                 Py_RETURN_NONE;
@@ -19685,22 +16799,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer", L"ScrollIntoView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.ScrollIntoView();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer", "ScrollIntoView", "Windows.UI.Xaml.Automation.Provider.IScrollItemProvider", 0).ScrollIntoView();
                 }
 
                 Py_RETURN_NONE;
@@ -19726,22 +16827,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer", L"Select", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Select();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer", "Select", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider", 0).Select();
                 }
 
                 Py_RETURN_NONE;
@@ -19763,23 +16851,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer", L"IsSelected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSelected();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer", "IsSelected", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider").IsSelected();
             }());
         }
         catch (...)
@@ -19793,23 +16868,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer", L"SelectionContainer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SelectionContainer();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer", "SelectionContainer", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider").SelectionContainer();
             }());
         }
         catch (...)
@@ -20332,22 +17394,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer", L"AddToSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>().AddToSelection();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer", "AddToSelection", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider", 0).AddToSelection();
                 }
 
                 Py_RETURN_NONE;
@@ -20373,22 +17422,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer", L"RemoveFromSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>().RemoveFromSelection();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer", "RemoveFromSelection", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider", 0).RemoveFromSelection();
                 }
 
                 Py_RETURN_NONE;
@@ -20414,22 +17450,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer", L"Select", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>().Select();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer", "Select", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider", 0).Select();
                 }
 
                 Py_RETURN_NONE;
@@ -20451,23 +17474,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer", L"IsSelected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>().IsSelected();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer", "IsSelected", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider").IsSelected();
             }());
         }
         catch (...)
@@ -20481,23 +17491,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer", L"SelectionContainer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>().SelectionContainer();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer", "SelectionContainer", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider").SelectionContainer();
             }());
         }
         catch (...)
@@ -20693,24 +17690,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer", L"SetValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>().SetValue(param0);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer", "SetValue", "Windows.UI.Xaml.Automation.Provider.IRangeValueProvider", 1).SetValue(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -20732,23 +17716,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer", L"IsReadOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>().IsReadOnly();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer", "IsReadOnly", "Windows.UI.Xaml.Automation.Provider.IRangeValueProvider").IsReadOnly();
             }());
         }
         catch (...)
@@ -20762,23 +17733,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer", L"LargeChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>().LargeChange();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer", "LargeChange", "Windows.UI.Xaml.Automation.Provider.IRangeValueProvider").LargeChange();
             }());
         }
         catch (...)
@@ -20792,23 +17750,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer", L"Maximum");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>().Maximum();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer", "Maximum", "Windows.UI.Xaml.Automation.Provider.IRangeValueProvider").Maximum();
             }());
         }
         catch (...)
@@ -20822,23 +17767,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer", L"Minimum");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>().Minimum();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer", "Minimum", "Windows.UI.Xaml.Automation.Provider.IRangeValueProvider").Minimum();
             }());
         }
         catch (...)
@@ -20852,23 +17784,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer", L"SmallChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>().SmallChange();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer", "SmallChange", "Windows.UI.Xaml.Automation.Provider.IRangeValueProvider").SmallChange();
             }());
         }
         catch (...)
@@ -20882,23 +17801,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>().Value();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer", "Value", "Windows.UI.Xaml.Automation.Provider.IRangeValueProvider").Value();
             }());
         }
         catch (...)
@@ -21269,22 +18175,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.RepeatButtonAutomationPeer", L"Invoke", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer>().Invoke();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.RepeatButtonAutomationPeer", "Invoke", "Windows.UI.Xaml.Automation.Provider.IInvokeProvider", 0).Invoke();
                 }
 
                 Py_RETURN_NONE;
@@ -22176,25 +19069,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", L"Scroll", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::ScrollAmount>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Automation::ScrollAmount>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().Scroll(param0, param1);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", "Scroll", "Windows.UI.Xaml.Automation.Provider.IScrollProvider", 2).Scroll(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -22220,25 +19100,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", L"SetScrollPercent", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().SetScrollPercent(param0, param1);
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", "SetScrollPercent", "Windows.UI.Xaml.Automation.Provider.IScrollProvider", 2).SetScrollPercent(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -22260,23 +19127,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", L"HorizontalScrollPercent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().HorizontalScrollPercent();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", "HorizontalScrollPercent", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").HorizontalScrollPercent();
             }());
         }
         catch (...)
@@ -22290,23 +19144,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", L"HorizontalViewSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().HorizontalViewSize();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", "HorizontalViewSize", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").HorizontalViewSize();
             }());
         }
         catch (...)
@@ -22320,23 +19161,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", L"HorizontallyScrollable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().HorizontallyScrollable();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", "HorizontallyScrollable", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").HorizontallyScrollable();
             }());
         }
         catch (...)
@@ -22350,23 +19178,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", L"VerticalScrollPercent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().VerticalScrollPercent();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", "VerticalScrollPercent", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").VerticalScrollPercent();
             }());
         }
         catch (...)
@@ -22380,23 +19195,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", L"VerticalViewSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().VerticalViewSize();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", "VerticalViewSize", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").VerticalViewSize();
             }());
         }
         catch (...)
@@ -22410,23 +19212,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", L"VerticallyScrollable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().VerticallyScrollable();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer", "VerticallyScrollable", "Windows.UI.Xaml.Automation.Provider.IScrollProvider").VerticallyScrollable();
             }());
         }
         catch (...)
@@ -22798,23 +19587,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer", L"GetSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer>().GetSelection();
+                    return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer", "GetSelection", "Windows.UI.Xaml.Automation.Provider.ISelectionProvider", 0).GetSelection();
                 }());
             }
             catch (...)
@@ -22834,23 +19610,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer", L"CanSelectMultiple");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer>().CanSelectMultiple();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer", "CanSelectMultiple", "Windows.UI.Xaml.Automation.Provider.ISelectionProvider").CanSelectMultiple();
             }());
         }
         catch (...)
@@ -22864,23 +19627,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer", L"IsSelectionRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer>().IsSelectionRequired();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer", "IsSelectionRequired", "Windows.UI.Xaml.Automation.Provider.ISelectionProvider").IsSelectionRequired();
             }());
         }
         catch (...)
@@ -23075,22 +19825,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer", L"AddToSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>().AddToSelection();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer", "AddToSelection", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider", 0).AddToSelection();
                 }
 
                 Py_RETURN_NONE;
@@ -23116,22 +19853,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer", L"RemoveFromSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>().RemoveFromSelection();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer", "RemoveFromSelection", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider", 0).RemoveFromSelection();
                 }
 
                 Py_RETURN_NONE;
@@ -23157,22 +19881,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer", L"Select", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>().Select();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer", "Select", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider", 0).Select();
                 }
 
                 Py_RETURN_NONE;
@@ -23194,23 +19905,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer", L"IsSelected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>().IsSelected();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer", "IsSelected", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider").IsSelected();
             }());
         }
         catch (...)
@@ -23224,23 +19922,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer", L"SelectionContainer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>().SelectionContainer();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer", "SelectionContainer", "Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider").SelectionContainer();
             }());
         }
         catch (...)
@@ -23436,22 +20121,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.SemanticZoomAutomationPeer", L"Toggle", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer>().Toggle();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.SemanticZoomAutomationPeer", "Toggle", "Windows.UI.Xaml.Automation.Provider.IToggleProvider", 0).Toggle();
                 }
 
                 Py_RETURN_NONE;
@@ -23473,23 +20145,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.SemanticZoomAutomationPeer", L"ToggleState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer>().ToggleState();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.SemanticZoomAutomationPeer", "ToggleState", "Windows.UI.Xaml.Automation.Provider.IToggleProvider").ToggleState();
             }());
         }
         catch (...)
@@ -24783,22 +21442,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ToggleButtonAutomationPeer", L"Toggle", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer>().Toggle();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ToggleButtonAutomationPeer", "Toggle", "Windows.UI.Xaml.Automation.Provider.IToggleProvider", 0).Toggle();
                 }
 
                 Py_RETURN_NONE;
@@ -24820,23 +21466,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ToggleButtonAutomationPeer", L"ToggleState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer>().ToggleState();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ToggleButtonAutomationPeer", "ToggleState", "Windows.UI.Xaml.Automation.Provider.IToggleProvider").ToggleState();
             }());
         }
         catch (...)
@@ -25029,22 +21662,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ToggleMenuFlyoutItemAutomationPeer", L"Toggle", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer>().Toggle();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ToggleMenuFlyoutItemAutomationPeer", "Toggle", "Windows.UI.Xaml.Automation.Provider.IToggleProvider", 0).Toggle();
                 }
 
                 Py_RETURN_NONE;
@@ -25066,23 +21686,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ToggleMenuFlyoutItemAutomationPeer", L"ToggleState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer>().ToggleState();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ToggleMenuFlyoutItemAutomationPeer", "ToggleState", "Windows.UI.Xaml.Automation.Provider.IToggleProvider").ToggleState();
             }());
         }
         catch (...)
@@ -25275,22 +21882,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.ToggleSwitchAutomationPeer", L"Toggle", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer>().Toggle();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.ToggleSwitchAutomationPeer", "Toggle", "Windows.UI.Xaml.Automation.Provider.IToggleProvider", 0).Toggle();
                 }
 
                 Py_RETURN_NONE;
@@ -25312,23 +21906,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.ToggleSwitchAutomationPeer", L"ToggleState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer>().ToggleState();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.ToggleSwitchAutomationPeer", "ToggleState", "Windows.UI.Xaml.Automation.Provider.IToggleProvider").ToggleState();
             }());
         }
         catch (...)
@@ -25521,22 +22102,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.TreeViewItemAutomationPeer", L"Collapse", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer>().Collapse();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.TreeViewItemAutomationPeer", "Collapse", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider", 0).Collapse();
                 }
 
                 Py_RETURN_NONE;
@@ -25562,22 +22130,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Automation.Peers.TreeViewItemAutomationPeer", L"Expand", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer>().Expand();
+                    py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Automation.Peers.TreeViewItemAutomationPeer", "Expand", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider", 0).Expand();
                 }
 
                 Py_RETURN_NONE;
@@ -25599,23 +22154,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Automation.Peers.TreeViewItemAutomationPeer", L"ExpandCollapseState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer>().ExpandCollapseState();
+                return py::require<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Automation.Peers.TreeViewItemAutomationPeer", "ExpandCollapseState", "Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider").ExpandCollapseState();
             }());
         }
         catch (...)

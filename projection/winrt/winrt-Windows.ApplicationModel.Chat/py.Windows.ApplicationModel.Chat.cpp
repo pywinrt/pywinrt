@@ -25,19 +25,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatCapabilities", L"IsChatCapable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -55,19 +42,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatCapabilities", L"IsFileTransferCapable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -85,19 +59,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatCapabilities", L"IsGeoLocationPushCapable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -115,19 +76,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatCapabilities", L"IsIntegratedMessagingCapable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -145,19 +93,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatCapabilities", L"IsOnline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -446,19 +381,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -486,19 +408,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"GetMessageReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -526,19 +435,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"MarkMessagesAsReadAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -555,19 +451,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"MarkMessagesAsReadAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
                 return py::convert([&]()
@@ -597,19 +480,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"NotifyLocalParticipantComposing", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -642,19 +512,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"NotifyRemoteParticipantComposing", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -687,19 +544,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"SaveAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -723,19 +567,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"Subject");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -759,19 +590,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"Subject");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -792,19 +610,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"IsConversationMuted");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -828,19 +633,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"IsConversationMuted");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -861,19 +653,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"HasUnreadMessages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -891,19 +670,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -921,19 +687,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"MostRecentMessageId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -951,19 +704,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"Participants");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -981,19 +721,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"ThreadingInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1011,23 +738,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"CanModifyParticipants");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanModifyParticipants();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatConversation2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatConversation", "CanModifyParticipants", "Windows.ApplicationModel.Chat.IChatConversation2").CanModifyParticipants();
             }());
         }
         catch (...)
@@ -1047,24 +761,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"CanModifyParticipants");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanModifyParticipants(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatConversation2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatConversation", "CanModifyParticipants", "Windows.ApplicationModel.Chat.IChatConversation2").CanModifyParticipants(param0);
             }
 
             return 0;
@@ -1080,23 +781,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"ItemKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ItemKind();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatItem>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatConversation", "ItemKind", "Windows.ApplicationModel.Chat.IChatItem").ItemKind();
             }());
         }
         catch (...)
@@ -1110,19 +798,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"RemoteParticipantComposingChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::ChatConversation, winrt::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -1142,19 +817,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Chat.ChatConversation", L"RemoteParticipantComposingChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1259,19 +921,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatConversationReader", L"ReadBatchAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1288,19 +937,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatConversationReader", L"ReadBatchAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
@@ -1412,19 +1048,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversationThreadingInfo", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1448,19 +1071,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversationThreadingInfo", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingKind>(arg);
 
             {
@@ -1481,19 +1091,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversationThreadingInfo", L"Custom");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1517,19 +1114,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversationThreadingInfo", L"Custom");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1550,19 +1134,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversationThreadingInfo", L"ConversationId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1586,19 +1157,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversationThreadingInfo", L"ConversationId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1619,19 +1177,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversationThreadingInfo", L"ContactId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1655,19 +1200,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversationThreadingInfo", L"ContactId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1688,19 +1220,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatConversationThreadingInfo", L"Participants");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1808,23 +1327,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"ItemKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ItemKind();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatItem>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "ItemKind", "Windows.ApplicationModel.Chat.IChatItem").ItemKind();
             }());
         }
         catch (...)
@@ -1838,19 +1344,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"IsIncoming");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1874,24 +1367,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"IsIncoming");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsIncoming(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "IsIncoming", "Windows.ApplicationModel.Chat.IChatMessage2").IsIncoming(param0);
             }
 
             return 0;
@@ -1907,19 +1387,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"IsForwardingDisabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1943,24 +1410,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"IsForwardingDisabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsForwardingDisabled(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "IsForwardingDisabled", "Windows.ApplicationModel.Chat.IChatMessage2").IsForwardingDisabled(param0);
             }
 
             return 0;
@@ -1976,19 +1430,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"TransportId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2012,19 +1453,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"TransportId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2045,19 +1473,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2081,24 +1496,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatMessageStatus>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Status(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "Status", "Windows.ApplicationModel.Chat.IChatMessage2").Status(param0);
             }
 
             return 0;
@@ -2114,19 +1516,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"From");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2150,24 +1539,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"From");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.From(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "From", "Windows.ApplicationModel.Chat.IChatMessage2").From(param0);
             }
 
             return 0;
@@ -2183,19 +1559,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"Body");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2219,19 +1582,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"Body");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2252,19 +1602,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"Subject");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2288,24 +1625,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"Subject");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Subject(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "Subject", "Windows.ApplicationModel.Chat.IChatMessage2").Subject(param0);
             }
 
             return 0;
@@ -2321,19 +1645,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"IsRead");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2357,24 +1668,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"IsRead");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsRead(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "IsRead", "Windows.ApplicationModel.Chat.IChatMessage2").IsRead(param0);
             }
 
             return 0;
@@ -2390,19 +1688,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"NetworkTimestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2426,24 +1711,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"NetworkTimestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NetworkTimestamp(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "NetworkTimestamp", "Windows.ApplicationModel.Chat.IChatMessage2").NetworkTimestamp(param0);
             }
 
             return 0;
@@ -2459,19 +1731,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"LocalTimestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2495,24 +1754,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"LocalTimestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LocalTimestamp(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "LocalTimestamp", "Windows.ApplicationModel.Chat.IChatMessage2").LocalTimestamp(param0);
             }
 
             return 0;
@@ -2528,19 +1774,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"RecipientSendStatuses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2558,19 +1791,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"Recipients");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2588,19 +1808,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"TransportFriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2618,19 +1825,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"Attachments");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2648,19 +1842,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2678,23 +1859,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"IsSeen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSeen();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "IsSeen", "Windows.ApplicationModel.Chat.IChatMessage2").IsSeen();
             }());
         }
         catch (...)
@@ -2714,24 +1882,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"IsSeen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsSeen(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "IsSeen", "Windows.ApplicationModel.Chat.IChatMessage2").IsSeen(param0);
             }
 
             return 0;
@@ -2747,23 +1902,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"MessageKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MessageKind();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "MessageKind", "Windows.ApplicationModel.Chat.IChatMessage2").MessageKind();
             }());
         }
         catch (...)
@@ -2783,24 +1925,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"MessageKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatMessageKind>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MessageKind(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "MessageKind", "Windows.ApplicationModel.Chat.IChatMessage2").MessageKind(param0);
             }
 
             return 0;
@@ -2816,23 +1945,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"IsReceivedDuringQuietHours");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReceivedDuringQuietHours();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "IsReceivedDuringQuietHours", "Windows.ApplicationModel.Chat.IChatMessage2").IsReceivedDuringQuietHours();
             }());
         }
         catch (...)
@@ -2852,24 +1968,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"IsReceivedDuringQuietHours");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsReceivedDuringQuietHours(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "IsReceivedDuringQuietHours", "Windows.ApplicationModel.Chat.IChatMessage2").IsReceivedDuringQuietHours(param0);
             }
 
             return 0;
@@ -2885,23 +1988,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"IsAutoReply");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsAutoReply();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "IsAutoReply", "Windows.ApplicationModel.Chat.IChatMessage2").IsAutoReply();
             }());
         }
         catch (...)
@@ -2921,24 +2011,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"IsAutoReply");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsAutoReply(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "IsAutoReply", "Windows.ApplicationModel.Chat.IChatMessage2").IsAutoReply(param0);
             }
 
             return 0;
@@ -2954,23 +2031,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"EstimatedDownloadSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EstimatedDownloadSize();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "EstimatedDownloadSize", "Windows.ApplicationModel.Chat.IChatMessage2").EstimatedDownloadSize();
             }());
         }
         catch (...)
@@ -2990,24 +2054,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"EstimatedDownloadSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint64_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.EstimatedDownloadSize(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "EstimatedDownloadSize", "Windows.ApplicationModel.Chat.IChatMessage2").EstimatedDownloadSize(param0);
             }
 
             return 0;
@@ -3023,23 +2074,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"ThreadingInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ThreadingInfo();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "ThreadingInfo", "Windows.ApplicationModel.Chat.IChatMessage2").ThreadingInfo();
             }());
         }
         catch (...)
@@ -3059,24 +2097,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"ThreadingInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ThreadingInfo(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "ThreadingInfo", "Windows.ApplicationModel.Chat.IChatMessage2").ThreadingInfo(param0);
             }
 
             return 0;
@@ -3092,23 +2117,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"ShouldSuppressNotification");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ShouldSuppressNotification();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "ShouldSuppressNotification", "Windows.ApplicationModel.Chat.IChatMessage2").ShouldSuppressNotification();
             }());
         }
         catch (...)
@@ -3128,24 +2140,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"ShouldSuppressNotification");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ShouldSuppressNotification(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "ShouldSuppressNotification", "Windows.ApplicationModel.Chat.IChatMessage2").ShouldSuppressNotification(param0);
             }
 
             return 0;
@@ -3161,23 +2160,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RemoteId();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "RemoteId", "Windows.ApplicationModel.Chat.IChatMessage3").RemoteId();
             }());
         }
         catch (...)
@@ -3197,24 +2183,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RemoteId(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "RemoteId", "Windows.ApplicationModel.Chat.IChatMessage2").RemoteId(param0);
             }
 
             return 0;
@@ -3230,23 +2203,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"MessageOperatorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MessageOperatorKind();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "MessageOperatorKind", "Windows.ApplicationModel.Chat.IChatMessage2").MessageOperatorKind();
             }());
         }
         catch (...)
@@ -3266,24 +2226,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"MessageOperatorKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatMessageOperatorKind>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MessageOperatorKind(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "MessageOperatorKind", "Windows.ApplicationModel.Chat.IChatMessage2").MessageOperatorKind(param0);
             }
 
             return 0;
@@ -3299,23 +2246,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"IsReplyDisabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReplyDisabled();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "IsReplyDisabled", "Windows.ApplicationModel.Chat.IChatMessage2").IsReplyDisabled();
             }());
         }
         catch (...)
@@ -3329,23 +2263,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"IsSimMessage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSimMessage();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "IsSimMessage", "Windows.ApplicationModel.Chat.IChatMessage2").IsSimMessage();
             }());
         }
         catch (...)
@@ -3359,23 +2280,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"RecipientsDeliveryInfos");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RecipientsDeliveryInfos();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "RecipientsDeliveryInfos", "Windows.ApplicationModel.Chat.IChatMessage2").RecipientsDeliveryInfos();
             }());
         }
         catch (...)
@@ -3389,23 +2297,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"SyncId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SyncId();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage4>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "SyncId", "Windows.ApplicationModel.Chat.IChatMessage4").SyncId();
             }());
         }
         catch (...)
@@ -3425,24 +2320,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessage", L"SyncId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SyncId(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessage4>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessage", "SyncId", "Windows.ApplicationModel.Chat.IChatMessage4").SyncId(param0);
             }
 
             return 0;
@@ -3575,19 +2457,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageAttachment", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3611,19 +2480,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageAttachment", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3644,19 +2500,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageAttachment", L"MimeType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3680,19 +2523,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageAttachment", L"MimeType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3713,19 +2543,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageAttachment", L"GroupId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3749,19 +2566,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageAttachment", L"GroupId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -3782,19 +2586,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageAttachment", L"DataStreamReference");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3818,19 +2609,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageAttachment", L"DataStreamReference");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             {
@@ -3851,23 +2629,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageAttachment", L"TransferProgress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TransferProgress();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessageAttachment", "TransferProgress", "Windows.ApplicationModel.Chat.IChatMessageAttachment2").TransferProgress();
             }());
         }
         catch (...)
@@ -3887,24 +2652,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageAttachment", L"TransferProgress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.TransferProgress(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessageAttachment", "TransferProgress", "Windows.ApplicationModel.Chat.IChatMessageAttachment2").TransferProgress(param0);
             }
 
             return 0;
@@ -3920,23 +2672,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageAttachment", L"Thumbnail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Thumbnail();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessageAttachment", "Thumbnail", "Windows.ApplicationModel.Chat.IChatMessageAttachment2").Thumbnail();
             }());
         }
         catch (...)
@@ -3956,24 +2695,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageAttachment", L"Thumbnail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Thumbnail(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessageAttachment", "Thumbnail", "Windows.ApplicationModel.Chat.IChatMessageAttachment2").Thumbnail(param0);
             }
 
             return 0;
@@ -3989,23 +2715,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageAttachment", L"OriginalFileName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OriginalFileName();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessageAttachment", "OriginalFileName", "Windows.ApplicationModel.Chat.IChatMessageAttachment2").OriginalFileName();
             }());
         }
         catch (...)
@@ -4025,24 +2738,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageAttachment", L"OriginalFileName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OriginalFileName(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageAttachment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessageAttachment", "OriginalFileName", "Windows.ApplicationModel.Chat.IChatMessageAttachment2").OriginalFileName(param0);
             }
 
             return 0;
@@ -4221,19 +2921,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageChange", L"ChangeType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4251,19 +2938,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageChange", L"Message");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4350,19 +3024,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageChangeReader", L"AcceptChanges", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.AcceptChanges();
@@ -4391,19 +3052,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageChangeReader", L"AcceptChangesThrough", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatMessageChange>(args, 0);
 
                 {
@@ -4434,19 +3082,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageChangeReader", L"ReadBatchAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4540,19 +3175,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageChangeTracker", L"Enable", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Enable();
@@ -4581,19 +3203,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageChangeTracker", L"GetChangeReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4621,19 +3230,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageChangeTracker", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Reset();
@@ -4728,19 +3324,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageChangedDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -4833,19 +3416,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageChangedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5274,19 +3844,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails", L"ChatMessage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5304,23 +3861,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails", L"ShouldDisplayToast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ShouldDisplayToast();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageNotificationTriggerDetails2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails", "ShouldDisplayToast", "Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails2").ShouldDisplayToast();
             }());
         }
         catch (...)
@@ -5334,23 +3878,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails", L"ShouldUpdateActionCenter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ShouldUpdateActionCenter();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageNotificationTriggerDetails2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails", "ShouldUpdateActionCenter", "Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails2").ShouldUpdateActionCenter();
             }());
         }
         catch (...)
@@ -5364,23 +3895,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails", L"ShouldUpdateBadge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ShouldUpdateBadge();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageNotificationTriggerDetails2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails", "ShouldUpdateBadge", "Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails2").ShouldUpdateBadge();
             }());
         }
         catch (...)
@@ -5394,23 +3912,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails", L"ShouldUpdateDetailText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ShouldUpdateDetailText();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageNotificationTriggerDetails2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails", "ShouldUpdateDetailText", "Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails2").ShouldUpdateDetailText();
             }());
         }
         catch (...)
@@ -5496,19 +4001,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageReader", L"ReadBatchAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5525,25 +4017,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageReader", L"ReadBatchAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ReadBatchAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageReader2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageReader", "ReadBatchAsync", "Windows.ApplicationModel.Chat.IChatMessageReader2", 1).ReadBatchAsync(param0);
                 }());
             }
             catch (...)
@@ -5631,19 +4110,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"DeleteMessageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -5673,19 +4139,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"DownloadMessageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -5715,26 +4168,13 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"ForwardMessageAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ForwardMessageAsync(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "ForwardMessageAsync", "Windows.ApplicationModel.Chat.IChatMessageStore2", 2).ForwardMessageAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -5758,25 +4198,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"GetConversationAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetConversationAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "GetConversationAsync", "Windows.ApplicationModel.Chat.IChatMessageStore2", 1).GetConversationAsync(param0);
                 }());
             }
             catch (...)
@@ -5789,26 +4216,13 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"GetConversationAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetConversationAsync(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "GetConversationAsync", "Windows.ApplicationModel.Chat.IChatMessageStore2", 2).GetConversationAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -5832,25 +4246,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"GetConversationFromThreadingInfoAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetConversationFromThreadingInfoAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "GetConversationFromThreadingInfoAsync", "Windows.ApplicationModel.Chat.IChatMessageStore2", 1).GetConversationFromThreadingInfoAsync(param0);
                 }());
             }
             catch (...)
@@ -5874,23 +4275,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"GetConversationReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetConversationReader();
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "GetConversationReader", "Windows.ApplicationModel.Chat.IChatMessageStore2", 0).GetConversationReader();
                 }());
             }
             catch (...)
@@ -5903,25 +4291,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"GetConversationReader", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetConversationReader(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "GetConversationReader", "Windows.ApplicationModel.Chat.IChatMessageStore2", 1).GetConversationReader(param0);
                 }());
             }
             catch (...)
@@ -5945,19 +4320,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"GetMessageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -5987,26 +4349,13 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"GetMessageByRemoteIdAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMessageByRemoteIdAsync(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "GetMessageByRemoteIdAsync", "Windows.ApplicationModel.Chat.IChatMessageStore2", 2).GetMessageByRemoteIdAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -6030,25 +4379,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"GetMessageBySyncIdAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMessageBySyncIdAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "GetMessageBySyncIdAsync", "Windows.ApplicationModel.Chat.IChatMessageStore3", 1).GetMessageBySyncIdAsync(param0);
                 }());
             }
             catch (...)
@@ -6072,19 +4408,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"GetMessageReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6101,19 +4424,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"GetMessageReader", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 return py::convert([&]()
@@ -6143,25 +4453,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"GetSearchReader", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatQueryOptions>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetSearchReader(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "GetSearchReader", "Windows.ApplicationModel.Chat.IChatMessageStore2", 1).GetSearchReader(param0);
                 }());
             }
             catch (...)
@@ -6185,23 +4482,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"GetUnseenCountAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetUnseenCountAsync();
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "GetUnseenCountAsync", "Windows.ApplicationModel.Chat.IChatMessageStore2", 0).GetUnseenCountAsync();
                 }());
             }
             catch (...)
@@ -6214,25 +4498,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"GetUnseenCountAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetUnseenCountAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "GetUnseenCountAsync", "Windows.ApplicationModel.Chat.IChatMessageStore2", 1).GetUnseenCountAsync(param0);
                 }());
             }
             catch (...)
@@ -6256,23 +4527,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"MarkAsSeenAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.MarkAsSeenAsync();
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "MarkAsSeenAsync", "Windows.ApplicationModel.Chat.IChatMessageStore2", 0).MarkAsSeenAsync();
                 }());
             }
             catch (...)
@@ -6285,25 +4543,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"MarkAsSeenAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.MarkAsSeenAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "MarkAsSeenAsync", "Windows.ApplicationModel.Chat.IChatMessageStore2", 1).MarkAsSeenAsync(param0);
                 }());
             }
             catch (...)
@@ -6327,19 +4572,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"MarkMessageReadAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -6369,19 +4601,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"RetrySendMessageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -6411,25 +4630,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"SaveMessageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatMessage>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SaveMessageAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "SaveMessageAsync", "Windows.ApplicationModel.Chat.IChatMessageStore2", 1).SaveMessageAsync(param0);
                 }());
             }
             catch (...)
@@ -6453,19 +4659,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"SendMessageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatMessage>(args, 0);
 
                 return py::convert([&]()
@@ -6495,25 +4688,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"TryCancelDownloadMessageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryCancelDownloadMessageAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "TryCancelDownloadMessageAsync", "Windows.ApplicationModel.Chat.IChatMessageStore2", 1).TryCancelDownloadMessageAsync(param0);
                 }());
             }
             catch (...)
@@ -6537,25 +4717,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"TryCancelSendMessageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryCancelSendMessageAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Chat.ChatMessageStore", "TryCancelSendMessageAsync", "Windows.ApplicationModel.Chat.IChatMessageStore2", 1).TryCancelSendMessageAsync(param0);
                 }());
             }
             catch (...)
@@ -6579,19 +4746,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"ValidateMessage", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatMessage>(args, 0);
 
                 return py::convert([&]()
@@ -6617,19 +4771,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"ChangeTracker");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6647,19 +4788,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"MessageChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::ChatMessageStore, winrt::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -6679,19 +4807,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"MessageChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -6712,25 +4827,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"StoreChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::ChatMessageStore, winrt::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StoreChanged(param0);
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Chat.ChatMessageStore", "StoreChanged", "Windows.ApplicationModel.Chat.IChatMessageStore2").StoreChanged(param0);
             }());
         }
         catch (...)
@@ -6744,24 +4846,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"StoreChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StoreChanged(param0);
+                py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Chat.ChatMessageStore", "StoreChanged", "Windows.ApplicationModel.Chat.IChatMessageStore2").StoreChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -6865,19 +4954,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageStoreChangedEventArgs", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6895,19 +4971,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageStoreChangedEventArgs", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6994,19 +5057,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageTransport", L"RequestSetAsNotificationProviderAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7030,19 +5080,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageTransport", L"IsActive");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7060,19 +5097,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageTransport", L"IsAppSetAsNotificationProvider");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7090,19 +5114,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageTransport", L"TransportFriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7120,19 +5131,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageTransport", L"TransportId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7150,23 +5148,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageTransport", L"Configuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Configuration();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageTransport2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessageTransport", "Configuration", "Windows.ApplicationModel.Chat.IChatMessageTransport2").Configuration();
             }());
         }
         catch (...)
@@ -7180,23 +5165,10 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageTransport", L"TransportKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TransportKind();
+                return py::require<winrt::Windows::ApplicationModel::Chat::IChatMessageTransport2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Chat.ChatMessageTransport", "TransportKind", "Windows.ApplicationModel.Chat.IChatMessageTransport2").TransportKind();
             }());
         }
         catch (...)
@@ -7280,19 +5252,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration", L"ExtendedProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7310,19 +5269,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration", L"MaxAttachmentCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7340,19 +5286,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration", L"MaxMessageSizeInKilobytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7370,19 +5303,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration", L"MaxRecipientCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7400,19 +5320,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration", L"SupportedVideoFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7498,19 +5405,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageValidationResult", L"MaxPartCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7528,19 +5422,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageValidationResult", L"PartCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7558,19 +5439,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageValidationResult", L"RemainingCharacterCountInPart");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7588,19 +5456,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatMessageValidationResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7707,19 +5562,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatQueryOptions", L"SearchString");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7743,19 +5585,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatQueryOptions", L"SearchString");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -7862,19 +5691,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo", L"TransportAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7898,19 +5714,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo", L"TransportAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -7931,19 +5734,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo", L"ReadTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7967,19 +5757,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo", L"ReadTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -8000,19 +5777,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo", L"DeliveryTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8036,19 +5800,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo", L"DeliveryTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -8069,19 +5820,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo", L"IsErrorPermanent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8099,19 +5837,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8129,19 +5854,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo", L"TransportErrorCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8159,19 +5871,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo", L"TransportErrorCodeCategory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8189,19 +5888,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo", L"TransportInterpretedErrorCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8294,19 +5980,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatSearchReader", L"ReadBatchAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8323,19 +5996,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatSearchReader", L"ReadBatchAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
@@ -8425,19 +6085,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatSyncConfiguration", L"RestoreHistorySpan");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8461,19 +6108,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatSyncConfiguration", L"RestoreHistorySpan");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatRestoreHistorySpan>(arg);
 
             {
@@ -8494,19 +6128,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatSyncConfiguration", L"IsSyncEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8530,19 +6151,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatSyncConfiguration", L"IsSyncEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -8632,19 +6240,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatSyncManager", L"AssociateAccountAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert([&]()
@@ -8674,19 +6269,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatSyncManager", L"IsAccountAssociated", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert([&]()
@@ -8716,19 +6298,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatSyncManager", L"SetConfigurationAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::ChatSyncConfiguration>(args, 0);
 
                 return py::convert([&]()
@@ -8758,19 +6327,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatSyncManager", L"StartSync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.StartSync();
@@ -8799,19 +6355,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatSyncManager", L"UnassociateAccountAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8835,19 +6378,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.ChatSyncManager", L"Configuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8938,19 +6468,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.RcsEndUserMessage", L"SendResponseAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction>(args, 0);
 
                 return py::convert([&]()
@@ -8980,19 +6497,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.RcsEndUserMessage", L"SendResponseWithPinAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -9019,19 +6523,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsEndUserMessage", L"Actions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9049,19 +6540,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsEndUserMessage", L"IsPinRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9079,19 +6557,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsEndUserMessage", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9109,19 +6574,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsEndUserMessage", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9139,19 +6591,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsEndUserMessage", L"TransportId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9239,19 +6678,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsEndUserMessageAction", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9333,19 +6759,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableEventArgs", L"IsMessageAvailable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9363,19 +6776,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableEventArgs", L"Message");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9458,19 +6858,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableTriggerDetails", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9488,19 +6875,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableTriggerDetails", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9583,19 +6957,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Chat.RcsEndUserMessageManager", L"MessageAvailableChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageManager, winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs>>(arg);
 
             return py::convert([&]()
@@ -9615,19 +6976,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Chat.RcsEndUserMessageManager", L"MessageAvailableChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9997,19 +7345,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsServiceKindSupportedChangedEventArgs", L"ServiceKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10095,19 +7430,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.RcsTransport", L"IsServiceKindSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::RcsServiceKind>(args, 0);
 
                 return py::convert([&]()
@@ -10137,19 +7459,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.RcsTransport", L"IsStoreAndForwardEnabled", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Chat::RcsServiceKind>(args, 0);
 
                 return py::convert([&]()
@@ -10175,19 +7484,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsTransport", L"Configuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10205,19 +7501,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsTransport", L"ExtendedProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10235,19 +7518,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsTransport", L"IsActive");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10265,19 +7535,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsTransport", L"TransportFriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10295,19 +7552,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsTransport", L"TransportId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10325,19 +7569,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Chat.RcsTransport", L"ServiceKindSupportedChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::RcsTransport, winrt::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -10357,19 +7588,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Chat.RcsTransport", L"ServiceKindSupportedChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -10462,19 +7680,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsTransportConfiguration", L"MaxAttachmentCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10492,19 +7697,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsTransportConfiguration", L"MaxFileSizeInKilobytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10522,19 +7714,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsTransportConfiguration", L"MaxGroupMessageSizeInKilobytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10552,19 +7731,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsTransportConfiguration", L"MaxMessageSizeInKilobytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10582,19 +7748,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsTransportConfiguration", L"MaxRecipientCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10612,19 +7765,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RcsTransportConfiguration", L"WarningFileSizeInKilobytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10711,19 +7851,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs", L"IsComposing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10741,19 +7868,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs", L"ParticipantAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10771,19 +7885,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs", L"TransportId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10869,19 +7970,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Chat.IChatItem", L"ItemKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
