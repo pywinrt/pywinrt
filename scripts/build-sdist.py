@@ -59,8 +59,8 @@ except ImportError:
 
 for package_path in chain(
     [os.fspath(PROJECT_DIR / "runtime")],
-    iglob(os.fspath(PROJECTION_PATH / "interop" / "winrt-*")),
-    iglob(os.fspath(PROJECTION_PATH / "interop" / "winui3-*")),
+    iglob(os.fspath(PROJECT_DIR / "interop" / "winrt-*")),
+    iglob(os.fspath(PROJECT_DIR / "interop" / "winui3-*")),
     iglob(os.fspath(PROJECTION_PATH / "winrt" / "winrt-*")),
     iglob(os.fspath(PROJECTION_PATH / "winui2" / "winui2-*")),
     iglob(os.fspath(PROJECTION_PATH / "winui3" / "winui3-*")),

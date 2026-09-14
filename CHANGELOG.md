@@ -81,10 +81,12 @@
 - The hand-written runtime moved out of `projection/` to a top-level `runtime/`
   directory: `runtime/python/winrt/` for the Python package and the public
   headers it ships, `runtime/src/` for the C++ sources of the extension module.
-  Everything under `projection/` is now generated except for the interop
-  modules. `pyruntime.h`, which is private to the runtime's own translation
-  units, moved there as `module_state.h` and is no longer shipped in the
-  `winrt-sdk` wheel.
+  `pyruntime.h`, which is private to the runtime's own translation units, moved
+  there as `module_state.h` and is no longer shipped in the `winrt-sdk` wheel.
+- The hand-written interop modules moved out of `projection/` as well, to a
+  top-level `interop/`, so everything remaining under `projection/` is
+  generated. Their distribution names, module names and source file names are
+  unchanged, and their packaging is still emitted by `generate-pyproject.py`.
 - The projection is now compiled without RTTI (`/GR-` on MSVC, `-fno-rtti`
   otherwise). Nothing in it uses `dynamic_cast`, and the only uses of `typeid`
   were a dozen `typeid(T).name()` calls in the messages of

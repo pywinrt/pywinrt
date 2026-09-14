@@ -63,6 +63,9 @@ set(WINRT_RUNTIME_PATH "../runtime")
 set(WINRT_RUNTIME_SRC_PATH "${WINRT_RUNTIME_PATH}/src")
 set(WINRT_RUNTIME_PYTHON_PATH "${WINRT_RUNTIME_PATH}/python/winrt")
 set(WINRT_RUNTIME_INCLUDE_PATH "${WINRT_RUNTIME_PYTHON_PATH}/include")
+# The interop modules are hand-written too, so they also live outside of
+# projection/. Their packaging is still generated, like every other package's.
+set(INTEROP_PATH "../interop")
 set(WINRT_MICROSOFT_UI_XAML_PATH "winrt-Microsoft.UI.Xaml/src/winrt_microsoft_ui_xaml")
 set(WINRT_WINDOWS_APP_SDK_PATH "winrt-WindowsAppSDK/src/winrt_windows_app_sdk")
 set(WINRT_WEBVIEW2_PATH "webview2/webview2-Microsoft.Web.WebView2.Core/webview2")
@@ -179,8 +182,8 @@ if (PYWINRT_FULL_PROJECTION)
     file(GLOB winui2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winui2/winui2-*")
     file(GLOB winui3_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winui3/winui3-*")
     file(GLOB webview2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "webview2/webview2-*")
-    file(GLOB interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winrt-*")
-    file(GLOB winui3_interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winui3-*")
+    file(GLOB interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "${INTEROP_PATH}/winrt-*")
+    file(GLOB winui3_interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "${INTEROP_PATH}/winui3-*")
 else()
     # minimum set of packages required for unit tests
     set(packages
@@ -213,16 +216,16 @@ else()
         "winui3/winui3-Microsoft.Windows.AppNotifications"
     )
     set(interop_packages
-        "interop/winrt-Windows.Graphics.Capture.Interop"
-        "interop/winrt-Windows.Graphics.DirectX.Direct3D11.Interop"
-        "interop/winrt-Windows.Media.Interop"
-        "interop/winrt-Windows.System.Interop"
-        "interop/winrt-Windows.UI.Composition.Interop"
-        "interop/winrt-Windows.UI.Xaml.Hosting.Interop"
+        "${INTEROP_PATH}/winrt-Windows.Graphics.Capture.Interop"
+        "${INTEROP_PATH}/winrt-Windows.Graphics.DirectX.Direct3D11.Interop"
+        "${INTEROP_PATH}/winrt-Windows.Media.Interop"
+        "${INTEROP_PATH}/winrt-Windows.System.Interop"
+        "${INTEROP_PATH}/winrt-Windows.UI.Composition.Interop"
+        "${INTEROP_PATH}/winrt-Windows.UI.Xaml.Hosting.Interop"
     )
     set(winui3_interop_packages
-        "interop/winui3-Microsoft.UI.Interop"
-        "interop/winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
+        "${INTEROP_PATH}/winui3-Microsoft.UI.Interop"
+        "${INTEROP_PATH}/winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
     )
 endif()
 
@@ -369,22 +372,22 @@ foreach(package ${packages} ${winui2_packages} ${winui3_packages} ${webview2_pac
         )
     endif()
 
-    if (${package} STREQUAL "interop/winrt-Windows.Graphics.DirectX.Direct3D11.Interop")
+    if (${package} STREQUAL "${INTEROP_PATH}/winrt-Windows.Graphics.DirectX.Direct3D11.Interop")
         target_link_libraries(${package_target} PRIVATE "D3D11")
     endif()
 
-    if (${package} STREQUAL "interop/winrt-Windows.System.Interop")
+    if (${package} STREQUAL "${INTEROP_PATH}/winrt-Windows.System.Interop")
         target_link_libraries(${package_target} PRIVATE "CoreMessaging")
     endif()
 
-    if (${package} STREQUAL "interop/winui3-Microsoft.UI.Interop")
+    if (${package} STREQUAL "${INTEROP_PATH}/winui3-Microsoft.UI.Interop")
         if (NOT CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
             # winui3/Microsoft.UI.Interop.h has stuff that other compilers don't like
             target_compile_options(${package_target} PRIVATE -Wno-unknown-pragmas)
         endif()
     endif()
 
-    if (${package} STREQUAL "interop/winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap")
+    if (${package} STREQUAL "${INTEROP_PATH}/winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap")
         target_link_libraries(${package_target} PRIVATE "Microsoft.WindowsAppRuntime.Bootstrap")
         install(FILES "${WINDOWS_APP_SDK_PATH}/runtimes/win-${WINDOWS_APP_SDK_ARCH}/native/Microsoft.WindowsAppRuntime.Bootstrap.dll"
             DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winui3")

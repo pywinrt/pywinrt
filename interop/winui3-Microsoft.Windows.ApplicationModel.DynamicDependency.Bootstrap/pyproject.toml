@@ -1,11 +1,11 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["setuptools>=78", "winrt-runtime", "winrt-sdk"]
+requires = ["setuptools>=78", "winrt-runtime", "winrt-sdk", "winrt-WindowsAppSDK"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "winrt-Windows.Graphics.DirectX.Direct3D11.Interop"
+name = "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
 license = "MIT"
@@ -32,7 +32,7 @@ version = { file = "version.txt" }
 
 [tool.cibuildwheel]
 # use local winrt-sdk and winrt-runtime build dependencies
-environment = { PYTHONPATH="../../winrt-sdk/src;../../../runtime/python" }
+environment = { PYTHONPATH="../../projection/winrt-sdk/src;../../runtime/python;../../projection/winrt-WindowsAppSDK/src" }
 # don't install winrt-sdk or winrt-runtime from PyPI
 build-frontend = { name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }
 before-build = "uv pip install setuptools"
@@ -43,3 +43,4 @@ test-skip = "*-win_arm64"
 
 [tool.cibuildwheel.windows]
 archs = ["x86", "AMD64", "ARM64"]
+repair-wheel-command = "python scripts/add_bootstrap_dll.py {wheel} {dest_dir}"
