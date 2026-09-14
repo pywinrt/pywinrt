@@ -32,6 +32,28 @@ static_assert(PY_VERSION_HEX >= 0x03090000, "Python 3.9 or later is required");
 
 namespace py
 {
+    /**
+     * Storage for the WinRT name of @p T as a NUL-terminated UTF-8 string.
+     */
+    template<typename T>
+    inline constexpr auto type_name_storage_v
+        = winrt::impl::concat(winrt::impl::to_utf8<T>(), '\0');
+
+    /**
+     * Gets the WinRT name of @p T as a NUL-terminated UTF-8 string suitable
+     * for the "%s" conversion of PyErr_Format().
+     *
+     * This is used instead of typeid(T).name() so that the projection does not
+     * need RTTI (the type descriptors it emits cost about 15% of the size of a
+     * module). A WinRT name also reads better in an error message than an MSVC
+     * mangled name.
+     */
+    template<typename T>
+    constexpr char const* type_name() noexcept
+    {
+        return type_name_storage_v<T>.data();
+    }
+
     template<typename T, typename = std::void_t<>>
     struct empty_instance
     {
@@ -1061,7 +1083,7 @@ namespace py
             PyErr_Format(
                 PyExc_NotImplementedError,
                 "py::wrap_struct(%s instance, PyTypeObject* type_object == nullptr) is not implemented",
-                typeid(T).name());
+                type_name<T>());
             return nullptr;
         }
 
@@ -1092,7 +1114,7 @@ namespace py
             PyErr_Format(
                 PyExc_NotImplementedError,
                 "py::wrap(%s instance, PyTypeObject* type_object == nullptr) is not implemented",
-                typeid(T).name());
+                type_name<T>());
             return nullptr;
         }
 
@@ -1170,7 +1192,7 @@ namespace py
                 PyErr_Format(
                     PyExc_NotImplementedError,
                     "py::wrap(%s instance) is not implemented",
-                    typeid(T).name());
+                    type_name<T>());
                 return nullptr;
             }
             else
@@ -1200,7 +1222,7 @@ namespace py
             PyErr_Format(
                 PyExc_NotImplementedError,
                 "py::buffer<%s>::is_compatible() is not implemented",
-                typeid(T).name());
+                type_name<T>());
             return false;
         } // namespace py
     };
@@ -2030,7 +2052,7 @@ namespace py
                 PyErr_Format(
                     PyExc_NotImplementedError,
                     "py::python_iterator<%s>::GetMany() is not implemented",
-                    typeid(T).name());
+                    type_name<T>());
                 throw python_exception();
             }
             catch (python_exception)
@@ -2114,7 +2136,7 @@ namespace py
                 PyErr_Format(
                     PyExc_NotImplementedError,
                     "py::python_vector<%s>::GetMany() is not implemented",
-                    typeid(T).name());
+                    type_name<T>());
                 throw python_exception();
             }
             catch (python_exception)
@@ -2284,7 +2306,7 @@ namespace py
                 PyErr_Format(
                     PyExc_NotImplementedError,
                     "py::python_vector<%s>::GetMany() is not implemented",
-                    typeid(T).name());
+                    type_name<T>());
                 throw python_exception();
             }
             catch (python_exception)
@@ -2596,8 +2618,8 @@ namespace py
                 PyErr_Format(
                     PyExc_NotImplementedError,
                     "py::python_mapping_iterator<%s, %s>::GetMany() is not implemented",
-                    typeid(K).name(),
-                    typeid(V).name());
+                    type_name<K>(),
+                    type_name<V>());
                 throw python_exception();
             }
             catch (python_exception)
@@ -3283,7 +3305,7 @@ namespace py
             PyErr_Format(
                 PyExc_NotImplementedError,
                 "py::converter<%s>::convert() is not implemented for delegates",
-                typeid(T).name());
+                type_name<T>());
             return nullptr;
         }
 
@@ -3354,7 +3376,7 @@ namespace py
             PyErr_Format(
                 PyExc_NotImplementedError,
                 "py::converter<%s>::convert() is not implemented for py::pybuf_view",
-                typeid(T).name());
+                type_name<T>());
             return nullptr;
         }
 
@@ -3393,7 +3415,7 @@ namespace py
             PyErr_Format(
                 PyExc_NotImplementedError,
                 "py::converter<%s>::convert_to() is not implemented",
-                typeid(T).name());
+                type_name<T>());
             throw python_exception();
         }
     };

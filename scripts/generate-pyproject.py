@@ -88,10 +88,16 @@ from winrt_sdk import get_include_dirs{extra_imports}
 {extra_init}
 class build_ext_ex(build_ext):
     def build_extension(self, ext):
+        # nothing in the projection uses dynamic_cast or typeid, so disabling
+        # RTTI costs nothing and makes the module about 15% smaller
         if self.compiler.compiler_type == "msvc":
-            ext.extra_compile_args = ["/std:c++20", "/permissive-"]
+            ext.extra_compile_args = ["/std:c++20", "/permissive-", "/GR-"]
         elif self.compiler.compiler_type == "mingw32":
-            ext.extra_compile_args = ["-std=c++20", "-D_WIN32_WINNT=_WIN32_WINNT_WIN10"]
+            ext.extra_compile_args = [
+                "-std=c++20",
+                "-fno-rtti",
+                "-D_WIN32_WINNT=_WIN32_WINNT_WIN10",
+            ]
             # GCC 15 complains about some things that it didn't in the past
             ext.extra_compile_args += ["-Wno-strict-aliasing", "-Wno-template-body"]
             ext.extra_link_args = ["-loleaut32"]

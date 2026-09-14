@@ -60,6 +60,15 @@
   needs is linked into one module instead of all of them. This raises the minor
   ABI version, so this version of the projection packages needs at least this
   version of `winrt-runtime`.
+- The projection is now compiled without RTTI (`/GR-` on MSVC, `-fno-rtti`
+  otherwise). Nothing in it uses `dynamic_cast`, and the only uses of `typeid`
+  were a dozen `typeid(T).name()` calls in the messages of
+  `NotImplementedError`, which now name the WinRT type instead of giving an
+  MSVC mangled name. The type descriptors that the compiler emitted anyway
+  cost more than the vtables they describe, so this makes the projection
+  20.9 % smaller: 131.49 MB to 103.97 MB over all 424 modules, and no module
+  grew. The XAML packages gain the most, since they have the most types
+  (`winrt-Windows.UI.Xaml.Automation.Peers` 3.99 MB to 1.62 MB).
 
 ### Deprecated
 - The method names that v3.x generated from the
