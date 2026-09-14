@@ -235,6 +235,11 @@ rootCommand.SetHandler(
 
         var namespaceTimes = new ConcurrentBag<(string Namespace, TimeSpan Elapsed)>();
 
+        // parameterized interface instances per header directory, for the
+        // per-package GUID header written after all namespaces are done
+        var genericInstances =
+            new ConcurrentDictionary<string, ConcurrentDictionary<string, GenericInstanceType>>();
+
         // Generation is pipelined: the metadata for each namespace is
         // preloaded on this thread (see ModulePreloader for why) and then the
         // namespace is handed off to the thread pool to be generated while
@@ -273,7 +278,8 @@ rootCommand.SetHandler(
                         () => nullabilityFileTask.Result.GetOrAdd(groupNamespace),
                         packageMap,
                         group,
-                        componentDlls
+                        componentDlls,
+                        genericInstances
                     );
 
                     namespaceTimes.Add((groupNamespace, nsStopwatch.Elapsed));
@@ -285,6 +291,15 @@ rootCommand.SetHandler(
         Thread.CurrentThread.Priority = priority;
 
         await Task.WhenAll(tasks);
+
+        foreach (var (headerDir, instances) in genericInstances)
+        {
+            FileWriters.WritePInterfaceGuidsH(
+                new DirectoryInfo(headerDir),
+                new QualifiedNamespace(inputPackage, "").PyPackageModule,
+                instances.Values
+            );
+        }
 
         var nullabilityFile = await nullabilityFileTask;
 

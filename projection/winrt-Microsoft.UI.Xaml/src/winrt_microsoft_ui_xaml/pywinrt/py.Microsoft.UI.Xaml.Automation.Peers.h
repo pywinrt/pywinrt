@@ -4,28 +4,32 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winui2.guids.h")
+#include "py.winui2.guids.h"
+#endif
+
+#include "py.Microsoft.UI.Xaml.Automation.Peers.types.h"
+#if __has_include("py.Windows.UI.Xaml.Automation.types.h")
+#include "py.Windows.UI.Xaml.Automation.types.h"
+#endif
+#if __has_include("py.Windows.UI.Xaml.Automation.Peers.types.h")
+#include "py.Windows.UI.Xaml.Automation.Peers.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.Controls.types.h")
+#include "py.Microsoft.UI.Xaml.Controls.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.Controls.Primitives.types.h")
+#include "py.Microsoft.UI.Xaml.Controls.Primitives.types.h"
+#endif
+
 #include <winrt/Windows.UI.Xaml.h>
 #include <winrt/Windows.UI.Xaml.Automation.Peers.h>
 #include <winrt/Windows.UI.Xaml.Automation.Provider.h>
 
 #include <winrt/Microsoft.UI.Xaml.Automation.Peers.h>
-#include "py.Microsoft.UI.Xaml.Automation.Peers.types.h"
-
-
-#if __has_include("py.Windows.UI.Xaml.Automation.types.h")
-#include "py.Windows.UI.Xaml.Automation.types.h"
-#endif
 
 #if __has_include("py.Windows.UI.Xaml.Automation.Peers.h")
 #include "py.Windows.UI.Xaml.Automation.Peers.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Controls.types.h")
-#include "py.Microsoft.UI.Xaml.Controls.types.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Controls.Primitives.types.h")
-#include "py.Microsoft.UI.Xaml.Controls.Primitives.types.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Xaml::Automation::Peers

@@ -4,26 +4,30 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
-
-#include <winrt/Microsoft.Graphics.Display.h>
-#include "py.Microsoft.Graphics.Display.types.h"
-
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
 #endif
 
+#include "py.Microsoft.Graphics.Display.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
 #if __has_include("py.Windows.Storage.Streams.types.h")
 #include "py.Windows.Storage.Streams.types.h"
 #endif
-
 #if __has_include("py.Microsoft.UI.types.h")
 #include "py.Microsoft.UI.types.h"
 #endif
-
 #if __has_include("py.Microsoft.UI.Dispatching.types.h")
 #include "py.Microsoft.UI.Dispatching.types.h"
+#endif
+
+#include <winrt/Windows.Foundation.h>
+
+#include <winrt/Microsoft.Graphics.Display.h>
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
 #endif
 
 namespace py::impl::Microsoft::Graphics::Display

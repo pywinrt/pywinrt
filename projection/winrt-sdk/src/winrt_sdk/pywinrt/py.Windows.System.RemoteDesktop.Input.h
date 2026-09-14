@@ -4,11 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
+#include "py.Windows.System.RemoteDesktop.Input.types.h"
+
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.System.RemoteDesktop.Input.h>
-#include "py.Windows.System.RemoteDesktop.Input.types.h"
-
 
 namespace py::impl::Windows::System::RemoteDesktop::Input
 {

@@ -48,6 +48,20 @@ Some additional files are also generated instead by:
 
     py .\scripts\generate-pyproject.py
 
+### Checking the precomputed GUIDs
+
+The generated `py.<package>.guids.h` headers spell out the GUIDs of
+parameterized interfaces such as `IAsyncOperation<StorageFile>` so that
+C++/WinRT does not have to compute each of them with a constexpr SHA-1 in every
+translation unit. A wrong value there still compiles, so after regenerating
+against a new Windows SDK, Windows App SDK or WinUI 2 version, check them
+against C++/WinRT's own computation in a Visual Studio command prompt:
+
+    py .\scripts\verify-guids.py
+
+This takes a few minutes because it does all of the hashing that the generated
+headers avoid.
+
 ## Regenerating other upstream code
 
 Normally this is not needed unless we need to pull in changes from upstream.

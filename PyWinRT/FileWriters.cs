@@ -1,4 +1,5 @@
 using System.CodeDom.Compiler;
+using System.Collections.Concurrent;
 using System.Collections.ObjectModel;
 using Mono.Cecil;
 
@@ -26,7 +27,8 @@ static class FileWriters
         Func<NamespaceNullabilityInfo> getNullabilityInfo,
         IReadOnlyDictionary<string, string> packageMap,
         IEnumerable<TypeDefinition> typeDefinitions,
-        bool componentDlls
+        bool componentDlls,
+        ConcurrentDictionary<string, ConcurrentDictionary<string, GenericInstanceType>> genericInstances
     )
     {
         var nsPackageName = $"{ns.PyPackage}-{ns.Namespace}";
@@ -80,6 +82,13 @@ static class FileWriters
         members.GetReferencedNamespaces(packageMap, includeDelegates: true);
         members.GetReferencedNamespaces(packageMap, includeInheritedInterfaces: true);
         members.GetFullHeaderNamespaces(packageMap);
+
+        var instances = genericInstances.GetOrAdd(headerDir.FullName, _ => new());
+
+        foreach (var instance in members.GetGenericInstances())
+        {
+            instances.TryAdd(instance.ToCppTypeName(), instance);
+        }
 
         // The generated files are independent of each other, so write them
         // in parallel. This helps the largest namespaces, which would
@@ -597,11 +606,34 @@ static class FileWriters
             $"static_assert(winrt::check_version(PYWINRT_VERSION, \"{PyWinRT.VersionString}\"), \"Mismatched Py/WinRT headers.\");"
         );
 
+        // The GUIDs of the parameterized interfaces used by this package have
+        // to be specialized before any full C++/WinRT header implicitly
+        // instantiates them (pybase.h already includes the winrt-sdk one).
+        w.WriteLine($"#if __has_include(\"py.{ns.PyPackageModule}.guids.h\")");
+        w.WriteLine($"#include \"py.{ns.PyPackageModule}.guids.h\"");
+        w.WriteLine("#endif");
+        w.WriteBlankLine();
+
+        // Only the Python type names of the referenced namespaces are needed
+        // to convert their types, so include the light types header of each
+        // one.
+        w.WriteLine($"#include \"py.{ns.Namespace}.types.h\"");
+
+        foreach (var rns in referencedNamespaces)
+        {
+            w.WriteLine($"#if __has_include(\"py.{rns.Namespace}.types.h\")");
+            w.WriteLine($"#include \"py.{rns.Namespace}.types.h\"");
+            w.WriteLine("#endif");
+        }
+
+        w.WriteBlankLine();
+
         // The C++/WinRT header of this namespace already includes the
         // declarations (impl/*.2.h) of every namespace it references, which is
         // all that is needed to wrap and unwrap objects of those types. The
         // full (and much larger) header of another namespace is only needed
-        // for its delegates and generic types.
+        // for its delegates, generic types and the interfaces whose methods
+        // are called.
         foreach (var rns in fullHeaderNamespaces)
         {
             w.WriteLine($"#include <winrt/{rns.Namespace}.h>");
@@ -609,23 +641,15 @@ static class FileWriters
 
         w.WriteBlankLine();
         w.WriteLine($"#include <winrt/{ns.Namespace}.h>");
-        w.WriteLine($"#include \"py.{ns.Namespace}.types.h\"");
-        w.WriteBlankLine();
 
-        // Only the Python type names of the referenced namespaces are needed
-        // to convert their types, so include the light "types" header of each
-        // one. The full header, which drags in the full C++/WinRT header of
-        // that namespace and its own dependencies, is only needed for the
-        // delegate and generic interface wrappers.
-        foreach (var rns in referencedNamespaces)
+        // Likewise, the full generated header of another namespace is only
+        // needed for its delegate and generic interface wrappers. Everything
+        // else comes from the types headers.
+        foreach (var rns in referencedNamespaces.Where(fullHeaderNamespaces.Contains))
         {
-            var header = fullHeaderNamespaces.Contains(rns)
-                ? $"py.{rns.Namespace}.h"
-                : $"py.{rns.Namespace}.types.h";
-
             w.WriteBlankLine();
-            w.WriteLine($"#if __has_include(\"{header}\")");
-            w.WriteLine($"#include \"{header}\"");
+            w.WriteLine($"#if __has_include(\"py.{rns.Namespace}.h\")");
+            w.WriteLine($"#include \"py.{rns.Namespace}.h\"");
             w.WriteLine("#endif");
         }
 
@@ -762,6 +786,176 @@ static class FileWriters
         });
 
         sw.WriteFileIfChanged(headerDir, $"py.{ns.Namespace}.types.h");
+    }
+
+    /// <summary>
+    /// Writes <c>py.Package.guids.h</c>: explicit specializations of
+    /// <c>winrt::impl::guid_v</c> for every parameterized interface and
+    /// delegate instance used by the namespaces of a package, preceded by
+    /// forward declarations of the types they mention.
+    /// </summary>
+    /// <remarks>
+    /// C++/WinRT otherwise computes each of these GUIDs with a constexpr
+    /// SHA-1 in every translation unit that uses the type, which is a large
+    /// part of the frontend time of a generated module. Forward declarations
+    /// instead of the C++/WinRT headers keep the header cheap enough to live
+    /// in the precompiled header (pybase.h includes the winrt-sdk one), and
+    /// putting it there also guarantees that the specializations come before
+    /// any implicit instantiation. The specializations are guarded by a macro
+    /// so that the headers of two packages can both be included. Compiling
+    /// with <c>PYWINRT_VERIFY_GUIDS</c> defined checks every value against
+    /// the C++/WinRT computation.
+    /// </remarks>
+    internal static void WritePInterfaceGuidsH(
+        DirectoryInfo headerDir,
+        string pyPackageModule,
+        IEnumerable<GenericInstanceType> instances
+    )
+    {
+        using var sw = new StringWriter();
+        using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
+
+        var sorted = instances.OrderBy(i => i.ToCppTypeName(), StringComparer.Ordinal).ToList();
+
+        // every non-generic type and generic definition mentioned, by C++ namespace
+        var declarations = new SortedDictionary<string, SortedSet<string>>(StringComparer.Ordinal);
+        var namespaces = new SortedSet<string>(StringComparer.Ordinal);
+
+        void Declare(TypeReference type)
+        {
+            if (type is GenericInstanceType gen)
+            {
+                foreach (var arg in gen.GenericArguments)
+                {
+                    Declare(arg);
+                }
+
+                type = gen.ElementType;
+            }
+
+            if (
+                type.Namespace == "System"
+                || type.Namespace.StartsWith("System.")
+                || type.FullName is "Windows.Foundation.EventRegistrationToken"
+                    or "Windows.Foundation.HResult"
+            )
+            {
+                return;
+            }
+
+            var def = type.Resolve();
+
+            if (def.IsCustomizedStruct() || def.IsCustomNumeric())
+            {
+                // these are defined by base.h
+                return;
+            }
+
+            namespaces.Add(def.Namespace);
+
+            var decl = def switch
+            {
+                { IsEnum: true }
+                    => $"enum class {def.Name} : {(def.Fields.Single(f => f.Name == "value__").FieldType.FullName == "System.UInt32" ? "uint32_t" : "int32_t")};",
+                // NB: the WINRT_IMPL_EMPTY_BASES (__declspec(empty_bases))
+                // that C++/WinRT puts on generic types has to be repeated
+                // here: it only applies if it is on the first declaration,
+                // and without it these types get a different object layout.
+                { HasGenericParameters: true }
+                    => $"template <{string.Join(", ", def.GenericParameters.Select(p => $"typename {p.Name}"))}> struct WINRT_IMPL_EMPTY_BASES {def.Name.ToNonGeneric()};",
+                _ => $"struct {def.Name};",
+            };
+
+            declarations.TryAdd(def.Namespace.ToCppNamespace(), new(StringComparer.Ordinal));
+            declarations[def.Namespace.ToCppNamespace()].Add(decl);
+        }
+
+        foreach (var instance in sorted)
+        {
+            Declare(instance);
+        }
+
+        w.WriteLicense();
+        w.WriteBlankLine();
+        w.WriteLine("#pragma once");
+        w.WriteLine();
+        w.WriteLine("#include <winrt/base.h>");
+        w.WriteBlankLine();
+
+        w.WriteLine("#ifndef PYWINRT_GUID_EQUAL");
+        w.WriteLine("#define PYWINRT_GUID_EQUAL");
+        w.WriteLine("namespace py");
+        w.WriteBlock(() =>
+        {
+            w.WriteLine("// winrt::operator== is not constexpr, so the checks below need this");
+            w.WriteLine(
+                "constexpr bool guid_equal(winrt::guid const& a, winrt::guid const& b) noexcept"
+            );
+            w.WriteBlock(() =>
+            {
+                w.WriteLine("if (a.Data1 != b.Data1 || a.Data2 != b.Data2 || a.Data3 != b.Data3)");
+                w.WriteBlock(() => w.WriteLine("return false;"));
+                w.WriteBlankLine();
+                w.WriteLine("for (size_t i = 0; i < 8; i++)");
+                w.WriteBlock(() =>
+                {
+                    w.WriteLine("if (a.Data4[i] != b.Data4[i])");
+                    w.WriteBlock(() => w.WriteLine("return false;"));
+                });
+                w.WriteBlankLine();
+                w.WriteLine("return true;");
+            });
+        });
+        w.WriteLine("#endif");
+        w.WriteBlankLine();
+
+        // Verifying a GUID means computing it the C++/WinRT way, which needs
+        // the full definition of every type in the signature, so that mode
+        // pulls in the real headers instead of the forward declarations.
+        w.WriteLine("#ifdef PYWINRT_VERIFY_GUIDS");
+        foreach (var ns in namespaces)
+        {
+            w.WriteLine($"#include <winrt/{ns}.h>");
+        }
+        w.WriteLine("#else");
+        foreach (var (cppNamespace, decls) in declarations)
+        {
+            w.WriteLine($"namespace winrt::{cppNamespace}");
+            w.WriteBlock(() =>
+            {
+                foreach (var decl in decls)
+                {
+                    w.WriteLine(decl);
+                }
+            });
+            w.WriteBlankLine();
+        }
+        w.WriteLine("#endif");
+        w.WriteBlankLine();
+
+        w.WriteLine("namespace winrt::impl");
+        w.WriteBlock(() =>
+        {
+            foreach (var type in sorted)
+            {
+                var cppType = type.ToCppTypeName();
+                var guid = WinRtGuid.GetGuid(type);
+
+                w.WriteLine($"#ifndef PYWINRT_GUID_{guid:N}");
+                w.WriteLine($"#define PYWINRT_GUID_{guid:N}");
+                w.WriteLine(
+                    $"template <> inline constexpr guid guid_v<{cppType}>{WinRtGuid.ToCppInitializer(guid)};"
+                );
+                w.WriteLine("#ifdef PYWINRT_VERIFY_GUIDS");
+                w.WriteLine(
+                    $"static_assert(py::guid_equal(guid_v<{cppType}>, pinterface_guid<{cppType}>::value));"
+                );
+                w.WriteLine("#endif");
+                w.WriteLine("#endif");
+            }
+        });
+
+        sw.WriteFileIfChanged(headerDir, $"py.{pyPackageModule}.guids.h");
     }
 
     private static void WriteNamespaceCpp(

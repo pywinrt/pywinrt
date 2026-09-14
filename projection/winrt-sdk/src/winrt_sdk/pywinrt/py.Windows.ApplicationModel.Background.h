@@ -4,52 +4,70 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
+#include "py.Windows.ApplicationModel.Background.types.h"
+#if __has_include("py.Windows.ApplicationModel.Activation.types.h")
+#include "py.Windows.ApplicationModel.Activation.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.Calls.Background.types.h")
+#include "py.Windows.ApplicationModel.Calls.Background.types.h"
+#endif
+#if __has_include("py.Windows.Devices.Bluetooth.types.h")
+#include "py.Windows.Devices.Bluetooth.types.h"
+#endif
+#if __has_include("py.Windows.Devices.Bluetooth.Advertisement.types.h")
+#include "py.Windows.Devices.Bluetooth.Advertisement.types.h"
+#endif
+#if __has_include("py.Windows.Devices.Bluetooth.Background.types.h")
+#include "py.Windows.Devices.Bluetooth.Background.types.h"
+#endif
+#if __has_include("py.Windows.Devices.Bluetooth.GenericAttributeProfile.types.h")
+#include "py.Windows.Devices.Bluetooth.GenericAttributeProfile.types.h"
+#endif
+#if __has_include("py.Windows.Devices.Geolocation.types.h")
+#include "py.Windows.Devices.Geolocation.types.h"
+#endif
+#if __has_include("py.Windows.Devices.Sensors.types.h")
+#include "py.Windows.Devices.Sensors.types.h"
+#endif
+#if __has_include("py.Windows.Devices.SmartCards.types.h")
+#include "py.Windows.Devices.SmartCards.types.h"
+#endif
+#if __has_include("py.Windows.Devices.Sms.types.h")
+#include "py.Windows.Devices.Sms.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.Networking.types.h")
+#include "py.Windows.Networking.types.h"
+#endif
+#if __has_include("py.Windows.Networking.Sockets.types.h")
+#include "py.Windows.Networking.Sockets.types.h"
+#endif
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
+#endif
+#if __has_include("py.Windows.Storage.Provider.types.h")
+#include "py.Windows.Storage.Provider.types.h"
+#endif
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
+#endif
+#if __has_include("py.Windows.UI.Notifications.types.h")
+#include "py.Windows.UI.Notifications.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.ApplicationModel.Background.h>
-#include "py.Windows.ApplicationModel.Background.types.h"
-
-
-#if __has_include("py.Windows.ApplicationModel.Activation.types.h")
-#include "py.Windows.ApplicationModel.Activation.types.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Calls.Background.types.h")
-#include "py.Windows.ApplicationModel.Calls.Background.types.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Bluetooth.types.h")
-#include "py.Windows.Devices.Bluetooth.types.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Bluetooth.Advertisement.types.h")
-#include "py.Windows.Devices.Bluetooth.Advertisement.types.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Bluetooth.Background.types.h")
-#include "py.Windows.Devices.Bluetooth.Background.types.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Bluetooth.GenericAttributeProfile.types.h")
-#include "py.Windows.Devices.Bluetooth.GenericAttributeProfile.types.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Geolocation.types.h")
-#include "py.Windows.Devices.Geolocation.types.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Sensors.types.h")
-#include "py.Windows.Devices.Sensors.types.h"
-#endif
-
-#if __has_include("py.Windows.Devices.SmartCards.types.h")
-#include "py.Windows.Devices.SmartCards.types.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Sms.types.h")
-#include "py.Windows.Devices.Sms.types.h"
-#endif
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -57,30 +75,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Networking.types.h")
-#include "py.Windows.Networking.types.h"
-#endif
-
-#if __has_include("py.Windows.Networking.Sockets.types.h")
-#include "py.Windows.Networking.Sockets.types.h"
-#endif
-
-#if __has_include("py.Windows.Storage.types.h")
-#include "py.Windows.Storage.types.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Provider.types.h")
-#include "py.Windows.Storage.Provider.types.h"
-#endif
-
-#if __has_include("py.Windows.System.types.h")
-#include "py.Windows.System.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.Notifications.types.h")
-#include "py.Windows.UI.Notifications.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::Background

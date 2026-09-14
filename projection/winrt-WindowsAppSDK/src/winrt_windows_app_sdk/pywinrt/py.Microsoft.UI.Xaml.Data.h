@@ -4,13 +4,29 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
+#endif
+
+#include "py.Microsoft.UI.Xaml.Data.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.UI.Xaml.Interop.types.h")
+#include "py.Windows.UI.Xaml.Interop.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.types.h")
+#include "py.Microsoft.UI.Xaml.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Microsoft.UI.Xaml.h>
 
 #include <winrt/Microsoft.UI.Xaml.Data.h>
-#include "py.Microsoft.UI.Xaml.Data.types.h"
-
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -18,10 +34,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Interop.types.h")
-#include "py.Windows.UI.Xaml.Interop.types.h"
 #endif
 
 #if __has_include("py.Microsoft.UI.Xaml.h")

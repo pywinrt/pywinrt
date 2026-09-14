@@ -4,12 +4,43 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
+#endif
+
+#include "py.Microsoft.UI.Composition.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Numerics.types.h")
+#include "py.Windows.Foundation.Numerics.types.h"
+#endif
+#if __has_include("py.Windows.Graphics.types.h")
+#include "py.Windows.Graphics.types.h"
+#endif
+#if __has_include("py.Windows.Graphics.Effects.types.h")
+#include "py.Windows.Graphics.Effects.types.h"
+#endif
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
+#endif
+#if __has_include("py.Windows.UI.Composition.types.h")
+#include "py.Windows.UI.Composition.types.h"
+#endif
+#if __has_include("py.Microsoft.Graphics.DirectX.types.h")
+#include "py.Microsoft.Graphics.DirectX.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Dispatching.types.h")
+#include "py.Microsoft.UI.Dispatching.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Microsoft.UI.Composition.h>
-#include "py.Microsoft.UI.Composition.types.h"
-
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -17,34 +48,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.types.h")
-#include "py.Windows.Foundation.Numerics.types.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.types.h")
-#include "py.Windows.Graphics.types.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Effects.types.h")
-#include "py.Windows.Graphics.Effects.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.types.h")
-#include "py.Windows.UI.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.Composition.types.h")
-#include "py.Windows.UI.Composition.types.h"
-#endif
-
-#if __has_include("py.Microsoft.Graphics.DirectX.types.h")
-#include "py.Microsoft.Graphics.DirectX.types.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Dispatching.types.h")
-#include "py.Microsoft.UI.Dispatching.types.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Composition

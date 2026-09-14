@@ -4,14 +4,17 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
+#endif
 
-#include <winrt/Microsoft.UI.Xaml.Interop.h>
 #include "py.Microsoft.UI.Xaml.Interop.types.h"
-
-
 #if __has_include("py.Windows.Foundation.types.h")
 #include "py.Windows.Foundation.types.h"
 #endif
+
+
+#include <winrt/Microsoft.UI.Xaml.Interop.h>
 
 namespace py::impl::Microsoft::UI::Xaml::Interop
 {

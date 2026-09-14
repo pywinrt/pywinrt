@@ -4,22 +4,27 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
-
-#include <winrt/Microsoft.Windows.AI.Text.h>
-#include "py.Microsoft.Windows.AI.Text.types.h"
-
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
 #endif
 
+#include "py.Microsoft.Windows.AI.Text.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
 #if __has_include("py.Microsoft.Windows.AI.types.h")
 #include "py.Microsoft.Windows.AI.types.h"
 #endif
-
 #if __has_include("py.Microsoft.Windows.AI.ContentSafety.types.h")
 #include "py.Microsoft.Windows.AI.ContentSafety.types.h"
+#endif
+
+#include <winrt/Windows.Foundation.h>
+
+#include <winrt/Microsoft.Windows.AI.Text.h>
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
 #endif
 
 namespace py::impl::Microsoft::Windows::AI::Text

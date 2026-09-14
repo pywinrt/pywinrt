@@ -4,14 +4,17 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
 
-#include <winrt/Windows.Data.Xml.Xsl.h>
 #include "py.Windows.Data.Xml.Xsl.types.h"
-
-
 #if __has_include("py.Windows.Data.Xml.Dom.types.h")
 #include "py.Windows.Data.Xml.Dom.types.h"
 #endif
+
+
+#include <winrt/Windows.Data.Xml.Xsl.h>
 
 namespace py::impl::Windows::Data::Xml::Xsl
 {

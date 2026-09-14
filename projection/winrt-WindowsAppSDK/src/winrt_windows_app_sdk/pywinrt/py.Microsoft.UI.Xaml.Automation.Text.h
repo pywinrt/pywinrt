@@ -4,10 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
+#endif
 
-#include <winrt/Microsoft.UI.Xaml.Automation.Text.h>
 #include "py.Microsoft.UI.Xaml.Automation.Text.types.h"
 
+
+#include <winrt/Microsoft.UI.Xaml.Automation.Text.h>
 
 namespace py::impl::Microsoft::UI::Xaml::Automation::Text
 {

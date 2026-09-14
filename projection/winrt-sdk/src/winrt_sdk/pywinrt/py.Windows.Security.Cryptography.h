@@ -4,14 +4,17 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
 
-#include <winrt/Windows.Security.Cryptography.h>
 #include "py.Windows.Security.Cryptography.types.h"
-
-
 #if __has_include("py.Windows.Storage.Streams.types.h")
 #include "py.Windows.Storage.Streams.types.h"
 #endif
+
+
+#include <winrt/Windows.Security.Cryptography.h>
 
 namespace py::impl::Windows::Security::Cryptography
 {

@@ -4,12 +4,25 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
+#include "py.Windows.UI.Xaml.Shapes.types.h"
+#if __has_include("py.Windows.UI.Composition.types.h")
+#include "py.Windows.UI.Composition.types.h"
+#endif
+#if __has_include("py.Windows.UI.Xaml.types.h")
+#include "py.Windows.UI.Xaml.types.h"
+#endif
+#if __has_include("py.Windows.UI.Xaml.Media.types.h")
+#include "py.Windows.UI.Xaml.Media.types.h"
+#endif
+
 #include <winrt/Windows.UI.Composition.h>
 #include <winrt/Windows.UI.Xaml.h>
 
 #include <winrt/Windows.UI.Xaml.Shapes.h>
-#include "py.Windows.UI.Xaml.Shapes.types.h"
-
 
 #if __has_include("py.Windows.UI.Composition.h")
 #include "py.Windows.UI.Composition.h"
@@ -17,10 +30,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 #if __has_include("py.Windows.UI.Xaml.h")
 #include "py.Windows.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Media.types.h")
-#include "py.Windows.UI.Xaml.Media.types.h"
 #endif
 
 namespace py::impl::Windows::UI::Xaml::Shapes

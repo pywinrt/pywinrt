@@ -4,26 +4,30 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
 
-#include <winrt/Windows.ApplicationModel.DataTransfer.DragDrop.Core.h>
 #include "py.Windows.ApplicationModel.DataTransfer.DragDrop.Core.types.h"
-
-
 #if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
 #include "py.Windows.ApplicationModel.DataTransfer.types.h"
 #endif
-
 #if __has_include("py.Windows.ApplicationModel.DataTransfer.DragDrop.types.h")
 #include "py.Windows.ApplicationModel.DataTransfer.DragDrop.types.h"
 #endif
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Graphics.Imaging.types.h")
+#include "py.Windows.Graphics.Imaging.types.h"
+#endif
+
+#include <winrt/Windows.Foundation.h>
+
+#include <winrt/Windows.ApplicationModel.DataTransfer.DragDrop.Core.h>
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.types.h")
-#include "py.Windows.Graphics.Imaging.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::DataTransfer::DragDrop::Core

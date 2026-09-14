@@ -4,6 +4,102 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
+#include "py.Windows.UI.WebUI.types.h"
+#if __has_include("py.Windows.ApplicationModel.types.h")
+#include "py.Windows.ApplicationModel.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.Activation.types.h")
+#include "py.Windows.ApplicationModel.Activation.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.Appointments.AppointmentsProvider.types.h")
+#include "py.Windows.ApplicationModel.Appointments.AppointmentsProvider.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.Background.types.h")
+#include "py.Windows.ApplicationModel.Background.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.Calls.types.h")
+#include "py.Windows.ApplicationModel.Calls.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.Contacts.types.h")
+#include "py.Windows.ApplicationModel.Contacts.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.Contacts.Provider.types.h")
+#include "py.Windows.ApplicationModel.Contacts.Provider.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.Core.types.h")
+#include "py.Windows.ApplicationModel.Core.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
+#include "py.Windows.ApplicationModel.DataTransfer.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.ShareTarget.types.h")
+#include "py.Windows.ApplicationModel.DataTransfer.ShareTarget.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.Search.types.h")
+#include "py.Windows.ApplicationModel.Search.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.UserDataAccounts.Provider.types.h")
+#include "py.Windows.ApplicationModel.UserDataAccounts.Provider.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.Wallet.types.h")
+#include "py.Windows.ApplicationModel.Wallet.types.h"
+#endif
+#if __has_include("py.Windows.Devices.Enumeration.types.h")
+#include "py.Windows.Devices.Enumeration.types.h"
+#endif
+#if __has_include("py.Windows.Devices.Printers.Extensions.types.h")
+#include "py.Windows.Devices.Printers.Extensions.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.Media.SpeechRecognition.types.h")
+#include "py.Windows.Media.SpeechRecognition.types.h"
+#endif
+#if __has_include("py.Windows.Security.Authentication.Web.types.h")
+#include "py.Windows.Security.Authentication.Web.types.h"
+#endif
+#if __has_include("py.Windows.Security.Authentication.Web.Provider.types.h")
+#include "py.Windows.Security.Authentication.Web.Provider.types.h"
+#endif
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
+#endif
+#if __has_include("py.Windows.Storage.Pickers.Provider.types.h")
+#include "py.Windows.Storage.Pickers.Provider.types.h"
+#endif
+#if __has_include("py.Windows.Storage.Provider.types.h")
+#include "py.Windows.Storage.Provider.types.h"
+#endif
+#if __has_include("py.Windows.Storage.Search.types.h")
+#include "py.Windows.Storage.Search.types.h"
+#endif
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
+#endif
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
+#endif
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
+#endif
+#if __has_include("py.Windows.Web.types.h")
+#include "py.Windows.Web.types.h"
+#endif
+#if __has_include("py.Windows.Web.Http.types.h")
+#include "py.Windows.Web.Http.types.h"
+#endif
+#if __has_include("py.Windows.Web.UI.types.h")
+#include "py.Windows.Web.UI.types.h"
+#endif
+
 #include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.ApplicationModel.Activation.h>
 #include <winrt/Windows.ApplicationModel.Background.h>
@@ -12,8 +108,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Web.UI.h>
 
 #include <winrt/Windows.UI.WebUI.h>
-#include "py.Windows.UI.WebUI.types.h"
-
 
 #if __has_include("py.Windows.ApplicationModel.h")
 #include "py.Windows.ApplicationModel.h"
@@ -23,56 +117,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.ApplicationModel.Activation.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.Appointments.AppointmentsProvider.types.h")
-#include "py.Windows.ApplicationModel.Appointments.AppointmentsProvider.types.h"
-#endif
-
 #if __has_include("py.Windows.ApplicationModel.Background.h")
 #include "py.Windows.ApplicationModel.Background.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Calls.types.h")
-#include "py.Windows.ApplicationModel.Calls.types.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Contacts.types.h")
-#include "py.Windows.ApplicationModel.Contacts.types.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Contacts.Provider.types.h")
-#include "py.Windows.ApplicationModel.Contacts.Provider.types.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Core.types.h")
-#include "py.Windows.ApplicationModel.Core.types.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
-#include "py.Windows.ApplicationModel.DataTransfer.types.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.ShareTarget.types.h")
-#include "py.Windows.ApplicationModel.DataTransfer.ShareTarget.types.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Search.types.h")
-#include "py.Windows.ApplicationModel.Search.types.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.UserDataAccounts.Provider.types.h")
-#include "py.Windows.ApplicationModel.UserDataAccounts.Provider.types.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Wallet.types.h")
-#include "py.Windows.ApplicationModel.Wallet.types.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Enumeration.types.h")
-#include "py.Windows.Devices.Enumeration.types.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Printers.Extensions.types.h")
-#include "py.Windows.Devices.Printers.Extensions.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -81,54 +127,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Media.SpeechRecognition.types.h")
-#include "py.Windows.Media.SpeechRecognition.types.h"
-#endif
-
-#if __has_include("py.Windows.Security.Authentication.Web.types.h")
-#include "py.Windows.Security.Authentication.Web.types.h"
-#endif
-
-#if __has_include("py.Windows.Security.Authentication.Web.Provider.types.h")
-#include "py.Windows.Security.Authentication.Web.Provider.types.h"
-#endif
-
-#if __has_include("py.Windows.Storage.types.h")
-#include "py.Windows.Storage.types.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Pickers.Provider.types.h")
-#include "py.Windows.Storage.Pickers.Provider.types.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Provider.types.h")
-#include "py.Windows.Storage.Provider.types.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Search.types.h")
-#include "py.Windows.Storage.Search.types.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.types.h")
-#include "py.Windows.Storage.Streams.types.h"
-#endif
-
-#if __has_include("py.Windows.System.types.h")
-#include "py.Windows.System.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.types.h")
-#include "py.Windows.UI.types.h"
-#endif
-
-#if __has_include("py.Windows.Web.types.h")
-#include "py.Windows.Web.types.h"
-#endif
-
-#if __has_include("py.Windows.Web.Http.types.h")
-#include "py.Windows.Web.Http.types.h"
 #endif
 
 #if __has_include("py.Windows.Web.UI.h")

@@ -4,34 +4,36 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
-
-#include <winrt/Windows.Perception.People.h>
-#include "py.Windows.Perception.People.types.h"
-
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
 #endif
 
+#include "py.Windows.Perception.People.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
 #if __has_include("py.Windows.Foundation.Numerics.types.h")
 #include "py.Windows.Foundation.Numerics.types.h"
 #endif
-
 #if __has_include("py.Windows.Perception.types.h")
 #include "py.Windows.Perception.types.h"
 #endif
-
 #if __has_include("py.Windows.Perception.Spatial.types.h")
 #include "py.Windows.Perception.Spatial.types.h"
 #endif
-
 #if __has_include("py.Windows.UI.Input.types.h")
 #include "py.Windows.UI.Input.types.h"
 #endif
-
 #if __has_include("py.Windows.UI.Input.Spatial.types.h")
 #include "py.Windows.UI.Input.Spatial.types.h"
+#endif
+
+#include <winrt/Windows.Foundation.h>
+
+#include <winrt/Windows.Perception.People.h>
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
 #endif
 
 namespace py::impl::Windows::Perception::People

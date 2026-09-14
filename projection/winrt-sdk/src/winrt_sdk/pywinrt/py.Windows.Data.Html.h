@@ -4,10 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
 
-#include <winrt/Windows.Data.Html.h>
 #include "py.Windows.Data.Html.types.h"
 
+
+#include <winrt/Windows.Data.Html.h>
 
 namespace py::impl::Windows::Data::Html
 {

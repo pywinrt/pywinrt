@@ -4,18 +4,20 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
 
-#include <winrt/Windows.Perception.Spatial.Preview.h>
 #include "py.Windows.Perception.Spatial.Preview.types.h"
-
-
 #if __has_include("py.Windows.Foundation.Numerics.types.h")
 #include "py.Windows.Foundation.Numerics.types.h"
 #endif
-
 #if __has_include("py.Windows.Perception.Spatial.types.h")
 #include "py.Windows.Perception.Spatial.types.h"
 #endif
+
+
+#include <winrt/Windows.Perception.Spatial.Preview.h>
 
 namespace py::impl::Windows::Perception::Spatial::Preview
 {

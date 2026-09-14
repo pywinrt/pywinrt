@@ -4,26 +4,26 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
 
-#include <winrt/Windows.UI.Input.Core.h>
 #include "py.Windows.UI.Input.Core.types.h"
-
-
 #if __has_include("py.Windows.ApplicationModel.Core.types.h")
 #include "py.Windows.ApplicationModel.Core.types.h"
 #endif
-
 #if __has_include("py.Windows.System.types.h")
 #include "py.Windows.System.types.h"
 #endif
-
 #if __has_include("py.Windows.UI.Core.types.h")
 #include "py.Windows.UI.Core.types.h"
 #endif
-
 #if __has_include("py.Windows.UI.Input.types.h")
 #include "py.Windows.UI.Input.types.h"
 #endif
+
+
+#include <winrt/Windows.UI.Input.Core.h>
 
 namespace py::impl::Windows::UI::Input::Core
 {

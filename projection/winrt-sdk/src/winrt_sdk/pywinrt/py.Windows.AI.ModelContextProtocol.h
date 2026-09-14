@@ -4,19 +4,21 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
 
-#include <winrt/Windows.AI.ModelContextProtocol.h>
 #include "py.Windows.AI.ModelContextProtocol.types.h"
-
-
 #if __has_include("py.Windows.ApplicationModel.types.h")
 #include "py.Windows.ApplicationModel.types.h"
 #endif
-
 #if __has_include("py.Windows.UI.types.h")
 #include "py.Windows.UI.types.h"
 #endif
+
+#include <winrt/Windows.Foundation.h>
+
+#include <winrt/Windows.AI.ModelContextProtocol.h>
 
 namespace py::impl::Windows::AI::ModelContextProtocol
 {

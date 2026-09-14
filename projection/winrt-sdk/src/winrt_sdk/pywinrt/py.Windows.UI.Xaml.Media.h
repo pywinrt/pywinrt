@@ -4,14 +4,45 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
+#include "py.Windows.UI.Xaml.Media.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.Media.Playback.types.h")
+#include "py.Windows.Media.Playback.types.h"
+#endif
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
+#endif
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
+#endif
+#if __has_include("py.Windows.UI.Composition.types.h")
+#include "py.Windows.UI.Composition.types.h"
+#endif
+#if __has_include("py.Windows.UI.Xaml.types.h")
+#include "py.Windows.UI.Xaml.types.h"
+#endif
+#if __has_include("py.Windows.UI.Xaml.Controls.Primitives.types.h")
+#include "py.Windows.UI.Xaml.Controls.Primitives.types.h"
+#endif
+#if __has_include("py.Windows.UI.Xaml.Media.Media3D.types.h")
+#include "py.Windows.UI.Xaml.Media.Media3D.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.UI.Composition.h>
 #include <winrt/Windows.UI.Xaml.h>
 
 #include <winrt/Windows.UI.Xaml.Media.h>
-#include "py.Windows.UI.Xaml.Media.types.h"
-
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -21,32 +52,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Media.Playback.types.h")
-#include "py.Windows.Media.Playback.types.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.types.h")
-#include "py.Windows.Storage.Streams.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.types.h")
-#include "py.Windows.UI.types.h"
-#endif
-
 #if __has_include("py.Windows.UI.Composition.h")
 #include "py.Windows.UI.Composition.h"
 #endif
 
 #if __has_include("py.Windows.UI.Xaml.h")
 #include "py.Windows.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Controls.Primitives.types.h")
-#include "py.Windows.UI.Xaml.Controls.Primitives.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Media.Media3D.types.h")
-#include "py.Windows.UI.Xaml.Media.Media3D.types.h"
 #endif
 
 namespace py::impl::Windows::UI::Xaml::Media

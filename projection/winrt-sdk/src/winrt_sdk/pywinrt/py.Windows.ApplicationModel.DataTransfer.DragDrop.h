@@ -4,10 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
 
-#include <winrt/Windows.ApplicationModel.DataTransfer.DragDrop.h>
 #include "py.Windows.ApplicationModel.DataTransfer.DragDrop.types.h"
 
+
+#include <winrt/Windows.ApplicationModel.DataTransfer.DragDrop.h>
 
 namespace py::impl::Windows::ApplicationModel::DataTransfer::DragDrop
 {

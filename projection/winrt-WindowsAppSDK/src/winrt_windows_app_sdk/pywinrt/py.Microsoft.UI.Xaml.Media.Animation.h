@@ -4,13 +4,38 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
+#endif
+
+#include "py.Microsoft.UI.Xaml.Media.Animation.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Composition.types.h")
+#include "py.Microsoft.UI.Composition.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.types.h")
+#include "py.Microsoft.UI.Xaml.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.Controls.types.h")
+#include "py.Microsoft.UI.Xaml.Controls.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.Controls.Primitives.types.h")
+#include "py.Microsoft.UI.Xaml.Controls.Primitives.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Microsoft.UI.Xaml.h>
 
 #include <winrt/Microsoft.UI.Xaml.Media.Animation.h>
-#include "py.Microsoft.UI.Xaml.Media.Animation.types.h"
-
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -20,24 +45,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.UI.types.h")
-#include "py.Windows.UI.types.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Composition.types.h")
-#include "py.Microsoft.UI.Composition.types.h"
-#endif
-
 #if __has_include("py.Microsoft.UI.Xaml.h")
 #include "py.Microsoft.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Controls.types.h")
-#include "py.Microsoft.UI.Xaml.Controls.types.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Controls.Primitives.types.h")
-#include "py.Microsoft.UI.Xaml.Controls.Primitives.types.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Xaml::Media::Animation

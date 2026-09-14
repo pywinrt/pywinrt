@@ -4,13 +4,38 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
+#include "py.Windows.UI.Xaml.Documents.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.UI.Core.types.h")
+#include "py.Windows.UI.Core.types.h"
+#endif
+#if __has_include("py.Windows.UI.Text.types.h")
+#include "py.Windows.UI.Text.types.h"
+#endif
+#if __has_include("py.Windows.UI.Xaml.types.h")
+#include "py.Windows.UI.Xaml.types.h"
+#endif
+#if __has_include("py.Windows.UI.Xaml.Input.types.h")
+#include "py.Windows.UI.Xaml.Input.types.h"
+#endif
+#if __has_include("py.Windows.UI.Xaml.Media.types.h")
+#include "py.Windows.UI.Xaml.Media.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.UI.Xaml.h>
 
 #include <winrt/Windows.UI.Xaml.Documents.h>
-#include "py.Windows.UI.Xaml.Documents.types.h"
-
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -20,24 +45,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.UI.Core.types.h")
-#include "py.Windows.UI.Core.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.Text.types.h")
-#include "py.Windows.UI.Text.types.h"
-#endif
-
 #if __has_include("py.Windows.UI.Xaml.h")
 #include "py.Windows.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Input.types.h")
-#include "py.Windows.UI.Xaml.Input.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Media.types.h")
-#include "py.Windows.UI.Xaml.Media.types.h"
 #endif
 
 namespace py::impl::Windows::UI::Xaml::Documents

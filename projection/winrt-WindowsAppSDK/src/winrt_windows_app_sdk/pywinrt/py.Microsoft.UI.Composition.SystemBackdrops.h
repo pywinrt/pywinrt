@@ -4,35 +4,41 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
+#endif
+
+#include "py.Microsoft.UI.Composition.SystemBackdrops.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
+#endif
+#if __has_include("py.Windows.UI.Composition.types.h")
+#include "py.Windows.UI.Composition.types.h"
+#endif
+#if __has_include("py.Windows.UI.Core.types.h")
+#include "py.Windows.UI.Core.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.types.h")
+#include "py.Microsoft.UI.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Composition.types.h")
+#include "py.Microsoft.UI.Composition.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Microsoft.UI.h>
 
 #include <winrt/Microsoft.UI.Composition.SystemBackdrops.h>
-#include "py.Microsoft.UI.Composition.SystemBackdrops.types.h"
-
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.UI.types.h")
-#include "py.Windows.UI.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.Composition.types.h")
-#include "py.Windows.UI.Composition.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.types.h")
-#include "py.Windows.UI.Core.types.h"
-#endif
-
 #if __has_include("py.Microsoft.UI.h")
 #include "py.Microsoft.UI.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Composition.types.h")
-#include "py.Microsoft.UI.Composition.types.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Composition::SystemBackdrops

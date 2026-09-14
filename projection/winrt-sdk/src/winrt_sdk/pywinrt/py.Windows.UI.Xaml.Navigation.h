@@ -4,26 +4,26 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
 
-#include <winrt/Windows.UI.Xaml.Navigation.h>
 #include "py.Windows.UI.Xaml.Navigation.types.h"
-
-
 #if __has_include("py.Windows.Foundation.types.h")
 #include "py.Windows.Foundation.types.h"
 #endif
-
 #if __has_include("py.Windows.UI.Xaml.types.h")
 #include "py.Windows.UI.Xaml.types.h"
 #endif
-
 #if __has_include("py.Windows.UI.Xaml.Interop.types.h")
 #include "py.Windows.UI.Xaml.Interop.types.h"
 #endif
-
 #if __has_include("py.Windows.UI.Xaml.Media.Animation.types.h")
 #include "py.Windows.UI.Xaml.Media.Animation.types.h"
 #endif
+
+
+#include <winrt/Windows.UI.Xaml.Navigation.h>
 
 namespace py::impl::Windows::UI::Xaml::Navigation
 {

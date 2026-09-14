@@ -289,6 +289,100 @@ sealed class Members
             );
     }
 
+    private IReadOnlyList<GenericInstanceType>? genericInstancesCache;
+
+    /// <summary>
+    /// Gets every closed parameterized interface or delegate instance (e.g.
+    /// <c>IAsyncOperation&lt;StorageFile&gt;</c>) that appears in the member
+    /// signatures and struct fields of this namespace, including the nested
+    /// arguments of other instances, sorted by C++ type name.
+    /// </summary>
+    /// <remarks>
+    /// Interfaces that a type only implements (rather than mentions in a
+    /// signature) are left out. Adding them was measured and made no
+    /// difference to compile time, because the few instantiations it saves
+    /// are paid back by the larger generated header.
+    ///
+    /// These are the types whose GUIDs C++/WinRT would otherwise compute with
+    /// a constexpr SHA-1 in every module that uses them, so the generated
+    /// GUID header spells them out. The related instances that the runtime
+    /// wrappers use (iterators, completed handlers, key-value pairs, ...) are
+    /// included. Instances that mention <c>System.Type</c> are left out
+    /// because C++/WinRT maps that to a different struct.
+    /// </remarks>
+    public IReadOnlyList<GenericInstanceType> GetGenericInstances()
+    {
+        return genericInstancesCache ??= ComputeGenericInstances();
+    }
+
+    private IReadOnlyList<GenericInstanceType> ComputeGenericInstances()
+    {
+        var instances = new SortedDictionary<string, GenericInstanceType>(StringComparer.Ordinal);
+
+        void Collect(TypeReference type)
+        {
+            while (type is ByReferenceType or ArrayType or OptionalModifierType or RequiredModifierType)
+            {
+                type = ((TypeSpecification)type).ElementType;
+            }
+
+            if (type is not GenericInstanceType gen || !IsClosed(gen))
+            {
+                return;
+            }
+
+            if (!instances.TryAdd(gen.ToCppTypeName(), gen))
+            {
+                return;
+            }
+
+            foreach (var arg in gen.GenericArguments)
+            {
+                Collect(arg);
+            }
+
+            // The runtime wrappers in pybase.h and the generated headers use
+            // these related instances to implement the collection and async
+            // interfaces, so they are needed too.
+            foreach (var related in WinRtGuid.GetRelatedInstances(gen))
+            {
+                Collect(related);
+            }
+        }
+
+        var methods = Classes
+            .Concat(Interfaces)
+            .SelectMany(GetMemberMethods)
+            .Concat(Delegates.Select(d => d.Type.Methods.Single(m => m.Name == "Invoke")));
+
+        foreach (var method in methods)
+        {
+            foreach (
+                var t in method.Parameters.Select(p => p.ParameterType).Append(method.ReturnType)
+            )
+            {
+                Collect(t);
+            }
+        }
+
+        foreach (var field in Structs.SelectMany(s => s.Type.Fields.Where(f => !f.IsStatic)))
+        {
+            Collect(field.FieldType);
+        }
+
+        return instances.Values.ToList();
+    }
+
+    private static bool IsClosed(TypeReference type) =>
+        type switch
+        {
+            GenericParameter => false,
+            { FullName: "System.Type" } => false,
+            GenericInstanceType gen => gen.GenericArguments.All(IsClosed),
+            TypeSpecification spec => IsClosed(spec.ElementType),
+            _ => true,
+        };
+
     private IReadOnlyCollection<QualifiedNamespace>? fullHeaderNamespacesCache;
 
     /// <summary>

@@ -4,20 +4,44 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
+#include "py.Windows.Graphics.Printing.Workflow.types.h"
+#if __has_include("py.Windows.ApplicationModel.Activation.types.h")
+#include "py.Windows.ApplicationModel.Activation.types.h"
+#endif
+#if __has_include("py.Windows.Devices.Printers.types.h")
+#include "py.Windows.Devices.Printers.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.Graphics.Printing.PrintTicket.types.h")
+#include "py.Windows.Graphics.Printing.PrintTicket.types.h"
+#endif
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
+#endif
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
+#endif
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
+#endif
+
 #include <winrt/Windows.ApplicationModel.Activation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Graphics.Printing.Workflow.h>
-#include "py.Windows.Graphics.Printing.Workflow.types.h"
-
 
 #if __has_include("py.Windows.ApplicationModel.Activation.h")
 #include "py.Windows.ApplicationModel.Activation.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Printers.types.h")
-#include "py.Windows.Devices.Printers.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -26,22 +50,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Printing.PrintTicket.types.h")
-#include "py.Windows.Graphics.Printing.PrintTicket.types.h"
-#endif
-
-#if __has_include("py.Windows.Storage.types.h")
-#include "py.Windows.Storage.types.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.types.h")
-#include "py.Windows.Storage.Streams.types.h"
-#endif
-
-#if __has_include("py.Windows.System.types.h")
-#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Windows::Graphics::Printing::Workflow
