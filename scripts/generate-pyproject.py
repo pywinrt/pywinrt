@@ -396,16 +396,12 @@ def write_project_files(
                         else ""
                     ),
                     extra_cibuildwheel_windows=(
-                        '\nrepair-wheel-command = "python scripts/add_msvcp140_dll.py {wheel} {dest_dir}"'
-                        if package_name == "winrt-runtime"
+                        '\nrepair-wheel-command = "python scripts/add_bootstrap_dll.py {wheel} {dest_dir}"'
+                        if is_app_sdk_bootstrap_package(package_name)
                         else (
-                            '\nrepair-wheel-command = "python scripts/add_bootstrap_dll.py {wheel} {dest_dir}"'
-                            if is_app_sdk_bootstrap_package(package_name)
-                            else (
-                                '\nrepair-wheel-command = "python scripts/add_webview2_dll.py {wheel} {dest_dir}"'
-                                if is_webview2_package(package_name)
-                                else ""
-                            )
+                            '\nrepair-wheel-command = "python scripts/add_webview2_dll.py {wheel} {dest_dir}"'
+                            if is_webview2_package(package_name)
+                            else ""
                         )
                     ),
                 )

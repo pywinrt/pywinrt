@@ -5,6 +5,13 @@
 ## [Unreleased]
 
 ### Changed
+- `winrt-runtime` no longer ships a copy of `MSVCP140.dll`, and no module in
+  the projection needs the Visual C++ redistributable any more. The whole of
+  that dependency was two cold standard library helpers, which are now compiled
+  into each module instead. Windows binds a DLL import by base name to whichever
+  copy loaded first, so the copy we shipped became the one every package in the
+  process used, and it could be older than another package needed - importing
+  `winrt` before some packages was enough to stop them loading ([#139]).
 - Overloaded methods are called by the number of arguments again instead of
   using a separate name for each overload. The
   `[Windows.Foundation.Metadata.Overload]` attribute is now only used for
@@ -117,6 +124,8 @@
   stopped selecting our own declarations, but the `.idl` that header is
   generated from is missing `CreateDirect3D11SurfaceFromDXGISurface`, which is
   now declared separately there.
+
+[#139]: https://github.com/pywinrt/pywinrt/issues/139
 
 ## [v3.2.1] - 2025-06-06
 

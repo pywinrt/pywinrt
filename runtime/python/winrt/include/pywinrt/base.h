@@ -7,6 +7,11 @@
 #include <pythoncapi_compat.h>
 #include <pywinrt/version.h>
 
+// Keeps MSVCP140.dll out of every module that includes this header. See the
+// file itself - it is deliberately included before anything that instantiates a
+// standard container, though either order works.
+#include <pywinrt/throw_helpers.h>
+
 #define COM_NO_WINDOWS_H
 #ifndef NOMINMAX
 #define NOMINMAX
