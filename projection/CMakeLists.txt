@@ -310,7 +310,67 @@ set(pch_headers_winui2 ${pch_headers_common}
     "${WINRT_MICROSOFT_UI_XAML_PATH}/pywinrt/py.Microsoft.UI.Xaml.Controls.types.h"
 )
 
-foreach(package ${packages} ${winui2_packages} ${winui3_packages} ${webview2_packages} ${interop_packages} ${winui3_interop_packages})
+# Build order
+################################################################################
+#
+# Ninja starts the jobs that are ready in the order their edges appear in
+# build.ninja, which is the order in which the targets are created here. Its
+# critical path scheduler does not reorder them: given a complete .ninja_log
+# from a previous build, both the 1.12.1 that Visual Studio bundles and 1.13.2
+# still run the ready edges in declaration order.
+#
+# That decides the wall time of the full projection, because none of its ~430
+# translation units waits for anything but its group's precompiled header, and
+# those are all finished within the first 16 seconds. Every remaining job is
+# runnable from then on, so this order *is* the schedule, and the build ends
+# when the longest of the jobs that were started last ends. Compiling
+# py.Microsoft.UI.Xaml.Controls.cpp alone takes 162 s of a 365 s Debug build,
+# and it used to be picked almost last, starting 201 s in with the other seven
+# cores draining behind it.
+#
+# So start the most expensive translation units first. Source size stands in
+# for compile time, which it predicts well at the end that matters: the two
+# XAML Controls namespaces are the two largest generated sources by a wide
+# margin, and the two longest compiles by the same margin.
+
+function(pywinrt_sort_packages_by_size out_var)
+    set(keyed_packages "")
+
+    foreach(package ${ARGN})
+        # one source per package, or two where it is split in half to break a
+        # circular dependency
+        file(GLOB package_sources "${CMAKE_CURRENT_SOURCE_DIR}/${package}/py.*.cpp")
+
+        set(size 0)
+        foreach(source ${package_sources})
+            file(SIZE "${source}" source_size)
+            math(EXPR size "${size} + ${source_size}")
+        endforeach()
+
+        # zero-pad the key so that a plain string sort orders by size, and keep
+        # the package name in it so that equal sizes still sort deterministically
+        string(LENGTH "${size}" size_length)
+        math(EXPR padding_length "12 - ${size_length}")
+        string(REPEAT "0" ${padding_length} padding)
+
+        list(APPEND keyed_packages "${padding}${size} ${package}")
+    endforeach()
+
+    list(SORT keyed_packages ORDER DESCENDING)
+    list(TRANSFORM keyed_packages REPLACE "^[0-9]+ " "")
+
+    set(${out_var} "${keyed_packages}" PARENT_SCOPE)
+endfunction()
+
+pywinrt_sort_packages_by_size(sorted_packages
+    ${packages} ${winui2_packages} ${winui3_packages} ${webview2_packages}
+    ${interop_packages} ${winui3_interop_packages}
+)
+
+# namespace packages
+################################################################################
+
+foreach(package ${sorted_packages})
     pywinrt_add_namespace_package(${package})
 
     # speed up builds by precompiling frequently used headers
