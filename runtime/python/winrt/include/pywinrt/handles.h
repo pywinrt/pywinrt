@@ -11,38 +11,50 @@
 namespace py
 {
     /**
-     * Traits for use with winrt::handle_type.
+     * Holds the Python GIL for as long as it is in scope.
+     *
+     * This one is not a winrt::handle_type like the rest of the file. That
+     * model needs one value of the handle type to stand for "holding nothing",
+     * and PyGILState_STATE has none to spare: PyGILState_Ensure() returns
+     * whether the calling thread already held the GIL, and both answers have to
+     * be handed back to PyGILState_Release(). PyGILState_LOCKED does not unlock
+     * anything, but it still balances the counter on the thread state, which is
+     * what decides when the state of a thread Python did not create is
+     * destroyed. Since PyGILState_LOCKED is zero, spelling it as the empty
+     * value is also spelling it as the one case that must not be skipped.
      */
-    struct gil_state_traits
+    struct gil_guard
     {
-        using type = PyGILState_STATE;
-
-        static void close(type value) noexcept
+        gil_guard() noexcept : m_state{PyGILState_Ensure()}
         {
-            PyGILState_Release(value);
         }
 
-        static constexpr type invalid() noexcept
+        gil_guard(gil_guard const&) = delete;
+        gil_guard& operator=(gil_guard const&) = delete;
+
+        ~gil_guard() noexcept
         {
-            return static_cast<PyGILState_STATE>(0);
+            PyGILState_Release(m_state);
         }
+
+      private:
+        PyGILState_STATE m_state;
     };
-
-    /**
-     * Type alias for Python GIL state handle.
-     */
-    using gil_handle = winrt::handle_type<gil_state_traits>;
 
     /**
      * Helper function for ensuring a block of code runs with the Python GIL held.
      */
-    static inline auto ensure_gil()
+    [[nodiscard]] static inline gil_guard ensure_gil()
     {
-        return gil_handle{PyGILState_Ensure()};
+        return {};
     }
 
     /**
      * Traits for use with winrt::handle_type.
+     *
+     * Unlike the GIL above, this one does fit the model: PyEval_SaveThread()
+     * always returns the thread state it detached, never a null pointer, so
+     * null is free to mean "holding nothing".
      */
     struct thread_state_traits
     {

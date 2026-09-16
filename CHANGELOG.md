@@ -140,6 +140,14 @@
   Python 3.10 reaches its own in October 2026.
 
 ### Fixed
+- Fixed a Python thread state leaking every time the projection took the GIL on
+  a thread that already held it. `PyGILState_Ensure()` reports whether the
+  caller already had the GIL, and the RAII wrapper used that answer as its
+  "holding nothing" value, so it skipped the matching `PyGILState_Release()` in
+  exactly that case. The release does not unlock anything there, but it is what
+  balances the counter that decides when the state of a thread the projection
+  did not create is torn down. The most common way to reach it was garbage
+  collecting an object that held an event handler.
 - Fixed calling a member that an object does not implement crashing the process
   instead of raising `AttributeError`. This happened whenever the metadata of
   the member was present but the object was not, for example an object from an
