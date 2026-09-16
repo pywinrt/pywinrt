@@ -1,4 +1,8 @@
-cmake_minimum_required(VERSION 3.31)
+# 4.4.1 is where FindPython learned to manage the Windows pydebug ABI flag, so
+# Python3_add_library() names a Debug module <name>_d.pyd - what the debug
+# interpreter looks for - without us doing it by hand. It is also the version
+# every toolchain the project builds on already has.
+cmake_minimum_required(VERSION 4.4.1)
 cmake_policy(SET CMP0091 NEW)
 project(pywinrt-projection LANGUAGES CXX)
 
@@ -90,7 +94,6 @@ message(STATUS "Windows App SDK architecture: ${WINDOWS_APP_SDK_ARCH}")
 
 function(pywinrt_add_library target sources)
     Python3_add_library(${target} MODULE "${sources}")
-    set_target_properties(${target} PROPERTIES LIBRARY_OUTPUT_NAME_DEBUG ${target}_d)
     target_include_directories(${target} PRIVATE
         "${WINRT_RUNTIME_INCLUDE_PATH}"
         "${WINRT_SDK_PATH}/cppwinrt"
