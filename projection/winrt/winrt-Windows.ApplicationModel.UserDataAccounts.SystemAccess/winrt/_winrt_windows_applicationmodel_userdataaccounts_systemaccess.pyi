@@ -12,6 +12,9 @@ import winrt.windows.security.credentials as windows_security_credentials
 
 from winrt.windows.applicationmodel.userdataaccounts.systemaccess import DeviceAccountAuthenticationType, DeviceAccountIconId, DeviceAccountMailAgeFilter, DeviceAccountServerType, DeviceAccountSyncScheduleKind
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

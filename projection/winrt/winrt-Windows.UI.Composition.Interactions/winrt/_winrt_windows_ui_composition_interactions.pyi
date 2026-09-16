@@ -16,6 +16,9 @@ import winrt.windows.ui.input as windows_ui_input
 
 from winrt.windows.ui.composition.interactions import InteractionBindingAxisModes, InteractionChainingMode, InteractionSourceMode, InteractionSourceRedirectionMode, InteractionTrackerClampingOption, InteractionTrackerPositionUpdateOption, VisualInteractionSourceRedirectionMode
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

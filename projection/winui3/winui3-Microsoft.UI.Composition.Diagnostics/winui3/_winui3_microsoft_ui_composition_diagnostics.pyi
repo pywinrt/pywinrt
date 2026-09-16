@@ -9,6 +9,9 @@ import winui3.microsoft.ui.composition as microsoft_ui_composition
 
 from winui3.microsoft.ui.composition.diagnostics import CompositionDebugOverdrawContentKinds
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

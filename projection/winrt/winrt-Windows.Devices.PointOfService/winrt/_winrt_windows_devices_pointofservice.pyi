@@ -18,6 +18,9 @@ import winrt.windows.storage.streams as windows_storage_streams
 
 from winrt.windows.devices.pointofservice import BarcodeScannerStatus, BarcodeSymbologyDecodeLengthKind, CashDrawerStatusKind, LineDisplayCursorType, LineDisplayDescriptorState, LineDisplayHorizontalAlignment, LineDisplayMarqueeFormat, LineDisplayPowerStatus, LineDisplayScrollDirection, LineDisplayTextAttribute, LineDisplayTextAttributeGranularity, LineDisplayVerticalAlignment, MagneticStripeReaderAuthenticationLevel, MagneticStripeReaderAuthenticationProtocol, MagneticStripeReaderErrorReportingType, MagneticStripeReaderStatus, MagneticStripeReaderTrackErrorType, MagneticStripeReaderTrackIds, PosConnectionTypes, PosPrinterAlignment, PosPrinterBarcodeTextPosition, PosPrinterCartridgeSensors, PosPrinterColorCapabilities, PosPrinterColorCartridge, PosPrinterLineDirection, PosPrinterLineStyle, PosPrinterMapMode, PosPrinterMarkFeedCapabilities, PosPrinterMarkFeedKind, PosPrinterPrintSide, PosPrinterRotation, PosPrinterRuledLineCapabilities, PosPrinterStatusKind, UnifiedPosErrorReason, UnifiedPosErrorSeverity, UnifiedPosHealthCheckLevel, UnifiedPosPowerReportingType
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

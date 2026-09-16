@@ -12,6 +12,9 @@ import winui3.microsoft.ui.xaml as microsoft_ui_xaml
 from winui3.microsoft.ui.xaml.printing import PreviewPageCountType
 from winui3.microsoft.ui.xaml.printing import AddPagesEventHandler, GetPreviewPageEventHandler, PaginateEventHandler
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

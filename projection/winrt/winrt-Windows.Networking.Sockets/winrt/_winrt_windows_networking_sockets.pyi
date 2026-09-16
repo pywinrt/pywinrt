@@ -23,6 +23,9 @@ import winrt.windows.web as windows_web
 
 from winrt.windows.networking.sockets import ControlChannelTriggerResetReason, ControlChannelTriggerResourceType, ControlChannelTriggerStatus, MessageWebSocketReceiveMode, SocketActivityConnectedStandbyAction, SocketActivityKind, SocketActivityTriggerReason, SocketErrorStatus, SocketMessageType, SocketProtectionLevel, SocketQualityOfService, SocketSslErrorSeverity
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

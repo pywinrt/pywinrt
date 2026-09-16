@@ -239,9 +239,13 @@ namespace py::cpp::_winrt
            {Py_tp_hash, reinterpret_cast<void*>(Object_hash)},
            {}};
 
+    // Every projection module's wrapper types inherit this one and allocate
+    // themselves as py::winrt_wrapper<T>, so the basic size is ABI. It is taken
+    // from <pywinrt/abi.h> rather than spelled again here so that the asserts
+    // that guard the layout guard this too.
     static PyType_Spec Object_type_spec
         = {"_winrt.Object",
-           sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IUnknown>),
+           py::object_basicsize,
            0,
            Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
            Object_type_slots};
@@ -784,6 +788,22 @@ namespace py::cpp::_winrt
 
         if (PyModule_AddObjectRef(module.get(), "_C_API", runtime_api_capsule.get())
             == -1)
+        {
+            return nullptr;
+        }
+
+        // The ABI version this runtime provides. Projection modules check it
+        // through the capsule when they load; this is the same pair as data,
+        // for winrt.doctor and for the compatibility tests.
+        pyobj_handle abi_version{Py_BuildValue(
+            "(HH)", py::runtime_abi_version_major, py::runtime_abi_version_minor)};
+
+        if (!abi_version)
+        {
+            return nullptr;
+        }
+
+        if (PyModule_AddObjectRef(module.get(), "abi_version", abi_version.get()) == -1)
         {
             return nullptr;
         }

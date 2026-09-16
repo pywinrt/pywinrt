@@ -4,6 +4,8 @@ import enum
 
 import winrt.system
 from winrt._winrt_windows_ui_xaml_automation import (
+    _abi_version_,
+    _generator_version_,
     AnnotationPatternIdentifiers,
     AutomationAnnotation,
     AutomationElementIdentifiers,

@@ -11,6 +11,9 @@ import winrt.windows.ui as windows_ui
 import winrt.windows.ui.composition as windows_ui_composition
 import winui2.microsoft.ui.xaml.controls as microsoft_ui_xaml_controls
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

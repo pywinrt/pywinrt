@@ -6,6 +6,8 @@ import typing
 import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_smartcards import (
+    _abi_version_,
+    _generator_version_,
     CardAddedEventArgs,
     CardRemovedEventArgs,
     KnownSmartCardAppletIds,

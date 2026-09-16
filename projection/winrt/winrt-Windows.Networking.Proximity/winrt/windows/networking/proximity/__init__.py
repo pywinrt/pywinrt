@@ -6,6 +6,8 @@ import typing
 import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_networking_proximity import (
+    _abi_version_,
+    _generator_version_,
     ConnectionRequestedEventArgs,
     PeerFinder,
     PeerInformation,

@@ -20,6 +20,9 @@ import winrt.windows.ui.core as windows_ui_core
 
 from winrt.windows.graphics.holographic import HolographicDepthReprojectionMethod, HolographicFramePresentResult, HolographicFramePresentWaitBehavior, HolographicReprojectionMode, HolographicSpaceUserPresence, HolographicViewConfigurationKind
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

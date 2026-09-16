@@ -5,6 +5,8 @@ import typing
 
 import winrt.system
 from winrt._winrt_windows_storage_provider import (
+    _abi_version_,
+    _generator_version_,
     CachedFileUpdater,
     CachedFileUpdaterUI,
     FileUpdateRequest,

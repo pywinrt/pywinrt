@@ -15,6 +15,9 @@ import winrt.windows.system as windows_system
 
 from winrt.windows.gaming.xboxlive.storage import GameSaveErrorStatus
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

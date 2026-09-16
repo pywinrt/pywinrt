@@ -194,6 +194,62 @@ PyTypeObject* py::register_python_type(
     return type_object.detach();
 }
 
+/**
+ * Checks that a projection module was built against a compatible runtime ABI.
+ *
+ * A module that was imported has already made this check from the other side,
+ * in import_winrt_runtime(), so this is here for the module that never made it:
+ * the name we resolved may belong to something else entirely - another package
+ * that happens to sit at winrt.windows.foundation on sys.path, a stub, a mock -
+ * and we are about to reinterpret_cast the objects it hands us. Refusing with a
+ * message that names the module beats reading a wrapper that was never one.
+ *
+ * @param module        The imported module.
+ * @param module_name   The module's name, for the error message.
+ * @returns @c true if the module is compatible, otherwise sets a Python error
+ * and returns @c false.
+ */
+static bool check_module_abi(PyObject* module, const char* module_name) noexcept
+{
+    py::pyobj_handle abi_version{};
+
+    auto found
+        = PyObject_GetOptionalAttrString(module, "_abi_version_", abi_version.put());
+
+    if (found == -1)
+    {
+        return false;
+    }
+
+    unsigned short major{};
+    unsigned short minor{};
+
+    if (found == 0 || !PyArg_ParseTuple(abi_version.get(), "HH", &major, &minor))
+    {
+        PyErr_Clear();
+        PyErr_Format(
+            PyExc_ImportError,
+            "'%s' is not a PyWinRT projection module (no usable _abi_version_)",
+            module_name);
+        return false;
+    }
+
+    if (major != py::runtime_abi_version_major || minor > py::runtime_abi_version_minor)
+    {
+        PyErr_Format(
+            PyExc_ImportError,
+            "'%s' was built for winrt-runtime ABI %d.%d, but this is %d.%d",
+            module_name,
+            major,
+            minor,
+            py::runtime_abi_version_major,
+            py::runtime_abi_version_minor);
+        return false;
+    }
+
+    return true;
+}
+
 PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
 {
     auto state = py::cpp::_winrt::get_module_state();
@@ -225,6 +281,11 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
         return nullptr;
     }
 
+    if (!check_module_abi(module.get(), module_name.c_str()))
+    {
+        return nullptr;
+    }
+
     pyobj_handle type{PyObject_GetAttrString(module.get(), type_name.c_str())};
     if (!type)
     {
@@ -241,8 +302,11 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
         return nullptr;
     }
 
-    // TODO: verify that the Python type is compatible with the winrt
-    // runtime module version and that it actually matches the C++ type
+    // REVISIT: the module's ABI is checked above, but nothing checks that this
+    // type is the wrapper for the C++ type the caller instantiated
+    // get_python_type_for<T>() with. Both names come from the same generator
+    // run, so they only disagree if the packages are mismatched, which the ABI
+    // check does not catch.
 
     try
     {
@@ -285,6 +349,11 @@ void* py::get_struct_from_tuple_func(std::string_view capsule_name) noexcept
         return nullptr;
     }
 
+    if (!check_module_abi(module.get(), module_name.c_str()))
+    {
+        return nullptr;
+    }
+
     pyobj_handle capsule{PyObject_GetAttrString(module.get(), attr_name.c_str())};
     if (!capsule)
     {
@@ -296,9 +365,6 @@ void* py::get_struct_from_tuple_func(std::string_view capsule_name) noexcept
     {
         return nullptr;
     }
-
-    // REVISIT: might want to validate that the returned pointer is actually
-    // comapible with the current runtime
 
     try
     {

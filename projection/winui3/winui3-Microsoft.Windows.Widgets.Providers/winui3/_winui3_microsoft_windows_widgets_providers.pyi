@@ -13,6 +13,9 @@ import winrt.windows.foundation.collections as windows_foundation_collections
 import winrt.windows.storage.streams as windows_storage_streams
 import winui3.microsoft.windows.widgets as microsoft_windows_widgets
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -6,6 +6,8 @@ import typing
 import winrt.runtime._internals
 import winrt.system
 from test_winrt._test_winrt_testcomponent import (
+    _abi_version_,
+    _generator_version_,
     Blittable,
     Nested,
     NonBlittable,

@@ -2,6 +2,8 @@
 
 import winrt.system
 from winrt._winrt_windows_media_appbroadcasting import (
+    _abi_version_,
+    _generator_version_,
     AppBroadcastingMonitor,
     AppBroadcastingStatus,
     AppBroadcastingStatusDetails,

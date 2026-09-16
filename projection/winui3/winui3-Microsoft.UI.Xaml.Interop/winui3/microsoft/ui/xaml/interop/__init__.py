@@ -5,6 +5,8 @@ import typing
 
 import winrt.system
 from winui3._winui3_microsoft_ui_xaml_interop import (
+    _abi_version_,
+    _generator_version_,
     NotifyCollectionChangedEventArgs,
     _IBindableIterable,
     IBindableIterable,

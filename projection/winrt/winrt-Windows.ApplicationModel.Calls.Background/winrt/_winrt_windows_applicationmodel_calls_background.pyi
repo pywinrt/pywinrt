@@ -11,6 +11,9 @@ import winrt.windows.foundation as windows_foundation
 
 from winrt.windows.applicationmodel.calls.background import PhoneCallBlockedReason, PhoneIncomingCallDismissedReason, PhoneLineChangeKind, PhoneLineProperties, PhoneTriggerType
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

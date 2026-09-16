@@ -8,6 +8,9 @@ import winrt.system
 import winrt.windows.applicationmodel.contacts as windows_applicationmodel_contacts
 import winrt.windows.foundation as windows_foundation
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

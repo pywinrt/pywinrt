@@ -14,6 +14,9 @@ import winrt.windows.ui.input.spatial as windows_ui_input_spatial
 
 from winrt.windows.perception.people import HandJointKind, JointPoseAccuracy
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

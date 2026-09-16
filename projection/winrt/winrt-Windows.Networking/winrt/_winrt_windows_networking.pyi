@@ -10,6 +10,9 @@ import winrt.windows.networking.connectivity as windows_networking_connectivity
 
 from winrt.windows.networking import DomainNameType, HostNameSortOptions, HostNameType
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

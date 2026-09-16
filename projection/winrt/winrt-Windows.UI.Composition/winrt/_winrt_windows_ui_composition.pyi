@@ -22,6 +22,9 @@ import winrt.windows.ui.core as windows_ui_core
 
 from winrt.windows.ui.composition import AnimationControllerProgressBehavior, AnimationDelayBehavior, AnimationDirection, AnimationIterationBehavior, AnimationPropertyAccessMode, AnimationStopBehavior, CompositionBackfaceVisibility, CompositionBatchTypes, CompositionBitmapInterpolationMode, CompositionBorderMode, CompositionColorSpace, CompositionCompositeMode, CompositionDropShadowSourcePolicy, CompositionEasingFunctionMode, CompositionEffectFactoryLoadStatus, CompositionGetValueStatus, CompositionGradientExtendMode, CompositionMappingMode, CompositionStretch, CompositionStrokeCap, CompositionStrokeLineJoin
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

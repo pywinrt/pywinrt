@@ -20,6 +20,9 @@ import winrt.windows.ui.startscreen as windows_ui_startscreen
 
 from winrt.windows.ui.shell import SecurityAppKind, SecurityAppState, SecurityAppSubstatus, ShareWindowCommand
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

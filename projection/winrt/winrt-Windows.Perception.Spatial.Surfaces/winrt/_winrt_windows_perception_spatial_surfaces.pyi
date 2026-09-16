@@ -16,6 +16,9 @@ import winrt.windows.graphics.directx as windows_graphics_directx
 import winrt.windows.perception.spatial as windows_perception_spatial
 import winrt.windows.storage.streams as windows_storage_streams
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

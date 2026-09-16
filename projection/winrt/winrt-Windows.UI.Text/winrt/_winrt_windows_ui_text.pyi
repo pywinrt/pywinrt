@@ -12,6 +12,9 @@ import winrt.windows.ui as windows_ui
 
 from winrt.windows.ui.text import CaretType, FindOptions, FontStretch, FontStyle, FormatEffect, HorizontalCharacterAlignment, LetterCase, LineSpacingRule, LinkType, MarkerAlignment, MarkerStyle, MarkerType, ParagraphAlignment, ParagraphStyle, PointOptions, RangeGravity, RichEditMathMode, SelectionOptions, SelectionType, TabAlignment, TabLeader, TextDecorations, TextGetOptions, TextRangeUnit, TextScript, TextSetOptions, UnderlineType, VerticalCharacterAlignment
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

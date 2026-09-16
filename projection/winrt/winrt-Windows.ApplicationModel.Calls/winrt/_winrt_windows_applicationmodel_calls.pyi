@@ -18,6 +18,9 @@ import winrt.windows.ui as windows_ui
 
 from winrt.windows.applicationmodel.calls import CellularDtmfMode, DtmfKey, DtmfToneAudioPlayback, PhoneAudioRoutingEndpoint, PhoneCallAudioDevice, PhoneCallDirection, PhoneCallHistoryEntryMedia, PhoneCallHistoryEntryOtherAppReadAccess, PhoneCallHistoryEntryQueryDesiredMedia, PhoneCallHistoryEntryRawAddressKind, PhoneCallHistorySourceIdKind, PhoneCallHistoryStoreAccessType, PhoneCallMedia, PhoneCallOperationStatus, PhoneCallStatus, PhoneLineNetworkOperatorDisplayTextLocation, PhoneLineOperationStatus, PhoneLineTransport, PhoneLineWatcherStatus, PhoneNetworkState, PhoneSimState, PhoneVoicemailType, TransportDeviceAudioRoutingStatus, VoipCallControlDeviceKind, VoipPhoneCallMedia, VoipPhoneCallRejectReason, VoipPhoneCallResourceReservationStatus, VoipPhoneCallState
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

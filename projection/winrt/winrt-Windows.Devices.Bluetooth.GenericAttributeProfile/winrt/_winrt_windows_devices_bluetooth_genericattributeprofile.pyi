@@ -18,6 +18,9 @@ import winrt.windows.storage.streams as windows_storage_streams
 
 from winrt.windows.devices.bluetooth.genericattributeprofile import GattCharacteristicProperties, GattClientCharacteristicConfigurationDescriptorValue, GattCommunicationStatus, GattOpenStatus, GattProtectionLevel, GattRequestState, GattServiceProviderAdvertisementStatus, GattSessionStatus, GattSharingMode, GattWriteOption
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

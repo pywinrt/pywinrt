@@ -29,6 +29,9 @@ import winrt.windows.ui.xaml.media.animation as windows_ui_xaml_media_animation
 
 from winui2.microsoft.ui.xaml.controls import ColorPickerHsvChannel, ColorSpectrumComponents, ColorSpectrumShape, ControlsResourcesVersion, ElementRealizationOptions, ExpandDirection, InfoBarCloseReason, InfoBarSeverity, NavigationViewBackButtonVisible, NavigationViewDisplayMode, NavigationViewOverflowLabelMode, NavigationViewPaneDisplayMode, NavigationViewSelectionFollowsFocus, NavigationViewShoulderNavigationEnabled, NumberBoxSpinButtonPlacementMode, NumberBoxValidationMode, ParallaxSourceOffsetKind, PipsPagerButtonVisibility, PlayerAnimationOptimization, RefreshPullDirection, RefreshVisualizerOrientation, RefreshVisualizerState, SwipeBehaviorOnInvoked, SwipeMode, TabViewCloseButtonOverlayMode, TabViewWidthMode, TeachingTipCloseReason, TeachingTipHeroContentPlacementMode, TeachingTipPlacementMode, TeachingTipTailVisibility, TreeViewSelectionMode, TwoPaneViewMode, TwoPaneViewPriority, TwoPaneViewTallModeConfiguration, TwoPaneViewWideModeConfiguration, UniformGridLayoutItemsJustification, UniformGridLayoutItemsStretch
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 class AnimatedIcon_Static(windows_ui_xaml_controls.IconElement_Static):

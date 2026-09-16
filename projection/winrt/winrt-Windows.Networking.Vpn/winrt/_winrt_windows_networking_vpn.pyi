@@ -20,6 +20,9 @@ import winrt.windows.system as windows_system
 
 from winrt.windows.networking.vpn import VpnAppIdType, VpnAuthenticationMethod, VpnChannelActivityEventType, VpnChannelRequestCredentialsOptions, VpnCredentialType, VpnDataPathType, VpnDomainNameType, VpnIPProtocol, VpnManagementConnectionStatus, VpnManagementErrorStatus, VpnNativeProtocolType, VpnPacketBufferStatus, VpnRoutingPolicyType
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

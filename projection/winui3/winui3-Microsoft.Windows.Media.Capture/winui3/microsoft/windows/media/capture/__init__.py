@@ -4,6 +4,8 @@ import enum
 
 import winrt.system
 from winui3._winui3_microsoft_windows_media_capture import (
+    _abi_version_,
+    _generator_version_,
     CameraCaptureUI,
     CameraCaptureUIPhotoCaptureSettings,
     CameraCaptureUIVideoCaptureSettings,

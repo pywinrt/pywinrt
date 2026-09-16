@@ -16,6 +16,9 @@ import winui3.microsoft.ui.input as microsoft_ui_input
 
 from winui3.microsoft.ui.composition.interactions import InteractionBindingAxisModes, InteractionChainingMode, InteractionSourceMode, InteractionSourceRedirectionMode, InteractionTrackerClampingOption, InteractionTrackerPositionUpdateOption, VisualInteractionSourceRedirectionMode
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -2,6 +2,8 @@
 
 import winrt.system
 from winui2._winui2_microsoft_ui_xaml_xamltypeinfo import (
+    _abi_version_,
+    _generator_version_,
     XamlControlsXamlMetaDataProvider,
 )
 

@@ -18,6 +18,9 @@ import winrt.windows.storage.streams as windows_storage_streams
 
 from winrt.windows.ui.input.spatial import SpatialGestureSettings, SpatialInteractionPressKind, SpatialInteractionSourceHandedness, SpatialInteractionSourceKind, SpatialInteractionSourcePositionAccuracy
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -13,6 +13,9 @@ import winrt.windows.ui.uiautomation as windows_ui_uiautomation
 
 from winrt.windows.ui.uiautomation.core import AutomationRemoteOperationStatus
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

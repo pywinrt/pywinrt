@@ -2,6 +2,8 @@
 
 import winrt.system
 from winrt._winrt_windows_ui_xaml_media_media3d import (
+    _abi_version_,
+    _generator_version_,
     Matrix3D,
     CompositeTransform3D,
     Matrix3DHelper,

@@ -4,6 +4,8 @@ import enum
 
 import winrt.system
 from winrt._winrt_windows_management_policies import (
+    _abi_version_,
+    _generator_version_,
     NamedPolicy,
     NamedPolicyData,
 )

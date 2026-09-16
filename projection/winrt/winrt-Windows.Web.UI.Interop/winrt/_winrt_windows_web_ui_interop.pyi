@@ -19,6 +19,9 @@ import winrt.windows.web.ui as windows_web_ui
 
 from winrt.windows.web.ui.interop import WebViewControlAcceleratorKeyRoutingStage, WebViewControlMoveFocusReason, WebViewControlProcessCapabilityState
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

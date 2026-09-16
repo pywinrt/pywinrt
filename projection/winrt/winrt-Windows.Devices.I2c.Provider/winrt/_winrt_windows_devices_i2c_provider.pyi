@@ -12,6 +12,9 @@ import winrt.windows.foundation.collections as windows_foundation_collections
 
 from winrt.windows.devices.i2c.provider import ProviderI2cBusSpeed, ProviderI2cSharingMode, ProviderI2cTransferStatus
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

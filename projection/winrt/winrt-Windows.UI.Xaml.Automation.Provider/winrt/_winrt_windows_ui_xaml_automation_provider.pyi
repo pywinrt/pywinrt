@@ -13,6 +13,9 @@ import winrt.windows.ui.xaml.automation as windows_ui_xaml_automation
 import winrt.windows.ui.xaml.automation.peers as windows_ui_xaml_automation_peers
 import winrt.windows.ui.xaml.automation.text as windows_ui_xaml_automation_text
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

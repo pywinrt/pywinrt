@@ -8,6 +8,9 @@ import winrt.system
 
 from winui3.microsoft.windows.ai.contentsafety import SeverityLevel
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

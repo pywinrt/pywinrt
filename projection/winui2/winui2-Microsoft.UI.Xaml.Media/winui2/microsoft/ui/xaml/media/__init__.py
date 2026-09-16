@@ -4,6 +4,8 @@ import enum
 
 import winrt.system
 from winui2._winui2_microsoft_ui_xaml_media import (
+    _abi_version_,
+    _generator_version_,
     AcrylicBrush,
     RadialGradientBrush,
     RevealBackgroundBrush,

@@ -5,6 +5,8 @@ import enum
 import winrt.runtime._internals
 import winrt.system
 from webview2._webview2_microsoft_web_webview2_core import (
+    _abi_version_,
+    _generator_version_,
     CoreWebView2PhysicalKeyStatus,
     CoreWebView2,
     CoreWebView2AcceleratorKeyPressedEventArgs,

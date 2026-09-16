@@ -4,6 +4,8 @@ import typing
 
 import winrt.system
 from winui3._winui3_microsoft_ui import (
+    _abi_version_,
+    _generator_version_,
     DisplayId,
     IconId,
     WindowId,

@@ -22,6 +22,9 @@ import winui3.microsoft.ui.dispatching as microsoft_ui_dispatching
 
 from winui3.microsoft.ui.input import CrossSlidingState, DraggingState, FocusNavigationReason, FocusNavigationResult, GestureSettings, HoldingState, InputActivationState, InputPointerSourceDeviceKinds, InputSystemCursorShape, MoveSizeOperation, NonClientRegionKind, PointerDeviceType, PointerUpdateKind, VirtualKeyStates
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

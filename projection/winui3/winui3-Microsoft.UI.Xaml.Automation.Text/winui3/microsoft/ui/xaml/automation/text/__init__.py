@@ -3,6 +3,10 @@
 import enum
 
 import winrt.system
+from winui3._winui3_microsoft_ui_xaml_automation_text import (
+    _abi_version_,
+    _generator_version_,
+)
 
 __all__ = [
     "TextPatternRangeEndpoint",

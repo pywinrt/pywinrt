@@ -6,6 +6,8 @@ import typing
 import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_graphics_printing3d import (
+    _abi_version_,
+    _generator_version_,
     Printing3DBufferDescription,
     Print3DManager,
     Print3DTask,

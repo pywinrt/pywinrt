@@ -16,6 +16,9 @@ import winrt.windows.media.playback as windows_media_playback
 from winrt.windows.media.protection import GraphicsTrustStatus, HdcpProtection, HdcpSetProtectionResult, ProtectionCapabilityResult, RenewalStatus, RevocationAndRenewalReasons
 from winrt.windows.media.protection import ComponentLoadFailedEventHandler, RebootNeededEventHandler, ServiceRequestedEventHandler
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

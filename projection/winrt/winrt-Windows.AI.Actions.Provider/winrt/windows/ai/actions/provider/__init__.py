@@ -2,6 +2,8 @@
 
 import winrt.system
 from winrt._winrt_windows_ai_actions_provider import (
+    _abi_version_,
+    _generator_version_,
     _IActionFeedbackHandler,
     IActionFeedbackHandler,
     _IActionProvider,

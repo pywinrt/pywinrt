@@ -4,6 +4,8 @@ import enum
 
 import winrt.system
 from winrt._winrt_windows_devices_adc_provider import (
+    _abi_version_,
+    _generator_version_,
     _IAdcControllerProvider,
     IAdcControllerProvider,
     _IAdcProvider,

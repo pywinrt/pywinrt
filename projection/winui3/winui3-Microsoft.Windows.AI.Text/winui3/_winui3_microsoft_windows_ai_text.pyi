@@ -12,6 +12,9 @@ import winui3.microsoft.windows.ai.contentsafety as microsoft_windows_ai_content
 
 from winui3.microsoft.windows.ai.text import LanguageModelResponseStatus
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

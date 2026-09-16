@@ -20,6 +20,9 @@ import winrt.windows.web.http.headers as windows_web_http_headers
 
 from winrt.windows.web.http import HttpCompletionOption, HttpProgressStage, HttpResponseMessageSource, HttpStatusCode, HttpVersion
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

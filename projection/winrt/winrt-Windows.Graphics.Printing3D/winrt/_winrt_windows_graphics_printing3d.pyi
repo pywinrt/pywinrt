@@ -17,6 +17,9 @@ import winrt.windows.ui as windows_ui
 from winrt.windows.graphics.printing3d import Print3DTaskCompletion, Print3DTaskDetail, Printing3DBufferFormat, Printing3DMeshVerificationMode, Printing3DModelUnit, Printing3DObjectType, Printing3DPackageCompression, Printing3DTextureEdgeBehavior
 from winrt.windows.graphics.printing3d import Print3DTaskSourceRequestedHandler
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

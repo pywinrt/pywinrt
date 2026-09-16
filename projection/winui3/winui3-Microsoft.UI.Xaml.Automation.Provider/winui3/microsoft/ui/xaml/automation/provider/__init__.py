@@ -2,6 +2,8 @@
 
 import winrt.system
 from winui3._winui3_microsoft_ui_xaml_automation_provider import (
+    _abi_version_,
+    _generator_version_,
     IRawElementProviderSimple,
     _IAnnotationProvider,
     IAnnotationProvider,

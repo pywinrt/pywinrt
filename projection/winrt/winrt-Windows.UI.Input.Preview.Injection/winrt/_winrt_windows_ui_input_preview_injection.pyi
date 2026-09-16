@@ -11,6 +11,9 @@ import winrt.windows.gaming.input as windows_gaming_input
 
 from winrt.windows.ui.input.preview.injection import InjectedInputButtonChangeKind, InjectedInputKeyOptions, InjectedInputMouseOptions, InjectedInputPenButtons, InjectedInputPenParameters, InjectedInputPointerOptions, InjectedInputShortcut, InjectedInputTouchParameters, InjectedInputVisualizationMode
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

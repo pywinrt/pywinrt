@@ -5,6 +5,8 @@ import enum
 import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_ui_composition_scenes import (
+    _abi_version_,
+    _generator_version_,
     SceneBoundingBox,
     SceneComponent,
     SceneComponentCollection,

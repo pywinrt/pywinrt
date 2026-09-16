@@ -2,6 +2,8 @@
 
 import winrt.system
 from winui3._winui3_microsoft_ui_xaml_shapes import (
+    _abi_version_,
+    _generator_version_,
     Ellipse,
     Line,
     Path,

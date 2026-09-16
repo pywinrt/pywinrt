@@ -4,6 +4,8 @@ import enum
 
 import winrt.system
 from winrt._winrt_windows_applicationmodel_wallet_system import (
+    _abi_version_,
+    _generator_version_,
     WalletItemSystemStore,
     WalletManagerSystem,
 )

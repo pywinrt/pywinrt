@@ -21,6 +21,9 @@ import winui3.microsoft.ui.xaml.media.media3d as microsoft_ui_xaml_media_media3d
 
 from winui3.microsoft.ui.xaml.media import AlignmentX, AlignmentY, BrushMappingMode, ColorInterpolationMode, ElementCompositeMode, FastPlayFallbackBehaviour, FillRule, GradientSpreadMethod, LoadedImageSourceLoadStatus, PenLineCap, PenLineJoin, Stretch, StyleSimulations, SweepDirection
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

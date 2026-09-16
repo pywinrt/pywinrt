@@ -15,6 +15,9 @@ import winui3.microsoft.ui.xaml as microsoft_ui_xaml
 from winui3.microsoft.ui.xaml.data import BindingMode, RelativeSourceMode, UpdateSourceTrigger
 from winui3.microsoft.ui.xaml.data import CurrentChangingEventHandler, PropertyChangedEventHandler
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

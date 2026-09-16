@@ -6,6 +6,9 @@ from builtins import property as _property
 import winrt._winrt
 import winrt.system
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 class CustomXamlResourceLoader_Static(winrt._winrt.IInspectable_Static):

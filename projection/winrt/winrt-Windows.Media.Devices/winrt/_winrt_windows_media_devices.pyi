@@ -21,6 +21,9 @@ import winrt.windows.storage.streams as windows_storage_streams
 from winrt.windows.media.devices import AdvancedPhotoMode, AudioDeviceRole, AutoFocusRange, CameraOcclusionKind, CameraStreamState, CaptureSceneMode, CaptureUse, ColorTemperaturePreset, DigitalWindowMode, FocusMode, FocusPreset, HdrVideoMode, InfraredTorchMode, IsoSpeedPreset, ManualFocusDistance, MediaCaptureFocusState, MediaCaptureOptimization, MediaCapturePauseBehavior, OpticalImageStabilizationMode, RegionOfInterestType, SendCommandStatus, TelephonyKey, VideoDeviceControllerGetDevicePropertyStatus, VideoDeviceControllerSetDevicePropertyStatus, VideoTemporalDenoisingMode, ZoomTransitionMode
 from winrt.windows.media.devices import CallControlEventHandler, DialRequestedEventHandler, KeypadPressedEventHandler, RedialRequestedEventHandler
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

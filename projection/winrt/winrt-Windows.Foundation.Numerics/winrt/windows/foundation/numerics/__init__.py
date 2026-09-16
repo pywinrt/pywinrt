@@ -2,6 +2,8 @@
 
 import winrt.system
 from winrt._winrt_windows_foundation_numerics import (
+    _abi_version_,
+    _generator_version_,
     Matrix3x2,
     Matrix4x4,
     Plane,

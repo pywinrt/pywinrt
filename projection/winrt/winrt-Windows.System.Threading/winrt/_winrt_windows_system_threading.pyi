@@ -12,6 +12,9 @@ import winrt.windows.foundation as windows_foundation
 from winrt.windows.system.threading import WorkItemOptions, WorkItemPriority
 from winrt.windows.system.threading import TimerDestroyedHandler, TimerElapsedHandler, WorkItemHandler
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

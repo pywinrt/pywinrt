@@ -2,6 +2,8 @@
 
 import winrt.system
 from winrt._winrt_windows_ui import (
+    _abi_version_,
+    _generator_version_,
     Color,
     WindowId,
     ColorHelper,

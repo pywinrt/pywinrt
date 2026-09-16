@@ -18,6 +18,9 @@ import winrt.windows.ui.shell as windows_ui_shell
 
 from winrt.windows.applicationmodel.useractivities import UserActivityState
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

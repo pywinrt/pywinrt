@@ -6,6 +6,8 @@ import typing
 import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_background import (
+    _abi_version_,
+    _generator_version_,
     ActivitySensorTrigger,
     AlarmApplicationManager,
     AppBroadcastTrigger,

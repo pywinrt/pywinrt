@@ -2,6 +2,8 @@
 
 import winrt.system
 from winrt._winrt_windows_system_profile_systemmanufacturers import (
+    _abi_version_,
+    _generator_version_,
     OemSupportInfo,
     SmbiosInformation,
     SystemSupportDeviceInfo,

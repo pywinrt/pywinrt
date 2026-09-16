@@ -16,6 +16,9 @@ import winrt.windows.storage.streams as windows_storage_streams
 
 from winrt.windows.media.mediaproperties import AudioEncodingQuality, MediaMirroringOptions, MediaPixelFormat, MediaRotation, MediaThumbnailFormat, SphericalVideoFrameFormat, StereoscopicVideoPackingMode, VideoEncodingQuality
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final
