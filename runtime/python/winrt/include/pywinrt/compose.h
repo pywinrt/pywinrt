@@ -12,6 +12,7 @@
 
 #pragma once
 
+#include <pywinrt/abi.h>
 #include <pywinrt/convert.h>
 #include <pywinrt/handles.h>
 #include <pywinrt/prelude.h>
@@ -54,26 +55,9 @@ namespace py
 
         static void toggle_reference(py_obj_ref* obj, bool is_last_reference) noexcept
         {
-            auto state = PyGILState_Ensure();
-
-            if (is_last_reference)
-            {
-                // We hold the only WinRT reference - allow the Python object
-                // to be GC'd
-                PyObject_GC_Track(obj->py_obj);
-                // This might be the last reference to the Python object, so
-                // obj may be destroyed after this call and no longer valid!
-                Py_DECREF(obj->py_obj);
-            }
-            else
-            {
-                // external WinRT code has a reference - don't allow Python
-                // object to be GC'd
-                Py_INCREF(obj->py_obj);
-                PyObject_GC_UnTrack(obj->py_obj);
-            }
-
-            PyGILState_Release(state);
+            // This might be the last reference to the Python object, so obj may
+            // be destroyed by this call and no longer valid afterwards!
+            toggle_python_reference(obj->py_obj, is_last_reference);
         }
 
         int32_t query_interface_tearoff(
