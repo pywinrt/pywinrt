@@ -111,6 +111,9 @@
   20.9 % smaller: 131.49 MB to 103.97 MB over all 424 modules, and no module
   grew. The XAML packages gain the most, since they have the most types
   (`winrt-Windows.UI.Xaml.Automation.Peers` 3.99 MB to 1.62 MB).
+- The `PyWinRT` dotnet tool now targets .NET 10 and needs the .NET 10 runtime
+  to run. This only affects generating your own projection with the tool; the
+  published wheels are unchanged and have never needed .NET installed.
 
 ### Deprecated
 - The method names that v3.x generated from the
