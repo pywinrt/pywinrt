@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Added
+- Wheels are now published for Python 3.14 and Python 3.15.
+
 ### Changed
 - `winrt-runtime` no longer ships a copy of `MSVCP140.dll`, and no module in
   the projection needs the Visual C++ redistributable any more. The whole of
@@ -114,6 +117,11 @@
   `[Windows.Foundation.Metadata.Overload]` attribute are still available as
   aliases, but calling one raises a `DeprecationWarning`. They will be removed
   in a future release.
+
+### Removed
+- Dropped support for Python 3.9 and Python 3.10. PyWinRT now requires
+  Python 3.11 or later. Python 3.9 is past its upstream end of life and
+  Python 3.10 reaches its own in October 2026.
 
 ### Fixed
 - Fixed calling a member that an object does not implement crashing the process

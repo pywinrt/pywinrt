@@ -2136,15 +2136,6 @@ namespace py::cpp::TestComponent
 
     // ----- IRequiredFour interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IRequiredFour(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::TestComponent::IRequiredFour>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::TestComponent::IRequiredFour>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IRequiredFour(py::wrapper::TestComponent::IRequiredFour* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -2272,9 +2263,6 @@ namespace py::cpp::TestComponent
         { }};
 
     static PyType_Slot _type_slots_IRequiredFour[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IRequiredFour) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRequiredFour) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRequiredFour) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRequiredFour) },
@@ -2284,11 +2272,7 @@ namespace py::cpp::TestComponent
         "test_winrt._test_winrt_testcomponent._IRequiredFour",
         sizeof(py::wrapper::TestComponent::IRequiredFour),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IRequiredFour};
 
     struct ImplementsIRequiredFour : py::ImplementsInterfaceT<ImplementsIRequiredFour, winrt::TestComponent::IRequiredFour>
@@ -2478,23 +2462,10 @@ namespace py::cpp::TestComponent
         "test_winrt._test_winrt_testcomponent.IRequiredFour",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIRequiredFour};
 
     // ----- IRequiredOne interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IRequiredOne(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::TestComponent::IRequiredOne>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::TestComponent::IRequiredOne>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IRequiredOne(py::wrapper::TestComponent::IRequiredOne* self) noexcept
     {
@@ -2539,9 +2510,6 @@ namespace py::cpp::TestComponent
         { }};
 
     static PyType_Slot _type_slots_IRequiredOne[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IRequiredOne) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRequiredOne) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRequiredOne) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRequiredOne) },
@@ -2551,11 +2519,7 @@ namespace py::cpp::TestComponent
         "test_winrt._test_winrt_testcomponent._IRequiredOne",
         sizeof(py::wrapper::TestComponent::IRequiredOne),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IRequiredOne};
 
     struct ImplementsIRequiredOne : py::ImplementsInterfaceT<ImplementsIRequiredOne, winrt::TestComponent::IRequiredOne>
@@ -2667,23 +2631,10 @@ namespace py::cpp::TestComponent
         "test_winrt._test_winrt_testcomponent.IRequiredOne",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIRequiredOne};
 
     // ----- IRequiredThree interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IRequiredThree(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::TestComponent::IRequiredThree>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::TestComponent::IRequiredThree>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IRequiredThree(py::wrapper::TestComponent::IRequiredThree* self) noexcept
     {
@@ -2784,9 +2735,6 @@ namespace py::cpp::TestComponent
         { }};
 
     static PyType_Slot _type_slots_IRequiredThree[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IRequiredThree) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRequiredThree) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRequiredThree) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRequiredThree) },
@@ -2796,11 +2744,7 @@ namespace py::cpp::TestComponent
         "test_winrt._test_winrt_testcomponent._IRequiredThree",
         sizeof(py::wrapper::TestComponent::IRequiredThree),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IRequiredThree};
 
     struct ImplementsIRequiredThree : py::ImplementsInterfaceT<ImplementsIRequiredThree, winrt::TestComponent::IRequiredThree>
@@ -2964,23 +2908,10 @@ namespace py::cpp::TestComponent
         "test_winrt._test_winrt_testcomponent.IRequiredThree",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIRequiredThree};
 
     // ----- IRequiredTwo interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IRequiredTwo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::TestComponent::IRequiredTwo>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::TestComponent::IRequiredTwo>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IRequiredTwo(py::wrapper::TestComponent::IRequiredTwo* self) noexcept
     {
@@ -3053,9 +2984,6 @@ namespace py::cpp::TestComponent
         { }};
 
     static PyType_Slot _type_slots_IRequiredTwo[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IRequiredTwo) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRequiredTwo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRequiredTwo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRequiredTwo) },
@@ -3065,11 +2993,7 @@ namespace py::cpp::TestComponent
         "test_winrt._test_winrt_testcomponent._IRequiredTwo",
         sizeof(py::wrapper::TestComponent::IRequiredTwo),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IRequiredTwo};
 
     struct ImplementsIRequiredTwo : py::ImplementsInterfaceT<ImplementsIRequiredTwo, winrt::TestComponent::IRequiredTwo>
@@ -3207,23 +3131,10 @@ namespace py::cpp::TestComponent
         "test_winrt._test_winrt_testcomponent.IRequiredTwo",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIRequiredTwo};
 
     // ----- ITests interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ITests(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::TestComponent::ITests>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::TestComponent::ITests>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ITests(py::wrapper::TestComponent::ITests* self) noexcept
     {
@@ -7376,9 +7287,6 @@ namespace py::cpp::TestComponent
         { }};
 
     static PyType_Slot _type_slots_ITests[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ITests) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITests) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITests) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITests) },
@@ -7388,11 +7296,7 @@ namespace py::cpp::TestComponent
         "test_winrt._test_winrt_testcomponent._ITests",
         sizeof(py::wrapper::TestComponent::ITests),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ITests};
 
     struct ImplementsITests : py::ImplementsInterfaceT<ImplementsITests, winrt::TestComponent::ITests>
@@ -11930,11 +11834,7 @@ namespace py::cpp::TestComponent
         "test_winrt._test_winrt_testcomponent.ITests",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsITests};
 
     // ----- Blittable struct --------------------

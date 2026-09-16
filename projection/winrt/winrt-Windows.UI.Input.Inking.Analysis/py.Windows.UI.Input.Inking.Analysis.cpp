@@ -2489,15 +2489,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     // ----- IInkAnalysisNode interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IInkAnalysisNode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IInkAnalysisNode(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -2649,9 +2640,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }};
 
     static PyType_Slot _type_slots_IInkAnalysisNode[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IInkAnalysisNode) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkAnalysisNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkAnalysisNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkAnalysisNode) },
@@ -2661,11 +2649,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         "winrt._winrt_windows_ui_input_inking_analysis._IInkAnalysisNode",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IInkAnalysisNode};
 
     struct ImplementsIInkAnalysisNode : py::ImplementsInterfaceT<ImplementsIInkAnalysisNode, winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>
@@ -2897,23 +2881,10 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         "winrt._winrt_windows_ui_input_inking_analysis.IInkAnalysisNode",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIInkAnalysisNode};
 
     // ----- IInkAnalyzerFactory interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IInkAnalyzerFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IInkAnalyzerFactory(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory* self) noexcept
     {
@@ -2958,9 +2929,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }};
 
     static PyType_Slot _type_slots_IInkAnalyzerFactory[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IInkAnalyzerFactory) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkAnalyzerFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkAnalyzerFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkAnalyzerFactory) },
@@ -2970,11 +2938,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         "winrt._winrt_windows_ui_input_inking_analysis._IInkAnalyzerFactory",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IInkAnalyzerFactory};
 
     struct ImplementsIInkAnalyzerFactory : py::ImplementsInterfaceT<ImplementsIInkAnalyzerFactory, winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory>
@@ -3086,11 +3050,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         "winrt._winrt_windows_ui_input_inking_analysis.IInkAnalyzerFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIInkAnalyzerFactory};
 
     // ----- Windows.UI.Input.Inking.Analysis Initialization --------------------

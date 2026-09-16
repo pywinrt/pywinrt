@@ -2612,15 +2612,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     // ----- ICollectionView interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICollectionView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Data::ICollectionView>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Data::ICollectionView>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_ICollectionView(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -3607,9 +3598,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }};
 
     static PyType_Slot _type_slots_ICollectionView[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICollectionView) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICollectionView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICollectionView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICollectionView) },
@@ -3624,11 +3612,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data._ICollectionView",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICollectionView};
 
     struct ImplementsICollectionView : py::ImplementsInterfaceT<ImplementsICollectionView, winrt::Microsoft::UI::Xaml::Data::ICollectionView>
@@ -4624,23 +4608,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data.ICollectionView",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICollectionView};
 
     // ----- ICollectionViewFactory interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICollectionViewFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Data::ICollectionViewFactory>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Data::ICollectionViewFactory>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ICollectionViewFactory(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionViewFactory* self) noexcept
     {
@@ -4685,9 +4656,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }};
 
     static PyType_Slot _type_slots_ICollectionViewFactory[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICollectionViewFactory) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICollectionViewFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICollectionViewFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICollectionViewFactory) },
@@ -4697,11 +4665,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data._ICollectionViewFactory",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionViewFactory),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICollectionViewFactory};
 
     struct ImplementsICollectionViewFactory : py::ImplementsInterfaceT<ImplementsICollectionViewFactory, winrt::Microsoft::UI::Xaml::Data::ICollectionViewFactory>
@@ -4813,23 +4777,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data.ICollectionViewFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICollectionViewFactory};
 
     // ----- ICollectionViewGroup interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICollectionViewGroup(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Data::ICollectionViewGroup>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Data::ICollectionViewGroup>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ICollectionViewGroup(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionViewGroup* self) noexcept
     {
@@ -4882,9 +4833,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }};
 
     static PyType_Slot _type_slots_ICollectionViewGroup[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICollectionViewGroup) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICollectionViewGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICollectionViewGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICollectionViewGroup) },
@@ -4894,11 +4842,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data._ICollectionViewGroup",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionViewGroup),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICollectionViewGroup};
 
     struct ImplementsICollectionViewGroup : py::ImplementsInterfaceT<ImplementsICollectionViewGroup, winrt::Microsoft::UI::Xaml::Data::ICollectionViewGroup>
@@ -5024,23 +4968,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data.ICollectionViewGroup",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICollectionViewGroup};
 
     // ----- ICustomProperty interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICustomProperty(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Data::ICustomProperty>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Data::ICustomProperty>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ICustomProperty(py::wrapper::Microsoft::UI::Xaml::Data::ICustomProperty* self) noexcept
     {
@@ -5255,9 +5186,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }};
 
     static PyType_Slot _type_slots_ICustomProperty[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICustomProperty) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICustomProperty) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICustomProperty) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICustomProperty) },
@@ -5267,11 +5195,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data._ICustomProperty",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::ICustomProperty),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICustomProperty};
 
     struct ImplementsICustomProperty : py::ImplementsInterfaceT<ImplementsICustomProperty, winrt::Microsoft::UI::Xaml::Data::ICustomProperty>
@@ -5603,23 +5527,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data.ICustomProperty",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICustomProperty};
 
     // ----- ICustomPropertyProvider interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICustomPropertyProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Data::ICustomPropertyProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Data::ICustomPropertyProvider>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ICustomPropertyProvider(py::wrapper::Microsoft::UI::Xaml::Data::ICustomPropertyProvider* self) noexcept
     {
@@ -5743,9 +5654,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }};
 
     static PyType_Slot _type_slots_ICustomPropertyProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICustomPropertyProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICustomPropertyProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICustomPropertyProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICustomPropertyProvider) },
@@ -5755,11 +5663,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data._ICustomPropertyProvider",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::ICustomPropertyProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICustomPropertyProvider};
 
     struct ImplementsICustomPropertyProvider : py::ImplementsInterfaceT<ImplementsICustomPropertyProvider, winrt::Microsoft::UI::Xaml::Data::ICustomPropertyProvider>
@@ -5967,23 +5871,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data.ICustomPropertyProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICustomPropertyProvider};
 
     // ----- IItemsRangeInfo interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IItemsRangeInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Data::IItemsRangeInfo>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Data::IItemsRangeInfo>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IItemsRangeInfo(py::wrapper::Microsoft::UI::Xaml::Data::IItemsRangeInfo* self) noexcept
     {
@@ -6086,9 +5977,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }};
 
     static PyType_Slot _type_slots_IItemsRangeInfo[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IItemsRangeInfo) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IItemsRangeInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IItemsRangeInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IItemsRangeInfo) },
@@ -6098,11 +5986,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data._IItemsRangeInfo",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::IItemsRangeInfo),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IItemsRangeInfo};
 
     struct ImplementsIItemsRangeInfo : py::ImplementsInterfaceT<ImplementsIItemsRangeInfo, winrt::Microsoft::UI::Xaml::Data::IItemsRangeInfo>
@@ -6254,23 +6138,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data.IItemsRangeInfo",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIItemsRangeInfo};
 
     // ----- INotifyDataErrorInfo interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INotifyDataErrorInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Data::INotifyDataErrorInfo>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Data::INotifyDataErrorInfo>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INotifyDataErrorInfo(py::wrapper::Microsoft::UI::Xaml::Data::INotifyDataErrorInfo* self) noexcept
     {
@@ -6376,9 +6247,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }};
 
     static PyType_Slot _type_slots_INotifyDataErrorInfo[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INotifyDataErrorInfo) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INotifyDataErrorInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INotifyDataErrorInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INotifyDataErrorInfo) },
@@ -6388,11 +6256,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data._INotifyDataErrorInfo",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::INotifyDataErrorInfo),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INotifyDataErrorInfo};
 
     struct ImplementsINotifyDataErrorInfo : py::ImplementsInterfaceT<ImplementsINotifyDataErrorInfo, winrt::Microsoft::UI::Xaml::Data::INotifyDataErrorInfo>
@@ -6592,23 +6456,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data.INotifyDataErrorInfo",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINotifyDataErrorInfo};
 
     // ----- INotifyPropertyChanged interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INotifyPropertyChanged(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Data::INotifyPropertyChanged>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Data::INotifyPropertyChanged>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INotifyPropertyChanged(py::wrapper::Microsoft::UI::Xaml::Data::INotifyPropertyChanged* self) noexcept
     {
@@ -6666,9 +6517,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }};
 
     static PyType_Slot _type_slots_INotifyPropertyChanged[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INotifyPropertyChanged) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INotifyPropertyChanged) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INotifyPropertyChanged) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INotifyPropertyChanged) },
@@ -6678,11 +6526,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data._INotifyPropertyChanged",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::INotifyPropertyChanged),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INotifyPropertyChanged};
 
     struct ImplementsINotifyPropertyChanged : py::ImplementsInterfaceT<ImplementsINotifyPropertyChanged, winrt::Microsoft::UI::Xaml::Data::INotifyPropertyChanged>
@@ -6830,23 +6674,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data.INotifyPropertyChanged",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINotifyPropertyChanged};
 
     // ----- ISelectionInfo interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ISelectionInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Data::ISelectionInfo>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Data::ISelectionInfo>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ISelectionInfo(py::wrapper::Microsoft::UI::Xaml::Data::ISelectionInfo* self) noexcept
     {
@@ -6983,9 +6814,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }};
 
     static PyType_Slot _type_slots_ISelectionInfo[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ISelectionInfo) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISelectionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISelectionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISelectionInfo) },
@@ -6995,11 +6823,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data._ISelectionInfo",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::ISelectionInfo),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ISelectionInfo};
 
     struct ImplementsISelectionInfo : py::ImplementsInterfaceT<ImplementsISelectionInfo, winrt::Microsoft::UI::Xaml::Data::ISelectionInfo>
@@ -7203,23 +7027,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data.ISelectionInfo",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsISelectionInfo};
 
     // ----- ISupportIncrementalLoading interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ISupportIncrementalLoading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Data::ISupportIncrementalLoading>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Data::ISupportIncrementalLoading>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ISupportIncrementalLoading(py::wrapper::Microsoft::UI::Xaml::Data::ISupportIncrementalLoading* self) noexcept
     {
@@ -7284,9 +7095,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }};
 
     static PyType_Slot _type_slots_ISupportIncrementalLoading[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ISupportIncrementalLoading) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISupportIncrementalLoading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISupportIncrementalLoading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISupportIncrementalLoading) },
@@ -7296,11 +7104,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data._ISupportIncrementalLoading",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::ISupportIncrementalLoading),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ISupportIncrementalLoading};
 
     struct ImplementsISupportIncrementalLoading : py::ImplementsInterfaceT<ImplementsISupportIncrementalLoading, winrt::Microsoft::UI::Xaml::Data::ISupportIncrementalLoading>
@@ -7438,23 +7242,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data.ISupportIncrementalLoading",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsISupportIncrementalLoading};
 
     // ----- IValueConverter interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IValueConverter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Data::IValueConverter>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Data::IValueConverter>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IValueConverter(py::wrapper::Microsoft::UI::Xaml::Data::IValueConverter* self) noexcept
     {
@@ -7537,9 +7328,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }};
 
     static PyType_Slot _type_slots_IValueConverter[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IValueConverter) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IValueConverter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IValueConverter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IValueConverter) },
@@ -7549,11 +7337,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data._IValueConverter",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::IValueConverter),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IValueConverter};
 
     struct ImplementsIValueConverter : py::ImplementsInterfaceT<ImplementsIValueConverter, winrt::Microsoft::UI::Xaml::Data::IValueConverter>
@@ -7751,11 +7535,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         "winui3._winui3_microsoft_ui_xaml_data.IValueConverter",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIValueConverter};
 
     // ----- LoadMoreItemsResult struct --------------------

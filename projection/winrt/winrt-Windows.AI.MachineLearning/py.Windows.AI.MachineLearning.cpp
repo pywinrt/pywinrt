@@ -9171,15 +9171,6 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- ILearningModelFeatureDescriptor interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ILearningModelFeatureDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_ILearningModelFeatureDescriptor(py::wrapper::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -9267,9 +9258,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }};
 
     static PyType_Slot _type_slots_ILearningModelFeatureDescriptor[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ILearningModelFeatureDescriptor) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILearningModelFeatureDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILearningModelFeatureDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILearningModelFeatureDescriptor) },
@@ -9279,11 +9267,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         "winrt._winrt_windows_ai_machinelearning._ILearningModelFeatureDescriptor",
         sizeof(py::wrapper::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ILearningModelFeatureDescriptor};
 
     struct ImplementsILearningModelFeatureDescriptor : py::ImplementsInterfaceT<ImplementsILearningModelFeatureDescriptor, winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>
@@ -9449,23 +9433,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         "winrt._winrt_windows_ai_machinelearning.ILearningModelFeatureDescriptor",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsILearningModelFeatureDescriptor};
 
     // ----- ILearningModelFeatureValue interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ILearningModelFeatureValue(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ILearningModelFeatureValue(py::wrapper::Windows::AI::MachineLearning::ILearningModelFeatureValue* self) noexcept
     {
@@ -9500,9 +9471,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }};
 
     static PyType_Slot _type_slots_ILearningModelFeatureValue[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ILearningModelFeatureValue) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILearningModelFeatureValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILearningModelFeatureValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILearningModelFeatureValue) },
@@ -9512,11 +9480,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         "winrt._winrt_windows_ai_machinelearning._ILearningModelFeatureValue",
         sizeof(py::wrapper::Windows::AI::MachineLearning::ILearningModelFeatureValue),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ILearningModelFeatureValue};
 
     struct ImplementsILearningModelFeatureValue : py::ImplementsInterfaceT<ImplementsILearningModelFeatureValue, winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>
@@ -9622,23 +9586,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         "winrt._winrt_windows_ai_machinelearning.ILearningModelFeatureValue",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsILearningModelFeatureValue};
 
     // ----- ILearningModelOperatorProvider interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ILearningModelOperatorProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ILearningModelOperatorProvider(py::wrapper::Windows::AI::MachineLearning::ILearningModelOperatorProvider* self) noexcept
     {
@@ -9655,9 +9606,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }};
 
     static PyType_Slot _type_slots_ILearningModelOperatorProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ILearningModelOperatorProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILearningModelOperatorProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILearningModelOperatorProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILearningModelOperatorProvider) },
@@ -9667,11 +9615,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         "winrt._winrt_windows_ai_machinelearning._ILearningModelOperatorProvider",
         sizeof(py::wrapper::Windows::AI::MachineLearning::ILearningModelOperatorProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ILearningModelOperatorProvider};
 
     struct ImplementsILearningModelOperatorProvider : py::ImplementsInterfaceT<ImplementsILearningModelOperatorProvider, winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>
@@ -9757,23 +9701,10 @@ namespace py::cpp::Windows::AI::MachineLearning
         "winrt._winrt_windows_ai_machinelearning.ILearningModelOperatorProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsILearningModelOperatorProvider};
 
     // ----- ITensor interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ITensor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::AI::MachineLearning::ITensor>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::ITensor>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ITensor(py::wrapper::Windows::AI::MachineLearning::ITensor* self) noexcept
     {
@@ -9844,9 +9775,6 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }};
 
     static PyType_Slot _type_slots_ITensor[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ITensor) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITensor) },
@@ -9856,11 +9784,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         "winrt._winrt_windows_ai_machinelearning._ITensor",
         sizeof(py::wrapper::Windows::AI::MachineLearning::ITensor),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ITensor};
 
     struct ImplementsITensor : py::ImplementsInterfaceT<ImplementsITensor, winrt::Windows::AI::MachineLearning::ITensor>
@@ -10006,11 +9930,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         "winrt._winrt_windows_ai_machinelearning.ITensor",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsITensor};
 
     // ----- Windows.AI.MachineLearning Initialization --------------------

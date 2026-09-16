@@ -25,7 +25,7 @@ classifiers = [
     "Intended Audience :: Developers",
 ]
 dynamic = ["version"{extra_dynamic}]
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 
 [project.urls]
 # Homepage = "https://github.com/pywinrt/pywinrt"
@@ -77,8 +77,9 @@ environment = {{ PYTHONPATH="{relative}/winrt-sdk/src;{runtime_relative}/python{
 # don't install winrt-sdk or winrt-runtime from PyPI
 build-frontend = {{ name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }}
 before-build = "uv pip install setuptools"
-# don't build for PyPy
-skip = "pp*"
+# don't build for PyPy or for the free-threaded interpreters, which the
+# projection doesn't support yet
+skip = "pp* cp*t-*"
 # suppress warnings about ARM64 testing
 test-skip = "*-win_arm64"
 

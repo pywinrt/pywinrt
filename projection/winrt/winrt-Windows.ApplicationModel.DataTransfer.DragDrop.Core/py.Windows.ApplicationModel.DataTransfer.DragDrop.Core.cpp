@@ -1065,15 +1065,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     // ----- ICoreDropOperationTarget interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICoreDropOperationTarget(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_ICoreDropOperationTarget(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -1211,9 +1202,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         { }};
 
     static PyType_Slot _type_slots_ICoreDropOperationTarget[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICoreDropOperationTarget) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreDropOperationTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreDropOperationTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreDropOperationTarget) },
@@ -1223,11 +1211,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core._ICoreDropOperationTarget",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICoreDropOperationTarget};
 
     struct ImplementsICoreDropOperationTarget : py::ImplementsInterfaceT<ImplementsICoreDropOperationTarget, winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget>
@@ -1465,11 +1449,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.ICoreDropOperationTarget",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICoreDropOperationTarget};
 
     // ----- Windows.ApplicationModel.DataTransfer.DragDrop.Core Initialization --------------------

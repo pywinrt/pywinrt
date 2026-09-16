@@ -1849,15 +1849,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     // ----- ISystemBackdropController interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ISystemBackdropController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_ISystemBackdropController(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -1989,9 +1980,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { }};
 
     static PyType_Slot _type_slots_ISystemBackdropController[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ISystemBackdropController) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISystemBackdropController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISystemBackdropController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISystemBackdropController) },
@@ -2001,11 +1989,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         "winui3._winui3_microsoft_ui_composition_systembackdrops._ISystemBackdropController",
         sizeof(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ISystemBackdropController};
 
     struct ImplementsISystemBackdropController : py::ImplementsInterfaceT<ImplementsISystemBackdropController, winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController>
@@ -2213,23 +2197,10 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         "winui3._winui3_microsoft_ui_composition_systembackdrops.ISystemBackdropController",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsISystemBackdropController};
 
     // ----- ISystemBackdropControllerWithTargets interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ISystemBackdropControllerWithTargets(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ISystemBackdropControllerWithTargets(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets* self) noexcept
     {
@@ -2541,9 +2512,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { }};
 
     static PyType_Slot _type_slots_ISystemBackdropControllerWithTargets[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ISystemBackdropControllerWithTargets) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISystemBackdropControllerWithTargets) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISystemBackdropControllerWithTargets) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISystemBackdropControllerWithTargets) },
@@ -2553,11 +2521,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         "winui3._winui3_microsoft_ui_composition_systembackdrops._ISystemBackdropControllerWithTargets",
         sizeof(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ISystemBackdropControllerWithTargets};
 
     struct ImplementsISystemBackdropControllerWithTargets : py::ImplementsInterfaceT<ImplementsISystemBackdropControllerWithTargets, winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets>
@@ -2965,11 +2929,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         "winui3._winui3_microsoft_ui_composition_systembackdrops.ISystemBackdropControllerWithTargets",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsISystemBackdropControllerWithTargets};
 
     // ----- Microsoft.UI.Composition.SystemBackdrops Initialization --------------------

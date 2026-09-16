@@ -23308,15 +23308,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- IScrollSnapPointsInfo interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IScrollSnapPointsInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IScrollSnapPointsInfo(py::wrapper::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -23526,9 +23517,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }};
 
     static PyType_Slot _type_slots_IScrollSnapPointsInfo[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IScrollSnapPointsInfo) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IScrollSnapPointsInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IScrollSnapPointsInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IScrollSnapPointsInfo) },
@@ -23538,11 +23526,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives._IScrollSnapPointsInfo",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IScrollSnapPointsInfo};
 
     struct ImplementsIScrollSnapPointsInfo : py::ImplementsInterfaceT<ImplementsIScrollSnapPointsInfo, winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>
@@ -23882,11 +23866,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.IScrollSnapPointsInfo",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIScrollSnapPointsInfo};
 
     // ----- GeneratorPosition struct --------------------

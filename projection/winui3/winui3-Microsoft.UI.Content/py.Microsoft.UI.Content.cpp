@@ -7810,15 +7810,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     // ----- IContentSiteAutomation interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContentSiteAutomation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Content::IContentSiteAutomation>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::IContentSiteAutomation>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IContentSiteAutomation(py::wrapper::Microsoft::UI::Content::IContentSiteAutomation* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -8060,9 +8051,6 @@ namespace py::cpp::Microsoft::UI::Content
         { }};
 
     static PyType_Slot _type_slots_IContentSiteAutomation[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContentSiteAutomation) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContentSiteAutomation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContentSiteAutomation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContentSiteAutomation) },
@@ -8072,11 +8060,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winui3._winui3_microsoft_ui_content._IContentSiteAutomation",
         sizeof(py::wrapper::Microsoft::UI::Content::IContentSiteAutomation),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContentSiteAutomation};
 
     struct ImplementsIContentSiteAutomation : py::ImplementsInterfaceT<ImplementsIContentSiteAutomation, winrt::Microsoft::UI::Content::IContentSiteAutomation>
@@ -8473,23 +8457,10 @@ namespace py::cpp::Microsoft::UI::Content
         "winui3._winui3_microsoft_ui_content.IContentSiteAutomation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContentSiteAutomation};
 
     // ----- IContentSiteBridge interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContentSiteBridge(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Content::IContentSiteBridge>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::IContentSiteBridge>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContentSiteBridge(py::wrapper::Microsoft::UI::Content::IContentSiteBridge* self) noexcept
     {
@@ -8666,9 +8637,6 @@ namespace py::cpp::Microsoft::UI::Content
         { }};
 
     static PyType_Slot _type_slots_IContentSiteBridge[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContentSiteBridge) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContentSiteBridge) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContentSiteBridge) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContentSiteBridge) },
@@ -8678,11 +8646,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winui3._winui3_microsoft_ui_content._IContentSiteBridge",
         sizeof(py::wrapper::Microsoft::UI::Content::IContentSiteBridge),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContentSiteBridge};
 
     struct ImplementsIContentSiteBridge : py::ImplementsInterfaceT<ImplementsIContentSiteBridge, winrt::Microsoft::UI::Content::IContentSiteBridge>
@@ -8898,23 +8862,10 @@ namespace py::cpp::Microsoft::UI::Content
         "winui3._winui3_microsoft_ui_content.IContentSiteBridge",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContentSiteBridge};
 
     // ----- IContentSiteInput interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContentSiteInput(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Content::IContentSiteInput>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::IContentSiteInput>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContentSiteInput(py::wrapper::Microsoft::UI::Content::IContentSiteInput* self) noexcept
     {
@@ -9019,9 +8970,6 @@ namespace py::cpp::Microsoft::UI::Content
         { }};
 
     static PyType_Slot _type_slots_IContentSiteInput[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContentSiteInput) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContentSiteInput) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContentSiteInput) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContentSiteInput) },
@@ -9031,11 +8979,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winui3._winui3_microsoft_ui_content._IContentSiteInput",
         sizeof(py::wrapper::Microsoft::UI::Content::IContentSiteInput),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContentSiteInput};
 
     struct ImplementsIContentSiteInput : py::ImplementsInterfaceT<ImplementsIContentSiteInput, winrt::Microsoft::UI::Content::IContentSiteInput>
@@ -9207,23 +9151,10 @@ namespace py::cpp::Microsoft::UI::Content
         "winui3._winui3_microsoft_ui_content.IContentSiteInput",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContentSiteInput};
 
     // ----- IContentSiteLink interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContentSiteLink(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Content::IContentSiteLink>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::IContentSiteLink>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContentSiteLink(py::wrapper::Microsoft::UI::Content::IContentSiteLink* self) noexcept
     {
@@ -9258,9 +9189,6 @@ namespace py::cpp::Microsoft::UI::Content
         { }};
 
     static PyType_Slot _type_slots_IContentSiteLink[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContentSiteLink) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContentSiteLink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContentSiteLink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContentSiteLink) },
@@ -9270,11 +9198,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winui3._winui3_microsoft_ui_content._IContentSiteLink",
         sizeof(py::wrapper::Microsoft::UI::Content::IContentSiteLink),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContentSiteLink};
 
     struct ImplementsIContentSiteLink : py::ImplementsInterfaceT<ImplementsIContentSiteLink, winrt::Microsoft::UI::Content::IContentSiteLink>
@@ -9380,11 +9304,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winui3._winui3_microsoft_ui_content.IContentSiteLink",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContentSiteLink};
 
     // ----- Microsoft.UI.Content Initialization --------------------

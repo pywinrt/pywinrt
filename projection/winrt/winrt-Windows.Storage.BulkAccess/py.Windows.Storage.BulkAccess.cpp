@@ -2891,15 +2891,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
 
     // ----- IStorageItemInformation interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IStorageItemInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IStorageItemInformation(py::wrapper::Windows::Storage::BulkAccess::IStorageItemInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -3105,9 +3096,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { }};
 
     static PyType_Slot _type_slots_IStorageItemInformation[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IStorageItemInformation) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageItemInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageItemInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageItemInformation) },
@@ -3117,11 +3105,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
         "winrt._winrt_windows_storage_bulkaccess._IStorageItemInformation",
         sizeof(py::wrapper::Windows::Storage::BulkAccess::IStorageItemInformation),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IStorageItemInformation};
 
     struct ImplementsIStorageItemInformation : py::ImplementsInterfaceT<ImplementsIStorageItemInformation, winrt::Windows::Storage::BulkAccess::IStorageItemInformation>
@@ -3451,11 +3435,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
         "winrt._winrt_windows_storage_bulkaccess.IStorageItemInformation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIStorageItemInformation};
 
     // ----- Windows.Storage.BulkAccess Initialization --------------------

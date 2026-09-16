@@ -143758,15 +143758,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     // ----- IAnimatedVisual interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAnimatedVisual(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisual>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisual>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IAnimatedVisual(py::wrapper::Microsoft::UI::Xaml::Controls::IAnimatedVisual* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -143890,9 +143881,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_IAnimatedVisual[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAnimatedVisual) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAnimatedVisual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAnimatedVisual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAnimatedVisual) },
@@ -143902,11 +143890,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls._IAnimatedVisual",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::IAnimatedVisual),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAnimatedVisual};
 
     struct ImplementsIAnimatedVisual : py::ImplementsInterfaceT<ImplementsIAnimatedVisual, winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisual>
@@ -144076,23 +144060,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls.IAnimatedVisual",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAnimatedVisual};
 
     // ----- IAnimatedVisual2 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAnimatedVisual2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisual2>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisual2>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IAnimatedVisual2(py::wrapper::Microsoft::UI::Xaml::Controls::IAnimatedVisual2* self) noexcept
     {
@@ -144275,9 +144246,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_IAnimatedVisual2[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAnimatedVisual2) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAnimatedVisual2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAnimatedVisual2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAnimatedVisual2) },
@@ -144287,11 +144255,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls._IAnimatedVisual2",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::IAnimatedVisual2),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAnimatedVisual2};
 
     struct ImplementsIAnimatedVisual2 : py::ImplementsInterfaceT<ImplementsIAnimatedVisual2, winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisual2>
@@ -144509,23 +144473,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls.IAnimatedVisual2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAnimatedVisual2};
 
     // ----- IAnimatedVisualSource interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAnimatedVisualSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IAnimatedVisualSource(py::wrapper::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource* self) noexcept
     {
@@ -144586,9 +144537,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_IAnimatedVisualSource[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAnimatedVisualSource) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAnimatedVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAnimatedVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAnimatedVisualSource) },
@@ -144598,11 +144546,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls._IAnimatedVisualSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAnimatedVisualSource};
 
     struct ImplementsIAnimatedVisualSource : py::ImplementsInterfaceT<ImplementsIAnimatedVisualSource, winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource>
@@ -144722,23 +144666,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls.IAnimatedVisualSource",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAnimatedVisualSource};
 
     // ----- IAnimatedVisualSource2 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAnimatedVisualSource2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IAnimatedVisualSource2(py::wrapper::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2* self) noexcept
     {
@@ -144849,9 +144780,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_IAnimatedVisualSource2[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAnimatedVisualSource2) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAnimatedVisualSource2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAnimatedVisualSource2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAnimatedVisualSource2) },
@@ -144861,11 +144789,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls._IAnimatedVisualSource2",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAnimatedVisualSource2};
 
     struct ImplementsIAnimatedVisualSource2 : py::ImplementsInterfaceT<ImplementsIAnimatedVisualSource2, winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>
@@ -145047,23 +144971,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls.IAnimatedVisualSource2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAnimatedVisualSource2};
 
     // ----- IAnimatedVisualSource3 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAnimatedVisualSource3(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource3>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource3>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IAnimatedVisualSource3(py::wrapper::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource3* self) noexcept
     {
@@ -145125,9 +145036,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_IAnimatedVisualSource3[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAnimatedVisualSource3) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAnimatedVisualSource3) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAnimatedVisualSource3) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAnimatedVisualSource3) },
@@ -145137,11 +145045,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls._IAnimatedVisualSource3",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource3),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAnimatedVisualSource3};
 
     struct ImplementsIAnimatedVisualSource3 : py::ImplementsInterfaceT<ImplementsIAnimatedVisualSource3, winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource3>
@@ -145273,23 +145177,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls.IAnimatedVisualSource3",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAnimatedVisualSource3};
 
     // ----- ICommandBarElement interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICommandBarElement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::ICommandBarElement>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::ICommandBarElement>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ICommandBarElement(py::wrapper::Microsoft::UI::Xaml::Controls::ICommandBarElement* self) noexcept
     {
@@ -145412,9 +145303,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_ICommandBarElement[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICommandBarElement) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICommandBarElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICommandBarElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICommandBarElement) },
@@ -145424,11 +145312,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls._ICommandBarElement",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::ICommandBarElement),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICommandBarElement};
 
     struct ImplementsICommandBarElement : py::ImplementsInterfaceT<ImplementsICommandBarElement, winrt::Microsoft::UI::Xaml::Controls::ICommandBarElement>
@@ -145620,23 +145504,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls.ICommandBarElement",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICommandBarElement};
 
     // ----- IDynamicAnimatedVisualSource interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IDynamicAnimatedVisualSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IDynamicAnimatedVisualSource>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IDynamicAnimatedVisualSource>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IDynamicAnimatedVisualSource(py::wrapper::Microsoft::UI::Xaml::Controls::IDynamicAnimatedVisualSource* self) noexcept
     {
@@ -145738,9 +145609,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_IDynamicAnimatedVisualSource[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IDynamicAnimatedVisualSource) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDynamicAnimatedVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDynamicAnimatedVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDynamicAnimatedVisualSource) },
@@ -145750,11 +145618,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls._IDynamicAnimatedVisualSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::IDynamicAnimatedVisualSource),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IDynamicAnimatedVisualSource};
 
     struct ImplementsIDynamicAnimatedVisualSource : py::ImplementsInterfaceT<ImplementsIDynamicAnimatedVisualSource, winrt::Microsoft::UI::Xaml::Controls::IDynamicAnimatedVisualSource>
@@ -145936,23 +145800,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls.IDynamicAnimatedVisualSource",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIDynamicAnimatedVisualSource};
 
     // ----- IInsertionPanel interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IInsertionPanel(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IInsertionPanel>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IInsertionPanel>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IInsertionPanel(py::wrapper::Microsoft::UI::Xaml::Controls::IInsertionPanel* self) noexcept
     {
@@ -146013,9 +145864,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_IInsertionPanel[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IInsertionPanel) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInsertionPanel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInsertionPanel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInsertionPanel) },
@@ -146025,11 +145873,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls._IInsertionPanel",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::IInsertionPanel),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IInsertionPanel};
 
     struct ImplementsIInsertionPanel : py::ImplementsInterfaceT<ImplementsIInsertionPanel, winrt::Microsoft::UI::Xaml::Controls::IInsertionPanel>
@@ -146149,23 +145993,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls.IInsertionPanel",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIInsertionPanel};
 
     // ----- IItemContainerMapping interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IItemContainerMapping(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IItemContainerMapping>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IItemContainerMapping>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IItemContainerMapping(py::wrapper::Microsoft::UI::Xaml::Controls::IItemContainerMapping* self) noexcept
     {
@@ -146302,9 +146133,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_IItemContainerMapping[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IItemContainerMapping) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IItemContainerMapping) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IItemContainerMapping) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IItemContainerMapping) },
@@ -146314,11 +146142,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls._IItemContainerMapping",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::IItemContainerMapping),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IItemContainerMapping};
 
     struct ImplementsIItemContainerMapping : py::ImplementsInterfaceT<ImplementsIItemContainerMapping, winrt::Microsoft::UI::Xaml::Controls::IItemContainerMapping>
@@ -146532,23 +146356,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls.IItemContainerMapping",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIItemContainerMapping};
 
     // ----- IKeyIndexMapping interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IKeyIndexMapping(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IKeyIndexMapping>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IKeyIndexMapping>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IKeyIndexMapping(py::wrapper::Microsoft::UI::Xaml::Controls::IKeyIndexMapping* self) noexcept
     {
@@ -146625,9 +146436,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_IKeyIndexMapping[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IKeyIndexMapping) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IKeyIndexMapping) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IKeyIndexMapping) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IKeyIndexMapping) },
@@ -146637,11 +146445,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls._IKeyIndexMapping",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::IKeyIndexMapping),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IKeyIndexMapping};
 
     struct ImplementsIKeyIndexMapping : py::ImplementsInterfaceT<ImplementsIKeyIndexMapping, winrt::Microsoft::UI::Xaml::Controls::IKeyIndexMapping>
@@ -146791,23 +146595,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls.IKeyIndexMapping",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIKeyIndexMapping};
 
     // ----- INavigate interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INavigate(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::INavigate>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::INavigate>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INavigate(py::wrapper::Microsoft::UI::Xaml::Controls::INavigate* self) noexcept
     {
@@ -146854,9 +146645,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_INavigate[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INavigate) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INavigate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INavigate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INavigate) },
@@ -146866,11 +146654,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls._INavigate",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::INavigate),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INavigate};
 
     struct ImplementsINavigate : py::ImplementsInterfaceT<ImplementsINavigate, winrt::Microsoft::UI::Xaml::Controls::INavigate>
@@ -146988,23 +146772,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls.INavigate",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINavigate};
 
     // ----- IScrollAnchorProvider interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IScrollAnchorProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IScrollAnchorProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::IScrollAnchorProvider>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IScrollAnchorProvider(py::wrapper::Microsoft::UI::Xaml::Controls::IScrollAnchorProvider* self) noexcept
     {
@@ -147101,9 +146872,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_IScrollAnchorProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IScrollAnchorProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IScrollAnchorProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IScrollAnchorProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IScrollAnchorProvider) },
@@ -147113,11 +146881,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls._IScrollAnchorProvider",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::IScrollAnchorProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IScrollAnchorProvider};
 
     struct ImplementsIScrollAnchorProvider : py::ImplementsInterfaceT<ImplementsIScrollAnchorProvider, winrt::Microsoft::UI::Xaml::Controls::IScrollAnchorProvider>
@@ -147283,23 +147047,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls.IScrollAnchorProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIScrollAnchorProvider};
 
     // ----- ISemanticZoomInformation interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ISemanticZoomInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::ISemanticZoomInformation>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::ISemanticZoomInformation>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ISemanticZoomInformation(py::wrapper::Microsoft::UI::Xaml::Controls::ISemanticZoomInformation* self) noexcept
     {
@@ -147665,9 +147416,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_ISemanticZoomInformation[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ISemanticZoomInformation) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISemanticZoomInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISemanticZoomInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISemanticZoomInformation) },
@@ -147677,11 +147425,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls._ISemanticZoomInformation",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::ISemanticZoomInformation),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ISemanticZoomInformation};
 
     struct ImplementsISemanticZoomInformation : py::ImplementsInterfaceT<ImplementsISemanticZoomInformation, winrt::Microsoft::UI::Xaml::Controls::ISemanticZoomInformation>
@@ -148142,11 +147886,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winui3._winui3_microsoft_ui_xaml_controls.ISemanticZoomInformation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsISemanticZoomInformation};
 
     // ----- Microsoft.UI.Xaml.Controls Initialization --------------------

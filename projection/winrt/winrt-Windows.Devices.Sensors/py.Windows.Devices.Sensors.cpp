@@ -14923,15 +14923,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- IHumanPresenceSensorExtension interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IHumanPresenceSensorExtension(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtension>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtension>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IHumanPresenceSensorExtension(py::wrapper::Windows::Devices::Sensors::IHumanPresenceSensorExtension* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -15155,9 +15146,6 @@ namespace py::cpp::Windows::Devices::Sensors
         { }};
 
     static PyType_Slot _type_slots_IHumanPresenceSensorExtension[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IHumanPresenceSensorExtension) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IHumanPresenceSensorExtension) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IHumanPresenceSensorExtension) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IHumanPresenceSensorExtension) },
@@ -15167,11 +15155,7 @@ namespace py::cpp::Windows::Devices::Sensors
         "winrt._winrt_windows_devices_sensors._IHumanPresenceSensorExtension",
         sizeof(py::wrapper::Windows::Devices::Sensors::IHumanPresenceSensorExtension),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IHumanPresenceSensorExtension};
 
     struct ImplementsIHumanPresenceSensorExtension : py::ImplementsInterfaceT<ImplementsIHumanPresenceSensorExtension, winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtension>
@@ -15445,23 +15429,10 @@ namespace py::cpp::Windows::Devices::Sensors
         "winrt._winrt_windows_devices_sensors.IHumanPresenceSensorExtension",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIHumanPresenceSensorExtension};
 
     // ----- ISensorDataThreshold interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ISensorDataThreshold(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Sensors::ISensorDataThreshold>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::ISensorDataThreshold>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ISensorDataThreshold(py::wrapper::Windows::Devices::Sensors::ISensorDataThreshold* self) noexcept
     {
@@ -15478,9 +15449,6 @@ namespace py::cpp::Windows::Devices::Sensors
         { }};
 
     static PyType_Slot _type_slots_ISensorDataThreshold[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ISensorDataThreshold) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISensorDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISensorDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISensorDataThreshold) },
@@ -15490,11 +15458,7 @@ namespace py::cpp::Windows::Devices::Sensors
         "winrt._winrt_windows_devices_sensors._ISensorDataThreshold",
         sizeof(py::wrapper::Windows::Devices::Sensors::ISensorDataThreshold),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ISensorDataThreshold};
 
     struct ImplementsISensorDataThreshold : py::ImplementsInterfaceT<ImplementsISensorDataThreshold, winrt::Windows::Devices::Sensors::ISensorDataThreshold>
@@ -15580,11 +15544,7 @@ namespace py::cpp::Windows::Devices::Sensors
         "winrt._winrt_windows_devices_sensors.ISensorDataThreshold",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsISensorDataThreshold};
 
     // ----- LightSensorChromaticity struct --------------------

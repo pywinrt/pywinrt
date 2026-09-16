@@ -7383,15 +7383,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDClosedCaptionDataReceivedEventArgs interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDClosedCaptionDataReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_INDClosedCaptionDataReceivedEventArgs(py::wrapper::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -7461,9 +7452,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDClosedCaptionDataReceivedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDClosedCaptionDataReceivedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDClosedCaptionDataReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDClosedCaptionDataReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDClosedCaptionDataReceivedEventArgs) },
@@ -7473,11 +7461,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDClosedCaptionDataReceivedEventArgs",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDClosedCaptionDataReceivedEventArgs};
 
     struct ImplementsINDClosedCaptionDataReceivedEventArgs : py::ImplementsInterfaceT<ImplementsINDClosedCaptionDataReceivedEventArgs, winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>
@@ -7624,23 +7608,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDClosedCaptionDataReceivedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDClosedCaptionDataReceivedEventArgs};
 
     // ----- INDCustomData interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDCustomData(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDCustomData>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDCustomData>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INDCustomData(py::wrapper::Windows::Media::Protection::PlayReady::INDCustomData* self) noexcept
     {
@@ -7693,9 +7664,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDCustomData[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDCustomData) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDCustomData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDCustomData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDCustomData) },
@@ -7705,11 +7673,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDCustomData",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDCustomData),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDCustomData};
 
     struct ImplementsINDCustomData : py::ImplementsInterfaceT<ImplementsINDCustomData, winrt::Windows::Media::Protection::PlayReady::INDCustomData>
@@ -7837,23 +7801,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDCustomData",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDCustomData};
 
     // ----- INDDownloadEngine interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDDownloadEngine(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INDDownloadEngine(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngine* self) noexcept
     {
@@ -8092,9 +8043,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDDownloadEngine[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDDownloadEngine) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDDownloadEngine) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDDownloadEngine) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDDownloadEngine) },
@@ -8104,11 +8052,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDDownloadEngine",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngine),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDDownloadEngine};
 
     struct ImplementsINDDownloadEngine : py::ImplementsInterfaceT<ImplementsINDDownloadEngine, winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine>
@@ -8418,23 +8362,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDDownloadEngine",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDDownloadEngine};
 
     // ----- INDDownloadEngineNotifier interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDDownloadEngineNotifier(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INDDownloadEngineNotifier(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier* self) noexcept
     {
@@ -8632,9 +8563,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDDownloadEngineNotifier[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDDownloadEngineNotifier) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDDownloadEngineNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDDownloadEngineNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDDownloadEngineNotifier) },
@@ -8644,11 +8572,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDDownloadEngineNotifier",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDDownloadEngineNotifier};
 
     struct ImplementsINDDownloadEngineNotifier : py::ImplementsInterfaceT<ImplementsINDDownloadEngineNotifier, winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier>
@@ -8908,23 +8832,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDDownloadEngineNotifier",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDDownloadEngineNotifier};
 
     // ----- INDLicenseFetchCompletedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDLicenseFetchCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INDLicenseFetchCompletedEventArgs(py::wrapper::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs* self) noexcept
     {
@@ -8959,9 +8870,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDLicenseFetchCompletedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDLicenseFetchCompletedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDLicenseFetchCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDLicenseFetchCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDLicenseFetchCompletedEventArgs) },
@@ -8971,11 +8879,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDLicenseFetchCompletedEventArgs",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDLicenseFetchCompletedEventArgs};
 
     struct ImplementsINDLicenseFetchCompletedEventArgs : py::ImplementsInterfaceT<ImplementsINDLicenseFetchCompletedEventArgs, winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>
@@ -9081,23 +8985,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDLicenseFetchCompletedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDLicenseFetchCompletedEventArgs};
 
     // ----- INDLicenseFetchDescriptor interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDLicenseFetchDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INDLicenseFetchDescriptor(py::wrapper::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor* self) noexcept
     {
@@ -9194,9 +9085,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDLicenseFetchDescriptor[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDLicenseFetchDescriptor) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDLicenseFetchDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDLicenseFetchDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDLicenseFetchDescriptor) },
@@ -9206,11 +9094,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDLicenseFetchDescriptor",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDLicenseFetchDescriptor};
 
     struct ImplementsINDLicenseFetchDescriptor : py::ImplementsInterfaceT<ImplementsINDLicenseFetchDescriptor, winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>
@@ -9380,23 +9264,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDLicenseFetchDescriptor",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDLicenseFetchDescriptor};
 
     // ----- INDLicenseFetchResult interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDLicenseFetchResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INDLicenseFetchResult(py::wrapper::Windows::Media::Protection::PlayReady::INDLicenseFetchResult* self) noexcept
     {
@@ -9431,9 +9302,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDLicenseFetchResult[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDLicenseFetchResult) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDLicenseFetchResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDLicenseFetchResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDLicenseFetchResult) },
@@ -9443,11 +9311,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDLicenseFetchResult",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDLicenseFetchResult),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDLicenseFetchResult};
 
     struct ImplementsINDLicenseFetchResult : py::ImplementsInterfaceT<ImplementsINDLicenseFetchResult, winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult>
@@ -9553,23 +9417,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDLicenseFetchResult",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDLicenseFetchResult};
 
     // ----- INDMessenger interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDMessenger(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDMessenger>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDMessenger>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INDMessenger(py::wrapper::Windows::Media::Protection::PlayReady::INDMessenger* self) noexcept
     {
@@ -9714,9 +9565,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDMessenger[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDMessenger) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDMessenger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDMessenger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDMessenger) },
@@ -9726,11 +9574,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDMessenger",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDMessenger),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDMessenger};
 
     struct ImplementsINDMessenger : py::ImplementsInterfaceT<ImplementsINDMessenger, winrt::Windows::Media::Protection::PlayReady::INDMessenger>
@@ -10016,23 +9860,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDMessenger",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDMessenger};
 
     // ----- INDProximityDetectionCompletedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDProximityDetectionCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INDProximityDetectionCompletedEventArgs(py::wrapper::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs* self) noexcept
     {
@@ -10067,9 +9898,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDProximityDetectionCompletedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDProximityDetectionCompletedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDProximityDetectionCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDProximityDetectionCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDProximityDetectionCompletedEventArgs) },
@@ -10079,11 +9907,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDProximityDetectionCompletedEventArgs",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDProximityDetectionCompletedEventArgs};
 
     struct ImplementsINDProximityDetectionCompletedEventArgs : py::ImplementsInterfaceT<ImplementsINDProximityDetectionCompletedEventArgs, winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>
@@ -10189,23 +10013,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDProximityDetectionCompletedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDProximityDetectionCompletedEventArgs};
 
     // ----- INDRegistrationCompletedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDRegistrationCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INDRegistrationCompletedEventArgs(py::wrapper::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs* self) noexcept
     {
@@ -10302,9 +10113,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDRegistrationCompletedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDRegistrationCompletedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDRegistrationCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDRegistrationCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDRegistrationCompletedEventArgs) },
@@ -10314,11 +10122,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDRegistrationCompletedEventArgs",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDRegistrationCompletedEventArgs};
 
     struct ImplementsINDRegistrationCompletedEventArgs : py::ImplementsInterfaceT<ImplementsINDRegistrationCompletedEventArgs, winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>
@@ -10487,23 +10291,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDRegistrationCompletedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDRegistrationCompletedEventArgs};
 
     // ----- INDSendResult interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDSendResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDSendResult>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDSendResult>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INDSendResult(py::wrapper::Windows::Media::Protection::PlayReady::INDSendResult* self) noexcept
     {
@@ -10538,9 +10329,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDSendResult[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDSendResult) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDSendResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDSendResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDSendResult) },
@@ -10550,11 +10338,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDSendResult",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDSendResult),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDSendResult};
 
     struct ImplementsINDSendResult : py::ImplementsInterfaceT<ImplementsINDSendResult, winrt::Windows::Media::Protection::PlayReady::INDSendResult>
@@ -10661,23 +10445,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDSendResult",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDSendResult};
 
     // ----- INDStartResult interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDStartResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStartResult>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStartResult>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INDStartResult(py::wrapper::Windows::Media::Protection::PlayReady::INDStartResult* self) noexcept
     {
@@ -10712,9 +10483,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDStartResult[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDStartResult) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDStartResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDStartResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDStartResult) },
@@ -10724,11 +10492,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDStartResult",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDStartResult),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDStartResult};
 
     struct ImplementsINDStartResult : py::ImplementsInterfaceT<ImplementsINDStartResult, winrt::Windows::Media::Protection::PlayReady::INDStartResult>
@@ -10834,23 +10598,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDStartResult",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDStartResult};
 
     // ----- INDStorageFileHelper interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDStorageFileHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INDStorageFileHelper(py::wrapper::Windows::Media::Protection::PlayReady::INDStorageFileHelper* self) noexcept
     {
@@ -10897,9 +10648,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDStorageFileHelper[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDStorageFileHelper) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDStorageFileHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDStorageFileHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDStorageFileHelper) },
@@ -10909,11 +10657,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDStorageFileHelper",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDStorageFileHelper),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDStorageFileHelper};
 
     struct ImplementsINDStorageFileHelper : py::ImplementsInterfaceT<ImplementsINDStorageFileHelper, winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper>
@@ -11031,23 +10775,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDStorageFileHelper",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDStorageFileHelper};
 
     // ----- INDStreamParser interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDStreamParser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParser>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParser>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INDStreamParser(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParser* self) noexcept
     {
@@ -11215,9 +10946,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDStreamParser[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDStreamParser) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDStreamParser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDStreamParser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDStreamParser) },
@@ -11227,11 +10955,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDStreamParser",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParser),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDStreamParser};
 
     struct ImplementsINDStreamParser : py::ImplementsInterfaceT<ImplementsINDStreamParser, winrt::Windows::Media::Protection::PlayReady::INDStreamParser>
@@ -11449,23 +11173,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDStreamParser",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDStreamParser};
 
     // ----- INDStreamParserNotifier interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDStreamParserNotifier(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INDStreamParserNotifier(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParserNotifier* self) noexcept
     {
@@ -11614,9 +11325,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDStreamParserNotifier[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDStreamParserNotifier) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDStreamParserNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDStreamParserNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDStreamParserNotifier) },
@@ -11626,11 +11334,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDStreamParserNotifier",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParserNotifier),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDStreamParserNotifier};
 
     struct ImplementsINDStreamParserNotifier : py::ImplementsInterfaceT<ImplementsINDStreamParserNotifier, winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier>
@@ -11902,23 +11606,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDStreamParserNotifier",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDStreamParserNotifier};
 
     // ----- INDTransmitterProperties interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INDTransmitterProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INDTransmitterProperties(py::wrapper::Windows::Media::Protection::PlayReady::INDTransmitterProperties* self) noexcept
     {
@@ -12133,9 +11824,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_INDTransmitterProperties[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INDTransmitterProperties) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDTransmitterProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDTransmitterProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDTransmitterProperties) },
@@ -12145,11 +11833,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._INDTransmitterProperties",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDTransmitterProperties),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INDTransmitterProperties};
 
     struct ImplementsINDTransmitterProperties : py::ImplementsInterfaceT<ImplementsINDTransmitterProperties, winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties>
@@ -12458,23 +12142,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.INDTransmitterProperties",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINDTransmitterProperties};
 
     // ----- IPlayReadyDomain interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPlayReadyDomain(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPlayReadyDomain(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyDomain* self) noexcept
     {
@@ -12581,9 +12252,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_IPlayReadyDomain[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyDomain) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyDomain) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyDomain) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyDomain) },
@@ -12593,11 +12261,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._IPlayReadyDomain",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyDomain),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPlayReadyDomain};
 
     struct ImplementsIPlayReadyDomain : py::ImplementsInterfaceT<ImplementsIPlayReadyDomain, winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain>
@@ -12783,23 +12447,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.IPlayReadyDomain",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPlayReadyDomain};
 
     // ----- IPlayReadyLicense interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPlayReadyLicense(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPlayReadyLicense(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicense* self) noexcept
     {
@@ -12954,9 +12605,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_IPlayReadyLicense[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyLicense) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyLicense) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyLicense) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyLicense) },
@@ -12966,11 +12614,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._IPlayReadyLicense",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicense),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPlayReadyLicense};
 
     struct ImplementsIPlayReadyLicense : py::ImplementsInterfaceT<ImplementsIPlayReadyLicense, winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense>
@@ -13208,23 +12852,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.IPlayReadyLicense",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPlayReadyLicense};
 
     // ----- IPlayReadyLicenseAcquisitionServiceRequest interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPlayReadyLicenseAcquisitionServiceRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPlayReadyLicenseAcquisitionServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest* self) noexcept
     {
@@ -13585,9 +13216,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_IPlayReadyLicenseAcquisitionServiceRequest[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyLicenseAcquisitionServiceRequest) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyLicenseAcquisitionServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyLicenseAcquisitionServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyLicenseAcquisitionServiceRequest) },
@@ -13597,11 +13225,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._IPlayReadyLicenseAcquisitionServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPlayReadyLicenseAcquisitionServiceRequest};
 
     struct ImplementsIPlayReadyLicenseAcquisitionServiceRequest : py::ImplementsInterfaceT<ImplementsIPlayReadyLicenseAcquisitionServiceRequest, winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest>
@@ -14029,23 +13653,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.IPlayReadyLicenseAcquisitionServiceRequest",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPlayReadyLicenseAcquisitionServiceRequest};
 
     // ----- IPlayReadyLicenseSession interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPlayReadyLicenseSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPlayReadyLicenseSession(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession* self) noexcept
     {
@@ -14121,9 +13732,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_IPlayReadyLicenseSession[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyLicenseSession) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyLicenseSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyLicenseSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyLicenseSession) },
@@ -14133,11 +13741,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._IPlayReadyLicenseSession",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPlayReadyLicenseSession};
 
     struct ImplementsIPlayReadyLicenseSession : py::ImplementsInterfaceT<ImplementsIPlayReadyLicenseSession, winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>
@@ -14279,23 +13883,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.IPlayReadyLicenseSession",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPlayReadyLicenseSession};
 
     // ----- IPlayReadyLicenseSession2 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPlayReadyLicenseSession2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPlayReadyLicenseSession2(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2* self) noexcept
     {
@@ -14402,9 +13993,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_IPlayReadyLicenseSession2[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyLicenseSession2) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyLicenseSession2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyLicenseSession2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyLicenseSession2) },
@@ -14414,11 +14002,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._IPlayReadyLicenseSession2",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPlayReadyLicenseSession2};
 
     struct ImplementsIPlayReadyLicenseSession2 : py::ImplementsInterfaceT<ImplementsIPlayReadyLicenseSession2, winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>
@@ -14604,23 +14188,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.IPlayReadyLicenseSession2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPlayReadyLicenseSession2};
 
     // ----- IPlayReadySecureStopServiceRequest interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPlayReadySecureStopServiceRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPlayReadySecureStopServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest* self) noexcept
     {
@@ -14983,9 +14554,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_IPlayReadySecureStopServiceRequest[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadySecureStopServiceRequest) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadySecureStopServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadySecureStopServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadySecureStopServiceRequest) },
@@ -14995,11 +14563,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._IPlayReadySecureStopServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPlayReadySecureStopServiceRequest};
 
     struct ImplementsIPlayReadySecureStopServiceRequest : py::ImplementsInterfaceT<ImplementsIPlayReadySecureStopServiceRequest, winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>
@@ -15442,23 +15006,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.IPlayReadySecureStopServiceRequest",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPlayReadySecureStopServiceRequest};
 
     // ----- IPlayReadyServiceRequest interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPlayReadyServiceRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPlayReadyServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest* self) noexcept
     {
@@ -15731,9 +15282,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }};
 
     static PyType_Slot _type_slots_IPlayReadyServiceRequest[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyServiceRequest) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyServiceRequest) },
@@ -15743,11 +15291,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready._IPlayReadyServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPlayReadyServiceRequest};
 
     struct ImplementsIPlayReadyServiceRequest : py::ImplementsInterfaceT<ImplementsIPlayReadyServiceRequest, winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>
@@ -16089,11 +15633,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         "winrt._winrt_windows_media_protection_playready.IPlayReadyServiceRequest",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPlayReadyServiceRequest};
 
     // ----- Windows.Media.Protection.PlayReady Initialization --------------------

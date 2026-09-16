@@ -239,11 +239,7 @@ static class WriterExtensions
 
         if (type.Category == Category.Interface)
         {
-            w.WriteLine("Py_TPFLAGS_DEFAULT");
-            w.WriteLine("#if PY_VERSION_HEX >= 0x030A0000");
-            w.WriteLine("| Py_TPFLAGS_DISALLOW_INSTANTIATION");
-            w.WriteLine("#endif");
-            w.WriteLine(",");
+            w.WriteLine("Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,");
         }
         else
         {
@@ -264,16 +260,9 @@ static class WriterExtensions
         w.WriteLine($"static PyType_Slot _type_slots_{name}[] = {{");
         w.Indent++;
 
-        if (type.Category == Category.Interface)
+        if (type.Category != Category.Interface)
         {
-            w.WriteLine("#if PY_VERSION_HEX < 0x030A0000");
-        }
-
-        w.WriteLine($"{{ Py_tp_new, reinterpret_cast<void*>(_new_{name}) }},");
-
-        if (type.Category == Category.Interface)
-        {
-            w.WriteLine("#endif");
+            w.WriteLine($"{{ Py_tp_new, reinterpret_cast<void*>(_new_{name}) }},");
         }
 
         if (!type.IsStatic)
@@ -499,28 +488,9 @@ static class WriterExtensions
 
     static void WriteNewFunction(this IndentedTextWriter w, ProjectedType type)
     {
-        w.WriteBlankLine();
-
-        if (type.Category == Category.Interface)
+        if (type.Category == Category.Class)
         {
-            w.WriteLine("#if PY_VERSION_HEX < 0x030A0000");
-            w.WriteLine(
-                $"static PyObject* _new_{type.Name}(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept"
-            );
-            w.WriteBlock(() =>
-            {
-                w.WriteLine(
-                    $"static_assert(py::py_type<{type.CppPyWrapperTemplateType}>::type_name);"
-                );
-                w.WriteLine(
-                    $"py::set_invalid_activation_error(py::py_type<{type.CppPyWrapperTemplateType}>::type_name);"
-                );
-                w.WriteLine("return nullptr;");
-            });
-            w.WriteLine("#endif");
-        }
-        else if (type.Category == Category.Class)
-        {
+            w.WriteBlankLine();
             w.WriteClassNewFunction(type);
         }
     }

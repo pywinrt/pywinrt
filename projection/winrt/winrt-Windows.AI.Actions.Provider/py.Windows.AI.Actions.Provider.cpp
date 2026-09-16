@@ -6,15 +6,6 @@ namespace py::cpp::Windows::AI::Actions::Provider
 {
     // ----- IActionFeedbackHandler interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IActionFeedbackHandler(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IActionFeedbackHandler(py::wrapper::Windows::AI::Actions::Provider::IActionFeedbackHandler* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -61,9 +52,6 @@ namespace py::cpp::Windows::AI::Actions::Provider
         { }};
 
     static PyType_Slot _type_slots_IActionFeedbackHandler[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IActionFeedbackHandler) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IActionFeedbackHandler) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IActionFeedbackHandler) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IActionFeedbackHandler) },
@@ -73,11 +61,7 @@ namespace py::cpp::Windows::AI::Actions::Provider
         "winrt._winrt_windows_ai_actions_provider._IActionFeedbackHandler",
         sizeof(py::wrapper::Windows::AI::Actions::Provider::IActionFeedbackHandler),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IActionFeedbackHandler};
 
     struct ImplementsIActionFeedbackHandler : py::ImplementsInterfaceT<ImplementsIActionFeedbackHandler, winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>
@@ -207,23 +191,10 @@ namespace py::cpp::Windows::AI::Actions::Provider
         "winrt._winrt_windows_ai_actions_provider.IActionFeedbackHandler",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIActionFeedbackHandler};
 
     // ----- IActionProvider interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IActionProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::AI::Actions::Provider::IActionProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::Actions::Provider::IActionProvider>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IActionProvider(py::wrapper::Windows::AI::Actions::Provider::IActionProvider* self) noexcept
     {
@@ -270,9 +241,6 @@ namespace py::cpp::Windows::AI::Actions::Provider
         { }};
 
     static PyType_Slot _type_slots_IActionProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IActionProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IActionProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IActionProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IActionProvider) },
@@ -282,11 +250,7 @@ namespace py::cpp::Windows::AI::Actions::Provider
         "winrt._winrt_windows_ai_actions_provider._IActionProvider",
         sizeof(py::wrapper::Windows::AI::Actions::Provider::IActionProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IActionProvider};
 
     struct ImplementsIActionProvider : py::ImplementsInterfaceT<ImplementsIActionProvider, winrt::Windows::AI::Actions::Provider::IActionProvider>
@@ -404,11 +368,7 @@ namespace py::cpp::Windows::AI::Actions::Provider
         "winrt._winrt_windows_ai_actions_provider.IActionProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIActionProvider};
 
     // ----- Windows.AI.Actions.Provider Initialization --------------------

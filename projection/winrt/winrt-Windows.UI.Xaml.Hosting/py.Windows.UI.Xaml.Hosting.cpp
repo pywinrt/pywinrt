@@ -2701,15 +2701,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     // ----- IXamlUIPresenterHost interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IXamlUIPresenterHost(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IXamlUIPresenterHost(py::wrapper::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -2755,9 +2746,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }};
 
     static PyType_Slot _type_slots_IXamlUIPresenterHost[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IXamlUIPresenterHost) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlUIPresenterHost) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlUIPresenterHost) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlUIPresenterHost) },
@@ -2767,11 +2755,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         "winrt._winrt_windows_ui_xaml_hosting._IXamlUIPresenterHost",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IXamlUIPresenterHost};
 
     struct ImplementsIXamlUIPresenterHost : py::ImplementsInterfaceT<ImplementsIXamlUIPresenterHost, winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>
@@ -2889,23 +2873,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         "winrt._winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIXamlUIPresenterHost};
 
     // ----- IXamlUIPresenterHost2 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IXamlUIPresenterHost2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IXamlUIPresenterHost2(py::wrapper::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2* self) noexcept
     {
@@ -2950,9 +2921,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }};
 
     static PyType_Slot _type_slots_IXamlUIPresenterHost2[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IXamlUIPresenterHost2) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlUIPresenterHost2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlUIPresenterHost2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlUIPresenterHost2) },
@@ -2962,11 +2930,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         "winrt._winrt_windows_ui_xaml_hosting._IXamlUIPresenterHost2",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IXamlUIPresenterHost2};
 
     struct ImplementsIXamlUIPresenterHost2 : py::ImplementsInterfaceT<ImplementsIXamlUIPresenterHost2, winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2>
@@ -3078,23 +3042,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         "winrt._winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIXamlUIPresenterHost2};
 
     // ----- IXamlUIPresenterHost3 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IXamlUIPresenterHost3(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IXamlUIPresenterHost3(py::wrapper::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3* self) noexcept
     {
@@ -3143,9 +3094,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }};
 
     static PyType_Slot _type_slots_IXamlUIPresenterHost3[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IXamlUIPresenterHost3) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlUIPresenterHost3) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlUIPresenterHost3) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlUIPresenterHost3) },
@@ -3155,11 +3103,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         "winrt._winrt_windows_ui_xaml_hosting._IXamlUIPresenterHost3",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IXamlUIPresenterHost3};
 
     struct ImplementsIXamlUIPresenterHost3 : py::ImplementsInterfaceT<ImplementsIXamlUIPresenterHost3, winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3>
@@ -3295,11 +3239,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         "winrt._winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost3",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIXamlUIPresenterHost3};
 
     // ----- Windows.UI.Xaml.Hosting Initialization --------------------

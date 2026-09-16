@@ -27227,15 +27227,6 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- IAnimationObject interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAnimationObject(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Composition::IAnimationObject>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::IAnimationObject>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IAnimationObject(py::wrapper::Windows::UI::Composition::IAnimationObject* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -27283,9 +27274,6 @@ namespace py::cpp::Windows::UI::Composition
         { }};
 
     static PyType_Slot _type_slots_IAnimationObject[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAnimationObject) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAnimationObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAnimationObject) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAnimationObject) },
@@ -27295,11 +27283,7 @@ namespace py::cpp::Windows::UI::Composition
         "winrt._winrt_windows_ui_composition._IAnimationObject",
         sizeof(py::wrapper::Windows::UI::Composition::IAnimationObject),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAnimationObject};
 
     struct ImplementsIAnimationObject : py::ImplementsInterfaceT<ImplementsIAnimationObject, winrt::Windows::UI::Composition::IAnimationObject>
@@ -27427,23 +27411,10 @@ namespace py::cpp::Windows::UI::Composition
         "winrt._winrt_windows_ui_composition.IAnimationObject",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAnimationObject};
 
     // ----- ICompositionAnimationBase interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICompositionAnimationBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Composition::ICompositionAnimationBase>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ICompositionAnimationBase>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ICompositionAnimationBase(py::wrapper::Windows::UI::Composition::ICompositionAnimationBase* self) noexcept
     {
@@ -27460,9 +27431,6 @@ namespace py::cpp::Windows::UI::Composition
         { }};
 
     static PyType_Slot _type_slots_ICompositionAnimationBase[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICompositionAnimationBase) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICompositionAnimationBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICompositionAnimationBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICompositionAnimationBase) },
@@ -27472,11 +27440,7 @@ namespace py::cpp::Windows::UI::Composition
         "winrt._winrt_windows_ui_composition._ICompositionAnimationBase",
         sizeof(py::wrapper::Windows::UI::Composition::ICompositionAnimationBase),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICompositionAnimationBase};
 
     struct ImplementsICompositionAnimationBase : py::ImplementsInterfaceT<ImplementsICompositionAnimationBase, winrt::Windows::UI::Composition::ICompositionAnimationBase>
@@ -27562,23 +27526,10 @@ namespace py::cpp::Windows::UI::Composition
         "winrt._winrt_windows_ui_composition.ICompositionAnimationBase",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICompositionAnimationBase};
 
     // ----- ICompositionSupportsSystemBackdrop interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICompositionSupportsSystemBackdrop(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ICompositionSupportsSystemBackdrop(py::wrapper::Windows::UI::Composition::ICompositionSupportsSystemBackdrop* self) noexcept
     {
@@ -27639,9 +27590,6 @@ namespace py::cpp::Windows::UI::Composition
         { }};
 
     static PyType_Slot _type_slots_ICompositionSupportsSystemBackdrop[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICompositionSupportsSystemBackdrop) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICompositionSupportsSystemBackdrop) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICompositionSupportsSystemBackdrop) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICompositionSupportsSystemBackdrop) },
@@ -27651,11 +27599,7 @@ namespace py::cpp::Windows::UI::Composition
         "winrt._winrt_windows_ui_composition._ICompositionSupportsSystemBackdrop",
         sizeof(py::wrapper::Windows::UI::Composition::ICompositionSupportsSystemBackdrop),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICompositionSupportsSystemBackdrop};
 
     struct ImplementsICompositionSupportsSystemBackdrop : py::ImplementsInterfaceT<ImplementsICompositionSupportsSystemBackdrop, winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop>
@@ -27784,23 +27728,10 @@ namespace py::cpp::Windows::UI::Composition
         "winrt._winrt_windows_ui_composition.ICompositionSupportsSystemBackdrop",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICompositionSupportsSystemBackdrop};
 
     // ----- ICompositionSurface interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICompositionSurface(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Composition::ICompositionSurface>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ICompositionSurface>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ICompositionSurface(py::wrapper::Windows::UI::Composition::ICompositionSurface* self) noexcept
     {
@@ -27817,9 +27748,6 @@ namespace py::cpp::Windows::UI::Composition
         { }};
 
     static PyType_Slot _type_slots_ICompositionSurface[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICompositionSurface) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICompositionSurface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICompositionSurface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICompositionSurface) },
@@ -27829,11 +27757,7 @@ namespace py::cpp::Windows::UI::Composition
         "winrt._winrt_windows_ui_composition._ICompositionSurface",
         sizeof(py::wrapper::Windows::UI::Composition::ICompositionSurface),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICompositionSurface};
 
     struct ImplementsICompositionSurface : py::ImplementsInterfaceT<ImplementsICompositionSurface, winrt::Windows::UI::Composition::ICompositionSurface>
@@ -27919,23 +27843,10 @@ namespace py::cpp::Windows::UI::Composition
         "winrt._winrt_windows_ui_composition.ICompositionSurface",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICompositionSurface};
 
     // ----- ICompositionSurfaceFacade interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICompositionSurfaceFacade(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Composition::ICompositionSurfaceFacade>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ICompositionSurfaceFacade>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ICompositionSurfaceFacade(py::wrapper::Windows::UI::Composition::ICompositionSurfaceFacade* self) noexcept
     {
@@ -27980,9 +27891,6 @@ namespace py::cpp::Windows::UI::Composition
         { }};
 
     static PyType_Slot _type_slots_ICompositionSurfaceFacade[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICompositionSurfaceFacade) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICompositionSurfaceFacade) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICompositionSurfaceFacade) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICompositionSurfaceFacade) },
@@ -27992,11 +27900,7 @@ namespace py::cpp::Windows::UI::Composition
         "winrt._winrt_windows_ui_composition._ICompositionSurfaceFacade",
         sizeof(py::wrapper::Windows::UI::Composition::ICompositionSurfaceFacade),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICompositionSurfaceFacade};
 
     struct ImplementsICompositionSurfaceFacade : py::ImplementsInterfaceT<ImplementsICompositionSurfaceFacade, winrt::Windows::UI::Composition::ICompositionSurfaceFacade>
@@ -28108,23 +28012,10 @@ namespace py::cpp::Windows::UI::Composition
         "winrt._winrt_windows_ui_composition.ICompositionSurfaceFacade",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICompositionSurfaceFacade};
 
     // ----- IVisualElement interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IVisualElement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Composition::IVisualElement>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::IVisualElement>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IVisualElement(py::wrapper::Windows::UI::Composition::IVisualElement* self) noexcept
     {
@@ -28141,9 +28032,6 @@ namespace py::cpp::Windows::UI::Composition
         { }};
 
     static PyType_Slot _type_slots_IVisualElement[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IVisualElement) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVisualElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVisualElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVisualElement) },
@@ -28153,11 +28041,7 @@ namespace py::cpp::Windows::UI::Composition
         "winrt._winrt_windows_ui_composition._IVisualElement",
         sizeof(py::wrapper::Windows::UI::Composition::IVisualElement),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IVisualElement};
 
     struct ImplementsIVisualElement : py::ImplementsInterfaceT<ImplementsIVisualElement, winrt::Windows::UI::Composition::IVisualElement>
@@ -28243,23 +28127,10 @@ namespace py::cpp::Windows::UI::Composition
         "winrt._winrt_windows_ui_composition.IVisualElement",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIVisualElement};
 
     // ----- IVisualElement2 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IVisualElement2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Composition::IVisualElement2>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::IVisualElement2>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IVisualElement2(py::wrapper::Windows::UI::Composition::IVisualElement2* self) noexcept
     {
@@ -28304,9 +28175,6 @@ namespace py::cpp::Windows::UI::Composition
         { }};
 
     static PyType_Slot _type_slots_IVisualElement2[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IVisualElement2) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVisualElement2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVisualElement2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVisualElement2) },
@@ -28316,11 +28184,7 @@ namespace py::cpp::Windows::UI::Composition
         "winrt._winrt_windows_ui_composition._IVisualElement2",
         sizeof(py::wrapper::Windows::UI::Composition::IVisualElement2),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IVisualElement2};
 
     struct ImplementsIVisualElement2 : py::ImplementsInterfaceT<ImplementsIVisualElement2, winrt::Windows::UI::Composition::IVisualElement2>
@@ -28432,11 +28296,7 @@ namespace py::cpp::Windows::UI::Composition
         "winrt._winrt_windows_ui_composition.IVisualElement2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIVisualElement2};
 
     // ----- InkTrailPoint struct --------------------

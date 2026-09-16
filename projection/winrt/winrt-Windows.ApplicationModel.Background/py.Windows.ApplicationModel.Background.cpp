@@ -9435,15 +9435,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- IBackgroundCondition interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBackgroundCondition(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IBackgroundCondition(py::wrapper::Windows::ApplicationModel::Background::IBackgroundCondition* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -9459,9 +9450,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Slot _type_slots_IBackgroundCondition[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundCondition) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundCondition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundCondition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundCondition) },
@@ -9471,11 +9459,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background._IBackgroundCondition",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundCondition),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBackgroundCondition};
 
     struct ImplementsIBackgroundCondition : py::ImplementsInterfaceT<ImplementsIBackgroundCondition, winrt::Windows::ApplicationModel::Background::IBackgroundCondition>
@@ -9561,23 +9545,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background.IBackgroundCondition",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBackgroundCondition};
 
     // ----- IBackgroundTask interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBackgroundTask(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTask>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTask>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IBackgroundTask(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTask* self) noexcept
     {
@@ -9625,9 +9596,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Slot _type_slots_IBackgroundTask[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTask) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTask) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTask) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTask) },
@@ -9637,11 +9605,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background._IBackgroundTask",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTask),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBackgroundTask};
 
     struct ImplementsIBackgroundTask : py::ImplementsInterfaceT<ImplementsIBackgroundTask, winrt::Windows::ApplicationModel::Background::IBackgroundTask>
@@ -9757,23 +9721,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTask",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBackgroundTask};
 
     // ----- IBackgroundTaskInstance interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBackgroundTaskInstance(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IBackgroundTaskInstance(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance* self) noexcept
     {
@@ -9975,9 +9926,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Slot _type_slots_IBackgroundTaskInstance[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTaskInstance) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTaskInstance) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTaskInstance) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTaskInstance) },
@@ -9987,11 +9935,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background._IBackgroundTaskInstance",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBackgroundTaskInstance};
 
     struct ImplementsIBackgroundTaskInstance : py::ImplementsInterfaceT<ImplementsIBackgroundTaskInstance, winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>
@@ -10288,23 +10232,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskInstance",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBackgroundTaskInstance};
 
     // ----- IBackgroundTaskInstance2 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBackgroundTaskInstance2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IBackgroundTaskInstance2(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance2* self) noexcept
     {
@@ -10536,9 +10467,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Slot _type_slots_IBackgroundTaskInstance2[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTaskInstance2) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTaskInstance2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTaskInstance2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTaskInstance2) },
@@ -10548,11 +10476,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background._IBackgroundTaskInstance2",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance2),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBackgroundTaskInstance2};
 
     struct ImplementsIBackgroundTaskInstance2 : py::ImplementsInterfaceT<ImplementsIBackgroundTaskInstance2, winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2>
@@ -10881,23 +10805,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskInstance2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBackgroundTaskInstance2};
 
     // ----- IBackgroundTaskInstance4 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBackgroundTaskInstance4(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IBackgroundTaskInstance4(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance4* self) noexcept
     {
@@ -11117,9 +11028,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Slot _type_slots_IBackgroundTaskInstance4[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTaskInstance4) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTaskInstance4) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTaskInstance4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTaskInstance4) },
@@ -11129,11 +11037,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background._IBackgroundTaskInstance4",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance4),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBackgroundTaskInstance4};
 
     struct ImplementsIBackgroundTaskInstance4 : py::ImplementsInterfaceT<ImplementsIBackgroundTaskInstance4, winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4>
@@ -11450,23 +11354,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskInstance4",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBackgroundTaskInstance4};
 
     // ----- IBackgroundTaskRegistration interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBackgroundTaskRegistration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IBackgroundTaskRegistration(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration* self) noexcept
     {
@@ -11632,9 +11523,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Slot _type_slots_IBackgroundTaskRegistration[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTaskRegistration) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTaskRegistration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTaskRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTaskRegistration) },
@@ -11644,11 +11532,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background._IBackgroundTaskRegistration",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBackgroundTaskRegistration};
 
     struct ImplementsIBackgroundTaskRegistration : py::ImplementsInterfaceT<ImplementsIBackgroundTaskRegistration, winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>
@@ -11928,23 +11812,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskRegistration",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBackgroundTaskRegistration};
 
     // ----- IBackgroundTaskRegistration2 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBackgroundTaskRegistration2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IBackgroundTaskRegistration2(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2* self) noexcept
     {
@@ -12128,9 +11999,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Slot _type_slots_IBackgroundTaskRegistration2[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTaskRegistration2) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTaskRegistration2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTaskRegistration2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTaskRegistration2) },
@@ -12140,11 +12008,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background._IBackgroundTaskRegistration2",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBackgroundTaskRegistration2};
 
     struct ImplementsIBackgroundTaskRegistration2 : py::ImplementsInterfaceT<ImplementsIBackgroundTaskRegistration2, winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>
@@ -12444,23 +12308,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskRegistration2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBackgroundTaskRegistration2};
 
     // ----- IBackgroundTaskRegistration3 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBackgroundTaskRegistration3(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IBackgroundTaskRegistration3(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3* self) noexcept
     {
@@ -12644,9 +12495,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Slot _type_slots_IBackgroundTaskRegistration3[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTaskRegistration3) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTaskRegistration3) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTaskRegistration3) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTaskRegistration3) },
@@ -12656,11 +12504,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background._IBackgroundTaskRegistration3",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBackgroundTaskRegistration3};
 
     struct ImplementsIBackgroundTaskRegistration3 : py::ImplementsInterfaceT<ImplementsIBackgroundTaskRegistration3, winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>
@@ -12960,23 +12804,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskRegistration3",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBackgroundTaskRegistration3};
 
     // ----- IBackgroundTrigger interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBackgroundTrigger(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IBackgroundTrigger(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTrigger* self) noexcept
     {
@@ -12993,9 +12824,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Slot _type_slots_IBackgroundTrigger[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTrigger) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTrigger) },
@@ -13005,11 +12833,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background._IBackgroundTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTrigger),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBackgroundTrigger};
 
     struct ImplementsIBackgroundTrigger : py::ImplementsInterfaceT<ImplementsIBackgroundTrigger, winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>
@@ -13095,11 +12919,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTrigger",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBackgroundTrigger};
 
     // ----- Windows.ApplicationModel.Background Initialization --------------------

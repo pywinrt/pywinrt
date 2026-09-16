@@ -5383,15 +5383,6 @@ namespace py::cpp::Windows::Storage::Streams
 
     // ----- IBuffer interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBuffer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Storage::Streams::IBuffer>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IBuffer>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IBuffer(py::wrapper::Windows::Storage::Streams::IBuffer* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -5483,9 +5474,6 @@ namespace py::cpp::Windows::Storage::Streams
         { }};
 
     static PyType_Slot _type_slots_IBuffer[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBuffer) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBuffer) },
@@ -5496,11 +5484,7 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams._IBuffer",
         sizeof(py::wrapper::Windows::Storage::Streams::IBuffer),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBuffer};
 
     struct ImplementsIBuffer : py::ImplementsInterfaceT<ImplementsIBuffer, winrt::Windows::Storage::Streams::IBuffer>
@@ -5649,23 +5633,10 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams.IBuffer",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBuffer};
 
     // ----- IContentTypeProvider interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContentTypeProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Storage::Streams::IContentTypeProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IContentTypeProvider>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContentTypeProvider(py::wrapper::Windows::Storage::Streams::IContentTypeProvider* self) noexcept
     {
@@ -5700,9 +5671,6 @@ namespace py::cpp::Windows::Storage::Streams
         { }};
 
     static PyType_Slot _type_slots_IContentTypeProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContentTypeProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContentTypeProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContentTypeProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContentTypeProvider) },
@@ -5712,11 +5680,7 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams._IContentTypeProvider",
         sizeof(py::wrapper::Windows::Storage::Streams::IContentTypeProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContentTypeProvider};
 
     struct ImplementsIContentTypeProvider : py::ImplementsInterfaceT<ImplementsIContentTypeProvider, winrt::Windows::Storage::Streams::IContentTypeProvider>
@@ -5822,23 +5786,10 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams.IContentTypeProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContentTypeProvider};
 
     // ----- IDataReader interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IDataReader(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Storage::Streams::IDataReader>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IDataReader>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IDataReader(py::wrapper::Windows::Storage::Streams::IDataReader* self) noexcept
     {
@@ -6546,9 +6497,6 @@ namespace py::cpp::Windows::Storage::Streams
         { }};
 
     static PyType_Slot _type_slots_IDataReader[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IDataReader) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDataReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDataReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDataReader) },
@@ -6558,11 +6506,7 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams._IDataReader",
         sizeof(py::wrapper::Windows::Storage::Streams::IDataReader),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IDataReader};
 
     struct ImplementsIDataReader : py::ImplementsInterfaceT<ImplementsIDataReader, winrt::Windows::Storage::Streams::IDataReader>
@@ -7313,23 +7257,10 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams.IDataReader",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIDataReader};
 
     // ----- IDataWriter interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IDataWriter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Storage::Streams::IDataWriter>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IDataWriter>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IDataWriter(py::wrapper::Windows::Storage::Streams::IDataWriter* self) noexcept
     {
@@ -8110,9 +8041,6 @@ namespace py::cpp::Windows::Storage::Streams
         { }};
 
     static PyType_Slot _type_slots_IDataWriter[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IDataWriter) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDataWriter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDataWriter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDataWriter) },
@@ -8122,11 +8050,7 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams._IDataWriter",
         sizeof(py::wrapper::Windows::Storage::Streams::IDataWriter),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IDataWriter};
 
     struct ImplementsIDataWriter : py::ImplementsInterfaceT<ImplementsIDataWriter, winrt::Windows::Storage::Streams::IDataWriter>
@@ -8994,23 +8918,10 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams.IDataWriter",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIDataWriter};
 
     // ----- IInputStream interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IInputStream(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Storage::Streams::IInputStream>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IInputStream>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IInputStream(py::wrapper::Windows::Storage::Streams::IInputStream* self) noexcept
     {
@@ -9113,9 +9024,6 @@ namespace py::cpp::Windows::Storage::Streams
         { }};
 
     static PyType_Slot _type_slots_IInputStream[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IInputStream) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInputStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInputStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInputStream) },
@@ -9125,11 +9033,7 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams._IInputStream",
         sizeof(py::wrapper::Windows::Storage::Streams::IInputStream),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IInputStream};
 
     struct ImplementsIInputStream : py::ImplementsInterfaceT<ImplementsIInputStream, winrt::Windows::Storage::Streams::IInputStream>
@@ -9289,23 +9193,10 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams.IInputStream",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIInputStream};
 
     // ----- IInputStreamReference interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IInputStreamReference(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Storage::Streams::IInputStreamReference>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IInputStreamReference>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IInputStreamReference(py::wrapper::Windows::Storage::Streams::IInputStreamReference* self) noexcept
     {
@@ -9350,9 +9241,6 @@ namespace py::cpp::Windows::Storage::Streams
         { }};
 
     static PyType_Slot _type_slots_IInputStreamReference[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IInputStreamReference) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInputStreamReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInputStreamReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInputStreamReference) },
@@ -9362,11 +9250,7 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams._IInputStreamReference",
         sizeof(py::wrapper::Windows::Storage::Streams::IInputStreamReference),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IInputStreamReference};
 
     struct ImplementsIInputStreamReference : py::ImplementsInterfaceT<ImplementsIInputStreamReference, winrt::Windows::Storage::Streams::IInputStreamReference>
@@ -9478,23 +9362,10 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams.IInputStreamReference",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIInputStreamReference};
 
     // ----- IOutputStream interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IOutputStream(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Storage::Streams::IOutputStream>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IOutputStream>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IOutputStream(py::wrapper::Windows::Storage::Streams::IOutputStream* self) noexcept
     {
@@ -9623,9 +9494,6 @@ namespace py::cpp::Windows::Storage::Streams
         { }};
 
     static PyType_Slot _type_slots_IOutputStream[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IOutputStream) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IOutputStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IOutputStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IOutputStream) },
@@ -9635,11 +9503,7 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams._IOutputStream",
         sizeof(py::wrapper::Windows::Storage::Streams::IOutputStream),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IOutputStream};
 
     struct ImplementsIOutputStream : py::ImplementsInterfaceT<ImplementsIOutputStream, winrt::Windows::Storage::Streams::IOutputStream>
@@ -9807,23 +9671,10 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams.IOutputStream",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIOutputStream};
 
     // ----- IPropertySetSerializer interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPropertySetSerializer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Storage::Streams::IPropertySetSerializer>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IPropertySetSerializer>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPropertySetSerializer(py::wrapper::Windows::Storage::Streams::IPropertySetSerializer* self) noexcept
     {
@@ -9902,9 +9753,6 @@ namespace py::cpp::Windows::Storage::Streams
         { }};
 
     static PyType_Slot _type_slots_IPropertySetSerializer[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPropertySetSerializer) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPropertySetSerializer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPropertySetSerializer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPropertySetSerializer) },
@@ -9914,11 +9762,7 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams._IPropertySetSerializer",
         sizeof(py::wrapper::Windows::Storage::Streams::IPropertySetSerializer),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPropertySetSerializer};
 
     struct ImplementsIPropertySetSerializer : py::ImplementsInterfaceT<ImplementsIPropertySetSerializer, winrt::Windows::Storage::Streams::IPropertySetSerializer>
@@ -10078,23 +9922,10 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams.IPropertySetSerializer",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPropertySetSerializer};
 
     // ----- IRandomAccessStream interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IRandomAccessStream(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Storage::Streams::IRandomAccessStream>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IRandomAccessStream>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IRandomAccessStream(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self) noexcept
     {
@@ -10472,9 +10303,6 @@ namespace py::cpp::Windows::Storage::Streams
         { }};
 
     static PyType_Slot _type_slots_IRandomAccessStream[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IRandomAccessStream) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRandomAccessStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRandomAccessStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRandomAccessStream) },
@@ -10484,11 +10312,7 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams._IRandomAccessStream",
         sizeof(py::wrapper::Windows::Storage::Streams::IRandomAccessStream),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IRandomAccessStream};
 
     struct ImplementsIRandomAccessStream : py::ImplementsInterfaceT<ImplementsIRandomAccessStream, winrt::Windows::Storage::Streams::IRandomAccessStream>
@@ -10929,23 +10753,10 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams.IRandomAccessStream",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIRandomAccessStream};
 
     // ----- IRandomAccessStreamReference interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IRandomAccessStreamReference(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IRandomAccessStreamReference(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamReference* self) noexcept
     {
@@ -10990,9 +10801,6 @@ namespace py::cpp::Windows::Storage::Streams
         { }};
 
     static PyType_Slot _type_slots_IRandomAccessStreamReference[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IRandomAccessStreamReference) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRandomAccessStreamReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRandomAccessStreamReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRandomAccessStreamReference) },
@@ -11002,11 +10810,7 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams._IRandomAccessStreamReference",
         sizeof(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamReference),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IRandomAccessStreamReference};
 
     struct ImplementsIRandomAccessStreamReference : py::ImplementsInterfaceT<ImplementsIRandomAccessStreamReference, winrt::Windows::Storage::Streams::IRandomAccessStreamReference>
@@ -11118,23 +10922,10 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams.IRandomAccessStreamReference",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIRandomAccessStreamReference};
 
     // ----- IRandomAccessStreamWithContentType interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IRandomAccessStreamWithContentType(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IRandomAccessStreamWithContentType(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self) noexcept
     {
@@ -11530,9 +11321,6 @@ namespace py::cpp::Windows::Storage::Streams
         { }};
 
     static PyType_Slot _type_slots_IRandomAccessStreamWithContentType[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IRandomAccessStreamWithContentType) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRandomAccessStreamWithContentType) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRandomAccessStreamWithContentType) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRandomAccessStreamWithContentType) },
@@ -11542,11 +11330,7 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams._IRandomAccessStreamWithContentType",
         sizeof(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IRandomAccessStreamWithContentType};
 
     struct ImplementsIRandomAccessStreamWithContentType : py::ImplementsInterfaceT<ImplementsIRandomAccessStreamWithContentType, winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>
@@ -12007,11 +11791,7 @@ namespace py::cpp::Windows::Storage::Streams
         "winrt._winrt_windows_storage_streams.IRandomAccessStreamWithContentType",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIRandomAccessStreamWithContentType};
 
     // ----- Windows.Storage.Streams Initialization --------------------

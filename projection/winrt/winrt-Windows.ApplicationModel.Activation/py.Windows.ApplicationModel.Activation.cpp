@@ -8300,15 +8300,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     // ----- IActivatedEventArgs interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -8378,9 +8369,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IActivatedEventArgs) },
@@ -8390,11 +8378,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IActivatedEventArgs};
 
     struct ImplementsIActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>
@@ -8540,23 +8524,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIActivatedEventArgs};
 
     // ----- IActivatedEventArgsWithUser interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IActivatedEventArgsWithUser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IActivatedEventArgsWithUser(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser* self) noexcept
     {
@@ -8645,9 +8616,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IActivatedEventArgsWithUser[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IActivatedEventArgsWithUser) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IActivatedEventArgsWithUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IActivatedEventArgsWithUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IActivatedEventArgsWithUser) },
@@ -8657,11 +8625,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IActivatedEventArgsWithUser",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IActivatedEventArgsWithUser};
 
     struct ImplementsIActivatedEventArgsWithUser : py::ImplementsInterfaceT<ImplementsIActivatedEventArgsWithUser, winrt::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>
@@ -8827,23 +8791,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IActivatedEventArgsWithUser",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIActivatedEventArgsWithUser};
 
     // ----- IApplicationViewActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IApplicationViewActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IApplicationViewActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs* self) noexcept
     {
@@ -8932,9 +8883,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IApplicationViewActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IApplicationViewActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IApplicationViewActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IApplicationViewActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IApplicationViewActivatedEventArgs) },
@@ -8944,11 +8892,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IApplicationViewActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IApplicationViewActivatedEventArgs};
 
     struct ImplementsIApplicationViewActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIApplicationViewActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs>
@@ -9114,23 +9058,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IApplicationViewActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIApplicationViewActivatedEventArgs};
 
     // ----- IAppointmentsProviderActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAppointmentsProviderActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IAppointmentsProviderActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs* self) noexcept
     {
@@ -9219,9 +9150,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IAppointmentsProviderActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderActivatedEventArgs) },
@@ -9231,11 +9159,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IAppointmentsProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAppointmentsProviderActivatedEventArgs};
 
     struct ImplementsIAppointmentsProviderActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs>
@@ -9401,23 +9325,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAppointmentsProviderActivatedEventArgs};
 
     // ----- IAppointmentsProviderAddAppointmentActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAppointmentsProviderAddAppointmentActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IAppointmentsProviderAddAppointmentActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs* self) noexcept
     {
@@ -9524,9 +9435,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IAppointmentsProviderAddAppointmentActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderAddAppointmentActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderAddAppointmentActivatedEventArgs) },
@@ -9536,11 +9444,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IAppointmentsProviderAddAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAppointmentsProviderAddAppointmentActivatedEventArgs};
 
     struct ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs>
@@ -9726,23 +9630,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderAddAppointmentActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs};
 
     // ----- IAppointmentsProviderRemoveAppointmentActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAppointmentsProviderRemoveAppointmentActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IAppointmentsProviderRemoveAppointmentActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs* self) noexcept
     {
@@ -9849,9 +9740,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
@@ -9861,11 +9749,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IAppointmentsProviderRemoveAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAppointmentsProviderRemoveAppointmentActivatedEventArgs};
 
     struct ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs>
@@ -10051,23 +9935,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs};
 
     // ----- IAppointmentsProviderReplaceAppointmentActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAppointmentsProviderReplaceAppointmentActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IAppointmentsProviderReplaceAppointmentActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs* self) noexcept
     {
@@ -10174,9 +10045,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
@@ -10186,11 +10054,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IAppointmentsProviderReplaceAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAppointmentsProviderReplaceAppointmentActivatedEventArgs};
 
     struct ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs>
@@ -10376,23 +10240,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs};
 
     // ----- IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self) noexcept
     {
@@ -10535,9 +10386,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
@@ -10547,11 +10395,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs};
 
     struct ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>
@@ -10777,23 +10621,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs};
 
     // ----- IAppointmentsProviderShowTimeFrameActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAppointmentsProviderShowTimeFrameActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IAppointmentsProviderShowTimeFrameActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs* self) noexcept
     {
@@ -10918,9 +10749,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IAppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderShowTimeFrameActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderShowTimeFrameActivatedEventArgs) },
@@ -10930,11 +10758,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IAppointmentsProviderShowTimeFrameActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAppointmentsProviderShowTimeFrameActivatedEventArgs};
 
     struct ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs>
@@ -11140,23 +10964,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs};
 
     // ----- IBackgroundActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBackgroundActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IBackgroundActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs* self) noexcept
     {
@@ -11191,9 +11002,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IBackgroundActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundActivatedEventArgs) },
@@ -11203,11 +11011,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IBackgroundActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBackgroundActivatedEventArgs};
 
     struct ImplementsIBackgroundActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIBackgroundActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs>
@@ -11313,23 +11117,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IBackgroundActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBackgroundActivatedEventArgs};
 
     // ----- IBarcodeScannerPreviewActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBarcodeScannerPreviewActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IBarcodeScannerPreviewActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs* self) noexcept
     {
@@ -11418,9 +11209,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IBarcodeScannerPreviewActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBarcodeScannerPreviewActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBarcodeScannerPreviewActivatedEventArgs) },
@@ -11430,11 +11218,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IBarcodeScannerPreviewActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBarcodeScannerPreviewActivatedEventArgs};
 
     struct ImplementsIBarcodeScannerPreviewActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIBarcodeScannerPreviewActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs>
@@ -11600,23 +11384,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IBarcodeScannerPreviewActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBarcodeScannerPreviewActivatedEventArgs};
 
     // ----- ICachedFileUpdaterActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICachedFileUpdaterActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ICachedFileUpdaterActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs* self) noexcept
     {
@@ -11705,9 +11476,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_ICachedFileUpdaterActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICachedFileUpdaterActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICachedFileUpdaterActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICachedFileUpdaterActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICachedFileUpdaterActivatedEventArgs) },
@@ -11717,11 +11485,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._ICachedFileUpdaterActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICachedFileUpdaterActivatedEventArgs};
 
     struct ImplementsICachedFileUpdaterActivatedEventArgs : py::ImplementsInterfaceT<ImplementsICachedFileUpdaterActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs>
@@ -11887,23 +11651,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.ICachedFileUpdaterActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICachedFileUpdaterActivatedEventArgs};
 
     // ----- ICameraSettingsActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICameraSettingsActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ICameraSettingsActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs* self) noexcept
     {
@@ -12010,9 +11761,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_ICameraSettingsActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICameraSettingsActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICameraSettingsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICameraSettingsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICameraSettingsActivatedEventArgs) },
@@ -12022,11 +11770,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._ICameraSettingsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICameraSettingsActivatedEventArgs};
 
     struct ImplementsICameraSettingsActivatedEventArgs : py::ImplementsInterfaceT<ImplementsICameraSettingsActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs>
@@ -12212,23 +11956,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.ICameraSettingsActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICameraSettingsActivatedEventArgs};
 
     // ----- ICommandLineActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICommandLineActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ICommandLineActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs* self) noexcept
     {
@@ -12317,9 +12048,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_ICommandLineActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICommandLineActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICommandLineActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICommandLineActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICommandLineActivatedEventArgs) },
@@ -12329,11 +12057,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._ICommandLineActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICommandLineActivatedEventArgs};
 
     struct ImplementsICommandLineActivatedEventArgs : py::ImplementsInterfaceT<ImplementsICommandLineActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs>
@@ -12499,23 +12223,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.ICommandLineActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICommandLineActivatedEventArgs};
 
     // ----- IContactActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContactActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContactActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactActivatedEventArgs* self) noexcept
     {
@@ -12604,9 +12315,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IContactActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContactActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactActivatedEventArgs) },
@@ -12616,11 +12324,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IContactActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContactActivatedEventArgs};
 
     struct ImplementsIContactActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactActivatedEventArgs>
@@ -12786,23 +12490,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IContactActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContactActivatedEventArgs};
 
     // ----- IContactCallActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContactCallActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContactCallActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs* self) noexcept
     {
@@ -12945,9 +12636,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IContactCallActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContactCallActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactCallActivatedEventArgs) },
@@ -12957,11 +12645,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IContactCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContactCallActivatedEventArgs};
 
     struct ImplementsIContactCallActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactCallActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs>
@@ -13187,23 +12871,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IContactCallActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContactCallActivatedEventArgs};
 
     // ----- IContactMapActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContactMapActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContactMapActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs* self) noexcept
     {
@@ -13328,9 +12999,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IContactMapActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContactMapActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactMapActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactMapActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactMapActivatedEventArgs) },
@@ -13340,11 +13008,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IContactMapActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContactMapActivatedEventArgs};
 
     struct ImplementsIContactMapActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactMapActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs>
@@ -13550,23 +13214,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IContactMapActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContactMapActivatedEventArgs};
 
     // ----- IContactMessageActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContactMessageActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContactMessageActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs* self) noexcept
     {
@@ -13709,9 +13360,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IContactMessageActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContactMessageActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactMessageActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactMessageActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactMessageActivatedEventArgs) },
@@ -13721,11 +13369,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IContactMessageActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContactMessageActivatedEventArgs};
 
     struct ImplementsIContactMessageActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactMessageActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs>
@@ -13951,23 +13595,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IContactMessageActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContactMessageActivatedEventArgs};
 
     // ----- IContactPanelActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContactPanelActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContactPanelActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs* self) noexcept
     {
@@ -14020,9 +13651,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IContactPanelActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContactPanelActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactPanelActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactPanelActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactPanelActivatedEventArgs) },
@@ -14032,11 +13660,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IContactPanelActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContactPanelActivatedEventArgs};
 
     struct ImplementsIContactPanelActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactPanelActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs>
@@ -14162,23 +13786,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IContactPanelActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContactPanelActivatedEventArgs};
 
     // ----- IContactPickerActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContactPickerActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContactPickerActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs* self) noexcept
     {
@@ -14267,9 +13878,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IContactPickerActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContactPickerActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactPickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactPickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactPickerActivatedEventArgs) },
@@ -14279,11 +13887,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IContactPickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContactPickerActivatedEventArgs};
 
     struct ImplementsIContactPickerActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactPickerActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs>
@@ -14449,23 +14053,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IContactPickerActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContactPickerActivatedEventArgs};
 
     // ----- IContactPostActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContactPostActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContactPostActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs* self) noexcept
     {
@@ -14608,9 +14199,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IContactPostActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContactPostActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactPostActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactPostActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactPostActivatedEventArgs) },
@@ -14620,11 +14208,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IContactPostActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContactPostActivatedEventArgs};
 
     struct ImplementsIContactPostActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactPostActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs>
@@ -14850,23 +14434,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IContactPostActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContactPostActivatedEventArgs};
 
     // ----- IContactVideoCallActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContactVideoCallActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContactVideoCallActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs* self) noexcept
     {
@@ -15009,9 +14580,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IContactVideoCallActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContactVideoCallActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactVideoCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactVideoCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactVideoCallActivatedEventArgs) },
@@ -15021,11 +14589,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IContactVideoCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContactVideoCallActivatedEventArgs};
 
     struct ImplementsIContactVideoCallActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactVideoCallActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs>
@@ -15251,23 +14815,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IContactVideoCallActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContactVideoCallActivatedEventArgs};
 
     // ----- IContactsProviderActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContactsProviderActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContactsProviderActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs* self) noexcept
     {
@@ -15356,9 +14907,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IContactsProviderActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContactsProviderActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactsProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactsProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactsProviderActivatedEventArgs) },
@@ -15368,11 +14916,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IContactsProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContactsProviderActivatedEventArgs};
 
     struct ImplementsIContactsProviderActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContactsProviderActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs>
@@ -15538,23 +15082,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IContactsProviderActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContactsProviderActivatedEventArgs};
 
     // ----- IContinuationActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContinuationActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContinuationActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs* self) noexcept
     {
@@ -15643,9 +15174,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IContinuationActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContinuationActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContinuationActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContinuationActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContinuationActivatedEventArgs) },
@@ -15655,11 +15183,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IContinuationActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContinuationActivatedEventArgs};
 
     struct ImplementsIContinuationActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIContinuationActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs>
@@ -15825,23 +15349,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IContinuationActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContinuationActivatedEventArgs};
 
     // ----- IDeviceActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IDeviceActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IDeviceActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs* self) noexcept
     {
@@ -15948,9 +15459,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IDeviceActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IDeviceActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDeviceActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDeviceActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDeviceActivatedEventArgs) },
@@ -15960,11 +15468,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IDeviceActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IDeviceActivatedEventArgs};
 
     struct ImplementsIDeviceActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIDeviceActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs>
@@ -16150,23 +15654,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IDeviceActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIDeviceActivatedEventArgs};
 
     // ----- IDevicePairingActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IDevicePairingActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IDevicePairingActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs* self) noexcept
     {
@@ -16255,9 +15746,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IDevicePairingActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IDevicePairingActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDevicePairingActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDevicePairingActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDevicePairingActivatedEventArgs) },
@@ -16267,11 +15755,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IDevicePairingActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IDevicePairingActivatedEventArgs};
 
     struct ImplementsIDevicePairingActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIDevicePairingActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs>
@@ -16437,23 +15921,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IDevicePairingActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIDevicePairingActivatedEventArgs};
 
     // ----- IDialReceiverActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IDialReceiverActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IDialReceiverActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs* self) noexcept
     {
@@ -16578,9 +16049,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IDialReceiverActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IDialReceiverActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDialReceiverActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDialReceiverActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDialReceiverActivatedEventArgs) },
@@ -16590,11 +16058,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IDialReceiverActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IDialReceiverActivatedEventArgs};
 
     struct ImplementsIDialReceiverActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIDialReceiverActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs>
@@ -16800,23 +16264,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IDialReceiverActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIDialReceiverActivatedEventArgs};
 
     // ----- IFileActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFileActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFileActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgs* self) noexcept
     {
@@ -16923,9 +16374,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IFileActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFileActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileActivatedEventArgs) },
@@ -16935,11 +16383,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IFileActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFileActivatedEventArgs};
 
     struct ImplementsIFileActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIFileActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgs>
@@ -17125,23 +16569,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IFileActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFileActivatedEventArgs};
 
     // ----- IFileActivatedEventArgsWithCallerPackageFamilyName interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFileActivatedEventArgsWithCallerPackageFamilyName(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFileActivatedEventArgsWithCallerPackageFamilyName(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName* self) noexcept
     {
@@ -17230,9 +16661,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IFileActivatedEventArgsWithCallerPackageFamilyName[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFileActivatedEventArgsWithCallerPackageFamilyName) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileActivatedEventArgsWithCallerPackageFamilyName) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileActivatedEventArgsWithCallerPackageFamilyName) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileActivatedEventArgsWithCallerPackageFamilyName) },
@@ -17242,11 +16670,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IFileActivatedEventArgsWithCallerPackageFamilyName",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFileActivatedEventArgsWithCallerPackageFamilyName};
 
     struct ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName : py::ImplementsInterfaceT<ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName, winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName>
@@ -17412,23 +16836,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IFileActivatedEventArgsWithCallerPackageFamilyName",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName};
 
     // ----- IFileActivatedEventArgsWithNeighboringFiles interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFileActivatedEventArgsWithNeighboringFiles(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFileActivatedEventArgsWithNeighboringFiles(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles* self) noexcept
     {
@@ -17553,9 +16964,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IFileActivatedEventArgsWithNeighboringFiles[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFileActivatedEventArgsWithNeighboringFiles) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileActivatedEventArgsWithNeighboringFiles) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileActivatedEventArgsWithNeighboringFiles) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileActivatedEventArgsWithNeighboringFiles) },
@@ -17565,11 +16973,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IFileActivatedEventArgsWithNeighboringFiles",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFileActivatedEventArgsWithNeighboringFiles};
 
     struct ImplementsIFileActivatedEventArgsWithNeighboringFiles : py::ImplementsInterfaceT<ImplementsIFileActivatedEventArgsWithNeighboringFiles, winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles>
@@ -17775,23 +17179,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IFileActivatedEventArgsWithNeighboringFiles",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFileActivatedEventArgsWithNeighboringFiles};
 
     // ----- IFileOpenPickerActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFileOpenPickerActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFileOpenPickerActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs* self) noexcept
     {
@@ -17880,9 +17271,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IFileOpenPickerActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFileOpenPickerActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileOpenPickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileOpenPickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileOpenPickerActivatedEventArgs) },
@@ -17892,11 +17280,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IFileOpenPickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFileOpenPickerActivatedEventArgs};
 
     struct ImplementsIFileOpenPickerActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIFileOpenPickerActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs>
@@ -18062,23 +17446,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IFileOpenPickerActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFileOpenPickerActivatedEventArgs};
 
     // ----- IFileOpenPickerActivatedEventArgs2 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFileOpenPickerActivatedEventArgs2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFileOpenPickerActivatedEventArgs2(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2* self) noexcept
     {
@@ -18113,9 +17484,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IFileOpenPickerActivatedEventArgs2[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFileOpenPickerActivatedEventArgs2) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileOpenPickerActivatedEventArgs2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileOpenPickerActivatedEventArgs2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileOpenPickerActivatedEventArgs2) },
@@ -18125,11 +17493,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IFileOpenPickerActivatedEventArgs2",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFileOpenPickerActivatedEventArgs2};
 
     struct ImplementsIFileOpenPickerActivatedEventArgs2 : py::ImplementsInterfaceT<ImplementsIFileOpenPickerActivatedEventArgs2, winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2>
@@ -18235,23 +17599,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IFileOpenPickerActivatedEventArgs2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFileOpenPickerActivatedEventArgs2};
 
     // ----- IFileOpenPickerContinuationEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFileOpenPickerContinuationEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFileOpenPickerContinuationEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs* self) noexcept
     {
@@ -18358,9 +17709,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IFileOpenPickerContinuationEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFileOpenPickerContinuationEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileOpenPickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileOpenPickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileOpenPickerContinuationEventArgs) },
@@ -18370,11 +17718,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IFileOpenPickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFileOpenPickerContinuationEventArgs};
 
     struct ImplementsIFileOpenPickerContinuationEventArgs : py::ImplementsInterfaceT<ImplementsIFileOpenPickerContinuationEventArgs, winrt::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs>
@@ -18560,23 +17904,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IFileOpenPickerContinuationEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFileOpenPickerContinuationEventArgs};
 
     // ----- IFileSavePickerActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFileSavePickerActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFileSavePickerActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs* self) noexcept
     {
@@ -18665,9 +17996,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IFileSavePickerActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFileSavePickerActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileSavePickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileSavePickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileSavePickerActivatedEventArgs) },
@@ -18677,11 +18005,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IFileSavePickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFileSavePickerActivatedEventArgs};
 
     struct ImplementsIFileSavePickerActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIFileSavePickerActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs>
@@ -18847,23 +18171,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IFileSavePickerActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFileSavePickerActivatedEventArgs};
 
     // ----- IFileSavePickerActivatedEventArgs2 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFileSavePickerActivatedEventArgs2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFileSavePickerActivatedEventArgs2(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2* self) noexcept
     {
@@ -18916,9 +18227,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IFileSavePickerActivatedEventArgs2[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFileSavePickerActivatedEventArgs2) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileSavePickerActivatedEventArgs2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileSavePickerActivatedEventArgs2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileSavePickerActivatedEventArgs2) },
@@ -18928,11 +18236,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IFileSavePickerActivatedEventArgs2",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFileSavePickerActivatedEventArgs2};
 
     struct ImplementsIFileSavePickerActivatedEventArgs2 : py::ImplementsInterfaceT<ImplementsIFileSavePickerActivatedEventArgs2, winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2>
@@ -19058,23 +18362,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IFileSavePickerActivatedEventArgs2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFileSavePickerActivatedEventArgs2};
 
     // ----- IFileSavePickerContinuationEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFileSavePickerContinuationEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFileSavePickerContinuationEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs* self) noexcept
     {
@@ -19181,9 +18472,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IFileSavePickerContinuationEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFileSavePickerContinuationEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileSavePickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileSavePickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileSavePickerContinuationEventArgs) },
@@ -19193,11 +18481,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IFileSavePickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFileSavePickerContinuationEventArgs};
 
     struct ImplementsIFileSavePickerContinuationEventArgs : py::ImplementsInterfaceT<ImplementsIFileSavePickerContinuationEventArgs, winrt::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs>
@@ -19383,23 +18667,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IFileSavePickerContinuationEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFileSavePickerContinuationEventArgs};
 
     // ----- IFolderPickerContinuationEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFolderPickerContinuationEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFolderPickerContinuationEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs* self) noexcept
     {
@@ -19506,9 +18777,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IFolderPickerContinuationEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFolderPickerContinuationEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFolderPickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFolderPickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFolderPickerContinuationEventArgs) },
@@ -19518,11 +18786,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IFolderPickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFolderPickerContinuationEventArgs};
 
     struct ImplementsIFolderPickerContinuationEventArgs : py::ImplementsInterfaceT<ImplementsIFolderPickerContinuationEventArgs, winrt::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs>
@@ -19708,23 +18972,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IFolderPickerContinuationEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFolderPickerContinuationEventArgs};
 
     // ----- ILaunchActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ILaunchActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ILaunchActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs* self) noexcept
     {
@@ -19831,9 +19082,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_ILaunchActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ILaunchActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILaunchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILaunchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILaunchActivatedEventArgs) },
@@ -19843,11 +19091,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._ILaunchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ILaunchActivatedEventArgs};
 
     struct ImplementsILaunchActivatedEventArgs : py::ImplementsInterfaceT<ImplementsILaunchActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs>
@@ -20033,23 +19277,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.ILaunchActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsILaunchActivatedEventArgs};
 
     // ----- ILaunchActivatedEventArgs2 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ILaunchActivatedEventArgs2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ILaunchActivatedEventArgs2(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2* self) noexcept
     {
@@ -20174,9 +19405,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_ILaunchActivatedEventArgs2[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ILaunchActivatedEventArgs2) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILaunchActivatedEventArgs2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILaunchActivatedEventArgs2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILaunchActivatedEventArgs2) },
@@ -20186,11 +19414,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._ILaunchActivatedEventArgs2",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ILaunchActivatedEventArgs2};
 
     struct ImplementsILaunchActivatedEventArgs2 : py::ImplementsInterfaceT<ImplementsILaunchActivatedEventArgs2, winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2>
@@ -20396,23 +19620,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.ILaunchActivatedEventArgs2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsILaunchActivatedEventArgs2};
 
     // ----- ILockScreenActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ILockScreenActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ILockScreenActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs* self) noexcept
     {
@@ -20501,9 +19712,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_ILockScreenActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ILockScreenActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILockScreenActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILockScreenActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILockScreenActivatedEventArgs) },
@@ -20513,11 +19721,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._ILockScreenActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ILockScreenActivatedEventArgs};
 
     struct ImplementsILockScreenActivatedEventArgs : py::ImplementsInterfaceT<ImplementsILockScreenActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs>
@@ -20683,23 +19887,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.ILockScreenActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsILockScreenActivatedEventArgs};
 
     // ----- ILockScreenCallActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ILockScreenCallActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ILockScreenCallActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs* self) noexcept
     {
@@ -20824,9 +20015,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_ILockScreenCallActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ILockScreenCallActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILockScreenCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILockScreenCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILockScreenCallActivatedEventArgs) },
@@ -20836,11 +20024,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._ILockScreenCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ILockScreenCallActivatedEventArgs};
 
     struct ImplementsILockScreenCallActivatedEventArgs : py::ImplementsInterfaceT<ImplementsILockScreenCallActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs>
@@ -21046,23 +20230,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.ILockScreenCallActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsILockScreenCallActivatedEventArgs};
 
     // ----- IPhoneCallActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPhoneCallActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPhoneCallActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs* self) noexcept
     {
@@ -21151,9 +20322,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IPhoneCallActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPhoneCallActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPhoneCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPhoneCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPhoneCallActivatedEventArgs) },
@@ -21163,11 +20331,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IPhoneCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPhoneCallActivatedEventArgs};
 
     struct ImplementsIPhoneCallActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIPhoneCallActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs>
@@ -21333,23 +20497,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IPhoneCallActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPhoneCallActivatedEventArgs};
 
     // ----- IPickerReturnedActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPickerReturnedActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPickerReturnedActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs* self) noexcept
     {
@@ -21438,9 +20589,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IPickerReturnedActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPickerReturnedActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPickerReturnedActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPickerReturnedActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPickerReturnedActivatedEventArgs) },
@@ -21450,11 +20598,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IPickerReturnedActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPickerReturnedActivatedEventArgs};
 
     struct ImplementsIPickerReturnedActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIPickerReturnedActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs>
@@ -21620,23 +20764,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IPickerReturnedActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPickerReturnedActivatedEventArgs};
 
     // ----- IPrelaunchActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPrelaunchActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPrelaunchActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs* self) noexcept
     {
@@ -21725,9 +20856,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IPrelaunchActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPrelaunchActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrelaunchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrelaunchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrelaunchActivatedEventArgs) },
@@ -21737,11 +20865,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IPrelaunchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPrelaunchActivatedEventArgs};
 
     struct ImplementsIPrelaunchActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIPrelaunchActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs>
@@ -21907,23 +21031,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IPrelaunchActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPrelaunchActivatedEventArgs};
 
     // ----- IPrint3DWorkflowActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPrint3DWorkflowActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPrint3DWorkflowActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs* self) noexcept
     {
@@ -22012,9 +21123,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IPrint3DWorkflowActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPrint3DWorkflowActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrint3DWorkflowActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrint3DWorkflowActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrint3DWorkflowActivatedEventArgs) },
@@ -22024,11 +21132,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IPrint3DWorkflowActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPrint3DWorkflowActivatedEventArgs};
 
     struct ImplementsIPrint3DWorkflowActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIPrint3DWorkflowActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs>
@@ -22194,23 +21298,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IPrint3DWorkflowActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPrint3DWorkflowActivatedEventArgs};
 
     // ----- IPrintTaskSettingsActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPrintTaskSettingsActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPrintTaskSettingsActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs* self) noexcept
     {
@@ -22299,9 +21390,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IPrintTaskSettingsActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPrintTaskSettingsActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintTaskSettingsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintTaskSettingsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintTaskSettingsActivatedEventArgs) },
@@ -22311,11 +21399,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IPrintTaskSettingsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPrintTaskSettingsActivatedEventArgs};
 
     struct ImplementsIPrintTaskSettingsActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIPrintTaskSettingsActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs>
@@ -22481,23 +21565,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IPrintTaskSettingsActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPrintTaskSettingsActivatedEventArgs};
 
     // ----- IProtocolActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IProtocolActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IProtocolActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs* self) noexcept
     {
@@ -22586,9 +21657,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IProtocolActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IProtocolActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IProtocolActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IProtocolActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IProtocolActivatedEventArgs) },
@@ -22598,11 +21666,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IProtocolActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IProtocolActivatedEventArgs};
 
     struct ImplementsIProtocolActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIProtocolActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs>
@@ -22768,23 +21832,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IProtocolActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIProtocolActivatedEventArgs};
 
     // ----- IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData* self) noexcept
     {
@@ -22891,9 +21942,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData) },
@@ -22903,11 +21951,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData};
 
     struct ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData : py::ImplementsInterfaceT<ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData>
@@ -23093,23 +22137,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData};
 
     // ----- IProtocolForResultsActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IProtocolForResultsActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IProtocolForResultsActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs* self) noexcept
     {
@@ -23198,9 +22229,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IProtocolForResultsActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IProtocolForResultsActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IProtocolForResultsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IProtocolForResultsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IProtocolForResultsActivatedEventArgs) },
@@ -23210,11 +22238,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IProtocolForResultsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IProtocolForResultsActivatedEventArgs};
 
     struct ImplementsIProtocolForResultsActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIProtocolForResultsActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs>
@@ -23380,23 +22404,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IProtocolForResultsActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIProtocolForResultsActivatedEventArgs};
 
     // ----- IRestrictedLaunchActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IRestrictedLaunchActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IRestrictedLaunchActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs* self) noexcept
     {
@@ -23485,9 +22496,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IRestrictedLaunchActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IRestrictedLaunchActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRestrictedLaunchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRestrictedLaunchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRestrictedLaunchActivatedEventArgs) },
@@ -23497,11 +22505,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IRestrictedLaunchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IRestrictedLaunchActivatedEventArgs};
 
     struct ImplementsIRestrictedLaunchActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIRestrictedLaunchActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs>
@@ -23667,23 +22671,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IRestrictedLaunchActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIRestrictedLaunchActivatedEventArgs};
 
     // ----- ISearchActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ISearchActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ISearchActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs* self) noexcept
     {
@@ -23790,9 +22781,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_ISearchActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ISearchActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISearchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISearchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISearchActivatedEventArgs) },
@@ -23802,11 +22790,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._ISearchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ISearchActivatedEventArgs};
 
     struct ImplementsISearchActivatedEventArgs : py::ImplementsInterfaceT<ImplementsISearchActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs>
@@ -23992,23 +22976,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.ISearchActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsISearchActivatedEventArgs};
 
     // ----- ISearchActivatedEventArgsWithLinguisticDetails interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ISearchActivatedEventArgsWithLinguisticDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ISearchActivatedEventArgsWithLinguisticDetails(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails* self) noexcept
     {
@@ -24043,9 +23014,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_ISearchActivatedEventArgsWithLinguisticDetails[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ISearchActivatedEventArgsWithLinguisticDetails) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISearchActivatedEventArgsWithLinguisticDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISearchActivatedEventArgsWithLinguisticDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISearchActivatedEventArgsWithLinguisticDetails) },
@@ -24055,11 +23023,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._ISearchActivatedEventArgsWithLinguisticDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ISearchActivatedEventArgsWithLinguisticDetails};
 
     struct ImplementsISearchActivatedEventArgsWithLinguisticDetails : py::ImplementsInterfaceT<ImplementsISearchActivatedEventArgsWithLinguisticDetails, winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails>
@@ -24165,23 +23129,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.ISearchActivatedEventArgsWithLinguisticDetails",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsISearchActivatedEventArgsWithLinguisticDetails};
 
     // ----- IShareTargetActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IShareTargetActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IShareTargetActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs* self) noexcept
     {
@@ -24270,9 +23221,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IShareTargetActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IShareTargetActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IShareTargetActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IShareTargetActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IShareTargetActivatedEventArgs) },
@@ -24282,11 +23230,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IShareTargetActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IShareTargetActivatedEventArgs};
 
     struct ImplementsIShareTargetActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIShareTargetActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs>
@@ -24452,23 +23396,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IShareTargetActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIShareTargetActivatedEventArgs};
 
     // ----- IStartupTaskActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IStartupTaskActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IStartupTaskActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs* self) noexcept
     {
@@ -24557,9 +23488,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IStartupTaskActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IStartupTaskActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStartupTaskActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStartupTaskActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStartupTaskActivatedEventArgs) },
@@ -24569,11 +23497,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IStartupTaskActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IStartupTaskActivatedEventArgs};
 
     struct ImplementsIStartupTaskActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIStartupTaskActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs>
@@ -24739,23 +23663,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IStartupTaskActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIStartupTaskActivatedEventArgs};
 
     // ----- IToastNotificationActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IToastNotificationActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IToastNotificationActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs* self) noexcept
     {
@@ -24862,9 +23773,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IToastNotificationActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IToastNotificationActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IToastNotificationActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IToastNotificationActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IToastNotificationActivatedEventArgs) },
@@ -24874,11 +23782,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IToastNotificationActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IToastNotificationActivatedEventArgs};
 
     struct ImplementsIToastNotificationActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIToastNotificationActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs>
@@ -25064,23 +23968,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IToastNotificationActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIToastNotificationActivatedEventArgs};
 
     // ----- IUserDataAccountProviderActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IUserDataAccountProviderActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IUserDataAccountProviderActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs* self) noexcept
     {
@@ -25169,9 +24060,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IUserDataAccountProviderActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IUserDataAccountProviderActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IUserDataAccountProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IUserDataAccountProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IUserDataAccountProviderActivatedEventArgs) },
@@ -25181,11 +24069,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IUserDataAccountProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IUserDataAccountProviderActivatedEventArgs};
 
     struct ImplementsIUserDataAccountProviderActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIUserDataAccountProviderActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs>
@@ -25351,23 +24235,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IUserDataAccountProviderActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIUserDataAccountProviderActivatedEventArgs};
 
     // ----- IViewSwitcherProvider interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IViewSwitcherProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IViewSwitcherProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IViewSwitcherProvider>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IViewSwitcherProvider(py::wrapper::Windows::ApplicationModel::Activation::IViewSwitcherProvider* self) noexcept
     {
@@ -25456,9 +24327,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IViewSwitcherProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IViewSwitcherProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IViewSwitcherProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IViewSwitcherProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IViewSwitcherProvider) },
@@ -25468,11 +24336,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IViewSwitcherProvider",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IViewSwitcherProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IViewSwitcherProvider};
 
     struct ImplementsIViewSwitcherProvider : py::ImplementsInterfaceT<ImplementsIViewSwitcherProvider, winrt::Windows::ApplicationModel::Activation::IViewSwitcherProvider>
@@ -25638,23 +24502,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IViewSwitcherProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIViewSwitcherProvider};
 
     // ----- IVoiceCommandActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IVoiceCommandActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IVoiceCommandActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs* self) noexcept
     {
@@ -25743,9 +24594,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IVoiceCommandActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IVoiceCommandActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVoiceCommandActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVoiceCommandActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVoiceCommandActivatedEventArgs) },
@@ -25755,11 +24603,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IVoiceCommandActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IVoiceCommandActivatedEventArgs};
 
     struct ImplementsIVoiceCommandActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIVoiceCommandActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs>
@@ -25925,23 +24769,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IVoiceCommandActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIVoiceCommandActivatedEventArgs};
 
     // ----- IWalletActionActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IWalletActionActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IWalletActionActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs* self) noexcept
     {
@@ -26066,9 +24897,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IWalletActionActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IWalletActionActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWalletActionActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWalletActionActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWalletActionActivatedEventArgs) },
@@ -26078,11 +24906,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IWalletActionActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IWalletActionActivatedEventArgs};
 
     struct ImplementsIWalletActionActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIWalletActionActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs>
@@ -26288,23 +25112,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IWalletActionActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIWalletActionActivatedEventArgs};
 
     // ----- IWebAccountProviderActivatedEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IWebAccountProviderActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IWebAccountProviderActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs* self) noexcept
     {
@@ -26393,9 +25204,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderActivatedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderActivatedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderActivatedEventArgs) },
@@ -26405,11 +25213,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IWebAccountProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IWebAccountProviderActivatedEventArgs};
 
     struct ImplementsIWebAccountProviderActivatedEventArgs : py::ImplementsInterfaceT<ImplementsIWebAccountProviderActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs>
@@ -26575,23 +25379,10 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IWebAccountProviderActivatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIWebAccountProviderActivatedEventArgs};
 
     // ----- IWebAuthenticationBrokerContinuationEventArgs interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IWebAuthenticationBrokerContinuationEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IWebAuthenticationBrokerContinuationEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs* self) noexcept
     {
@@ -26698,9 +25489,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }};
 
     static PyType_Slot _type_slots_IWebAuthenticationBrokerContinuationEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IWebAuthenticationBrokerContinuationEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAuthenticationBrokerContinuationEventArgs) },
@@ -26710,11 +25498,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation._IWebAuthenticationBrokerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IWebAuthenticationBrokerContinuationEventArgs};
 
     struct ImplementsIWebAuthenticationBrokerContinuationEventArgs : py::ImplementsInterfaceT<ImplementsIWebAuthenticationBrokerContinuationEventArgs, winrt::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs>
@@ -26900,11 +25684,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         "winrt._winrt_windows_applicationmodel_activation.IWebAuthenticationBrokerContinuationEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIWebAuthenticationBrokerContinuationEventArgs};
 
     // ----- Windows.ApplicationModel.Activation Initialization --------------------

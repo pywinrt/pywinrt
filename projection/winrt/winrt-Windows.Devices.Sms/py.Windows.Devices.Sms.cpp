@@ -7418,15 +7418,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     // ----- ISmsBinaryMessage interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ISmsBinaryMessage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Sms::ISmsBinaryMessage>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::ISmsBinaryMessage>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_ISmsBinaryMessage(py::wrapper::Windows::Devices::Sms::ISmsBinaryMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -7581,9 +7572,6 @@ namespace py::cpp::Windows::Devices::Sms
         { }};
 
     static PyType_Slot _type_slots_ISmsBinaryMessage[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ISmsBinaryMessage) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISmsBinaryMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISmsBinaryMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISmsBinaryMessage) },
@@ -7593,11 +7581,7 @@ namespace py::cpp::Windows::Devices::Sms
         "winrt._winrt_windows_devices_sms._ISmsBinaryMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::ISmsBinaryMessage),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ISmsBinaryMessage};
 
     struct ImplementsISmsBinaryMessage : py::ImplementsInterfaceT<ImplementsISmsBinaryMessage, winrt::Windows::Devices::Sms::ISmsBinaryMessage>
@@ -7823,23 +7807,10 @@ namespace py::cpp::Windows::Devices::Sms
         "winrt._winrt_windows_devices_sms.ISmsBinaryMessage",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsISmsBinaryMessage};
 
     // ----- ISmsDevice interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ISmsDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Sms::ISmsDevice>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::ISmsDevice>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ISmsDevice(py::wrapper::Windows::Devices::Sms::ISmsDevice* self) noexcept
     {
@@ -8070,9 +8041,6 @@ namespace py::cpp::Windows::Devices::Sms
         { }};
 
     static PyType_Slot _type_slots_ISmsDevice[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ISmsDevice) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISmsDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISmsDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISmsDevice) },
@@ -8082,11 +8050,7 @@ namespace py::cpp::Windows::Devices::Sms
         "winrt._winrt_windows_devices_sms._ISmsDevice",
         sizeof(py::wrapper::Windows::Devices::Sms::ISmsDevice),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ISmsDevice};
 
     struct ImplementsISmsDevice : py::ImplementsInterfaceT<ImplementsISmsDevice, winrt::Windows::Devices::Sms::ISmsDevice>
@@ -8440,23 +8404,10 @@ namespace py::cpp::Windows::Devices::Sms
         "winrt._winrt_windows_devices_sms.ISmsDevice",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsISmsDevice};
 
     // ----- ISmsMessage interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ISmsMessage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Sms::ISmsMessage>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::ISmsMessage>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ISmsMessage(py::wrapper::Windows::Devices::Sms::ISmsMessage* self) noexcept
     {
@@ -8509,9 +8460,6 @@ namespace py::cpp::Windows::Devices::Sms
         { }};
 
     static PyType_Slot _type_slots_ISmsMessage[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ISmsMessage) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISmsMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISmsMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISmsMessage) },
@@ -8521,11 +8469,7 @@ namespace py::cpp::Windows::Devices::Sms
         "winrt._winrt_windows_devices_sms._ISmsMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::ISmsMessage),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ISmsMessage};
 
     struct ImplementsISmsMessage : py::ImplementsInterfaceT<ImplementsISmsMessage, winrt::Windows::Devices::Sms::ISmsMessage>
@@ -8651,23 +8595,10 @@ namespace py::cpp::Windows::Devices::Sms
         "winrt._winrt_windows_devices_sms.ISmsMessage",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsISmsMessage};
 
     // ----- ISmsMessageBase interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ISmsMessageBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Sms::ISmsMessageBase>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::ISmsMessageBase>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ISmsMessageBase(py::wrapper::Windows::Devices::Sms::ISmsMessageBase* self) noexcept
     {
@@ -8774,9 +8705,6 @@ namespace py::cpp::Windows::Devices::Sms
         { }};
 
     static PyType_Slot _type_slots_ISmsMessageBase[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ISmsMessageBase) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISmsMessageBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISmsMessageBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISmsMessageBase) },
@@ -8786,11 +8714,7 @@ namespace py::cpp::Windows::Devices::Sms
         "winrt._winrt_windows_devices_sms._ISmsMessageBase",
         sizeof(py::wrapper::Windows::Devices::Sms::ISmsMessageBase),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ISmsMessageBase};
 
     struct ImplementsISmsMessageBase : py::ImplementsInterfaceT<ImplementsISmsMessageBase, winrt::Windows::Devices::Sms::ISmsMessageBase>
@@ -8976,23 +8900,10 @@ namespace py::cpp::Windows::Devices::Sms
         "winrt._winrt_windows_devices_sms.ISmsMessageBase",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsISmsMessageBase};
 
     // ----- ISmsTextMessage interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ISmsTextMessage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Sms::ISmsTextMessage>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::ISmsTextMessage>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ISmsTextMessage(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self) noexcept
     {
@@ -9323,9 +9234,6 @@ namespace py::cpp::Windows::Devices::Sms
         { }};
 
     static PyType_Slot _type_slots_ISmsTextMessage[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ISmsTextMessage) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISmsTextMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISmsTextMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISmsTextMessage) },
@@ -9335,11 +9243,7 @@ namespace py::cpp::Windows::Devices::Sms
         "winrt._winrt_windows_devices_sms._ISmsTextMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::ISmsTextMessage),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ISmsTextMessage};
 
     struct ImplementsISmsTextMessage : py::ImplementsInterfaceT<ImplementsISmsTextMessage, winrt::Windows::Devices::Sms::ISmsTextMessage>
@@ -9749,11 +9653,7 @@ namespace py::cpp::Windows::Devices::Sms
         "winrt._winrt_windows_devices_sms.ISmsTextMessage",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsISmsTextMessage};
 
     // ----- SmsEncodedLength struct --------------------

@@ -1928,15 +1928,6 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     // ----- IPerceptionFrameProvider interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPerceptionFrameProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IPerceptionFrameProvider(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -2149,9 +2140,6 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }};
 
     static PyType_Slot _type_slots_IPerceptionFrameProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPerceptionFrameProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPerceptionFrameProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPerceptionFrameProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPerceptionFrameProvider) },
@@ -2161,11 +2149,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         "winrt._winrt_windows_devices_perception_provider._IPerceptionFrameProvider",
         sizeof(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPerceptionFrameProvider};
 
     struct ImplementsIPerceptionFrameProvider : py::ImplementsInterfaceT<ImplementsIPerceptionFrameProvider, winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>
@@ -2413,23 +2397,10 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         "winrt._winrt_windows_devices_perception_provider.IPerceptionFrameProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPerceptionFrameProvider};
 
     // ----- IPerceptionFrameProviderManager interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPerceptionFrameProviderManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPerceptionFrameProviderManager(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager* self) noexcept
     {
@@ -2530,9 +2501,6 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }};
 
     static PyType_Slot _type_slots_IPerceptionFrameProviderManager[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPerceptionFrameProviderManager) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPerceptionFrameProviderManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPerceptionFrameProviderManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPerceptionFrameProviderManager) },
@@ -2542,11 +2510,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         "winrt._winrt_windows_devices_perception_provider._IPerceptionFrameProviderManager",
         sizeof(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPerceptionFrameProviderManager};
 
     struct ImplementsIPerceptionFrameProviderManager : py::ImplementsInterfaceT<ImplementsIPerceptionFrameProviderManager, winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>
@@ -2688,11 +2652,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         "winrt._winrt_windows_devices_perception_provider.IPerceptionFrameProviderManager",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPerceptionFrameProviderManager};
 
     // ----- Windows.Devices.Perception.Provider Initialization --------------------

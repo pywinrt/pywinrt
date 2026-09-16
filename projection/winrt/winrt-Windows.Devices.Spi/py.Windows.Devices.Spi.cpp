@@ -1105,15 +1105,6 @@ namespace py::cpp::Windows::Devices::Spi
 
     // ----- ISpiDeviceStatics interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ISpiDeviceStatics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Spi::ISpiDeviceStatics>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Spi::ISpiDeviceStatics>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_ISpiDeviceStatics(py::wrapper::Windows::Devices::Spi::ISpiDeviceStatics* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -1236,9 +1227,6 @@ namespace py::cpp::Windows::Devices::Spi
         { }};
 
     static PyType_Slot _type_slots_ISpiDeviceStatics[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ISpiDeviceStatics) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISpiDeviceStatics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISpiDeviceStatics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISpiDeviceStatics) },
@@ -1248,11 +1236,7 @@ namespace py::cpp::Windows::Devices::Spi
         "winrt._winrt_windows_devices_spi._ISpiDeviceStatics",
         sizeof(py::wrapper::Windows::Devices::Spi::ISpiDeviceStatics),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ISpiDeviceStatics};
 
     struct ImplementsISpiDeviceStatics : py::ImplementsInterfaceT<ImplementsISpiDeviceStatics, winrt::Windows::Devices::Spi::ISpiDeviceStatics>
@@ -1482,11 +1466,7 @@ namespace py::cpp::Windows::Devices::Spi
         "winrt._winrt_windows_devices_spi.ISpiDeviceStatics",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsISpiDeviceStatics};
 
     // ----- Windows.Devices.Spi Initialization --------------------
