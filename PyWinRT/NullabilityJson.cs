@@ -15,8 +15,9 @@ using System.Text.Json;
 /// </remarks>
 sealed class NullabilityInfoFile
 {
-    private readonly ConcurrentDictionary<string, Lazy<NamespaceNullabilityInfo>> namespaces =
-        new(StringComparer.Ordinal);
+    private readonly ConcurrentDictionary<string, Lazy<NamespaceNullabilityInfo>> namespaces = new(
+        StringComparer.Ordinal
+    );
 
     private NullabilityInfoFile() { }
 
@@ -114,16 +115,15 @@ sealed class NullabilityInfoFile
 /// </remarks>
 static class NullabilityJson
 {
-    private static readonly JsonWriterOptions writerOptions =
-        new()
-        {
-            Indented = true,
-            Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-            // Every tracked file in this repository is LF, and this default is
-            // Environment.NewLine, so without it a run on Windows rewrites all
-            // five of these files with carriage returns in them.
-            NewLine = "\n",
-        };
+    private static readonly JsonWriterOptions writerOptions = new()
+    {
+        Indented = true,
+        Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+        // Every tracked file in this repository is LF, and this default is
+        // Environment.NewLine, so without it a run on Windows rewrites all
+        // five of these files with carriage returns in them.
+        NewLine = "\n",
+    };
 
     /// <summary>
     /// Writes the nullability info file.

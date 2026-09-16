@@ -8,7 +8,7 @@ using Microsoft.Win32;
 enum XmlRequirement
 {
     Required,
-    Optional
+    Optional,
 }
 
 class CommandReader

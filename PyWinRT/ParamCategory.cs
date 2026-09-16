@@ -44,16 +44,14 @@ static class ParamCategoryExtensions
             { IsReturnValue: true } => ParamCategory.Out,
             { ParameterType.IsArray: true, IsIn: true } x => ParamCategory.PassArray,
             { ParameterType.IsByReference: true, ParameterType: var type, IsOut: true }
-                when ((ByReferenceType)type).ElementType.IsArray
-                => ParamCategory.ReceiveArray,
+                when ((ByReferenceType)type).ElementType.IsArray => ParamCategory.ReceiveArray,
             { ParameterType.IsArray: true, IsOut: true } => ParamCategory.FillArray,
             { ParameterType.IsArray: true } => throw new NotImplementedException(),
             { IsIn: true } => ParamCategory.In,
             { IsOut: true } => ParamCategory.Out,
-            _
-                => throw new NotImplementedException(
-                    $"Unknown parameter category for '{param.Name}' in method {param.Method}"
-                ),
+            _ => throw new NotImplementedException(
+                $"Unknown parameter category for '{param.Name}' in method {param.Method}"
+            ),
         };
     }
 }

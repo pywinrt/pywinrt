@@ -226,12 +226,11 @@ static class StructWriterExtensions
         w.WriteLine(
             $"static PyObject* {type.Name}_get_{field.Name}({type.CppPyWrapperType}* self, void* /*unused*/) noexcept"
         );
-        w.WriteBlock(
-            () =>
-                w.WriteTryCatch(() =>
-                {
-                    w.WriteLine($"return py::convert(self->obj.{field.ToWinrtFieldName()});");
-                })
+        w.WriteBlock(() =>
+            w.WriteTryCatch(() =>
+            {
+                w.WriteLine($"return py::convert(self->obj.{field.ToWinrtFieldName()});");
+            })
         );
     }
 
@@ -298,38 +297,37 @@ static class StructWriterExtensions
         w.WriteLine(
             $"PyObject* _replace_{type.Name}({type.CppPyWrapperType}* self, PyObject* args, PyObject* kwds) noexcept"
         );
-        w.WriteBlock(
-            () =>
-                w.WriteTryCatch(() =>
+        w.WriteBlock(() =>
+            w.WriteTryCatch(() =>
+            {
+                foreach (var field in type.Type.Fields)
                 {
-                    foreach (var field in type.Type.Fields)
-                    {
-                        w.WriteLine(
-                            $"{field.FieldType.ToStructFieldType()} _{field.Name}{{{field.ToStructFieldPreInitializer()}}};"
-                        );
-                    }
-
-                    w.WriteBlankLine();
                     w.WriteLine(
-                        $"static const char* kwlist[] = {{{type.Type.ToStructFieldKeywordList()}nullptr}};"
+                        $"{field.FieldType.ToStructFieldType()} _{field.Name}{{{field.ToStructFieldPreInitializer()}}};"
                     );
+                }
+
+                w.WriteBlankLine();
+                w.WriteLine(
+                    $"static const char* kwlist[] = {{{type.Type.ToStructFieldKeywordList()}nullptr}};"
+                );
+                w.WriteLine(
+                    $"if (!PyArg_ParseTupleAndKeywords(args, kwds, \"|${type.Type.ToStructFieldFormat()}\", const_cast<char**>(kwlist){type.Type.ToStructFieldParseParameterList()}))"
+                );
+                w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                w.WriteBlankLine();
+
+                w.WriteLine($"auto copy = self->obj;");
+
+                foreach (var field in type.Type.Fields)
+                {
                     w.WriteLine(
-                        $"if (!PyArg_ParseTupleAndKeywords(args, kwds, \"|${type.Type.ToStructFieldFormat()}\", const_cast<char**>(kwlist){type.Type.ToStructFieldParseParameterList()}))"
+                        $"copy.{field.ToWinrtFieldName()} = {field.ToStructFieldInitializer(replace: true)};"
                     );
-                    w.WriteBlock(() => w.WriteLine("return nullptr;"));
-                    w.WriteBlankLine();
-
-                    w.WriteLine($"auto copy = self->obj;");
-
-                    foreach (var field in type.Type.Fields)
-                    {
-                        w.WriteLine(
-                            $"copy.{field.ToWinrtFieldName()} = {field.ToStructFieldInitializer(replace: true)};"
-                        );
-                    }
-                    w.WriteBlankLine();
-                    w.WriteLine($"return convert(copy);");
-                })
+                }
+                w.WriteBlankLine();
+                w.WriteLine($"return convert(copy);");
+            })
         );
     }
 

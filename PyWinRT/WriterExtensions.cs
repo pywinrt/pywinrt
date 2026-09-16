@@ -574,15 +574,14 @@ static class WriterExtensions
             w.WriteLine(
                 $"static PyObject* _from_{type.Name}(PyObject* /*unused*/, PyObject* arg) noexcept"
             );
-            w.WriteBlock(
-                () =>
-                    w.WriteTryCatch(() =>
-                    {
-                        w.WriteLine(
-                            $"auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);"
-                        );
-                        w.WriteLine($"return py::convert(return_value.as<{type.CppWinrtType}>());");
-                    })
+            w.WriteBlock(() =>
+                w.WriteTryCatch(() =>
+                {
+                    w.WriteLine(
+                        $"auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);"
+                    );
+                    w.WriteLine($"return py::convert(return_value.as<{type.CppWinrtType}>());");
+                })
             );
         }
 
@@ -598,20 +597,19 @@ static class WriterExtensions
             w.WriteLine(
                 $"static PyObject* _exit_{type.Name}({type.CppPyWrapperType}* self, PyObject* /*unused*/) noexcept"
             );
-            w.WriteBlock(
-                () =>
-                    w.WriteTryCatch(() =>
-                    {
-                        var closeMethod = type.GetMethod("Close", 0);
+            w.WriteBlock(() =>
+                w.WriteTryCatch(() =>
+                {
+                    var closeMethod = type.GetMethod("Close", 0);
 
-                        w.WriteBlock(() =>
-                        {
-                            w.WriteLine("auto _gil = py::release_gil();");
-                            w.WriteLine($"{type.GetMethodInvokeContext(closeMethod)}Close();");
-                        });
-                        w.WriteBlankLine();
-                        w.WriteLine("Py_RETURN_FALSE;");
-                    })
+                    w.WriteBlock(() =>
+                    {
+                        w.WriteLine("auto _gil = py::release_gil();");
+                        w.WriteLine($"{type.GetMethodInvokeContext(closeMethod)}Close();");
+                    });
+                    w.WriteBlankLine();
+                    w.WriteLine("Py_RETURN_FALSE;");
+                })
             );
         }
 
@@ -621,21 +619,20 @@ static class WriterExtensions
             w.WriteLine(
                 $"static int _get_buffer_{type.Name}({type.CppPyWrapperType}* self, Py_buffer* view, int flags) noexcept"
             );
-            w.WriteBlock(
-                () =>
-                    w.WriteTryCatch(
-                        () =>
-                            w.WriteLine(
-                                $"return PyBuffer_FillInfo(view, reinterpret_cast<PyObject*>(self), reinterpret_cast<void*>(self->obj.data()), static_cast<Py_ssize_t>(self->obj.{type.PyBufferSize}()), 0, flags);"
-                            ),
-                        () =>
-                        {
-                            w.WriteLine("view->obj = nullptr;");
-                            // TODO: attach C++ exception info to Python exception
-                            w.WriteLine("PyErr_SetNone(PyExc_BufferError);");
-                        },
-                        "-1"
-                    )
+            w.WriteBlock(() =>
+                w.WriteTryCatch(
+                    () =>
+                        w.WriteLine(
+                            $"return PyBuffer_FillInfo(view, reinterpret_cast<PyObject*>(self), reinterpret_cast<void*>(self->obj.data()), static_cast<Py_ssize_t>(self->obj.{type.PyBufferSize}()), 0, flags);"
+                        ),
+                    () =>
+                    {
+                        w.WriteLine("view->obj = nullptr;");
+                        // TODO: attach C++ exception info to Python exception
+                        w.WriteLine("PyErr_SetNone(PyExc_BufferError);");
+                    },
+                    "-1"
+                )
             );
         }
 
@@ -647,22 +644,19 @@ static class WriterExtensions
             w.WriteLine(
                 $"static PyObject* _str_{type.Name}({type.CppPyWrapperType}* self) noexcept"
             );
-            w.WriteBlock(
-                () =>
-                    w.WriteTryCatch(() =>
-                    {
-                        w.WriteLine("return py::convert([&]()");
-                        w.WriteBlock(
-                            () =>
-                            {
-                                w.WriteLine("auto _gil = py::release_gil();");
-                                w.WriteLine(
-                                    $"return {type.GetMethodInvokeContext(method)}ToString();"
-                                );
-                            },
-                            "());"
-                        );
-                    })
+            w.WriteBlock(() =>
+                w.WriteTryCatch(() =>
+                {
+                    w.WriteLine("return py::convert([&]()");
+                    w.WriteBlock(
+                        () =>
+                        {
+                            w.WriteLine("auto _gil = py::release_gil();");
+                            w.WriteLine($"return {type.GetMethodInvokeContext(method)}ToString();");
+                        },
+                        "());"
+                    );
+                })
             );
         }
 
@@ -745,45 +739,43 @@ static class WriterExtensions
 
         w.WriteBlankLine();
         w.WriteLine($"static PyObject* {type.Name}_{method.Name}({self}, PyObject* arg) noexcept");
-        w.WriteBlock(
-            () =>
-                w.WriteTryCatch(() =>
+        w.WriteBlock(() =>
+            w.WriteTryCatch(() =>
+            {
+                // An instance member is guarded by the query for the
+                // interface that declares it. A static member has no object
+                // to query, so it keeps the metadata probe.
+                if (!componentDlls && method.IsStatic)
                 {
-                    // An instance member is guarded by the query for the
-                    // interface that declares it. A static member has no object
-                    // to query, so it keeps the metadata probe.
-                    if (!componentDlls && method.IsStatic)
+                    w.WriteLine("static std::optional<bool> is_event_present{};");
+                    w.WriteBlankLine();
+                    w.WriteLine("if (!is_event_present.has_value())");
+                    w.WriteBlock(() =>
+                        w.WriteLine(
+                            $"is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{evtName}\");"
+                        )
+                    );
+                    w.WriteBlankLine();
+                    w.WriteLine("if (!is_event_present.value())");
+                    w.WriteBlock(() =>
                     {
-                        w.WriteLine("static std::optional<bool> is_event_present{};");
-                        w.WriteBlankLine();
-                        w.WriteLine("if (!is_event_present.has_value())");
-                        w.WriteBlock(
-                            () =>
-                                w.WriteLine(
-                                    $"is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{evtName}\");"
-                                )
+                        w.WriteLine(
+                            "PyErr_SetString(PyExc_AttributeError, \"event is not available in this version of Windows\");"
                         );
-                        w.WriteBlankLine();
-                        w.WriteLine("if (!is_event_present.value())");
-                        w.WriteBlock(() =>
-                        {
-                            w.WriteLine(
-                                "PyErr_SetString(PyExc_AttributeError, \"event is not available in this version of Windows\");"
-                            );
-                            w.WriteLine("return nullptr;");
-                        });
-                        w.WriteBlankLine();
-                    }
+                        w.WriteLine("return nullptr;");
+                    });
+                    w.WriteBlankLine();
+                }
 
-                    if (type.IsGeneric)
-                    {
-                        w.WriteLine($"return self->impl->{method.Name}(arg);");
-                    }
-                    else
-                    {
-                        w.WriteMethodBodyContents(type, method);
-                    }
-                })
+                if (type.IsGeneric)
+                {
+                    w.WriteLine($"return self->impl->{method.Name}(arg);");
+                }
+                else
+                {
+                    w.WriteMethodBodyContents(type, method);
+                }
+            })
         );
     }
 
@@ -800,42 +792,40 @@ static class WriterExtensions
         w.WriteLine(
             $"static PyObject* {type.Name}_{prop.GetMethod.Name}({self}, void* /*unused*/) noexcept"
         );
-        w.WriteBlock(
-            () =>
-                w.WriteTryCatch(() =>
+        w.WriteBlock(() =>
+            w.WriteTryCatch(() =>
+            {
+                if (!componentDlls && prop.IsStatic)
                 {
-                    if (!componentDlls && prop.IsStatic)
+                    w.WriteLine("static std::optional<bool> is_property_present{};");
+                    w.WriteBlankLine();
+                    w.WriteLine("if (!is_property_present.has_value())");
+                    w.WriteBlock(() =>
+                        w.WriteLine(
+                            $"is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\");"
+                        )
+                    );
+                    w.WriteBlankLine();
+                    w.WriteLine("if (!is_property_present.value())");
+                    w.WriteBlock(() =>
                     {
-                        w.WriteLine("static std::optional<bool> is_property_present{};");
-                        w.WriteBlankLine();
-                        w.WriteLine("if (!is_property_present.has_value())");
-                        w.WriteBlock(
-                            () =>
-                                w.WriteLine(
-                                    $"is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\");"
-                                )
+                        w.WriteLine(
+                            "PyErr_SetString(PyExc_AttributeError, \"property is not available in this version of Windows\");"
                         );
-                        w.WriteBlankLine();
-                        w.WriteLine("if (!is_property_present.value())");
-                        w.WriteBlock(() =>
-                        {
-                            w.WriteLine(
-                                "PyErr_SetString(PyExc_AttributeError, \"property is not available in this version of Windows\");"
-                            );
-                            w.WriteLine("return nullptr;");
-                        });
-                        w.WriteBlankLine();
-                    }
+                        w.WriteLine("return nullptr;");
+                    });
+                    w.WriteBlankLine();
+                }
 
-                    if (type.IsGeneric)
-                    {
-                        w.WriteLine($"return self->impl->{prop.GetMethod.Name}();");
-                    }
-                    else
-                    {
-                        w.WriteMethodBodyContents(type, prop.GetMethod);
-                    }
-                })
+                if (type.IsGeneric)
+                {
+                    w.WriteLine($"return self->impl->{prop.GetMethod.Name}();");
+                }
+                else
+                {
+                    w.WriteMethodBodyContents(type, prop.GetMethod);
+                }
+            })
         );
     }
 
@@ -992,11 +982,10 @@ static class WriterExtensions
                         w.WriteLine("static std::optional<bool> is_overload_present{};");
                         w.WriteBlankLine();
                         w.WriteLine("if (!is_overload_present.has_value())");
-                        w.WriteBlock(
-                            () =>
-                                w.WriteLine(
-                                    $"is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{method.CppName}\", {inParamCount});"
-                                )
+                        w.WriteBlock(() =>
+                            w.WriteLine(
+                                $"is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{method.CppName}\", {inParamCount});"
+                            )
                         );
                         w.WriteBlankLine();
                         w.WriteLine("if (!is_overload_present.value())");
@@ -1214,79 +1203,78 @@ static class WriterExtensions
                     }
 
                     w.WriteLine($"if (arg_count == {ctor.Method.Parameters.Count})");
-                    w.WriteBlock(
-                        () =>
-                            w.WriteTryCatch(() =>
+                    w.WriteBlock(() =>
+                        w.WriteTryCatch(() =>
+                        {
+                            foreach (var param in ctor.Method.Parameters)
                             {
-                                foreach (var param in ctor.Method.Parameters)
-                                {
-                                    w.WriteMethodParamDefinition(ctor, param);
-                                }
+                                w.WriteMethodParamDefinition(ctor, param);
+                            }
 
-                                if (ctor.Method.Parameters.Count > 0)
-                                {
-                                    w.WriteBlankLine();
-                                }
+                            if (ctor.Method.Parameters.Count > 0)
+                            {
+                                w.WriteBlankLine();
+                            }
 
-                                if (type.IsComposable)
+                            if (type.IsComposable)
+                            {
+                                w.WriteLine("if (type != self_type)");
+                                w.WriteBlock(() =>
                                 {
-                                    w.WriteLine("if (type != self_type)");
-                                    w.WriteBlock(() =>
+                                    if (type.HasComposableFactory)
                                     {
-                                        if (type.HasComposableFactory)
-                                        {
-                                            w.WriteLine(
-                                                $"py::pyobj_handle self{{type->tp_alloc(type, 0)}};"
-                                            );
-                                            w.WriteLine("if (!self)");
-                                            w.WriteBlock(() => w.WriteLine("return nullptr;"));
-                                            w.WriteBlankLine();
+                                        w.WriteLine(
+                                            $"py::pyobj_handle self{{type->tp_alloc(type, 0)}};"
+                                        );
+                                        w.WriteLine("if (!self)");
+                                        w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                                        w.WriteBlankLine();
 
-                                            string ctorParams =
-                                                ctor.Method.Parameters.Count > 0
-                                                    ? $"self.get(), {ctor.Method.Parameters.ToParameterList()}"
-                                                    : "self.get()";
+                                        string ctorParams =
+                                            ctor.Method.Parameters.Count > 0
+                                                ? $"self.get(), {ctor.Method.Parameters.ToParameterList()}"
+                                                : "self.get()";
 
-                                            // NB: doing construct_at with nullptr first in case of exception,
-                                            // otherwise we will destruct an uninitialized value when pyobj_handle
-                                            // goes out of scope
-                                            w.WriteLine(
-                                                $"std::construct_at(&reinterpret_cast<{type.CppPyWrapperType}*>(self.get())->obj, nullptr);"
-                                            );
-                                            w.WriteBlankLine();
-                                            w.WriteLine(
-                                                $"auto obj_impl = winrt::make_self<PyWinrt{type.Name}>({ctorParams});"
-                                            );
-                                            w.WriteBlankLine();
-                                            w.WriteLine(
-                                                $"auto obj = py::make_py_obj<PyWinrt{type.Name}>(obj_impl, type, self.get());"
-                                            );
-                                            w.WriteLine("if (!obj)");
-                                            w.WriteBlock(() => w.WriteLine("return nullptr;"));
-                                            w.WriteBlankLine();
-                                            w.WriteLine(
-                                                $"reinterpret_cast<{type.CppPyWrapperType}*>(self.get())->obj = std::move(obj);"
-                                            );
-                                            w.WriteBlankLine();
+                                        // NB: doing construct_at with nullptr first in case of exception,
+                                        // otherwise we will destruct an uninitialized value when pyobj_handle
+                                        // goes out of scope
+                                        w.WriteLine(
+                                            $"std::construct_at(&reinterpret_cast<{type.CppPyWrapperType}*>(self.get())->obj, nullptr);"
+                                        );
+                                        w.WriteBlankLine();
+                                        w.WriteLine(
+                                            $"auto obj_impl = winrt::make_self<PyWinrt{type.Name}>({ctorParams});"
+                                        );
+                                        w.WriteBlankLine();
+                                        w.WriteLine(
+                                            $"auto obj = py::make_py_obj<PyWinrt{type.Name}>(obj_impl, type, self.get());"
+                                        );
+                                        w.WriteLine("if (!obj)");
+                                        w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                                        w.WriteBlankLine();
+                                        w.WriteLine(
+                                            $"reinterpret_cast<{type.CppPyWrapperType}*>(self.get())->obj = std::move(obj);"
+                                        );
+                                        w.WriteBlankLine();
 
-                                            w.WriteLine("return self.detach();");
-                                        }
-                                        else
-                                        {
-                                            w.WriteLine(
-                                                "py::set_invalid_activation_error(type->tp_name);"
-                                            );
-                                            w.WriteLine("return nullptr;");
-                                        }
-                                    });
-                                    w.WriteBlankLine();
-                                }
+                                        w.WriteLine("return self.detach();");
+                                    }
+                                    else
+                                    {
+                                        w.WriteLine(
+                                            "py::set_invalid_activation_error(type->tp_name);"
+                                        );
+                                        w.WriteLine("return nullptr;");
+                                    }
+                                });
+                                w.WriteBlankLine();
+                            }
 
-                                w.WriteLine(
-                                    $"{type.CppPyWrapperTemplateType} instance{{{ctor.Method.Parameters.ToParameterList()}}};"
-                                );
-                                w.WriteLine("return py::wrap(instance, type);");
-                            })
+                            w.WriteLine(
+                                $"{type.CppPyWrapperTemplateType} instance{{{ctor.Method.Parameters.ToParameterList()}}};"
+                            );
+                            w.WriteLine("return py::wrap(instance, type);");
+                        })
                     );
                 }
 
@@ -1573,7 +1561,7 @@ static class WriterExtensions
         {
             Category.Class when hasComposableBase => $"{name}_bases.get()",
             Category.Class or Category.Interface => "object_bases.get()",
-            _ => "nullptr"
+            _ => "nullptr",
         };
 
         w.WriteLine(
@@ -1768,13 +1756,12 @@ static class WriterExtensions
         // a property is entirely replaced with one of the same name
         string typeIgnore = type switch
         {
-            { Namespace: "Windows.UI.Xaml.Controls.Maps", Name: "MapControl" }
-                => prop switch
-                {
-                    { Name: "Style" } => "  # type: ignore[override]",
-                    { Name: "StyleProperty" } => "  # type: ignore[misc]",
-                    _ => "",
-                },
+            { Namespace: "Windows.UI.Xaml.Controls.Maps", Name: "MapControl" } => prop switch
+            {
+                { Name: "Style" } => "  # type: ignore[override]",
+                { Name: "StyleProperty" } => "  # type: ignore[misc]",
+                _ => "",
+            },
             _ => "",
         };
 

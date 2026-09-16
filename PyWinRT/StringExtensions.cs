@@ -5,51 +5,52 @@ using System.Text.RegularExpressions;
 static partial class StringExtensions
 {
     // https://docs.python.org/3/reference/lexical_analysis.html#keywords
-    internal static readonly HashSet<string> pythonKeywords =
-        new(
-            [
-                "and",
-                "as",
-                "assert",
-                "async",
-                "await",
-                "break",
-                "class",
-                "continue",
-                "def",
-                "del",
-                "elif",
-                "else",
-                "except",
-                "finally",
-                "for",
-                "from",
-                "global",
-                "if",
-                "import",
-                "in",
-                "is",
-                "lambda",
-                "nonlocal",
-                "not",
-                "or",
-                "pass",
-                "raise",
-                "return",
-                "try",
-                "while",
-                "with",
-                "yield"
-            ]
-        );
+    internal static readonly HashSet<string> pythonKeywords = new([
+        "and",
+        "as",
+        "assert",
+        "async",
+        "await",
+        "break",
+        "class",
+        "continue",
+        "def",
+        "del",
+        "elif",
+        "else",
+        "except",
+        "finally",
+        "for",
+        "from",
+        "global",
+        "if",
+        "import",
+        "in",
+        "is",
+        "lambda",
+        "nonlocal",
+        "not",
+        "or",
+        "pass",
+        "raise",
+        "return",
+        "try",
+        "while",
+        "with",
+        "yield",
+    ]);
 
     // These conversions are done many times for the same identifiers
     // (once per generated file per use), so the results are cached.
-    private static readonly ConcurrentDictionary<string, string> pythonIdentifierCache =
-        new(Environment.ProcessorCount * 4, 1 << 16);
+    private static readonly ConcurrentDictionary<string, string> pythonIdentifierCache = new(
+        Environment.ProcessorCount * 4,
+        1 << 16
+    );
 
-    private static readonly ConcurrentDictionary<string, string> pythonConstantCache =
-        new(Environment.ProcessorCount * 4, 1 << 14);
+    private static readonly ConcurrentDictionary<string, string> pythonConstantCache = new(
+        Environment.ProcessorCount * 4,
+        1 << 14
+    );
 
     // Regexes applied in order by ToSnakeCase(). These are source-generated
     // and applied in order because the built-in static Regex.Replace() cache

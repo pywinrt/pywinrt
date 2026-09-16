@@ -32,21 +32,20 @@ static class InterfaceWriterExtensions
 
                     w.WriteBlankLine();
                     w.WriteLine($"auto {method.CppName}({paramList})");
-                    w.WriteBlock(
-                        () =>
-                            w.WriteDelegateInvoke(
-                                method.Method,
-                                "method.get()",
-                                () =>
-                                {
-                                    w.WriteLine("py::pyobj_handle self{this->get_py_obj()};");
-                                    w.WriteBlankLine();
-                                    w.WriteGetPythonMethod(method, "self.get()");
-                                    w.WriteBlankLine();
-                                },
-                                ensureGil: false,
-                                method.GenericArgMap
-                            )
+                    w.WriteBlock(() =>
+                        w.WriteDelegateInvoke(
+                            method.Method,
+                            "method.get()",
+                            () =>
+                            {
+                                w.WriteLine("py::pyobj_handle self{this->get_py_obj()};");
+                                w.WriteBlankLine();
+                                w.WriteGetPythonMethod(method, "self.get()");
+                                w.WriteBlankLine();
+                            },
+                            ensureGil: false,
+                            method.GenericArgMap
+                        )
                     );
                 }
 
@@ -137,25 +136,24 @@ static class InterfaceWriterExtensions
 
                     w.WriteBlankLine();
                     w.WriteLine($"auto {evt.Name}({addParamList})");
-                    w.WriteBlock(
-                        () =>
-                            w.WriteDelegateInvoke(
-                                evt.AddMethod.Method,
-                                "method.get()",
-                                () =>
-                                {
-                                    w.WriteLine("py::pyobj_handle self{this->get_py_obj()};");
-                                    w.WriteBlankLine();
-                                    w.WriteLine(
-                                        $"py::pyobj_handle method{{PyObject_GetAttrString(self.get(), \"{evt.AddMethod.PyName}\")}};"
-                                    );
-                                    w.WriteLine("if (!method)");
-                                    w.WriteBlock(() => w.WriteLine("throw python_exception();"));
-                                    w.WriteBlankLine();
-                                },
-                                ensureGil: false,
-                                evt.AddMethod.GenericArgMap
-                            )
+                    w.WriteBlock(() =>
+                        w.WriteDelegateInvoke(
+                            evt.AddMethod.Method,
+                            "method.get()",
+                            () =>
+                            {
+                                w.WriteLine("py::pyobj_handle self{this->get_py_obj()};");
+                                w.WriteBlankLine();
+                                w.WriteLine(
+                                    $"py::pyobj_handle method{{PyObject_GetAttrString(self.get(), \"{evt.AddMethod.PyName}\")}};"
+                                );
+                                w.WriteLine("if (!method)");
+                                w.WriteBlock(() => w.WriteLine("throw python_exception();"));
+                                w.WriteBlankLine();
+                            },
+                            ensureGil: false,
+                            evt.AddMethod.GenericArgMap
+                        )
                     );
 
                     var removeParamList = string.Join(
@@ -167,25 +165,24 @@ static class InterfaceWriterExtensions
 
                     w.WriteBlankLine();
                     w.WriteLine($"auto {evt.Name}({removeParamList})");
-                    w.WriteBlock(
-                        () =>
-                            w.WriteDelegateInvoke(
-                                evt.RemoveMethod.Method,
-                                "method.get()",
-                                () =>
-                                {
-                                    w.WriteLine("py::pyobj_handle self{this->get_py_obj()};");
-                                    w.WriteBlankLine();
-                                    w.WriteLine(
-                                        $"py::pyobj_handle method{{PyObject_GetAttrString(self.get(), \"{evt.RemoveMethod.PyName}\")}};"
-                                    );
-                                    w.WriteLine("if (!method)");
-                                    w.WriteBlock(() => w.WriteLine("throw python_exception();"));
-                                    w.WriteBlankLine();
-                                },
-                                ensureGil: false,
-                                evt.RemoveMethod.GenericArgMap
-                            )
+                    w.WriteBlock(() =>
+                        w.WriteDelegateInvoke(
+                            evt.RemoveMethod.Method,
+                            "method.get()",
+                            () =>
+                            {
+                                w.WriteLine("py::pyobj_handle self{this->get_py_obj()};");
+                                w.WriteBlankLine();
+                                w.WriteLine(
+                                    $"py::pyobj_handle method{{PyObject_GetAttrString(self.get(), \"{evt.RemoveMethod.PyName}\")}};"
+                                );
+                                w.WriteLine("if (!method)");
+                                w.WriteBlock(() => w.WriteLine("throw python_exception();"));
+                                w.WriteBlankLine();
+                            },
+                            ensureGil: false,
+                            evt.RemoveMethod.GenericArgMap
+                        )
                     );
                 }
             },
@@ -210,15 +207,14 @@ static class InterfaceWriterExtensions
             w.WriteLine(
                 $"static PyObject* _from_{type.Name}(PyObject* /*unused*/, PyObject* arg) noexcept"
             );
-            w.WriteBlock(
-                () =>
-                    w.WriteTryCatch(() =>
-                    {
-                        w.WriteLine(
-                            $"auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);"
-                        );
-                        w.WriteLine($"return py::convert(return_value.as<{type.CppWinrtType}>());");
-                    })
+            w.WriteBlock(() =>
+                w.WriteTryCatch(() =>
+                {
+                    w.WriteLine(
+                        $"auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);"
+                    );
+                    w.WriteLine($"return py::convert(return_value.as<{type.CppWinrtType}>());");
+                })
             );
             w.WriteBlankLine();
         }
@@ -226,56 +222,54 @@ static class InterfaceWriterExtensions
         w.WriteLine(
             $"static PyObject* _guid_Implements{type.Name}(PyObject* /*unused*/, PyObject* /*unused*/) noexcept"
         );
-        w.WriteBlock(
-            () =>
-                w.WriteTryCatch(() =>
+        w.WriteBlock(() =>
+            w.WriteTryCatch(() =>
+            {
+                if (type.IsGeneric)
                 {
-                    if (type.IsGeneric)
-                    {
-                        w.WriteLine(
-                            "PyErr_SetString(PyExc_NotImplementedError, \"Generic types are not supported\");"
-                        );
-                        w.WriteLine("return nullptr;");
-                    }
-                    else
-                    {
-                        w.WriteLine($"return py::convert(winrt::guid_of<{type.CppWinrtType}>());");
-                    }
-                })
+                    w.WriteLine(
+                        "PyErr_SetString(PyExc_NotImplementedError, \"Generic types are not supported\");"
+                    );
+                    w.WriteLine("return nullptr;");
+                }
+                else
+                {
+                    w.WriteLine($"return py::convert(winrt::guid_of<{type.CppWinrtType}>());");
+                }
+            })
         );
         w.WriteBlankLine();
 
         w.WriteLine(
             $"static PyObject* _make_Implements{type.Name}(PyObject* /*unused*/, PyObject* args) noexcept"
         );
-        w.WriteBlock(
-            () =>
-                w.WriteTryCatch(() =>
+        w.WriteBlock(() =>
+            w.WriteTryCatch(() =>
+            {
+                w.WriteLine("PyObject* py_obj;");
+                w.WriteLine("winrt::impl::inspectable_abi* runtime_class;");
+                w.WriteBlankLine();
+                w.WriteLine("if (!PyArg_ParseTuple(args, \"On\", &py_obj, &runtime_class))");
+                w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                w.WriteBlankLine();
+
+                if (type.IsGeneric)
                 {
-                    w.WriteLine("PyObject* py_obj;");
-                    w.WriteLine("winrt::impl::inspectable_abi* runtime_class;");
-                    w.WriteBlankLine();
-                    w.WriteLine("if (!PyArg_ParseTuple(args, \"On\", &py_obj, &runtime_class))");
-                    w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                    w.WriteLine(
+                        "PyErr_SetString(PyExc_NotImplementedError, \"Generic types are not supported\");"
+                    );
+                    w.WriteLine("return nullptr;");
+                }
+                else
+                {
+                    w.WriteLine(
+                        $"auto iface{{std::make_unique<Implements{type.Name}>(py_obj, runtime_class)}};"
+                    );
                     w.WriteBlankLine();
 
-                    if (type.IsGeneric)
-                    {
-                        w.WriteLine(
-                            "PyErr_SetString(PyExc_NotImplementedError, \"Generic types are not supported\");"
-                        );
-                        w.WriteLine("return nullptr;");
-                    }
-                    else
-                    {
-                        w.WriteLine(
-                            $"auto iface{{std::make_unique<Implements{type.Name}>(py_obj, runtime_class)}};"
-                        );
-                        w.WriteBlankLine();
-
-                        w.WriteLine("return PyLong_FromVoidPtr(iface.release());");
-                    }
-                })
+                    w.WriteLine("return PyLong_FromVoidPtr(iface.release());");
+                }
+            })
         );
         w.WriteBlankLine();
 
@@ -432,8 +426,8 @@ static class InterfaceWriterExtensions
                 foreach (var prop in type.Properties)
                 {
                     w.WriteLine($"PyObject* get_{prop.Name}() noexcept override");
-                    w.WriteBlock(
-                        () => w.WriteTryCatch(() => w.WriteMethodBodyContents(type, prop.GetMethod))
+                    w.WriteBlock(() =>
+                        w.WriteTryCatch(() => w.WriteMethodBodyContents(type, prop.GetMethod))
                     );
 
                     if (prop.SetMethod is not null)
@@ -466,16 +460,15 @@ static class InterfaceWriterExtensions
                 foreach (var evt in type.Events)
                 {
                     w.WriteLine($"PyObject* {evt.AddMethod.Name}(PyObject* arg) noexcept override");
-                    w.WriteBlock(
-                        () => w.WriteTryCatch(() => w.WriteMethodBodyContents(type, evt.AddMethod))
+                    w.WriteBlock(() =>
+                        w.WriteTryCatch(() => w.WriteMethodBodyContents(type, evt.AddMethod))
                     );
 
                     w.WriteLine(
                         $"PyObject* {evt.RemoveMethod.Name}(PyObject* arg) noexcept override"
                     );
-                    w.WriteBlock(
-                        () =>
-                            w.WriteTryCatch(() => w.WriteMethodBodyContents(type, evt.RemoveMethod))
+                    w.WriteBlock(() =>
+                        w.WriteTryCatch(() => w.WriteMethodBodyContents(type, evt.RemoveMethod))
                     );
                 }
 
@@ -578,15 +571,15 @@ static class InterfaceWriterExtensions
 
         var mixin = type switch
         {
-            { Namespace: "Windows.Foundation.Collections", Name: "IMap" }
-                => ", winrt._winrt.MutableMapping[K, V]",
-            { Namespace: "Windows.Foundation.Collections", Name: "IMapView" }
-                => ", winrt._winrt.Mapping[K, V]",
-            { Namespace: "Windows.Foundation.Collections", Name: "IVector" }
-                => ", winrt._winrt.MutableSequence[T]",
-            { Namespace: "Windows.Foundation.Collections", Name: "IVectorView" }
-                => ", winrt._winrt.Sequence[T]",
-            _ => ""
+            { Namespace: "Windows.Foundation.Collections", Name: "IMap" } =>
+                ", winrt._winrt.MutableMapping[K, V]",
+            { Namespace: "Windows.Foundation.Collections", Name: "IMapView" } =>
+                ", winrt._winrt.Mapping[K, V]",
+            { Namespace: "Windows.Foundation.Collections", Name: "IVector" } =>
+                ", winrt._winrt.MutableSequence[T]",
+            { Namespace: "Windows.Foundation.Collections", Name: "IVectorView" } =>
+                ", winrt._winrt.Sequence[T]",
+            _ => "",
         };
 
         var inspectable =

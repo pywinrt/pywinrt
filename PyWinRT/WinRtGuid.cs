@@ -144,7 +144,9 @@ static class WinRtGuid
         {
             foreach (var name in names)
             {
-                var (ns, typeName) = name.Split(':') is [var n, var t] ? (n, t) : (def.Namespace, name);
+                var (ns, typeName) = name.Split(':') is [var n, var t]
+                    ? (n, t)
+                    : (def.Namespace, name);
                 var related = def.Module.GetType(ns, typeName);
 
                 if (related is null)
@@ -168,9 +170,15 @@ static class WinRtGuid
             case "Windows.Foundation.IAsyncOperation`1":
                 return Make("AsyncOperationCompletedHandler`1");
             case "Windows.Foundation.IAsyncActionWithProgress`1":
-                return Make("AsyncActionWithProgressCompletedHandler`1", "AsyncActionProgressHandler`1");
+                return Make(
+                    "AsyncActionWithProgressCompletedHandler`1",
+                    "AsyncActionProgressHandler`1"
+                );
             case "Windows.Foundation.IAsyncOperationWithProgress`2":
-                return Make("AsyncOperationWithProgressCompletedHandler`2", "AsyncOperationProgressHandler`2");
+                return Make(
+                    "AsyncOperationWithProgressCompletedHandler`2",
+                    "AsyncOperationProgressHandler`2"
+                );
             case "Windows.Foundation.Collections.IIterable`1":
                 return Make("IIterator`1");
             case "Windows.Foundation.Collections.IVectorView`1":

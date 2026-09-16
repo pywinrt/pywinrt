@@ -26,7 +26,7 @@ var referenceOption = new Option<(string, string)[]>(
 )
 {
     Arity = ArgumentArity.ZeroOrMore,
-    ArgumentHelpName = "spec"
+    ArgumentHelpName = "spec",
 };
 
 var outputOption = new Option<DirectoryInfo>(
@@ -36,7 +36,7 @@ var outputOption = new Option<DirectoryInfo>(
 )
 {
     Arity = ArgumentArity.ZeroOrOne,
-    ArgumentHelpName = "path"
+    ArgumentHelpName = "path",
 };
 
 var includeOption = new Option<string[]>(
@@ -113,9 +113,7 @@ rootCommand.SetHandler(
         var include = invocationContext.ParseResult.GetValueForOption(includeOption)!;
         var exclude = invocationContext.ParseResult.GetValueForOption(excludeOption)!;
         var headerPath = invocationContext.ParseResult.GetValueForOption(headerPathOption);
-        var baseHeaderPath = invocationContext.ParseResult.GetValueForOption(
-            baseHeaderPathOption
-        );
+        var baseHeaderPath = invocationContext.ParseResult.GetValueForOption(baseHeaderPathOption);
         var nullabilityInfoPath = invocationContext.ParseResult.GetValueForOption(
             nullabilityJsonPathOption
         );
@@ -242,9 +240,7 @@ rootCommand.SetHandler(
             Console.WriteLine($"Include: {string.Join(";", include)}");
             Console.WriteLine($"Exclude: {string.Join(";", exclude)}");
             Console.WriteLine($"Header Path: {headerPath?.FullName ?? "<default>"}");
-            Console.WriteLine(
-                $"Base Header Path: {baseHeaderPath?.FullName ?? "<default>"}"
-            );
+            Console.WriteLine($"Base Header Path: {baseHeaderPath?.FullName ?? "<default>"}");
             Console.WriteLine($"Loaded metadata in {loadTime.TotalMilliseconds:F0} ms");
             Console.WriteLine($"Filtered types in {filterTime.TotalMilliseconds:F0} ms");
         }

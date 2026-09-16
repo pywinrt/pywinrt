@@ -34,7 +34,7 @@ static class NumberWriterExtensions
             { "Matrix3x2", "winrt::Windows::Foundation::Numerics::float3x2" },
             { "Matrix4x4", "winrt::Windows::Foundation::Numerics::float4x4" },
             { "Plane", "winrt::Windows::Foundation::Numerics::plane" },
-            { "Quaternion", "winrt::Windows::Foundation::Numerics::quaternion" }
+            { "Quaternion", "winrt::Windows::Foundation::Numerics::quaternion" },
         };
 
     private static readonly IReadOnlyDictionary<string, IReadOnlyCollection<string>> commonValues =
@@ -63,7 +63,7 @@ static class NumberWriterExtensions
             {
                 "Quaternion",
                 new List<string> { "identity" }
-            }
+            },
         };
 
     private static readonly IReadOnlyDictionary<
@@ -99,7 +99,7 @@ static class NumberWriterExtensions
                     [
                         new ParamInfo("x_scale", "float"),
                         new ParamInfo("y_scale", "float"),
-                        new ParamInfo("center_point", "Vector2")
+                        new ParamInfo("center_point", "Vector2"),
                     ],
                     NoMinGW: true
                 ),
@@ -139,7 +139,7 @@ static class NumberWriterExtensions
                     [
                         new ParamInfo("radians_x", "float"),
                         new ParamInfo("radians_y", "float"),
-                        new ParamInfo("center_point", "Vector2")
+                        new ParamInfo("center_point", "Vector2"),
                     ],
                     NoMinGW: true
                 ),
@@ -168,7 +168,7 @@ static class NumberWriterExtensions
                         new ParamInfo("object_position", "Vector3"),
                         new ParamInfo("camera_position", "Vector3"),
                         new ParamInfo("camera_up_vector", "Vector3"),
-                        new ParamInfo("camera_forward_vector", "Vector3")
+                        new ParamInfo("camera_forward_vector", "Vector3"),
                     ],
                     NoMinGW: true
                 ),
@@ -180,7 +180,7 @@ static class NumberWriterExtensions
                         new ParamInfo("camera_position", "Vector3"),
                         new ParamInfo("rotate_axis", "Vector3"),
                         new ParamInfo("camera_forward_vector", "Vector3"),
-                        new ParamInfo("object_forward_vector", "Vector3")
+                        new ParamInfo("object_forward_vector", "Vector3"),
                     ],
                     NoMinGW: true
                 ),
@@ -195,17 +195,7 @@ static class NumberWriterExtensions
                     [
                         new ParamInfo("x_position", "float"),
                         new ParamInfo("y_position", "float"),
-                        new ParamInfo("z_position", "float")
-                    ],
-                    NoMinGW: true
-                ),
-                new(
-                    "make_scale",
-                    "make_float4x4_scale",
-                    [
-                        new ParamInfo("x_scale", "float"),
-                        new ParamInfo("y_scale", "float"),
-                        new ParamInfo("z_scale", "float")
+                        new ParamInfo("z_position", "float"),
                     ],
                     NoMinGW: true
                 ),
@@ -216,7 +206,17 @@ static class NumberWriterExtensions
                         new ParamInfo("x_scale", "float"),
                         new ParamInfo("y_scale", "float"),
                         new ParamInfo("z_scale", "float"),
-                        new ParamInfo("center_point", "Vector3")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_scale",
+                    "make_float4x4_scale",
+                    [
+                        new ParamInfo("x_scale", "float"),
+                        new ParamInfo("y_scale", "float"),
+                        new ParamInfo("z_scale", "float"),
+                        new ParamInfo("center_point", "Vector3"),
                     ],
                     NoMinGW: true
                 ),
@@ -293,7 +293,7 @@ static class NumberWriterExtensions
                         new ParamInfo("field_of_view", "float"),
                         new ParamInfo("aspect_ratio", "float"),
                         new ParamInfo("near_plane_distance", "float"),
-                        new ParamInfo("far_plane_distance", "float")
+                        new ParamInfo("far_plane_distance", "float"),
                     ],
                     NoMinGW: true
                 ),
@@ -304,7 +304,7 @@ static class NumberWriterExtensions
                         new ParamInfo("width", "float"),
                         new ParamInfo("height", "float"),
                         new ParamInfo("near_plane_distance", "float"),
-                        new ParamInfo("far_plane_distance", "float")
+                        new ParamInfo("far_plane_distance", "float"),
                     ],
                     NoMinGW: true
                 ),
@@ -317,7 +317,7 @@ static class NumberWriterExtensions
                         new ParamInfo("bottom", "float"),
                         new ParamInfo("top", "float"),
                         new ParamInfo("near_plane_distance", "float"),
-                        new ParamInfo("far_plane_distance", "float")
+                        new ParamInfo("far_plane_distance", "float"),
                     ],
                     NoMinGW: true
                 ),
@@ -328,7 +328,7 @@ static class NumberWriterExtensions
                         new ParamInfo("width", "float"),
                         new ParamInfo("height", "float"),
                         new ParamInfo("z_near_plane", "float"),
-                        new ParamInfo("z_far_plane", "float")
+                        new ParamInfo("z_far_plane", "float"),
                     ],
                     NoMinGW: true
                 ),
@@ -341,7 +341,7 @@ static class NumberWriterExtensions
                         new ParamInfo("bottom", "float"),
                         new ParamInfo("top", "float"),
                         new ParamInfo("z_near_plane", "float"),
-                        new ParamInfo("z_far_plane", "float")
+                        new ParamInfo("z_far_plane", "float"),
                     ],
                     NoMinGW: true
                 ),
@@ -351,7 +351,7 @@ static class NumberWriterExtensions
                     [
                         new ParamInfo("camera_position", "Vector3"),
                         new ParamInfo("camera_target", "Vector3"),
-                        new ParamInfo("camera_up_vector", "Vector3")
+                        new ParamInfo("camera_up_vector", "Vector3"),
                     ],
                     NoMinGW: true
                 ),
@@ -361,7 +361,7 @@ static class NumberWriterExtensions
                     [
                         new ParamInfo("position", "Vector3"),
                         new ParamInfo("forward", "Vector3"),
-                        new ParamInfo("up", "Vector3")
+                        new ParamInfo("up", "Vector3"),
                     ],
                     NoMinGW: true
                 ),
@@ -376,7 +376,7 @@ static class NumberWriterExtensions
                     [
                         new ParamInfo("yaw", "float"),
                         new ParamInfo("pitch", "float"),
-                        new ParamInfo("roll", "float")
+                        new ParamInfo("roll", "float"),
                     ],
                     NoMinGW: true
                 ),
@@ -391,7 +391,7 @@ static class NumberWriterExtensions
                     "make_float4x4_reflection",
                     [new ParamInfo("value", "Plane")],
                     NoMinGW: true
-                )
+                ),
             }
         },
         {
@@ -404,10 +404,10 @@ static class NumberWriterExtensions
                     [
                         new ParamInfo("point1", "Vector3"),
                         new ParamInfo("point2", "Vector3"),
-                        new ParamInfo("point3", "Vector3")
+                        new ParamInfo("point3", "Vector3"),
                     ],
                     NoMinGW: true
-                )
+                ),
             }
         },
         {
@@ -425,14 +425,14 @@ static class NumberWriterExtensions
                     [
                         new ParamInfo("yaw", "float"),
                         new ParamInfo("pitch", "float"),
-                        new ParamInfo("roll", "float")
+                        new ParamInfo("roll", "float"),
                     ]
                 ),
                 new(
                     "make_from_rotation_matrix",
                     "make_quaternion_from_rotation_matrix",
                     [new ParamInfo("matrix", "Matrix4x4")]
-                )
+                ),
             }
         },
     };
@@ -550,7 +550,7 @@ static class NumberWriterExtensions
                     new("__itruediv__", "Quaternion", [new ParamInfo("value", "Quaternion")]),
                     new("__abs__", "float", []),
                 }
-            }
+            },
         };
 
     private static readonly IReadOnlyDictionary<
@@ -597,7 +597,7 @@ static class NumberWriterExtensions
                     NoMinGW: true
                 ),
                 new("transform4", "Vector4", [new ParamInfo("matrix", "Matrix4x4")], NoMinGW: true),
-                new("transform4", "Vector4", [new ParamInfo("rotation", "Quaternion")])
+                new("transform4", "Vector4", [new ParamInfo("rotation", "Quaternion")]),
             }
         },
         {
@@ -704,7 +704,7 @@ static class NumberWriterExtensions
                     "Matrix4x4",
                     [new ParamInfo("value", "Matrix4x4"), new ParamInfo("amount", "float")],
                     NoMinGW: true
-                )
+                ),
             }
         },
         {
@@ -742,7 +742,7 @@ static class NumberWriterExtensions
                 ),
                 new("concatenate", "Quaternion", [new ParamInfo("value", "Quaternion")]),
             }
-        }
+        },
     };
 
     public static void WriteNumberCommonValuesPyTyping(
@@ -845,56 +845,53 @@ static class NumberWriterExtensions
             w.WriteLine(
                 $"static PyObject* {func.PyName}_{type.Name}(PyObject* /*unused*/, PyObject* args) noexcept"
             );
-            w.WriteBlock(
-                () =>
-                    w.WriteTryCatch(() =>
+            w.WriteBlock(() =>
+                w.WriteTryCatch(() =>
+                {
+                    w.WriteLine("auto n_args = PyTuple_GET_SIZE(args);");
+                    w.WriteBlankLine();
+
+                    foreach (var (i, overload) in overloads.Select((o, i) => (i, o)))
                     {
-                        w.WriteLine("auto n_args = PyTuple_GET_SIZE(args);");
-                        w.WriteBlankLine();
-
-                        foreach (var (i, overload) in overloads.Select((o, i) => (i, o)))
+                        w.WriteLine($"if (n_args == {overload.Parameters.Count})");
+                        w.WriteBlock(() =>
                         {
-                            w.WriteLine($"if (n_args == {overload.Parameters.Count})");
-                            w.WriteBlock(() =>
+                            if (overload.NoMinGW)
                             {
-                                if (overload.NoMinGW)
-                                {
-                                    w.WriteLineNoTabs("#if defined(__MINGW32__)");
-                                    w.WriteLine("(void)args;");
-                                    w.WriteLine(
-                                        $"PyErr_SetString(PyExc_NotImplementedError, \"Overload with {overload.Parameters.Count} args is not implemented on MinGW\");"
-                                    );
-                                    w.WriteLine("return nullptr;");
-                                    w.WriteLineNoTabs("#else");
-                                }
-
-                                foreach (
-                                    var (j, param) in overload.Parameters.Select((p, j) => (j, p))
-                                )
-                                {
-                                    w.WriteLine(
-                                        $"auto _arg{j} = py::convert_to<{param.CppWinrtType}>(args, {j});"
-                                    );
-                                }
-
+                                w.WriteLineNoTabs("#if defined(__MINGW32__)");
+                                w.WriteLine("(void)args;");
                                 w.WriteLine(
-                                    $"auto _result = winrt::Windows::Foundation::Numerics::{overload.CppWinrtName}({string.Join(", ", Enumerable.Range(0, overload.Parameters.Count).Select(j => $"_arg{j}"))});"
+                                    $"PyErr_SetString(PyExc_NotImplementedError, \"Overload with {overload.Parameters.Count} args is not implemented on MinGW\");"
                                 );
-                                w.WriteLine("return py::convert(_result);");
+                                w.WriteLine("return nullptr;");
+                                w.WriteLineNoTabs("#else");
+                            }
 
-                                if (overload.NoMinGW)
-                                {
-                                    w.WriteLineNoTabs("#endif");
-                                }
-                            });
-                            w.WriteBlankLine();
-                        }
+                            foreach (var (j, param) in overload.Parameters.Select((p, j) => (j, p)))
+                            {
+                                w.WriteLine(
+                                    $"auto _arg{j} = py::convert_to<{param.CppWinrtType}>(args, {j});"
+                                );
+                            }
 
-                        w.WriteLine(
-                            "PyErr_Format(PyExc_TypeError, \"No overload take %d args.\", n_args);"
-                        );
-                        w.WriteLine("return nullptr;");
-                    })
+                            w.WriteLine(
+                                $"auto _result = winrt::Windows::Foundation::Numerics::{overload.CppWinrtName}({string.Join(", ", Enumerable.Range(0, overload.Parameters.Count).Select(j => $"_arg{j}"))});"
+                            );
+                            w.WriteLine("return py::convert(_result);");
+
+                            if (overload.NoMinGW)
+                            {
+                                w.WriteLineNoTabs("#endif");
+                            }
+                        });
+                        w.WriteBlankLine();
+                    }
+
+                    w.WriteLine(
+                        "PyErr_Format(PyExc_TypeError, \"No overload take %d args.\", n_args);"
+                    );
+                    w.WriteLine("return nullptr;");
+                })
             );
         }
     }
@@ -959,213 +956,210 @@ static class NumberWriterExtensions
             {
                 0 => "/*unused*/",
                 1 => "arg",
-                _ => "args"
+                _ => "args",
             };
 
             w.WriteBlankLine();
             w.WriteLine(
                 $"static PyObject* {method.Name}_{type.Name}(winrt_struct_wrapper<{type.CppWinrtType}>* self, PyObject* {args}) noexcept"
             );
-            w.WriteBlock(
-                () =>
-                    w.WriteTryCatch(() =>
+            w.WriteBlock(() =>
+                w.WriteTryCatch(() =>
+                {
+                    if (overloads.Count() == 1)
                     {
-                        if (overloads.Count() == 1)
+                        if (method.NoMinGW)
                         {
-                            if (method.NoMinGW)
+                            w.WriteLineNoTabs("#if defined(__MINGW32__)");
+                            w.WriteLine("(void)self;");
+
+                            if (method.Parameters.Count > 0)
                             {
-                                w.WriteLineNoTabs("#if defined(__MINGW32__)");
-                                w.WriteLine("(void)self;");
-
-                                if (method.Parameters.Count > 0)
-                                {
-                                    w.WriteLine($"(void){args};");
-                                }
-
-                                w.WriteLine(
-                                    "PyErr_SetString(PyExc_NotImplementedError, \"This method is not implemented on MinGW\");"
-                                );
-                                w.WriteLine("return nullptr;");
-                                w.WriteLineNoTabs("#else");
+                                w.WriteLine($"(void){args};");
                             }
 
-                            switch (method.Parameters.Count)
-                            {
-                                case 0:
-                                    if (method.Name == "invert")
-                                    {
-                                        w.WriteLine($"{method.ReturnCppWinrtType} _result;");
-                                        w.WriteBlankLine();
-                                        w.WriteLine(
-                                            $"if (!winrt::Windows::Foundation::Numerics::{method.Name}(self->obj, &_result))"
-                                        );
-                                        w.WriteBlock(() =>
-                                        {
-                                            w.WriteLine(
-                                                "PyErr_SetString(PyExc_ValueError, \"Matrix is not invertible\");"
-                                            );
-                                            w.WriteLine("return nullptr;");
-                                        });
-                                        w.WriteBlankLine();
-                                        w.WriteLine("return py::convert(_result);");
-                                    }
-                                    else if (method.Name == "decompose")
-                                    {
-                                        w.WriteLine(
-                                            "winrt::Windows::Foundation::Numerics::float3 _out0;"
-                                        );
-                                        w.WriteLine(
-                                            "winrt::Windows::Foundation::Numerics::quaternion _out1;"
-                                        );
-                                        w.WriteLine(
-                                            "winrt::Windows::Foundation::Numerics::float3 _out2;"
-                                        );
-                                        w.WriteBlankLine();
-                                        w.WriteLine(
-                                            $"if (!winrt::Windows::Foundation::Numerics::{method.Name}(self->obj, &_out0, &_out1, &_out2))"
-                                        );
-                                        w.WriteBlock(() =>
-                                        {
-                                            w.WriteLine(
-                                                "PyErr_SetString(PyExc_ValueError, \"Matrix is not decomposable\");"
-                                            );
-                                            w.WriteLine("return nullptr;");
-                                        });
-                                        w.WriteBlankLine();
-                                        w.WriteLine("py::pyobj_handle out0{py::convert(_out0)};");
-                                        w.WriteLine("py::pyobj_handle out1{py::convert(_out1)};");
-                                        w.WriteLine("py::pyobj_handle out2{py::convert(_out2)};");
-                                        w.WriteBlankLine();
-                                        w.WriteLine(
-                                            "return PyTuple_Pack(3, out0.get(), out1.get(), out2.get());"
-                                        );
-                                    }
-                                    else
-                                    {
-                                        w.WriteLine(
-                                            $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj);"
-                                        );
-                                        w.WriteLine("return py::convert(_result);");
-                                    }
-
-                                    break;
-                                case 1:
-                                    var param = method.Parameters[0];
-                                    w.WriteLine(
-                                        $"auto _arg = py::convert_to<{param.CppWinrtType}>(arg);"
-                                    );
-                                    w.WriteLine(
-                                        $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj, _arg);"
-                                    );
-                                    w.WriteLine("return py::convert(_result);");
-
-                                    break;
-                                case 2:
-                                    var param0 = method.Parameters[0];
-                                    var param1 = method.Parameters[1];
-
-                                    w.WriteLine(
-                                        $"auto _arg0 = py::convert_to<{param0.CppWinrtType}>(args, 0);"
-                                    );
-                                    w.WriteLine(
-                                        $"auto _arg1 = py::convert_to<{param1.CppWinrtType}>(args, 1);"
-                                    );
-                                    w.WriteLine(
-                                        $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj, _arg0, _arg1);"
-                                    );
-                                    w.WriteLine("return py::convert(_result);");
-
-                                    break;
-                                default:
-                                    throw new NotImplementedException();
-                            }
-
-                            if (method.NoMinGW)
-                            {
-                                w.WriteLineNoTabs("#endif");
-                            }
+                            w.WriteLine(
+                                "PyErr_SetString(PyExc_NotImplementedError, \"This method is not implemented on MinGW\");"
+                            );
+                            w.WriteLine("return nullptr;");
+                            w.WriteLineNoTabs("#else");
                         }
-                        else
+
+                        switch (method.Parameters.Count)
                         {
-                            var allOverloadsNotImplemented = overloads.All(o => o.NoMinGW);
-
-                            if (allOverloadsNotImplemented)
-                            {
-                                w.WriteLineNoTabs("#if defined(__MINGW32__)");
-                                w.WriteLine("(void)self;");
-
-                                if (method.Parameters.Count > 0)
+                            case 0:
+                                if (method.Name == "invert")
                                 {
-                                    w.WriteLine($"(void){args};");
+                                    w.WriteLine($"{method.ReturnCppWinrtType} _result;");
+                                    w.WriteBlankLine();
+                                    w.WriteLine(
+                                        $"if (!winrt::Windows::Foundation::Numerics::{method.Name}(self->obj, &_result))"
+                                    );
+                                    w.WriteBlock(() =>
+                                    {
+                                        w.WriteLine(
+                                            "PyErr_SetString(PyExc_ValueError, \"Matrix is not invertible\");"
+                                        );
+                                        w.WriteLine("return nullptr;");
+                                    });
+                                    w.WriteBlankLine();
+                                    w.WriteLine("return py::convert(_result);");
+                                }
+                                else if (method.Name == "decompose")
+                                {
+                                    w.WriteLine(
+                                        "winrt::Windows::Foundation::Numerics::float3 _out0;"
+                                    );
+                                    w.WriteLine(
+                                        "winrt::Windows::Foundation::Numerics::quaternion _out1;"
+                                    );
+                                    w.WriteLine(
+                                        "winrt::Windows::Foundation::Numerics::float3 _out2;"
+                                    );
+                                    w.WriteBlankLine();
+                                    w.WriteLine(
+                                        $"if (!winrt::Windows::Foundation::Numerics::{method.Name}(self->obj, &_out0, &_out1, &_out2))"
+                                    );
+                                    w.WriteBlock(() =>
+                                    {
+                                        w.WriteLine(
+                                            "PyErr_SetString(PyExc_ValueError, \"Matrix is not decomposable\");"
+                                        );
+                                        w.WriteLine("return nullptr;");
+                                    });
+                                    w.WriteBlankLine();
+                                    w.WriteLine("py::pyobj_handle out0{py::convert(_out0)};");
+                                    w.WriteLine("py::pyobj_handle out1{py::convert(_out1)};");
+                                    w.WriteLine("py::pyobj_handle out2{py::convert(_out2)};");
+                                    w.WriteBlankLine();
+                                    w.WriteLine(
+                                        "return PyTuple_Pack(3, out0.get(), out1.get(), out2.get());"
+                                    );
+                                }
+                                else
+                                {
+                                    w.WriteLine(
+                                        $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj);"
+                                    );
+                                    w.WriteLine("return py::convert(_result);");
                                 }
 
+                                break;
+                            case 1:
+                                var param = method.Parameters[0];
                                 w.WriteLine(
-                                    "PyErr_SetString(PyExc_NotImplementedError, \"This method is not implemented on MinGW\");"
+                                    $"auto _arg = py::convert_to<{param.CppWinrtType}>(arg);"
                                 );
-                                w.WriteLine("return nullptr;");
-                                w.WriteLineNoTabs("#else");
+                                w.WriteLine(
+                                    $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj, _arg);"
+                                );
+                                w.WriteLine("return py::convert(_result);");
+
+                                break;
+                            case 2:
+                                var param0 = method.Parameters[0];
+                                var param1 = method.Parameters[1];
+
+                                w.WriteLine(
+                                    $"auto _arg0 = py::convert_to<{param0.CppWinrtType}>(args, 0);"
+                                );
+                                w.WriteLine(
+                                    $"auto _arg1 = py::convert_to<{param1.CppWinrtType}>(args, 1);"
+                                );
+                                w.WriteLine(
+                                    $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj, _arg0, _arg1);"
+                                );
+                                w.WriteLine("return py::convert(_result);");
+
+                                break;
+                            default:
+                                throw new NotImplementedException();
+                        }
+
+                        if (method.NoMinGW)
+                        {
+                            w.WriteLineNoTabs("#endif");
+                        }
+                    }
+                    else
+                    {
+                        var allOverloadsNotImplemented = overloads.All(o => o.NoMinGW);
+
+                        if (allOverloadsNotImplemented)
+                        {
+                            w.WriteLineNoTabs("#if defined(__MINGW32__)");
+                            w.WriteLine("(void)self;");
+
+                            if (method.Parameters.Count > 0)
+                            {
+                                w.WriteLine($"(void){args};");
                             }
 
-                            switch (method.Parameters.Count)
-                            {
-                                case 1:
-                                    foreach (
-                                        var (i, overload) in overloads.Select((o, i) => (i, o))
-                                    )
-                                    {
-                                        var param = overload.Parameters[0];
+                            w.WriteLine(
+                                "PyErr_SetString(PyExc_NotImplementedError, \"This method is not implemented on MinGW\");"
+                            );
+                            w.WriteLine("return nullptr;");
+                            w.WriteLineNoTabs("#else");
+                        }
 
-                                        if (i > 0)
+                        switch (method.Parameters.Count)
+                        {
+                            case 1:
+                                foreach (var (i, overload) in overloads.Select((o, i) => (i, o)))
+                                {
+                                    var param = overload.Parameters[0];
+
+                                    if (i > 0)
+                                    {
+                                        w.WriteBlankLine();
+                                    }
+
+                                    w.WriteLine(
+                                        $"if (std::string_view(Py_TYPE(arg)->tp_name) == \"{param.PyType}\" || std::string_view(Py_TYPE(arg)->tp_name) == \"winrt._winrt_windows_foundation_numerics.{param.PyType}\")"
+                                    );
+                                    w.WriteBlock(() =>
+                                    {
+                                        if (!allOverloadsNotImplemented && overload.NoMinGW)
                                         {
-                                            w.WriteBlankLine();
+                                            w.WriteLineNoTabs("#if defined(__MINGW32__)");
+                                            w.WriteLine(
+                                                $"PyErr_SetString(PyExc_NotImplementedError, \"Overload for {param.PyType} is not implemented on MinGW\");"
+                                            );
+                                            w.WriteLine("return nullptr;");
+                                            w.WriteLineNoTabs("#else");
                                         }
 
                                         w.WriteLine(
-                                            $"if (std::string_view(Py_TYPE(arg)->tp_name) == \"{param.PyType}\" || std::string_view(Py_TYPE(arg)->tp_name) == \"winrt._winrt_windows_foundation_numerics.{param.PyType}\")"
+                                            $"auto _arg = py::convert_to<{param.CppWinrtType}>(arg);"
                                         );
-                                        w.WriteBlock(() =>
+                                        w.WriteLine(
+                                            $"auto _result = winrt::Windows::Foundation::Numerics::{overload.Name}(self->obj, _arg);"
+                                        );
+                                        w.WriteLine("return py::convert(_result);");
+
+                                        if (!allOverloadsNotImplemented && overload.NoMinGW)
                                         {
-                                            if (!allOverloadsNotImplemented && overload.NoMinGW)
-                                            {
-                                                w.WriteLineNoTabs("#if defined(__MINGW32__)");
-                                                w.WriteLine(
-                                                    $"PyErr_SetString(PyExc_NotImplementedError, \"Overload for {param.PyType} is not implemented on MinGW\");"
-                                                );
-                                                w.WriteLine("return nullptr;");
-                                                w.WriteLineNoTabs("#else");
-                                            }
+                                            w.WriteLineNoTabs("#endif");
+                                        }
+                                    });
+                                }
 
-                                            w.WriteLine(
-                                                $"auto _arg = py::convert_to<{param.CppWinrtType}>(arg);"
-                                            );
-                                            w.WriteLine(
-                                                $"auto _result = winrt::Windows::Foundation::Numerics::{overload.Name}(self->obj, _arg);"
-                                            );
-                                            w.WriteLine("return py::convert(_result);");
-
-                                            if (!allOverloadsNotImplemented && overload.NoMinGW)
-                                            {
-                                                w.WriteLineNoTabs("#endif");
-                                            }
-                                        });
-                                    }
-
-                                    w.WriteBlankLine();
-                                    w.WriteLine(
-                                        $"PyErr_Format(PyExc_TypeError, \"Expecting one of {string.Join(", ", overloads.Select(o => $"'winrt._winrt_windows_foundation_numerics.{o.Parameters[0].PyType}'"))} but got '%s'\", Py_TYPE(arg)->tp_name);"
-                                    );
-                                    w.WriteLine("return nullptr;");
-                                    break;
-                                default:
-                                    throw new NotImplementedException();
-                            }
-
-                            if (allOverloadsNotImplemented)
-                            {
-                                w.WriteLineNoTabs("#endif");
-                            }
+                                w.WriteBlankLine();
+                                w.WriteLine(
+                                    $"PyErr_Format(PyExc_TypeError, \"Expecting one of {string.Join(", ", overloads.Select(o => $"'winrt._winrt_windows_foundation_numerics.{o.Parameters[0].PyType}'"))} but got '%s'\", Py_TYPE(arg)->tp_name);"
+                                );
+                                w.WriteLine("return nullptr;");
+                                break;
+                            default:
+                                throw new NotImplementedException();
                         }
-                    })
+
+                        if (allOverloadsNotImplemented)
+                        {
+                            w.WriteLineNoTabs("#endif");
+                        }
+                    }
+                })
             );
         }
     }
@@ -1203,75 +1197,108 @@ static class NumberWriterExtensions
     static void WriteNumberAdd(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteLine($"static PyObject* _add_{type.Name}(PyObject* left, PyObject* right) noexcept");
-        w.WriteBlock(
-            () =>
-                w.WriteTryCatch(
-                    () =>
-                    {
-                        w.WriteLine($"auto _left = py::convert_to<{type.CppWinrtType}>(left);");
-                        w.WriteLine($"auto _right = py::convert_to<{type.CppWinrtType}>(right);");
-                        w.WriteBlankLine();
-                        w.WriteLine($"auto _result = _left + _right;");
-                        w.WriteLine($"return py::convert(_result);");
-                    },
-                    w.WriteReturnNotImplementedOnTypeError
-                )
+        w.WriteBlock(() =>
+            w.WriteTryCatch(
+                () =>
+                {
+                    w.WriteLine($"auto _left = py::convert_to<{type.CppWinrtType}>(left);");
+                    w.WriteLine($"auto _right = py::convert_to<{type.CppWinrtType}>(right);");
+                    w.WriteBlankLine();
+                    w.WriteLine($"auto _result = _left + _right;");
+                    w.WriteLine($"return py::convert(_result);");
+                },
+                w.WriteReturnNotImplementedOnTypeError
+            )
         );
     }
 
     static void WriteNumberSub(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteLine($"static PyObject* _sub_{type.Name}(PyObject* left, PyObject* right) noexcept");
-        w.WriteBlock(
-            () =>
-                w.WriteTryCatch(
-                    () =>
-                    {
-                        w.WriteLine($"auto _left = py::convert_to<{type.CppWinrtType}>(left);");
-                        w.WriteLine($"auto _right = py::convert_to<{type.CppWinrtType}>(right);");
-                        w.WriteBlankLine();
-                        w.WriteLine($"auto _result = _left - _right;");
-                        w.WriteLine($"return py::convert(_result);");
-                    },
-                    w.WriteReturnNotImplementedOnTypeError
-                )
+        w.WriteBlock(() =>
+            w.WriteTryCatch(
+                () =>
+                {
+                    w.WriteLine($"auto _left = py::convert_to<{type.CppWinrtType}>(left);");
+                    w.WriteLine($"auto _right = py::convert_to<{type.CppWinrtType}>(right);");
+                    w.WriteBlankLine();
+                    w.WriteLine($"auto _result = _left - _right;");
+                    w.WriteLine($"return py::convert(_result);");
+                },
+                w.WriteReturnNotImplementedOnTypeError
+            )
         );
     }
 
     static void WriteNumberMul(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteLine($"static PyObject* _mul_{type.Name}(PyObject* left, PyObject* right) noexcept");
-        w.WriteBlock(
-            () =>
-                w.WriteTryCatch(
-                    () =>
+        w.WriteBlock(() =>
+            w.WriteTryCatch(
+                () =>
+                {
+                    if (
+                        type.Name != "Matrix3x2"
+                        && type.Name != "Matrix4x4"
+                        && type.Name != "Quaternion"
+                    )
                     {
-                        if (
-                            type.Name != "Matrix3x2"
-                            && type.Name != "Matrix4x4"
-                            && type.Name != "Quaternion"
-                        )
+                        w.WriteLine("py::pyobj_handle left_float{PyNumber_Float(left)};");
+                        w.WriteLine("if (left_float)");
+                        w.WriteBlock(() =>
                         {
-                            w.WriteLine("py::pyobj_handle left_float{PyNumber_Float(left)};");
-                            w.WriteLine("if (left_float)");
-                            w.WriteBlock(() =>
-                            {
-                                w.WriteLine(
-                                    "auto _left_float = PyFloat_AsDouble(left_float.get());"
-                                );
-                                w.WriteLine("if (_left_float == -1 && PyErr_Occurred())");
-                                w.WriteBlock(() => w.WriteLine("return nullptr;"));
-                                w.WriteLine(
-                                    $"auto _result = static_cast<float>(_left_float) * py::convert_to<{type.CppWinrtType}>(right);"
-                                );
-                                w.WriteLine($"return py::convert(_result);");
-                            });
-                            w.WriteLine("else");
-                            w.WriteBlock(() => w.WriteLine("PyErr_Clear();"));
-                            w.WriteBlankLine();
-                        }
+                            w.WriteLine("auto _left_float = PyFloat_AsDouble(left_float.get());");
+                            w.WriteLine("if (_left_float == -1 && PyErr_Occurred())");
+                            w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                            w.WriteLine(
+                                $"auto _result = static_cast<float>(_left_float) * py::convert_to<{type.CppWinrtType}>(right);"
+                            );
+                            w.WriteLine($"return py::convert(_result);");
+                        });
+                        w.WriteLine("else");
+                        w.WriteBlock(() => w.WriteLine("PyErr_Clear();"));
+                        w.WriteBlankLine();
+                    }
 
-                        w.WriteLine($"auto _left = py::convert_to<{type.CppWinrtType}>(left);");
+                    w.WriteLine($"auto _left = py::convert_to<{type.CppWinrtType}>(left);");
+                    w.WriteBlankLine();
+                    w.WriteLine("py::pyobj_handle right_float{PyNumber_Float(right)};");
+                    w.WriteLine("if (right_float)");
+                    w.WriteBlock(() =>
+                    {
+                        w.WriteLine("auto _right_float = PyFloat_AsDouble(right_float.get());");
+                        w.WriteLine("if (_right_float == -1 && PyErr_Occurred())");
+                        w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                        w.WriteBlankLine();
+                        w.WriteLine($"auto _result = _left * static_cast<float>(_right_float);");
+                        w.WriteLine($"return py::convert(_result);");
+                    });
+                    w.WriteLine("else");
+                    w.WriteBlock(() => w.WriteLine("PyErr_Clear();"));
+                    w.WriteBlankLine();
+                    w.WriteLine($"auto _right = py::convert_to<{type.CppWinrtType}>(right);");
+                    w.WriteBlankLine();
+                    w.WriteLine($"auto _result = _left * _right;");
+                    w.WriteLine($"return py::convert(_result);");
+                },
+                w.WriteReturnNotImplementedOnTypeError
+            )
+        );
+    }
+
+    static void WriteNumberDiv(this IndentedTextWriter w, ProjectedType type)
+    {
+        w.WriteLine(
+            $"static PyObject* _truediv_{type.Name}(PyObject* left, PyObject* right) noexcept"
+        );
+        w.WriteBlock(() =>
+            w.WriteTryCatch(
+                () =>
+                {
+                    w.WriteLine($"auto _left = py::convert_to<{type.CppWinrtType}>(left);");
+
+                    if (type.Name != "Quaternion")
+                    {
                         w.WriteBlankLine();
                         w.WriteLine("py::pyobj_handle right_float{PyNumber_Float(right)};");
                         w.WriteLine("if (right_float)");
@@ -1282,104 +1309,55 @@ static class NumberWriterExtensions
                             w.WriteBlock(() => w.WriteLine("return nullptr;"));
                             w.WriteBlankLine();
                             w.WriteLine(
-                                $"auto _result = _left * static_cast<float>(_right_float);"
+                                $"auto _result = _left / static_cast<float>(_right_float);"
                             );
                             w.WriteLine($"return py::convert(_result);");
                         });
                         w.WriteLine("else");
                         w.WriteBlock(() => w.WriteLine("PyErr_Clear();"));
-                        w.WriteBlankLine();
-                        w.WriteLine($"auto _right = py::convert_to<{type.CppWinrtType}>(right);");
-                        w.WriteBlankLine();
-                        w.WriteLine($"auto _result = _left * _right;");
-                        w.WriteLine($"return py::convert(_result);");
-                    },
-                    w.WriteReturnNotImplementedOnTypeError
-                )
-        );
-    }
+                    }
 
-    static void WriteNumberDiv(this IndentedTextWriter w, ProjectedType type)
-    {
-        w.WriteLine(
-            $"static PyObject* _truediv_{type.Name}(PyObject* left, PyObject* right) noexcept"
-        );
-        w.WriteBlock(
-            () =>
-                w.WriteTryCatch(
-                    () =>
-                    {
-                        w.WriteLine($"auto _left = py::convert_to<{type.CppWinrtType}>(left);");
-
-                        if (type.Name != "Quaternion")
-                        {
-                            w.WriteBlankLine();
-                            w.WriteLine("py::pyobj_handle right_float{PyNumber_Float(right)};");
-                            w.WriteLine("if (right_float)");
-                            w.WriteBlock(() =>
-                            {
-                                w.WriteLine(
-                                    "auto _right_float = PyFloat_AsDouble(right_float.get());"
-                                );
-                                w.WriteLine("if (_right_float == -1 && PyErr_Occurred())");
-                                w.WriteBlock(() => w.WriteLine("return nullptr;"));
-                                w.WriteBlankLine();
-                                w.WriteLine(
-                                    $"auto _result = _left / static_cast<float>(_right_float);"
-                                );
-                                w.WriteLine($"return py::convert(_result);");
-                            });
-                            w.WriteLine("else");
-                            w.WriteBlock(() => w.WriteLine("PyErr_Clear();"));
-                        }
-
-                        w.WriteLine($"auto _right = py::convert_to<{type.CppWinrtType}>(right);");
-                        w.WriteBlankLine();
-                        w.WriteLine($"auto _result = _left / _right;");
-                        w.WriteLine($"return py::convert(_result);");
-                    },
-                    w.WriteReturnNotImplementedOnTypeError
-                )
+                    w.WriteLine($"auto _right = py::convert_to<{type.CppWinrtType}>(right);");
+                    w.WriteBlankLine();
+                    w.WriteLine($"auto _result = _left / _right;");
+                    w.WriteLine($"return py::convert(_result);");
+                },
+                w.WriteReturnNotImplementedOnTypeError
+            )
         );
     }
 
     static void WriteNumberNeg(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteLine($"static PyObject* _neg_{type.Name}(PyObject* operand) noexcept");
-        w.WriteBlock(
-            () =>
-                w.WriteTryCatch(
-                    () =>
-                    {
-                        w.WriteLine(
-                            $"auto _operand = py::convert_to<{type.CppWinrtType}>(operand);"
-                        );
-                        w.WriteLine($"auto _result = -_operand;");
-                        w.WriteLine($"return py::convert(_result);");
-                    },
-                    w.WriteReturnNotImplementedOnTypeError
-                )
+        w.WriteBlock(() =>
+            w.WriteTryCatch(
+                () =>
+                {
+                    w.WriteLine($"auto _operand = py::convert_to<{type.CppWinrtType}>(operand);");
+                    w.WriteLine($"auto _result = -_operand;");
+                    w.WriteLine($"return py::convert(_result);");
+                },
+                w.WriteReturnNotImplementedOnTypeError
+            )
         );
     }
 
     static void WriteNumberAbs(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteLine($"static PyObject* _abs_{type.Name}(PyObject* operand) noexcept");
-        w.WriteBlock(
-            () =>
-                w.WriteTryCatch(
-                    () =>
-                    {
-                        w.WriteLine(
-                            $"auto _operand = py::convert_to<{type.CppWinrtType}>(operand);"
-                        );
-                        w.WriteLine(
-                            $"auto _result = winrt::Windows::Foundation::Numerics::length(_operand);"
-                        );
-                        w.WriteLine($"return py::convert(_result);");
-                    },
-                    w.WriteReturnNotImplementedOnTypeError
-                )
+        w.WriteBlock(() =>
+            w.WriteTryCatch(
+                () =>
+                {
+                    w.WriteLine($"auto _operand = py::convert_to<{type.CppWinrtType}>(operand);");
+                    w.WriteLine(
+                        $"auto _result = winrt::Windows::Foundation::Numerics::length(_operand);"
+                    );
+                    w.WriteLine($"return py::convert(_result);");
+                },
+                w.WriteReturnNotImplementedOnTypeError
+            )
         );
     }
 
