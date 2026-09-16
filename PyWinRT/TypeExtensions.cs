@@ -348,7 +348,7 @@ static class TypeExtensions
             { FullName: "System.String" } => "\"\"",
             { FullName: "System.Guid" } => "_uuid.UUID(int=0)",
             { FullName: "Windows.Foundation.DateTime" } =>
-                "datetime.datetime(1601, 1, 1, tzinfo=datetime.timezone.utc)",
+                "datetime.datetime(1601, 1, 1, tzinfo=datetime.UTC)",
             { FullName: "Windows.Foundation.TimeSpan" } => "datetime.timedelta(0)",
             GenericInstanceType gen
                 when gen.ElementType.FullName == "Windows.Foundation.IReference`1" => "None",
@@ -378,7 +378,13 @@ static class TypeExtensions
     ) =>
         string.Format(
             (nullabilityInfo.AllowNull || nullabilityInfo.MaybeNull)
-                ? "typing.Optional[{0}]"
+                // PEP 604 unions are only safe where the annotation is not
+                // evaluated. quoteImportedTypes marks the one place that is
+                // evaluated - the delegate type aliases in __init__.py - where
+                // `"module.Type" | None` would raise TypeError at import time.
+                ? quoteImportedTypes
+                    ? "typing.Optional[{0}]"
+                    : "{0} | None"
                 : "{0}",
             type switch
             {
@@ -394,7 +400,7 @@ static class TypeExtensions
                         ),
                 GenericInstanceType gen
                     when gen.ElementType.FullName == "Windows.Foundation.IReference`1" =>
-                    $"typing.Optional[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)}]",
+                    $"{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)} | None",
                 GenericInstanceType gen
                     when useKeyValuePairIterMappingUnion
                         && usePythonCollectionTypes
@@ -402,30 +408,30 @@ static class TypeExtensions
                         && gen.GenericArguments[0] is GenericInstanceType gen2
                         && gen2.ElementType.FullName
                             == "Windows.Foundation.Collections.IKeyValuePair`2" =>
-                    $"typing.Union[typing.Mapping[{string.Join(", ", gen2.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![0].Args![i], packageMap, map, quoteImportedTypes)))}], {type.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion)}]",
+                    $"_cabc.Mapping[{string.Join(", ", gen2.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![0].Args![i], packageMap, map, quoteImportedTypes)))}] | {type.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion)}",
                 GenericInstanceType gen
                     when usePythonCollectionTypes
                         && gen.ElementType.FullName
                             == "Windows.Foundation.Collections.IIterable`1" =>
-                    $"typing.Iterable[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)}]",
+                    $"_cabc.Iterable[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)}]",
                 GenericInstanceType gen
                     when usePythonCollectionTypes
                         && gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1" =>
-                    $"typing.MutableSequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)}]",
+                    $"_cabc.MutableSequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)}]",
                 GenericInstanceType gen
                     when usePythonCollectionTypes
                         && gen.ElementType.FullName
                             == "Windows.Foundation.Collections.IVectorView`1" =>
-                    $"typing.Sequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)}]",
+                    $"_cabc.Sequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)}]",
                 GenericInstanceType gen
                     when usePythonCollectionTypes
                         && gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2" =>
-                    $"typing.MutableMapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map, quoteImportedTypes)))}]",
+                    $"_cabc.MutableMapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map, quoteImportedTypes)))}]",
                 GenericInstanceType gen
                     when usePythonCollectionTypes
                         && gen.ElementType.FullName
                             == "Windows.Foundation.Collections.IMapView`2" =>
-                    $"typing.Mapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map, quoteImportedTypes)))}]",
+                    $"_cabc.Mapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map, quoteImportedTypes)))}]",
                 GenericInstanceType gen =>
                     $"{(gen.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{gen.GetQualifiedNamespace(packageMap).PyModuleAlias}.")}{gen.Name.ToNonGeneric()}[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map)))}]{(gen.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
                 ByReferenceType t => t.ElementType.ToPyTypeName(
@@ -472,7 +478,7 @@ static class TypeExtensions
                 { IsValueType: true } when isUnpack && !type.Resolve().IsEnum =>
                     type.ToPyTupleTyping(ns, packageMap, quoteImportedTypes, isUnpack: true),
                 { IsValueType: true } when useStructTupleUnion && !type.Resolve().IsEnum =>
-                    $"typing.Union[{type.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion: false)}, {type.ToPyTupleTyping(ns, packageMap, quoteImportedTypes)}]",
+                    $"{type.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion: false)} | {type.ToPyTupleTyping(ns, packageMap, quoteImportedTypes)}",
                 _ =>
                     $"{(type.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{type.GetQualifiedNamespace(packageMap).PyModuleAlias}.")}{type.Name.ToNonGeneric()}{(type.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
             }
@@ -485,7 +491,7 @@ static class TypeExtensions
         bool quoteImportedTypes = false,
         bool isUnpack = false
     ) =>
-        $"typing.Tuple[{string.Join(", ", type.Resolve().Fields.Select(f => f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType), packageMap, default, quoteImportedTypes, useStructTupleUnion: !isUnpack, isUnpack: isUnpack)))}]";
+        $"tuple[{string.Join(", ", type.Resolve().Fields.Select(f => f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType), packageMap, default, quoteImportedTypes, useStructTupleUnion: !isUnpack, isUnpack: isUnpack)))}]";
 
     public static string ToPyInParamTyping(
         this ParameterDefinition param,
@@ -507,9 +513,9 @@ static class TypeExtensions
                 useKeyValuePairIterMappingUnion: true
             ),
             ParamCategory.PassArray =>
-                $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes)}], winrt.system.ReadableBuffer]",
+                $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes)}] | winrt.system.ReadableBuffer",
             ParamCategory.FillArray =>
-                $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes)}], winrt.system.WriteableBuffer]",
+                $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes)}] | winrt.system.WriteableBuffer",
             ParamCategory.ReceiveArray => param.ParameterType.ToPyTypeName(
                 ns,
                 nullabilityInfo,
@@ -640,7 +646,7 @@ static class TypeExtensions
         }
         else if (outParams.Count > 1)
         {
-            returnType = $"typing.Tuple[{string.Join(", ", outParams)}]";
+            returnType = $"tuple[{string.Join(", ", outParams)}]";
         }
 
         return returnType;

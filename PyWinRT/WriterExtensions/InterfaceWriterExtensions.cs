@@ -596,7 +596,7 @@ static class InterfaceWriterExtensions
         {
             w.WriteLine("def __enter__(self: Self) -> Self: ...");
             w.WriteLine(
-                "def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ..."
+                "def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ..."
             );
         }
 
@@ -688,7 +688,9 @@ static class InterfaceWriterExtensions
 
             w.WriteLine("@typing.final");
             w.WriteLine(
-                $"def __await__(self) -> typing.Generator[typing.Any, None, {returnType}]: ..."
+                // Generator's send and return types both default to None, so
+                // IAsyncAction only needs the yield type.
+                $"def __await__(self) -> _cabc.Generator[typing.Any{(returnType == "None" ? "" : $", None, {returnType}")}]: ..."
             );
             w.WriteLine("@typing.final");
             w.WriteLine($"def get(self) -> {returnType}: ...");

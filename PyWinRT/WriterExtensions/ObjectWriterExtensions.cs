@@ -256,7 +256,7 @@ static class ObjectWriterExtensions
         {
             w.WriteLine("def __enter__(self: Self) -> Self: ...");
             w.WriteLine(
-                "def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ..."
+                "def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ..."
             );
             didWriteLine = true;
         }
@@ -342,7 +342,7 @@ static class ObjectWriterExtensions
             // so scrape it from the iter type.
             var elementType = iterType[(iterType.IndexOf('[', StringComparison.Ordinal) + 1)..^1];
 
-            w.WriteLine($"def __iter__(self) -> typing.Iterator[{elementType}]: ...");
+            w.WriteLine($"def __iter__(self) -> _cabc.Iterator[{elementType}]: ...");
             didWriteLine = true;
         }
 
@@ -365,7 +365,7 @@ static class ObjectWriterExtensions
                 w.WriteLine("@typing.overload");
             }
 
-            w.WriteLine($"def __new__(cls: typing.Type[Self]{paramList}) -> Self: ...");
+            w.WriteLine($"def __new__(cls: type[Self]{paramList}) -> Self: ...");
             didWriteLine = true;
         }
 

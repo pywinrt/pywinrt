@@ -4,7 +4,6 @@ import json
 import os
 from pathlib import Path
 import shutil
-from typing import List
 
 PYPROJECT_TOML_TEMPLATE = """\
 # WARNING: Please don't edit this file. It was automatically generated.
@@ -347,7 +346,7 @@ def write_project_files(
     package_path: Path,
     module_name: str,
     ext_module_name: str,
-    sources: List[str],
+    sources: list[str],
     second_ext_source_file: str | None = None,
     package_name: str | None = None,
 ) -> None:

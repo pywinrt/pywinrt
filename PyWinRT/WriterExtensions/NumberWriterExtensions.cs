@@ -691,7 +691,7 @@ static class NumberWriterExtensions
                 new("determinant", "float", []),
                 new("translation", "Vector2", []),
                 new("invert", "Matrix4x4", [], NoMinGW: true),
-                new("decompose", "typing.Tuple[Vector3, Quaternion, Vector3]", [], NoMinGW: true),
+                new("decompose", "tuple[Vector3, Quaternion, Vector3]", [], NoMinGW: true),
                 new(
                     "transform",
                     "Matrix4x4",

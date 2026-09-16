@@ -8,7 +8,7 @@ import struct
 import sys
 import uuid
 from ctypes import wintypes
-from typing import Generator
+from collections.abc import Generator
 
 """
 Helper functions for test_xaml_hosting.py

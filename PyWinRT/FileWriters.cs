@@ -172,36 +172,13 @@ static class FileWriters
         int dependencyDepth
     )
     {
-        using var sw = new StringWriter();
-        using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
+        // The stdlib imports depend on what the type hints below turn out
+        // to use, so the rest of the file is written first and the imports
+        // are prepended once we can see it.
+        using var bodySw = new StringWriter();
+        using var w = new IndentedTextWriter(bodySw) { NewLine = "\n" };
         bool didWriteClass = false;
 
-        w.WriteLicense("#");
-        w.WriteBlankLine();
-
-        w.WriteLine("import datetime");
-        w.WriteLine("import sys");
-        w.WriteLine("import types");
-        w.WriteLine("import typing");
-        w.WriteLine("import uuid as _uuid");
-        w.WriteLine("from builtins import property as _property");
-
-        if (members.Interfaces.Count != 0)
-        {
-            w.WriteLine("from abc import abstractmethod");
-        }
-
-        if (
-            members
-                .Classes.Concat(members.Interfaces)
-                .Where(t => t.CircularDependencyDepth == dependencyDepth)
-                .Any(t => t.MethodGroups.Any(g => g.Aliases.Count != 0))
-        )
-        {
-            w.WriteLine("from typing_extensions import deprecated");
-        }
-
-        w.WriteBlankLine();
         w.WriteLine("import winrt._winrt");
         w.WriteLine("import winrt.system");
 
@@ -316,8 +293,98 @@ static class FileWriters
             return;
         }
 
+        var body = bodySw.ToString();
+
+        using var sw = new StringWriter();
+        using var hw = new IndentedTextWriter(sw) { NewLine = "\n" };
+
+        hw.WriteLicense("#");
+        hw.WriteBlankLine();
+
+        var wroteImports = hw.WriteStdlibImports(body);
+
+        if (members.Interfaces.Count != 0)
+        {
+            hw.WriteLine("from abc import abstractmethod");
+            wroteImports = true;
+        }
+
+        if (
+            members
+                .Classes.Concat(members.Interfaces)
+                .Where(t => t.CircularDependencyDepth == dependencyDepth)
+                .Any(t => t.MethodGroups.Any(g => g.Aliases.Count != 0))
+        )
+        {
+            hw.WriteLine("from typing_extensions import deprecated");
+            wroteImports = true;
+        }
+
+        if (wroteImports)
+        {
+            hw.WriteBlankLine();
+        }
+
+        hw.Write(body);
+
         var moduleSuffix = dependencyDepth == 0 ? "" : $"_{dependencyDepth + 1}";
         sw.WriteFileIfChanged(nsWinrtDir, $"{ns.NsModuleName}{moduleSuffix}.pyi");
+    }
+
+    /// <summary>
+    /// Writes the <c>import</c> lines for the standard library modules that
+    /// <paramref name="body"/> actually refers to.
+    /// </summary>
+    /// <returns><c>true</c> if any import was written.</returns>
+    private static bool WriteStdlibImports(this IndentedTextWriter w, string body)
+    {
+        var wroteAny = false;
+
+        // collections.abc is aliased because WinRT has members named
+        // "collections" that would shadow the module inside a class body.
+        if (body.Contains("_cabc."))
+        {
+            wroteAny = true;
+            w.WriteLine("import collections.abc as _cabc");
+        }
+
+        if (body.Contains("datetime."))
+        {
+            wroteAny = true;
+            w.WriteLine("import datetime");
+        }
+
+        if (body.Contains("enum."))
+        {
+            wroteAny = true;
+            w.WriteLine("import enum");
+        }
+
+        if (body.Contains("types."))
+        {
+            wroteAny = true;
+            w.WriteLine("import types");
+        }
+
+        if (body.Contains("typing."))
+        {
+            wroteAny = true;
+            w.WriteLine("import typing");
+        }
+
+        if (body.Contains("_uuid."))
+        {
+            wroteAny = true;
+            w.WriteLine("import uuid as _uuid");
+        }
+
+        if (body.Contains("_property"))
+        {
+            wroteAny = true;
+            w.WriteLine("from builtins import property as _property");
+        }
+
+        return wroteAny;
     }
 
     private static void WriteNamespaceDunderInitPy(
@@ -329,27 +396,11 @@ static class FileWriters
         bool componentDlls
     )
     {
-        using var sw = new StringWriter();
-        using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
-
-        w.WriteLicense("#");
-        w.WriteBlankLine();
-
-        if (members.Enums.Count != 0)
-        {
-            w.WriteLine("import enum");
-        }
-
-        if (members.Delegates.Count != 0)
-        {
-            w.WriteLine("import typing");
-            w.WriteLine("import uuid as _uuid");
-        }
-
-        if (members.Enums.Count != 0 || members.Delegates.Count != 0)
-        {
-            w.WriteBlankLine();
-        }
+        // The stdlib imports depend on what the enums and delegate type
+        // aliases below turn out to use, so the rest of the file is written
+        // first and the imports are prepended once we can see it.
+        using var bodySw = new StringWriter();
+        using var w = new IndentedTextWriter(bodySw) { NewLine = "\n" };
 
         var allExtensionTypes = members
             .Structs.Where(s => !s.Type.IsCustomizedStruct)
@@ -579,6 +630,21 @@ static class FileWriters
                 $"{type.Name} = typing.Callable[[{string.Join(", ", paramTypes)}], {invoke.ToPyReturnTyping(ns.Namespace, nullabilityInfo, packageMap, quoteImportedTypes: true)}]"
             );
         }
+
+        var body = bodySw.ToString();
+
+        using var sw = new StringWriter();
+        using var hw = new IndentedTextWriter(sw) { NewLine = "\n" };
+
+        hw.WriteLicense("#");
+        hw.WriteBlankLine();
+
+        if (hw.WriteStdlibImports(body))
+        {
+            hw.WriteBlankLine();
+        }
+
+        hw.Write(body);
 
         sw.WriteFileIfChanged(nsDir, "__init__.py");
     }

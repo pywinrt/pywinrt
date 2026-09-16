@@ -1,8 +1,7 @@
 from importlib.resources import files
-from typing import List
 
 
-def get_include_dirs() -> List[str]:
+def get_include_dirs() -> list[str]:
     """
     Gets the include directories for the WindowsAppSDK.
 

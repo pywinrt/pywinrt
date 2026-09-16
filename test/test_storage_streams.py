@@ -1,7 +1,7 @@
 import struct
 import unittest
 import uuid
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, UTC
 
 import winrt.windows.storage.streams as wss
 
@@ -95,7 +95,7 @@ class TestWindowsStorageStreams(unittest.TestCase):
                 self.assertEqual(read_bytes, bytes_value)
                 self.assertEqual(
                     reader.read_date_time(),
-                    datetime(1601, 1, 2, 3, 4, 5, 6007, timezone.utc),
+                    datetime(1601, 1, 2, 3, 4, 5, 6007, UTC),
                 )
                 self.assertEqual(reader.read_double(), double_value)
                 self.assertEqual(reader.read_guid(), guid_value)
@@ -117,7 +117,7 @@ class TestWindowsStorageStreams(unittest.TestCase):
         buffer_value = b"\x02\x04\x05"
         byte_value = 6
         bytes_value = b"\x07\x08\x09"
-        date_time_value = datetime(1601, 1, 2, 3, 4, 5, 6007, timezone.utc)
+        date_time_value = datetime(1601, 1, 2, 3, 4, 5, 6007, UTC)
         double_value = 10.0
         guid_value = uuid.UUID("00112233-4455-6677-8899-AABBCCDDEEFF")
         int16_value = 11

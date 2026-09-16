@@ -10,10 +10,8 @@ from collections.abc import (
 )
 from pathlib import Path
 import sys
-from typing import Any, Type, TypeVar, Protocol, TYPE_CHECKING
+from typing import Any, Self, TypeVar, Protocol, TYPE_CHECKING
 import warnings
-
-from typing_extensions import Self
 
 # NB: have to import Object from here instead of winrt.system to avoid circular import issues.
 from winrt._winrt import add_dll_directory, remove_dll_directory, Object
@@ -58,7 +56,7 @@ def register_dll_search_path(module_path: str) -> _DllCookie:
 # NB: The calls to the functions below are generated. See the note on the
 # aliases in PyWinRT/Projection/ProjectedType.cs for everything that has to be
 # removed when the aliases go away.
-_LEGACY_METHOD_WARNING: Type[Warning] = DeprecationWarning
+_LEGACY_METHOD_WARNING: type[Warning] = DeprecationWarning
 
 
 def _add_alias(target: type, owner: type, alias: str, name: str) -> None:

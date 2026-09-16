@@ -266,7 +266,7 @@ static class MapWriterExtensions
         );
 
         w.WriteLine("def __len__(self) -> int: ...");
-        w.WriteLine($"def __iter__(self) -> typing.Iterator[{keyParamType}]: ...");
+        w.WriteLine($"def __iter__(self) -> _cabc.Iterator[{keyParamType}]: ...");
         w.WriteLine("def __contains__(self, key: object) -> bool: ...");
         w.WriteLine($"def __getitem__(self, key: {keyParamType}) -> {valueReturnType}: ...");
         return keyParamType;

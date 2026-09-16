@@ -86,7 +86,7 @@ class TestSystemBox(unittest.TestCase):
         self.assertEqual(unbox_guid(box_guid(value)), value)
 
     def test_box_unbox_date_time(self):
-        value = datetime.datetime(2024, 1, 1, tzinfo=datetime.timezone.utc)
+        value = datetime.datetime(2024, 1, 1, tzinfo=datetime.UTC)
         self.assertEqual(unbox_date_time(box_date_time(value)), value)
 
     def test_box_unbox_time_span(self):

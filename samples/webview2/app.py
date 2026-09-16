@@ -17,7 +17,6 @@
 import atexit
 import tempfile
 from ctypes import WinError
-from typing import Tuple, Union
 
 from typing_extensions import override
 from webview2.microsoft.web.webview2.core import CoreWebView2Environment
@@ -138,7 +137,7 @@ class App(Application, IXamlMetadataProvider):
         env_op.completed = on_env
 
     @override
-    def get_xaml_type(self, type: Union[TypeName, Tuple[str, TypeKind]]) -> IXamlType:
+    def get_xaml_type(self, type: TypeName | tuple[str, TypeKind]) -> IXamlType:
         return self._provider.get_xaml_type(type)
 
     @override

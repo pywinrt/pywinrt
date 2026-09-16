@@ -2,7 +2,6 @@
 
 import enum
 import typing
-import uuid as _uuid
 
 import winrt.runtime._internals
 import winrt.system
