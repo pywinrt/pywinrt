@@ -9,6 +9,9 @@ import winrt.windows.ui.composition as windows_ui_composition
 
 from winrt.windows.ui.composition.diagnostics import CompositionDebugOverdrawContentKinds
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -13,6 +13,9 @@ import winrt.windows.storage as windows_storage
 
 from winrt.windows.media.apprecording import AppRecordingSaveScreenshotOption
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

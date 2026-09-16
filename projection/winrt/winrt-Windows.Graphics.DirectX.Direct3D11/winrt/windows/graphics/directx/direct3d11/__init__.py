@@ -4,6 +4,8 @@ import enum
 
 import winrt.system
 from winrt._winrt_windows_graphics_directx_direct3d11 import (
+    _abi_version_,
+    _generator_version_,
     Direct3DMultisampleDescription,
     Direct3DSurfaceDescription,
     _IDirect3DDevice,

@@ -15,6 +15,9 @@ import winrt.windows.services.maps as windows_services_maps
 
 from winrt.windows.services.maps.localsearch import LocalLocationFinderStatus
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

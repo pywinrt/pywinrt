@@ -3,6 +3,8 @@
 import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_preview_notes import (
+    _abi_version_,
+    _generator_version_,
     NotePlacementChangedPreviewEventArgs,
     NoteVisibilityChangedPreviewEventArgs,
     NotesWindowManagerPreview,

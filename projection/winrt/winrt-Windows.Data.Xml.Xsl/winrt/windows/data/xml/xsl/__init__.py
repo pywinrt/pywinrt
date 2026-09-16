@@ -2,6 +2,8 @@
 
 import winrt.system
 from winrt._winrt_windows_data_xml_xsl import (
+    _abi_version_,
+    _generator_version_,
     XsltProcessor,
 )
 

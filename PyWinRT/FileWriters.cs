@@ -253,6 +253,11 @@ static class FileWriters
             w.WriteBlankLine();
         }
 
+        // Written by the module init function, not by anything below.
+        w.WriteLine("_abi_version_: tuple[int, int]");
+        w.WriteLine("_generator_version_: str");
+        w.WriteBlankLine();
+
         w.WriteLine("Self = typing.TypeVar('Self')");
 
         foreach (
@@ -426,10 +431,22 @@ static class FileWriters
             );
             var suffix = depth == 0 ? "" : $"_{depth + 1}";
 
-            if (dependencyModuleTypes.Any())
+            // The versions the extension module was built with are re-exported
+            // here so that the runtime and winrt.doctor can read them off the
+            // package without knowing the extension module's name. The depth 0
+            // module is always built, even for a namespace that projects
+            // nothing but enums, so this is the one that carries them.
+            string[] versionNames = depth == 0 ? ["_abi_version_", "_generator_version_"] : [];
+
+            if (versionNames.Length != 0 || dependencyModuleTypes.Any())
             {
                 w.WriteLine($"from {ns.PyPackageModule}.{ns.NsModuleName}{suffix} import (");
                 w.Indent++;
+
+                foreach (var name in versionNames)
+                {
+                    w.WriteLine($"{name},");
+                }
 
                 foreach (var type in dependencyModuleTypes)
                 {

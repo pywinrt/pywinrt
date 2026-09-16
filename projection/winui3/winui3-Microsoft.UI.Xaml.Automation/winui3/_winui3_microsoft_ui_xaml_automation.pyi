@@ -12,6 +12,9 @@ import winui3.microsoft.ui.xaml.automation.peers as microsoft_ui_xaml_automation
 
 from winui3.microsoft.ui.xaml.automation import AnnotationType, AutomationActiveEnd, AutomationAnimationStyle, AutomationBulletStyle, AutomationCaretBidiMode, AutomationCaretPosition, AutomationFlowDirections, AutomationOutlineStyles, AutomationStyleId, AutomationTextDecorationLineStyle, AutomationTextEditChangeType, DockPosition, ExpandCollapseState, RowOrColumnMajor, ScrollAmount, SupportedTextSelection, SynchronizedInputType, ToggleState, WindowInteractionState, WindowVisualState, ZoomUnit
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

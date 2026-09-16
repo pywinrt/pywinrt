@@ -2,6 +2,8 @@
 
 import winrt.system
 from winrt._winrt_windows_devices_power import (
+    _abi_version_,
+    _generator_version_,
     Battery,
     BatteryReport,
     PowerGridData,

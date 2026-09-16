@@ -7,5 +7,8 @@ import winrt.system
 
 from winui3.microsoft.graphics.directx import DirectXAlphaMode, DirectXColorSpace, DirectXPixelFormat, DirectXPrimitiveTopology
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 

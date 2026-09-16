@@ -17,6 +17,9 @@ import winrt.windows.system as windows_system
 
 from winrt.windows.applicationmodel.email import EmailAttachmentDownloadState, EmailBatchStatus, EmailCertificateValidationStatus, EmailFlagState, EmailImportance, EmailMailboxActionKind, EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation, EmailMailboxAutoReplyMessageResponseKind, EmailMailboxChangeType, EmailMailboxCreateFolderStatus, EmailMailboxDeleteFolderStatus, EmailMailboxEmptyFolderStatus, EmailMailboxOtherAppReadAccess, EmailMailboxOtherAppWriteAccess, EmailMailboxSmimeEncryptionAlgorithm, EmailMailboxSmimeSigningAlgorithm, EmailMailboxSyncStatus, EmailMeetingResponseType, EmailMessageBodyKind, EmailMessageDownloadState, EmailMessageResponseKind, EmailMessageSmimeKind, EmailQueryKind, EmailQuerySearchFields, EmailQuerySearchScope, EmailQuerySortDirection, EmailQuerySortProperty, EmailRecipientResolutionStatus, EmailSpecialFolderKind, EmailStoreAccessType
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

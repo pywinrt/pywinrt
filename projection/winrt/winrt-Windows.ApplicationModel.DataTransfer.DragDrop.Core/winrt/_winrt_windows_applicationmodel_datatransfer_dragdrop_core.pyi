@@ -14,6 +14,9 @@ import winrt.windows.graphics.imaging as windows_graphics_imaging
 
 from winrt.windows.applicationmodel.datatransfer.dragdrop.core import CoreDragUIContentMode
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

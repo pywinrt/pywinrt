@@ -12,6 +12,9 @@ import winrt.windows.storage.streams as windows_storage_streams
 
 from winui3.microsoft.graphics.imaging import ImageBufferPixelFormat
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

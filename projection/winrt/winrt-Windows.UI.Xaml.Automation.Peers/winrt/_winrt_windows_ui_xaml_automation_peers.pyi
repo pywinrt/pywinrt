@@ -16,6 +16,9 @@ import winrt.windows.ui.xaml.controls.primitives as windows_ui_xaml_controls_pri
 
 from winrt.windows.ui.xaml.automation.peers import AccessibilityView, AutomationControlType, AutomationEvents, AutomationHeadingLevel, AutomationLandmarkType, AutomationLiveSetting, AutomationNavigationDirection, AutomationNotificationKind, AutomationNotificationProcessing, AutomationOrientation, AutomationStructureChangeType, PatternInterface
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -2,6 +2,8 @@
 
 import winrt.system
 from winui2._winui2_microsoft_ui_xaml_automation_peers import (
+    _abi_version_,
+    _generator_version_,
     AnimatedVisualPlayerAutomationPeer,
     BreadcrumbBarItemAutomationPeer,
     ColorPickerSliderAutomationPeer,

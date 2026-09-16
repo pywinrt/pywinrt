@@ -4,6 +4,8 @@ import enum
 
 import winrt.system
 from winrt._winrt_windows_graphics_capture import (
+    _abi_version_,
+    _generator_version_,
     Direct3D11CaptureFrame,
     Direct3D11CaptureFramePool,
     GraphicsCaptureAccess,

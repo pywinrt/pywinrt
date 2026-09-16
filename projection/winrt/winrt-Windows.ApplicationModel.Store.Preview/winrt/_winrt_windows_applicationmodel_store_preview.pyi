@@ -18,6 +18,9 @@ import winrt.windows.ui.xaml as windows_ui_xaml
 
 from winrt.windows.applicationmodel.store.preview import DeliveryOptimizationDownloadMode, DeliveryOptimizationDownloadModeSource, StoreLogOptions, StorePreviewProductPurchaseStatus, StoreSystemFeature
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

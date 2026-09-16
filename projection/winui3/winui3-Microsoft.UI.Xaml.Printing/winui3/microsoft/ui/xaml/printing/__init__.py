@@ -5,6 +5,8 @@ import typing
 
 import winrt.system
 from winui3._winui3_microsoft_ui_xaml_printing import (
+    _abi_version_,
+    _generator_version_,
     AddPagesEventArgs,
     GetPreviewPageEventArgs,
     PaginateEventArgs,

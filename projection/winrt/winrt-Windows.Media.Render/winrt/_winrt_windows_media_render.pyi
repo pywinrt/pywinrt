@@ -7,5 +7,8 @@ import winrt.system
 
 from winrt.windows.media.render import AudioRenderCategory
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 

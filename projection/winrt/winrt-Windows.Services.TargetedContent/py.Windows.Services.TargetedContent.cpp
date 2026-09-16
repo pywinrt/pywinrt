@@ -2391,6 +2391,23 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_targetedcontent(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle abi_version{Py_BuildValue("(HH)", py::runtime_abi_version_major, py::runtime_abi_version_minor)};
+
+    if (!abi_version)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "_abi_version_", abi_version.get()) == -1)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddStringConstant(module.get(), "_generator_version_", "0.0.0") == -1)
+    {
+        return nullptr;
+    }
+
     auto inspectable_meta_type = py::get_inspectable_meta_type();
     if (!inspectable_meta_type)
     {

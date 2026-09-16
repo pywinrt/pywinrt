@@ -14,6 +14,9 @@ import winrt.windows.ui.text.core as windows_ui_text_core
 from winrt.windows.data.text import AlternateNormalizationFormat, TextPredictionOptions, UnicodeGeneralCategory, UnicodeNumericType
 from winrt.windows.data.text import SelectableWordSegmentsTokenizingHandler, WordSegmentsTokenizingHandler
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

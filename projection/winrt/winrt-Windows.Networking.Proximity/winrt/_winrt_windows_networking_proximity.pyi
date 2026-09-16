@@ -16,6 +16,9 @@ import winrt.windows.storage.streams as windows_storage_streams
 from winrt.windows.networking.proximity import PeerDiscoveryTypes, PeerRole, PeerWatcherStatus, TriggeredConnectState
 from winrt.windows.networking.proximity import DeviceArrivedEventHandler, DeviceDepartedEventHandler, MessageReceivedHandler, MessageTransmittedHandler
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

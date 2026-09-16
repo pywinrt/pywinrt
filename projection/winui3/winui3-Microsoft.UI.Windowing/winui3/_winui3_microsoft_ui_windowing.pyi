@@ -16,6 +16,9 @@ import winui3.microsoft.ui.dispatching as microsoft_ui_dispatching
 
 from winui3.microsoft.ui.windowing import AppWindowPresenterKind, CompactOverlaySize, DisplayAreaFallback, DisplayAreaWatcherStatus, IconShowOptions, OverlappedPresenterState, TitleBarHeightOption, TitleBarTheme
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -17,6 +17,9 @@ import winrt.windows.system as windows_system
 
 from winrt.windows.ui.notifications import AdaptiveNotificationContentKind, BadgeTemplateType, NotificationKinds, NotificationMirroring, NotificationSetting, NotificationUpdateResult, PeriodicUpdateRecurrence, TileFlyoutTemplateType, TileTemplateType, ToastDismissalReason, ToastHistoryChangedType, ToastNotificationMode, ToastNotificationPriority, ToastTemplateType, UserNotificationChangedKind
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -17,6 +17,9 @@ import winrt.windows.storage as windows_storage
 
 from winrt.windows.media.protection.playready import NDCertificateFeature, NDCertificatePlatformID, NDCertificateType, NDClosedCaptionFormat, NDContentIDType, NDMediaStreamType, NDProximityDetectionType, NDStartAsyncOptions, PlayReadyDecryptorSetup, PlayReadyEncryptionAlgorithm, PlayReadyHardwareDRMFeatures, PlayReadyITADataFormat
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

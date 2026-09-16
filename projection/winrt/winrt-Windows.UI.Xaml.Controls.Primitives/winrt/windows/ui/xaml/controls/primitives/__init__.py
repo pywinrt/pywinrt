@@ -5,6 +5,8 @@ import typing
 
 import winrt.system
 from winrt._winrt_windows_ui_xaml_controls_primitives import (
+    _abi_version_,
+    _generator_version_,
     GeneratorPosition,
     AppBarButtonTemplateSettings,
     AppBarTemplateSettings,

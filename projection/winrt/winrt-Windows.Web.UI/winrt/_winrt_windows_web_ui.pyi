@@ -18,6 +18,9 @@ import winrt.windows.web.http as windows_web_http
 
 from winrt.windows.web.ui import WebViewControlPermissionState, WebViewControlPermissionType
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

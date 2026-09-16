@@ -16,6 +16,9 @@ import winrt.windows.storage.streams as windows_storage_streams
 from winrt.windows.graphics.printing import PrintBinding, PrintBordering, PrintCollation, PrintColorMode, PrintDuplex, PrintHolePunch, PrintMediaSize, PrintMediaType, PrintOrientation, PrintQuality, PrintStaple, PrintTaskCompletion
 from winrt.windows.graphics.printing import PrintTaskSourceRequestedHandler
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

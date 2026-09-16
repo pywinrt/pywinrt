@@ -15,6 +15,9 @@ import winui3.microsoft.windows.applicationmodel.dynamicdependency as microsoft_
 
 from winui3.microsoft.windows.management.deployment import PackageDeploymentFeature, PackageDeploymentProgressStatus, PackageDeploymentStatus, PackageReadyOrNewerAvailableStatus, StubPackageOption
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

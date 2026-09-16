@@ -16,6 +16,9 @@ import winrt.windows.ui.popups as windows_ui_popups
 
 from winrt.windows.media.casting import CastingConnectionErrorStatus, CastingConnectionState, CastingPlaybackTypes
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

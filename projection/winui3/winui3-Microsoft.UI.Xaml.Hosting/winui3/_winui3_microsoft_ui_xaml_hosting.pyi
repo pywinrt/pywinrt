@@ -17,6 +17,9 @@ import winui3.microsoft.ui.xaml.media as microsoft_ui_xaml_media
 
 from winui3.microsoft.ui.xaml.hosting import XamlSourceFocusNavigationReason
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 class DesktopWindowXamlSource_Static(winrt._winrt.IInspectable_Static):

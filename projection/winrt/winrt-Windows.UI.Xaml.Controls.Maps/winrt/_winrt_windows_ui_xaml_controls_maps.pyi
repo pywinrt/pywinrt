@@ -21,6 +21,9 @@ import winrt.windows.ui.xaml.controls as windows_ui_xaml_controls
 
 from winrt.windows.ui.xaml.controls.maps import MapAnimationKind, MapCameraChangeReason, MapColorScheme, MapElementCollisionBehavior, MapInteractionMode, MapLoadingStatus, MapModel3DShadingOption, MapPanInteractionMode, MapProjection, MapStyle, MapTileAnimationState, MapTileLayer, MapVisibleRegionKind, MapWatermarkMode
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

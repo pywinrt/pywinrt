@@ -5,6 +5,8 @@ import enum
 import winrt.runtime._internals
 import winrt.system
 from winui2._winui2_microsoft_ui_xaml_controls import (
+    _abi_version_,
+    _generator_version_,
     AnimatedIcon,
     AnimatedIconSource,
     AnimatedVisualPlayer,

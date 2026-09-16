@@ -11,6 +11,9 @@ import winrt.windows.system.threading as windows_system_threading
 
 from winrt.windows.system.threading.core import SignalHandler
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

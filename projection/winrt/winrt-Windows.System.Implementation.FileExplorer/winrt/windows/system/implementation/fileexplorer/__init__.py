@@ -2,6 +2,8 @@
 
 import winrt.system
 from winrt._winrt_windows_system_implementation_fileexplorer import (
+    _abi_version_,
+    _generator_version_,
     SysStorageProviderEventReceivedEventArgs,
     _ISysStorageProviderEventSource,
     ISysStorageProviderEventSource,

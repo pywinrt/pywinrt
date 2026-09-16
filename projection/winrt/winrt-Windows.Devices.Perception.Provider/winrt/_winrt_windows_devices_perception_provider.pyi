@@ -18,6 +18,9 @@ import winrt.windows.media as windows_media
 
 from winrt.windows.devices.perception.provider import PerceptionStartFaceAuthenticationHandler, PerceptionStopFaceAuthenticationHandler
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

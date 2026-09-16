@@ -3,6 +3,8 @@
 import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_perception_spatial_surfaces import (
+    _abi_version_,
+    _generator_version_,
     SpatialSurfaceInfo,
     SpatialSurfaceMesh,
     SpatialSurfaceMeshBuffer,

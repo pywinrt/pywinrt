@@ -4,6 +4,8 @@ import enum
 
 import winrt.system
 from winui3._winui3_microsoft_graphics_imaging import (
+    _abi_version_,
+    _generator_version_,
     ImageBuffer,
 )
 

@@ -3,6 +3,8 @@
 import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_faceanalysis import (
+    _abi_version_,
+    _generator_version_,
     DetectedFace,
     FaceDetector,
     FaceTracker,

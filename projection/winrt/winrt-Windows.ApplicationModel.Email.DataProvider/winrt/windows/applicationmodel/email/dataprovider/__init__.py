@@ -2,6 +2,8 @@
 
 import winrt.system
 from winrt._winrt_windows_applicationmodel_email_dataprovider import (
+    _abi_version_,
+    _generator_version_,
     EmailDataProviderConnection,
     EmailDataProviderTriggerDetails,
     EmailMailboxCreateFolderRequest,

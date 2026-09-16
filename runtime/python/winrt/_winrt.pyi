@@ -15,6 +15,8 @@ from uuid import UUID
 
 from winrt.runtime import ApartmentType
 
+abi_version: tuple[int, int]
+
 MTA: int
 STA: int
 

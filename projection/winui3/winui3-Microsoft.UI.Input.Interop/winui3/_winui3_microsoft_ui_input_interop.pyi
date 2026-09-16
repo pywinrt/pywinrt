@@ -7,6 +7,9 @@ import winrt.system
 import winrt.windows.devices.input as windows_devices_input
 import winui3.microsoft.ui.input as microsoft_ui_input
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

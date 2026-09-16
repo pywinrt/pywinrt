@@ -15,9 +15,8 @@
 //     runtime_abi_version_major, which every module built against an older
 //     header refuses to load against.
 //   - The types that cross the boundary are part of the contract too, even the
-//     ones declared elsewhere: py::Array and its vtable (<pywinrt/wrappers.h>),
-//     py::member_not_available below, and the C++/WinRT and Python types in the
-//     signatures.
+//     ones declared elsewhere. They are listed and, where the compiler can
+//     check it, asserted in "the declared layouts" below.
 //   - Nothing else in pywinrt/ is part of it. The rest is inline in the calling
 //     module, which carries its own copy, so it may change freely.
 
@@ -57,6 +56,109 @@ namespace py
         /// Metadata name of the interface that was queried for.
         const char* interface_name;
     };
+
+    // ----- the declared layouts ------------------------------------------
+    //
+    // The runtime_api struct below is only half of the contract. A projection
+    // module lays out the objects it allocates with its own copy of these
+    // headers, and both the runtime and the other projection modules read them
+    // back, so the size and the field offsets are part of the major version
+    // just as much as the entry points are. Everything that crosses is listed
+    // here, and everything that can be checked at compile time is asserted, so
+    // that a change to one of them is a build error rather than a mismatch that
+    // shows up as a wrong answer at run time.
+    //
+    // What crosses:
+    //
+    //  - py::winrt_wrapper<T>, the layout of every wrapped class and interface
+    //    instance. The runtime reads the obj field through _winrt.Object's
+    //    slots (tp_dealloc, tp_hash, tp_richcompare, iids,
+    //    runtime_class_name), and every module's wrapper types derive from
+    //    _winrt.Object, which is why its tp_basicsize - py::object_basicsize
+    //    below - is fixed. Modules also read each other's: converting any
+    //    _winrt.Object to a C++/WinRT interface is a cast to
+    //    winrt_wrapper<IUnknown>* whatever module allocated it.
+    //  - py::winrt_struct_wrapper<T> and py::winrt_pinterface_wrapper<T>, for
+    //    the same reason. A struct or a parameterized interface is owned by one
+    //    module and unwrapped by all the others.
+    //  - py::member_not_available, passed by reference to
+    //    set_member_not_available_error(). The names in it point at string
+    //    literals in the calling module, which outlive the call.
+    //  - The vtables: py::Array (Alloc, WinrtElementTypeName, Format, Size,
+    //    ValueSize, Data, At, Set, then the destructor), which the module
+    //    implements and the runtime calls; py::IPywinrtObject (IUnknown's
+    //    three, then GetPyObject, GetComposableInner), which the module
+    //    implements and both the runtime and the other modules query for; and
+    //    the composable tearoffs in <pywinrt/compose.h>, which are ordinary
+    //    WinRT interfaces and so are fixed by the metadata rather than by us.
+    //    A vtable's slot order cannot be asserted, only kept.
+    //  - The C++/WinRT types in the signatures below. They are passed by value,
+    //    so their size is contract; the asserts pin the ones that are not
+    //    obviously so.
+    //
+    // What does not cross, although it looks like it might: py::delegate_callable
+    // is held inside a module's own delegate implementations and never handed to
+    // anyone, and py::py_obj_ref's interface map is private to the module that
+    // built the composable object.
+
+    /**
+     * @c tp_basicsize of @c _winrt.Object, which every projection module's
+     * wrapper types inherit.
+     */
+    inline constexpr size_t object_basicsize
+        = sizeof(winrt_wrapper<winrt::Windows::Foundation::IUnknown>);
+
+    static_assert(
+        std::is_standard_layout_v<winrt_wrapper<winrt::Windows::Foundation::IUnknown>>);
+    static_assert(object_basicsize == sizeof(PyObject) + sizeof(void*));
+    static_assert(
+        offsetof(winrt_wrapper<winrt::Windows::Foundation::IUnknown>, obj)
+        == sizeof(PyObject));
+
+    static_assert(std::is_standard_layout_v<
+                  winrt_struct_wrapper<winrt::Windows::Foundation::DateTime>>);
+    static_assert(
+        offsetof(winrt_struct_wrapper<winrt::Windows::Foundation::DateTime>, obj)
+        == sizeof(PyObject));
+
+    namespace impl
+    {
+        /**
+         * Stands in for the generated member implementation of a parameterized
+         * interface in the layout assert below. Only the size of the
+         * @c unique_ptr that holds it is contract, and that is the same for
+         * every one of them.
+         */
+        struct pinterface_impl_probe
+        {
+        };
+    } // namespace impl
+
+    static_assert(
+        sizeof(winrt_pinterface_wrapper<impl::pinterface_impl_probe>)
+        == object_basicsize + sizeof(void*));
+
+    static_assert(std::is_standard_layout_v<member_not_available>);
+    static_assert(sizeof(member_kind) == sizeof(uint32_t));
+    static_assert(offsetof(member_not_available, kind) == 0);
+    static_assert(offsetof(member_not_available, arg_count) == sizeof(uint32_t));
+    static_assert(offsetof(member_not_available, type_name) == 2 * sizeof(uint32_t));
+    static_assert(
+        offsetof(member_not_available, member_name)
+        == 2 * sizeof(uint32_t) + sizeof(const char*));
+    static_assert(
+        offsetof(member_not_available, interface_name)
+        == 2 * sizeof(uint32_t) + 2 * sizeof(const char*));
+    static_assert(
+        sizeof(member_not_available) == 2 * sizeof(uint32_t) + 3 * sizeof(const char*));
+
+    static_assert(sizeof(winrt::guid) == 16);
+    static_assert(std::is_trivially_copyable_v<winrt::guid>);
+    static_assert(sizeof(winrt::hstring) == sizeof(void*));
+    static_assert(sizeof(winrt::Windows::Foundation::IUnknown) == sizeof(void*));
+    static_assert(sizeof(winrt::Windows::Foundation::IInspectable) == sizeof(void*));
+    static_assert(sizeof(winrt::Windows::Foundation::DateTime) == 8);
+    static_assert(sizeof(winrt::Windows::Foundation::TimeSpan) == 8);
 
     /** Unique identifier for validating runtime API struct pointer. */
     const winrt::guid runtime_api_guid{"B6C6659B-8458-4D05-AC29-A3886597E7D2"};

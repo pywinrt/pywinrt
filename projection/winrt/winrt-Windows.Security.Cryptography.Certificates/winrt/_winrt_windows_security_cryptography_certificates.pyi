@@ -15,6 +15,9 @@ import winrt.windows.storage.streams as windows_storage_streams
 
 from winrt.windows.security.cryptography.certificates import CertificateChainPolicy, ChainValidationResult, EnrollKeyUsages, ExportOption, InstallOptions, KeyProtectionLevel, KeySize, SignatureValidationResult
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -14,6 +14,9 @@ import winrt.windows.ui as windows_ui
 
 from winrt.windows.ui.viewmanagement.core import CoreInputViewKind, CoreInputViewOcclusionKind, CoreInputViewXYFocusTransferDirection
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -6,6 +6,8 @@ import typing
 import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_core import (
+    _abi_version_,
+    _generator_version_,
     CorePhysicalKeyStatus,
     CoreProximityEvaluation,
     AcceleratorKeyEventArgs,

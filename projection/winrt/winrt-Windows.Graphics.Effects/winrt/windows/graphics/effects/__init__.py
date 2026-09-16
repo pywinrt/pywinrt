@@ -2,6 +2,8 @@
 
 import winrt.system
 from winrt._winrt_windows_graphics_effects import (
+    _abi_version_,
+    _generator_version_,
     _IGraphicsEffect,
     IGraphicsEffect,
     _IGraphicsEffectSource,

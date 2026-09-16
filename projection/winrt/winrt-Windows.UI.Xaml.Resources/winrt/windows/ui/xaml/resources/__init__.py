@@ -2,6 +2,8 @@
 
 import winrt.system
 from winrt._winrt_windows_ui_xaml_resources import (
+    _abi_version_,
+    _generator_version_,
     CustomXamlResourceLoader,
 )
 from typing import TYPE_CHECKING

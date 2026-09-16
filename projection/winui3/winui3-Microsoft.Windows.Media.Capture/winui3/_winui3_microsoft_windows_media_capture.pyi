@@ -11,6 +11,9 @@ import winui3.microsoft.ui as microsoft_ui
 
 from winui3.microsoft.windows.media.capture import CameraCaptureUIMaxPhotoResolution, CameraCaptureUIMaxVideoResolution, CameraCaptureUIMode, CameraCaptureUIPhotoFormat, CameraCaptureUIVideoFormat
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

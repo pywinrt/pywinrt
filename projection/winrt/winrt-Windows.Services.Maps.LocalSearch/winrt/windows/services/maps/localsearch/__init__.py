@@ -4,6 +4,8 @@ import enum
 
 import winrt.system
 from winrt._winrt_windows_services_maps_localsearch import (
+    _abi_version_,
+    _generator_version_,
     LocalCategories,
     LocalLocation,
     LocalLocationFinder,

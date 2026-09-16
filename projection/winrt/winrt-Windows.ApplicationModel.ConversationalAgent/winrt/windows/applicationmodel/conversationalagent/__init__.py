@@ -4,6 +4,8 @@ import enum
 
 import winrt.system
 from winrt._winrt_windows_applicationmodel_conversationalagent import (
+    _abi_version_,
+    _generator_version_,
     ActivationSignalDetectionConfiguration,
     ActivationSignalDetectionConfigurationCreationResult,
     ActivationSignalDetector,

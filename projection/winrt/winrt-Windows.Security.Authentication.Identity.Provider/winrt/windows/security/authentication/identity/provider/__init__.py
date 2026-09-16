@@ -5,6 +5,8 @@ import enum
 import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_security_authentication_identity_provider import (
+    _abi_version_,
+    _generator_version_,
     SecondaryAuthenticationFactorAuthentication,
     SecondaryAuthenticationFactorAuthenticationResult,
     SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs,

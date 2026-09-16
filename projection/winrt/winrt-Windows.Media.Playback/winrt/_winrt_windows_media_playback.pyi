@@ -27,6 +27,9 @@ import winrt.windows.ui.composition as windows_ui_composition
 
 from winrt.windows.media.playback import AutoLoadedDisplayPropertyKind, FailedMediaStreamKind, MediaBreakInsertionMethod, MediaCommandEnablingRule, MediaPlaybackItemChangedReason, MediaPlaybackItemErrorCode, MediaPlaybackSessionVideoConstrictionReason, MediaPlaybackState, MediaPlayerAudioCategory, MediaPlayerAudioDeviceType, MediaPlayerError, MediaPlayerState, SphericalVideoProjectionMode, StereoscopicVideoRenderMode, TimedMetadataTrackPresentationMode
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

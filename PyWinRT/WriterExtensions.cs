@@ -1386,6 +1386,32 @@ static class WriterExtensions
             w.WriteBlock(() => w.WriteLine("return nullptr;"));
             w.WriteBlankLine();
 
+            // The versions this module was built with, as data. The ABI pair is
+            // the same one import_winrt_runtime() just checked, so a module that
+            // loaded always reports a pair the runtime accepts; the runtime reads
+            // it back when it resolves a type by name, and winrt.doctor reports
+            // both when something does not line up.
+            w.WriteLine(
+                "py::pyobj_handle abi_version{Py_BuildValue(\"(HH)\", py::runtime_abi_version_major, py::runtime_abi_version_minor)};"
+            );
+            w.WriteBlankLine();
+
+            w.WriteLine("if (!abi_version)");
+            w.WriteBlock(() => w.WriteLine("return nullptr;"));
+            w.WriteBlankLine();
+
+            w.WriteLine(
+                "if (PyModule_AddObjectRef(module.get(), \"_abi_version_\", abi_version.get()) == -1)"
+            );
+            w.WriteBlock(() => w.WriteLine("return nullptr;"));
+            w.WriteBlankLine();
+
+            w.WriteLine(
+                $"if (PyModule_AddStringConstant(module.get(), \"_generator_version_\", \"{PyWinRT.VersionString}\") == -1)"
+            );
+            w.WriteBlock(() => w.WriteLine("return nullptr;"));
+            w.WriteBlankLine();
+
             if (members.Classes.Count != 0 || members.Interfaces.Count != 0)
             {
                 w.WriteLine("auto inspectable_meta_type = py::get_inspectable_meta_type();");

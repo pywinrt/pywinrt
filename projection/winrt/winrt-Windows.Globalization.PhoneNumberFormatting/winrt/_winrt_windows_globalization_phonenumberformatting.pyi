@@ -10,6 +10,9 @@ import winrt.windows.foundation as windows_foundation
 
 from winrt.windows.globalization.phonenumberformatting import PhoneNumberFormat, PhoneNumberMatchResult, PhoneNumberParseResult, PredictedPhoneNumberKind
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

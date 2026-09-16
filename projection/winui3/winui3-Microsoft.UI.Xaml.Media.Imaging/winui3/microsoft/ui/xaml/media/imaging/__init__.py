@@ -6,6 +6,8 @@ import typing
 import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_ui_xaml_media_imaging import (
+    _abi_version_,
+    _generator_version_,
     BitmapImage,
     BitmapSource,
     DownloadProgressEventArgs,

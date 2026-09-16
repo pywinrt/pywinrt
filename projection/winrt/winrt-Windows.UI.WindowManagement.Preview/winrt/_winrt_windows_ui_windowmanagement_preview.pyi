@@ -7,6 +7,9 @@ import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.ui.windowmanagement as windows_ui_windowmanagement
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

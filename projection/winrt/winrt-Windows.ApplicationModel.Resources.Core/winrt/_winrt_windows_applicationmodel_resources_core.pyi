@@ -15,6 +15,9 @@ import winrt.windows.ui as windows_ui
 
 from winrt.windows.applicationmodel.resources.core import ResourceCandidateKind, ResourceQualifierPersistence
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final

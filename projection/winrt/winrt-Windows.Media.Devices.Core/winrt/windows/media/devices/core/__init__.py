@@ -4,6 +4,8 @@ import enum
 
 import winrt.system
 from winrt._winrt_windows_media_devices_core import (
+    _abi_version_,
+    _generator_version_,
     CameraIntrinsics,
     DepthCorrelatedCoordinateMapper,
     FrameControlCapabilities,

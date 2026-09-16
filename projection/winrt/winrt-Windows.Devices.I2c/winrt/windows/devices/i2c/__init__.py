@@ -5,6 +5,8 @@ import enum
 import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_i2c import (
+    _abi_version_,
+    _generator_version_,
     I2cTransferResult,
     I2cConnectionSettings,
     I2cController,

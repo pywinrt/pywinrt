@@ -10,6 +10,9 @@ import winrt.windows.foundation as windows_foundation
 
 from winrt.windows.applicationmodel.extendedexecution import ExtendedExecutionReason, ExtendedExecutionResult, ExtendedExecutionRevokedReason
 
+_abi_version_: tuple[int, int]
+_generator_version_: str
+
 Self = typing.TypeVar('Self')
 
 @typing.final
