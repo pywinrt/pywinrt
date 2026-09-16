@@ -3,7 +3,14 @@
 #pragma once
 
 #include <pywinrt/base.h>
-static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+
+static_assert(
+    py::runtime_abi_version_major == 4,
+    "this projection needs winrt-runtime headers with ABI major version 4");
+static_assert(
+    py::runtime_abi_version_minor >= 3,
+    "this projection needs winrt-runtime headers with ABI version 4.3 or later");
+
 #if __has_include("py.webview2.guids.h")
 #include "py.webview2.guids.h"
 #endif

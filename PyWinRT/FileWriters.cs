@@ -15,6 +15,12 @@ static class FileWriters
         w.WriteLicense();
         w.WriteBlankLine();
         w.WriteLine("#pragma once");
+        w.WriteBlankLine();
+        w.WriteLine("// The version of the generator that wrote the headers next to this one.");
+        w.WriteLine("// It is informational: what a projection module and the runtime have to");
+        w.WriteLine("// agree on is the ABI version in pywinrt/abi.h, which is what the");
+        w.WriteLine("// generated headers assert against and what import_winrt_runtime()");
+        w.WriteLine("// checks. Modules also report it to Python as _generator_version_.");
         w.WriteLine($"#define PYWINRT_VERSION \"{PyWinRT.VersionString}\"");
 
         sw.WriteFileIfChanged(path, "version.h");
@@ -129,6 +135,18 @@ static class FileWriters
         {
             w.Write("\"pywinrt\": ");
             w.WriteBlock(() => w.WriteLine($"\"version\": \"{PyWinRT.VersionString}\""), ",");
+            // The ABI the generated code was written against, so that packaging
+            // tooling can read the runtime requirement without compiling
+            // anything. The same pair is asserted in the generated headers.
+            w.Write("\"runtime_abi\": ");
+            w.WriteBlock(
+                () =>
+                {
+                    w.WriteLine($"\"major\": {PyWinRT.RequiredAbiMajor},");
+                    w.WriteLine($"\"minor\": {PyWinRT.RequiredAbiMinor}");
+                },
+                ","
+            );
             w.WriteLine("\"required\": [");
             w.Indent++;
             var requiredNamespaces = members.GetRequiredNamespaces(packageMap);
@@ -688,9 +706,29 @@ static class FileWriters
         w.WriteLine("#pragma once");
         w.WriteLine();
         w.WriteLine("#include <pywinrt/base.h>");
+        w.WriteBlankLine();
+
+        // The runtime ABI, not the generator version, is what this file has to
+        // agree with: the capsule is append-only within a major version, so any
+        // runtime at or above the minor the generated code calls into will do.
+        // The two conditions are asserted separately so that the message says
+        // which way the headers are wrong.
+        var abiVersion = $"{PyWinRT.RequiredAbiMajor}.{PyWinRT.RequiredAbiMinor}";
+        w.WriteLine("static_assert(");
+        w.Indent++;
+        w.WriteLine($"py::runtime_abi_version_major == {PyWinRT.RequiredAbiMajor},");
         w.WriteLine(
-            $"static_assert(winrt::check_version(PYWINRT_VERSION, \"{PyWinRT.VersionString}\"), \"Mismatched Py/WinRT headers.\");"
+            $"\"this projection needs winrt-runtime headers with ABI major version {PyWinRT.RequiredAbiMajor}\");"
         );
+        w.Indent--;
+        w.WriteLine("static_assert(");
+        w.Indent++;
+        w.WriteLine($"py::runtime_abi_version_minor >= {PyWinRT.RequiredAbiMinor},");
+        w.WriteLine(
+            $"\"this projection needs winrt-runtime headers with ABI version {abiVersion} or later\");"
+        );
+        w.Indent--;
+        w.WriteBlankLine();
 
         // The GUIDs of the parameterized interfaces used by this package have
         // to be specialized before any full C++/WinRT header implicitly
