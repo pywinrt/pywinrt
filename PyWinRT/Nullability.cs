@@ -69,7 +69,7 @@ class TypeNullabilityInfo
         {
             Methods =
             [
-                .. type.Methods.Select(m => new MethodNullabilityInfo(m)).OrderBy(m => m, comparer)
+                .. type.Methods.Select(m => new MethodNullabilityInfo(m)).OrderBy(m => m, comparer),
             ];
         }
     }
@@ -88,7 +88,7 @@ class TypeNullabilityInfo
 
             Methods =
             [
-                new MethodNullabilityInfo(invokeMethod, oldMethods[invokeMethod.ToString()])
+                new MethodNullabilityInfo(invokeMethod, oldMethods[invokeMethod.ToString()]),
             ];
         }
         else
@@ -105,7 +105,7 @@ class TypeNullabilityInfo
 
                         return new MethodNullabilityInfo(m);
                     })
-                    .OrderBy(m => m, comparer)
+                    .OrderBy(m => m, comparer),
             ];
         }
     }
@@ -148,7 +148,7 @@ class MethodNullabilityInfo
         [
             .. method.Parameters.Select(
                 (p, i) => new ParameterNullabilityInfo(p, old.Parameters[i])
-            )
+            ),
         ];
     }
 

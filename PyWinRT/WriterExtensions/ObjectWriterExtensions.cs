@@ -527,19 +527,16 @@ static class ObjectWriterExtensions
                 w.WriteLine(
                     $"static void toggle_reference(PyWinrt{type.Name}* instance, bool is_last_reference)"
                 );
-                w.WriteBlock(
-                    () =>
-                        w.WriteLine(
-                            "py::py_obj_ref::toggle_reference(instance, is_last_reference);"
-                        )
+                w.WriteBlock(() =>
+                    w.WriteLine("py::py_obj_ref::toggle_reference(instance, is_last_reference);")
                 );
 
                 w.WriteBlankLine();
                 w.WriteLine(
                     "int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override"
                 );
-                w.WriteBlock(
-                    () => w.WriteLine("return py::py_obj_ref::query_interface_tearoff(id, result);")
+                w.WriteBlock(() =>
+                    w.WriteLine("return py::py_obj_ref::query_interface_tearoff(id, result);")
                 );
 
                 w.WriteBlankLine();
@@ -557,23 +554,22 @@ static class ObjectWriterExtensions
                     );
 
                     w.WriteLine($"{returnType} {method.CppName}({paramList})");
-                    w.WriteBlock(
-                        () =>
-                            w.WriteDelegateInvoke(
-                                method.Method,
-                                "method.get()",
-                                () =>
-                                {
-                                    w.WriteLine("py::pyobj_handle self{get_py_obj()};");
-                                    w.WriteBlankLine();
-                                    w.WriteLine(
-                                        $"py::pyobj_handle method{{PyObject_GetAttrString(self.get(), \"{method.PyName}\")}};"
-                                    );
-                                    w.WriteLine("if (!method)");
-                                    w.WriteBlock(() => w.WriteLine("throw python_exception();"));
-                                    w.WriteBlankLine();
-                                }
-                            )
+                    w.WriteBlock(() =>
+                        w.WriteDelegateInvoke(
+                            method.Method,
+                            "method.get()",
+                            () =>
+                            {
+                                w.WriteLine("py::pyobj_handle self{get_py_obj()};");
+                                w.WriteBlankLine();
+                                w.WriteLine(
+                                    $"py::pyobj_handle method{{PyObject_GetAttrString(self.get(), \"{method.PyName}\")}};"
+                                );
+                                w.WriteLine("if (!method)");
+                                w.WriteBlock(() => w.WriteLine("throw python_exception();"));
+                                w.WriteBlankLine();
+                            }
+                        )
                     );
                 }
             },

@@ -28,7 +28,10 @@ static class FileWriters
         IReadOnlyDictionary<string, string> packageMap,
         IEnumerable<TypeDefinition> typeDefinitions,
         bool componentDlls,
-        ConcurrentDictionary<string, ConcurrentDictionary<string, GenericInstanceType>> genericInstances
+        ConcurrentDictionary<
+            string,
+            ConcurrentDictionary<string, GenericInstanceType>
+        > genericInstances
     )
     {
         var nsPackageName = $"{ns.PyPackage}-{ns.Namespace}";
@@ -836,8 +839,9 @@ static class FileWriters
             if (
                 type.Namespace == "System"
                 || type.Namespace.StartsWith("System.")
-                || type.FullName is "Windows.Foundation.EventRegistrationToken"
-                    or "Windows.Foundation.HResult"
+                || type.FullName
+                    is "Windows.Foundation.EventRegistrationToken"
+                        or "Windows.Foundation.HResult"
             )
             {
                 return;
@@ -857,14 +861,14 @@ static class FileWriters
 
             var decl = def switch
             {
-                { IsEnum: true }
-                    => $"enum class {def.Name} : {(def.Fields.Single(f => f.Name == "value__").FieldType.FullName == "System.UInt32" ? "uint32_t" : "int32_t")};",
+                { IsEnum: true } =>
+                    $"enum class {def.Name} : {(def.Fields.Single(f => f.Name == "value__").FieldType.FullName == "System.UInt32" ? "uint32_t" : "int32_t")};",
                 // NB: the WINRT_IMPL_EMPTY_BASES (__declspec(empty_bases))
                 // that C++/WinRT puts on generic types has to be repeated
                 // here: it only applies if it is on the first declaration,
                 // and without it these types get a different object layout.
-                { HasGenericParameters: true }
-                    => $"template <{string.Join(", ", def.GenericParameters.Select(p => $"typename {p.Name}"))}> struct WINRT_IMPL_EMPTY_BASES {def.Name.ToNonGeneric()};",
+                { HasGenericParameters: true } =>
+                    $"template <{string.Join(", ", def.GenericParameters.Select(p => $"typename {p.Name}"))}> struct WINRT_IMPL_EMPTY_BASES {def.Name.ToNonGeneric()};",
                 _ => $"struct {def.Name};",
             };
 

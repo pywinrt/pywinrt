@@ -119,11 +119,10 @@ static class SeqWriterExtensions
             });
             w.WriteBlankLine();
             w.WriteLine("if (!PySlice_Check(slice))");
-            w.WriteBlock(
-                () =>
-                    w.WriteLine(
-                        "PyErr_Format(PyExc_TypeError, \"indices must be integers, not '%s'\", Py_TYPE(slice)->tp_name);"
-                    )
+            w.WriteBlock(() =>
+                w.WriteLine(
+                    "PyErr_Format(PyExc_TypeError, \"indices must be integers, not '%s'\", Py_TYPE(slice)->tp_name);"
+                )
             );
             w.WriteBlankLine();
             w.WriteLine("Py_ssize_t start, stop, step, length;");

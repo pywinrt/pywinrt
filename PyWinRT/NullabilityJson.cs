@@ -15,8 +15,9 @@ using System.Text.Json;
 /// </remarks>
 sealed class NullabilityInfoFile
 {
-    private readonly ConcurrentDictionary<string, Lazy<NamespaceNullabilityInfo>> namespaces =
-        new(StringComparer.Ordinal);
+    private readonly ConcurrentDictionary<string, Lazy<NamespaceNullabilityInfo>> namespaces = new(
+        StringComparer.Ordinal
+    );
 
     private NullabilityInfoFile() { }
 
@@ -114,8 +115,11 @@ sealed class NullabilityInfoFile
 /// </remarks>
 static class NullabilityJson
 {
-    private static readonly JsonWriterOptions writerOptions =
-        new() { Indented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
+    private static readonly JsonWriterOptions writerOptions = new()
+    {
+        Indented = true,
+        Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+    };
 
     /// <summary>
     /// Writes the nullability info file.

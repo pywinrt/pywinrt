@@ -321,7 +321,9 @@ sealed class Members
 
         void Collect(TypeReference type)
         {
-            while (type is ByReferenceType or ArrayType or OptionalModifierType or RequiredModifierType)
+            while (
+                type is ByReferenceType or ArrayType or OptionalModifierType or RequiredModifierType
+            )
             {
                 type = ((TypeSpecification)type).ElementType;
             }
