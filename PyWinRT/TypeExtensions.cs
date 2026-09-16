@@ -6,31 +6,24 @@ using Mono.Collections.Generic;
 
 static class TypeExtensions
 {
-    public static bool IsExclusiveTo(this TypeDefinition type)
+    extension(TypeDefinition type)
     {
-        return type.CustomAttributes.Any(a =>
-            a.AttributeType.FullName == "Windows.Foundation.Metadata.ExclusiveToAttribute"
-        );
-    }
+        public bool IsExclusiveTo =>
+            type.CustomAttributes.Any(a =>
+                a.AttributeType.FullName == "Windows.Foundation.Metadata.ExclusiveToAttribute"
+            );
 
-    public static bool IsWindowsRuntime(this TypeDefinition type)
-    {
-        return type.Attributes.HasFlag(TypeAttributes.WindowsRuntime);
-    }
+        public bool IsWindowsRuntime => type.Attributes.HasFlag(TypeAttributes.WindowsRuntime);
 
-    public static bool IsDelegate(this TypeDefinition type)
-    {
-        return type.BaseType?.FullName == "System.MulticastDelegate";
-    }
+        public bool IsDelegate => type.BaseType?.FullName == "System.MulticastDelegate";
 
-    /// <summary>
-    /// Indicates that C++/WinRT treats <paramref name="type"/> as a different
-    /// struct than direct bindings.
-    /// </summary>
-    public static bool IsCustomizedStruct(this TypeDefinition type)
-    {
+        /// <summary>
+        /// Indicates that C++/WinRT treats <paramref name="type"/> as a different
+        /// struct than direct bindings.
+        /// </summary>
         // FIXME: add EventRegistrationToken and HResult
-        return type.FullName == "Windows.Foundation.DateTime"
+        public bool IsCustomizedStruct =>
+            type.FullName == "Windows.Foundation.DateTime"
             || type.FullName == "Windows.Foundation.TimeSpan";
     }
 
@@ -61,7 +54,7 @@ static class TypeExtensions
             {
                 TypeDefinition t => t switch
                 {
-                    { IsEnum: true } => t.HasFlagsAttribute() ? "uint32_t" : "int32_t",
+                    { IsEnum: true } => t.HasFlagsAttribute ? "uint32_t" : "int32_t",
                     _ => $"PyObject*",
                 },
             },
@@ -77,7 +70,7 @@ static class TypeExtensions
                     field.DeclaringType.Name == "HResult"
                     || field.DeclaringType.Name == "EventRegistrationToken"
                 )
-            ) || field.DeclaringType.IsCustomNumeric()
+            ) || field.DeclaringType.IsCustomNumeric
         )
         {
             return field.Name.ToLowerInvariant();
@@ -125,7 +118,7 @@ static class TypeExtensions
             {
                 TypeDefinition t => t switch
                 {
-                    { IsEnum: true } => t.HasFlagsAttribute() ? "I" : "i",
+                    { IsEnum: true } => t.HasFlagsAttribute ? "I" : "i",
                     _ =>
                         $"T{{{ string.Join(
             "",
@@ -171,7 +164,7 @@ static class TypeExtensions
                     {
                         TypeDefinition t => t switch
                         {
-                            { IsEnum: true } => t.HasFlagsAttribute() ? "I" : "i",
+                            { IsEnum: true } => t.HasFlagsAttribute ? "I" : "i",
                             _ => "O",
                         },
                     },
@@ -264,8 +257,12 @@ static class TypeExtensions
         };
     }
 
-    public static bool IsStaticClass(this TypeDefinition type) =>
-        type.GetCategory() == Category.Class && type.Attributes.HasFlag(TypeAttributes.Abstract);
+    extension(TypeDefinition type)
+    {
+        public bool IsStaticClass =>
+            type.GetCategory() == Category.Class
+            && type.Attributes.HasFlag(TypeAttributes.Abstract);
+    }
 
     public static string ToParameterList(this Collection<ParameterDefinition> parameters) =>
         string.Join(", ", parameters.Select(ToParamName));
@@ -319,7 +316,7 @@ static class TypeExtensions
             { FullName: "Windows.Foundation.EventRegistrationToken" } => "winrt::event_token",
             { FullName: "Windows.Foundation.HResult" } => "winrt::hresult",
             { Namespace: "Windows.Foundation.Numerics" }
-                when type.IsCustomNumeric(out var cppName) =>
+                when type.TryGetCustomNumericCppName(out var cppName) =>
                 $"winrt::{type.Namespace.ToCppNamespace()}::{cppName}",
             // NB: Checking the name for the generic arity suffix instead of
             // HasGenericParameters avoids Mono.Cecil taking the module lock
@@ -601,7 +598,7 @@ static class TypeExtensions
     {
         var returnType = "None";
         var outParams = method
-            .Parameters.Where(p => p.IsPythonOutParam())
+            .Parameters.Where(p => p.IsPythonOutParam)
             .Select(p =>
                 p.ToPyOutParamTyping(
                     ns,
@@ -657,30 +654,34 @@ static class TypeExtensions
             _ => throw new NotImplementedException(),
         };
 
-    public static bool IsInParam(this ParameterDefinition param) =>
-        param.GetCategory() == ParamCategory.In || param.GetCategory() == ParamCategory.PassArray;
+    extension(ParameterDefinition param)
+    {
+        public bool IsInParam =>
+            param.GetCategory() == ParamCategory.In
+            || param.GetCategory() == ParamCategory.PassArray;
 
-    public static bool IsPythonInParam(this ParameterDefinition param) =>
-        param.GetCategory() switch
-        {
-            ParamCategory.In => true,
-            ParamCategory.Out => false,
-            ParamCategory.PassArray => true,
-            ParamCategory.FillArray => true,
-            ParamCategory.ReceiveArray => false,
-            _ => throw new NotImplementedException(),
-        };
+        public bool IsPythonInParam =>
+            param.GetCategory() switch
+            {
+                ParamCategory.In => true,
+                ParamCategory.Out => false,
+                ParamCategory.PassArray => true,
+                ParamCategory.FillArray => true,
+                ParamCategory.ReceiveArray => false,
+                _ => throw new NotImplementedException(),
+            };
 
-    public static bool IsPythonOutParam(this ParameterDefinition param) =>
-        param.GetCategory() switch
-        {
-            ParamCategory.In => false,
-            ParamCategory.Out => true,
-            ParamCategory.PassArray => false,
-            ParamCategory.FillArray => false,
-            ParamCategory.ReceiveArray => true,
-            _ => throw new NotImplementedException(),
-        };
+        public bool IsPythonOutParam =>
+            param.GetCategory() switch
+            {
+                ParamCategory.In => false,
+                ParamCategory.Out => true,
+                ParamCategory.PassArray => false,
+                ParamCategory.FillArray => false,
+                ParamCategory.ReceiveArray => true,
+                _ => throw new NotImplementedException(),
+            };
+    }
 
     public static string ToDelegateParam(
         this ParameterDefinition param,
@@ -743,11 +744,14 @@ static class TypeExtensions
     public static bool ImplementsInterface(this TypeDefinition type, string interfaceName) =>
         GetImplementedInterfaceNames(type).Contains(interfaceName);
 
-    static bool ImplementsIAsyncInfo(this TypeDefinition type) =>
-        type.ImplementsInterface("Windows.Foundation.IAsyncInfo");
+    extension(TypeDefinition type)
+    {
+        internal bool ImplementsIAsyncInfo =>
+            type.ImplementsInterface("Windows.Foundation.IAsyncInfo");
 
-    public static bool HasFlagsAttribute(this TypeDefinition type) =>
-        type.CustomAttributes.Any(a => a.AttributeType.FullName == "System.FlagsAttribute");
+        public bool HasFlagsAttribute =>
+            type.CustomAttributes.Any(a => a.AttributeType.FullName == "System.FlagsAttribute");
+    }
 
     static readonly IReadOnlyDictionary<string, string> CustomNumerics = new Dictionary<
         string,
@@ -763,10 +767,14 @@ static class TypeExtensions
         { "Vector4", "float4" },
     };
 
-    public static bool IsCustomNumeric(this TypeReference type) =>
-        type.Namespace == "Windows.Foundation.Numerics" && CustomNumerics.ContainsKey(type.Name);
+    extension(TypeReference type)
+    {
+        public bool IsCustomNumeric =>
+            type.Namespace == "Windows.Foundation.Numerics"
+            && CustomNumerics.ContainsKey(type.Name);
+    }
 
-    public static bool IsCustomNumeric(
+    public static bool TryGetCustomNumericCppName(
         this TypeReference type,
         [NotNullWhen(true)] out string? cppName
     )
@@ -894,70 +902,79 @@ static class TypeExtensions
         return depth;
     }
 
-    public static bool IsProblematicOverride(this ProjectedMethod method)
+    extension(ProjectedMethod method)
     {
-        if (method.Method.Name == "SetValue")
+        public bool IsProblematicOverride
         {
-            for (
-                var baseType = method.Method.DeclaringType.BaseType;
-                baseType is not null;
-                baseType = TryResolve(baseType)?.BaseType
-            )
+            get
             {
-                if (
-                    (
-                        baseType.Namespace == "Microsoft.UI.Xaml"
-                        || baseType.Namespace == "Windows.UI.Xaml"
-                    )
-                    && baseType.Name == "DependencyObject"
-                )
+                if (method.Method.Name == "SetValue")
                 {
-                    return true;
+                    for (
+                        var baseType = method.Method.DeclaringType.BaseType;
+                        baseType is not null;
+                        baseType = TryResolve(baseType)?.BaseType
+                    )
+                    {
+                        if (
+                            (
+                                baseType.Namespace == "Microsoft.UI.Xaml"
+                                || baseType.Namespace == "Windows.UI.Xaml"
+                            )
+                            && baseType.Name == "DependencyObject"
+                        )
+                        {
+                            return true;
+                        }
+                    }
                 }
+
+                if (method.Method.Name == "ShowAt")
+                {
+                    for (
+                        var baseType = method.Method.DeclaringType.BaseType;
+                        baseType is not null;
+                        baseType = TryResolve(baseType)?.BaseType
+                    )
+                    {
+                        if (
+                            (
+                                baseType.Namespace == "Microsoft.UI.Xaml.Controls.Primitives"
+                                || baseType.Namespace == "Windows.UI.Xaml.Controls.Primitives"
+                            )
+                            && baseType.Name == "FlyoutBase"
+                        )
+                        {
+                            return true;
+                        }
+                    }
+                }
+
+                return false;
             }
         }
-
-        if (method.Method.Name == "ShowAt")
-        {
-            for (
-                var baseType = method.Method.DeclaringType.BaseType;
-                baseType is not null;
-                baseType = TryResolve(baseType)?.BaseType
-            )
-            {
-                if (
-                    (
-                        baseType.Namespace == "Microsoft.UI.Xaml.Controls.Primitives"
-                        || baseType.Namespace == "Windows.UI.Xaml.Controls.Primitives"
-                    )
-                    && baseType.Name == "FlyoutBase"
-                )
-                {
-                    return true;
-                }
-            }
-        }
-
-        return false;
     }
 
-    /// <summary>
-    /// Tests if type is one of the special interfaces that is projected as
-    /// standard Python collection type.
-    /// </summary>
-    public static bool IsPythonCollection(this TypeReference type) =>
-        type is GenericInstanceType gen
-        && (
-            gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
-            || gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1"
-            || gen.ElementType.FullName == "Windows.Foundation.Collections.IVectorView`1"
-            || gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2"
-            || gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
-        );
+    extension(TypeReference type)
+    {
+        /// <summary>
+        /// Tests if type is one of the special interfaces that is projected as
+        /// standard Python collection type.
+        /// </summary>
+        public bool IsPythonCollection =>
+            type is GenericInstanceType gen
+            && (
+                gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
+                || gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1"
+                || gen.ElementType.FullName == "Windows.Foundation.Collections.IVectorView`1"
+                || gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2"
+                || gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
+            );
 
-    public static bool IsStruct(this TypeReference type) =>
-        // if we can't resolve, then it is a fundamental type, so not a struct
-        TryResolve(type)?.GetCategory() == Category.Struct;
+        public bool IsStruct =>
+            // if we can't resolve, then it is a fundamental type, so not a struct
+            TryResolve(type)?.GetCategory() == Category.Struct;
+    }
 
     private static readonly ConcurrentDictionary<
         TypeReference,

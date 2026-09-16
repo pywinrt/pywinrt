@@ -227,7 +227,7 @@ static class FileWriters
             }
 
             var dependencyTypes = members
-                .Structs.Where(s => !s.Type.IsCustomizedStruct())
+                .Structs.Where(s => !s.Type.IsCustomizedStruct)
                 .Concat(members.Classes)
                 .Concat(members.Interfaces)
                 .Where(t => t.CircularDependencyDepth == depth);
@@ -292,7 +292,7 @@ static class FileWriters
 
         foreach (
             var type in members.Structs.Where(s =>
-                !s.Type.IsCustomizedStruct() && s.CircularDependencyDepth == dependencyDepth
+                !s.Type.IsCustomizedStruct && s.CircularDependencyDepth == dependencyDepth
             )
         )
         {
@@ -352,7 +352,7 @@ static class FileWriters
         }
 
         var allExtensionTypes = members
-            .Structs.Where(s => !s.Type.IsCustomizedStruct())
+            .Structs.Where(s => !s.Type.IsCustomizedStruct)
             .Concat(members.Classes)
             .Concat(members.Interfaces);
 
@@ -492,7 +492,7 @@ static class FileWriters
         {
             w.WriteBlankLine();
             w.WriteLine(
-                $"class {type.Name}(enum.{(type.Type.HasFlagsAttribute() ? "IntFlag" : "IntEnum")}):"
+                $"class {type.Name}(enum.{(type.Type.HasFlagsAttribute ? "IntFlag" : "IntEnum")}):"
             );
 
             w.Indent++;
@@ -501,7 +501,7 @@ static class FileWriters
             {
                 if (field.Constant is not null)
                 {
-                    var value = type.Type.HasFlagsAttribute()
+                    var value = type.Type.HasFlagsAttribute
                         ? $"0x{field.Constant:X}"
                         : field.Constant.ToString();
                     w.WriteLine($"{field.Name.ToPythonConstant()} = {value}");
@@ -562,7 +562,7 @@ static class FileWriters
                 new MethodNullabilityInfo(invoke)
             );
             var paramTypes = invoke
-                .Parameters.Where(p => p.IsPythonInParam())
+                .Parameters.Where(p => p.IsPythonInParam)
                 .Select(p =>
                     p.ToPyCallbackInParamTyping(
                         ns.Namespace,
@@ -690,7 +690,7 @@ static class FileWriters
             foreach (
                 var type in members
                     .Classes.Concat(members.Interfaces)
-                    .Concat(members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
+                    .Concat(members.Structs.Where(s => !s.Type.IsCustomizedStruct))
             )
             {
                 w.WritePythonWrapperAlias(type);
@@ -772,7 +772,7 @@ static class FileWriters
                 w.WriteEnumBufferFormat(type);
             }
 
-            foreach (var type in members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
+            foreach (var type in members.Structs.Where(s => !s.Type.IsCustomizedStruct))
             {
                 w.WriteStructBufferFormat(type);
             }
@@ -849,7 +849,7 @@ static class FileWriters
 
             var def = type.Resolve();
 
-            if (def.IsCustomizedStruct() || def.IsCustomNumeric())
+            if (def.IsCustomizedStruct || def.IsCustomNumeric)
             {
                 // these are defined by C++/WinRT's <winrt/base.h>: DateTime and
                 // TimeSpan directly, the Numerics types through the
@@ -1015,7 +1015,7 @@ static class FileWriters
 
                 foreach (
                     var t in members.Structs.Where(s =>
-                        !s.Type.IsCustomizedStruct() && s.CircularDependencyDepth == dependencyDepth
+                        !s.Type.IsCustomizedStruct && s.CircularDependencyDepth == dependencyDepth
                     )
                 )
                 {

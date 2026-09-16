@@ -200,7 +200,7 @@ static class ObjectWriterExtensions
             }
         }
 
-        var interfaceTypes = type.Interfaces.Where(i => !i.IsPythonCollection());
+        var interfaceTypes = type.Interfaces.Where(i => !i.IsPythonCollection);
 
         if (type.Category == Category.Interface)
         {
@@ -354,10 +354,10 @@ static class ObjectWriterExtensions
                 new MethodNullabilityInfo(ctor.Method)
             );
 
-            if (ctor.Method.Parameters.Any(p => p.IsPythonInParam()))
+            if (ctor.Method.Parameters.Any(p => p.IsPythonInParam))
             {
                 paramList =
-                    $", {string.Join(", ", ctor.Method.Parameters.Where(p => p.IsPythonInParam()).Select(p => $"{p.Name.ToPythonIdentifier()}: {p.ToPyInParamTyping(ns, nullabilityInfo.Parameters[p.Index].Type, packageMap)}"))}";
+                    $", {string.Join(", ", ctor.Method.Parameters.Where(p => p.IsPythonInParam).Select(p => $"{p.Name.ToPythonIdentifier()}: {p.ToPyInParamTyping(ns, nullabilityInfo.Parameters[p.Index].Type, packageMap)}"))}";
             }
 
             if (type.Constructors.Count(m => m.Name == ctor.Name) > 1)
@@ -389,7 +389,7 @@ static class ObjectWriterExtensions
                     // HACK: There are a couple of problematic methods. Subclasses of
                     // DependencyObject like to override SetValue with a different
                     // parameter type. Subclasses of FlyoutBase like to override ShowAt.
-                    var typeIgnore = method.IsProblematicOverride() ? "  # type: ignore[misc]" : "";
+                    var typeIgnore = method.IsProblematicOverride ? "  # type: ignore[misc]" : "";
 
                     w.WriteLine($"@typing.final{typeIgnore}");
                 }
@@ -415,7 +415,7 @@ static class ObjectWriterExtensions
                         && method == alias.Methods[0]
                     )
                     {
-                        var typeIgnore = method.IsProblematicOverride()
+                        var typeIgnore = method.IsProblematicOverride
                             ? "  # type: ignore[misc]"
                             : "";
 

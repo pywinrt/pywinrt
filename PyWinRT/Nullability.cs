@@ -60,7 +60,7 @@ class TypeNullabilityInfo
         Name = type.Name;
         var comparer = new MethodComparer();
 
-        if (type.IsDelegate())
+        if (type.IsDelegate)
         {
             // have to exclude constructor for delegates since that isn't part of the projection
             Methods = [new MethodNullabilityInfo(type.Methods.Single(m => m.Name == "Invoke"))];
@@ -80,7 +80,7 @@ class TypeNullabilityInfo
         var comparer = new MethodComparer();
         var oldMethods = old.Methods.ToDictionary(m => m.Signature);
 
-        if (type.IsDelegate())
+        if (type.IsDelegate)
         {
             // have to exclude constructor for delegates since that isn't part of the projection
 
