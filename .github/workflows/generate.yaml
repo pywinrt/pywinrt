@@ -11,6 +11,8 @@ on:
     paths:
       - .github/workflows/generate.yaml
       - projection/**
+      - interop/**
+      - runtime/**
       - PyWinRT/**
       - scripts/fetch-tools.ps1
       - scripts/generate-cppwinrt.py
@@ -20,6 +22,8 @@ on:
     paths:
       - .github/workflows/generate.yaml
       - projection/**
+      - interop/**
+      - runtime/**
       - PyWinRT/**
       - scripts/fetch-tools.ps1
       - scripts/generate-cppwinrt.py
