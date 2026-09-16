@@ -405,6 +405,9 @@ namespace py::cpp::_winrt
         .await_async = py::await_async,
         .convert_to_ibuffer = py::convert_to_ibuffer,
         .set_member_not_available_error = py::set_member_not_available_error,
+        .set_error = py::set_error,
+        .set_call_error = py::set_call_error,
+        .report_unraisable = py::report_unraisable,
     };
 
     static PyObject* init_apartment(PyObject* /*unused*/, PyObject* type_obj) noexcept

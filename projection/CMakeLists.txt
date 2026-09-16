@@ -184,6 +184,7 @@ set(WINRT_RUNTIME_SOURCES
     "${WINRT_RUNTIME_SRC_PATH}/_winrt_array.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/_winrt_box.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/_winrt_buffer.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/errors.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/runtime.cpp"
 )
 pywinrt_add_library(_winrt "${WINRT_RUNTIME_SOURCES}")

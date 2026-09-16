@@ -5,6 +5,13 @@
 // py::python_exception is the marker thrown once a Python error is already set,
 // so the unwinding path does not have to carry the error with it, and
 // py::to_PyErr() is the catch-all that every projected method ends with.
+//
+// Which Python exception any of this becomes is decided by winrt-runtime rather
+// than here: this header classifies what it caught into one of the PODs in
+// <pywinrt/abi.h> and hands it over. A module carries its own copy of these
+// headers, so anything it decides for itself is frozen into it at build time,
+// and the wording of an error is the kind of thing that should be able to
+// improve in a runtime release without rebuilding four hundred packages.
 
 #pragma once
 
@@ -14,6 +21,11 @@
 
 namespace py
 {
+    /**
+     * The @c HRESULT that py::report_unraisable() returns, and therefore the
+     * one that a Python exception escaping a WinRT callback is reported to
+     * WinRT as.
+     */
     const winrt::hresult unraisable_python_exception{static_cast<int32_t>(0xA0EE4005)};
 
     /**
@@ -24,13 +36,24 @@ namespace py
     {
     };
 
-    inline __declspec(noinline) void set_invalid_activation_error(
-        const char* const type_name)
+    inline WINRT_IMPL_NOINLINE void set_invalid_activation_error(
+        const char* const type_name) noexcept
     {
-        PyErr_Format(PyExc_TypeError, "cannot create '%s' instances", type_name);
+        const member_site site{
+            member_kind::method, 0, type_name, nullptr, nullptr, site_is_constructor};
+
+        set_call_error(call_error::cannot_instantiate, &site, 0);
     }
 
-    inline __declspec(noinline) void set_arg_count_version_error(
+    /**
+     * Reports that no overload of a versioned static member takes @p arg_count
+     * arguments on this version of Windows.
+     *
+     * Unlike the other errors here this one is not passed to the runtime,
+     * because it belongs to the @c ApiInformation probe that the generator
+     * emits around a versioned static overload rather than to the call itself.
+     */
+    inline WINRT_IMPL_NOINLINE void set_arg_count_version_error(
         Py_ssize_t arg_count) noexcept
     {
         PyErr_Format(
@@ -39,21 +62,18 @@ namespace py
             arg_count);
     }
 
-    inline __declspec(noinline) void set_invalid_arg_count_error(
+    inline WINRT_IMPL_NOINLINE void set_invalid_arg_count_error(
         Py_ssize_t arg_count) noexcept
     {
-        if (arg_count != -1)
-        {
-            PyErr_SetString(PyExc_TypeError, "Invalid parameter count");
-        }
+        set_call_error(call_error::invalid_arg_count, nullptr, arg_count);
     }
 
-    inline __declspec(noinline) void set_invalid_kwd_args_error() noexcept
+    inline WINRT_IMPL_NOINLINE void set_invalid_kwd_args_error() noexcept
     {
-        PyErr_SetString(PyExc_TypeError, "keyword arguments not supported");
+        set_call_error(call_error::keyword_arguments, nullptr, 0);
     }
 
-    [[noreturn]] inline __declspec(noinline) void throw_member_not_available(
+    [[noreturn]] inline WINRT_IMPL_NOINLINE void throw_member_not_available(
         member_kind kind,
         const char* type_name,
         const char* member_name,
@@ -95,7 +115,13 @@ namespace py
         return iface;
     }
 
-    inline __declspec(noinline) void to_PyErr() noexcept
+    /**
+     * Sets a Python exception for the C++ exception currently being handled.
+     *
+     * Must only be called from a catch block. @p site names the member that was
+     * being called, when the caller knows it.
+     */
+    inline WINRT_IMPL_NOINLINE void to_PyErr(member_site const* site = nullptr) noexcept
     {
         if (PyErr_Occurred())
         {
@@ -103,7 +129,19 @@ namespace py
             return;
         }
 
-        // otherwise convert C++ exception to Python exception
+        // The exception object lives until its handler ends, and everything an
+        // error_info points at belongs to it, so each of these has to make the
+        // call from inside its own catch block rather than after the try.
+        auto set_std_error = [site](error_kind kind, std::exception const& e) noexcept
+        {
+            error_info info{};
+            info.kind = kind;
+            info.what = e.what();
+            info.site = site;
+
+            set_error(info);
+        };
+
         try
         {
             throw;
@@ -114,38 +152,44 @@ namespace py
         }
         catch (winrt::hresult_error const& e)
         {
-            pyobj_handle exc{PyObject_CallFunction(
-                PyExc_WindowsError,
-                "iuui",
-                0,                   // errno
-                e.message().c_str(), // strerror
-                nullptr,             // filename
-                e.code().value)};    // winerror
+            const auto message = e.message();
+            const auto restricted = e.try_as<winrt::impl::IRestrictedErrorInfo>();
 
-            if (!exc)
-            {
-                // REVISIT: should we print something here so we don't loose the
-                // info? Like: while raising an exception another error occurred...
-                return;
-            }
+            error_info info{};
+            info.kind = error_kind::hresult;
+            info.hresult = e.code().value;
+            info.message = message.c_str();
+            info.message_length = message.size();
+            info.restricted_error_info = restricted.get();
+            info.site = site;
 
-            PyErr_SetObject(reinterpret_cast<PyObject*>(Py_TYPE(exc.get())), exc.get());
+            set_error(info);
         }
         catch (std::bad_alloc const& e)
         {
-            PyErr_SetString(PyExc_MemoryError, e.what());
+            set_std_error(error_kind::bad_alloc, e);
         }
         catch (std::out_of_range const& e)
         {
-            PyErr_SetString(PyExc_IndexError, e.what());
+            set_std_error(error_kind::out_of_range, e);
         }
         catch (std::invalid_argument const& e)
         {
-            PyErr_SetString(PyExc_TypeError, e.what());
+            set_std_error(error_kind::invalid_argument, e);
         }
         catch (std::exception const& e)
         {
-            PyErr_SetString(PyExc_RuntimeError, e.what());
+            set_std_error(error_kind::std_exception, e);
+        }
+        catch (...)
+        {
+            // Whatever it is, it must not leave this noexcept function: a
+            // rethrow with nothing left to catch it terminates the process.
+            error_info info{};
+            info.kind = error_kind::unknown;
+            info.site = site;
+
+            set_error(info);
         }
     }
 
@@ -163,8 +207,7 @@ namespace py
 
     [[noreturn]] inline void write_unraisable_and_throw()
     {
-        PyErr_WriteUnraisable(nullptr);
         throw winrt::hresult_error(
-            unraisable_python_exception, L"Unraisable Python exception");
+            winrt::hresult{report_unraisable()}, L"Unraisable Python exception");
     }
 } // namespace py

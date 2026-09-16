@@ -76,6 +76,13 @@
   needs is linked into one module instead of all of them. This raises the minor
   ABI version, so this version of the projection packages needs at least this
   version of `winrt-runtime`.
+- The `winrt-runtime` C API now also decides which Python exception a failed
+  call raises and what it says. A projection module still catches its own C++
+  exception, but it now passes on what it caught rather than the finished
+  Python exception, so the wording of an error, the mapping from `HRESULT` to
+  exception type and the details carried by `IRestrictedErrorInfo` can all
+  improve in a `winrt-runtime` release without rebuilding the projection
+  packages. This raises the minor ABI version again.
 - Building a projection package from source no longer requires the exact
   version of `winrt-runtime` that generated it. The generated headers used to
   fail with "Mismatched Py/WinRT headers." unless the two version strings
@@ -148,6 +155,10 @@
   balances the counter that decides when the state of a thread the projection
   did not create is torn down. The most common way to reach it was garbage
   collecting an object that held an event handler.
+- Fixed a C++ exception of an unrecognized type crashing the process on its way
+  out of a WinRT call. Only the standard exception types were caught, and
+  anything else escaped a `noexcept` function and terminated the interpreter;
+  they now raise `RuntimeError`.
 - Fixed calling a member that an object does not implement crashing the process
   instead of raising `AttributeError`. This happened whenever the metadata of
   the member was present but the object was not, for example an object from an
