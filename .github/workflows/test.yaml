@@ -4,6 +4,29 @@ concurrency:
   cancel-in-progress: true
 
 on:
+  push:
+    branches:
+      - main
+      - next
+    paths:
+      - .github/workflows/test.yaml
+      - projection/**
+      - '!projection/**/*.md'
+      - '!projection/**/*.toml'
+      - '!projection/**/*.txt'
+      - '!projection/**/setup.py'
+      - projection/CMakeLists.txt
+      - interop/**
+      - '!interop/**/*.md'
+      - '!interop/**/*.toml'
+      - '!interop/**/*.txt'
+      - '!interop/**/setup.py'
+      - runtime/**
+      - '!runtime/**/*.md'
+      - '!runtime/**/*.toml'
+      - '!runtime/**/*.txt'
+      - '!runtime/setup.py'
+      - test/**
   pull_request:
     paths:
       - .github/workflows/test.yaml
