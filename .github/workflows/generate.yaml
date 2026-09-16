@@ -4,6 +4,18 @@ concurrency:
   cancel-in-progress: true
 
 on:
+  push:
+    branches:
+      - main
+      - next
+    paths:
+      - .github/workflows/generate.yaml
+      - projection/**
+      - PyWinRT/**
+      - scripts/fetch-tools.ps1
+      - scripts/generate-cppwinrt.py
+      - scripts/generate-pywinrt.py
+      - scripts/generate-pyproject.py
   pull_request:
     paths:
       - .github/workflows/generate.yaml
