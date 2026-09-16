@@ -29,11 +29,11 @@ Once Nuget is installed, run:
 
 ## Building PyWinRT.exe
 
-Building this tool requires .NET 8.0 SDK.
+Building this tool requires .NET 10.0 SDK.
 
     dotnet build PyWinRT -c Release
 
-The resulting executable will be `PyWinRT\bin\Release\net8.0\PyWinRT.exe`.
+The resulting executable will be `PyWinRT\bin\Release\net10.0\PyWinRT.exe`.
 
 
 ## Regenerating the projection

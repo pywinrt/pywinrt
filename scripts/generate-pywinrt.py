@@ -25,6 +25,10 @@ RUNTIME_INCLUDE_PATH = RUNTIME_PATH / "python" / "winrt" / "include" / "pywinrt"
 DOTNET: list[str] = []
 PYWINRT_EXE: str | pathlib.Path
 
+# must match <TargetFramework> in PyWinRT/PyWinRT.csproj
+PYWINRT_TFM = "net10.0"
+PYWINRT_BUILD_PATH = REPO_ROOT_PATH / "PyWinRT" / "bin"
+
 if "--dotnet" in sys.argv:
     DOTNET.append("dotnet")
     PYWINRT_EXE = "pywinrt"
@@ -32,16 +36,12 @@ if "--dotnet" in sys.argv:
     subprocess.check_call(DOTNET + ["tool", "list", "PyWinRT"])
 
 elif "--debug" in sys.argv:
-    PYWINRT_EXE = (
-        REPO_ROOT_PATH / "PyWinRT" / "bin" / "Debug" / "net8.0" / "PyWinRT.exe"
-    )
+    PYWINRT_EXE = PYWINRT_BUILD_PATH / "Debug" / PYWINRT_TFM / "PyWinRT.exe"
 
     if not PYWINRT_EXE.exists():
         raise RuntimeError("PyWinRT.exe not found. Please run `dotnet build PyWinRT`")
 else:
-    PYWINRT_EXE = (
-        REPO_ROOT_PATH / "PyWinRT" / "bin" / "Release" / "net8.0" / "PyWinRT.exe"
-    )
+    PYWINRT_EXE = PYWINRT_BUILD_PATH / "Release" / PYWINRT_TFM / "PyWinRT.exe"
 
     if not PYWINRT_EXE.exists():
         raise RuntimeError(
