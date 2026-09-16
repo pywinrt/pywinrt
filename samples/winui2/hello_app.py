@@ -1,4 +1,3 @@
-from typing import Tuple, Union
 
 from typing_extensions import override
 
@@ -63,7 +62,7 @@ class App(Application, IXamlMetadataProvider):
         window.activate()
 
     @override
-    def get_xaml_type(self, type: Union[TypeName, Tuple[str, TypeKind]]) -> IXamlType:
+    def get_xaml_type(self, type: TypeName | tuple[str, TypeKind]) -> IXamlType:
         return self._provider.get_xaml_type(type)
 
     @override

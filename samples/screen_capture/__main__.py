@@ -14,7 +14,7 @@ capture will time out. The captured image will be saved as
 import contextlib
 import os
 from threading import Event
-from typing import Callable
+from collections.abc import Callable
 
 from winrt.windows.graphics.capture import (
     GraphicsCaptureItem,

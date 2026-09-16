@@ -1,4 +1,4 @@
-from typing import Optional, TypeVar
+from typing import TypeVar
 
 from winui3.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
     InitializeOptions,
@@ -16,7 +16,7 @@ class Shutdown:
 
 def initialize(
     major_minor_version: int,
-    version_tag: Optional[str],
+    version_tag: str | None,
     min_version: int,
     options: InitializeOptions,
 ) -> Shutdown: ...

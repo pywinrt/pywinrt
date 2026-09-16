@@ -8,6 +8,12 @@
 - Wheels are now published for Python 3.14 and Python 3.15.
 
 ### Changed
+- The type stubs now use modern annotation syntax. Optional and union types are
+  spelled `X | None` and `X | Y` instead of `typing.Optional[X]` and
+  `typing.Union[X, Y]`, `typing.Tuple` and `typing.Type` are now the builtin
+  `tuple` and `type`, and the abstract collection types come from
+  `collections.abc` instead of `typing`. This only affects how the annotations
+  read; they mean the same thing to type checkers.
 - `winrt-runtime` no longer ships a copy of `MSVCP140.dll`, and no module in
   the projection needs the Visual C++ redistributable any more. The whole of
   that dependency was two cold standard library helpers, which are now compiled

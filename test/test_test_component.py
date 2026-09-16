@@ -7,7 +7,7 @@ import sys
 import threading
 import unittest
 import weakref
-from typing import Generic, List, TypedDict, TypeVar
+from typing import Generic, TypedDict, TypeVar
 from uuid import UUID
 
 import test_winrt.testcomponent as tc
@@ -211,7 +211,7 @@ class TestTestComponent(unittest.TestCase):
         c1 = tc.Derived()
         c2 = c1.as_(tc.Composable)
         c3 = tc.Derived()
-        c4 = str()
+        c4 = ""
 
         # these have to be true in order for tests to be valid
         self.assertIsNot(
@@ -736,7 +736,7 @@ class TestTestComponent(unittest.TestCase):
         expected = [1, 2, 3]
         op = tc.TestRunner.create_async_action_with_progress(10, expected)
 
-        actual: List[int] = []
+        actual: list[int] = []
 
         def on_progress(op: wf.IAsyncActionWithProgress[int], value: int) -> None:
             actual.append(value)
@@ -754,7 +754,7 @@ class TestTestComponent(unittest.TestCase):
         expected = [1, 2, 3]
         op = tc.TestRunner.create_async_action_with_progress(10, expected)
 
-        actual: List[int] = []
+        actual: list[int] = []
 
         async for value in WinrtAiter(op):
             actual.append(value)
@@ -769,7 +769,7 @@ class TestTestComponent(unittest.TestCase):
         op = tc.TestRunner.create_async_action_with_progress(500, expected)
         asyncio.get_running_loop().call_later(0.1, op.cancel)
 
-        actual: List[int] = []
+        actual: list[int] = []
 
         with self.assertRaises(asyncio.CancelledError):
             async for value in WinrtAiter(op):
@@ -784,7 +784,7 @@ class TestTestComponent(unittest.TestCase):
         expected = [1, 2, 3, 4, 5]
         op = tc.TestRunner.create_async_action_with_progress(100, expected)
 
-        actual: List[int] = []
+        actual: list[int] = []
 
         with self.assertRaises(asyncio.TimeoutError):
             async with (
@@ -806,7 +806,7 @@ class TestTestComponent(unittest.TestCase):
             10, expected, E_FAIL
         )
 
-        actual: List[int] = []
+        actual: list[int] = []
 
         with self.assertRaises(OSError) as ctx:
             async for value in WinrtAiter(op):
@@ -832,7 +832,7 @@ class TestTestComponent(unittest.TestCase):
             10, expected, expected_result
         )
 
-        actual: List[int] = []
+        actual: list[int] = []
 
         def on_progress(
             op: wf.IAsyncOperationWithProgress[int, int], value: int

@@ -10,7 +10,8 @@ import functools
 import os
 import time
 from pathlib import Path
-from typing import Any, Callable, Coroutine, Iterable, Sequence, TypeVar, cast
+from typing import Any, TypeVar, cast
+from collections.abc import Callable, Coroutine, Iterable, Sequence
 
 import winrt.windows.ai.machinelearning as winml
 from winrt.windows.graphics.imaging import BitmapDecoder

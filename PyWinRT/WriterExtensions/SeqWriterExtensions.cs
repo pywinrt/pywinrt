@@ -233,7 +233,7 @@ static class SeqWriterExtensions
         );
 
         w.WriteLine("def __len__(self) -> int: ...");
-        w.WriteLine($"def __iter__(self) -> typing.Iterator[{elementType}]: ...");
+        w.WriteLine($"def __iter__(self) -> _cabc.Iterator[{elementType}]: ...");
         w.WriteLine("@typing.overload");
         w.WriteLine($"def __getitem__(self, index: typing.SupportsIndex) -> {elementType}: ...");
         w.WriteLine("@typing.overload");
@@ -274,7 +274,7 @@ static class SeqWriterExtensions
         );
         w.WriteLine("@typing.overload");
         w.WriteLine(
-            $"def __setitem__(self, index: slice, value: typing.Iterable[{valParamType}]) -> None: ..."
+            $"def __setitem__(self, index: slice, value: _cabc.Iterable[{valParamType}]) -> None: ..."
         );
     }
 }

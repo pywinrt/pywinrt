@@ -220,8 +220,8 @@ class TestWinRTArray(unittest.TestCase):
 
     def test_windows_foundation_datetime(self):
         actual = [
-            datetime.datetime.now(datetime.timezone.utc),
-            datetime.datetime(2000, 1, 1, tzinfo=datetime.timezone.utc),
+            datetime.datetime.now(datetime.UTC),
+            datetime.datetime(2000, 1, 1, tzinfo=datetime.UTC),
         ]
         a = Array(datetime.datetime, actual)
 

@@ -1,6 +1,6 @@
 import unittest
 from array import array
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, UTC
 from uuid import UUID, uuid4
 
 import winrt.windows.foundation as wf
@@ -107,7 +107,7 @@ class TestPropertyValue(unittest.TestCase):
     # # TODO: CreateInspectable
 
     def test_create_datetime(self):
-        now = datetime.now(timezone.utc)
+        now = datetime.now(UTC)
         o = wf.PropertyValue.create_date_time(now)
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.DATE_TIME)
@@ -254,7 +254,7 @@ class TestPropertyValue(unittest.TestCase):
             self.assertEqual(a[x], uuids[x])
 
     def test_create_date_time_array(self):
-        now = [datetime.now(timezone.utc) for _ in range(5)]
+        now = [datetime.now(UTC) for _ in range(5)]
         o = wf.PropertyValue.create_date_time_array(Array(datetime, now))
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.DATE_TIME_ARRAY)

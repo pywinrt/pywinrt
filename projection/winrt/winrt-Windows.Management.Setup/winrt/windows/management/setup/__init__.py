@@ -2,7 +2,6 @@
 
 import enum
 import typing
-import uuid as _uuid
 
 import winrt.system
 from winrt._winrt_windows_management_setup import (

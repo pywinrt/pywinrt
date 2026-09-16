@@ -1,6 +1,6 @@
-from typing import Annotated
+from typing import Annotated, TypeAlias
 
-from typing_extensions import Buffer, TypeAlias
+from typing_extensions import Buffer
 
 from winrt._winrt import (
     Array,

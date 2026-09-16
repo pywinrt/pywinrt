@@ -2,7 +2,6 @@
 
 import enum
 import typing
-import uuid as _uuid
 
 import winrt.system
 from winui3._winui3_microsoft_ui_xaml_printing import (

@@ -5,21 +5,12 @@ import types
 from typing import (
     Any,
     Generic,
-    ItemsView,
-    Iterable,
-    Iterator,
-    KeysView,
-    List,
-    Optional,
     Protocol,
     SupportsIndex,
-    Tuple,
-    Type,
     TypeVar,
-    Union,
-    ValuesView,
     overload,
 )
+from collections.abc import ItemsView, Iterable, Iterator, KeysView, ValuesView
 from uuid import UUID
 
 from winrt.runtime import ApartmentType
@@ -80,7 +71,7 @@ class IInspectable_Static(type):
 
 class IInspectable(metaclass=IInspectable_Static):
     @abstractmethod
-    def as_(self, type: Type[_TObject], /) -> _TObject: ...
+    def as_(self, type: type[_TObject], /) -> _TObject: ...
     @property
     @abstractmethod
     def _iids_(self) -> Array[UUID]: ...
@@ -107,7 +98,7 @@ class MutableSequence(Sequence[_T]):
 class Mapping(Generic[_KT, _VT_co]):
     # collections.abc.Mapping mixin methods
     @overload
-    def get(self, __key: _KT) -> Optional[_VT_co]: ...
+    def get(self, __key: _KT) -> _VT_co | None: ...
     @overload
     def get(self, __key: _KT, default: _VT_co | _T) -> _VT_co | _T: ...
     def items(self) -> ItemsView[_KT, _VT_co]: ...
@@ -127,11 +118,11 @@ class MutableMapping(Mapping[_KT, _VT]):
     def pop(self, __key: _KT, default: _VT) -> _VT: ...
     @overload
     def pop(self, __key: _KT, default: _T) -> _VT | _T: ...
-    def popitem(self) -> Tuple[_KT, _VT]: ...
+    def popitem(self) -> tuple[_KT, _VT]: ...
     @overload
     def setdefault(
-        self: MutableMapping[_KT, Optional[_T]], __key: _KT, __default: None = None
-    ) -> Optional[_T]: ...
+        self: MutableMapping[_KT, _T | None], __key: _KT, __default: None = None
+    ) -> _T | None: ...
     @overload
     def setdefault(self, __key: _KT, __default: _VT) -> _VT: ...
     @overload
@@ -144,7 +135,7 @@ class MutableMapping(Mapping[_KT, _VT]):
 # actual runtime classes
 
 class Object(IInspectable):
-    def as_(self, type: Type[_TObject], /) -> _TObject: ...
+    def as_(self, type: type[_TObject], /) -> _TObject: ...
     @property
     def _iids_(self) -> Array[UUID]: ...
     @property
@@ -156,13 +147,13 @@ class Array(MutableSequence[_T]):
     @overload
     def __init__(
         self,
-        type: Union[Type[_T], str],
+        type: type[_T] | str,
         size: int,
     ) -> None: ...
     @overload
     def __init__(
         self,
-        type: Union[Type[_T], str],
+        type: type[_T] | str,
         initializer: memoryview,
     ) -> None: ...
     @overload
@@ -170,21 +161,21 @@ class Array(MutableSequence[_T]):
     @overload
     def __init__(
         self,
-        type: Union[Type[_T], str],
+        type: type[_T] | str,
         initializer: Array[_T],
     ) -> None: ...
     @overload
     def __init__(
         self,
-        type: Union[Type[_T], str],
-        initializer: List[_T],
+        type: type[_T] | str,
+        initializer: list[_T],
         /,
     ) -> None: ...
     @overload
     def __init__(
         self,
-        __type: Union[Type[_T], str],
-        __initializer: Tuple[_T],
+        __type: type[_T] | str,
+        __initializer: tuple[_T],
     ) -> None: ...
     def __buffer__(self, flags: int, /) -> memoryview: ...
     def __release_buffer__(self, view: memoryview, /) -> None: ...
