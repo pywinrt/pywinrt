@@ -89,7 +89,7 @@ jobs:
           PYTHONPATH: _install/projection
         run: python -X dev -m unittest -v
   mingw:
-    runs-on: windows-2022
+    runs-on: windows-latest
     strategy:
       fail-fast: false
       matrix:
