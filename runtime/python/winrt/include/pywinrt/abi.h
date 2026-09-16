@@ -174,7 +174,7 @@ namespace py
         {
             PyErr_Format(
                 PyExc_RuntimeError,
-                "_winrt._C_API ABI minor version mismatch: expected >= %d, got %d",
+                "winrt._winrt._C_API ABI minor version mismatch: expected >= %d, got %d",
                 runtime_abi_version_minor,
                 PyWinRT_API->abi_version_minor);
             return -1;
