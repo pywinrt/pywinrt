@@ -94,6 +94,11 @@
   top-level `interop/`, so everything remaining under `projection/` is
   generated. Their distribution names, module names and source file names are
   unchanged, and their packaging is still emitted by `generate-pyproject.py`.
+- `<pywinrt/base.h>` is now an umbrella header over ten smaller ones - among
+  them `<pywinrt/abi.h>`, which holds the ABI struct that a projection module
+  and `winrt-runtime` agree on, and `<pywinrt/convert.h>`, which holds the
+  Python-to-WinRT conversions. Code that includes `<pywinrt/base.h>` needs no
+  change: it still provides everything.
 - The projection is now compiled without RTTI (`/GR-` on MSVC, `-fno-rtti`
   otherwise). Nothing in it uses `dynamic_cast`, and the only uses of `typeid`
   were a dozen `typeid(T).name()` calls in the messages of
