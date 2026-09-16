@@ -1,0 +1,50 @@
+name: abi-compat
+concurrency:
+  group: abi-compat-${{ github.ref }}
+  cancel-in-progress: true
+
+# On request only. The answer changes when the ABI is deliberately changed -
+# an entry point added to the capsule, a declared layout moved, the minor
+# bumped - and not otherwise, so running it on every push would rebuild the
+# projection twice over for a result that is the same as the last one. Run it
+# when the ABI moves and before a release.
+on:
+  workflow_dispatch:
+    inputs:
+      baseline:
+        # the default is the newest wheels/* tag; give a ref here to pair
+        # against something else, e.g. a release candidate against the release
+        # before it
+        description: the git ref to build the old half from
+        required: false
+        type: string
+
+jobs:
+  compat:
+    runs-on: windows-2025-vs2026
+    name: 'ABI compatibility with ${{ inputs.baseline || ''the newest wheels/* tag'' }}'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # the baseline is checked out into a worktree, which needs the tags
+          # and the history behind them
+          fetch-depth: 0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - run: python -m pip install -r requirements.txt
+      # the wheels are built with --no-build-isolation so that the winrt-sdk
+      # and winrt-runtime build dependencies come from the tree being built
+      # rather than from PyPI, which means the build backend has to be here
+      - run: python -m pip install "setuptools>=78" wheel
+      - name: install nuget packages
+        run: ./scripts/fetch-tools.ps1 -noCppWinRT -noWindowsSDK -noMicrosoftUiXaml
+      - name: configure
+        run: cmake -S projection -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF -A x64
+      - name: build
+        run: cmake --build _build/projection --config Release --parallel --verbose
+      - name: install
+        run: cmake --install _build/projection --prefix _install/projection
+      - name: check
+        run: python scripts/abi-compat.py ${{ inputs.baseline && format('--baseline {0}', inputs.baseline) || '' }}
