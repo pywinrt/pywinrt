@@ -53,7 +53,7 @@ static class CategoryExtensions
             return Category.Interface;
         }
 
-        if (type.IsDelegate())
+        if (type.IsDelegate)
         {
             return Category.Delegate;
         }

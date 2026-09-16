@@ -426,7 +426,7 @@ sealed class Members
                 var t in GetForeignSignatureTypes(type)
                     .Where(t =>
                         t is GenericInstanceType
-                        || (t.Resolve() is TypeDefinition def && def.IsDelegate())
+                        || (t.Resolve() is TypeDefinition def && def.IsDelegate)
                     )
             )
             {

@@ -171,7 +171,7 @@ static class WriterExtensions
             );
         }
 
-        if (type.Type.IsCustomNumeric())
+        if (type.Type.IsCustomNumeric)
         {
             w.WriteNumberCommonValuesGetSetDefs(type);
         }
@@ -203,7 +203,7 @@ static class WriterExtensions
             );
         }
 
-        if (type.Type.IsCustomNumeric())
+        if (type.Type.IsCustomNumeric)
         {
             w.WriteNumberFactoryFunctionDefs(type);
         }
@@ -273,7 +273,7 @@ static class WriterExtensions
         w.WriteLine($"{{ Py_tp_methods, reinterpret_cast<void*>(_methods_{name}) }},");
         w.WriteLine($"{{ Py_tp_getset, reinterpret_cast<void*>(_getset_{name}) }},");
 
-        if (type.Type.IsCustomNumeric() && type.Name != "Plane")
+        if (type.Type.IsCustomNumeric && type.Name != "Plane")
         {
             w.WriteNumberSlots(type);
         }
@@ -414,7 +414,7 @@ static class WriterExtensions
             writeGroupRow(group);
         }
 
-        if (type.Type.IsCustomNumeric())
+        if (type.Type.IsCustomNumeric)
         {
             w.WriteNumberMethodDefs(type);
         }
@@ -964,7 +964,7 @@ static class WriterExtensions
         foreach (var (i, method) in group.Overloads.Select((m, i) => (i, m)))
         {
             var pyInParamCount = method.PyInParamCount;
-            var inParamCount = method.Method.Parameters.Count(p => p.IsInParam());
+            var inParamCount = method.Method.Parameters.Count(p => p.IsInParam);
             var ns = type.Namespace;
 
             if (i > 0)
@@ -1038,7 +1038,7 @@ static class WriterExtensions
         }
 
         // Invoke member - simplified code path for methods w/ no out params
-        if (!method.Method.Parameters.Any(p => p.IsPythonOutParam()))
+        if (!method.Method.Parameters.Any(p => p.IsPythonOutParam))
         {
             var context = type.GetMethodInvokeContext(method);
 
@@ -1115,7 +1115,7 @@ static class WriterExtensions
             returnValues.Add("out_return_value");
         }
 
-        foreach (var param in method.Method.Parameters.Where(p => p.IsPythonOutParam()))
+        foreach (var param in method.Method.Parameters.Where(p => p.IsPythonOutParam))
         {
             var outParam = $"out{param.Index}";
 
@@ -1452,7 +1452,7 @@ static class WriterExtensions
                 var t in members
                     .Classes.OrderByDependency()
                     .Concat(members.Interfaces)
-                    .Concat(members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
+                    .Concat(members.Structs.Where(s => !s.Type.IsCustomizedStruct))
                     .Where(t => t.CircularDependencyDepth == dependencyDepth)
             )
             {
@@ -1630,7 +1630,7 @@ static class WriterExtensions
 
     public static void WriteEnumBufferFormat(this IndentedTextWriter w, ProjectedType type)
     {
-        var fmt = type.Type.HasFlagsAttribute() ? "I" : "i";
+        var fmt = type.Type.HasFlagsAttribute ? "I" : "i";
 
         w.WriteLine($"template<>");
         w.WriteLine(
@@ -1712,14 +1712,14 @@ static class WriterExtensions
         // HACK: There are a couple of problematic methods. Subclasses of
         // DependencyObject like to override SetValue with a different
         // parameter type. Subclasses of FlyoutBase like to override ShowAt.
-        var typeIgnore = method.IsProblematicOverride() ? "  # type: ignore[misc,override]" : "";
+        var typeIgnore = method.IsProblematicOverride ? "  # type: ignore[misc,override]" : "";
 
         var paramList = "";
 
-        if (method.Method.Parameters.Any(p => p.IsPythonInParam()))
+        if (method.Method.Parameters.Any(p => p.IsPythonInParam))
         {
             paramList =
-                $", {string.Join(", ", method.Method.Parameters.Where(p => p.IsPythonInParam()).Select(p => $"{p.Name.ToPythonIdentifier()}: {p.ToPyInParamTyping(ns, nullabilityInfo.Parameters[p.Index].Type, packageMap, method.GenericArgMap)}"))}, /";
+                $", {string.Join(", ", method.Method.Parameters.Where(p => p.IsPythonInParam).Select(p => $"{p.Name.ToPythonIdentifier()}: {p.ToPyInParamTyping(ns, nullabilityInfo.Parameters[p.Index].Type, packageMap, method.GenericArgMap)}"))}, /";
         }
 
         w.WriteLine(

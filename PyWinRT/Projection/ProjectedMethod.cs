@@ -72,7 +72,7 @@ class ProjectedMethod
 
             foreach (var o in method.Overrides)
             {
-                if (o.DeclaringType.Resolve().IsExclusiveTo())
+                if (o.DeclaringType.Resolve().IsExclusiveTo)
                 {
                     IsExclusiveTo = true;
                 }
@@ -210,8 +210,7 @@ class ProjectedMethod
     /// This is computed on demand since not all methods have parameters that
     /// can be projected, e.g. the constructors of metadata attributes.
     /// </remarks>
-    public int PyInParamCount =>
-        pyInParamCount ??= Method.Parameters.Count(p => p.IsPythonInParam());
+    public int PyInParamCount => pyInParamCount ??= Method.Parameters.Count(p => p.IsPythonInParam);
 
     private int? pyInParamCount;
 

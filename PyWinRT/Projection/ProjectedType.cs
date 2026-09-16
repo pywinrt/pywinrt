@@ -12,7 +12,7 @@ class ProjectedType
         Namespace = type.Namespace;
         Name = type.Name.ToNonGeneric();
         Category = type.GetCategory();
-        IsStatic = type.IsStaticClass();
+        IsStatic = type.IsStaticClass;
         IsGeneric = type.HasGenericParameters;
         IsComposable = type.CustomAttributes.Any(a =>
             a.AttributeType.FullName == "Windows.Foundation.Metadata.ComposableAttribute"
@@ -33,7 +33,7 @@ class ProjectedType
         {
             CppWinrtType = "winrt::event_token";
         }
-        else if (type.IsCustomNumeric(out var cppName))
+        else if (type.TryGetCustomNumericCppName(out var cppName))
         {
             CppWinrtType = $"winrt::{CppNamespace}::{cppName}";
         }
@@ -54,7 +54,7 @@ class ProjectedType
         CppPyWrapperTemplateType = IsGeneric ? $"py::proj::{CppNamespace}::{Name}" : CppWinrtType;
 
         PyRequiresMetaclass =
-            IsComposable || type.Methods.Any(m => m.IsStatic) || type.IsCustomNumeric();
+            IsComposable || type.Methods.Any(m => m.IsStatic) || type.IsCustomNumeric;
 
         IsPyIterator = type.ImplementsInterface("Windows.Foundation.Collections.IIterator`1");
         IsPyIterable =
@@ -86,7 +86,7 @@ class ProjectedType
         );
         Interfaces = type
             .Interfaces.Select(i => i.InterfaceType)
-            .Where(i => !i.Resolve().IsExclusiveTo())
+            .Where(i => !i.Resolve().IsExclusiveTo)
             .OrderBy(i => sortedInterfaces.FindIndex(s => s.FullName == i.Resolve().FullName))
             .ToArray();
 
@@ -387,7 +387,7 @@ class ProjectedType
         // the number of arguments only distinguishes overloads of a method
         var argCount =
             method.MemberKind == "method"
-                ? $", {method.Method.Parameters.Count(p => p.IsInParam())}"
+                ? $", {method.Method.Parameters.Count(p => p.IsInParam)}"
                 : "";
 
         return $"py::require<{required.ToCppTypeName()}>({obj}, "
@@ -785,7 +785,7 @@ class ProjectedType
 
                 var resolvedType = iface.InterfaceType.Resolve();
 
-                if (resolvedType.IsExclusiveTo())
+                if (resolvedType.IsExclusiveTo)
                 {
                     continue;
                 }
@@ -1049,7 +1049,7 @@ class ProjectedType
 
                 var resolvedType = iface.InterfaceType.Resolve();
 
-                if (resolvedType.IsExclusiveTo())
+                if (resolvedType.IsExclusiveTo)
                 {
                     continue;
                 }
@@ -1114,7 +1114,7 @@ class ProjectedType
 
                 var resolvedType = iface.InterfaceType.Resolve();
 
-                if (resolvedType.IsExclusiveTo())
+                if (resolvedType.IsExclusiveTo)
                 {
                     continue;
                 }

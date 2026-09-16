@@ -80,7 +80,7 @@ static class DelegateWriterExtensions
                 writeGetCallable();
             }
 
-            var pythonInParams = method.Parameters.Where(p => p.IsPythonInParam()).ToList();
+            var pythonInParams = method.Parameters.Where(p => p.IsPythonInParam).ToList();
 
             foreach (var param in pythonInParams)
             {
@@ -120,7 +120,7 @@ static class DelegateWriterExtensions
 
             var i = method.ReturnType.FullName == "System.Void" ? 0 : 1;
 
-            foreach (var param in method.Parameters.Where(p => p.IsPythonOutParam()))
+            foreach (var param in method.Parameters.Where(p => p.IsPythonOutParam))
             {
                 switch (param.GetCategory())
                 {

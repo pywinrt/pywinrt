@@ -84,7 +84,7 @@ static class WinRtGuid
             return GetGuidAttribute(def).ToString("B");
         }
 
-        if (def.IsDelegate())
+        if (def.IsDelegate)
         {
             return $"delegate({GetGuidAttribute(def):B})";
         }

@@ -20,7 +20,7 @@ static class StructWriterExtensions
 
             var pass = true;
 
-            if (type.Type.IsCustomNumeric())
+            if (type.Type.IsCustomNumeric)
             {
                 w.WriteNumberFactoryFunctionPyTyping(type, ref pass);
                 w.WriteNumberCommonValuesPyTyping(type, ref pass);
@@ -55,7 +55,7 @@ static class StructWriterExtensions
 
         w.WriteLine($"def __replace__(self, /, **changes: typing.Any) -> {type.Name}: ...");
 
-        if (type.Type.IsCustomNumeric())
+        if (type.Type.IsCustomNumeric)
         {
             if (type.Name != "Plane")
             {
@@ -89,7 +89,7 @@ static class StructWriterExtensions
         w.WriteStructConstructor(type);
         w.WriteDeallocFunction(type);
 
-        if (type.Type.IsCustomNumeric())
+        if (type.Type.IsCustomNumeric)
         {
             w.WriteNumberFactoryFunctionMethodDefs(type);
             w.WriteNumberCommonValueMethods(type);
@@ -116,7 +116,7 @@ static class StructWriterExtensions
 
         w.WriteGetSetTable(type);
 
-        if (type.Type.IsCustomNumeric() && type.Name != "Plane")
+        if (type.Type.IsCustomNumeric && type.Name != "Plane")
         {
             w.WriteBlankLine();
             w.WriteNumberSlotMethods(type);
@@ -338,7 +338,7 @@ static class StructWriterExtensions
         );
         w.WriteBlock(() =>
         {
-            if (type.Type.Fields.Any(f => f.FieldType.IsStruct()))
+            if (type.Type.Fields.Any(f => f.FieldType.IsStruct))
             {
                 w.WriteLine("py::pyobj_handle unpack_str{PyUnicode_InternFromString(\"unpack\")};");
                 w.WriteLine("if (!unpack_str)");
@@ -355,7 +355,7 @@ static class StructWriterExtensions
                 w.WriteBlock(() => w.WriteLine("return nullptr;"));
                 w.WriteBlankLine();
 
-                if (field.FieldType.IsStruct())
+                if (field.FieldType.IsStruct)
                 {
                     w.WriteLine(
                         $"{field.Name}.attach(PyObject_CallMethodNoArgs({field.Name}.get(), unpack_str.get()));"

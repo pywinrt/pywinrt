@@ -213,8 +213,8 @@ rootCommand.SetHandler(
         {
             types.AddRange(
                 assembly
-                    .MainModule.Types.Where(TypeExtensions.IsWindowsRuntime)
-                    .Where(t => !t.IsExclusiveTo())
+                    .MainModule.Types.Where(t => t.IsWindowsRuntime)
+                    .Where(t => !t.IsExclusiveTo)
                     .Where(t => Filter.Includes(t.FullName, include, exclude))
             );
         }
