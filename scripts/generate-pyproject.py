@@ -638,6 +638,7 @@ write_project_files(
         "src/_winrt_array.cpp",
         "src/_winrt_box.cpp",
         "src/_winrt_buffer.cpp",
+        "src/errors.cpp",
         "src/runtime.cpp",
     ],
     package_name="winrt-runtime",

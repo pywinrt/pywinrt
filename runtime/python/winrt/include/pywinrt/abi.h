@@ -57,6 +57,99 @@ namespace py
         const char* interface_name;
     };
 
+    /// The member is reached without an instance, so a failure to reach it
+    /// cannot be blamed on the object.
+    inline constexpr uint32_t site_is_static = 1;
+    /// The member is a constructor.
+    inline constexpr uint32_t site_is_constructor = 2;
+
+    /**
+     * Identifies the projected member a call was made through, so that the
+     * runtime can say which one failed without the calling module having to
+     * work out the wording itself.
+     *
+     * Every field is either a scalar or a pointer to a string literal in the
+     * calling module, so an instance of this is a @c static @c constexpr next
+     * to the member it describes and costs nothing to pass.
+     */
+    struct member_site
+    {
+        member_kind kind;
+        /// Number of WinRT input parameters, which is what distinguishes the
+        /// overloads of a method from each other.
+        uint32_t arg_count;
+        /// Metadata name of the type that declares the member or @c nullptr for
+        /// a parameterized interface, which has no name in the metadata.
+        const char* type_name;
+        const char* member_name;
+        /// Metadata name of the interface that declares the member, or
+        /// @c nullptr when it is not reached through one.
+        const char* interface_name;
+        /// Zero or more of the @c site_is_* flags above.
+        uint32_t flags;
+    };
+
+    /**
+     * What the calling module caught, which decides which Python exception the
+     * runtime raises.
+     */
+    enum class error_kind
+    {
+        /// A C++/WinRT @c hresult_error. Only this kind fills in @c hresult,
+        /// @c message and @c restricted_error_info.
+        hresult,
+        bad_alloc,
+        out_of_range,
+        invalid_argument,
+        /// Any other @c std::exception.
+        std_exception,
+        /// Something that is not a @c std::exception at all.
+        unknown,
+    };
+
+    /**
+     * A C++ exception, flattened into something that can cross the boundary.
+     *
+     * The exception itself cannot: its layout comes from whichever C++/WinRT
+     * and standard library headers the calling module was built with, and
+     * matching exception types across modules is not something every supported
+     * toolchain does the same way. So the module classifies its own exception
+     * and hands over this instead, which is read only for the duration of the
+     * call.
+     */
+    struct error_info
+    {
+        error_kind kind;
+        /// The @c HRESULT, for @c error_kind::hresult.
+        int32_t hresult;
+        /// The error message, not necessarily null-terminated.
+        const wchar_t* message;
+        /// Length of @c message in characters.
+        uint32_t message_length;
+        /// Borrowed @c IRestrictedErrorInfo the error was originated with, or
+        /// @c nullptr. Carried so that the runtime can report the details it
+        /// holds without the modules having to be rebuilt to send them.
+        void* restricted_error_info;
+        /// @c std::exception::what(), or @c nullptr for @c error_kind::unknown.
+        const char* what;
+        /// The member that was being called, or @c nullptr when it is not known.
+        member_site const* site;
+    };
+
+    /**
+     * A call that never reached WinRT at all, because of how it was made.
+     */
+    enum class call_error
+    {
+        /// No overload takes this many arguments. The count is passed
+        /// alongside; -1 means a Python exception is already pending.
+        invalid_arg_count,
+        /// Keyword arguments were passed to a member that takes none.
+        keyword_arguments,
+        /// The type cannot be constructed from Python.
+        cannot_instantiate,
+    };
+
     // ----- the declared layouts ------------------------------------------
     //
     // The runtime_api struct below is only half of the contract. A projection
@@ -82,8 +175,12 @@ namespace py
     //    the same reason. A struct or a parameterized interface is owned by one
     //    module and unwrapped by all the others.
     //  - py::member_not_available, passed by reference to
-    //    set_member_not_available_error(). The names in it point at string
-    //    literals in the calling module, which outlive the call.
+    //    set_member_not_available_error(), and py::member_site and
+    //    py::error_info, passed to set_call_error() and set_error(). The
+    //    pointers in them are borrowed for the duration of the call: the names
+    //    point at string literals in the calling module, and the message and
+    //    the IRestrictedErrorInfo in an error_info belong to the exception
+    //    object that the module is still standing in the catch block for.
     //  - The vtables: py::Array (Alloc, WinrtElementTypeName, Format, Size,
     //    ValueSize, Data, At, Set, then the destructor), which the module
     //    implements and the runtime calls; py::IPywinrtObject (IUnknown's
@@ -152,6 +249,51 @@ namespace py
     static_assert(
         sizeof(member_not_available) == 2 * sizeof(uint32_t) + 3 * sizeof(const char*));
 
+    // Both structs below put a uint32_t among pointers - member_site's flags
+    // after the last of them, error_info's message_length between two - so a
+    // 64-bit target pads it out to the next pointer and a 32-bit one does not.
+    // That is what the alignof(const char*) term in these stands for: the
+    // uint32_t together with whatever the compiler puts after it.
+
+    static_assert(std::is_standard_layout_v<member_site>);
+    static_assert(offsetof(member_site, kind) == 0);
+    static_assert(offsetof(member_site, arg_count) == sizeof(uint32_t));
+    static_assert(offsetof(member_site, type_name) == 2 * sizeof(uint32_t));
+    static_assert(
+        offsetof(member_site, member_name)
+        == 2 * sizeof(uint32_t) + sizeof(const char*));
+    static_assert(
+        offsetof(member_site, interface_name)
+        == 2 * sizeof(uint32_t) + 2 * sizeof(const char*));
+    static_assert(
+        offsetof(member_site, flags) == 2 * sizeof(uint32_t) + 3 * sizeof(const char*));
+    static_assert(
+        sizeof(member_site)
+        == 2 * sizeof(uint32_t) + 3 * sizeof(const char*) + alignof(const char*));
+
+    static_assert(std::is_standard_layout_v<error_info>);
+    static_assert(sizeof(error_kind) == sizeof(uint32_t));
+    static_assert(offsetof(error_info, kind) == 0);
+    static_assert(offsetof(error_info, hresult) == sizeof(uint32_t));
+    static_assert(offsetof(error_info, message) == 2 * sizeof(uint32_t));
+    static_assert(
+        offsetof(error_info, message_length)
+        == 2 * sizeof(uint32_t) + sizeof(const char*));
+    static_assert(
+        offsetof(error_info, restricted_error_info)
+        == 2 * sizeof(uint32_t) + sizeof(const char*) + alignof(const char*));
+    static_assert(
+        offsetof(error_info, what)
+        == 2 * sizeof(uint32_t) + 2 * sizeof(const char*) + alignof(const char*));
+    static_assert(
+        offsetof(error_info, site)
+        == 2 * sizeof(uint32_t) + 3 * sizeof(const char*) + alignof(const char*));
+    static_assert(
+        sizeof(error_info)
+        == 2 * sizeof(uint32_t) + 4 * sizeof(const char*) + alignof(const char*));
+
+    static_assert(sizeof(call_error) == sizeof(uint32_t));
+
     static_assert(sizeof(winrt::guid) == 16);
     static_assert(std::is_trivially_copyable_v<winrt::guid>);
     static_assert(sizeof(winrt::hstring) == sizeof(void*));
@@ -177,7 +319,7 @@ namespace py
      * This must be changed if the runtime API changes in a way that adds new
      * APIs but otherwise doesn't break binary compatibility.
      */
-    const uint16_t runtime_abi_version_minor = 3;
+    const uint16_t runtime_abi_version_minor = 4;
 
     PyTypeObject* register_python_type(
         PyObject* module,
@@ -198,6 +340,10 @@ namespace py
     PyObject* await_async(PyObject*) noexcept;
     winrt::Windows::Storage::Streams::IBuffer convert_to_ibuffer(PyObject* obj);
     void set_member_not_available_error(member_not_available const& info) noexcept;
+    void set_error(error_info const& info) noexcept;
+    void set_call_error(
+        call_error error, member_site const* site, Py_ssize_t arg_count) noexcept;
+    int32_t report_unraisable() noexcept;
 
     namespace cpp::_winrt
     {
@@ -226,6 +372,9 @@ namespace py
         decltype(await_async)* await_async;
         decltype(convert_to_ibuffer)* convert_to_ibuffer;
         decltype(set_member_not_available_error)* set_member_not_available_error;
+        decltype(set_error)* set_error;
+        decltype(set_call_error)* set_call_error;
+        decltype(report_unraisable)* report_unraisable;
     };
 
 #ifndef PYWINRT_RUNTIME_MODULE
@@ -320,6 +469,25 @@ namespace py
     {
         WINRT_ASSERT(PyWinRT_API && PyWinRT_API->set_member_not_available_error);
         (*PyWinRT_API->set_member_not_available_error)(info);
+    }
+
+    inline void set_error(error_info const& info) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->set_error);
+        (*PyWinRT_API->set_error)(info);
+    }
+
+    inline void set_call_error(
+        call_error error, member_site const* site, Py_ssize_t arg_count) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->set_call_error);
+        (*PyWinRT_API->set_call_error)(error, site, arg_count);
+    }
+
+    inline int32_t report_unraisable() noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->report_unraisable);
+        return (*PyWinRT_API->report_unraisable)();
     }
 
     inline bool is_buffer_compatible(
