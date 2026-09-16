@@ -3305,15 +3305,6 @@ namespace py::cpp::Microsoft::UI::Text
 
     // ----- ITextCharacterFormat interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ITextCharacterFormat(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Text::ITextCharacterFormat>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Text::ITextCharacterFormat>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_ITextCharacterFormat(py::wrapper::Microsoft::UI::Text::ITextCharacterFormat* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -4448,9 +4439,6 @@ namespace py::cpp::Microsoft::UI::Text
         { }};
 
     static PyType_Slot _type_slots_ITextCharacterFormat[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ITextCharacterFormat) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextCharacterFormat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextCharacterFormat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextCharacterFormat) },
@@ -4460,11 +4448,7 @@ namespace py::cpp::Microsoft::UI::Text
         "winui3._winui3_microsoft_ui_text._ITextCharacterFormat",
         sizeof(py::wrapper::Microsoft::UI::Text::ITextCharacterFormat),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ITextCharacterFormat};
 
     struct ImplementsITextCharacterFormat : py::ImplementsInterfaceT<ImplementsITextCharacterFormat, winrt::Microsoft::UI::Text::ITextCharacterFormat>
@@ -5647,23 +5631,10 @@ namespace py::cpp::Microsoft::UI::Text
         "winui3._winui3_microsoft_ui_text.ITextCharacterFormat",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsITextCharacterFormat};
 
     // ----- ITextParagraphFormat interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ITextParagraphFormat(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Text::ITextParagraphFormat>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Text::ITextParagraphFormat>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ITextParagraphFormat(py::wrapper::Microsoft::UI::Text::ITextParagraphFormat* self) noexcept
     {
@@ -6815,9 +6786,6 @@ namespace py::cpp::Microsoft::UI::Text
         { }};
 
     static PyType_Slot _type_slots_ITextParagraphFormat[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ITextParagraphFormat) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextParagraphFormat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextParagraphFormat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextParagraphFormat) },
@@ -6827,11 +6795,7 @@ namespace py::cpp::Microsoft::UI::Text
         "winui3._winui3_microsoft_ui_text._ITextParagraphFormat",
         sizeof(py::wrapper::Microsoft::UI::Text::ITextParagraphFormat),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ITextParagraphFormat};
 
     struct ImplementsITextParagraphFormat : py::ImplementsInterfaceT<ImplementsITextParagraphFormat, winrt::Microsoft::UI::Text::ITextParagraphFormat>
@@ -8064,23 +8028,10 @@ namespace py::cpp::Microsoft::UI::Text
         "winui3._winui3_microsoft_ui_text.ITextParagraphFormat",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsITextParagraphFormat};
 
     // ----- ITextRange interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ITextRange(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Text::ITextRange>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Text::ITextRange>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ITextRange(py::wrapper::Microsoft::UI::Text::ITextRange* self) noexcept
     {
@@ -9556,9 +9507,6 @@ namespace py::cpp::Microsoft::UI::Text
         { }};
 
     static PyType_Slot _type_slots_ITextRange[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ITextRange) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextRange) },
@@ -9568,11 +9516,7 @@ namespace py::cpp::Microsoft::UI::Text
         "winui3._winui3_microsoft_ui_text._ITextRange",
         sizeof(py::wrapper::Microsoft::UI::Text::ITextRange),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ITextRange};
 
     struct ImplementsITextRange : py::ImplementsInterfaceT<ImplementsITextRange, winrt::Microsoft::UI::Text::ITextRange>
@@ -11287,23 +11231,10 @@ namespace py::cpp::Microsoft::UI::Text
         "winui3._winui3_microsoft_ui_text.ITextRange",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsITextRange};
 
     // ----- ITextSelection interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ITextSelection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Text::ITextSelection>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Text::ITextSelection>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ITextSelection(py::wrapper::Microsoft::UI::Text::ITextSelection* self) noexcept
     {
@@ -13062,9 +12993,6 @@ namespace py::cpp::Microsoft::UI::Text
         { }};
 
     static PyType_Slot _type_slots_ITextSelection[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ITextSelection) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextSelection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextSelection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextSelection) },
@@ -13074,11 +13002,7 @@ namespace py::cpp::Microsoft::UI::Text
         "winui3._winui3_microsoft_ui_text._ITextSelection",
         sizeof(py::wrapper::Microsoft::UI::Text::ITextSelection),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ITextSelection};
 
     struct ImplementsITextSelection : py::ImplementsInterfaceT<ImplementsITextSelection, winrt::Microsoft::UI::Text::ITextSelection>
@@ -15174,11 +15098,7 @@ namespace py::cpp::Microsoft::UI::Text
         "winui3._winui3_microsoft_ui_text.ITextSelection",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsITextSelection};
 
     // ----- Microsoft.UI.Text Initialization --------------------

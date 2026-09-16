@@ -20,7 +20,7 @@ uv run --script https://raw.githubusercontent.com/pywinrt/pywinrt/refs/heads/mai
 
 ```python
 # /// script
-# requires-python = ">=3.10"
+# requires-python = ">=3.11"
 # dependencies = [
 #   "winrt-runtime",
 #   "winrt-Windows.Foundation",

@@ -6096,15 +6096,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     // ----- IErrorReportingSettings interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IErrorReportingSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IErrorReportingSettings(py::wrapper::Windows::Foundation::Diagnostics::IErrorReportingSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -6179,9 +6170,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }};
 
     static PyType_Slot _type_slots_IErrorReportingSettings[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IErrorReportingSettings) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IErrorReportingSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IErrorReportingSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IErrorReportingSettings) },
@@ -6191,11 +6179,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         "winrt._winrt_windows_foundation_diagnostics._IErrorReportingSettings",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::IErrorReportingSettings),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IErrorReportingSettings};
 
     struct ImplementsIErrorReportingSettings : py::ImplementsInterfaceT<ImplementsIErrorReportingSettings, winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>
@@ -6337,23 +6321,10 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         "winrt._winrt_windows_foundation_diagnostics.IErrorReportingSettings",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIErrorReportingSettings};
 
     // ----- IFileLoggingSession interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFileLoggingSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFileLoggingSession(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession* self) noexcept
     {
@@ -6593,9 +6564,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }};
 
     static PyType_Slot _type_slots_IFileLoggingSession[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFileLoggingSession) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileLoggingSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileLoggingSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileLoggingSession) },
@@ -6605,11 +6573,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         "winrt._winrt_windows_foundation_diagnostics._IFileLoggingSession",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFileLoggingSession};
 
     struct ImplementsIFileLoggingSession : py::ImplementsInterfaceT<ImplementsIFileLoggingSession, winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>
@@ -6939,23 +6903,10 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         "winrt._winrt_windows_foundation_diagnostics.IFileLoggingSession",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFileLoggingSession};
 
     // ----- ILoggingChannel interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ILoggingChannel(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ILoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self) noexcept
     {
@@ -7225,9 +7176,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }};
 
     static PyType_Slot _type_slots_ILoggingChannel[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ILoggingChannel) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILoggingChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILoggingChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILoggingChannel) },
@@ -7237,11 +7185,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         "winrt._winrt_windows_foundation_diagnostics._ILoggingChannel",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ILoggingChannel};
 
     struct ImplementsILoggingChannel : py::ImplementsInterfaceT<ImplementsILoggingChannel, winrt::Windows::Foundation::Diagnostics::ILoggingChannel>
@@ -7655,23 +7599,10 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         "winrt._winrt_windows_foundation_diagnostics.ILoggingChannel",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsILoggingChannel};
 
     // ----- ILoggingSession interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ILoggingSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Foundation::Diagnostics::ILoggingSession>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Diagnostics::ILoggingSession>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ILoggingSession(py::wrapper::Windows::Foundation::Diagnostics::ILoggingSession* self) noexcept
     {
@@ -7873,9 +7804,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }};
 
     static PyType_Slot _type_slots_ILoggingSession[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ILoggingSession) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILoggingSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILoggingSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILoggingSession) },
@@ -7885,11 +7813,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         "winrt._winrt_windows_foundation_diagnostics._ILoggingSession",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::ILoggingSession),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ILoggingSession};
 
     struct ImplementsILoggingSession : py::ImplementsInterfaceT<ImplementsILoggingSession, winrt::Windows::Foundation::Diagnostics::ILoggingSession>
@@ -8175,23 +8099,10 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         "winrt._winrt_windows_foundation_diagnostics.ILoggingSession",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsILoggingSession};
 
     // ----- ILoggingTarget interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ILoggingTarget(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ILoggingTarget(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self) noexcept
     {
@@ -8457,9 +8368,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }};
 
     static PyType_Slot _type_slots_ILoggingTarget[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ILoggingTarget) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILoggingTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILoggingTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILoggingTarget) },
@@ -8469,11 +8377,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         "winrt._winrt_windows_foundation_diagnostics._ILoggingTarget",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ILoggingTarget};
 
     struct ImplementsILoggingTarget : py::ImplementsInterfaceT<ImplementsILoggingTarget, winrt::Windows::Foundation::Diagnostics::ILoggingTarget>
@@ -9097,11 +9001,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         "winrt._winrt_windows_foundation_diagnostics.ILoggingTarget",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsILoggingTarget};
 
     // ----- Windows.Foundation.Diagnostics Initialization --------------------

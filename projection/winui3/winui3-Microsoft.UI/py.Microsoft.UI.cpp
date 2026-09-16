@@ -4634,15 +4634,6 @@ namespace py::cpp::Microsoft::UI
 
     // ----- IClosableNotifier interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IClosableNotifier(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::IClosableNotifier>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::IClosableNotifier>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IClosableNotifier(py::wrapper::Microsoft::UI::IClosableNotifier* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -4758,9 +4749,6 @@ namespace py::cpp::Microsoft::UI
         { }};
 
     static PyType_Slot _type_slots_IClosableNotifier[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IClosableNotifier) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IClosableNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IClosableNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IClosableNotifier) },
@@ -4770,11 +4758,7 @@ namespace py::cpp::Microsoft::UI
         "winui3._winui3_microsoft_ui._IClosableNotifier",
         sizeof(py::wrapper::Microsoft::UI::IClosableNotifier),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IClosableNotifier};
 
     struct ImplementsIClosableNotifier : py::ImplementsInterfaceT<ImplementsIClosableNotifier, winrt::Microsoft::UI::IClosableNotifier>
@@ -5004,11 +4988,7 @@ namespace py::cpp::Microsoft::UI
         "winui3._winui3_microsoft_ui.IClosableNotifier",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIClosableNotifier};
 
     // ----- DisplayId struct --------------------

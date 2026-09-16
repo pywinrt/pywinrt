@@ -4924,15 +4924,6 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- IBitmapFrame interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBitmapFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapFrame>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapFrame>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IBitmapFrame(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -5188,9 +5179,6 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }};
 
     static PyType_Slot _type_slots_IBitmapFrame[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBitmapFrame) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBitmapFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBitmapFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBitmapFrame) },
@@ -5200,11 +5188,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         "winrt._winrt_windows_graphics_imaging._IBitmapFrame",
         sizeof(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBitmapFrame};
 
     struct ImplementsIBitmapFrame : py::ImplementsInterfaceT<ImplementsIBitmapFrame, winrt::Windows::Graphics::Imaging::IBitmapFrame>
@@ -5594,23 +5578,10 @@ namespace py::cpp::Windows::Graphics::Imaging
         "winrt._winrt_windows_graphics_imaging.IBitmapFrame",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBitmapFrame};
 
     // ----- IBitmapFrameWithSoftwareBitmap interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBitmapFrameWithSoftwareBitmap(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IBitmapFrameWithSoftwareBitmap(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self) noexcept
     {
@@ -5936,9 +5907,6 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }};
 
     static PyType_Slot _type_slots_IBitmapFrameWithSoftwareBitmap[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBitmapFrameWithSoftwareBitmap) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBitmapFrameWithSoftwareBitmap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBitmapFrameWithSoftwareBitmap) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBitmapFrameWithSoftwareBitmap) },
@@ -5948,11 +5916,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         "winrt._winrt_windows_graphics_imaging._IBitmapFrameWithSoftwareBitmap",
         sizeof(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBitmapFrameWithSoftwareBitmap};
 
     struct ImplementsIBitmapFrameWithSoftwareBitmap : py::ImplementsInterfaceT<ImplementsIBitmapFrameWithSoftwareBitmap, winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>
@@ -6494,23 +6458,10 @@ namespace py::cpp::Windows::Graphics::Imaging
         "winrt._winrt_windows_graphics_imaging.IBitmapFrameWithSoftwareBitmap",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBitmapFrameWithSoftwareBitmap};
 
     // ----- IBitmapPropertiesView interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBitmapPropertiesView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IBitmapPropertiesView(py::wrapper::Windows::Graphics::Imaging::IBitmapPropertiesView* self) noexcept
     {
@@ -6557,9 +6508,6 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }};
 
     static PyType_Slot _type_slots_IBitmapPropertiesView[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBitmapPropertiesView) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBitmapPropertiesView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBitmapPropertiesView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBitmapPropertiesView) },
@@ -6569,11 +6517,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         "winrt._winrt_windows_graphics_imaging._IBitmapPropertiesView",
         sizeof(py::wrapper::Windows::Graphics::Imaging::IBitmapPropertiesView),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBitmapPropertiesView};
 
     struct ImplementsIBitmapPropertiesView : py::ImplementsInterfaceT<ImplementsIBitmapPropertiesView, winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>
@@ -6691,11 +6635,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         "winrt._winrt_windows_graphics_imaging.IBitmapPropertiesView",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBitmapPropertiesView};
 
     // ----- BitmapBounds struct --------------------

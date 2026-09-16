@@ -1516,15 +1516,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     // ----- IForceFeedbackEffect interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IForceFeedbackEffect(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IForceFeedbackEffect(py::wrapper::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -1660,9 +1651,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { }};
 
     static PyType_Slot _type_slots_IForceFeedbackEffect[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IForceFeedbackEffect) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IForceFeedbackEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IForceFeedbackEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IForceFeedbackEffect) },
@@ -1672,11 +1660,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         "winrt._winrt_windows_gaming_input_forcefeedback._IForceFeedbackEffect",
         sizeof(py::wrapper::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IForceFeedbackEffect};
 
     struct ImplementsIForceFeedbackEffect : py::ImplementsInterfaceT<ImplementsIForceFeedbackEffect, winrt::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect>
@@ -1873,11 +1857,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         "winrt._winrt_windows_gaming_input_forcefeedback.IForceFeedbackEffect",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIForceFeedbackEffect};
 
     // ----- Windows.Gaming.Input.ForceFeedback Initialization --------------------

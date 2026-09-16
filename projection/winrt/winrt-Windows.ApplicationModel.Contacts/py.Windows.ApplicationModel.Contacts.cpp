@@ -13885,15 +13885,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- IContactField interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContactField(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactField>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactField>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IContactField(py::wrapper::Windows::ApplicationModel::Contacts::IContactField* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -13981,9 +13972,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }};
 
     static PyType_Slot _type_slots_IContactField[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContactField) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactField) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactField) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactField) },
@@ -13993,11 +13981,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         "winrt._winrt_windows_applicationmodel_contacts._IContactField",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::IContactField),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContactField};
 
     struct ImplementsIContactField : py::ImplementsInterfaceT<ImplementsIContactField, winrt::Windows::ApplicationModel::Contacts::IContactField>
@@ -14163,23 +14147,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         "winrt._winrt_windows_applicationmodel_contacts.IContactField",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContactField};
 
     // ----- IContactFieldFactory interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContactFieldFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContactFieldFactory(py::wrapper::Windows::ApplicationModel::Contacts::IContactFieldFactory* self) noexcept
     {
@@ -14268,9 +14239,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }};
 
     static PyType_Slot _type_slots_IContactFieldFactory[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContactFieldFactory) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactFieldFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactFieldFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactFieldFactory) },
@@ -14280,11 +14248,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         "winrt._winrt_windows_applicationmodel_contacts._IContactFieldFactory",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::IContactFieldFactory),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContactFieldFactory};
 
     struct ImplementsIContactFieldFactory : py::ImplementsInterfaceT<ImplementsIContactFieldFactory, winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>
@@ -14550,23 +14514,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         "winrt._winrt_windows_applicationmodel_contacts.IContactFieldFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContactFieldFactory};
 
     // ----- IContactInstantMessageFieldFactory interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContactInstantMessageFieldFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContactInstantMessageFieldFactory(py::wrapper::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory* self) noexcept
     {
@@ -14654,9 +14605,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }};
 
     static PyType_Slot _type_slots_IContactInstantMessageFieldFactory[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContactInstantMessageFieldFactory) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactInstantMessageFieldFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactInstantMessageFieldFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactInstantMessageFieldFactory) },
@@ -14666,11 +14614,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         "winrt._winrt_windows_applicationmodel_contacts._IContactInstantMessageFieldFactory",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContactInstantMessageFieldFactory};
 
     struct ImplementsIContactInstantMessageFieldFactory : py::ImplementsInterfaceT<ImplementsIContactInstantMessageFieldFactory, winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>
@@ -14924,23 +14868,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         "winrt._winrt_windows_applicationmodel_contacts.IContactInstantMessageFieldFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContactInstantMessageFieldFactory};
 
     // ----- IContactLocationFieldFactory interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IContactLocationFieldFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IContactLocationFieldFactory(py::wrapper::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory* self) noexcept
     {
@@ -15030,9 +14961,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }};
 
     static PyType_Slot _type_slots_IContactLocationFieldFactory[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IContactLocationFieldFactory) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactLocationFieldFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactLocationFieldFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactLocationFieldFactory) },
@@ -15042,11 +14970,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         "winrt._winrt_windows_applicationmodel_contacts._IContactLocationFieldFactory",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IContactLocationFieldFactory};
 
     struct ImplementsIContactLocationFieldFactory : py::ImplementsInterfaceT<ImplementsIContactLocationFieldFactory, winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>
@@ -15312,11 +15236,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         "winrt._winrt_windows_applicationmodel_contacts.IContactLocationFieldFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIContactLocationFieldFactory};
 
     // ----- Windows.ApplicationModel.Contacts Initialization --------------------

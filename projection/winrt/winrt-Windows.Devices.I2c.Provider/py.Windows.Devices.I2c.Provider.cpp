@@ -201,15 +201,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     // ----- II2cControllerProvider interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_II2cControllerProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_II2cControllerProvider(py::wrapper::Windows::Devices::I2c::Provider::II2cControllerProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -255,9 +246,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { }};
 
     static PyType_Slot _type_slots_II2cControllerProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_II2cControllerProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_II2cControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_II2cControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_II2cControllerProvider) },
@@ -267,11 +255,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         "winrt._winrt_windows_devices_i2c_provider._II2cControllerProvider",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::II2cControllerProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_II2cControllerProvider};
 
     struct ImplementsII2cControllerProvider : py::ImplementsInterfaceT<ImplementsII2cControllerProvider, winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>
@@ -389,23 +373,10 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         "winrt._winrt_windows_devices_i2c_provider.II2cControllerProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsII2cControllerProvider};
 
     // ----- II2cDeviceProvider interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_II2cDeviceProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_II2cDeviceProvider(py::wrapper::Windows::Devices::I2c::Provider::II2cDeviceProvider* self) noexcept
     {
@@ -679,9 +650,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { }};
 
     static PyType_Slot _type_slots_II2cDeviceProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_II2cDeviceProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_II2cDeviceProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_II2cDeviceProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_II2cDeviceProvider) },
@@ -691,11 +659,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         "winrt._winrt_windows_devices_i2c_provider._II2cDeviceProvider",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::II2cDeviceProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_II2cDeviceProvider};
 
     struct ImplementsII2cDeviceProvider : py::ImplementsInterfaceT<ImplementsII2cDeviceProvider, winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider>
@@ -1035,23 +999,10 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         "winrt._winrt_windows_devices_i2c_provider.II2cDeviceProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsII2cDeviceProvider};
 
     // ----- II2cProvider interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_II2cProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cProvider>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_II2cProvider(py::wrapper::Windows::Devices::I2c::Provider::II2cProvider* self) noexcept
     {
@@ -1096,9 +1047,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { }};
 
     static PyType_Slot _type_slots_II2cProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_II2cProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_II2cProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_II2cProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_II2cProvider) },
@@ -1108,11 +1056,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         "winrt._winrt_windows_devices_i2c_provider._II2cProvider",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::II2cProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_II2cProvider};
 
     struct ImplementsII2cProvider : py::ImplementsInterfaceT<ImplementsII2cProvider, winrt::Windows::Devices::I2c::Provider::II2cProvider>
@@ -1224,11 +1168,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         "winrt._winrt_windows_devices_i2c_provider.II2cProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsII2cProvider};
 
     // ----- ProviderI2cTransferResult struct --------------------

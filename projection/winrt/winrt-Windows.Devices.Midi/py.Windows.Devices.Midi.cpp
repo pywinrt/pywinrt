@@ -3997,15 +3997,6 @@ namespace py::cpp::Windows::Devices::Midi
 
     // ----- IMidiMessage interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IMidiMessage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Midi::IMidiMessage>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Midi::IMidiMessage>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IMidiMessage(py::wrapper::Windows::Devices::Midi::IMidiMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -4075,9 +4066,6 @@ namespace py::cpp::Windows::Devices::Midi
         { }};
 
     static PyType_Slot _type_slots_IMidiMessage[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IMidiMessage) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMidiMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMidiMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMidiMessage) },
@@ -4087,11 +4075,7 @@ namespace py::cpp::Windows::Devices::Midi
         "winrt._winrt_windows_devices_midi._IMidiMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::IMidiMessage),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IMidiMessage};
 
     struct ImplementsIMidiMessage : py::ImplementsInterfaceT<ImplementsIMidiMessage, winrt::Windows::Devices::Midi::IMidiMessage>
@@ -4237,23 +4221,10 @@ namespace py::cpp::Windows::Devices::Midi
         "winrt._winrt_windows_devices_midi.IMidiMessage",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIMidiMessage};
 
     // ----- IMidiOutPort interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IMidiOutPort(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Midi::IMidiOutPort>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Midi::IMidiOutPort>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IMidiOutPort(py::wrapper::Windows::Devices::Midi::IMidiOutPort* self) noexcept
     {
@@ -4404,9 +4375,6 @@ namespace py::cpp::Windows::Devices::Midi
         { }};
 
     static PyType_Slot _type_slots_IMidiOutPort[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IMidiOutPort) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMidiOutPort) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMidiOutPort) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMidiOutPort) },
@@ -4416,11 +4384,7 @@ namespace py::cpp::Windows::Devices::Midi
         "winrt._winrt_windows_devices_midi._IMidiOutPort",
         sizeof(py::wrapper::Windows::Devices::Midi::IMidiOutPort),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IMidiOutPort};
 
     struct ImplementsIMidiOutPort : py::ImplementsInterfaceT<ImplementsIMidiOutPort, winrt::Windows::Devices::Midi::IMidiOutPort>
@@ -4610,11 +4574,7 @@ namespace py::cpp::Windows::Devices::Midi
         "winrt._winrt_windows_devices_midi.IMidiOutPort",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIMidiOutPort};
 
     // ----- Windows.Devices.Midi Initialization --------------------

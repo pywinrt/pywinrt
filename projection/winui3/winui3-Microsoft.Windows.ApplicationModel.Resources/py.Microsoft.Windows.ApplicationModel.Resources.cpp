@@ -1433,15 +1433,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     // ----- IResourceContext interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IResourceContext(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceContext>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceContext>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IResourceContext(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::IResourceContext* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -1475,9 +1466,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         { }};
 
     static PyType_Slot _type_slots_IResourceContext[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IResourceContext) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IResourceContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IResourceContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IResourceContext) },
@@ -1487,11 +1475,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         "winui3._winui3_microsoft_windows_applicationmodel_resources._IResourceContext",
         sizeof(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::IResourceContext),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IResourceContext};
 
     struct ImplementsIResourceContext : py::ImplementsInterfaceT<ImplementsIResourceContext, winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceContext>
@@ -1597,23 +1581,10 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         "winui3._winui3_microsoft_windows_applicationmodel_resources.IResourceContext",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIResourceContext};
 
     // ----- IResourceManager interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IResourceManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceManager>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceManager>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IResourceManager(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::IResourceManager* self) noexcept
     {
@@ -1717,9 +1688,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         { }};
 
     static PyType_Slot _type_slots_IResourceManager[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IResourceManager) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IResourceManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IResourceManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IResourceManager) },
@@ -1729,11 +1697,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         "winui3._winui3_microsoft_windows_applicationmodel_resources._IResourceManager",
         sizeof(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::IResourceManager),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IResourceManager};
 
     struct ImplementsIResourceManager : py::ImplementsInterfaceT<ImplementsIResourceManager, winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceManager>
@@ -1927,11 +1891,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         "winui3._winui3_microsoft_windows_applicationmodel_resources.IResourceManager",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIResourceManager};
 
     // ----- Microsoft.Windows.ApplicationModel.Resources Initialization --------------------

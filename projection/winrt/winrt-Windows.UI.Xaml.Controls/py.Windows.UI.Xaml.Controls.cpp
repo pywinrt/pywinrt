@@ -120575,15 +120575,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     // ----- ICommandBarElement interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICommandBarElement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::ICommandBarElement>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::ICommandBarElement>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_ICommandBarElement(py::wrapper::Windows::UI::Xaml::Controls::ICommandBarElement* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -120643,9 +120634,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_ICommandBarElement[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICommandBarElement) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICommandBarElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICommandBarElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICommandBarElement) },
@@ -120655,11 +120643,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         "winrt._winrt_windows_ui_xaml_controls._ICommandBarElement",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::ICommandBarElement),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICommandBarElement};
 
     struct ImplementsICommandBarElement : py::ImplementsInterfaceT<ImplementsICommandBarElement, winrt::Windows::UI::Xaml::Controls::ICommandBarElement>
@@ -120788,23 +120772,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         "winrt._winrt_windows_ui_xaml_controls.ICommandBarElement",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICommandBarElement};
 
     // ----- ICommandBarElement2 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICommandBarElement2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::ICommandBarElement2>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::ICommandBarElement2>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ICommandBarElement2(py::wrapper::Windows::UI::Xaml::Controls::ICommandBarElement2* self) noexcept
     {
@@ -120883,9 +120854,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_ICommandBarElement2[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICommandBarElement2) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICommandBarElement2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICommandBarElement2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICommandBarElement2) },
@@ -120895,11 +120863,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         "winrt._winrt_windows_ui_xaml_controls._ICommandBarElement2",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::ICommandBarElement2),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICommandBarElement2};
 
     struct ImplementsICommandBarElement2 : py::ImplementsInterfaceT<ImplementsICommandBarElement2, winrt::Windows::UI::Xaml::Controls::ICommandBarElement2>
@@ -121048,23 +121012,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         "winrt._winrt_windows_ui_xaml_controls.ICommandBarElement2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICommandBarElement2};
 
     // ----- IInsertionPanel interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IInsertionPanel(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::IInsertionPanel>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::IInsertionPanel>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IInsertionPanel(py::wrapper::Windows::UI::Xaml::Controls::IInsertionPanel* self) noexcept
     {
@@ -121125,9 +121076,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_IInsertionPanel[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IInsertionPanel) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInsertionPanel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInsertionPanel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInsertionPanel) },
@@ -121137,11 +121085,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         "winrt._winrt_windows_ui_xaml_controls._IInsertionPanel",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::IInsertionPanel),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IInsertionPanel};
 
     struct ImplementsIInsertionPanel : py::ImplementsInterfaceT<ImplementsIInsertionPanel, winrt::Windows::UI::Xaml::Controls::IInsertionPanel>
@@ -121261,23 +121205,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         "winrt._winrt_windows_ui_xaml_controls.IInsertionPanel",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIInsertionPanel};
 
     // ----- IItemContainerMapping interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IItemContainerMapping(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::IItemContainerMapping>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::IItemContainerMapping>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IItemContainerMapping(py::wrapper::Windows::UI::Xaml::Controls::IItemContainerMapping* self) noexcept
     {
@@ -121414,9 +121345,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_IItemContainerMapping[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IItemContainerMapping) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IItemContainerMapping) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IItemContainerMapping) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IItemContainerMapping) },
@@ -121426,11 +121354,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         "winrt._winrt_windows_ui_xaml_controls._IItemContainerMapping",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::IItemContainerMapping),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IItemContainerMapping};
 
     struct ImplementsIItemContainerMapping : py::ImplementsInterfaceT<ImplementsIItemContainerMapping, winrt::Windows::UI::Xaml::Controls::IItemContainerMapping>
@@ -121644,23 +121568,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         "winrt._winrt_windows_ui_xaml_controls.IItemContainerMapping",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIItemContainerMapping};
 
     // ----- INavigate interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_INavigate(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::INavigate>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::INavigate>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_INavigate(py::wrapper::Windows::UI::Xaml::Controls::INavigate* self) noexcept
     {
@@ -121707,9 +121618,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_INavigate[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_INavigate) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INavigate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INavigate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INavigate) },
@@ -121719,11 +121627,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         "winrt._winrt_windows_ui_xaml_controls._INavigate",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::INavigate),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_INavigate};
 
     struct ImplementsINavigate : py::ImplementsInterfaceT<ImplementsINavigate, winrt::Windows::UI::Xaml::Controls::INavigate>
@@ -121841,23 +121745,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         "winrt._winrt_windows_ui_xaml_controls.INavigate",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsINavigate};
 
     // ----- IScrollAnchorProvider interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IScrollAnchorProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::IScrollAnchorProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::IScrollAnchorProvider>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IScrollAnchorProvider(py::wrapper::Windows::UI::Xaml::Controls::IScrollAnchorProvider* self) noexcept
     {
@@ -121954,9 +121845,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_IScrollAnchorProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IScrollAnchorProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IScrollAnchorProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IScrollAnchorProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IScrollAnchorProvider) },
@@ -121966,11 +121854,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         "winrt._winrt_windows_ui_xaml_controls._IScrollAnchorProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::IScrollAnchorProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IScrollAnchorProvider};
 
     struct ImplementsIScrollAnchorProvider : py::ImplementsInterfaceT<ImplementsIScrollAnchorProvider, winrt::Windows::UI::Xaml::Controls::IScrollAnchorProvider>
@@ -122136,23 +122020,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         "winrt._winrt_windows_ui_xaml_controls.IScrollAnchorProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIScrollAnchorProvider};
 
     // ----- ISemanticZoomInformation interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ISemanticZoomInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::ISemanticZoomInformation>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::ISemanticZoomInformation>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_ISemanticZoomInformation(py::wrapper::Windows::UI::Xaml::Controls::ISemanticZoomInformation* self) noexcept
     {
@@ -122518,9 +122389,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         { }};
 
     static PyType_Slot _type_slots_ISemanticZoomInformation[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ISemanticZoomInformation) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISemanticZoomInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISemanticZoomInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISemanticZoomInformation) },
@@ -122530,11 +122398,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         "winrt._winrt_windows_ui_xaml_controls._ISemanticZoomInformation",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::ISemanticZoomInformation),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ISemanticZoomInformation};
 
     struct ImplementsISemanticZoomInformation : py::ImplementsInterfaceT<ImplementsISemanticZoomInformation, winrt::Windows::UI::Xaml::Controls::ISemanticZoomInformation>
@@ -122995,11 +122859,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         "winrt._winrt_windows_ui_xaml_controls.ISemanticZoomInformation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsISemanticZoomInformation};
 
     // ----- Windows.UI.Xaml.Controls Initialization --------------------

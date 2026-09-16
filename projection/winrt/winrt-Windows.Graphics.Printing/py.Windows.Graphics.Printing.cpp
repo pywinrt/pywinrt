@@ -3268,15 +3268,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- IPrintDocumentSource interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPrintDocumentSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Graphics::Printing::IPrintDocumentSource>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::IPrintDocumentSource>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IPrintDocumentSource(py::wrapper::Windows::Graphics::Printing::IPrintDocumentSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -3292,9 +3283,6 @@ namespace py::cpp::Windows::Graphics::Printing
         { }};
 
     static PyType_Slot _type_slots_IPrintDocumentSource[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPrintDocumentSource) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintDocumentSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintDocumentSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintDocumentSource) },
@@ -3304,11 +3292,7 @@ namespace py::cpp::Windows::Graphics::Printing
         "winrt._winrt_windows_graphics_printing._IPrintDocumentSource",
         sizeof(py::wrapper::Windows::Graphics::Printing::IPrintDocumentSource),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPrintDocumentSource};
 
     struct ImplementsIPrintDocumentSource : py::ImplementsInterfaceT<ImplementsIPrintDocumentSource, winrt::Windows::Graphics::Printing::IPrintDocumentSource>
@@ -3394,23 +3378,10 @@ namespace py::cpp::Windows::Graphics::Printing
         "winrt._winrt_windows_graphics_printing.IPrintDocumentSource",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPrintDocumentSource};
 
     // ----- IPrintTaskOptionsCore interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPrintTaskOptionsCore(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCore>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCore>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPrintTaskOptionsCore(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCore* self) noexcept
     {
@@ -3457,9 +3428,6 @@ namespace py::cpp::Windows::Graphics::Printing
         { }};
 
     static PyType_Slot _type_slots_IPrintTaskOptionsCore[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPrintTaskOptionsCore) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintTaskOptionsCore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintTaskOptionsCore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintTaskOptionsCore) },
@@ -3469,11 +3437,7 @@ namespace py::cpp::Windows::Graphics::Printing
         "winrt._winrt_windows_graphics_printing._IPrintTaskOptionsCore",
         sizeof(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCore),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPrintTaskOptionsCore};
 
     struct ImplementsIPrintTaskOptionsCore : py::ImplementsInterfaceT<ImplementsIPrintTaskOptionsCore, winrt::Windows::Graphics::Printing::IPrintTaskOptionsCore>
@@ -3591,23 +3555,10 @@ namespace py::cpp::Windows::Graphics::Printing
         "winrt._winrt_windows_graphics_printing.IPrintTaskOptionsCore",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPrintTaskOptionsCore};
 
     // ----- IPrintTaskOptionsCoreProperties interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPrintTaskOptionsCoreProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPrintTaskOptionsCoreProperties(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self) noexcept
     {
@@ -4144,9 +4095,6 @@ namespace py::cpp::Windows::Graphics::Printing
         { }};
 
     static PyType_Slot _type_slots_IPrintTaskOptionsCoreProperties[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPrintTaskOptionsCoreProperties) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintTaskOptionsCoreProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintTaskOptionsCoreProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintTaskOptionsCoreProperties) },
@@ -4156,11 +4104,7 @@ namespace py::cpp::Windows::Graphics::Printing
         "winrt._winrt_windows_graphics_printing._IPrintTaskOptionsCoreProperties",
         sizeof(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPrintTaskOptionsCoreProperties};
 
     struct ImplementsIPrintTaskOptionsCoreProperties : py::ImplementsInterfaceT<ImplementsIPrintTaskOptionsCoreProperties, winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>
@@ -4759,23 +4703,10 @@ namespace py::cpp::Windows::Graphics::Printing
         "winrt._winrt_windows_graphics_printing.IPrintTaskOptionsCoreProperties",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPrintTaskOptionsCoreProperties};
 
     // ----- IPrintTaskOptionsCoreUIConfiguration interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPrintTaskOptionsCoreUIConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPrintTaskOptionsCoreUIConfiguration(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration* self) noexcept
     {
@@ -4810,9 +4741,6 @@ namespace py::cpp::Windows::Graphics::Printing
         { }};
 
     static PyType_Slot _type_slots_IPrintTaskOptionsCoreUIConfiguration[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPrintTaskOptionsCoreUIConfiguration) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintTaskOptionsCoreUIConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintTaskOptionsCoreUIConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintTaskOptionsCoreUIConfiguration) },
@@ -4822,11 +4750,7 @@ namespace py::cpp::Windows::Graphics::Printing
         "winrt._winrt_windows_graphics_printing._IPrintTaskOptionsCoreUIConfiguration",
         sizeof(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPrintTaskOptionsCoreUIConfiguration};
 
     struct ImplementsIPrintTaskOptionsCoreUIConfiguration : py::ImplementsInterfaceT<ImplementsIPrintTaskOptionsCoreUIConfiguration, winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>
@@ -4932,11 +4856,7 @@ namespace py::cpp::Windows::Graphics::Printing
         "winrt._winrt_windows_graphics_printing.IPrintTaskOptionsCoreUIConfiguration",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPrintTaskOptionsCoreUIConfiguration};
 
     // ----- PrintPageDescription struct --------------------

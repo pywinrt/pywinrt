@@ -674,7 +674,6 @@ class TestTestComponent(unittest.TestCase):
 
         self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
 
-    @unittest.skipIf(sys.version_info < (3, 11), "requires Python 3.11 or later")
     @async_test
     async def test_async_action_cancel(self):
         op = tc.TestRunner.create_async_action(500)
@@ -686,7 +685,6 @@ class TestTestComponent(unittest.TestCase):
         # The Python asyncio.Future propagates the cancellation to the WinRT action.
         self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
 
-    @unittest.skipIf(sys.version_info < (3, 11), "requires Python 3.11 or later")
     @async_test
     async def test_async_action_cancel_with_shield(self):
         op = tc.TestRunner.create_async_action(500)
@@ -704,7 +702,6 @@ class TestTestComponent(unittest.TestCase):
         await asyncio.sleep(0.5)
         self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
 
-    @unittest.skipIf(sys.version_info < (3, 11), "requires Python 3.11 or later")
     @async_test
     async def test_async_action_cancel_with_cancel(self):
         op = tc.TestRunner.create_async_action(500)

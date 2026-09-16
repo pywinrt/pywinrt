@@ -24,15 +24,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting::Interop
         Py_DECREF(tp);
     }
 
-#if PY_VERSION_HEX < 0x030A0000
-    static PyObject* DesktopWindowXamlSourceNative_new(
-        PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        py::set_invalid_activation_error("DesktopWindowXamlSourceNative");
-        return nullptr;
-    }
-#endif
-
     static DesktopWindowXamlSourceNativeObject* DesktopWindowXamlSourceNative_from(
         PyTypeObject* cls, PyObject* arg) noexcept
     {
@@ -158,9 +149,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting::Interop
 
     static PyType_Slot DesktopWindowXamlSourceNative_slots[]{
         {Py_tp_dealloc, reinterpret_cast<void*>(DesktopWindowXamlSourceNative_dealloc)},
-#if PY_VERSION_HEX < 0x030A0000
-        {Py_tp_new, reinterpret_cast<void*>(DesktopWindowXamlSourceNative_new)},
-#endif
         {Py_tp_methods, DesktopWindowXamlSourceNative_methods},
         {Py_tp_getset, DesktopWindowXamlSourceNative_getset},
         {}};
@@ -169,11 +157,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting::Interop
         "winrt._winrt_windows_ui_xaml_hosting_interop.DesktopWindowXamlSourceNative",
         sizeof(DesktopWindowXamlSourceNativeObject),
         0,
-        Py_TPFLAGS_DEFAULT
-#if PY_VERSION_HEX >= 0x030A0000
-            | Py_TPFLAGS_DISALLOW_INSTANTIATION
-#endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         DesktopWindowXamlSourceNative_slots};
 
     PyDoc_STRVAR(

@@ -3344,15 +3344,6 @@ namespace py::cpp::Windows::Foundation
 
     // ----- IAsyncAction interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAsyncAction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Foundation::IAsyncAction>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IAsyncAction>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IAsyncAction(py::wrapper::Windows::Foundation::IAsyncAction* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -3607,9 +3598,6 @@ namespace py::cpp::Windows::Foundation
         { }};
 
     static PyType_Slot _type_slots_IAsyncAction[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAsyncAction) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAsyncAction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncAction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncAction) },
@@ -3620,11 +3608,7 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation._IAsyncAction",
         sizeof(py::wrapper::Windows::Foundation::IAsyncAction),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAsyncAction};
 
     struct ImplementsIAsyncAction : py::ImplementsInterfaceT<ImplementsIAsyncAction, winrt::Windows::Foundation::IAsyncAction>
@@ -3887,23 +3871,10 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation.IAsyncAction",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAsyncAction};
 
     // ----- IAsyncActionWithProgress interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAsyncActionWithProgress(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<py::proj::Windows::Foundation::IAsyncActionWithProgress>::type_name);
-        py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::IAsyncActionWithProgress>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IAsyncActionWithProgress(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self) noexcept
     {
@@ -4060,9 +4031,6 @@ namespace py::cpp::Windows::Foundation
         { }};
 
     static PyType_Slot _type_slots_IAsyncActionWithProgress[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAsyncActionWithProgress) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAsyncActionWithProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncActionWithProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncActionWithProgress) },
@@ -4073,11 +4041,7 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation._IAsyncActionWithProgress",
         sizeof(py::wrapper::Windows::Foundation::IAsyncActionWithProgress),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAsyncActionWithProgress};
 
     static PyObject* _guid_ImplementsIAsyncActionWithProgress(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4132,23 +4096,10 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation.IAsyncActionWithProgress",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAsyncActionWithProgress};
 
     // ----- IAsyncInfo interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAsyncInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Foundation::IAsyncInfo>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IAsyncInfo>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IAsyncInfo(py::wrapper::Windows::Foundation::IAsyncInfo* self) noexcept
     {
@@ -4277,9 +4228,6 @@ namespace py::cpp::Windows::Foundation
         { }};
 
     static PyType_Slot _type_slots_IAsyncInfo[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAsyncInfo) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAsyncInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncInfo) },
@@ -4289,11 +4237,7 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation._IAsyncInfo",
         sizeof(py::wrapper::Windows::Foundation::IAsyncInfo),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAsyncInfo};
 
     struct ImplementsIAsyncInfo : py::ImplementsInterfaceT<ImplementsIAsyncInfo, winrt::Windows::Foundation::IAsyncInfo>
@@ -4487,23 +4431,10 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation.IAsyncInfo",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAsyncInfo};
 
     // ----- IAsyncOperationWithProgress interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAsyncOperationWithProgress(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<py::proj::Windows::Foundation::IAsyncOperationWithProgress>::type_name);
-        py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::IAsyncOperationWithProgress>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IAsyncOperationWithProgress(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self) noexcept
     {
@@ -4660,9 +4591,6 @@ namespace py::cpp::Windows::Foundation
         { }};
 
     static PyType_Slot _type_slots_IAsyncOperationWithProgress[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAsyncOperationWithProgress) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAsyncOperationWithProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncOperationWithProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncOperationWithProgress) },
@@ -4673,11 +4601,7 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation._IAsyncOperationWithProgress",
         sizeof(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAsyncOperationWithProgress};
 
     static PyObject* _guid_ImplementsIAsyncOperationWithProgress(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4732,23 +4656,10 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation.IAsyncOperationWithProgress",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAsyncOperationWithProgress};
 
     // ----- IAsyncOperation interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAsyncOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<py::proj::Windows::Foundation::IAsyncOperation>::type_name);
-        py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::IAsyncOperation>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IAsyncOperation(py::wrapper::Windows::Foundation::IAsyncOperation* self) noexcept
     {
@@ -4872,9 +4783,6 @@ namespace py::cpp::Windows::Foundation
         { }};
 
     static PyType_Slot _type_slots_IAsyncOperation[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAsyncOperation) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAsyncOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncOperation) },
@@ -4885,11 +4793,7 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation._IAsyncOperation",
         sizeof(py::wrapper::Windows::Foundation::IAsyncOperation),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAsyncOperation};
 
     static PyObject* _guid_ImplementsIAsyncOperation(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4944,23 +4848,10 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation.IAsyncOperation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAsyncOperation};
 
     // ----- IClosable interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IClosable(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Foundation::IClosable>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IClosable>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IClosable(py::wrapper::Windows::Foundation::IClosable* self) noexcept
     {
@@ -5031,9 +4922,6 @@ namespace py::cpp::Windows::Foundation
         { }};
 
     static PyType_Slot _type_slots_IClosable[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IClosable) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IClosable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IClosable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IClosable) },
@@ -5043,11 +4931,7 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation._IClosable",
         sizeof(py::wrapper::Windows::Foundation::IClosable),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IClosable};
 
     struct ImplementsIClosable : py::ImplementsInterfaceT<ImplementsIClosable, winrt::Windows::Foundation::IClosable>
@@ -5157,23 +5041,10 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation.IClosable",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIClosable};
 
     // ----- IGetActivationFactory interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IGetActivationFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Foundation::IGetActivationFactory>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IGetActivationFactory>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IGetActivationFactory(py::wrapper::Windows::Foundation::IGetActivationFactory* self) noexcept
     {
@@ -5220,9 +5091,6 @@ namespace py::cpp::Windows::Foundation
         { }};
 
     static PyType_Slot _type_slots_IGetActivationFactory[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IGetActivationFactory) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGetActivationFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGetActivationFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGetActivationFactory) },
@@ -5232,11 +5100,7 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation._IGetActivationFactory",
         sizeof(py::wrapper::Windows::Foundation::IGetActivationFactory),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IGetActivationFactory};
 
     struct ImplementsIGetActivationFactory : py::ImplementsInterfaceT<ImplementsIGetActivationFactory, winrt::Windows::Foundation::IGetActivationFactory>
@@ -5354,23 +5218,10 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation.IGetActivationFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIGetActivationFactory};
 
     // ----- IMemoryBuffer interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IMemoryBuffer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Foundation::IMemoryBuffer>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IMemoryBuffer>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IMemoryBuffer(py::wrapper::Windows::Foundation::IMemoryBuffer* self) noexcept
     {
@@ -5469,9 +5320,6 @@ namespace py::cpp::Windows::Foundation
         { }};
 
     static PyType_Slot _type_slots_IMemoryBuffer[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IMemoryBuffer) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMemoryBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMemoryBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMemoryBuffer) },
@@ -5481,11 +5329,7 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation._IMemoryBuffer",
         sizeof(py::wrapper::Windows::Foundation::IMemoryBuffer),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IMemoryBuffer};
 
     struct ImplementsIMemoryBuffer : py::ImplementsInterfaceT<ImplementsIMemoryBuffer, winrt::Windows::Foundation::IMemoryBuffer>
@@ -5621,23 +5465,10 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation.IMemoryBuffer",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIMemoryBuffer};
 
     // ----- IMemoryBufferReference interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IMemoryBufferReference(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Foundation::IMemoryBufferReference>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IMemoryBufferReference>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IMemoryBufferReference(py::wrapper::Windows::Foundation::IMemoryBufferReference* self) noexcept
     {
@@ -5781,9 +5612,6 @@ namespace py::cpp::Windows::Foundation
         { }};
 
     static PyType_Slot _type_slots_IMemoryBufferReference[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IMemoryBufferReference) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMemoryBufferReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMemoryBufferReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMemoryBufferReference) },
@@ -5794,11 +5622,7 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation._IMemoryBufferReference",
         sizeof(py::wrapper::Windows::Foundation::IMemoryBufferReference),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IMemoryBufferReference};
 
     struct ImplementsIMemoryBufferReference : py::ImplementsInterfaceT<ImplementsIMemoryBufferReference, winrt::Windows::Foundation::IMemoryBufferReference>
@@ -5990,23 +5814,10 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation.IMemoryBufferReference",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIMemoryBufferReference};
 
     // ----- IPropertyValue interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IPropertyValue(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Foundation::IPropertyValue>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IPropertyValue>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IPropertyValue(py::wrapper::Windows::Foundation::IPropertyValue* self) noexcept
     {
@@ -7266,9 +7077,6 @@ namespace py::cpp::Windows::Foundation
         { }};
 
     static PyType_Slot _type_slots_IPropertyValue[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IPropertyValue) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPropertyValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPropertyValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPropertyValue) },
@@ -7278,11 +7086,7 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation._IPropertyValue",
         sizeof(py::wrapper::Windows::Foundation::IPropertyValue),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IPropertyValue};
 
     struct ImplementsIPropertyValue : py::ImplementsInterfaceT<ImplementsIPropertyValue, winrt::Windows::Foundation::IPropertyValue>
@@ -8389,23 +8193,10 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation.IPropertyValue",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIPropertyValue};
 
     // ----- IReferenceArray interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IReferenceArray(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<py::proj::Windows::Foundation::IReferenceArray>::type_name);
-        py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::IReferenceArray>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IReferenceArray(py::wrapper::Windows::Foundation::IReferenceArray* self) noexcept
     {
@@ -8688,9 +8479,6 @@ namespace py::cpp::Windows::Foundation
         { }};
 
     static PyType_Slot _type_slots_IReferenceArray[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IReferenceArray) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IReferenceArray) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IReferenceArray) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IReferenceArray) },
@@ -8700,11 +8488,7 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation._IReferenceArray",
         sizeof(py::wrapper::Windows::Foundation::IReferenceArray),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IReferenceArray};
 
     static PyObject* _guid_ImplementsIReferenceArray(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -8757,23 +8541,10 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation.IReferenceArray",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIReferenceArray};
 
     // ----- IReference interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IReference(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<py::proj::Windows::Foundation::IReference>::type_name);
-        py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::IReference>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IReference(py::wrapper::Windows::Foundation::IReference* self) noexcept
     {
@@ -9056,9 +8827,6 @@ namespace py::cpp::Windows::Foundation
         { }};
 
     static PyType_Slot _type_slots_IReference[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IReference) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IReference) },
@@ -9068,11 +8836,7 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation._IReference",
         sizeof(py::wrapper::Windows::Foundation::IReference),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IReference};
 
     static PyObject* _guid_ImplementsIReference(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -9125,23 +8889,10 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation.IReference",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIReference};
 
     // ----- IStringable interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IStringable(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Foundation::IStringable>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IStringable>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IStringable(py::wrapper::Windows::Foundation::IStringable* self) noexcept
     {
@@ -9203,9 +8954,6 @@ namespace py::cpp::Windows::Foundation
         { }};
 
     static PyType_Slot _type_slots_IStringable[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IStringable) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStringable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStringable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStringable) },
@@ -9216,11 +8964,7 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation._IStringable",
         sizeof(py::wrapper::Windows::Foundation::IStringable),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IStringable};
 
     struct ImplementsIStringable : py::ImplementsInterfaceT<ImplementsIStringable, winrt::Windows::Foundation::IStringable>
@@ -9332,23 +9076,10 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation.IStringable",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIStringable};
 
     // ----- IWwwFormUrlDecoderEntry interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IWwwFormUrlDecoderEntry(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Foundation::IWwwFormUrlDecoderEntry>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IWwwFormUrlDecoderEntry>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IWwwFormUrlDecoderEntry(py::wrapper::Windows::Foundation::IWwwFormUrlDecoderEntry* self) noexcept
     {
@@ -9401,9 +9132,6 @@ namespace py::cpp::Windows::Foundation
         { }};
 
     static PyType_Slot _type_slots_IWwwFormUrlDecoderEntry[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IWwwFormUrlDecoderEntry) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWwwFormUrlDecoderEntry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWwwFormUrlDecoderEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWwwFormUrlDecoderEntry) },
@@ -9413,11 +9141,7 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation._IWwwFormUrlDecoderEntry",
         sizeof(py::wrapper::Windows::Foundation::IWwwFormUrlDecoderEntry),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IWwwFormUrlDecoderEntry};
 
     struct ImplementsIWwwFormUrlDecoderEntry : py::ImplementsInterfaceT<ImplementsIWwwFormUrlDecoderEntry, winrt::Windows::Foundation::IWwwFormUrlDecoderEntry>
@@ -9543,11 +9267,7 @@ namespace py::cpp::Windows::Foundation
         "winrt._winrt_windows_foundation.IWwwFormUrlDecoderEntry",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIWwwFormUrlDecoderEntry};
 
     // ----- EventRegistrationToken struct --------------------

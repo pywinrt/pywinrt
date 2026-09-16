@@ -46,11 +46,11 @@ jobs:
       fail-fast: false
       matrix:
         py:
-          - cp39
-          - cp310
           - cp311
           - cp312
           - cp313
+          - cp314
+          - cp315
         arch:
           - win_amd64
           - win32

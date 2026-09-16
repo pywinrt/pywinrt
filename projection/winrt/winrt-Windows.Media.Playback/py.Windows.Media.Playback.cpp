@@ -11966,15 +11966,6 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- IMediaEnginePlaybackSource interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IMediaEnginePlaybackSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IMediaEnginePlaybackSource(py::wrapper::Windows::Media::Playback::IMediaEnginePlaybackSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -12039,9 +12030,6 @@ namespace py::cpp::Windows::Media::Playback
         { }};
 
     static PyType_Slot _type_slots_IMediaEnginePlaybackSource[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IMediaEnginePlaybackSource) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaEnginePlaybackSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaEnginePlaybackSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaEnginePlaybackSource) },
@@ -12051,11 +12039,7 @@ namespace py::cpp::Windows::Media::Playback
         "winrt._winrt_windows_media_playback._IMediaEnginePlaybackSource",
         sizeof(py::wrapper::Windows::Media::Playback::IMediaEnginePlaybackSource),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IMediaEnginePlaybackSource};
 
     struct ImplementsIMediaEnginePlaybackSource : py::ImplementsInterfaceT<ImplementsIMediaEnginePlaybackSource, winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>
@@ -12191,23 +12175,10 @@ namespace py::cpp::Windows::Media::Playback
         "winrt._winrt_windows_media_playback.IMediaEnginePlaybackSource",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIMediaEnginePlaybackSource};
 
     // ----- IMediaPlaybackSource interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IMediaPlaybackSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Playback::IMediaPlaybackSource>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::IMediaPlaybackSource>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IMediaPlaybackSource(py::wrapper::Windows::Media::Playback::IMediaPlaybackSource* self) noexcept
     {
@@ -12224,9 +12195,6 @@ namespace py::cpp::Windows::Media::Playback
         { }};
 
     static PyType_Slot _type_slots_IMediaPlaybackSource[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IMediaPlaybackSource) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaPlaybackSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaPlaybackSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaPlaybackSource) },
@@ -12236,11 +12204,7 @@ namespace py::cpp::Windows::Media::Playback
         "winrt._winrt_windows_media_playback._IMediaPlaybackSource",
         sizeof(py::wrapper::Windows::Media::Playback::IMediaPlaybackSource),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IMediaPlaybackSource};
 
     struct ImplementsIMediaPlaybackSource : py::ImplementsInterfaceT<ImplementsIMediaPlaybackSource, winrt::Windows::Media::Playback::IMediaPlaybackSource>
@@ -12326,11 +12290,7 @@ namespace py::cpp::Windows::Media::Playback
         "winrt._winrt_windows_media_playback.IMediaPlaybackSource",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIMediaPlaybackSource};
 
     // ----- Windows.Media.Playback Initialization --------------------

@@ -2246,15 +2246,6 @@ namespace py::cpp::Windows::Media::Effects
 
     // ----- IAudioEffectDefinition interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAudioEffectDefinition(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Effects::IAudioEffectDefinition>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IAudioEffectDefinition>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IAudioEffectDefinition(py::wrapper::Windows::Media::Effects::IAudioEffectDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -2306,9 +2297,6 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Slot _type_slots_IAudioEffectDefinition[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAudioEffectDefinition) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAudioEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAudioEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAudioEffectDefinition) },
@@ -2318,11 +2306,7 @@ namespace py::cpp::Windows::Media::Effects
         "winrt._winrt_windows_media_effects._IAudioEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Effects::IAudioEffectDefinition),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAudioEffectDefinition};
 
     struct ImplementsIAudioEffectDefinition : py::ImplementsInterfaceT<ImplementsIAudioEffectDefinition, winrt::Windows::Media::Effects::IAudioEffectDefinition>
@@ -2448,23 +2432,10 @@ namespace py::cpp::Windows::Media::Effects
         "winrt._winrt_windows_media_effects.IAudioEffectDefinition",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAudioEffectDefinition};
 
     // ----- IBasicAudioEffect interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBasicAudioEffect(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Effects::IBasicAudioEffect>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IBasicAudioEffect>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IBasicAudioEffect(py::wrapper::Windows::Media::Effects::IBasicAudioEffect* self) noexcept
     {
@@ -2670,9 +2641,6 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Slot _type_slots_IBasicAudioEffect[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBasicAudioEffect) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBasicAudioEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBasicAudioEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBasicAudioEffect) },
@@ -2682,11 +2650,7 @@ namespace py::cpp::Windows::Media::Effects
         "winrt._winrt_windows_media_effects._IBasicAudioEffect",
         sizeof(py::wrapper::Windows::Media::Effects::IBasicAudioEffect),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBasicAudioEffect};
 
     struct ImplementsIBasicAudioEffect : py::ImplementsInterfaceT<ImplementsIBasicAudioEffect, winrt::Windows::Media::Effects::IBasicAudioEffect>
@@ -2956,23 +2920,10 @@ namespace py::cpp::Windows::Media::Effects
         "winrt._winrt_windows_media_effects.IBasicAudioEffect",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBasicAudioEffect};
 
     // ----- IBasicVideoEffect interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IBasicVideoEffect(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Effects::IBasicVideoEffect>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IBasicVideoEffect>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IBasicVideoEffect(py::wrapper::Windows::Media::Effects::IBasicVideoEffect* self) noexcept
     {
@@ -3215,9 +3166,6 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Slot _type_slots_IBasicVideoEffect[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IBasicVideoEffect) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBasicVideoEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBasicVideoEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBasicVideoEffect) },
@@ -3227,11 +3175,7 @@ namespace py::cpp::Windows::Media::Effects
         "winrt._winrt_windows_media_effects._IBasicVideoEffect",
         sizeof(py::wrapper::Windows::Media::Effects::IBasicVideoEffect),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IBasicVideoEffect};
 
     struct ImplementsIBasicVideoEffect : py::ImplementsInterfaceT<ImplementsIBasicVideoEffect, winrt::Windows::Media::Effects::IBasicVideoEffect>
@@ -3553,23 +3497,10 @@ namespace py::cpp::Windows::Media::Effects
         "winrt._winrt_windows_media_effects.IBasicVideoEffect",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIBasicVideoEffect};
 
     // ----- IVideoCompositor interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IVideoCompositor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Effects::IVideoCompositor>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IVideoCompositor>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IVideoCompositor(py::wrapper::Windows::Media::Effects::IVideoCompositor* self) noexcept
     {
@@ -3758,9 +3689,6 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Slot _type_slots_IVideoCompositor[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IVideoCompositor) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVideoCompositor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVideoCompositor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVideoCompositor) },
@@ -3770,11 +3698,7 @@ namespace py::cpp::Windows::Media::Effects
         "winrt._winrt_windows_media_effects._IVideoCompositor",
         sizeof(py::wrapper::Windows::Media::Effects::IVideoCompositor),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IVideoCompositor};
 
     struct ImplementsIVideoCompositor : py::ImplementsInterfaceT<ImplementsIVideoCompositor, winrt::Windows::Media::Effects::IVideoCompositor>
@@ -4036,23 +3960,10 @@ namespace py::cpp::Windows::Media::Effects
         "winrt._winrt_windows_media_effects.IVideoCompositor",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIVideoCompositor};
 
     // ----- IVideoCompositorDefinition interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IVideoCompositorDefinition(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Effects::IVideoCompositorDefinition>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IVideoCompositorDefinition>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IVideoCompositorDefinition(py::wrapper::Windows::Media::Effects::IVideoCompositorDefinition* self) noexcept
     {
@@ -4105,9 +4016,6 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Slot _type_slots_IVideoCompositorDefinition[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IVideoCompositorDefinition) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVideoCompositorDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVideoCompositorDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVideoCompositorDefinition) },
@@ -4117,11 +4025,7 @@ namespace py::cpp::Windows::Media::Effects
         "winrt._winrt_windows_media_effects._IVideoCompositorDefinition",
         sizeof(py::wrapper::Windows::Media::Effects::IVideoCompositorDefinition),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IVideoCompositorDefinition};
 
     struct ImplementsIVideoCompositorDefinition : py::ImplementsInterfaceT<ImplementsIVideoCompositorDefinition, winrt::Windows::Media::Effects::IVideoCompositorDefinition>
@@ -4247,23 +4151,10 @@ namespace py::cpp::Windows::Media::Effects
         "winrt._winrt_windows_media_effects.IVideoCompositorDefinition",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIVideoCompositorDefinition};
 
     // ----- IVideoEffectDefinition interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IVideoEffectDefinition(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Effects::IVideoEffectDefinition>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IVideoEffectDefinition>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IVideoEffectDefinition(py::wrapper::Windows::Media::Effects::IVideoEffectDefinition* self) noexcept
     {
@@ -4316,9 +4207,6 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Slot _type_slots_IVideoEffectDefinition[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IVideoEffectDefinition) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVideoEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVideoEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVideoEffectDefinition) },
@@ -4328,11 +4216,7 @@ namespace py::cpp::Windows::Media::Effects
         "winrt._winrt_windows_media_effects._IVideoEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Effects::IVideoEffectDefinition),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IVideoEffectDefinition};
 
     struct ImplementsIVideoEffectDefinition : py::ImplementsInterfaceT<ImplementsIVideoEffectDefinition, winrt::Windows::Media::Effects::IVideoEffectDefinition>
@@ -4458,11 +4342,7 @@ namespace py::cpp::Windows::Media::Effects
         "winrt._winrt_windows_media_effects.IVideoEffectDefinition",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIVideoEffectDefinition};
 
     // ----- Windows.Media.Effects Initialization --------------------

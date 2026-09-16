@@ -8852,15 +8852,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- ICommand interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICommand(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::ICommand>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::ICommand>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_ICommand(py::wrapper::Windows::UI::Xaml::Input::ICommand* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -8978,9 +8969,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { }};
 
     static PyType_Slot _type_slots_ICommand[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICommand) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICommand) },
@@ -8990,11 +8978,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         "winrt._winrt_windows_ui_xaml_input._ICommand",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::ICommand),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICommand};
 
     struct ImplementsICommand : py::ImplementsInterfaceT<ImplementsICommand, winrt::Windows::UI::Xaml::Input::ICommand>
@@ -9204,11 +9188,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         "winrt._winrt_windows_ui_xaml_input.ICommand",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICommand};
 
     // ----- Windows.UI.Xaml.Input Initialization --------------------

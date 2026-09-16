@@ -8066,15 +8066,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- IControlChannelTriggerEventDetails interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IControlChannelTriggerEventDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerEventDetails>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerEventDetails>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IControlChannelTriggerEventDetails(py::wrapper::Windows::Networking::Sockets::IControlChannelTriggerEventDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -8108,9 +8099,6 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Slot _type_slots_IControlChannelTriggerEventDetails[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IControlChannelTriggerEventDetails) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IControlChannelTriggerEventDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IControlChannelTriggerEventDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IControlChannelTriggerEventDetails) },
@@ -8120,11 +8108,7 @@ namespace py::cpp::Windows::Networking::Sockets
         "winrt._winrt_windows_networking_sockets._IControlChannelTriggerEventDetails",
         sizeof(py::wrapper::Windows::Networking::Sockets::IControlChannelTriggerEventDetails),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IControlChannelTriggerEventDetails};
 
     struct ImplementsIControlChannelTriggerEventDetails : py::ImplementsInterfaceT<ImplementsIControlChannelTriggerEventDetails, winrt::Windows::Networking::Sockets::IControlChannelTriggerEventDetails>
@@ -8230,23 +8214,10 @@ namespace py::cpp::Windows::Networking::Sockets
         "winrt._winrt_windows_networking_sockets.IControlChannelTriggerEventDetails",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIControlChannelTriggerEventDetails};
 
     // ----- IControlChannelTriggerResetEventDetails interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IControlChannelTriggerResetEventDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IControlChannelTriggerResetEventDetails(py::wrapper::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails* self) noexcept
     {
@@ -8317,9 +8288,6 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Slot _type_slots_IControlChannelTriggerResetEventDetails[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IControlChannelTriggerResetEventDetails) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IControlChannelTriggerResetEventDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IControlChannelTriggerResetEventDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IControlChannelTriggerResetEventDetails) },
@@ -8329,11 +8297,7 @@ namespace py::cpp::Windows::Networking::Sockets
         "winrt._winrt_windows_networking_sockets._IControlChannelTriggerResetEventDetails",
         sizeof(py::wrapper::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IControlChannelTriggerResetEventDetails};
 
     struct ImplementsIControlChannelTriggerResetEventDetails : py::ImplementsInterfaceT<ImplementsIControlChannelTriggerResetEventDetails, winrt::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails>
@@ -8479,23 +8443,10 @@ namespace py::cpp::Windows::Networking::Sockets
         "winrt._winrt_windows_networking_sockets.IControlChannelTriggerResetEventDetails",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIControlChannelTriggerResetEventDetails};
 
     // ----- IWebSocket interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IWebSocket(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Networking::Sockets::IWebSocket>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::IWebSocket>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IWebSocket(py::wrapper::Windows::Networking::Sockets::IWebSocket* self) noexcept
     {
@@ -8707,9 +8658,6 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Slot _type_slots_IWebSocket[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IWebSocket) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebSocket) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebSocket) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebSocket) },
@@ -8719,11 +8667,7 @@ namespace py::cpp::Windows::Networking::Sockets
         "winrt._winrt_windows_networking_sockets._IWebSocket",
         sizeof(py::wrapper::Windows::Networking::Sockets::IWebSocket),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IWebSocket};
 
     struct ImplementsIWebSocket : py::ImplementsInterfaceT<ImplementsIWebSocket, winrt::Windows::Networking::Sockets::IWebSocket>
@@ -9041,23 +8985,10 @@ namespace py::cpp::Windows::Networking::Sockets
         "winrt._winrt_windows_networking_sockets.IWebSocket",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIWebSocket};
 
     // ----- IWebSocketControl interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IWebSocketControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketControl>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketControl>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IWebSocketControl(py::wrapper::Windows::Networking::Sockets::IWebSocketControl* self) noexcept
     {
@@ -9224,9 +9155,6 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Slot _type_slots_IWebSocketControl[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IWebSocketControl) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebSocketControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebSocketControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebSocketControl) },
@@ -9236,11 +9164,7 @@ namespace py::cpp::Windows::Networking::Sockets
         "winrt._winrt_windows_networking_sockets._IWebSocketControl",
         sizeof(py::wrapper::Windows::Networking::Sockets::IWebSocketControl),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IWebSocketControl};
 
     struct ImplementsIWebSocketControl : py::ImplementsInterfaceT<ImplementsIWebSocketControl, winrt::Windows::Networking::Sockets::IWebSocketControl>
@@ -9475,23 +9399,10 @@ namespace py::cpp::Windows::Networking::Sockets
         "winrt._winrt_windows_networking_sockets.IWebSocketControl",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIWebSocketControl};
 
     // ----- IWebSocketControl2 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IWebSocketControl2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketControl2>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketControl2>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IWebSocketControl2(py::wrapper::Windows::Networking::Sockets::IWebSocketControl2* self) noexcept
     {
@@ -9676,9 +9587,6 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Slot _type_slots_IWebSocketControl2[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IWebSocketControl2) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebSocketControl2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebSocketControl2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebSocketControl2) },
@@ -9688,11 +9596,7 @@ namespace py::cpp::Windows::Networking::Sockets
         "winrt._winrt_windows_networking_sockets._IWebSocketControl2",
         sizeof(py::wrapper::Windows::Networking::Sockets::IWebSocketControl2),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IWebSocketControl2};
 
     struct ImplementsIWebSocketControl2 : py::ImplementsInterfaceT<ImplementsIWebSocketControl2, winrt::Windows::Networking::Sockets::IWebSocketControl2>
@@ -9947,23 +9851,10 @@ namespace py::cpp::Windows::Networking::Sockets
         "winrt._winrt_windows_networking_sockets.IWebSocketControl2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIWebSocketControl2};
 
     // ----- IWebSocketInformation interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IWebSocketInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketInformation>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketInformation>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IWebSocketInformation(py::wrapper::Windows::Networking::Sockets::IWebSocketInformation* self) noexcept
     {
@@ -10034,9 +9925,6 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Slot _type_slots_IWebSocketInformation[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IWebSocketInformation) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebSocketInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebSocketInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebSocketInformation) },
@@ -10046,11 +9934,7 @@ namespace py::cpp::Windows::Networking::Sockets
         "winrt._winrt_windows_networking_sockets._IWebSocketInformation",
         sizeof(py::wrapper::Windows::Networking::Sockets::IWebSocketInformation),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IWebSocketInformation};
 
     struct ImplementsIWebSocketInformation : py::ImplementsInterfaceT<ImplementsIWebSocketInformation, winrt::Windows::Networking::Sockets::IWebSocketInformation>
@@ -10196,23 +10080,10 @@ namespace py::cpp::Windows::Networking::Sockets
         "winrt._winrt_windows_networking_sockets.IWebSocketInformation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIWebSocketInformation};
 
     // ----- IWebSocketInformation2 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IWebSocketInformation2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketInformation2>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketInformation2>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IWebSocketInformation2(py::wrapper::Windows::Networking::Sockets::IWebSocketInformation2* self) noexcept
     {
@@ -10355,9 +10226,6 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Slot _type_slots_IWebSocketInformation2[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IWebSocketInformation2) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebSocketInformation2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebSocketInformation2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebSocketInformation2) },
@@ -10367,11 +10235,7 @@ namespace py::cpp::Windows::Networking::Sockets
         "winrt._winrt_windows_networking_sockets._IWebSocketInformation2",
         sizeof(py::wrapper::Windows::Networking::Sockets::IWebSocketInformation2),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IWebSocketInformation2};
 
     struct ImplementsIWebSocketInformation2 : py::ImplementsInterfaceT<ImplementsIWebSocketInformation2, winrt::Windows::Networking::Sockets::IWebSocketInformation2>
@@ -10597,11 +10461,7 @@ namespace py::cpp::Windows::Networking::Sockets
         "winrt._winrt_windows_networking_sockets.IWebSocketInformation2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIWebSocketInformation2};
 
     // ----- BandwidthStatistics struct --------------------

@@ -6851,15 +6851,6 @@ namespace py::cpp::Windows::Web::Http
 
     // ----- IHttpContent interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IHttpContent(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Web::Http::IHttpContent>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::IHttpContent>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IHttpContent(py::wrapper::Windows::Web::Http::IHttpContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -7132,9 +7123,6 @@ namespace py::cpp::Windows::Web::Http
         { }};
 
     static PyType_Slot _type_slots_IHttpContent[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IHttpContent) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IHttpContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IHttpContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IHttpContent) },
@@ -7144,11 +7132,7 @@ namespace py::cpp::Windows::Web::Http
         "winrt._winrt_windows_web_http._IHttpContent",
         sizeof(py::wrapper::Windows::Web::Http::IHttpContent),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IHttpContent};
 
     struct ImplementsIHttpContent : py::ImplementsInterfaceT<ImplementsIHttpContent, winrt::Windows::Web::Http::IHttpContent>
@@ -7442,11 +7426,7 @@ namespace py::cpp::Windows::Web::Http
         "winrt._winrt_windows_web_http.IHttpContent",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIHttpContent};
 
     // ----- HttpProgress struct --------------------

@@ -1860,15 +1860,6 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     // ----- IFeedAnnouncementInvokedTarget interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFeedAnnouncementInvokedTarget(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IFeedAnnouncementInvokedTarget(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -1915,9 +1906,6 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Slot _type_slots_IFeedAnnouncementInvokedTarget[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFeedAnnouncementInvokedTarget) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedAnnouncementInvokedTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedAnnouncementInvokedTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedAnnouncementInvokedTarget) },
@@ -1927,11 +1915,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers._IFeedAnnouncementInvokedTarget",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFeedAnnouncementInvokedTarget};
 
     struct ImplementsIFeedAnnouncementInvokedTarget : py::ImplementsInterfaceT<ImplementsIFeedAnnouncementInvokedTarget, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget>
@@ -2047,23 +2031,10 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers.IFeedAnnouncementInvokedTarget",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFeedAnnouncementInvokedTarget};
 
     // ----- IFeedManager interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFeedManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFeedManager(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager* self) noexcept
     {
@@ -2139,9 +2110,6 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Slot _type_slots_IFeedManager[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFeedManager) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedManager) },
@@ -2151,11 +2119,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers._IFeedManager",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFeedManager};
 
     struct ImplementsIFeedManager : py::ImplementsInterfaceT<ImplementsIFeedManager, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager>
@@ -2298,23 +2262,10 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers.IFeedManager",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFeedManager};
 
     // ----- IFeedManager2 interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFeedManager2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFeedManager2(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2* self) noexcept
     {
@@ -2397,9 +2348,6 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Slot _type_slots_IFeedManager2[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFeedManager2) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedManager2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedManager2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedManager2) },
@@ -2409,11 +2357,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers._IFeedManager2",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFeedManager2};
 
     struct ImplementsIFeedManager2 : py::ImplementsInterfaceT<ImplementsIFeedManager2, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>
@@ -2595,23 +2539,10 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers.IFeedManager2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFeedManager2};
 
     // ----- IFeedProvider interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFeedProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFeedProvider(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider* self) noexcept
     {
@@ -2783,9 +2714,6 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Slot _type_slots_IFeedProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFeedProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedProvider) },
@@ -2795,11 +2723,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers._IFeedProvider",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFeedProvider};
 
     struct ImplementsIFeedProvider : py::ImplementsInterfaceT<ImplementsIFeedProvider, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider>
@@ -3035,23 +2959,10 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers.IFeedProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFeedProvider};
 
     // ----- IFeedProviderAnalytics interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFeedProviderAnalytics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFeedProviderAnalytics(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics* self) noexcept
     {
@@ -3099,9 +3010,6 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Slot _type_slots_IFeedProviderAnalytics[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFeedProviderAnalytics) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedProviderAnalytics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedProviderAnalytics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedProviderAnalytics) },
@@ -3111,11 +3019,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers._IFeedProviderAnalytics",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFeedProviderAnalytics};
 
     struct ImplementsIFeedProviderAnalytics : py::ImplementsInterfaceT<ImplementsIFeedProviderAnalytics, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics>
@@ -3231,23 +3135,10 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers.IFeedProviderAnalytics",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFeedProviderAnalytics};
 
     // ----- IFeedProviderErrors interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFeedProviderErrors(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFeedProviderErrors(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors* self) noexcept
     {
@@ -3295,9 +3186,6 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Slot _type_slots_IFeedProviderErrors[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFeedProviderErrors) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedProviderErrors) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedProviderErrors) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedProviderErrors) },
@@ -3307,11 +3195,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers._IFeedProviderErrors",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFeedProviderErrors};
 
     struct ImplementsIFeedProviderErrors : py::ImplementsInterfaceT<ImplementsIFeedProviderErrors, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors>
@@ -3427,23 +3311,10 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers.IFeedProviderErrors",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFeedProviderErrors};
 
     // ----- IFeedProviderMessage interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFeedProviderMessage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFeedProviderMessage(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage* self) noexcept
     {
@@ -3491,9 +3362,6 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Slot _type_slots_IFeedProviderMessage[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFeedProviderMessage) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedProviderMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedProviderMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedProviderMessage) },
@@ -3503,11 +3371,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers._IFeedProviderMessage",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFeedProviderMessage};
 
     struct ImplementsIFeedProviderMessage : py::ImplementsInterfaceT<ImplementsIFeedProviderMessage, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage>
@@ -3623,23 +3487,10 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers.IFeedProviderMessage",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFeedProviderMessage};
 
     // ----- IFeedResourceProvider interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IFeedResourceProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IFeedResourceProvider(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider* self) noexcept
     {
@@ -3687,9 +3538,6 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Slot _type_slots_IFeedResourceProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IFeedResourceProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedResourceProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedResourceProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedResourceProvider) },
@@ -3699,11 +3547,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers._IFeedResourceProvider",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IFeedResourceProvider};
 
     struct ImplementsIFeedResourceProvider : py::ImplementsInterfaceT<ImplementsIFeedResourceProvider, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider>
@@ -3819,11 +3663,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         "winui3._winui3_microsoft_windows_widgets_feeds_providers.IFeedResourceProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIFeedResourceProvider};
 
     // ----- Microsoft.Windows.Widgets.Feeds.Providers Initialization --------------------

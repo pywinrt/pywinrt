@@ -111,15 +111,6 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     // ----- IGpioControllerProvider interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IGpioControllerProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IGpioControllerProvider(py::wrapper::Windows::Devices::Gpio::Provider::IGpioControllerProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -184,9 +175,6 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { }};
 
     static PyType_Slot _type_slots_IGpioControllerProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IGpioControllerProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGpioControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGpioControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGpioControllerProvider) },
@@ -196,11 +184,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         "winrt._winrt_windows_devices_gpio_provider._IGpioControllerProvider",
         sizeof(py::wrapper::Windows::Devices::Gpio::Provider::IGpioControllerProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IGpioControllerProvider};
 
     struct ImplementsIGpioControllerProvider : py::ImplementsInterfaceT<ImplementsIGpioControllerProvider, winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider>
@@ -350,23 +334,10 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         "winrt._winrt_windows_devices_gpio_provider.IGpioControllerProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIGpioControllerProvider};
 
     // ----- IGpioPinProvider interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IGpioPinProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IGpioPinProvider(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider* self) noexcept
     {
@@ -652,9 +623,6 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { }};
 
     static PyType_Slot _type_slots_IGpioPinProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IGpioPinProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGpioPinProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGpioPinProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGpioPinProvider) },
@@ -664,11 +632,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         "winrt._winrt_windows_devices_gpio_provider._IGpioPinProvider",
         sizeof(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IGpioPinProvider};
 
     struct ImplementsIGpioPinProvider : py::ImplementsInterfaceT<ImplementsIGpioPinProvider, winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider>
@@ -1043,23 +1007,10 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         "winrt._winrt_windows_devices_gpio_provider.IGpioPinProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIGpioPinProvider};
 
     // ----- IGpioProvider interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IGpioProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioProvider>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IGpioProvider(py::wrapper::Windows::Devices::Gpio::Provider::IGpioProvider* self) noexcept
     {
@@ -1104,9 +1055,6 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { }};
 
     static PyType_Slot _type_slots_IGpioProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IGpioProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGpioProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGpioProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGpioProvider) },
@@ -1116,11 +1064,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         "winrt._winrt_windows_devices_gpio_provider._IGpioProvider",
         sizeof(py::wrapper::Windows::Devices::Gpio::Provider::IGpioProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IGpioProvider};
 
     struct ImplementsIGpioProvider : py::ImplementsInterfaceT<ImplementsIGpioProvider, winrt::Windows::Devices::Gpio::Provider::IGpioProvider>
@@ -1232,11 +1176,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         "winrt._winrt_windows_devices_gpio_provider.IGpioProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIGpioProvider};
 
     // ----- Windows.Devices.Gpio.Provider Initialization --------------------

@@ -43,4 +43,4 @@
 #include <winrt/Windows.Foundation.Metadata.h>
 #include <winrt/Windows.Storage.Streams.h>
 
-static_assert(PY_VERSION_HEX >= 0x03090000, "Python 3.9 or later is required");
+static_assert(PY_VERSION_HEX >= 0x030B0000, "Python 3.11 or later is required");

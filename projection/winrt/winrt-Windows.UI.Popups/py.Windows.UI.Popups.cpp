@@ -1039,15 +1039,6 @@ namespace py::cpp::Windows::UI::Popups
 
     // ----- IUICommand interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IUICommand(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::UI::Popups::IUICommand>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Popups::IUICommand>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IUICommand(py::wrapper::Windows::UI::Popups::IUICommand* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -1195,9 +1186,6 @@ namespace py::cpp::Windows::UI::Popups
         { }};
 
     static PyType_Slot _type_slots_IUICommand[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IUICommand) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IUICommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IUICommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IUICommand) },
@@ -1207,11 +1195,7 @@ namespace py::cpp::Windows::UI::Popups
         "winrt._winrt_windows_ui_popups._IUICommand",
         sizeof(py::wrapper::Windows::UI::Popups::IUICommand),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IUICommand};
 
     struct ImplementsIUICommand : py::ImplementsInterfaceT<ImplementsIUICommand, winrt::Windows::UI::Popups::IUICommand>
@@ -1426,11 +1410,7 @@ namespace py::cpp::Windows::UI::Popups
         "winrt._winrt_windows_ui_popups.IUICommand",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIUICommand};
 
     // ----- Windows.UI.Popups Initialization --------------------

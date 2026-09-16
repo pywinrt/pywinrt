@@ -10448,15 +10448,6 @@ namespace py::cpp::Windows::Media::Devices
 
     // ----- IDefaultAudioDeviceChangedEventArgs interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IDefaultAudioDeviceChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IDefaultAudioDeviceChangedEventArgs(py::wrapper::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -10508,9 +10499,6 @@ namespace py::cpp::Windows::Media::Devices
         { }};
 
     static PyType_Slot _type_slots_IDefaultAudioDeviceChangedEventArgs[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IDefaultAudioDeviceChangedEventArgs) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDefaultAudioDeviceChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDefaultAudioDeviceChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDefaultAudioDeviceChangedEventArgs) },
@@ -10520,11 +10508,7 @@ namespace py::cpp::Windows::Media::Devices
         "winrt._winrt_windows_media_devices._IDefaultAudioDeviceChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IDefaultAudioDeviceChangedEventArgs};
 
     struct ImplementsIDefaultAudioDeviceChangedEventArgs : py::ImplementsInterfaceT<ImplementsIDefaultAudioDeviceChangedEventArgs, winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>
@@ -10650,23 +10634,10 @@ namespace py::cpp::Windows::Media::Devices
         "winrt._winrt_windows_media_devices.IDefaultAudioDeviceChangedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIDefaultAudioDeviceChangedEventArgs};
 
     // ----- IMediaDeviceController interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IMediaDeviceController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Media::Devices::IMediaDeviceController>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::IMediaDeviceController>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IMediaDeviceController(py::wrapper::Windows::Media::Devices::IMediaDeviceController* self) noexcept
     {
@@ -10774,9 +10745,6 @@ namespace py::cpp::Windows::Media::Devices
         { }};
 
     static PyType_Slot _type_slots_IMediaDeviceController[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IMediaDeviceController) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaDeviceController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaDeviceController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaDeviceController) },
@@ -10786,11 +10754,7 @@ namespace py::cpp::Windows::Media::Devices
         "winrt._winrt_windows_media_devices._IMediaDeviceController",
         sizeof(py::wrapper::Windows::Media::Devices::IMediaDeviceController),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IMediaDeviceController};
 
     struct ImplementsIMediaDeviceController : py::ImplementsInterfaceT<ImplementsIMediaDeviceController, winrt::Windows::Media::Devices::IMediaDeviceController>
@@ -10984,11 +10948,7 @@ namespace py::cpp::Windows::Media::Devices
         "winrt._winrt_windows_media_devices.IMediaDeviceController",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIMediaDeviceController};
 
     // ----- Windows.Media.Devices Initialization --------------------

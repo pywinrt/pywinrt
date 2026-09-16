@@ -1073,15 +1073,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- ICustomGameControllerFactory interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_ICustomGameControllerFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_ICustomGameControllerFactory(py::wrapper::Windows::Gaming::Input::Custom::ICustomGameControllerFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -1189,9 +1180,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }};
 
     static PyType_Slot _type_slots_ICustomGameControllerFactory[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_ICustomGameControllerFactory) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICustomGameControllerFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICustomGameControllerFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICustomGameControllerFactory) },
@@ -1201,11 +1189,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         "winrt._winrt_windows_gaming_input_custom._ICustomGameControllerFactory",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::ICustomGameControllerFactory),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_ICustomGameControllerFactory};
 
     struct ImplementsICustomGameControllerFactory : py::ImplementsInterfaceT<ImplementsICustomGameControllerFactory, winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>
@@ -1383,23 +1367,10 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         "winrt._winrt_windows_gaming_input_custom.ICustomGameControllerFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsICustomGameControllerFactory};
 
     // ----- IGameControllerInputSink interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IGameControllerInputSink(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IGameControllerInputSink(py::wrapper::Windows::Gaming::Input::Custom::IGameControllerInputSink* self) noexcept
     {
@@ -1478,9 +1449,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }};
 
     static PyType_Slot _type_slots_IGameControllerInputSink[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IGameControllerInputSink) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGameControllerInputSink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGameControllerInputSink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGameControllerInputSink) },
@@ -1490,11 +1458,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         "winrt._winrt_windows_gaming_input_custom._IGameControllerInputSink",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::IGameControllerInputSink),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IGameControllerInputSink};
 
     struct ImplementsIGameControllerInputSink : py::ImplementsInterfaceT<ImplementsIGameControllerInputSink, winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>
@@ -1640,23 +1604,10 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         "winrt._winrt_windows_gaming_input_custom.IGameControllerInputSink",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIGameControllerInputSink};
 
     // ----- IGameControllerProvider interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IGameControllerProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IGameControllerProvider(py::wrapper::Windows::Gaming::Input::Custom::IGameControllerProvider* self) noexcept
     {
@@ -1763,9 +1714,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }};
 
     static PyType_Slot _type_slots_IGameControllerProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IGameControllerProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGameControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGameControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGameControllerProvider) },
@@ -1775,11 +1723,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         "winrt._winrt_windows_gaming_input_custom._IGameControllerProvider",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::IGameControllerProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IGameControllerProvider};
 
     struct ImplementsIGameControllerProvider : py::ImplementsInterfaceT<ImplementsIGameControllerProvider, winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>
@@ -1965,23 +1909,10 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         "winrt._winrt_windows_gaming_input_custom.IGameControllerProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIGameControllerProvider};
 
     // ----- IGipGameControllerInputSink interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IGipGameControllerInputSink(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IGipGameControllerInputSink(py::wrapper::Windows::Gaming::Input::Custom::IGipGameControllerInputSink* self) noexcept
     {
@@ -2128,9 +2059,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }};
 
     static PyType_Slot _type_slots_IGipGameControllerInputSink[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IGipGameControllerInputSink) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGipGameControllerInputSink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGipGameControllerInputSink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGipGameControllerInputSink) },
@@ -2140,11 +2068,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         "winrt._winrt_windows_gaming_input_custom._IGipGameControllerInputSink",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::IGipGameControllerInputSink),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IGipGameControllerInputSink};
 
     struct ImplementsIGipGameControllerInputSink : py::ImplementsInterfaceT<ImplementsIGipGameControllerInputSink, winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>
@@ -2398,23 +2322,10 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         "winrt._winrt_windows_gaming_input_custom.IGipGameControllerInputSink",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIGipGameControllerInputSink};
 
     // ----- IHidGameControllerInputSink interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IHidGameControllerInputSink(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IHidGameControllerInputSink(py::wrapper::Windows::Gaming::Input::Custom::IHidGameControllerInputSink* self) noexcept
     {
@@ -2526,9 +2437,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }};
 
     static PyType_Slot _type_slots_IHidGameControllerInputSink[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IHidGameControllerInputSink) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IHidGameControllerInputSink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IHidGameControllerInputSink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IHidGameControllerInputSink) },
@@ -2538,11 +2446,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         "winrt._winrt_windows_gaming_input_custom._IHidGameControllerInputSink",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::IHidGameControllerInputSink),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IHidGameControllerInputSink};
 
     struct ImplementsIHidGameControllerInputSink : py::ImplementsInterfaceT<ImplementsIHidGameControllerInputSink, winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>
@@ -2736,23 +2640,10 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         "winrt._winrt_windows_gaming_input_custom.IHidGameControllerInputSink",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIHidGameControllerInputSink};
 
     // ----- IXusbGameControllerInputSink interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IXusbGameControllerInputSink(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IXusbGameControllerInputSink(py::wrapper::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink* self) noexcept
     {
@@ -2864,9 +2755,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }};
 
     static PyType_Slot _type_slots_IXusbGameControllerInputSink[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IXusbGameControllerInputSink) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXusbGameControllerInputSink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXusbGameControllerInputSink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXusbGameControllerInputSink) },
@@ -2876,11 +2764,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         "winrt._winrt_windows_gaming_input_custom._IXusbGameControllerInputSink",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IXusbGameControllerInputSink};
 
     struct ImplementsIXusbGameControllerInputSink : py::ImplementsInterfaceT<ImplementsIXusbGameControllerInputSink, winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>
@@ -3074,11 +2958,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         "winrt._winrt_windows_gaming_input_custom.IXusbGameControllerInputSink",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIXusbGameControllerInputSink};
 
     // ----- GameControllerVersionInfo struct --------------------

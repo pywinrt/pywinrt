@@ -6,15 +6,6 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 {
     // ----- IAdcControllerProvider interface --------------------
 
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAdcControllerProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>::type_name);
-        return nullptr;
-    }
-    #endif
-
     static void _dealloc_IAdcControllerProvider(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
@@ -268,9 +259,6 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         { }};
 
     static PyType_Slot _type_slots_IAdcControllerProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAdcControllerProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAdcControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAdcControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAdcControllerProvider) },
@@ -280,11 +268,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         "winrt._winrt_windows_devices_adc_provider._IAdcControllerProvider",
         sizeof(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAdcControllerProvider};
 
     struct ImplementsIAdcControllerProvider : py::ImplementsInterfaceT<ImplementsIAdcControllerProvider, winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>
@@ -617,23 +601,10 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         "winrt._winrt_windows_devices_adc_provider.IAdcControllerProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAdcControllerProvider};
 
     // ----- IAdcProvider interface --------------------
-
-    #if PY_VERSION_HEX < 0x030A0000
-    static PyObject* _new_IAdcProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Devices::Adc::Provider::IAdcProvider>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Adc::Provider::IAdcProvider>::type_name);
-        return nullptr;
-    }
-    #endif
 
     static void _dealloc_IAdcProvider(py::wrapper::Windows::Devices::Adc::Provider::IAdcProvider* self) noexcept
     {
@@ -678,9 +649,6 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         { }};
 
     static PyType_Slot _type_slots_IAdcProvider[] = {
-        #if PY_VERSION_HEX < 0x030A0000
-        { Py_tp_new, reinterpret_cast<void*>(_new_IAdcProvider) },
-        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAdcProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAdcProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAdcProvider) },
@@ -690,11 +658,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         "winrt._winrt_windows_devices_adc_provider._IAdcProvider",
         sizeof(py::wrapper::Windows::Devices::Adc::Provider::IAdcProvider),
         0,
-        Py_TPFLAGS_DEFAULT
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         _type_slots_IAdcProvider};
 
     struct ImplementsIAdcProvider : py::ImplementsInterfaceT<ImplementsIAdcProvider, winrt::Windows::Devices::Adc::Provider::IAdcProvider>
@@ -806,11 +770,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         "winrt._winrt_windows_devices_adc_provider.IAdcProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
-        #if PY_VERSION_HEX >= 0x030A0000
-        | Py_TPFLAGS_DISALLOW_INSTANTIATION
-        #endif
-        ,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_DISALLOW_INSTANTIATION,
         type_slots_ImplementsIAdcProvider};
 
     // ----- Windows.Devices.Adc.Provider Initialization --------------------
