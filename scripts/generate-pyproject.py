@@ -38,11 +38,6 @@ version = {{ file = "version.txt" }}{dependencies}{optional_dependencies}
 {find_src}
 """
 
-COMPONENT_PACKAGE_FIND_SRC = """
-[tool.setuptools.packages.find]
-exclude = ["cppwrint"]
-"""
-
 # The runtime keeps its Python package tree in python/ so that src/ can hold the
 # C++ sources of the extension module. The C++ headers that the rest of the
 # projection compiles against live inside the package itself, as numpy and
@@ -400,15 +395,7 @@ def write_project_files(
                 find_src=(
                     RUNTIME_PACKAGE_FIND_SRC
                     if package_name == "winrt-runtime"
-                    else (
-                        FIND_SRC
-                        if (package_path / "src").exists()
-                        else (
-                            COMPONENT_PACKAGE_FIND_SRC
-                            if is_component_package(package_name)
-                            else ""
-                        )
-                    )
+                    else (FIND_SRC if (package_path / "src").exists() else "")
                 ),
             )
         )
