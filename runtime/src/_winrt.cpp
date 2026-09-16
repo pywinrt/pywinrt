@@ -408,6 +408,7 @@ namespace py::cpp::_winrt
         .set_error = py::set_error,
         .set_call_error = py::set_call_error,
         .report_unraisable = py::report_unraisable,
+        .toggle_python_reference = py::toggle_python_reference,
     };
 
     static PyObject* init_apartment(PyObject* /*unused*/, PyObject* type_obj) noexcept

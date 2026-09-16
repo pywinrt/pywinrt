@@ -344,6 +344,7 @@ namespace py
     void set_call_error(
         call_error error, member_site const* site, Py_ssize_t arg_count) noexcept;
     int32_t report_unraisable() noexcept;
+    void toggle_python_reference(PyObject* obj, bool is_last_reference) noexcept;
 
     namespace cpp::_winrt
     {
@@ -375,6 +376,7 @@ namespace py
         decltype(set_error)* set_error;
         decltype(set_call_error)* set_call_error;
         decltype(report_unraisable)* report_unraisable;
+        decltype(toggle_python_reference)* toggle_python_reference;
     };
 
 #ifndef PYWINRT_RUNTIME_MODULE
@@ -488,6 +490,12 @@ namespace py
     {
         WINRT_ASSERT(PyWinRT_API && PyWinRT_API->report_unraisable);
         return (*PyWinRT_API->report_unraisable)();
+    }
+
+    inline void toggle_python_reference(PyObject* obj, bool is_last_reference) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->toggle_python_reference);
+        (*PyWinRT_API->toggle_python_reference)(obj, is_last_reference);
     }
 
     inline bool is_buffer_compatible(
