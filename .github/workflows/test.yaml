@@ -132,7 +132,9 @@ jobs:
       - name: merge packages
         run: |
           mkdir _install/lint -Force
-          Get-ChildItem -Path projection/*/* -Directory -Recurse | Where-Object Name -IN "winrt", "webview2", "winui2", "winui3", "test_winrt" | ForEach-Object { Copy-Item -Path $_.FullName -Filter "*.py*" -Destination _install/lint/ -Recurse -Force  }
+          # the runtime and the interop packages live outside of projection/,
+          # so winrt.system, winrt.runtime and winrt._winrt come from runtime/python
+          Get-ChildItem -Path projection/*/*, interop/*, runtime/python -Directory -Recurse | Where-Object Name -IN "winrt", "webview2", "winui2", "winui3", "test_winrt" | ForEach-Object { Copy-Item -Path $_.FullName -Filter "*.py*" -Destination _install/lint/ -Recurse -Force  }
       - name: Run mypy on winrt
         env:
           MYPYPATH: _install/lint
