@@ -76,6 +76,13 @@
   needs is linked into one module instead of all of them. This raises the minor
   ABI version, so this version of the projection packages needs at least this
   version of `winrt-runtime`.
+- Building a projection package from source no longer requires the exact
+  version of `winrt-runtime` that generated it. The generated headers used to
+  fail with "Mismatched Py/WinRT headers." unless the two version strings
+  matched; they now check the ABI version of the headers they are compiled
+  against - the same major version, and at least the minor version the
+  generated code calls into - which is the same contract a module checks when
+  it is imported. Each package's `deps.json` now records that ABI version too.
 - BREAKING: The hand-written C++ headers that the projection compiles against
   are now published by `winrt-runtime` instead of `winrt-sdk`, and `pybase.h`
   is now `#include <pywinrt/base.h>`, mirroring C++/WinRT's own
