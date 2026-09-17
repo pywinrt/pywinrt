@@ -12,30 +12,25 @@ namespace py::cpp::_winrt
                                Windows::Storage::Streams::IBufferByteAccess>
     {
       private:
-        Py_buffer buffer;
+        py::buffer_view buffer;
 
       public:
-        PyWinRTBuffer(PyObject* obj)
+        PyWinRTBuffer(PyObject* obj) : buffer{obj, PyBUF_SIMPLE}
         {
-            if (PyObject_GetBuffer(obj, &buffer, PyBUF_SIMPLE) == -1)
+            if (!buffer)
             {
                 throw python_exception();
-            };
-        }
-
-        ~PyWinRTBuffer()
-        {
-            PyBuffer_Release(&buffer);
+            }
         }
 
         uint32_t Capacity() const
         {
-            return static_cast<uint32_t>(buffer.len);
+            return static_cast<uint32_t>(buffer.size());
         }
 
         uint32_t Length() const
         {
-            return static_cast<uint32_t>(buffer.len);
+            return static_cast<uint32_t>(buffer.size());
         }
 
         void Length(uint32_t /*unused*/)
@@ -46,7 +41,7 @@ namespace py::cpp::_winrt
 
         HRESULT __stdcall Buffer(uint8_t** value)
         {
-            *value = reinterpret_cast<uint8_t*>(buffer.buf);
+            *value = reinterpret_cast<uint8_t*>(buffer.data());
             return S_OK;
         }
     };

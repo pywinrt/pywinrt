@@ -295,16 +295,13 @@ namespace py::cpp::_winrt
 
         if (PyObject_CheckBuffer(arg1))
         {
-            Py_buffer view;
-
-            if (PyObject_GetBuffer(arg1, &view, PyBUF_FULL_RO) < 0)
+            py::buffer_view buffer{arg1, PyBUF_FULL_RO};
+            if (!buffer)
             {
                 return nullptr;
             }
 
-            using py_buffer_ptr
-                = std::unique_ptr<Py_buffer, decltype(&PyBuffer_Release)>;
-            py_buffer_ptr{&view, &PyBuffer_Release};
+            auto const& view = buffer.view();
 
             if (view.ndim != 1)
             {
