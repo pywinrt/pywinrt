@@ -127,7 +127,7 @@ setup(
     ext_modules=[
         Extension(
             "{root_package}.{ext_module}",
-            sources=[{sources}],
+            sources={sources},
             include_dirs=[get_include()] + get_include_dirs(){extra_include_dirs},
             libraries=["windowsapp"{extra_libraries}],
         ){extra_extension}
@@ -138,7 +138,7 @@ setup(
 EXTRA_EXT_MODULES = """,
         Extension(
             "{root_package}.{ext_module}",
-            sources=[{sources}],
+            sources={sources},
             include_dirs=[get_include()] + get_include_dirs(){extra_include_dirs},
             libraries=["windowsapp"],
         ),
@@ -342,6 +342,21 @@ def winrt_ns_to_py_package(ns: str) -> str:
     return ".".join(avoid_keyword(x.lower()) for x in ns.split("."))
 
 
+def format_sources(sources: list[str]) -> str:
+    """
+    Renders the sources of an Extension.
+
+    Every generated package has a single source file, which fits on the line
+    it is written on. winrt-runtime has nine, which do not.
+    """
+    if len(sources) == 1:
+        return f'["{sources[0]}"]'
+
+    lines = "".join(f'                "{source}",\n' for source in sources)
+
+    return f"[\n{lines}            ]"
+
+
 def write_project_files(
     package_path: Path,
     module_name: str,
@@ -447,7 +462,7 @@ def write_project_files(
                     ),
                     root_package=root_package,
                     ext_module=ext_module_name,
-                    sources=", ".join(f'"{x}"' for x in sources),
+                    sources=format_sources(sources),
                     extra_imports=(
                         "\nfrom winrt_microsoft_ui_xaml import get_include_dirs as get_winui2_include_dirs"
                         if is_microsoft_ui_xaml_package(package_name)
@@ -498,7 +513,7 @@ def write_project_files(
                         EXTRA_EXT_MODULES.format(
                             root_package=root_package,
                             ext_module=f"{ext_module_name}_2",
-                            sources=f'"{second_ext_source_file}"',
+                            sources=format_sources([second_ext_source_file]),
                             extra_include_dirs=(
                                 " + get_winui2_include_dirs()"
                                 if is_microsoft_ui_xaml_package(package_name)
