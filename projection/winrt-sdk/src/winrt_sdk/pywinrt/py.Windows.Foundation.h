@@ -8,8 +8,8 @@ static_assert(
     py::runtime_abi_version_major == 4,
     "this projection needs winrt-runtime headers with ABI major version 4");
 static_assert(
-    py::runtime_abi_version_minor >= 4,
-    "this projection needs winrt-runtime headers with ABI version 4.4 or later");
+    py::runtime_abi_version_minor >= 5,
+    "this projection needs winrt-runtime headers with ABI version 4.5 or later");
 
 #if __has_include("py.winrt.guids.h")
 #include "py.winrt.guids.h"
@@ -632,31 +632,54 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* async_get() noexcept override
         {
-            if (winrt::impl::is_sta_thread())
+            using async_type = winrt::Windows::Foundation::IAsyncActionWithProgress<TProgress>;
+            using handler_type = decltype(std::declval<async_type>().Completed());
+
+            if (py::set_sta_blocking_wait_error())
             {
-                PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
                 return nullptr;
             }
 
             try
             {
-                auto _gil = py::release_gil();
-                _obj.get();
+                {
+                    auto _gil = py::release_gil();
+                    py::check_async_get(py::async_wait(
+                        _obj,
+                        py::async_wait_forever,
+                        winrt::guid_of<handler_type>(),
+                        [](winrt::Windows::Foundation::IInspectable const& async,
+                            winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                        {
+                            try
+                            {
+                                async.as<async_type>().Completed(handler.as<handler_type>());
+                                return 0;
+                            }
+                            catch (...)
+                            {
+                                return winrt::to_hresult();
+                            }
+                        }));
+                    _obj.GetResults();
+                }
+
+                Py_RETURN_NONE;
             }
             catch (...)
             {
                 py::to_PyErr();
                 return nullptr;
             }
-
-            Py_RETURN_NONE;
         }
 
         PyObject* async_wait(PyObject* arg) noexcept override
         {
-            if (winrt::impl::is_sta_thread())
+            using async_type = winrt::Windows::Foundation::IAsyncActionWithProgress<TProgress>;
+            using handler_type = decltype(std::declval<async_type>().Completed());
+
+            if (py::set_sta_blocking_wait_error())
             {
-                PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
                 return nullptr;
             }
 
@@ -671,8 +694,27 @@ namespace py::impl::Windows::Foundation
                 return py::convert([&]()
                 {
                     auto _gil = py::release_gil();
-                    auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
-                    return _obj.wait_for(duration);
+                    auto status = py::async_wait(
+                        _obj,
+                        py::async_timeout_ms(timeout),
+                        winrt::guid_of<handler_type>(),
+                        [](winrt::Windows::Foundation::IInspectable const& async,
+                            winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                        {
+                            try
+                            {
+                                async.as<async_type>().Completed(handler.as<handler_type>());
+                                return 0;
+                            }
+                            catch (...)
+                            {
+                                return winrt::to_hresult();
+                            }
+                        });
+
+                    py::check_async_wait(status);
+
+                    return static_cast<winrt::Windows::Foundation::AsyncStatus>(status);
                 }());
             }
             catch (...)
@@ -901,9 +943,11 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* async_get() noexcept override
         {
-            if (winrt::impl::is_sta_thread())
+            using async_type = winrt::Windows::Foundation::IAsyncOperationWithProgress<TResult, TProgress>;
+            using handler_type = decltype(std::declval<async_type>().Completed());
+
+            if (py::set_sta_blocking_wait_error())
             {
-                PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
                 return nullptr;
             }
 
@@ -912,7 +956,24 @@ namespace py::impl::Windows::Foundation
                 return py::convert([&]()
                 {
                     auto _gil = py::release_gil();
-                    return _obj.get();
+                    py::check_async_get(py::async_wait(
+                        _obj,
+                        py::async_wait_forever,
+                        winrt::guid_of<handler_type>(),
+                        [](winrt::Windows::Foundation::IInspectable const& async,
+                            winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                        {
+                            try
+                            {
+                                async.as<async_type>().Completed(handler.as<handler_type>());
+                                return 0;
+                            }
+                            catch (...)
+                            {
+                                return winrt::to_hresult();
+                            }
+                        }));
+                    return _obj.GetResults();
                 }());
             }
             catch (...)
@@ -924,9 +985,11 @@ namespace py::impl::Windows::Foundation
 
         PyObject* async_wait(PyObject* arg) noexcept override
         {
-            if (winrt::impl::is_sta_thread())
+            using async_type = winrt::Windows::Foundation::IAsyncOperationWithProgress<TResult, TProgress>;
+            using handler_type = decltype(std::declval<async_type>().Completed());
+
+            if (py::set_sta_blocking_wait_error())
             {
-                PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
                 return nullptr;
             }
 
@@ -941,8 +1004,27 @@ namespace py::impl::Windows::Foundation
                 return py::convert([&]()
                 {
                     auto _gil = py::release_gil();
-                    auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
-                    return _obj.wait_for(duration);
+                    auto status = py::async_wait(
+                        _obj,
+                        py::async_timeout_ms(timeout),
+                        winrt::guid_of<handler_type>(),
+                        [](winrt::Windows::Foundation::IInspectable const& async,
+                            winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                        {
+                            try
+                            {
+                                async.as<async_type>().Completed(handler.as<handler_type>());
+                                return 0;
+                            }
+                            catch (...)
+                            {
+                                return winrt::to_hresult();
+                            }
+                        });
+
+                    py::check_async_wait(status);
+
+                    return static_cast<winrt::Windows::Foundation::AsyncStatus>(status);
                 }());
             }
             catch (...)
@@ -1130,9 +1212,11 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* async_get() noexcept override
         {
-            if (winrt::impl::is_sta_thread())
+            using async_type = winrt::Windows::Foundation::IAsyncOperation<TResult>;
+            using handler_type = decltype(std::declval<async_type>().Completed());
+
+            if (py::set_sta_blocking_wait_error())
             {
-                PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
                 return nullptr;
             }
 
@@ -1141,7 +1225,24 @@ namespace py::impl::Windows::Foundation
                 return py::convert([&]()
                 {
                     auto _gil = py::release_gil();
-                    return _obj.get();
+                    py::check_async_get(py::async_wait(
+                        _obj,
+                        py::async_wait_forever,
+                        winrt::guid_of<handler_type>(),
+                        [](winrt::Windows::Foundation::IInspectable const& async,
+                            winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                        {
+                            try
+                            {
+                                async.as<async_type>().Completed(handler.as<handler_type>());
+                                return 0;
+                            }
+                            catch (...)
+                            {
+                                return winrt::to_hresult();
+                            }
+                        }));
+                    return _obj.GetResults();
                 }());
             }
             catch (...)
@@ -1153,9 +1254,11 @@ namespace py::impl::Windows::Foundation
 
         PyObject* async_wait(PyObject* arg) noexcept override
         {
-            if (winrt::impl::is_sta_thread())
+            using async_type = winrt::Windows::Foundation::IAsyncOperation<TResult>;
+            using handler_type = decltype(std::declval<async_type>().Completed());
+
+            if (py::set_sta_blocking_wait_error())
             {
-                PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
                 return nullptr;
             }
 
@@ -1170,8 +1273,27 @@ namespace py::impl::Windows::Foundation
                 return py::convert([&]()
                 {
                     auto _gil = py::release_gil();
-                    auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
-                    return _obj.wait_for(duration);
+                    auto status = py::async_wait(
+                        _obj,
+                        py::async_timeout_ms(timeout),
+                        winrt::guid_of<handler_type>(),
+                        [](winrt::Windows::Foundation::IInspectable const& async,
+                            winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                        {
+                            try
+                            {
+                                async.as<async_type>().Completed(handler.as<handler_type>());
+                                return 0;
+                            }
+                            catch (...)
+                            {
+                                return winrt::to_hresult();
+                            }
+                        });
+
+                    py::check_async_wait(status);
+
+                    return static_cast<winrt::Windows::Foundation::AsyncStatus>(status);
                 }());
             }
             catch (...)

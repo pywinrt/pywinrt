@@ -1195,31 +1195,54 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* get_SignOutUserOperation(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self, PyObject* /*unused*/) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Security::Authentication::OnlineId::SignOutUserOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
         try
         {
-            auto _gil = py::release_gil();
-            self->obj.get();
+            {
+                auto _gil = py::release_gil();
+                py::check_async_get(py::async_wait(
+                    self->obj,
+                    py::async_wait_forever,
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    }));
+                self->obj.GetResults();
+            }
+
+            Py_RETURN_NONE;
         }
         catch (...)
         {
             py::to_PyErr();
             return nullptr;
         }
-
-        Py_RETURN_NONE;
     }
 
     static PyObject* wait_SignOutUserOperation(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self, PyObject* arg) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Security::Authentication::OnlineId::SignOutUserOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
@@ -1234,8 +1257,27 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
-                return self->obj.wait_for(duration);
+                auto status = py::async_wait(
+                    self->obj,
+                    py::async_timeout_ms(timeout),
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    });
+
+                py::check_async_wait(status);
+
+                return static_cast<winrt::Windows::Foundation::AsyncStatus>(status);
             }());
         }
         catch (...)
@@ -1497,9 +1539,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* get_UserAuthenticationOperation(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self, PyObject* /*unused*/) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
@@ -1508,7 +1552,24 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.get();
+                py::check_async_get(py::async_wait(
+                    self->obj,
+                    py::async_wait_forever,
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    }));
+                return self->obj.GetResults();
             }());
         }
         catch (...)
@@ -1520,9 +1581,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* wait_UserAuthenticationOperation(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self, PyObject* arg) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
@@ -1537,8 +1600,27 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
-                return self->obj.wait_for(duration);
+                auto status = py::async_wait(
+                    self->obj,
+                    py::async_timeout_ms(timeout),
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    });
+
+                py::check_async_wait(status);
+
+                return static_cast<winrt::Windows::Foundation::AsyncStatus>(status);
             }());
         }
         catch (...)

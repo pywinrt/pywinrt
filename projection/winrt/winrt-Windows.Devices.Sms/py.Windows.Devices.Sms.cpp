@@ -225,31 +225,54 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* get_DeleteSmsMessageOperation(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self, PyObject* /*unused*/) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Devices::Sms::DeleteSmsMessageOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
         try
         {
-            auto _gil = py::release_gil();
-            self->obj.get();
+            {
+                auto _gil = py::release_gil();
+                py::check_async_get(py::async_wait(
+                    self->obj,
+                    py::async_wait_forever,
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    }));
+                self->obj.GetResults();
+            }
+
+            Py_RETURN_NONE;
         }
         catch (...)
         {
             py::to_PyErr();
             return nullptr;
         }
-
-        Py_RETURN_NONE;
     }
 
     static PyObject* wait_DeleteSmsMessageOperation(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self, PyObject* arg) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Devices::Sms::DeleteSmsMessageOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
@@ -264,8 +287,27 @@ namespace py::cpp::Windows::Devices::Sms
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
-                return self->obj.wait_for(duration);
+                auto status = py::async_wait(
+                    self->obj,
+                    py::async_timeout_ms(timeout),
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    });
+
+                py::check_async_wait(status);
+
+                return static_cast<winrt::Windows::Foundation::AsyncStatus>(status);
             }());
         }
         catch (...)
@@ -528,31 +570,54 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* get_DeleteSmsMessagesOperation(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self, PyObject* /*unused*/) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Devices::Sms::DeleteSmsMessagesOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
         try
         {
-            auto _gil = py::release_gil();
-            self->obj.get();
+            {
+                auto _gil = py::release_gil();
+                py::check_async_get(py::async_wait(
+                    self->obj,
+                    py::async_wait_forever,
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    }));
+                self->obj.GetResults();
+            }
+
+            Py_RETURN_NONE;
         }
         catch (...)
         {
             py::to_PyErr();
             return nullptr;
         }
-
-        Py_RETURN_NONE;
     }
 
     static PyObject* wait_DeleteSmsMessagesOperation(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self, PyObject* arg) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Devices::Sms::DeleteSmsMessagesOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
@@ -567,8 +632,27 @@ namespace py::cpp::Windows::Devices::Sms
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
-                return self->obj.wait_for(duration);
+                auto status = py::async_wait(
+                    self->obj,
+                    py::async_timeout_ms(timeout),
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    });
+
+                py::check_async_wait(status);
+
+                return static_cast<winrt::Windows::Foundation::AsyncStatus>(status);
             }());
         }
         catch (...)
@@ -830,9 +914,11 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* get_GetSmsDeviceOperation(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self, PyObject* /*unused*/) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Devices::Sms::GetSmsDeviceOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
@@ -841,7 +927,24 @@ namespace py::cpp::Windows::Devices::Sms
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.get();
+                py::check_async_get(py::async_wait(
+                    self->obj,
+                    py::async_wait_forever,
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    }));
+                return self->obj.GetResults();
             }());
         }
         catch (...)
@@ -853,9 +956,11 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* wait_GetSmsDeviceOperation(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self, PyObject* arg) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Devices::Sms::GetSmsDeviceOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
@@ -870,8 +975,27 @@ namespace py::cpp::Windows::Devices::Sms
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
-                return self->obj.wait_for(duration);
+                auto status = py::async_wait(
+                    self->obj,
+                    py::async_timeout_ms(timeout),
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    });
+
+                py::check_async_wait(status);
+
+                return static_cast<winrt::Windows::Foundation::AsyncStatus>(status);
             }());
         }
         catch (...)
@@ -1133,9 +1257,11 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* get_GetSmsMessageOperation(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self, PyObject* /*unused*/) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Devices::Sms::GetSmsMessageOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
@@ -1144,7 +1270,24 @@ namespace py::cpp::Windows::Devices::Sms
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.get();
+                py::check_async_get(py::async_wait(
+                    self->obj,
+                    py::async_wait_forever,
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    }));
+                return self->obj.GetResults();
             }());
         }
         catch (...)
@@ -1156,9 +1299,11 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* wait_GetSmsMessageOperation(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self, PyObject* arg) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Devices::Sms::GetSmsMessageOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
@@ -1173,8 +1318,27 @@ namespace py::cpp::Windows::Devices::Sms
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
-                return self->obj.wait_for(duration);
+                auto status = py::async_wait(
+                    self->obj,
+                    py::async_timeout_ms(timeout),
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    });
+
+                py::check_async_wait(status);
+
+                return static_cast<winrt::Windows::Foundation::AsyncStatus>(status);
             }());
         }
         catch (...)
@@ -1479,9 +1643,11 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* get_GetSmsMessagesOperation(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, PyObject* /*unused*/) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Devices::Sms::GetSmsMessagesOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
@@ -1490,7 +1656,24 @@ namespace py::cpp::Windows::Devices::Sms
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.get();
+                py::check_async_get(py::async_wait(
+                    self->obj,
+                    py::async_wait_forever,
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    }));
+                return self->obj.GetResults();
             }());
         }
         catch (...)
@@ -1502,9 +1685,11 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* wait_GetSmsMessagesOperation(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, PyObject* arg) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Devices::Sms::GetSmsMessagesOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
@@ -1519,8 +1704,27 @@ namespace py::cpp::Windows::Devices::Sms
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
-                return self->obj.wait_for(duration);
+                auto status = py::async_wait(
+                    self->obj,
+                    py::async_timeout_ms(timeout),
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    });
+
+                py::check_async_wait(status);
+
+                return static_cast<winrt::Windows::Foundation::AsyncStatus>(status);
             }());
         }
         catch (...)
@@ -1784,31 +1988,54 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* get_SendSmsMessageOperation(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self, PyObject* /*unused*/) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Devices::Sms::SendSmsMessageOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
         try
         {
-            auto _gil = py::release_gil();
-            self->obj.get();
+            {
+                auto _gil = py::release_gil();
+                py::check_async_get(py::async_wait(
+                    self->obj,
+                    py::async_wait_forever,
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    }));
+                self->obj.GetResults();
+            }
+
+            Py_RETURN_NONE;
         }
         catch (...)
         {
             py::to_PyErr();
             return nullptr;
         }
-
-        Py_RETURN_NONE;
     }
 
     static PyObject* wait_SendSmsMessageOperation(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self, PyObject* arg) noexcept
     {
-        if (winrt::impl::is_sta_thread())
+        using async_type = winrt::Windows::Devices::Sms::SendSmsMessageOperation;
+        using handler_type = decltype(std::declval<async_type>().Completed());
+
+        if (py::set_sta_blocking_wait_error())
         {
-            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
             return nullptr;
         }
 
@@ -1823,8 +2050,27 @@ namespace py::cpp::Windows::Devices::Sms
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
-                return self->obj.wait_for(duration);
+                auto status = py::async_wait(
+                    self->obj,
+                    py::async_timeout_ms(timeout),
+                    winrt::guid_of<handler_type>(),
+                    [](winrt::Windows::Foundation::IInspectable const& async,
+                        winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t
+                    {
+                        try
+                        {
+                            async.as<async_type>().Completed(handler.as<handler_type>());
+                            return 0;
+                        }
+                        catch (...)
+                        {
+                            return winrt::to_hresult();
+                        }
+                    });
+
+                py::check_async_wait(status);
+
+                return static_cast<winrt::Windows::Foundation::AsyncStatus>(status);
             }());
         }
         catch (...)

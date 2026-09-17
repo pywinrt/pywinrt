@@ -1801,36 +1801,105 @@ static class WriterExtensions
         }
     }
 
-    private static void WriteStaCheck(this IndentedTextWriter w)
+    /// <summary>
+    /// Writes the aliases naming the awaitable type a blocking wait is on and
+    /// the completed handler that signals it.
+    /// </summary>
+    /// <remarks>
+    /// The handler type is taken from the <c>Completed()</c> getter rather than
+    /// from <c>winrt::impl::async_completed_handler_t</c>, which is only
+    /// specialized for the four async interfaces: an awaitable type can also be
+    /// a runtime class that implements one of them, such as
+    /// <c>DataReaderLoadOperation</c>.
+    /// </remarks>
+    private static void WriteAsyncTypeAliases(this IndentedTextWriter w, ProjectedType type)
     {
-        w.WriteLine("if (winrt::impl::is_sta_thread())");
-        w.WriteBlock(() =>
-        {
-            w.WriteLine(
-                "PyErr_SetString(PyExc_RuntimeError, \"Cannot call blocking method from single-threaded apartment.\");"
-            );
-            w.WriteLine("return nullptr;");
-        });
+        w.WriteLine($"using async_type = {type.CppWinrtType};");
+        w.WriteLine("using handler_type = decltype(std::declval<async_type>().Completed());");
+        w.WriteBlankLine();
     }
 
+    /// <summary>
+    /// Writes the call to the runtime's waiter, including the callback that
+    /// hands it the completed handler.
+    /// </summary>
+    /// <remarks>
+    /// Naming the closed handler type is the only part of a blocking wait that
+    /// depends on the type arguments, which is why the runtime asks for it as a
+    /// callback. Nothing may throw across the capsule, so the callback reports
+    /// failure as an HRESULT and so does the waiter itself, which is what lets
+    /// the GIL stay released across both the wait and the GetResults() after
+    /// it.
+    /// </remarks>
+    private static void WriteAsyncWaitCall(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        string timeout,
+        string prefix,
+        string suffix
+    )
+    {
+        var obj = type.IsGeneric ? "_obj" : "self->obj";
+
+        w.WriteLine($"{prefix}py::async_wait(");
+        w.Indent++;
+        w.WriteLine($"{obj},");
+        w.WriteLine($"{timeout},");
+        w.WriteLine("winrt::guid_of<handler_type>(),");
+        w.WriteLine("[](winrt::Windows::Foundation::IInspectable const& async,");
+        w.Indent++;
+        w.WriteLine("winrt::Windows::Foundation::IUnknown const& handler) noexcept -> int32_t");
+        w.Indent--;
+        w.WriteBlock(
+            () =>
+                w.WriteTryCatch(
+                    () =>
+                    {
+                        w.WriteLine(
+                            "async.as<async_type>().Completed(handler.as<handler_type>());"
+                        );
+                        w.WriteLine("return 0;");
+                    },
+                    () => { },
+                    "winrt::to_hresult()"
+                ),
+            suffix
+        );
+        w.Indent--;
+    }
+
+    /// <summary>
+    /// Writes the body of the <c>get()</c> method of an awaitable projected
+    /// type.
+    /// </summary>
     public static void WriteAsyncGetBody(this IndentedTextWriter w, ProjectedType type)
     {
-        var obj = type.IsGeneric ? "_obj." : "self->obj.";
+        var obj = type.IsGeneric ? "_obj" : "self->obj";
+        var isVoid = type.GetMethod("GetResults", 0).Method.ReturnType.FullName == "System.Void";
 
-        w.WriteStaCheck();
+        w.WriteAsyncTypeAliases(type);
+        w.WriteLine("if (py::set_sta_blocking_wait_error())");
+        w.WriteBlock(() => w.WriteLine("return nullptr;"));
         w.WriteBlankLine();
 
-        var method = type.GetMethod("GetResults", 0);
+        void writeWait()
+        {
+            w.WriteLine("auto _gil = py::release_gil();");
+            w.WriteAsyncWaitCall(type, "py::async_wait_forever", "py::check_async_get(", "));");
+        }
 
-        if (method.Method.ReturnType.FullName == "System.Void")
+        if (isVoid)
         {
             w.WriteTryCatch(() =>
             {
-                w.WriteLine("auto _gil = py::release_gil();");
-                w.WriteLine($"{obj}get();");
+                w.WriteBlock(() =>
+                {
+                    writeWait();
+                    w.WriteLine($"{obj}.GetResults();");
+                });
+                w.WriteBlankLine();
+                w.WriteLine("Py_RETURN_NONE;");
             });
-            w.WriteBlankLine();
-            w.WriteLine("Py_RETURN_NONE;");
         }
         else
         {
@@ -1840,8 +1909,8 @@ static class WriterExtensions
                 w.WriteBlock(
                     () =>
                     {
-                        w.WriteLine("auto _gil = py::release_gil();");
-                        w.WriteLine($"return {obj}get();");
+                        writeWait();
+                        w.WriteLine($"return {obj}.GetResults();");
                     },
                     "());"
                 );
@@ -1849,18 +1918,19 @@ static class WriterExtensions
         }
     }
 
+    /// <summary>
+    /// Writes the body of the <c>wait()</c> method of an awaitable projected
+    /// type.
+    /// </summary>
     public static void WriteAsyncWaitBody(this IndentedTextWriter w, ProjectedType type)
     {
-        var obj = type.IsGeneric ? "_obj." : "self->obj.";
-
-        w.WriteStaCheck();
+        w.WriteAsyncTypeAliases(type);
+        w.WriteLine("if (py::set_sta_blocking_wait_error())");
+        w.WriteBlock(() => w.WriteLine("return nullptr;"));
         w.WriteBlankLine();
         w.WriteLine("auto timeout = PyFloat_AsDouble(arg);");
         w.WriteLine("if (timeout == -1.0 && PyErr_Occurred())");
-        w.WriteBlock(() =>
-        {
-            w.WriteLine("return nullptr;");
-        });
+        w.WriteBlock(() => w.WriteLine("return nullptr;"));
         w.WriteBlankLine();
         w.WriteTryCatch(() =>
         {
@@ -1869,10 +1939,18 @@ static class WriterExtensions
                 () =>
                 {
                     w.WriteLine("auto _gil = py::release_gil();");
-                    w.WriteLine(
-                        "auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));"
+                    w.WriteAsyncWaitCall(
+                        type,
+                        "py::async_timeout_ms(timeout)",
+                        "auto status = ",
+                        ");"
                     );
-                    w.WriteLine($"return {obj}wait_for(duration);");
+                    w.WriteBlankLine();
+                    w.WriteLine("py::check_async_wait(status);");
+                    w.WriteBlankLine();
+                    w.WriteLine(
+                        "return static_cast<winrt::Windows::Foundation::AsyncStatus>(status);"
+                    );
                 },
                 "());"
             );

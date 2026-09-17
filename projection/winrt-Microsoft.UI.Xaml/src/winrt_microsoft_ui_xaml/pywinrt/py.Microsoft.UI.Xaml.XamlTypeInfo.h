@@ -8,8 +8,8 @@ static_assert(
     py::runtime_abi_version_major == 4,
     "this projection needs winrt-runtime headers with ABI major version 4");
 static_assert(
-    py::runtime_abi_version_minor >= 4,
-    "this projection needs winrt-runtime headers with ABI version 4.4 or later");
+    py::runtime_abi_version_minor >= 5,
+    "this projection needs winrt-runtime headers with ABI version 4.5 or later");
 
 #if __has_include("py.winui2.guids.h")
 #include "py.winui2.guids.h"
